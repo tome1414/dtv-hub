@@ -63,4 +63,67 @@ export interface Dictionary {
     legal: string
   }
   aiSummary: string
+  golfDTV?: {
+    meta: {
+      title: string
+      description: string
+    }
+    hero: {
+      badge: string
+      headline: string
+      subheadline: string
+      cta: string
+    }
+    plans: {
+      intro: string
+      subtext: string
+      items: {
+        name: string
+        price: number
+        currency: string
+        period: string
+        badge?: string
+        description: string
+        features: {
+          text: string
+          included: boolean
+          note?: string
+        }[]
+        cta: string
+      }[]
+    }
+    addon: {
+      label: string
+      title: string
+      description: string
+      price: number
+      features: string[]
+      cta: string
+    }
+    faq: {
+      title: string
+      categories: {
+        id: string
+        name: string
+        questions: {
+          q: string
+          a: string
+        }[]
+      }[]
+    }
+    inquiry: {
+      title: string
+      description: string
+      steps: {
+        number: number
+        label: string
+      }[]
+      cta: string
+    }
+    trust: {
+      successRate: string
+      title: string
+      items: string[]
+    }
+  }
 }

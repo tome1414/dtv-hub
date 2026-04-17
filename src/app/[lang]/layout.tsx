@@ -23,7 +23,7 @@ const localeToHreflang: Record<Locale, string> = {
 
 export async function generateMetadata({ params }: LangLayoutProps): Promise<Metadata> {
   const { lang } = await params
-  const locale = (locales.includes(lang as Locale) ? lang : 'ja') as Locale
+  const locale = (locales.includes(lang as Locale) ? lang : 'en') as Locale
   const dict = await getDictionary(locale)
 
   // Build hreflang alternate links
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
   for (const loc of locales) {
     alternates[localeToHreflang[loc]] = `${BASE_URL}/${loc}`
   }
-  alternates['x-default'] = `${BASE_URL}/ja`
+  alternates['x-default'] = `${BASE_URL}/en`
 
   return {
     title: dict.meta.title,
@@ -74,7 +74,7 @@ export async function generateStaticParams() {
 
 export default async function LangLayout({ children, params }: LangLayoutProps) {
   const { lang } = await params
-  const locale = (locales.includes(lang as Locale) ? lang : 'ja') as Locale
+  const locale = (locales.includes(lang as Locale) ? lang : 'en') as Locale
   const dict = await getDictionary(locale)
 
   return (

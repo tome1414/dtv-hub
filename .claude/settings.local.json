@@ -5,7 +5,8 @@
       "Bash(command -v node)",
       "Bash(cmd /c \"node --version && npm --version\")",
       "Bash(cmd /c \"where node 2>&1 & where npm 2>&1\")",
-      "Bash(npm list:*)"
+      "Bash(npm list:*)",
+      "WebSearch"
     ]
   }
 }
