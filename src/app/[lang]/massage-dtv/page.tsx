@@ -5,12 +5,13 @@ import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
 import { getDictionary } from '@/lib/dictionaries'
 import type { Dictionary } from '@/types'
+import { Sparkles } from 'lucide-react'
 
 interface PageProps {
   params: Promise<{ lang: string }>
 }
 
-export default function BlogPage({ params }: PageProps) {
+export default function MassageDTVPage({ params }: PageProps) {
   const [dict, setDict] = useState<Dictionary | null>(null)
   const [locale, setLocale] = useState<Locale>('en')
 
@@ -28,15 +29,15 @@ export default function BlogPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-navy-950 text-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl font-bold mb-4">Blog Hub</h1>
-        <p className="text-navy-400 mb-12">Comprehensive guides, stories, and insights about DTV visa and life in Thailand.</p>
+        <div className="flex items-center gap-3 mb-4">
+          <Sparkles className="w-8 h-8 text-gold-400" />
+          <h1 className="text-5xl font-bold">Massage & Wellness DTV</h1>
+        </div>
+        <p className="text-navy-400 mb-12">Thailand's holistic wellness path to long-term residency through certified massage therapy training and practice.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Blog articles will be listed here */}
-          <div className="bg-navy-900 rounded-lg p-6 border border-white/10">
-            <h3 className="text-xl font-bold mb-2">Coming Soon</h3>
-            <p className="text-navy-400">Blog articles and guides are being prepared.</p>
-          </div>
+        <div className="bg-navy-900 rounded-lg p-12 border border-white/10 text-center">
+          <h3 className="text-xl font-bold mb-2">Wellness Program Details Coming Soon</h3>
+          <p className="text-navy-400">Comprehensive guide to DTV visa via massage therapy schools and wellness centers.</p>
         </div>
       </div>
     </div>
