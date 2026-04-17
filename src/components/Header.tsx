@@ -61,7 +61,7 @@ export default function Header({ locale, nav }: HeaderProps) {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2 flex-shrink-0">
             <span className="text-xl font-bold tracking-wider text-white">
-              DTV <span className="text-gold-400">HUB</span>
+              DTV <span className="text-gold-400">Club</span>
             </span>
           </Link>
 

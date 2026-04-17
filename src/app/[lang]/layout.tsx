@@ -11,7 +11,7 @@ interface LangLayoutProps {
   params: Promise<{ lang: string }>
 }
 
-const BASE_URL = 'https://dtv-hub.com'
+const BASE_URL = 'https://dtvclub.com'
 
 const localeToHreflang: Record<Locale, string> = {
   ja: 'ja',

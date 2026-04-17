@@ -1,8 +1,8 @@
-# DTV HUB Development Guide
+# DTV Club Development Guide
 
 ## Project Overview
 
-DTV HUB is a comprehensive portal for Thailand DTV visa information with modular, distributed development.
+DTV Club is a comprehensive portal for Thailand DTV visa information with modular, distributed development.
 
 ### ✅ Completed Setup
 - Next.js 15 with TypeScript

@@ -1,8 +1,8 @@
-# DTV HUB Feature Structure
+# DTV Club Feature Structure
 
 ## 📋 Overview
 
-This document outlines the modular feature structure for the DTV HUB project. Each feature can be developed independently and then integrated into the main application.
+This document outlines the modular feature structure for the DTV Club project. Each feature can be developed independently and then integrated into the main application.
 
 ---
 

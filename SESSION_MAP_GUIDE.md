@@ -2,7 +2,7 @@
 
 ## 📌 セッション概要
 
-このセッションでは、DTV HUB 内に **インタラクティブな領事館マップ** を実装します。
+このセッションでは、DTV Club 内に **インタラクティブな領事館マップ** を実装します。
 
 **所有データ**：Excel シートに領事館ピックアップ済み ✅
 
@@ -174,7 +174,7 @@ const dict = await getDictionary(locale)
 ```typescript
 export async function generateMetadata({ params }): Promise<Metadata> {
   return {
-    title: `Thai Embassies - DTV HUB`,
+    title: `Thai Embassies - DTV Club`,
     description: `Find Thai embassies and consulates worldwide...`,
     alternates: {
       canonical: `/embassy-map`,

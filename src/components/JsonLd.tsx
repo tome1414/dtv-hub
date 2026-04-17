@@ -38,12 +38,12 @@ export default function JsonLd({ locale, siteName, description }: JsonLdProps) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'DTV HUB',
+    name: 'DTV Club',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     sameAs: ['https://discord.gg/dtv-hub'],
     description:
-      'DTV HUB is the most comprehensive information portal for Thailand\'s Destination Thailand Visa (DTV). We provide guides, document checklists, and community support in 5 languages.',
+      'DTV Club is the most comprehensive information portal for Thailand\'s Destination Thailand Visa (DTV). We provide guides, document checklists, and community support in 5 languages.',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',

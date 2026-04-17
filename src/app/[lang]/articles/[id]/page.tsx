@@ -26,7 +26,7 @@ const mockArticlesData: Record<number, {
   1: {
     title: '2025年DTVビザ申請フロー完全解説',
     category: '申請ガイド',
-    author: 'DTV Hub Editor',
+    author: 'DTV Club Editor',
     date: '2025年4月13日',
     readTime: '8分',
     excerpt: '東京タイ王国大使館でのDTVビザ申請手順を写真付きで徹底解説。予約方法から受取まで1記事で完結。',

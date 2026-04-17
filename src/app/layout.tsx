@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | DTV HUB',
-    default: 'DTV HUB | Thailand Destination Thailand Visa Portal',
+    template: '%s | DTV Club',
+    default: 'DTV Club | Thailand Destination Thailand Visa Portal',
   },
   description: 'The most comprehensive portal for Thailand\'s DTV visa.',
   icons: {

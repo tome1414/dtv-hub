@@ -2,7 +2,7 @@
 
 ## 📌 セッション概要
 
-このセッションでは、DTV HUB ブログの **SEO戦略とコンテンツ計画** を策定します。
+このセッションでは、DTV Club ブログの **SEO戦略とコンテンツ計画** を策定します。
 
 **既に実施済み**：日本語キーワード調査済み ✅
 
@@ -235,7 +235,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   "description": "東京のタイ王国大使館でのDTV申請手順を解説...",
   "author": {
     "@type": "Organization",
-    "name": "DTV HUB"
+    "name": "DTV Club"
   },
   "datePublished": "2026-04-21",
   "dateModified": "2026-04-21",
