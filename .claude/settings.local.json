@@ -7,7 +7,27 @@
       "Bash(cmd /c \"where node 2>&1 & where npm 2>&1\")",
       "Bash(npm list:*)",
       "WebSearch",
-      "Bash(find src/app/[lang] -type f -name \"page.tsx\")"
+      "Bash(find src/app/[lang] -type f -name \"page.tsx\")",
+      "Bash(iconv -f UTF-8 -t UTF-8)",
+      "Bash(node)",
+      "Bash(node -e ':*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s http://localhost:3000/en/embassy-map)",
+      "Bash(curl -s http://localhost:3000/ja/embassy-map)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs kill:*)",
+      "Bash(curl -s http://localhost:3000/en/embassy/embassy_1)",
+      "Bash(mcp__Claude_in_Chrome__tabs_context_mcp --createIfEmpty)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(curl -s http://localhost:3003/ja/embassy-map)",
+      "Bash(curl -v http://localhost:3003/ja/embassy-map)",
+      "Bash(echo \"✓ Server ready on port: $\\(grep -oP \"localhost:\\\\K[0-9]+\" /tmp/dev.log)",
+      "Bash(curl -s \"https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip\" -o countries.zip)",
+      "Bash(unzip -l countries.zip)",
+      "Bash(rm -f countries.zip)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_continents.geojson\" -o continents-detailed.json)",
+      "Bash(curl -s \"https://naciscdn.org/naturalearth/110m/physical/ne_110m_continents.geojson\" -o continents-detailed.json)"
     ]
   }
 }

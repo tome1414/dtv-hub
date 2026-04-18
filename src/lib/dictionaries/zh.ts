@@ -111,6 +111,189 @@ const zh: Dictionary = {
     ],
     legal: '© 2025 DTV HUB. All rights reserved.',
   },
+  golfDTV: {
+    meta: {
+      title: 'Golf DTV | 打高尔夫球同时获得5年泰国签证',
+      description:
+        'Golf DTV – 首个通过高尔夫学校获取DTV签证的机构。与泰国PGA认证专业人士合作，96%成功率，100%退款保证（含服务套餐）。',
+    },
+    hero: {
+      badge: '业界首创 • 96% 成功率',
+      headline: '打高尔夫球，同时获得5年泰国签证。',
+      subheadline: '通过高尔夫学校合作获取DTV签证。泰国PGA认证教练确保成功。',
+      cta: '免费咨询',
+    },
+    plans: {
+      intro: '选择您的计划',
+      subtext: '选择高尔夫学校计划并提交咨询。付款详情将在咨询后讨论。',
+      items: [
+        {
+          name: 'Silver',
+          price: 20000,
+          currency: 'THB',
+          period: 'year',
+          description: '入门级套餐',
+          features: [
+            { text: 'DTV申请信 & 官方录取', included: true },
+            { text: '室内高尔夫球设施使用权', included: true, note: '月度 • 12次/年' },
+            { text: '视频课程访问权', included: true, note: '月度 • 12次/年' },
+            { text: '免费高尔夫球杆租赁', included: false, note: '不含球场轮数' },
+          ],
+          cta: '咨询此计划',
+        },
+        {
+          name: 'Gold',
+          price: 50000,
+          currency: 'THB',
+          period: 'year',
+          badge: '最受欢迎',
+          description: '标准套餐',
+          features: [
+            { text: 'DTV申请信 & 官方录取', included: true },
+            { text: '一对一课程', included: true, note: '6次/年' },
+            { text: '室内高尔夫球设施使用权', included: true, note: '12次/年' },
+            { text: '视频课程访问权', included: true, note: '12次/年' },
+            { text: '泰国高尔夫球场轮数', included: true, note: '1轮/年' },
+            { text: '免费高尔夫球杆租赁', included: false, note: '不含球场轮数' },
+          ],
+          cta: '咨询此计划',
+        },
+        {
+          name: 'Platinum',
+          price: 100000,
+          currency: 'THB',
+          period: 'year',
+          description: '高级套餐',
+          features: [
+            { text: 'DTV申请信 & 官方录取', included: true },
+            { text: '一对一课程', included: true, note: '12次/年' },
+            { text: '室内高尔夫球设施使用权', included: true, note: '12次/年' },
+            { text: '视频课程访问权', included: true, note: '12次/年' },
+            { text: '泰国高尔夫球场轮数', included: true, note: '4轮/年' },
+            { text: '免费高尔夫球杆租赁', included: false, note: '不含球场轮数' },
+          ],
+          cta: '咨询此计划',
+        },
+      ],
+    },
+    addon: {
+      label: '可选附加项',
+      title: 'DTV签证申请代理服务',
+      description: '从文件准备到使馆提交的全套签证申请支持。签证被拒时，100%退还学费。',
+      price: 30000,
+      features: [
+        '完整文件准备和审核',
+        '使馆申请和面试支持',
+        '签证被拒时全额退还学费',
+        '签证申请费（10,000泰铢）不可退款',
+      ],
+      cta: '添加代理服务',
+    },
+    faq: {
+      title: '常见问题',
+      categories: [
+        {
+          id: 'A',
+          name: '关于DTV签证',
+          questions: [
+            {
+              q: '真的可以通过高尔夫获得DTV签证吗？',
+              a: '是的，这是泰国官方"软实力签证计划"的一部分。高尔夫是政府认可的运动，通过我们与Ken\'s Golf Bangkok（泰国PGA认证）的合作，您可以合法申请DTV签证。我们的96%成功率证明了这一点。',
+            },
+            {
+              q: 'DTV签证有效期有多长？',
+              a: 'DTV签证有效期为5年，是泰国最长的居留选项。',
+            },
+            {
+              q: '需要之前的高尔夫经验吗？',
+              a: '不需要。本计划不要求高尔夫技能。这是为了支持泰国的体育推广政策，而不是为了培养运动员。',
+            },
+          ],
+        },
+        {
+          id: 'B',
+          name: '套餐和价格',
+          questions: [
+            {
+              q: 'Silver、Gold和Platinum之间有什么区别？',
+              a: '套餐在课程频率、球场轮数和设施使用方面有所不同。Silver = 12节课/年，Gold = 6节一对一+1轮球场，Platinum = 12节一对一+4轮球场。',
+            },
+            {
+              q: '如何支付？',
+              a: '我们接受银行转账和信用卡支付。详情将在初步咨询后提供。',
+            },
+            {
+              q: '套餐和代理服务附加项之间有什么区别？',
+              a: '套餐仅涵盖您的高尔夫学校计划。代理服务处理所有签证文件和使馆程序，并提供退款保证。',
+            },
+          ],
+        },
+        {
+          id: 'C',
+          name: '退款和保证',
+          questions: [
+            {
+              q: '如果签证被拒怎么办？',
+              a: '使用代理服务，我们退还100%学费。不使用代理服务，退还50%。10,000泰铢签证申请费在两种情况下都不可退款。',
+            },
+            {
+              q: '不购买代理服务可以退款吗？',
+              a: '是的，退还50%学费。代理服务提供100%退款保护。',
+            },
+          ],
+        },
+        {
+          id: 'D',
+          name: '课程和设施',
+          questions: [
+            {
+              q: '课程在哪里进行？',
+              a: '在Ken\'s Golf Bangkok进行，这是我们在曼谷的合作设施，拥有室内和室外练习场。',
+            },
+            {
+              q: '可以在线学习吗？',
+              a: '不行，必须在设施进行面对面课程，这是官方计划的一部分。',
+            },
+          ],
+        },
+        {
+          id: 'E',
+          name: '常见问题',
+          questions: [
+            {
+              q: '最低年龄是多少？',
+              a: '申请DTV签证必须年满18岁。没有最高年龄限制。',
+            },
+            {
+              q: '我的家人可以参加吗？',
+              a: '可以，每个家庭成员单独申请各自的套餐。请与我们联系了解家庭优惠。',
+            },
+          ],
+        },
+      ],
+    },
+    inquiry: {
+      title: '4步咨询流程',
+      description: '简单直接。付款详情将单独讨论。',
+      steps: [
+        { number: 1, label: '选择套餐' },
+        { number: 2, label: '输入信息' },
+        { number: 3, label: '审核' },
+        { number: 4, label: '与代理联系' },
+      ],
+      cta: '免费咨询',
+    },
+    trust: {
+      successRate: '96%',
+      title: '为什么选择Golf DTV',
+      items: [
+        '业界首创：唯一建立高尔夫学校DTV获取方式的机构',
+        '与泰国PGA认证专业人士合作',
+        '100%退款保证（含代理服务）',
+        '超过10,000人的DTV社区',
+      ],
+    },
+  },
   aiSummary:
     'DTV HUB是专注于泰国目的地签证（DTV）的综合信息门户，提供申请指南、材料清单、软实力签证支持（高尔夫学校等）、在泰生活资讯及超过10,000名成员的Discord社区入口。支持日语、英语、中文、韩语和俄语。',
 }
