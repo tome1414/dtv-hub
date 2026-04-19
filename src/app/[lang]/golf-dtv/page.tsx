@@ -50,7 +50,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         .section-label { font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#0d4f3c;font-weight:600; }
         .section-title { font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;line-height:1.3;color:#0a2e1f; }
         .section-body { color:#4a4a4a;line-height:1.9;font-size:.95rem; }
-        .plan-card { border-radius:20px;overflow:hidden;transition:all .3s; }
+        .plan-card { border-radius:20px;transition:all .3s; }
         .plan-card:hover { transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.12); }
         .accordion-item { border-bottom:1px solid #e5e0d5; }
         .accordion-btn { width:100%;text-align:left;padding:18px 0;font-weight:600;font-size:.92rem;color:#1a1a1a;display:flex;justify-content:space-between;align-items:center;cursor:pointer;background:none;border:none;font-family:inherit; }
@@ -98,9 +98,10 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
               </div>
               <span style={{color:'#fff',fontWeight:700,fontSize:'1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
             </div>
-            <div style={{display:'flex',gap:32,alignItems:'center',flexWrap:'wrap'}}>
+            <div style={{display:'flex',gap:24,alignItems:'center',flexWrap:'wrap'}}>
               <a href="#plans" className="nav-link">プラン</a>
               <a href="#faq" className="nav-link">よくある質問</a>
+              <LangSwitcher />
               <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
             </div>
           </div>
@@ -159,11 +160,11 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
               <span className="section-label">TRUST</span>
               <h2 className="section-title" style={{marginTop:8}}>{d.trust.title}</h2>
             </div>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:20}}>
+            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:16}}>
               {d.trust.items.map((item: string,i: number)=>(
-                <div key={i} style={{background:'#f5f0e6',borderRadius:16,padding:'24px 20px',textAlign:'center'}}>
-                  <div style={{width:40,height:40,background:'#0d4f3c',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 12px',color:'#fff',fontWeight:700}}>✓</div>
-                  <p style={{fontSize:'.88rem',color:'#333',lineHeight:1.7,fontWeight:500}}>{item}</p>
+                <div key={i} style={{background:'#f5f0e6',borderRadius:14,padding:'20px 18px',display:'flex',alignItems:'flex-start',gap:12}}>
+                  <div style={{width:28,height:28,background:'#0d4f3c',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,color:'#fff',fontWeight:700,fontSize:'.8rem',marginTop:1}}>✓</div>
+                  <p style={{fontSize:'.85rem',color:'#333',lineHeight:1.65,fontWeight:500,margin:0}}>{item}</p>
                 </div>
               ))}
             </div>
@@ -182,9 +183,11 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
               {d.plans.items.map((plan: any, i: number)=>{
                 const isPopular = !!plan.badge
                 return (
-                  <div key={i} className="plan-card" style={{background:isPopular?'#0d4f3c':'#fff',border:`2px solid ${isPopular?'#0d4f3c':'#e5e0d5'}`,display:'flex',flexDirection:'column',position:'relative'}}>
-                    {isPopular && <div style={{position:'absolute',top:-14,left:'50%',transform:'translateX(-50%)',background:'#c9a84c',color:'#fff',padding:'4px 20px',borderRadius:999,fontSize:'.75rem',fontWeight:700,whiteSpace:'nowrap'}}>{plan.badge}</div>}
-                    <div style={{padding:'32px 28px 0'}}>
+                  <div key={i} className="plan-card" style={{background:isPopular?'#0d4f3c':'#fff',border:`2px solid ${isPopular?'#c9a84c':'#e5e0d5'}`,display:'flex',flexDirection:'column',position:'relative'}}>
+                    {isPopular && (
+                      <div style={{background:'#c9a84c',textAlign:'center',padding:'7px 20px',borderRadius:'18px 18px 0 0',fontSize:'.75rem',fontWeight:700,color:'#fff',letterSpacing:'.04em'}}>{plan.badge}</div>
+                    )}
+                    <div style={{padding: isPopular ? '24px 28px 0' : '32px 28px 0'}}>
                       <span className={isPopular?'':'tag'} style={isPopular?{display:'inline-block',background:'rgba(255,255,255,.15)',color:'#fff',padding:'4px 12px',borderRadius:999,fontSize:'.78rem',fontWeight:600}:{}}>{plan.name}</span>
                       <div style={{marginTop:20}}>
                         <span style={{fontSize:'2.2rem',fontWeight:900,color:isPopular?'#e2c46e':'#0a2e1f'}}>{plan.price.toLocaleString()}</span>
@@ -319,10 +322,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             </div>
             <div style={{borderTop:'1px solid rgba(255,255,255,.1)',paddingTop:20,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
               <p style={{fontSize:'.78rem',color:'rgba(255,255,255,.4)'}}>© 2024 GolfDTV. All rights reserved.</p>
-              <div style={{display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}}>
-                <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:400,textAlign:'right',lineHeight:1.6}}>当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。</p>
-                <LangSwitcher />
-              </div>
+              <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:500,textAlign:'right',lineHeight:1.6}}>当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。</p>
             </div>
           </div>
         </footer>
