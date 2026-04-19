@@ -20,8 +20,24 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const d = dict?.golfDTV
   if (!d) return null
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: d.faq.categories.flatMap((cat: any) =>
+      cat.questions.map((qa: any) => ({
+        '@type': 'Question',
+        name: qa.q,
+        acceptedAnswer: { '@type': 'Answer', text: qa.a },
+      }))
+    ),
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
         .golf-root { font-family: 'Noto Sans JP', sans-serif; color: #1a1a1a; background: #fff; }
