@@ -319,7 +319,10 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             </div>
             <div style={{borderTop:'1px solid rgba(255,255,255,.1)',paddingTop:20,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
               <p style={{fontSize:'.78rem',color:'rgba(255,255,255,.4)'}}>© 2024 GolfDTV. All rights reserved.</p>
-              <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:500,textAlign:'right',lineHeight:1.6}}>当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。</p>
+              <div style={{display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}}>
+                <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:400,textAlign:'right',lineHeight:1.6}}>当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。</p>
+                <LangSwitcher />
+              </div>
             </div>
           </div>
         </footer>
@@ -341,6 +344,42 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <div style={{paddingBottom:20,color:'#555',fontSize:'.9rem',lineHeight:1.9}}>{a}</div>
       </div>
     </div>
+  )
+}
+
+function LangSwitcher() {
+  const langs = [
+    { code: 'ja', label: '🇯🇵 日本語' },
+    { code: 'en', label: '🇬🇧 English' },
+  ]
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const code = e.target.value
+    if (typeof window !== 'undefined') {
+      window.location.href = `/${code}/golf-dtv`
+    }
+  }
+  const currentLang = typeof window !== 'undefined'
+    ? window.location.pathname.split('/')[1] || 'ja'
+    : 'ja'
+  return (
+    <select
+      defaultValue={currentLang}
+      onChange={handleChange}
+      style={{
+        background:'rgba(255,255,255,.08)',
+        border:'1px solid rgba(255,255,255,.2)',
+        color:'rgba(255,255,255,.8)',
+        padding:'6px 12px',
+        borderRadius:8,
+        fontSize:'.8rem',
+        cursor:'pointer',
+        fontFamily:'inherit',
+      }}
+    >
+      {langs.map(l => (
+        <option key={l.code} value={l.code} style={{background:'#082d21',color:'#fff'}}>{l.label}</option>
+      ))}
+    </select>
   )
 }
 

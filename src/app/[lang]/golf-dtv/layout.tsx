@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import type { Locale } from '@/middleware'
 import { getDictionary } from '@/lib/dictionaries'
-import Footer from '@/components/Footer'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -29,10 +28,6 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
 }
 
 export default async function GolfDTVLayout({ children, params }: LayoutProps) {
-  const { lang } = await params
-  const locale = (lang || 'ja') as Locale
-  const dict = await getDictionary(locale)
-
   return (
     <>
       <style>{`
@@ -43,9 +38,13 @@ export default async function GolfDTVLayout({ children, params }: LayoutProps) {
         main {
           all: unset;
         }
+        body > footer,
+        main ~ footer,
+        #__next > footer {
+          display: none !important;
+        }
       `}</style>
       {children}
-      <Footer locale={locale} footer={dict.footer} />
     </>
   )
 }
