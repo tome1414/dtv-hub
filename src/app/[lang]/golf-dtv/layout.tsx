@@ -35,6 +35,15 @@ export default async function GolfDTVLayout({ children, params }: LayoutProps) {
 
   return (
     <>
+      <style>{`
+        /* Hide parent layout header and footer for golf-dtv */
+        header {
+          display: none !important;
+        }
+        main {
+          all: unset;
+        }
+      `}</style>
       {children}
       <Footer locale={locale} footer={dict.footer} />
     </>
