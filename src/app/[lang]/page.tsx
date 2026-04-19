@@ -294,32 +294,38 @@ export default async function HomePage({ params }: PageProps) {
 
                   <div className="space-y-3 mb-6">
                     {[
-                      { label: '取得成功率', value: '98%' },
-                      { label: 'プログラム期間', value: '5日間' },
-                      { label: '返金保証', value: '100%' },
+                      { label: '取得成功率', value: '96%' },
+                      { label: '対象者', value: '未経験者～上級者' },
+                      { label: '返金保証', value: '代行プラン100%返金' },
                     ].map((stat) => (
                       <div
                         key={stat.label}
                         className="flex justify-between items-center py-2.5 border-b border-white/5"
                       >
                         <span className="text-navy-400 text-sm">{stat.label}</span>
-                        <span className="text-gold-400 font-bold">{stat.value}</span>
+                        <span className="text-gold-400 font-bold text-sm">{stat.value}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-4 text-center">
-                    <p className="text-gold-300 text-sm font-semibold">
-                      🏅 タイ政府公認プログラム
-                    </p>
+                  <div className="space-y-3">
+                    <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-4 text-center mb-4">
+                      <p className="text-gold-300 text-sm font-semibold">
+                        🏅 Thailand PGA公認
+                      </p>
+                    </div>
+                    <div className="flex gap-3">
+                      <Button
+                        size="sm"
+                        className="flex-1 bg-gold-gradient text-navy-950 font-bold border-0 hover:opacity-90"
+                        asChild
+                      >
+                        <Link href={`/${locale}/golf-dtv`}>詳細を見る</Link>
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-gold-gradient text-navy-950 text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
-                全額返金保証
-              </div>
             </div>
           </div>
         </div>

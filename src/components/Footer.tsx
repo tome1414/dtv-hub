@@ -51,7 +51,7 @@ export default function Footer({ locale, footer }: FooterProps) {
           <div className="space-y-4">
             <Link href={`/${locale}`} className="inline-block">
               <span className="text-2xl font-bold tracking-wider text-white">
-                DTV <span className="text-gold-400">HUB</span>
+                DTV <span className="text-gold-400">Club</span>
               </span>
             </Link>
             <p className="text-sm text-navy-400 leading-relaxed">{footer.tagline}</p>
