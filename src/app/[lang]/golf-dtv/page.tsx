@@ -10,8 +10,6 @@ interface GolfDTVPageProps {
 
 export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [dict, setDict] = useState<any>(null)
-  const [heroBg, setHeroBg] = useState<2|3>(2)
-
   useEffect(() => {
     params.then(({ lang }) => {
       getDictionary((lang || 'ja') as Locale).then(setDict)
@@ -124,15 +122,8 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           </div>
         </div>
 
-        {/* BG COMPARE TOGGLE — 確認用 */}
-        <div style={{background:'#082d21',padding:'8px 24px',display:'flex',alignItems:'center',gap:12,justifyContent:'center',borderBottom:'1px solid rgba(255,255,255,.08)'}}>
-          <span style={{color:'rgba(255,255,255,.5)',fontSize:'.75rem'}}>背景画像を比較：</span>
-          <button onClick={()=>setHeroBg(2)} style={{padding:'4px 16px',borderRadius:999,fontSize:'.75rem',fontWeight:700,cursor:'pointer',border:'none',background:heroBg===2?'#c9a84c':'rgba(255,255,255,.15)',color:heroBg===2?'#fff':'rgba(255,255,255,.7)'}}>画像①（山・池）</button>
-          <button onClick={()=>setHeroBg(3)} style={{padding:'4px 16px',borderRadius:999,fontSize:'.75rem',fontWeight:700,cursor:'pointer',border:'none',background:heroBg===3?'#c9a84c':'rgba(255,255,255,.15)',color:heroBg===3?'#fff':'rgba(255,255,255,.7)'}}>画像②（岩山）</button>
-        </div>
-
         {/* HERO */}
-        <section className="hero-bg" style={{padding:'80px 24px 64px',minHeight:'80vh',display:'flex',alignItems:'center',position:'relative',backgroundImage:`linear-gradient(160deg,rgba(8,45,33,0.82) 0%,rgba(13,79,60,0.72) 40%,rgba(26,107,82,0.68) 70%,rgba(10,61,46,0.82) 100%),url(/golf_lp_hero_0${heroBg}.png)`,backgroundSize:'cover',backgroundPosition:'center'}}>
+        <section className="hero-bg" style={{padding:'80px 24px 64px',minHeight:'80vh',display:'flex',alignItems:'center',position:'relative',backgroundImage:`linear-gradient(160deg,rgba(8,45,33,0.82) 0%,rgba(13,79,60,0.72) 40%,rgba(26,107,82,0.68) 70%,rgba(10,61,46,0.82) 100%),url(/golf-hero.webp)`,backgroundSize:'cover',backgroundPosition:'center'}}>
           <div className="hero-circle" style={{width:500,height:500,top:-100,right:-100}}/>
           <div className="hero-circle" style={{width:300,height:300,bottom:-50,left:100,animationDelay:'3s'}}/>
           <div style={{maxWidth:900,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
