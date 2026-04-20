@@ -10,6 +10,7 @@ interface GolfDTVPageProps {
 
 export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [dict, setDict] = useState<any>(null)
+  const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
     params.then(({ lang }) => {
       getDictionary((lang || 'ja') as Locale).then(setDict)
@@ -69,40 +70,60 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         @keyframes ticker-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
         .ticker-item { display:inline-flex;align-items:center;gap:12px;padding:10px 32px;color:rgba(255,255,255,.9);font-size:.82rem;font-weight:500;flex-shrink:0; }
         .ticker-dot { width:5px;height:5px;border-radius:50%;background:#c9a84c;flex-shrink:0; }
-        .floating-cta { position:fixed;bottom:24px;right:24px;z-index:100;box-shadow:0 8px 32px rgba(13,79,60,.4);border-radius:999px;animation:float 3s ease-in-out infinite; }
-        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
         .nav-link { font-size:.85rem;color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s;font-weight:500; }
         .nav-link:hover { color:#e2c46e; }
+        .nav-desktop { display:flex;gap:24px;align-items:center; }
+        .nav-mobile-right { display:none;align-items:center;gap:10px; }
+        .hamburger-btn { background:none;border:none;cursor:pointer;padding:6px;color:#fff;display:flex;flex-direction:column;gap:5px; }
+        .hamburger-btn span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s; }
+        .nav-mobile-menu { display:none;flex-direction:column;padding:16px 24px;gap:14px;border-top:1px solid rgba(255,255,255,.1);background:#082d21; }
+        .nav-mobile-menu.open { display:flex; }
         .counter { font-size:clamp(2rem,5vw,3.5rem);font-weight:900; }
         .divider { height:2px;background:linear-gradient(90deg,transparent,#0d4f3c,transparent); }
         .tag { display:inline-block;background:rgba(13,79,60,.08);color:#0d4f3c;padding:4px 12px;border-radius:999px;font-size:.78rem;font-weight:600; }
+        .form-two-col { display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px; }
         @media(max-width:768px){
           .hero-stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.15)}
           .hero-stat:last-child{border-bottom:none}
           .two-col{grid-template-columns:1fr!important}
+          .nav-desktop{display:none!important}
+          .nav-mobile-right{display:flex!important}
+          .form-two-col{grid-template-columns:1fr!important}
         }
       `}</style>
 
       <div className="golf-root">
 
-        {/* FLOATING CTA */}
-        <a href="#inquiry" className="floating-cta btn-gold" style={{fontSize:'.875rem'}}>{d.hero.cta}</a>
-
         {/* NAV */}
         <nav style={{background:'#082d21',position:'sticky',top:0,zIndex:50,borderBottom:'1px solid rgba(255,255,255,.08)'}}>
           <div style={{maxWidth:1200,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}>
+            {/* Logo */}
             <div style={{display:'flex',alignItems:'center',gap:8}}>
               <div style={{width:32,height:32,background:'linear-gradient(135deg,#0d4f3c,#c9a84c)',borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}>
                 <span style={{color:'#fff',fontWeight:900,fontSize:'.9rem'}}>G</span>
               </div>
               <span style={{color:'#fff',fontWeight:700,fontSize:'1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
             </div>
-            <div style={{display:'flex',gap:24,alignItems:'center',flexWrap:'wrap'}}>
+            {/* Desktop nav */}
+            <div className="nav-desktop">
               <a href="#plans" className="nav-link">プラン</a>
               <a href="#faq" className="nav-link">よくある質問</a>
               <LangSwitcher />
               <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
             </div>
+            {/* Mobile: lang + hamburger */}
+            <div className="nav-mobile-right">
+              <LangSwitcher />
+              <button className="hamburger-btn" onClick={()=>setMenuOpen(!menuOpen)} aria-label="メニュー">
+                <span/><span/><span/>
+              </button>
+            </div>
+          </div>
+          {/* Mobile dropdown menu */}
+          <div className={`nav-mobile-menu${menuOpen?' open':''}`}>
+            <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>プラン</a>
+            <a href="#faq" className="nav-link" onClick={()=>setMenuOpen(false)}>よくある質問</a>
+            <a href="#inquiry" className="btn-gold" style={{padding:'10px 24px',fontSize:'.88rem',justifyContent:'center'}} onClick={()=>setMenuOpen(false)}>{d.hero.cta}</a>
           </div>
         </nav>
 
@@ -400,20 +421,27 @@ function InquiryForm({ plans, cta }: { plans: any[]; cta: string }) {
         </select>
       </div>
       {/* DTV申請代行サービス チェックボックス */}
-      <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'14px 16px',border:'1px solid #ddd8cc'}}>
+      <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc'}}>
         <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
           <input type="checkbox" style={{accentColor:'#0d4f3c',marginTop:3,width:16,height:16,flexShrink:0}}/>
           <div>
-            <span style={{fontWeight:700,fontSize:'.9rem',color:'#0a2e1f'}}>DTV申請代行サービスを希望する</span>
-            <span style={{display:'block',fontSize:'.78rem',color:'#666',marginTop:2}}>+10,000 THB｜書類作成〜大使館申請まで全代行。却下時スクール代100%返金保証。</span>
+            <span style={{fontWeight:700,fontSize:'.88rem',color:'#0a2e1f'}}>DTV申請代行サービスを希望する</span>
+            <ul style={{margin:'4px 0 0',padding:'0 0 0 14px',fontSize:'.76rem',color:'#666',lineHeight:1.7}}>
+              <li>+10,000 THB（追加費用）</li>
+              <li>書類作成〜大使館申請まで全代行</li>
+              <li>却下時：スクール代金100%返金保証</li>
+            </ul>
           </div>
         </label>
       </div>
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:20}}>
-        <div><label className="form-label">お名前<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label><input type="text" className="form-input" placeholder="山田 太郎" required/></div>
-        <div><label className="form-label">メールアドレス<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label><input type="email" className="form-input" placeholder="your@email.com" required/></div>
+      <div style={{marginBottom:20}}>
+        <label className="form-label">お名前<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label>
+        <input type="text" className="form-input" placeholder="山田 太郎" required/>
       </div>
-      <div style={{marginBottom:20}}><label className="form-label">お電話番号</label><input type="tel" className="form-input" placeholder="090-0000-0000"/></div>
+      <div style={{marginBottom:20}}>
+        <label className="form-label">メールアドレス<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label>
+        <input type="email" className="form-input" placeholder="your@email.com" required/>
+      </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">紹介コード<span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>お持ちの方のみ</span></label>
         <input type="text" className="form-input" placeholder="例：GD-XXXX"/>
