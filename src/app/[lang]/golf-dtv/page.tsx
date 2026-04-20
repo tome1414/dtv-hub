@@ -106,23 +106,23 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             </div>
             {/* Desktop nav */}
             <div className="nav-desktop">
-              <a href="#plans" className="nav-link">プラン</a>
-              <a href="#faq" className="nav-link">よくある質問</a>
+              <a href="#plans" className="nav-link">{d.nav.plans}</a>
+              <a href="#faq" className="nav-link">{d.nav.faq}</a>
               <LangSwitcher />
               <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
             </div>
             {/* Mobile: lang + hamburger */}
             <div className="nav-mobile-right">
               <LangSwitcher />
-              <button className="hamburger-btn" onClick={()=>setMenuOpen(!menuOpen)} aria-label="メニュー">
+              <button className="hamburger-btn" onClick={()=>setMenuOpen(!menuOpen)} aria-label="menu">
                 <span/><span/><span/>
               </button>
             </div>
           </div>
           {/* Mobile dropdown menu */}
           <div className={`nav-mobile-menu${menuOpen?' open':''}`}>
-            <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>プラン</a>
-            <a href="#faq" className="nav-link" onClick={()=>setMenuOpen(false)}>よくある質問</a>
+            <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.plans}</a>
+            <a href="#faq" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.faq}</a>
             <a href="#inquiry" className="btn-gold" style={{padding:'10px 24px',fontSize:'.88rem',justifyContent:'center'}} onClick={()=>setMenuOpen(false)}>{d.hero.cta}</a>
           </div>
         </nav>
@@ -132,12 +132,9 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           <div className="ticker">
             {[...Array(2)].map((_,i)=>(
               <span key={i} style={{display:'contents'}}>
-                <span className="ticker-item"><span className="ticker-dot"/>業界初・ゴルフスクール経由DTV取得</span>
-                <span className="ticker-item"><span className="ticker-dot"/>成功率96%</span>
-                <span className="ticker-item"><span className="ticker-dot"/>Thailand PGA公認プロ提携</span>
-                <span className="ticker-item"><span className="ticker-dot"/>5年間有効・マルチエントリー</span>
-                <span className="ticker-item"><span className="ticker-dot"/>ゴルフ経験不問</span>
-                <span className="ticker-item"><span className="ticker-dot"/>却下時100%返金保証（代行プラン）</span>
+                {d.ticker.map((t: string, j: number)=>(
+                  <span key={j} className="ticker-item"><span className="ticker-dot"/>{t}</span>
+                ))}
               </span>
             ))}
           </div>
@@ -202,13 +199,19 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:24,alignItems:'stretch'}}>
               {d.plans.items.map((plan: any, i: number)=>{
                 const isPopular = !!plan.badge
+                const isPlatinum = plan.name === 'Platinum'
+                const tierStyle = isPlatinum
+                  ? {background:'linear-gradient(135deg,#2a2a2a,#4a4a4a)',color:'#e8e0d0',border:'1px solid rgba(232,224,208,.4)'}
+                  : plan.name === 'Gold' || isPopular
+                  ? {background:'linear-gradient(135deg,#b8891e,#e2c46e)',color:'#fff',border:'none'}
+                  : {background:'rgba(140,140,150,.15)',color:'#666',border:'1px solid rgba(140,140,150,.3)'}
                 return (
-                  <div key={i} className="plan-card" style={{background:isPopular?'#0d4f3c':'#fff',border:`2px solid ${isPopular?'#c9a84c':'#e5e0d5'}`,display:'flex',flexDirection:'column',position:'relative'}}>
+                  <div key={i} className="plan-card" style={{background:isPopular?'#0d4f3c':isPlatinum?'#1a1a2e':'#fff',border:`2px solid ${isPopular?'#c9a84c':isPlatinum?'#4a4a6a':'#e5e0d5'}`,display:'flex',flexDirection:'column',position:'relative'}}>
                     {isPopular && (
                       <div style={{background:'#c9a84c',textAlign:'center',padding:'7px 20px',borderRadius:'18px 18px 0 0',fontSize:'.75rem',fontWeight:700,color:'#fff',letterSpacing:'.04em'}}>{plan.badge}</div>
                     )}
                     <div style={{padding: isPopular ? '24px 28px 0' : '32px 28px 0'}}>
-                      <span className={isPopular?'':'tag'} style={isPopular?{display:'inline-block',background:'rgba(255,255,255,.15)',color:'#fff',padding:'4px 12px',borderRadius:999,fontSize:'.78rem',fontWeight:600}:{}}>{plan.name}</span>
+                      <span style={{display:'inline-block',padding:'4px 14px',borderRadius:999,fontSize:'.78rem',fontWeight:700,letterSpacing:'.04em',...tierStyle}}>{plan.name}</span>
                       <div style={{marginTop:20}}>
                         <span style={{fontSize:'2.2rem',fontWeight:900,color:isPopular?'#e2c46e':'#0a2e1f'}}>{plan.price.toLocaleString()}</span>
                         <span style={{fontSize:'.9rem',color:isPopular?'rgba(255,255,255,.7)':'#666',marginLeft:4}}>{plan.currency} / {plan.period}</span>
@@ -305,7 +308,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             </div>
             {/* Form */}
             <div style={{background:'#f5f0e6',borderRadius:24,padding:40}}>
-              <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} />
+              <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} />
             </div>
           </div>
         </section>
@@ -321,28 +324,28 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
                   </div>
                   <span style={{color:'#fff',fontWeight:700,fontSize:'1.1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
                 </div>
-                <p style={{fontSize:'.85rem',lineHeight:1.9,maxWidth:320}}>ゴルフスクール経由のDTVビザ取得を業界で初めて確立した専門エージェント。Thailand PGA公認プロとの提携で確実取得をサポートします。</p>
+                <p style={{fontSize:'.85rem',lineHeight:1.9,maxWidth:320}}>{d.footerNav.about}</p>
               </div>
               <div>
-                <h4 style={{color:'#fff',fontWeight:700,fontSize:'.88rem',marginBottom:16}}>サービス</h4>
+                <h4 style={{color:'#fff',fontWeight:700,fontSize:'.88rem',marginBottom:16}}>{d.footerNav.services}</h4>
                 <ul style={{listStyle:'none',padding:0,margin:0,display:'flex',flexDirection:'column',gap:10}}>
-                  {[['プラン一覧','#plans'],['よくある質問','#faq'],['お問い合わせ','#inquiry']].map(([l,h],i)=>(
+                  {d.footerNav.serviceLinks.map(([l,h]: string[],i: number)=>(
                     <li key={i}><a href={h} style={{color:'rgba(255,255,255,.65)',fontSize:'.83rem',textDecoration:'none'}}>{l}</a></li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 style={{color:'#fff',fontWeight:700,fontSize:'.88rem',marginBottom:16}}>サポート</h4>
+                <h4 style={{color:'#fff',fontWeight:700,fontSize:'.88rem',marginBottom:16}}>{d.footerNav.support}</h4>
                 <ul style={{listStyle:'none',padding:0,margin:0,display:'flex',flexDirection:'column',gap:10}}>
-                  {[['プライバシーポリシー','#'],['特定商取引法に基づく表記','#'],['会社概要','#']].map(([l,h],i)=>(
+                  {d.footerNav.supportLinks.map(([l,h]: string[],i: number)=>(
                     <li key={i}><a href={h} style={{color:'rgba(255,255,255,.65)',fontSize:'.83rem',textDecoration:'none'}}>{l}</a></li>
                   ))}
                 </ul>
               </div>
             </div>
             <div style={{borderTop:'1px solid rgba(255,255,255,.1)',paddingTop:20,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
-              <p style={{fontSize:'.78rem',color:'rgba(255,255,255,.4)'}}>© 2024 GolfDTV. All rights reserved.</p>
-              <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:500,textAlign:'right',lineHeight:1.6}}>当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。</p>
+              <p style={{fontSize:'.78rem',color:'rgba(255,255,255,.4)'}}>{d.footerNav.copyright}</p>
+              <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:500,textAlign:'right',lineHeight:1.6}}>{d.footerNav.disclaimer}</p>
             </div>
           </div>
         </footer>
@@ -403,54 +406,55 @@ function LangSwitcher() {
   )
 }
 
-function InquiryForm({ plans, cta }: { plans: any[]; cta: string }) {
+function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
   const [submitted, setSubmitted] = React.useState(false)
   if (submitted) {
-    return <div style={{textAlign:'center',padding:'40px 0',color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem'}}>✓ 送信が完了しました！担当者より1営業日以内にご連絡します。</div>
+    return <div style={{textAlign:'center',padding:'40px 0',color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem'}}>{f.successMessage}</div>
   }
   return (
     <form onSubmit={(e)=>{e.preventDefault();setSubmitted(true)}}>
       <div style={{marginBottom:20}}>
-        <label className="form-label">ご希望のプラン</label>
+        <label className="form-label">{f.planLabel}</label>
         <select className="form-input" style={{cursor:'pointer'}}>
-          <option value="">プランを選択してください</option>
+          <option value="">{f.planPlaceholder}</option>
           {plans.map((p: any,i: number)=>(
             <option key={i}>{p.name} — {p.price.toLocaleString()} {p.currency} / {p.period}</option>
           ))}
-          <option>まだ決めていない・相談したい</option>
+          <option>{f.planUndecided}</option>
         </select>
       </div>
-      {/* DTV申請代行サービス チェックボックス */}
+      {/* Agency service checkbox */}
       <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc'}}>
         <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
           <input type="checkbox" style={{accentColor:'#0d4f3c',marginTop:3,width:16,height:16,flexShrink:0}}/>
           <div>
-            <span style={{fontWeight:700,fontSize:'.88rem',color:'#0a2e1f'}}>DTV申請代行サービスを希望する</span>
+            <span style={{fontWeight:700,fontSize:'.88rem',color:'#0a2e1f'}}>{f.agencyLabel}</span>
             <ul style={{margin:'4px 0 0',padding:'0 0 0 14px',fontSize:'.76rem',color:'#666',lineHeight:1.7}}>
-              <li>+10,000 THB（追加費用）</li>
-              <li>書類作成〜大使館申請まで全代行</li>
-              <li>却下時：スクール代金100%返金保証</li>
+              {f.agencyBullets.map((b: string, i: number)=><li key={i}>{b}</li>)}
             </ul>
           </div>
         </label>
       </div>
       <div style={{marginBottom:20}}>
-        <label className="form-label">お名前<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label>
-        <input type="text" className="form-input" placeholder="山田 太郎" required/>
+        <label className="form-label">{f.nameLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
+        <input type="text" className="form-input" placeholder="" required/>
       </div>
       <div style={{marginBottom:20}}>
-        <label className="form-label">メールアドレス<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label>
+        <label className="form-label">{f.emailLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
         <input type="email" className="form-input" placeholder="your@email.com" required/>
       </div>
       <div style={{marginBottom:20}}>
-        <label className="form-label">紹介コード<span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>お持ちの方のみ</span></label>
-        <input type="text" className="form-input" placeholder="例：GD-XXXX"/>
+        <label className="form-label">{f.referralLabel}<span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>{f.referralNote}</span></label>
+        <input type="text" className="form-input" placeholder={f.referralPlaceholder}/>
       </div>
-      <div style={{marginBottom:28}}><label className="form-label">ご質問・ご相談内容</label><textarea className="form-input" rows={4} placeholder="お気軽にご記載ください" style={{resize:'vertical'}}/></div>
+      <div style={{marginBottom:28}}>
+        <label className="form-label">{f.messageLabel}</label>
+        <textarea className="form-input" rows={4} placeholder={f.messagePlaceholder} style={{resize:'vertical'}}/>
+      </div>
       <div style={{marginBottom:20,fontSize:'.8rem',color:'#888'}}>
         <label style={{display:'flex',gap:8,alignItems:'flex-start',cursor:'pointer'}}>
           <input type="checkbox" required style={{accentColor:'#0d4f3c',marginTop:2}}/>
-          <span>プライバシーポリシーに同意して送信する</span>
+          <span>{f.privacyConsent}</span>
         </label>
       </div>
       <button type="submit" className="btn-gold" style={{width:'100%',justifyContent:'center',fontSize:'1rem',padding:16}}>{cta}</button>

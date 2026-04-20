@@ -125,5 +125,37 @@ export interface Dictionary {
       title: string
       items: string[]
     }
+    ticker: string[]
+    form: {
+      planLabel: string
+      planPlaceholder: string
+      planUndecided: string
+      agencyLabel: string
+      agencyBullets: string[]
+      nameLabel: string
+      emailLabel: string
+      required: string
+      referralLabel: string
+      referralNote: string
+      referralPlaceholder: string
+      messageLabel: string
+      messagePlaceholder: string
+      privacyConsent: string
+      successMessage: string
+    }
+    nav: {
+      plans: string
+      faq: string
+      inquiry: string
+    }
+    footerNav: {
+      about: string
+      services: string
+      support: string
+      serviceLinks: string[][]
+      supportLinks: string[][]
+      copyright: string
+      disclaimer: string
+    }
   }
 }
