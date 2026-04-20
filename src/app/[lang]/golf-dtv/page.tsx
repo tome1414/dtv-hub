@@ -65,6 +65,8 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         .btn-gold:hover { transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,.4); }
         .btn-outline { background:transparent;color:#0d4f3c;padding:13px 32px;border-radius:999px;font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:2px solid #0d4f3c;cursor:pointer;text-decoration:none;font-family:inherit; }
         .btn-outline:hover { background:#0d4f3c;color:#fff; }
+        .btn-platinum { background:transparent;color:#c9a84c;padding:13px 32px;border-radius:999px;font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:2px solid #c9a84c;cursor:pointer;text-decoration:none;font-family:inherit; }
+        .btn-platinum:hover { background:linear-gradient(135deg,#c9a84c,#e2c46e);color:#fff;border-color:transparent; }
         .ticker-wrap { overflow:hidden;background:#0d4f3c; }
         .ticker { display:flex;animation:ticker-scroll 30s linear infinite;white-space:nowrap; }
         @keyframes ticker-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
@@ -201,37 +203,50 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
                 const isPopular = !!plan.badge
                 const isPlatinum = plan.name === 'Platinum'
                 const tierStyle = isPlatinum
-                  ? {background:'linear-gradient(135deg,#2a2a2a,#4a4a4a)',color:'#e8e0d0',border:'1px solid rgba(232,224,208,.4)'}
+                  ? {background:'linear-gradient(135deg,#3a3020,#5c4a2a)',color:'#e8d9a8',border:'1px solid rgba(201,168,76,.5)'}
                   : plan.name === 'Gold' || isPopular
                   ? {background:'linear-gradient(135deg,#b8891e,#e2c46e)',color:'#fff',border:'none'}
                   : {background:'rgba(140,140,150,.15)',color:'#666',border:'1px solid rgba(140,140,150,.3)'}
+                const cardBg = isPopular ? '#0d4f3c' : isPlatinum ? '#1c1408' : '#fff'
+                const cardBorder = isPopular ? '#c9a84c' : isPlatinum ? '#c9a84c' : '#e5e0d5'
+                const priceColor = isPopular ? '#e2c46e' : isPlatinum ? '#e8c86a' : '#0a2e1f'
+                const unitColor = isPopular ? 'rgba(255,255,255,.7)' : isPlatinum ? 'rgba(232,200,106,.6)' : '#666'
+                const descColor = isPopular ? 'rgba(255,255,255,.6)' : isPlatinum ? 'rgba(232,200,106,.55)' : '#777'
+                const featColor = (inc: boolean) => inc
+                  ? (isPopular ? '#fff' : isPlatinum ? '#e0d4b0' : '#1a1a1a')
+                  : (isPopular ? 'rgba(255,255,255,.4)' : isPlatinum ? 'rgba(224,212,176,.3)' : '#bbb')
+                const checkColor = (inc: boolean) => inc
+                  ? (isPopular ? '#e2c46e' : isPlatinum ? '#c9a84c' : '#0d4f3c')
+                  : undefined
                 return (
-                  <div key={i} className="plan-card" style={{background:isPopular?'#0d4f3c':isPlatinum?'#1a1a2e':'#fff',border:`2px solid ${isPopular?'#c9a84c':isPlatinum?'#4a4a6a':'#e5e0d5'}`,display:'flex',flexDirection:'column',position:'relative'}}>
+                  <div key={i} className="plan-card" style={{background:cardBg,border:`2px solid ${cardBorder}`,display:'flex',flexDirection:'column',position:'relative'}}>
                     {isPopular && (
                       <div style={{background:'#c9a84c',textAlign:'center',padding:'7px 20px',borderRadius:'18px 18px 0 0',fontSize:'.75rem',fontWeight:700,color:'#fff',letterSpacing:'.04em'}}>{plan.badge}</div>
                     )}
-                    <div style={{padding: isPopular ? '24px 28px 0' : '32px 28px 0'}}>
+                    {isPlatinum && (
+                      <div style={{background:'linear-gradient(90deg,#3a2e0e,#5c4a1a)',textAlign:'center',padding:'7px 20px',borderRadius:'18px 18px 0 0',fontSize:'.75rem',fontWeight:700,color:'#e8c86a',letterSpacing:'.06em'}}>PREMIUM</div>
+                    )}
+                    <div style={{padding:'24px 28px 0'}}>
                       <span style={{display:'inline-block',padding:'4px 14px',borderRadius:999,fontSize:'.78rem',fontWeight:700,letterSpacing:'.04em',...tierStyle}}>{plan.name}</span>
                       <div style={{marginTop:20}}>
-                        <span style={{fontSize:'2.2rem',fontWeight:900,color:isPopular?'#e2c46e':'#0a2e1f'}}>{plan.price.toLocaleString()}</span>
-                        <span style={{fontSize:'.9rem',color:isPopular?'rgba(255,255,255,.7)':'#666',marginLeft:4}}>{plan.currency} / {plan.period}</span>
+                        <span style={{fontSize:'2.2rem',fontWeight:900,color:priceColor}}>{plan.price.toLocaleString()}</span>
+                        <span style={{fontSize:'.9rem',color:unitColor,marginLeft:4}}>{plan.currency} / {plan.period}</span>
                       </div>
-                      <p style={{fontSize:'.82rem',color:isPopular?'rgba(255,255,255,.6)':'#777',marginTop:4}}>{plan.description}</p>
-                      <div style={isPopular?{height:1,background:'rgba(255,255,255,.15)',margin:'20px 0'}:{}} className={isPopular?'':'divider'} />
-                      {!isPopular && <div className="divider" style={{margin:'20px 0'}}/>}
+                      <p style={{fontSize:'.82rem',color:descColor,marginTop:4}}>{plan.description}</p>
+                      <div style={{height:1,background:isPopular?'rgba(255,255,255,.15)':isPlatinum?'rgba(201,168,76,.2)':'#e5e0d5',margin:'20px 0'}}/>
                     </div>
                     <div style={{padding:'0 28px',flex:1}}>
                       <ul style={{listStyle:'none',padding:0,margin:0,display:'flex',flexDirection:'column',gap:10}}>
                         {plan.features.map((f: any,j: number)=>(
-                          <li key={j} style={{display:'flex',gap:8,alignItems:'flex-start',fontSize:'.87rem',color:f.included?(isPopular?'#fff':'#1a1a1a'):(isPopular?'rgba(255,255,255,.4)':'#bbb')}}>
-                            <span style={{flexShrink:0,fontWeight:700,color:f.included?(isPopular?'#e2c46e':'#0d4f3c'):undefined}}>{f.included?'✓':'–'}</span>
+                          <li key={j} style={{display:'flex',gap:8,alignItems:'flex-start',fontSize:'.87rem',color:featColor(f.included)}}>
+                            <span style={{flexShrink:0,fontWeight:700,color:checkColor(f.included)}}>{f.included?'✓':'–'}</span>
                             <span>{f.text}{f.note&&<span style={{fontSize:'.78rem',marginLeft:4,opacity:.75}}>（{f.note}）</span>}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div style={{padding:28}}>
-                      <a href="#inquiry" className={isPopular?'btn-gold':'btn-outline'} style={{width:'100%',justifyContent:'center'}}>{plan.cta}</a>
+                      <a href="#inquiry" className={isPopular?'btn-gold':isPlatinum?'btn-platinum':'btn-outline'} style={{width:'100%',justifyContent:'center'}}>{plan.cta}</a>
                     </div>
                   </div>
                 )
@@ -241,24 +256,38 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         </section>
 
         {/* ADDON */}
-        <section style={{padding:'64px 24px',background:'#fff'}}>
+        <section style={{padding:'64px 24px',background:'#f5f0e6'}}>
           <div style={{maxWidth:700,margin:'0 auto'}}>
-            <div style={{background:'#0d4f3c',borderRadius:24,padding:'40px 36px',color:'#fff'}}>
-              <div style={{marginBottom:8}}><span style={{display:'inline-block',background:'rgba(255,255,255,.15)',color:'rgba(255,255,255,.9)',padding:'3px 14px',borderRadius:999,fontSize:'.75rem',fontWeight:600}}>{d.addon.label}</span></div>
-              <h2 style={{fontSize:'clamp(1.3rem,3vw,1.8rem)',fontWeight:900,marginBottom:8,color:'#e2c46e'}}>{d.addon.title}</h2>
-              <p style={{color:'rgba(255,255,255,.8)',marginBottom:24,fontSize:'.9rem',lineHeight:1.8}}>{d.addon.description}</p>
-              <div style={{marginBottom:24}}>
-                <span style={{fontSize:'2rem',fontWeight:900,color:'#e2c46e'}}>{d.addon.price.toLocaleString()}</span>
-                <span style={{color:'rgba(255,255,255,.6)',marginLeft:6,fontSize:'.9rem'}}>THB（追加費用）</span>
+            {/* Connector line */}
+            <div style={{textAlign:'center',marginBottom:24}}>
+              <span style={{display:'inline-flex',alignItems:'center',gap:10,color:'#0d4f3c',fontSize:'.82rem',fontWeight:600}}>
+                <span style={{width:40,height:1,background:'#c9a84c',display:'inline-block'}}/>
+                オプション追加可能
+                <span style={{width:40,height:1,background:'#c9a84c',display:'inline-block'}}/>
+              </span>
+            </div>
+            <div style={{background:'linear-gradient(135deg,#fdf8ee,#faf3e0)',borderRadius:24,border:'2px solid #c9a84c',boxShadow:'0 4px 24px rgba(201,168,76,.18)',overflow:'hidden'}}>
+              {/* Gold top bar */}
+              <div style={{background:'linear-gradient(90deg,#c9a84c,#e2c46e)',padding:'10px 32px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+                <span style={{color:'#fff',fontWeight:700,fontSize:'.82rem',letterSpacing:'.08em'}}>OPTIONAL ADD-ON</span>
+                <span style={{color:'rgba(255,255,255,.85)',fontSize:'.75rem',fontWeight:500}}>{d.addon.label}</span>
               </div>
-              <ul style={{listStyle:'none',padding:0,margin:'0 0 28px',display:'flex',flexDirection:'column',gap:10}}>
-                {d.addon.features.map((f: string,i: number)=>(
-                  <li key={i} style={{display:'flex',gap:8,alignItems:'flex-start',fontSize:'.88rem',color:'rgba(255,255,255,.9)'}}>
-                    <span style={{color:'#e2c46e',flexShrink:0,fontWeight:700}}>✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-              <a href="#inquiry" className="btn-gold">{d.addon.cta}</a>
+              <div style={{padding:'32px 36px'}}>
+                <h2 style={{fontSize:'clamp(1.3rem,3vw,1.8rem)',fontWeight:900,marginBottom:8,color:'#0a2e1f'}}>{d.addon.title}</h2>
+                <p style={{color:'#555',marginBottom:24,fontSize:'.9rem',lineHeight:1.8}}>{d.addon.description}</p>
+                <div style={{marginBottom:24,display:'flex',alignItems:'baseline',gap:6}}>
+                  <span style={{fontSize:'2rem',fontWeight:900,color:'#c9a84c'}}>+{d.addon.price.toLocaleString()}</span>
+                  <span style={{color:'#777',fontSize:'.9rem'}}>THB</span>
+                </div>
+                <ul style={{listStyle:'none',padding:0,margin:'0 0 28px',display:'flex',flexDirection:'column',gap:10}}>
+                  {d.addon.features.map((f: string,i: number)=>(
+                    <li key={i} style={{display:'flex',gap:8,alignItems:'flex-start',fontSize:'.88rem',color:'#333'}}>
+                      <span style={{color:'#0d4f3c',flexShrink:0,fontWeight:700}}>✓</span>{f}
+                    </li>
+                  ))}
+                </ul>
+                <a href="#inquiry" className="btn-gold">{d.addon.cta}</a>
+              </div>
             </div>
           </div>
         </section>
