@@ -185,7 +185,7 @@ const ja: Dictionary = {
     },
     addon: {
       label: 'オプション追加',
-      title: 'DTV申請代行プラン',
+      title: 'DTV申請代行サービス',
       description: 'ビザ申請完全代行で、書類作成から大使館申請まで全てサポート。却下時はスクール代金を全額返金。',
       price: 10000,
       features: [

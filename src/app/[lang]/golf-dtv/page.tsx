@@ -400,11 +400,25 @@ function InquiryForm({ plans, cta }: { plans: any[]; cta: string }) {
           <option>まだ決めていない・相談したい</option>
         </select>
       </div>
+      {/* DTV申請代行サービス チェックボックス */}
+      <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'14px 16px',border:'1px solid #ddd8cc'}}>
+        <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
+          <input type="checkbox" style={{accentColor:'#0d4f3c',marginTop:3,width:16,height:16,flexShrink:0}}/>
+          <div>
+            <span style={{fontWeight:700,fontSize:'.9rem',color:'#0a2e1f'}}>DTV申請代行サービスを希望する</span>
+            <span style={{display:'block',fontSize:'.78rem',color:'#666',marginTop:2}}>+10,000 THB｜書類作成〜大使館申請まで全代行。却下時スクール代100%返金保証。</span>
+          </div>
+        </label>
+      </div>
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:20}}>
         <div><label className="form-label">お名前<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label><input type="text" className="form-input" placeholder="山田 太郎" required/></div>
         <div><label className="form-label">メールアドレス<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>必須</span></label><input type="email" className="form-input" placeholder="your@email.com" required/></div>
       </div>
       <div style={{marginBottom:20}}><label className="form-label">お電話番号</label><input type="tel" className="form-input" placeholder="090-0000-0000"/></div>
+      <div style={{marginBottom:20}}>
+        <label className="form-label">紹介コード<span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>お持ちの方のみ</span></label>
+        <input type="text" className="form-input" placeholder="例：GD-XXXX"/>
+      </div>
       <div style={{marginBottom:28}}><label className="form-label">ご質問・ご相談内容</label><textarea className="form-input" rows={4} placeholder="お気軽にご記載ください" style={{resize:'vertical'}}/></div>
       <div style={{marginBottom:20,fontSize:'.8rem',color:'#888'}}>
         <label style={{display:'flex',gap:8,alignItems:'flex-start',cursor:'pointer'}}>
