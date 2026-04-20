@@ -27,7 +27,8 @@
       "Bash(unzip -l countries.zip)",
       "Bash(rm -f countries.zip)",
       "Bash(curl -s \"https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_continents.geojson\" -o continents-detailed.json)",
-      "Bash(curl -s \"https://naciscdn.org/naturalearth/110m/physical/ne_110m_continents.geojson\" -o continents-detailed.json)"
+      "Bash(curl -s \"https://naciscdn.org/naturalearth/110m/physical/ne_110m_continents.geojson\" -o continents-detailed.json)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
