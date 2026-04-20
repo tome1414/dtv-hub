@@ -10,6 +10,7 @@ interface GolfDTVPageProps {
 
 export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [dict, setDict] = useState<any>(null)
+  const [heroBg, setHeroBg] = useState<2|3>(2)
 
   useEffect(() => {
     params.then(({ lang }) => {
@@ -41,7 +42,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
         .golf-root { font-family: 'Noto Sans JP', sans-serif; color: #1a1a1a; background: #fff; }
-        .hero-bg { background: linear-gradient(160deg, #082d21 0%, #0d4f3c 40%, #1a6b52 70%, #0a3d2e 100%); position: relative; overflow: hidden; }
+        .hero-bg { position: relative; overflow: hidden; }
         .hero-circle { position: absolute; border-radius: 50%; background: rgba(201,168,76,0.07); animation: pulse-slow 6s ease-in-out infinite; }
         @keyframes pulse-slow { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.05);opacity:1} }
         .badge-green { display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:#e2c46e;padding:4px 16px;border-radius:999px;font-size:.75rem;letter-spacing:.1em;font-weight:500; }
@@ -123,8 +124,15 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           </div>
         </div>
 
+        {/* BG COMPARE TOGGLE — 確認用 */}
+        <div style={{background:'#082d21',padding:'8px 24px',display:'flex',alignItems:'center',gap:12,justifyContent:'center',borderBottom:'1px solid rgba(255,255,255,.08)'}}>
+          <span style={{color:'rgba(255,255,255,.5)',fontSize:'.75rem'}}>背景画像を比較：</span>
+          <button onClick={()=>setHeroBg(2)} style={{padding:'4px 16px',borderRadius:999,fontSize:'.75rem',fontWeight:700,cursor:'pointer',border:'none',background:heroBg===2?'#c9a84c':'rgba(255,255,255,.15)',color:heroBg===2?'#fff':'rgba(255,255,255,.7)'}}>画像①（山・池）</button>
+          <button onClick={()=>setHeroBg(3)} style={{padding:'4px 16px',borderRadius:999,fontSize:'.75rem',fontWeight:700,cursor:'pointer',border:'none',background:heroBg===3?'#c9a84c':'rgba(255,255,255,.15)',color:heroBg===3?'#fff':'rgba(255,255,255,.7)'}}>画像②（岩山）</button>
+        </div>
+
         {/* HERO */}
-        <section className="hero-bg" style={{padding:'80px 24px 64px',minHeight:'80vh',display:'flex',alignItems:'center',position:'relative'}}>
+        <section className="hero-bg" style={{padding:'80px 24px 64px',minHeight:'80vh',display:'flex',alignItems:'center',position:'relative',backgroundImage:`linear-gradient(160deg,rgba(8,45,33,0.82) 0%,rgba(13,79,60,0.72) 40%,rgba(26,107,82,0.68) 70%,rgba(10,61,46,0.82) 100%),url(/golf_lp_hero_0${heroBg}.png)`,backgroundSize:'cover',backgroundPosition:'center'}}>
           <div className="hero-circle" style={{width:500,height:500,top:-100,right:-100}}/>
           <div className="hero-circle" style={{width:300,height:300,bottom:-50,left:100,animationDelay:'3s'}}/>
           <div style={{maxWidth:900,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
