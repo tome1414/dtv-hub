@@ -81,6 +81,20 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         .nav-mobile-menu { display:none;flex-direction:column;padding:16px 24px;gap:14px;border-top:1px solid rgba(255,255,255,.1);background:#082d21; }
         .nav-mobile-menu.open { display:flex; }
         .counter { font-size:clamp(2rem,5vw,3.5rem);font-weight:900; }
+        .hero-stats-bar { background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);borderRadius:16px;border-radius:16px;display:flex;align-items:stretch;overflow:hidden; }
+        .hero-stats-main { display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 28px;flex-shrink:0;min-width:110px; }
+        .hero-stats-divider { width:1px;background:rgba(255,255,255,.15);flex-shrink:0; }
+        .hero-stats-grid { display:grid;grid-template-columns:1fr 1fr;flex:1; }
+        .hero-stats-cell { display:flex;align-items:flex-start;gap:8px;padding:14px 18px;border-left:1px solid rgba(255,255,255,.08); }
+        .hero-stats-cell-top { border-bottom:1px solid rgba(255,255,255,.08); }
+        @media(max-width:600px){
+          .hero-stats-bar{flex-direction:column}
+          .hero-stats-divider{width:100%;height:1px}
+          .hero-stats-main{padding:18px 24px;flex-direction:row;gap:12px;justify-content:flex-start}
+          .hero-stats-grid{grid-template-columns:1fr}
+          .hero-stats-cell{border-left:none;border-top:1px solid rgba(255,255,255,.08)}
+          .hero-stats-cell-top{border-bottom:none}
+        }
         .divider { height:2px;background:linear-gradient(90deg,transparent,#0d4f3c,transparent); }
         .tag { display:inline-block;background:rgba(13,79,60,.08);color:#0d4f3c;padding:4px 12px;border-radius:999px;font-size:.78rem;font-weight:600; }
         .form-two-col { display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px; }
@@ -158,16 +172,23 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
               <a href="#inquiry" className="btn-gold" style={{fontSize:'1rem',padding:'16px 40px'}}>{d.hero.cta}</a>
             </div>
             {/* Trust stats */}
-            <div style={{background:'rgba(255,255,255,.07)',border:'1px solid rgba(255,255,255,.12)',borderRadius:16,display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
-              <div className="hero-stat">
-                <div className="counter" style={{color:'#e2c46e'}}>{d.trust.successRate}</div>
-                <div style={{color:'rgba(255,255,255,.7)',fontSize:'.78rem',marginTop:4}}>Success Rate</div>
+            <div className="hero-stats-bar">
+              {/* 96% */}
+              <div className="hero-stats-main">
+                <span style={{fontSize:'clamp(2.4rem,5vw,3.2rem)',fontWeight:900,color:'#e2c46e',lineHeight:1}}>{d.trust.successRate}</span>
+                <span style={{color:'rgba(255,255,255,.6)',fontSize:'.75rem',marginTop:6,letterSpacing:'.05em'}}>Success Rate</span>
               </div>
-              {d.trust.items.map((item: string,i: number)=>(
-                <div key={i} className="hero-stat">
-                  <div style={{color:'#e2c46e',fontSize:'.82rem',fontWeight:700,padding:'4px 0',lineHeight:1.5}}>{item}</div>
-                </div>
-              ))}
+              {/* vertical divider */}
+              <div className="hero-stats-divider"/>
+              {/* 4 items in 2×2 grid */}
+              <div className="hero-stats-grid">
+                {d.trust.items.map((item: string,i: number)=>(
+                  <div key={i} className={`hero-stats-cell${i===0||i===1?' hero-stats-cell-top':''}`}>
+                    <span style={{display:'inline-block',width:6,height:6,borderRadius:'50%',background:'#c9a84c',flexShrink:0,marginTop:3}}/>
+                    <span style={{color:'rgba(255,255,255,.88)',fontSize:'.82rem',fontWeight:600,lineHeight:1.55}}>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
