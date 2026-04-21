@@ -559,25 +559,61 @@ function LangSwitcher() {
 
 function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
   const [submitted, setSubmitted] = React.useState(false)
-  if (submitted) {
-    return <div style={{textAlign:'center',padding:'40px 0',color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem'}}>{f.successMessage}</div>
+  const [loading, setLoading] = React.useState(false)
+  const [sendError, setSendError] = React.useState(false)
+  const [plan, setPlan] = React.useState('')
+  const [agencyService, setAgencyService] = React.useState(false)
+  const [name, setName] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [referral, setReferral] = React.useState('')
+  const [message, setMessage] = React.useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setSendError(false)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, plan, agencyService, referral, message }),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setSubmitted(true)
+    } catch {
+      setSendError(true)
+    } finally {
+      setLoading(false)
+    }
   }
+
+  if (submitted) {
+    return (
+      <div style={{textAlign:'center',padding:'48px 0'}}>
+        <div style={{fontSize:'2.5rem',marginBottom:12}}>✓</div>
+        <p style={{color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem',margin:0}}>{f.successMessage}</p>
+      </div>
+    )
+  }
+
   return (
-    <form onSubmit={(e)=>{e.preventDefault();setSubmitted(true)}}>
+    <form onSubmit={handleSubmit}>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.planLabel}</label>
-        <select className="form-input" style={{cursor:'pointer'}}>
+        <select className="form-input" style={{cursor:'pointer'}} value={plan} onChange={e=>setPlan(e.target.value)}>
           <option value="">{f.planPlaceholder}</option>
           {plans.map((p: any,i: number)=>(
-            <option key={i}>{p.name} — {p.price.toLocaleString()} {p.currency} / {p.period}</option>
+            <option key={i} value={`${p.name} — ${p.price.toLocaleString()} ${p.currency} / ${p.period}`}>
+              {p.name} — {p.price.toLocaleString()} {p.currency} / {p.period}
+            </option>
           ))}
-          <option>{f.planUndecided}</option>
+          <option value={f.planUndecided}>{f.planUndecided}</option>
         </select>
       </div>
       {/* Agency service checkbox */}
       <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc'}}>
         <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
-          <input type="checkbox" style={{accentColor:'#0d4f3c',marginTop:3,width:16,height:16,flexShrink:0}}/>
+          <input type="checkbox" checked={agencyService} onChange={e=>setAgencyService(e.target.checked)} style={{accentColor:'#0d4f3c',marginTop:3,width:16,height:16,flexShrink:0}}/>
           <div>
             <span style={{fontWeight:700,fontSize:'.88rem',color:'#0a2e1f'}}>{f.agencyLabel}</span>
             <ul style={{margin:'4px 0 0',padding:'0 0 0 14px',fontSize:'.76rem',color:'#666',lineHeight:1.7}}>
@@ -588,19 +624,19 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.nameLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
-        <input type="text" className="form-input" placeholder="" required/>
+        <input type="text" className="form-input" required value={name} onChange={e=>setName(e.target.value)}/>
       </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.emailLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
-        <input type="email" className="form-input" placeholder="your@email.com" required/>
+        <input type="email" className="form-input" placeholder="your@email.com" required value={email} onChange={e=>setEmail(e.target.value)}/>
       </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.referralLabel}<span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>{f.referralNote}</span></label>
-        <input type="text" className="form-input" placeholder={f.referralPlaceholder}/>
+        <input type="text" className="form-input" placeholder={f.referralPlaceholder} value={referral} onChange={e=>setReferral(e.target.value)}/>
       </div>
       <div style={{marginBottom:28}}>
         <label className="form-label">{f.messageLabel}</label>
-        <textarea className="form-input" rows={4} placeholder={f.messagePlaceholder} style={{resize:'vertical'}}/>
+        <textarea className="form-input" rows={4} placeholder={f.messagePlaceholder} style={{resize:'vertical'}} value={message} onChange={e=>setMessage(e.target.value)}/>
       </div>
       <div style={{marginBottom:20,fontSize:'.8rem',color:'#888'}}>
         <label style={{display:'flex',gap:8,alignItems:'flex-start',cursor:'pointer'}}>
@@ -608,7 +644,14 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
           <span>{f.privacyConsent}</span>
         </label>
       </div>
-      <button type="submit" className="btn-gold" style={{width:'100%',justifyContent:'center',fontSize:'1rem',padding:16}}>{cta}</button>
+      {sendError && (
+        <div style={{marginBottom:16,padding:'12px 16px',background:'#fef2f2',border:'1px solid #fca5a5',borderRadius:8,fontSize:'.85rem',color:'#b91c1c'}}>
+          送信に失敗しました。時間をおいて再度お試しください。
+        </div>
+      )}
+      <button type="submit" disabled={loading} className="btn-gold" style={{width:'100%',justifyContent:'center',fontSize:'1rem',padding:16,opacity:loading?0.7:1}}>
+        {loading ? '送信中...' : cta}
+      </button>
     </form>
   )
 }
