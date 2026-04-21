@@ -125,6 +125,16 @@ export interface Dictionary {
       title: string
       items: string[]
     }
+    whySafe: {
+      sectionLabel: string
+      title: string
+      items: {
+        number: string
+        title: string
+        subtitle: string
+        body: string
+      }[]
+    }
     ticker: string[]
     form: {
       planLabel: string

@@ -293,10 +293,28 @@ const en: Dictionary = {
       successRate: '96%',
       title: 'Why Trust Golf DTV',
       items: [
-        'Industry first: Only agency to establish golf school-based DTV acquisition',
-        'Partnership with Thailand PGA-certified professionals',
+        'Industry first golf school DTV acquisition',
+        'Supervised by state-certified legal expert',
         '100% refund guarantee (with agency plan)',
-        'Part of 10,000+ person DTV community',
+        'Direct liaison with Thai embassies worldwide',
+      ],
+    },
+    whySafe: {
+      sectionLabel: 'WHY GOLFDTV',
+      title: 'Why Our DTV Support Is Reliable and Secure',
+      items: [
+        {
+          number: '01',
+          title: 'Direct Liaison with Thai Embassies Worldwide',
+          subtitle: 'Fact-based Operation',
+          body: 'DTV is a newly introduced visa category, and grey areas exist that are not reflected on official websites — including discretionary criteria applied by individual immigration officers. We never rely on internet rumors or outdated information. Our team regularly contacts Thai embassies and consulates across the globe to stay current with official screening standards and real-world immigration practices. This meticulous fact-checking allows us to prepare documents that eliminate risk at the application stage.',
+        },
+        {
+          number: '02',
+          title: 'Supervised by a Japanese State-Certified Legal Expert',
+          subtitle: 'Certified Legal Specialist — Immigration & Documentation (Gyoseishoshi)',
+          body: 'Our visa acquisition framework and compliance procedures are fully supervised by a holder of Japan\'s national license in administrative law — a Gyoseishoshi (State-Certified Legal Specialist in Immigration & Documentation). This rigorous legal oversight ensures that every document we prepare meets both the letter and spirit of Thai immigration law, minimizing the risk of rejection due to errors or inconsistencies. When a Japanese-standard legal expert stands behind your application, confidence is built-in.',
+        },
       ],
     },
     ticker: [

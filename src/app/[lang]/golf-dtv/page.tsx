@@ -161,29 +161,36 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             <div style={{background:'rgba(255,255,255,.07)',border:'1px solid rgba(255,255,255,.12)',borderRadius:16,display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
               <div className="hero-stat">
                 <div className="counter" style={{color:'#e2c46e'}}>{d.trust.successRate}</div>
-                <div style={{color:'rgba(255,255,255,.7)',fontSize:'.78rem',marginTop:4}}>DTV取得成功率</div>
+                <div style={{color:'rgba(255,255,255,.7)',fontSize:'.78rem',marginTop:4}}>Success Rate</div>
               </div>
-              {d.trust.items.slice(0,3).map((item: string,i: number)=>(
+              {d.trust.items.map((item: string,i: number)=>(
                 <div key={i} className="hero-stat">
-                  <div style={{color:'#e2c46e',fontSize:'.85rem',fontWeight:700,padding:'4px 0'}}>{item}</div>
+                  <div style={{color:'#e2c46e',fontSize:'.82rem',fontWeight:700,padding:'4px 0',lineHeight:1.5}}>{item}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* TRUST */}
-        <section style={{padding:'64px 24px',background:'#fff'}}>
-          <div style={{maxWidth:900,margin:'0 auto'}}>
-            <div style={{textAlign:'center',marginBottom:40}}>
-              <span className="section-label">TRUST</span>
-              <h2 className="section-title" style={{marginTop:8}}>{d.trust.title}</h2>
+        {/* WHY SAFE */}
+        <section style={{padding:'72px 24px',background:'#082d21'}}>
+          <div style={{maxWidth:1000,margin:'0 auto'}}>
+            <div style={{textAlign:'center',marginBottom:52}}>
+              <span style={{fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'#c9a84c',fontWeight:600}}>{d.whySafe.sectionLabel}</span>
+              <h2 style={{fontSize:'clamp(1.4rem,3vw,2.1rem)',fontWeight:900,lineHeight:1.3,color:'#fff',marginTop:10}}>{d.whySafe.title}</h2>
             </div>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:16}}>
-              {d.trust.items.map((item: string,i: number)=>(
-                <div key={i} style={{background:'#f5f0e6',borderRadius:14,padding:'20px 18px',display:'flex',alignItems:'flex-start',gap:12}}>
-                  <div style={{width:28,height:28,background:'#0d4f3c',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,color:'#fff',fontWeight:700,fontSize:'.8rem',marginTop:1}}>✓</div>
-                  <p style={{fontSize:'.85rem',color:'#333',lineHeight:1.65,fontWeight:500,margin:0}}>{item}</p>
+            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(340px,1fr))',gap:24}}>
+              {d.whySafe.items.map((item: any)=>(
+                <div key={item.number} style={{background:'rgba(255,255,255,.05)',border:'1px solid rgba(201,168,76,.25)',borderRadius:20,padding:'32px 28px',display:'flex',flexDirection:'column',gap:16}}>
+                  <div style={{display:'flex',alignItems:'center',gap:14}}>
+                    <span style={{fontSize:'2rem',fontWeight:900,color:'rgba(201,168,76,.35)',lineHeight:1,fontVariantNumeric:'tabular-nums'}}>{item.number}</span>
+                    <div>
+                      <p style={{fontWeight:800,color:'#fff',fontSize:'.98rem',lineHeight:1.4,margin:0}}>{item.title}</p>
+                      <p style={{color:'#c9a84c',fontSize:'.75rem',fontWeight:600,marginTop:3,letterSpacing:'.02em'}}>{item.subtitle}</p>
+                    </div>
+                  </div>
+                  <div style={{width:40,height:2,background:'linear-gradient(90deg,#c9a84c,transparent)'}}/>
+                  <p style={{color:'rgba(255,255,255,.72)',fontSize:'.87rem',lineHeight:1.9,margin:0}}>{item.body}</p>
                 </div>
               ))}
             </div>
