@@ -342,6 +342,84 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           </div>
         </section>
 
+        {/* LEGAL */}
+        <section style={{padding:'48px 24px 56px',background:'#fff'}} id="legal">
+          <div style={{maxWidth:800,margin:'0 auto'}}>
+            <div style={{textAlign:'center',marginBottom:36}}>
+              <span className="section-label">LEGAL</span>
+              <h2 className="section-title" style={{marginTop:8,fontSize:'clamp(1.2rem,2.5vw,1.6rem)'}}>各種規約・会社概要</h2>
+            </div>
+            <div style={{display:'flex',flexDirection:'column',gap:12}}>
+              <LegalBox id="company" title="会社概要">
+                <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
+                  <tbody>
+                    {[
+                      ['会社名', 'Toy World Company'],
+                      ['所在地', 'Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960'],
+                      ['代表者', 'Kenji Yamamoto'],
+                      ['設立', '2022年'],
+                      ['事業内容', 'DTVビザ申請サポートサービス、ゴルフスクール受講斡旋、タイ長期滞在コンサルティング'],
+                      ['メールアドレス', 'info@golfdtv.com'],
+                    ].map(([k,v])=>(
+                      <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
+                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:140}}>{k}</td>
+                        <td style={{padding:'10px 0',color:'#444'}}>{v}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </LegalBox>
+
+              <LegalBox id="sct" title="特定商取引法に基づく表記">
+                <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
+                  <tbody>
+                    {[
+                      ['販売業者', 'Toy World Company'],
+                      ['代表者', 'Kenji Yamamoto'],
+                      ['所在地', 'Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960'],
+                      ['電話番号', 'メールにてお問い合わせください（お問い合わせフォームまたは info@golfdtv.com）'],
+                      ['メールアドレス', 'info@golfdtv.com'],
+                      ['販売価格', 'Silverプラン: 20,000 THB／年\nGoldプラン: 50,000 THB／年\nPlatinumプラン: 100,000 THB／年\nDTV申請代行サービス: +10,000 THB\n※日本円換算は申込時の為替レートにより異なります。詳細はお問い合わせください。'],
+                      ['支払方法', '銀行振込またはクレジットカード決済\n（詳細はお申し込み後に別途ご案内いたします）'],
+                      ['支払時期', 'お申し込み確認後、請求書発行より14日以内にお支払いください'],
+                      ['役務提供時期', 'ご入金確認後1〜3営業日以内に、DTVビザ申請に必要な公式書類（入学許可証・受講証明書等）をPDFにて発行いたします'],
+                      ['キャンセル・返金', '受講証明書発行前のキャンセルは全額返金いたします。発行後のキャンセルはお受けできません。\nビザが却下された場合：申請代行プランご利用時はスクール代金100%返金、ご利用でない場合はスクール代金の50%を返金します。\nなお、ビザ申請費用（10,000 THB相当）はタイ大使館への直接支払い分のため、いずれの場合も返金対象外となります。'],
+                      ['特記事項', '当サービスはビザ申請のサポートを行うものであり、ビザの取得を保証するものではありません。'],
+                    ].map(([k,v])=>(
+                      <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
+                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:160}}>{k}</td>
+                        <td style={{padding:'10px 0',color:'#444',whiteSpace:'pre-line'}}>{v}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </LegalBox>
+
+              <LegalBox id="privacy" title="プライバシーポリシー">
+                <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
+                  <p>Toy World Company（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下のプライバシーポリシーを定めます。</p>
+                  {[
+                    ['1. 収集する個人情報', 'お問い合わせフォームを通じて、お名前、メールアドレス、ご希望プラン、ご紹介コード、お問い合わせ内容等の情報をお預かりします。'],
+                    ['2. 利用目的', 'お問い合わせへの回答およびサービスのご案内\nDTVビザ申請サポートサービスの提供\nサービス改善および新サービスのご案内\n法令に基づく対応'],
+                    ['3. 第三者への提供', '当社は、以下の場合を除き、お客様の個人情報を第三者に提供いたしません。\n・お客様の同意がある場合\n・法令に基づく場合\n・サービス提供に必要な業務委託先（厳格な守秘義務を課します）'],
+                    ['4. 個人情報の管理', '当社は、個人情報の漏洩・紛失・不正アクセスを防止するため、適切なセキュリティ措置を講じます。'],
+                    ['5. 開示・訂正・削除', 'お客様は、当社が保有するご自身の個人情報の開示、訂正、削除を要求する権利を有します。ご要望はお問い合わせフォームまたは info@golfdtv.com よりご連絡ください。'],
+                    ['6. Cookieの使用', '当社ウェブサイトでは、サービス向上のためCookieを使用することがあります。ブラウザの設定によりCookieを無効化することができますが、一部機能が制限される場合があります。'],
+                    ['7. プライバシーポリシーの変更', '本ポリシーは、必要に応じて改定することがあります。重要な変更がある場合は、ウェブサイト上でお知らせします。'],
+                    ['8. お問い合わせ', '個人情報に関するお問い合わせは info@golfdtv.com までご連絡ください。'],
+                  ].map(([heading, body])=>(
+                    <div key={heading}>
+                      <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
+                      <p style={{whiteSpace:'pre-line'}}>{body}</p>
+                    </div>
+                  ))}
+                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>制定日：2022年1月1日</p>
+                </div>
+              </LegalBox>
+            </div>
+          </div>
+        </section>
+
         {/* FOOTER */}
         <footer style={{background:'#082d21',padding:'48px 24px 24px',color:'rgba(255,255,255,.7)'}}>
           <div style={{maxWidth:1100,margin:'0 auto'}}>
@@ -381,6 +459,26 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
 
       </div>
     </>
+  )
+}
+
+function LegalBox({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <div id={id} style={{border:'1px solid #e5e0d5',borderRadius:14,overflow:'hidden'}}>
+      <button
+        onClick={()=>setOpen(!open)}
+        style={{width:'100%',background:open?'#0a2e1f':'#f5f0e6',padding:'16px 24px',display:'flex',justifyContent:'space-between',alignItems:'center',border:'none',cursor:'pointer',fontFamily:'inherit',transition:'background .2s'}}
+      >
+        <span style={{fontWeight:700,fontSize:'.95rem',color:open?'#e2c46e':'#0a2e1f'}}>{title}</span>
+        <span style={{width:24,height:24,borderRadius:'50%',background:open?'rgba(255,255,255,.15)':'#0d4f3c',color:open?'#e2c46e':'#fff',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.1rem',lineHeight:1,transition:'transform .3s',transform:open?'rotate(45deg)':'none',flexShrink:0}}>+</span>
+      </button>
+      <div style={{maxHeight:open?2000:0,overflow:'hidden',transition:'max-height .4s ease',background:'#fff'}}>
+        <div style={{padding:'24px'}}>
+          {children}
+        </div>
+      </div>
+    </div>
   )
 }
 

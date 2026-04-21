@@ -329,7 +329,7 @@ const ko: Dictionary = {
       services: '서비스',
       support: '지원',
       serviceLinks: [['플랜', '#plans'], ['자주 묻는 질문', '#faq'], ['문의하기', '#inquiry']],
-      supportLinks: [['개인정보처리방침', '#'], ['법적 고지', '#'], ['회사 소개', '#']],
+      supportLinks: [['개인정보처리방침', '#privacy'], ['법적 고지', '#sct'], ['회사 소개', '#company']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: '본 서비스는 비자 신청 지원을 제공하며 비자 승인을 보장하지 않습니다.',
     },

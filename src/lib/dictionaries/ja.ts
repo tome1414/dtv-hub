@@ -347,7 +347,7 @@ const ja: Dictionary = {
       services: 'サービス',
       support: 'サポート',
       serviceLinks: [['プラン一覧', '#plans'], ['よくある質問', '#faq'], ['お問い合わせ', '#inquiry']],
-      supportLinks: [['プライバシーポリシー', '#'], ['特定商取引法に基づく表記', '#'], ['会社概要', '#']],
+      supportLinks: [['プライバシーポリシー', '#privacy'], ['特定商取引法に基づく表記', '#sct'], ['会社概要', '#company']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: '当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。',
     },
