@@ -81,6 +81,14 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         .nav-mobile-menu { display:none;flex-direction:column;padding:16px 24px;gap:14px;border-top:1px solid rgba(255,255,255,.1);background:#082d21; }
         .nav-mobile-menu.open { display:flex; }
         .counter { font-size:clamp(2rem,5vw,3.5rem);font-weight:900; }
+        .flow-grid { grid-template-columns: repeat(3,1fr); }
+        .flow-step { border-bottom: 1px solid #f0ede4; }
+        .flow-step:nth-child(n+4) { border-bottom: none; }
+        @media(max-width:700px){
+          .flow-grid { grid-template-columns: 1fr !important; }
+          .flow-step { border-bottom: 1px solid #f0ede4; padding: 20px 0; }
+          .flow-step:last-child { border-bottom: none; }
+        }
         .hero-stats-bar { background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);borderRadius:16px;border-radius:16px;display:flex;align-items:stretch;overflow:hidden; }
         .hero-stats-main { display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 28px;flex-shrink:0;min-width:110px; }
         .hero-stats-divider { width:1px;background:rgba(255,255,255,.15);flex-shrink:0; }
@@ -214,6 +222,38 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
                   <p style={{color:'rgba(255,255,255,.72)',fontSize:'.87rem',lineHeight:1.9,margin:0}}>{item.body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FLOW */}
+        <section style={{padding:'72px 24px',background:'#fff'}}>
+          <div style={{maxWidth:1000,margin:'0 auto'}}>
+            <div style={{textAlign:'center',marginBottom:52}}>
+              <span style={{fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'#0d4f3c',fontWeight:600}}>{d.flow.sectionLabel}</span>
+              <h2 style={{fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:900,color:'#0a2e1f',marginTop:10}}>{d.flow.title}</h2>
+            </div>
+            {/* Desktop: 3+3 grid / Mobile: vertical */}
+            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'0',position:'relative'}} className="flow-grid">
+              {d.flow.steps.map((step: any, i: number) => {
+                const isLast = i === d.flow.steps.length - 1
+                const isRowEnd = (i + 1) % 3 === 0
+                return (
+                  <div key={step.number} style={{position:'relative',padding:'28px 24px'}} className="flow-step">
+                    {/* connector line right */}
+                    {!isRowEnd && !isLast && (
+                      <div style={{position:'absolute',top:42,right:-1,width:'calc(100% - 64px)',height:2,background:'linear-gradient(90deg,#c9a84c,#e2c46e)',zIndex:0,left:64}}/>
+                    )}
+                    {/* number badge */}
+                    <div style={{position:'relative',zIndex:1,width:48,height:48,borderRadius:'50%',background:'linear-gradient(135deg,#0d4f3c,#1a7a5e)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:16,boxShadow:'0 4px 12px rgba(13,79,60,.25)'}}>
+                      <span style={{color:'#e2c46e',fontWeight:900,fontSize:'.85rem'}}>{step.number}</span>
+                    </div>
+                    <div style={{fontSize:'1.4rem',marginBottom:8,lineHeight:1}}>{step.icon}</div>
+                    <p style={{fontWeight:800,color:'#0a2e1f',fontSize:'.95rem',marginBottom:8,lineHeight:1.4}}>{step.title}</p>
+                    <p style={{color:'#666',fontSize:'.82rem',lineHeight:1.8,margin:0}}>{step.body}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -558,23 +598,43 @@ function LangSwitcher() {
 }
 
 const COUNTRIES = [
-  // Asia-Pacific (prominent for this service)
-  'Japan','China','South Korea','Taiwan','Hong Kong','Singapore','Thailand',
-  'Vietnam','Malaysia','Indonesia','Philippines','India','Australia','New Zealand',
-  // Europe
-  'Russia','United Kingdom','Germany','France','Italy','Spain','Netherlands',
-  'Sweden','Norway','Denmark','Finland','Switzerland','Austria','Belgium',
-  'Portugal','Poland','Czech Republic','Hungary','Romania','Ukraine','Turkey',
-  'Greece','Ireland',
-  // Americas
-  'United States','Canada','Brazil','Mexico','Argentina','Chile','Colombia','Peru',
-  // Middle East
-  'UAE','Saudi Arabia','Israel','Qatar','Kuwait','Bahrain','Oman',
   // Africa
-  'South Africa','Egypt','Morocco','Nigeria','Kenya',
-  // Other
-  'Mongolia','Kazakhstan','Uzbekistan','Myanmar','Cambodia','Laos','Sri Lanka',
-  'Bangladesh','Pakistan','Nepal','New Caledonia','Fiji',
+  'Algeria','Angola','Benin','Botswana','Burkina Faso','Burundi','Cabo Verde',
+  'Cameroon','Central African Republic','Chad','Comoros','Congo','DR Congo',
+  'Djibouti','Egypt','Equatorial Guinea','Eritrea','Eswatini','Ethiopia',
+  'Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Ivory Coast','Kenya',
+  'Lesotho','Liberia','Libya','Madagascar','Malawi','Mali','Mauritania',
+  'Mauritius','Morocco','Mozambique','Namibia','Niger','Nigeria','Rwanda',
+  'São Tomé and Príncipe','Senegal','Seychelles','Sierra Leone','Somalia',
+  'South Africa','South Sudan','Sudan','Tanzania','Togo','Tunisia','Uganda',
+  'Zambia','Zimbabwe',
+  // Americas
+  'Antigua and Barbuda','Argentina','Bahamas','Barbados','Belize','Bolivia',
+  'Brazil','Canada','Chile','Colombia','Costa Rica','Cuba','Dominica',
+  'Dominican Republic','Ecuador','El Salvador','Grenada','Guatemala','Guyana',
+  'Haiti','Honduras','Jamaica','Mexico','Nicaragua','Panama','Paraguay','Peru',
+  'Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines',
+  'Suriname','Trinidad and Tobago','United States','Uruguay','Venezuela',
+  // Asia & Pacific
+  'Afghanistan','Armenia','Azerbaijan','Bahrain','Bangladesh','Bhutan','Brunei',
+  'Cambodia','China','Cyprus','Georgia','Hong Kong','India','Indonesia','Iran',
+  'Iraq','Israel','Japan','Jordan','Kazakhstan','Kuwait','Kyrgyzstan','Laos',
+  'Lebanon','Malaysia','Maldives','Mongolia','Myanmar','Nepal','North Korea',
+  'Oman','Pakistan','Palestine','Philippines','Qatar','Saudi Arabia','Singapore',
+  'South Korea','Sri Lanka','Syria','Taiwan','Tajikistan','Thailand','Timor-Leste',
+  'Turkey','Turkmenistan','UAE','Uzbekistan','Vietnam','Yemen',
+  // Europe
+  'Albania','Andorra','Austria','Belarus','Belgium','Bosnia and Herzegovina',
+  'Bulgaria','Croatia','Czech Republic','Denmark','Estonia','Finland','France',
+  'Germany','Greece','Hungary','Iceland','Ireland','Italy','Kosovo','Latvia',
+  'Liechtenstein','Lithuania','Luxembourg','Malta','Moldova','Monaco',
+  'Montenegro','Netherlands','North Macedonia','Norway','Poland','Portugal',
+  'Romania','Russia','San Marino','Serbia','Slovakia','Slovenia','Spain',
+  'Sweden','Switzerland','Ukraine','United Kingdom','Vatican City',
+  // Oceania
+  'Australia','Fiji','Kiribati','Marshall Islands','Micronesia','Nauru',
+  'New Zealand','Palau','Papua New Guinea','Samoa','Solomon Islands',
+  'Tonga','Tuvalu','Vanuatu',
 ].sort()
 
 function NationalityCombobox({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder: string }) {

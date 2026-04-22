@@ -317,6 +317,18 @@ const en: Dictionary = {
         },
       ],
     },
+    flow: {
+      sectionLabel: 'HOW IT WORKS',
+      title: 'How to Get Your DTV Visa',
+      steps: [
+        { number: '01', icon: '💬', title: 'Inquiry & Plan Selection', body: 'Consult with GolfDTV and choose your plan: Silver, Gold, or Platinum' },
+        { number: '02', icon: '💳', title: 'Pay School Tuition', body: 'After confirming your plan, pay the tuition fee (20,000–100,000 THB). Agency service optional' },
+        { number: '03', icon: '📄', title: 'Official Documents Issued', body: 'Within 1–3 business days of payment confirmation, receive your enrollment letter and certificate via PDF' },
+        { number: '04', icon: '🗂️', title: 'Prepare Required Documents', body: 'Gather supporting documents: bank statement (500,000+ THB), passport copy, etc.' },
+        { number: '05', icon: '🏛️', title: 'Apply at Thai Embassy', body: 'Submit your DTV application at the nearest Thai embassy or consulate. Embassy fee approx. 10,000 THB' },
+        { number: '06', icon: '✈️', title: 'Visa Issued — Enter Thailand', body: 'After approval (typically 1–3 weeks), your DTV visa is issued. Start your 5-year, multiple-entry stay' },
+      ],
+    },
     ticker: [
       'Industry first: Golf school DTV visa',
       '96% success rate',

@@ -312,6 +312,18 @@ const zh: Dictionary = {
         },
       ],
     },
+    flow: {
+      sectionLabel: 'HOW IT WORKS',
+      title: 'DTV签证申请流程',
+      steps: [
+        { number: '01', icon: '💬', title: '咨询与选择方案', body: '与GolfDTV咨询，从Silver / Gold / Platinum中选择您的方案' },
+        { number: '02', icon: '💳', title: '支付学费', body: '确认方案后支付学费（20,000〜100,000泰铢）。可选添加代理服务' },
+        { number: '03', icon: '📄', title: '发放官方证明文件', body: '确认收款后1〜3个工作日内，以PDF形式发送入学许可证及受课证明' },
+        { number: '04', icon: '🗂️', title: '准备申请材料', body: '准备银行存款证明（50万泰铢以上）、护照复印件等申请所需材料' },
+        { number: '05', icon: '🏛️', title: '前往泰国大使馆申请', body: '前往最近的泰国大使馆或领事馆提交DTV签证申请，申请费约10,000泰铢' },
+        { number: '06', icon: '✈️', title: '签证发放・入境泰国', body: '审核通过后（通常1〜3周）签证发放。开始5年多次入境的泰国长期居留' },
+      ],
+    },
     ticker: [
       '业界首创：高尔夫学校DTV签证',
       '96%成功率',

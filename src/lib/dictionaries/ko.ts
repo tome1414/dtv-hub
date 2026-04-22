@@ -312,6 +312,18 @@ const ko: Dictionary = {
         },
       ],
     },
+    flow: {
+      sectionLabel: 'HOW IT WORKS',
+      title: 'DTV 비자 취득 절차',
+      steps: [
+        { number: '01', icon: '💬', title: '문의 및 플랜 선택', body: 'GolfDTV에 상담 후 Silver / Gold / Platinum 중 원하는 플랜을 선택' },
+        { number: '02', icon: '💳', title: '수강료 결제', body: '플랜 확정 후 수강료 납부（20,000〜100,000 THB）. 대행 서비스 옵션 추가 가능' },
+        { number: '03', icon: '📄', title: '공식 서류 발급', body: '결제 확인 후 1〜3 영업일 이내에 입학 허가서 및 수강 증명서를 PDF로 발급' },
+        { number: '04', icon: '🗂️', title: '필요 서류 준비', body: '잔고 증명서（50만 바트 이상）, 여권 사본 등 신청 서류 준비' },
+        { number: '05', icon: '🏛️', title: '태국 대사관에 신청', body: '가까운 태국 대사관 또는 영사관에서 DTV 비자 신청. 신청 수수료 약 10,000 THB' },
+        { number: '06', icon: '✈️', title: '비자 발급・태국 입국', body: '심사 통과 후（통상 1〜3주）DTV 비자 발급. 5년 복수 입국 장기 체류 시작' },
+      ],
+    },
     ticker: [
       '업계 최초: 골프 스쿨 DTV 비자',
       '96% 성공률',

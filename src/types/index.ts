@@ -135,6 +135,16 @@ export interface Dictionary {
         body: string
       }[]
     }
+    flow: {
+      sectionLabel: string
+      title: string
+      steps: {
+        number: string
+        icon: string
+        title: string
+        body: string
+      }[]
+    }
     ticker: string[]
     form: {
       planLabel: string

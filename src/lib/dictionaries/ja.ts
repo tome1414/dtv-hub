@@ -330,6 +330,18 @@ const ja: Dictionary = {
         },
       ],
     },
+    flow: {
+      sectionLabel: 'HOW IT WORKS',
+      title: 'DTVビザ取得までの流れ',
+      steps: [
+        { number: '01', icon: '💬', title: 'お問い合わせ・プラン選択', body: 'GolfDTVに相談し、Silver / Gold / Platinumからご希望のプランを選択' },
+        { number: '02', icon: '💳', title: 'スクール受講料お支払い', body: 'プラン確定後、受講料をお支払い（20,000〜100,000 THB）。申請代行プランはオプションで追加可能' },
+        { number: '03', icon: '📄', title: '公式書類発行', body: 'お支払い確認後1〜3営業日以内に、入学許可証・受講証明書等をPDFで発行' },
+        { number: '04', icon: '🗂️', title: '必要書類の準備', body: '残高証明書（50万バーツ以上相当）、パスポートコピー等の申請書類を準備' },
+        { number: '05', icon: '🏛️', title: 'タイ大使館・領事館へ申請', body: '最寄りのタイ大使館または領事館でDTVビザを申請。申請手数料は約10,000 THB相当' },
+        { number: '06', icon: '✈️', title: 'ビザ発給・タイ入国', body: '審査通過後（通常1〜3週間）にDTVビザが発給。5年間・マルチエントリーのタイ長期滞在スタート' },
+      ],
+    },
     ticker: [
       '業界初・ゴルフスクール経由DTV取得',
       '成功率96%',
