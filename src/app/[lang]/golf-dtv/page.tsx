@@ -581,8 +581,8 @@ function NationalityCombobox({ value, onChange, placeholder }: { value: string; 
   const [query, setQuery] = React.useState(value)
   const [open, setOpen] = React.useState(false)
   const filtered = query.length > 0
-    ? COUNTRIES.filter(c => c.toLowerCase().includes(query.toLowerCase())).slice(0, 12)
-    : COUNTRIES.slice(0, 12)
+    ? COUNTRIES.filter(c => c.toLowerCase().includes(query.toLowerCase()))
+    : COUNTRIES
   return (
     <div style={{position:'relative'}}>
       <input
