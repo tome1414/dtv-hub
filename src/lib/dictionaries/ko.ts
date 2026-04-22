@@ -326,6 +326,8 @@ const ko: Dictionary = {
       planUndecided: '아직 결정 못함·상담 희망',
       agencyLabel: 'DTV 신청 대행 서비스를 원합니다',
       agencyBullets: ['+10,000 THB(추가 비용)', '서류 준비부터 대사관 신청까지 전 대행', '불허 시: 수강료 100% 환불 보증'],
+      nationalityLabel: '국적',
+      nationalityPlaceholder: '국가를 입력하거나 선택하세요',
       nameLabel: '성명',
       emailLabel: '이메일 주소',
       required: '필수',

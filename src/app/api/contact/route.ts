@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, plan, agencyService, referral, message } = await req.json()
+    const { name, email, nationality, plan, agencyService, referral, message } = await req.json()
 
     // ── Gmail 送信 ──────────────────────────────────────────────
     const transporter = nodemailer.createTransport({
@@ -29,6 +29,10 @@ export async function POST(req: NextRequest) {
       <tr style="border-bottom:1px solid #e8e0d0;">
         <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">メール</td>
         <td style="padding:10px 0;"><a href="mailto:${email}" style="color:#0d4f3c;">${email}</a></td>
+      </tr>
+      <tr style="border-bottom:1px solid #e8e0d0;">
+        <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">国籍</td>
+        <td style="padding:10px 0;color:#333;">${nationality || '—'}</td>
       </tr>
       <tr style="border-bottom:1px solid #e8e0d0;">
         <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">希望プラン</td>
@@ -78,6 +82,7 @@ export async function POST(req: NextRequest) {
             timestamp: new Date().toISOString(),
             name,
             email,
+            nationality: nationality || '',
             plan: plan || '',
             agencyService: agencyService ? '希望' : '不要',
             referral: referral || '',

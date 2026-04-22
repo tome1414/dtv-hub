@@ -142,6 +142,8 @@ export interface Dictionary {
       planUndecided: string
       agencyLabel: string
       agencyBullets: string[]
+      nationalityLabel: string
+      nationalityPlaceholder: string
       nameLabel: string
       emailLabel: string
       required: string

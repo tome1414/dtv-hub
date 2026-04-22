@@ -329,6 +329,8 @@ const ru: Dictionary = {
       planUndecided: 'Ещё не решил · хочу проконсультироваться',
       agencyLabel: 'Хочу услугу агентства по оформлению DTV',
       agencyBullets: ['+10 000 THB (доп. стоимость)', 'Полная поддержка от документов до посольства', 'Отказ: 100% возврат взноса за учёбу'],
+      nationalityLabel: 'Гражданство',
+      nationalityPlaceholder: 'Введите или выберите страну',
       nameLabel: 'Имя и фамилия',
       emailLabel: 'Электронная почта',
       required: 'Обязательно',

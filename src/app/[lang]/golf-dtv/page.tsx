@@ -557,6 +557,63 @@ function LangSwitcher() {
   )
 }
 
+const COUNTRIES = [
+  // Asia-Pacific (prominent for this service)
+  'Japan','China','South Korea','Taiwan','Hong Kong','Singapore','Thailand',
+  'Vietnam','Malaysia','Indonesia','Philippines','India','Australia','New Zealand',
+  // Europe
+  'Russia','United Kingdom','Germany','France','Italy','Spain','Netherlands',
+  'Sweden','Norway','Denmark','Finland','Switzerland','Austria','Belgium',
+  'Portugal','Poland','Czech Republic','Hungary','Romania','Ukraine','Turkey',
+  'Greece','Ireland',
+  // Americas
+  'United States','Canada','Brazil','Mexico','Argentina','Chile','Colombia','Peru',
+  // Middle East
+  'UAE','Saudi Arabia','Israel','Qatar','Kuwait','Bahrain','Oman',
+  // Africa
+  'South Africa','Egypt','Morocco','Nigeria','Kenya',
+  // Other
+  'Mongolia','Kazakhstan','Uzbekistan','Myanmar','Cambodia','Laos','Sri Lanka',
+  'Bangladesh','Pakistan','Nepal','New Caledonia','Fiji',
+].sort()
+
+function NationalityCombobox({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder: string }) {
+  const [query, setQuery] = React.useState(value)
+  const [open, setOpen] = React.useState(false)
+  const filtered = query.length > 0
+    ? COUNTRIES.filter(c => c.toLowerCase().includes(query.toLowerCase())).slice(0, 12)
+    : COUNTRIES.slice(0, 12)
+  return (
+    <div style={{position:'relative'}}>
+      <input
+        type="text"
+        className="form-input"
+        value={query}
+        placeholder={placeholder}
+        onChange={e => { setQuery(e.target.value); onChange(''); setOpen(true) }}
+        onFocus={() => setOpen(true)}
+        onBlur={() => setTimeout(() => setOpen(false), 160)}
+        autoComplete="off"
+      />
+      {open && (
+        <ul style={{position:'absolute',top:'100%',left:0,right:0,zIndex:100,background:'#fff',border:'1px solid #ddd8cc',borderRadius:8,maxHeight:220,overflowY:'auto',margin:'4px 0 0',padding:0,listStyle:'none',boxShadow:'0 4px 16px rgba(0,0,0,.1)'}}>
+          {filtered.length > 0 ? filtered.map(c => (
+            <li
+              key={c}
+              onMouseDown={() => { onChange(c); setQuery(c); setOpen(false) }}
+              style={{padding:'10px 14px',cursor:'pointer',fontSize:'.88rem',color:'#333',borderBottom:'1px solid #f0ede4'}}
+              onMouseEnter={e=>(e.currentTarget.style.background='#f5f0e6')}
+              onMouseLeave={e=>(e.currentTarget.style.background='#fff')}
+            >{c}</li>
+          )) : (
+            <li style={{padding:'10px 14px',fontSize:'.85rem',color:'#999'}}>No results</li>
+          )}
+        </ul>
+      )}
+    </div>
+  )
+}
+
 function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
   const [submitted, setSubmitted] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
@@ -565,6 +622,7 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
   const [agencyService, setAgencyService] = React.useState(false)
   const [name, setName] = React.useState('')
   const [email, setEmail] = React.useState('')
+  const [nationality, setNationality] = React.useState('')
   const [referral, setReferral] = React.useState('')
   const [message, setMessage] = React.useState('')
 
@@ -576,7 +634,7 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, plan, agencyService, referral, message }),
+        body: JSON.stringify({ name, email, nationality, plan, agencyService, referral, message }),
       })
       if (!res.ok) throw new Error('send failed')
       setSubmitted(true)
@@ -625,6 +683,10 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.nameLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
         <input type="text" className="form-input" required value={name} onChange={e=>setName(e.target.value)}/>
+      </div>
+      <div style={{marginBottom:20}}>
+        <label className="form-label">{f.nationalityLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
+        <NationalityCombobox value={nationality} onChange={setNationality} placeholder={f.nationalityPlaceholder}/>
       </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.emailLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
