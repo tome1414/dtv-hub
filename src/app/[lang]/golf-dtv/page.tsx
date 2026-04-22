@@ -11,14 +11,18 @@ interface GolfDTVPageProps {
 export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [dict, setDict] = useState<any>(null)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [lang, setLang] = useState<string>('ja')
   useEffect(() => {
-    params.then(({ lang }) => {
-      getDictionary((lang || 'ja') as Locale).then(setDict)
+    params.then(({ lang: paramLang }) => {
+      const locale = (paramLang || 'ja') as Locale
+      setLang(locale)
+      getDictionary(locale).then(setDict)
     })
   }, [params])
 
   const d = dict?.golfDTV
   if (!d) return null
+  const showLegal = lang === 'ja'
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -78,7 +82,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         .nav-mobile-right { display:none;align-items:center;gap:10px; }
         .hamburger-btn { background:none;border:none;cursor:pointer;padding:6px;color:#fff;display:flex;flex-direction:column;gap:5px; }
         .hamburger-btn span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s; }
-        .nav-mobile-menu { display:none;flex-direction:column;padding:16px 24px;gap:14px;border-top:1px solid rgba(255,255,255,.1);background:#082d21; }
+        .nav-mobile-menu { display:none;flex-direction:column;padding:12px 16px;gap:8px;border-top:1px solid rgba(255,255,255,.1);background:#082d21;max-width:240px;margin:0 auto; }
         .nav-mobile-menu.open { display:flex; }
         .counter { font-size:clamp(2rem,5vw,3.5rem);font-weight:900; }
         .flow-grid { grid-template-columns: repeat(3,1fr); }
@@ -435,7 +439,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         </section>
 
         {/* LEGAL */}
-        <section style={{padding:'48px 24px 56px',background:'#fff'}} id="legal">
+        {showLegal && <section style={{padding:'48px 24px 56px',background:'#fff'}} id="legal">
           <div style={{maxWidth:800,margin:'0 auto'}}>
             <div style={{textAlign:'center',marginBottom:36}}>
               <span className="section-label">LEGAL</span>
@@ -506,7 +510,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
               </LegalBox>
             </div>
           </div>
-        </section>
+        </section>}
 
         {/* FOOTER */}
         <footer style={{background:'#082d21',padding:'48px 24px 24px',color:'rgba(255,255,255,.7)'}}>

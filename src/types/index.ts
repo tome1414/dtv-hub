@@ -186,5 +186,18 @@ export interface Dictionary {
       copyright: string
       disclaimer: string
     }
+    legal?: {
+      title: string
+      sections: {
+        id: string
+        title: string
+        rows: [string, string][]
+      }[]
+      privacy: {
+        intro: string
+        items: [string, string][]
+        date: string
+      }
+    }
   }
 }
