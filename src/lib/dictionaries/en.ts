@@ -391,7 +391,7 @@ const en: Dictionary = {
       successMessage: '✓ Submitted! We will contact you within 1 business day.',
     },
     nav: {
-      plans: 'Plans',
+      plans: 'Pricing Plans',
       flow: 'How It Works',
       faq: 'FAQ',
       inquiry: 'Contact',

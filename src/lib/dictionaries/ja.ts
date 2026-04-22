@@ -404,7 +404,7 @@ const ja: Dictionary = {
       successMessage: '✓ 送信が完了しました！担当者より1営業日以内にご連絡します。',
     },
     nav: {
-      plans: 'プラン',
+      plans: '料金プラン',
       flow: 'ビザ取得の流れ',
       faq: 'よくある質問',
       inquiry: 'お問い合わせ',

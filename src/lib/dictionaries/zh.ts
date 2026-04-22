@@ -386,7 +386,7 @@ const zh: Dictionary = {
       successMessage: '✓ 提交成功！我们将在1个工作日内与您联系。',
     },
     nav: {
-      plans: '方案',
+      plans: '价格方案',
       flow: '签证办理流程',
       faq: '常见问题',
       inquiry: '联系我们',

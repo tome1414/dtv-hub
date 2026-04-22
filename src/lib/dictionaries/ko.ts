@@ -386,7 +386,7 @@ const ko: Dictionary = {
       successMessage: '✓ 제출 완료! 1 영업일 이내에 연락드리겠습니다.',
     },
     nav: {
-      plans: '플랜',
+      plans: '요금 플랜',
       flow: '비자 취득 절차',
       faq: '자주 묻는 질문',
       inquiry: '문의하기',

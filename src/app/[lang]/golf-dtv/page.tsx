@@ -133,8 +133,8 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             </div>
             {/* Desktop nav */}
             <div className="nav-desktop">
-              <a href="#plans" className="nav-link">{d.nav.plans}</a>
               <a href="#flow" className="nav-link">{d.nav.flow}</a>
+              <a href="#plans" className="nav-link">{d.nav.plans}</a>
               <a href="#faq" className="nav-link">{d.nav.faq}</a>
               <LangSwitcher />
               <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
@@ -149,8 +149,8 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           </div>
           {/* Mobile dropdown menu */}
           <div className={`nav-mobile-menu${menuOpen?' open':''}`}>
-            <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.plans}</a>
             <a href="#flow" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.flow}</a>
+            <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.plans}</a>
             <a href="#faq" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.faq}</a>
             <a href="#inquiry" className="btn-gold" style={{padding:'10px 24px',fontSize:'.88rem',justifyContent:'center'}} onClick={()=>setMenuOpen(false)}>{d.hero.cta}</a>
           </div>
