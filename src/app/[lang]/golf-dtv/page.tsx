@@ -22,7 +22,6 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
 
   const d = dict?.golfDTV
   if (!d) return null
-  const showLegal = lang === 'ja'
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -246,13 +245,15 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
                   {d.flow.phases.map((phase: any, pi: number) => (
                     <div key={phase.number} style={{borderRadius:16,overflow:'hidden',boxShadow:'0 2px 12px rgba(0,0,0,.07)'}}>
                       {/* Phase header */}
-                      <div style={{background:phaseColors[pi],padding:'14px 24px',display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}}>
-                        <span style={{background:'rgba(255,255,255,.18)',color:'#fff',fontSize:'.7rem',fontWeight:800,letterSpacing:'.1em',padding:'3px 10px',borderRadius:999,flexShrink:0}}>
-                          PHASE {phase.number}
-                        </span>
-                        <span style={{color:'#fff',fontWeight:800,fontSize:'1rem',flex:1}}>{phase.title}</span>
+                      <div style={{background:phaseColors[pi],padding:'14px 24px',display:'flex',alignItems:'center',gap:16,flexWrap:'wrap',justifyContent:'space-between'}}>
+                        <div style={{display:'flex',alignItems:'center',gap:12,minWidth:0}}>
+                          <span style={{background:'rgba(255,255,255,.18)',color:'#fff',fontSize:'.7rem',fontWeight:800,letterSpacing:'.1em',padding:'3px 10px',borderRadius:999,flexShrink:0}}>
+                            PHASE {phase.number}
+                          </span>
+                          <span style={{color:'#fff',fontWeight:800,fontSize:'1rem',overflow:'hidden',textOverflow:'ellipsis'}}>{phase.title}</span>
+                        </div>
                         {phase.duration && (
-                          <span style={{color:'rgba(255,255,255,.75)',fontSize:'.78rem',flexShrink:0}}>{phase.duration}</span>
+                          <span style={{color:'rgba(255,255,255,.75)',fontSize:'.78rem',flexShrink:0,whiteSpace:'nowrap'}}>{phase.duration}</span>
                         )}
                       </div>
                       {/* Phase body */}
@@ -439,13 +440,17 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         </section>
 
         {/* LEGAL */}
-        {showLegal && <section style={{padding:'48px 24px 56px',background:'#fff'}} id="legal">
+        <section style={{padding:'48px 24px 56px',background:'#fff'}} id="legal">
           <div style={{maxWidth:800,margin:'0 auto'}}>
             <div style={{textAlign:'center',marginBottom:36}}>
               <span className="section-label">LEGAL</span>
-              <h2 className="section-title" style={{marginTop:8,fontSize:'clamp(1.2rem,2.5vw,1.6rem)'}}>各種規約・会社概要</h2>
+              <h2 className="section-title" style={{marginTop:8,fontSize:'clamp(1.2rem,2.5vw,1.6rem)'}}>
+                {lang === 'ja' ? '各種規約・会社概要' : 'Terms and Privacy Policy'}
+              </h2>
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:12}}>
+              {lang === 'ja' ? (
+                <>
               <LegalBox id="company" title="会社概要">
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
@@ -508,9 +513,54 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
                   <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>制定日：2024年1月1日</p>
                 </div>
               </LegalBox>
+                </>
+              ) : (
+                <>
+              <LegalBox id="company" title="Company Information">
+                <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
+                  <tbody>
+                    {[
+                      ['Company Name', 'Toy World Company'],
+                      ['Address', 'Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960'],
+                      ['Established', '2024'],
+                      ['Business', 'DTV Visa Application Support, Golf School Enrollment, Thailand Long-term Residency Consultation'],
+                      ['Contact', 'Please use the contact form on this website'],
+                    ].map(([k,v])=>(
+                      <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
+                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:120}}>{k}</td>
+                        <td style={{padding:'10px 0',color:'#444'}}>{v}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </LegalBox>
+
+              <LegalBox id="privacy" title="Privacy Policy">
+                <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
+                  <p>Toy World Company (hereinafter "the Company") recognizes the protection of customer personal information as an important responsibility and establishes this privacy policy.</p>
+                  {[
+                    ['1. Information We Collect', 'We collect your name, email address, preferred plan, referral code, and inquiry message through the contact form on this website.'],
+                    ['2. Use of Information', 'To respond to inquiries and provide service information • To provide DTV visa application support services • To improve services and inform about new offerings • To comply with applicable laws'],
+                    ['3. Third Party Disclosure', 'We do not disclose customer personal information to third parties except in the following cases: With your consent • When required by law • To business partners necessary for service provision (under strict confidentiality obligations)'],
+                    ['4. Information Security', 'We implement appropriate security measures to prevent unauthorized access, loss, or leakage of personal information.'],
+                    ['5. Access, Correction, Deletion', 'You have the right to request disclosure, correction, or deletion of your personal information held by us. Please submit requests through the contact form.'],
+                    ['6. Cookies', 'Our website may use cookies to improve service. You can disable cookies in your browser settings, though some features may be limited.'],
+                    ['7. Privacy Policy Changes', 'We may revise this policy as necessary. Significant changes will be announced on our website.'],
+                    ['8. Contact', 'For inquiries regarding personal information, please contact us through the contact form.'],
+                  ].map(([heading, body])=>(
+                    <div key={heading}>
+                      <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
+                      <p style={{whiteSpace:'pre-line'}}>{body}</p>
+                    </div>
+                  ))}
+                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>Established: January 1, 2024</p>
+                </div>
+              </LegalBox>
+                </>
+              )}
             </div>
           </div>
-        </section>}
+        </section>
 
         {/* FOOTER */}
         <footer style={{background:'#082d21',padding:'48px 24px 24px',color:'rgba(255,255,255,.7)'}}>
