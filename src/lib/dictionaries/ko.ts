@@ -314,14 +314,47 @@ const ko: Dictionary = {
     },
     flow: {
       sectionLabel: 'HOW IT WORKS',
-      title: 'DTV 비자 취득 절차',
-      steps: [
-        { number: '01', icon: '💬', title: '문의 및 플랜 선택', body: 'GolfDTV에 상담 후 Silver / Gold / Platinum 중 원하는 플랜을 선택' },
-        { number: '02', icon: '💳', title: '수강료 결제', body: '플랜 확정 후 수강료 납부（20,000〜100,000 THB）. 대행 서비스 옵션 추가 가능' },
-        { number: '03', icon: '📄', title: '공식 서류 발급', body: '결제 확인 후 1〜3 영업일 이내에 입학 허가서 및 수강 증명서를 PDF로 발급' },
-        { number: '04', icon: '🗂️', title: '필요 서류 준비', body: '잔고 증명서（50만 바트 이상）, 여권 사본 등 신청 서류 준비' },
-        { number: '05', icon: '🏛️', title: '태국 대사관에 신청', body: '가까운 태국 대사관 또는 영사관에서 DTV 비자 신청. 신청 수수료 약 10,000 THB' },
-        { number: '06', icon: '✈️', title: '비자 발급・태국 입국', body: '심사 통과 후（통상 1〜3주）DTV 비자 발급. 5년 복수 입국 장기 체류 시작' },
+      title: 'DTV 비자 신청 완전 플로우',
+      phases: [
+        {
+          number: '1',
+          title: '스쿨 신청 및 서류 준비',
+          duration: '소요 기간: 약 1주일',
+          steps: [
+            { number: '1', title: '문의 및 플랜 확정', body: '플랜과 대행 서비스 여부를 결정. 현재 거주 중인 국가(신청 대사관)를 확인합니다.' },
+            { number: '2', title: '수강료 납부', body: '지정 송금 방법으로 수강료를 납부해 주세요.' },
+            { number: '3', title: '공식 서류 발급 및 발송', body: '납부 확인 후 1〜3 영업일 이내에 입학 허가서 등 태국 측 서류를 PDF로 이메일 발송합니다.' },
+            { number: '4', title: '개인 서류 준비', body: '여권(유효기간 6개월 이상), 증명사진, 거주지 증명, 잔고 증명서(50만 바트 이상, 영문)를 준비하세요.' },
+          ],
+        },
+        {
+          number: '2',
+          title: 'Thai e-Visa 온라인 신청',
+          duration: '소요 시간: 약 1〜2시간',
+          note: '대행 서비스를 선택하신 경우 담당 직원이 대신 처리합니다.',
+          steps: [
+            { number: '5', title: '계정 생성', body: 'Thai e-Visa 공식 사이트(thaievisa.go.th)에서 이메일과 비밀번호로 계정을 만드세요.' },
+            { number: '6', title: '신청 정보 입력 및 서류 업로드', body: '1단계에서 준비한 서류를 지정 항목에 맞게 업로드합니다.' },
+            { number: '7', title: '신청 수수료 온라인 결제', body: '신용카드 등으로 약 10,000 THB를 결제하면 공식 접수 완료입니다.' },
+          ],
+        },
+        {
+          number: '3',
+          title: '대사관 / 영사관 심사',
+          duration: '소요 기간: 약 1〜3주',
+          steps: [
+            { number: '8', title: '심사 중(Processing)', body: '신청 상태가 "Processing"으로 변경됩니다. 대기 중 특별한 대응은 불필요합니다.' },
+            { number: '9', title: '추가 서류 대응(요청 시에만)', body: '심사관으로부터 추가 서류 요청이 올 수 있습니다. 대행 서비스 이용 고객은 저희가 처리합니다.' },
+          ],
+        },
+        {
+          number: '4',
+          title: '비자 승인 및 태국 입국',
+          steps: [
+            { number: '10', title: '승인 이메일 수신 · e-Visa 취득', body: '심사 완료 후 PDF 형식의 e-Visa가 첨부된 승인 이메일이 도착합니다. 여권에 스티커 부착 불필요.' },
+            { number: '11', title: 'e-Visa 인쇄 후 태국 입국', body: 'e-Visa(PDF)를 인쇄해 여권과 함께 제출. 입국 심사에서 DTV/180일 스탬프를 받고 장기 체류를 시작합니다.' },
+          ],
+        },
       ],
     },
     ticker: [

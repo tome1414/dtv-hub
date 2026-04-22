@@ -319,14 +319,47 @@ const en: Dictionary = {
     },
     flow: {
       sectionLabel: 'HOW IT WORKS',
-      title: 'How to Get Your DTV Visa',
-      steps: [
-        { number: '01', icon: '💬', title: 'Inquiry & Plan Selection', body: 'Consult with GolfDTV and choose your plan: Silver, Gold, or Platinum' },
-        { number: '02', icon: '💳', title: 'Pay School Tuition', body: 'After confirming your plan, pay the tuition fee (20,000–100,000 THB). Agency service optional' },
-        { number: '03', icon: '📄', title: 'Official Documents Issued', body: 'Within 1–3 business days of payment confirmation, receive your enrollment letter and certificate via PDF' },
-        { number: '04', icon: '🗂️', title: 'Prepare Required Documents', body: 'Gather supporting documents: bank statement (500,000+ THB), passport copy, etc.' },
-        { number: '05', icon: '🏛️', title: 'Apply at Thai Embassy', body: 'Submit your DTV application at the nearest Thai embassy or consulate. Embassy fee approx. 10,000 THB' },
-        { number: '06', icon: '✈️', title: 'Visa Issued — Enter Thailand', body: 'After approval (typically 1–3 weeks), your DTV visa is issued. Start your 5-year, multiple-entry stay' },
+      title: 'Complete DTV Visa Application Flow',
+      phases: [
+        {
+          number: '1',
+          title: 'Enrollment & Document Preparation',
+          duration: 'Approx. 1 week',
+          steps: [
+            { number: '1', title: 'Inquiry & Plan Confirmation', body: 'Choose your plan and decide whether to add the agency service. Confirm which country you are based in (for embassy selection).' },
+            { number: '2', title: 'Pay Tuition Fee', body: 'Transfer the tuition fee via our designated payment method.' },
+            { number: '3', title: 'Official Documents Issued', body: 'Within 1–3 business days of payment, we email you the enrollment letter and other required Thai-side documents in PDF.' },
+            { number: '4', title: 'Prepare Personal Documents', body: 'Gather: passport (6+ months validity), photo, proof of residence, and bank statement (500,000+ THB equivalent, in English).' },
+          ],
+        },
+        {
+          number: '2',
+          title: 'Online Application via Thai e-Visa System',
+          duration: 'Approx. 1–2 hours',
+          note: 'With the agency plan, our staff handles this step on your behalf.',
+          steps: [
+            { number: '5', title: 'Create Account', body: 'Register at the official Thai E-Visa website (thaievisa.go.th) with your email and password.' },
+            { number: '6', title: 'Fill in Details & Upload Documents', body: 'Enter your application information and upload all documents from Phase 1.' },
+            { number: '7', title: 'Pay Visa Application Fee', body: 'Pay approx. 10,000 THB by credit card. Payment completes your official application submission.' },
+          ],
+        },
+        {
+          number: '3',
+          title: 'Embassy / Consulate Review',
+          duration: 'Approx. 1–3 weeks',
+          steps: [
+            { number: '8', title: 'Under Review (Processing)', body: 'Your application status changes to "Processing." No further action required during this period.' },
+            { number: '9', title: 'Additional Documents (if requested)', body: 'The consular officer may request clarifications via email. Agency plan clients: we handle all responses.' },
+          ],
+        },
+        {
+          number: '4',
+          title: 'Visa Approval & Entry to Thailand',
+          steps: [
+            { number: '10', title: 'Approval Email & e-Visa PDF', body: 'Once approved, you receive an email with your e-Visa attached as a PDF. No passport sticker required.' },
+            { number: '11', title: 'Print & Enter Thailand', body: 'Print the e-Visa PDF and present it with your passport at immigration. Receive your DTV / 180-day entry stamp and begin your long-term stay.' },
+          ],
+        },
       ],
     },
     ticker: [

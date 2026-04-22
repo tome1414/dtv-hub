@@ -227,34 +227,55 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         </section>
 
         {/* FLOW */}
-        <section style={{padding:'72px 24px',background:'#fff'}}>
-          <div style={{maxWidth:1000,margin:'0 auto'}}>
-            <div style={{textAlign:'center',marginBottom:52}}>
+        <section style={{padding:'72px 24px',background:'#f9f6ef'}}>
+          <div style={{maxWidth:900,margin:'0 auto'}}>
+            <div style={{textAlign:'center',marginBottom:48}}>
               <span style={{fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'#0d4f3c',fontWeight:600}}>{d.flow.sectionLabel}</span>
               <h2 style={{fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:900,color:'#0a2e1f',marginTop:10}}>{d.flow.title}</h2>
             </div>
-            {/* Desktop: 3+3 grid / Mobile: vertical */}
-            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'0',position:'relative'}} className="flow-grid">
-              {d.flow.steps.map((step: any, i: number) => {
-                const isLast = i === d.flow.steps.length - 1
-                const isRowEnd = (i + 1) % 3 === 0
-                return (
-                  <div key={step.number} style={{position:'relative',padding:'28px 24px'}} className="flow-step">
-                    {/* connector line right */}
-                    {!isRowEnd && !isLast && (
-                      <div style={{position:'absolute',top:42,right:-1,width:'calc(100% - 64px)',height:2,background:'linear-gradient(90deg,#c9a84c,#e2c46e)',zIndex:0,left:64}}/>
-                    )}
-                    {/* number badge */}
-                    <div style={{position:'relative',zIndex:1,width:48,height:48,borderRadius:'50%',background:'linear-gradient(135deg,#0d4f3c,#1a7a5e)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:16,boxShadow:'0 4px 12px rgba(13,79,60,.25)'}}>
-                      <span style={{color:'#e2c46e',fontWeight:900,fontSize:'.85rem'}}>{step.number}</span>
+            {(() => {
+              const phaseColors = ['#0d4f3c','#b8891e','#2a4a7f','#1a6b3f']
+              return (
+                <div style={{display:'flex',flexDirection:'column',gap:20}}>
+                  {d.flow.phases.map((phase: any, pi: number) => (
+                    <div key={phase.number} style={{borderRadius:16,overflow:'hidden',boxShadow:'0 2px 12px rgba(0,0,0,.07)'}}>
+                      {/* Phase header */}
+                      <div style={{background:phaseColors[pi],padding:'14px 24px',display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}}>
+                        <span style={{background:'rgba(255,255,255,.18)',color:'#fff',fontSize:'.7rem',fontWeight:800,letterSpacing:'.1em',padding:'3px 10px',borderRadius:999,flexShrink:0}}>
+                          PHASE {phase.number}
+                        </span>
+                        <span style={{color:'#fff',fontWeight:800,fontSize:'1rem',flex:1}}>{phase.title}</span>
+                        {phase.duration && (
+                          <span style={{color:'rgba(255,255,255,.75)',fontSize:'.78rem',flexShrink:0}}>{phase.duration}</span>
+                        )}
+                      </div>
+                      {/* Phase body */}
+                      <div style={{background:'#fff',padding:'20px 24px'}}>
+                        {phase.note && (
+                          <div style={{background:'#fff8e6',border:'1px solid #e2c46e',borderRadius:8,padding:'10px 14px',marginBottom:16,fontSize:'.82rem',color:'#7a5c00',display:'flex',gap:8,alignItems:'flex-start'}}>
+                            <span style={{flexShrink:0}}>💡</span>
+                            <span>{phase.note}</span>
+                          </div>
+                        )}
+                        <div style={{display:'flex',flexDirection:'column',gap:0}}>
+                          {phase.steps.map((step: any, si: number) => (
+                            <div key={step.number} style={{display:'flex',gap:14,paddingTop:si===0?0:14,paddingBottom:14,borderBottom:si<phase.steps.length-1?'1px solid #f0ede4':'none'}}>
+                              <div style={{width:30,height:30,borderRadius:'50%',background:phaseColors[pi],display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,marginTop:2}}>
+                                <span style={{color:'#fff',fontWeight:800,fontSize:'.75rem'}}>{step.number}</span>
+                              </div>
+                              <div style={{flex:1}}>
+                                <p style={{fontWeight:700,color:'#0a2e1f',fontSize:'.9rem',margin:'0 0 4px'}}>{step.title}</p>
+                                {step.body && <p style={{color:'#666',fontSize:'.82rem',lineHeight:1.8,margin:0}}>{step.body}</p>}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    <div style={{fontSize:'1.4rem',marginBottom:8,lineHeight:1}}>{step.icon}</div>
-                    <p style={{fontWeight:800,color:'#0a2e1f',fontSize:'.95rem',marginBottom:8,lineHeight:1.4}}>{step.title}</p>
-                    <p style={{color:'#666',fontSize:'.82rem',lineHeight:1.8,margin:0}}>{step.body}</p>
-                  </div>
-                )
-              })}
-            </div>
+                  ))}
+                </div>
+              )
+            })()}
           </div>
         </section>
 

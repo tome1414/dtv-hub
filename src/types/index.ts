@@ -138,11 +138,16 @@ export interface Dictionary {
     flow: {
       sectionLabel: string
       title: string
-      steps: {
+      phases: {
         number: string
-        icon: string
         title: string
-        body: string
+        duration?: string
+        note?: string
+        steps: {
+          number: string
+          title: string
+          body?: string
+        }[]
       }[]
     }
     ticker: string[]

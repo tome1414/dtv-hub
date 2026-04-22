@@ -314,14 +314,47 @@ const zh: Dictionary = {
     },
     flow: {
       sectionLabel: 'HOW IT WORKS',
-      title: 'DTV签证申请流程',
-      steps: [
-        { number: '01', icon: '💬', title: '咨询与选择方案', body: '与GolfDTV咨询，从Silver / Gold / Platinum中选择您的方案' },
-        { number: '02', icon: '💳', title: '支付学费', body: '确认方案后支付学费（20,000〜100,000泰铢）。可选添加代理服务' },
-        { number: '03', icon: '📄', title: '发放官方证明文件', body: '确认收款后1〜3个工作日内，以PDF形式发送入学许可证及受课证明' },
-        { number: '04', icon: '🗂️', title: '准备申请材料', body: '准备银行存款证明（50万泰铢以上）、护照复印件等申请所需材料' },
-        { number: '05', icon: '🏛️', title: '前往泰国大使馆申请', body: '前往最近的泰国大使馆或领事馆提交DTV签证申请，申请费约10,000泰铢' },
-        { number: '06', icon: '✈️', title: '签证发放・入境泰国', body: '审核通过后（通常1〜3周）签证发放。开始5年多次入境的泰国长期居留' },
+      title: 'DTV签证申请完整流程',
+      phases: [
+        {
+          number: '1',
+          title: '学校报名与材料准备',
+          duration: '所需时间：约1周',
+          steps: [
+            { number: '1', title: '咨询与确认方案', body: '选择方案并决定是否添加代理服务。确认您目前居住的国家（用于选择大使馆）。' },
+            { number: '2', title: '支付学费', body: '通过我方指定汇款方式支付学费。' },
+            { number: '3', title: '发放官方证明文件', body: '确认收款后1〜3个工作日内，以PDF形式发送入学许可证等泰方所需文件。' },
+            { number: '4', title: '准备个人文件', body: '护照（有效期6个月以上）、照片、居住证明、银行存款证明（50万泰铢以上，英文版）。' },
+          ],
+        },
+        {
+          number: '2',
+          title: '通过泰国e-Visa系统在线申请',
+          duration: '所需时间：约1〜2小时',
+          note: '选择代理服务的客户，此步骤由我方工作人员代为处理。',
+          steps: [
+            { number: '5', title: '创建账户', body: '在泰国e-Visa官方网站（thaievisa.go.th）注册账户。' },
+            { number: '6', title: '填写信息并上传文件', body: '填写申请信息，上传第一阶段准备的所有文件。' },
+            { number: '7', title: '支付签证申请费', body: '通过信用卡支付约10,000泰铢的申请费，支付完成即为正式受理。' },
+          ],
+        },
+        {
+          number: '3',
+          title: '大使馆/领事馆审查',
+          duration: '所需时间：约1〜3周',
+          steps: [
+            { number: '8', title: '审查中（Processing）', body: '申请状态变为"Processing"，等待期间无需特别操作。' },
+            { number: '9', title: '补充材料（如有要求）', body: '审查官可能通过邮件要求补充材料。代理服务客户由我方全程处理。' },
+          ],
+        },
+        {
+          number: '4',
+          title: '签证批准与入境泰国',
+          steps: [
+            { number: '10', title: '收到批准邮件与e-Visa', body: '审查完成后，收到附有PDF格式e-Visa的批准邮件。无需在护照上贴签。' },
+            { number: '11', title: '打印并入境泰国', body: '打印e-Visa（PDF）与护照一同提交入境审查，获取DTV/180天入境印章，开始长期居留。' },
+          ],
+        },
       ],
     },
     ticker: [
