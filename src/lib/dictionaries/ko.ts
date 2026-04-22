@@ -126,6 +126,7 @@ const ko: Dictionary = {
     plans: {
       intro: '플랜 선택하기',
       subtext: '골프 스쿨 플랜을 선택하고 상담을 신청하세요. 결제 세부사항은 상담 후 논의됩니다.',
+      feeNote: '※ 비자 신청 수수료（약 10,000 THB）는 태국 대사관 또는 영사관에 직접 납부하는 정부 수수료로, 당사 비용과는 별도입니다.',
       items: [
         {
           name: 'Silver',
@@ -386,6 +387,7 @@ const ko: Dictionary = {
     },
     nav: {
       plans: '플랜',
+      flow: '비자 취득 절차',
       faq: '자주 묻는 질문',
       inquiry: '문의하기',
     },
@@ -393,7 +395,7 @@ const ko: Dictionary = {
       about: '업계 최초로 골프 스쿨 기반 DTV 비자 취득을 확립한 전문 에이전트. 태국 PGA 인증 프로와의 파트너십으로 5년 비자를 지원합니다.',
       services: '서비스',
       support: '지원',
-      serviceLinks: [['플랜', '#plans'], ['자주 묻는 질문', '#faq'], ['문의하기', '#inquiry']],
+      serviceLinks: [['비자 취득 절차', '#flow'], ['플랜', '#plans'], ['자주 묻는 질문', '#faq'], ['문의하기', '#inquiry']],
       supportLinks: [['개인정보처리방침', '#privacy'], ['법적 고지', '#sct'], ['회사 소개', '#company']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: '본 서비스는 비자 신청 지원을 제공하며 비자 승인을 보장하지 않습니다.',

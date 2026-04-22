@@ -1,0 +1,6 @@
+{
+  "buildCommand": "rm -rf .next && npm run build",
+  "env": {
+    "VERCEL_SKIP_BUILD_CACHE": "1"
+  }
+}

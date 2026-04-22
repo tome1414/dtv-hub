@@ -131,6 +131,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             {/* Desktop nav */}
             <div className="nav-desktop">
               <a href="#plans" className="nav-link">{d.nav.plans}</a>
+              <a href="#flow" className="nav-link">{d.nav.flow}</a>
               <a href="#faq" className="nav-link">{d.nav.faq}</a>
               <LangSwitcher />
               <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
@@ -146,6 +147,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           {/* Mobile dropdown menu */}
           <div className={`nav-mobile-menu${menuOpen?' open':''}`}>
             <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.plans}</a>
+            <a href="#flow" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.flow}</a>
             <a href="#faq" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.faq}</a>
             <a href="#inquiry" className="btn-gold" style={{padding:'10px 24px',fontSize:'.88rem',justifyContent:'center'}} onClick={()=>setMenuOpen(false)}>{d.hero.cta}</a>
           </div>
@@ -227,7 +229,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         </section>
 
         {/* FLOW */}
-        <section style={{padding:'72px 24px',background:'#f9f6ef'}}>
+        <section id="flow" style={{padding:'72px 24px',background:'#f9f6ef'}}>
           <div style={{maxWidth:900,margin:'0 auto'}}>
             <div style={{textAlign:'center',marginBottom:48}}>
               <span style={{fontSize:'.72rem',letterSpacing:'.18em',textTransform:'uppercase',color:'#0d4f3c',fontWeight:600}}>{d.flow.sectionLabel}</span>
@@ -286,6 +288,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
               <span className="section-label">PLANS</span>
               <h2 className="section-title" style={{marginTop:8}}>{d.plans.intro}</h2>
               <p className="section-body" style={{maxWidth:560,margin:'16px auto 0'}}>{d.plans.subtext}</p>
+              <p style={{fontSize:'.82rem',color:'#777',margin:'12px auto 0',maxWidth:600,lineHeight:1.7}}>{d.plans.feeNote}</p>
             </div>
             <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:24,alignItems:'stretch'}}>
               {d.plans.items.map((plan: any, i: number)=>{

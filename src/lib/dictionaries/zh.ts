@@ -126,6 +126,7 @@ const zh: Dictionary = {
     plans: {
       intro: '选择您的计划',
       subtext: '选择高尔夫学校计划并提交咨询。付款详情将在咨询后讨论。',
+      feeNote: '※ 签证申请费（约10,000泰铢）是直接支付给泰国大使馆或领事馆的政府费用，与本公司费用分开。',
       items: [
         {
           name: 'Silver',
@@ -386,6 +387,7 @@ const zh: Dictionary = {
     },
     nav: {
       plans: '方案',
+      flow: '签证办理流程',
       faq: '常见问题',
       inquiry: '联系我们',
     },
@@ -393,7 +395,7 @@ const zh: Dictionary = {
       about: '业界首创，通过高尔夫学校获取DTV签证的专业机构。与泰国PGA认证专业人士合作，确保您的5年泰国签证。',
       services: '服务',
       support: '支持',
-      serviceLinks: [['方案', '#plans'], ['常见问题', '#faq'], ['联系我们', '#inquiry']],
+      serviceLinks: [['签证办理流程', '#flow'], ['方案', '#plans'], ['常见问题', '#faq'], ['联系我们', '#inquiry']],
       supportLinks: [['隐私政策', '#privacy'], ['法律声明', '#sct'], ['关于我们', '#company']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: '本服务提供签证申请支持，不保证签证获批。',

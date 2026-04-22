@@ -77,6 +77,7 @@ export interface Dictionary {
     plans: {
       intro: string
       subtext: string
+      feeNote: string  // Fee note disclaimer for visa application fees
       items: {
         name: string
         price: number
@@ -172,6 +173,7 @@ export interface Dictionary {
     }
     nav: {
       plans: string
+      flow: string
       faq: string
       inquiry: string
     }
