@@ -119,7 +119,7 @@ const ko: Dictionary = {
     },
     hero: {
       badge: '업계 최초 • 96% 성공률',
-      headline: '골프를 즐기며 태국 5년 비자를 취득하세요.',
+      headline: '골프로 태국 5년 DTV 비자 취득',
       subheadline: '골프 스쿨 협력을 통해 DTV 비자를 취득하세요. 태국 PGA 인증 코치가 성공을 보장합니다.',
       cta: '무료 상담받기',
     },

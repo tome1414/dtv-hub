@@ -119,7 +119,7 @@ const zh: Dictionary = {
     },
     hero: {
       badge: '业界首创 • 96% 成功率',
-      headline: '打高尔夫球，同时获得5年泰国签证。',
+      headline: '畅享高尔夫，轻松解锁5年DTV签证',
       subheadline: '通过高尔夫学校合作获取DTV签证。泰国PGA认证教练确保成功。',
       cta: '免费咨询',
     },
