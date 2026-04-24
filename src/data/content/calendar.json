@@ -1,0 +1,133 @@
+[
+  {
+    "id": "article-001",
+    "week": 1,
+    "date": "2026-04-27",
+    "keywordGroup": "DTV ビザ基本情報",
+    "mainArticleTitle": "DTV ビザとは？【2026年最新版】完全ガイド",
+    "slug": "dtv-visa-complete-guide",
+    "targetKeyword": "DTV ビザとは",
+    "secondaryKeywords": ["デスティネーションタイランドビザ", "DTV ビザ 条件", "DTV 費用"],
+    "priority": 10,
+    "estimatedLength": "3000〜3500文字",
+    "description": "DTVビザの基本概念・対象者・申請条件・費用・滞在期間まで網羅。初心者がDTV Clubに来て最初に読む記事として位置づける。",
+    "keyPoints": [
+      "DTV（Destination Thailand Visa）とは何か",
+      "対象者：デジタルノマド・フリーランス・ムエタイ学習者など",
+      "ビザ有効期限：5年（マルチプル）",
+      "1回の入国で最大180日、出国でリセット",
+      "費用：10,000バーツ（約52,000円）",
+      "タイランドエリートとの簡単比較"
+    ],
+    "internalLinks": [
+      "DTV ビザ申請の全ステップ → /blog/dtv-visa-application-steps",
+      "DTV 必要書類チェックリスト → /blog/dtv-required-documents-checklist"
+    ],
+    "status": "planned"
+  },
+  {
+    "id": "article-002",
+    "week": 2,
+    "date": "2026-05-04",
+    "keywordGroup": "申請プロセス",
+    "mainArticleTitle": "DTV ビザ申請の全ステップ【2026年・e-visa完全対応】",
+    "slug": "dtv-visa-application-steps",
+    "targetKeyword": "DTV ビザ 申請",
+    "secondaryKeywords": ["DTV e-visa", "Thai e-visa DTV", "DTV 申請方法"],
+    "priority": 9,
+    "estimatedLength": "3500〜4000文字",
+    "description": "Thai e-visaシステムを使ったオンライン申請をスクリーンショット付きで解説。2025年1月以降のe-visa移行後の最新情報。審査期間・注意点も網羅。",
+    "keyPoints": [
+      "Thai e-visaシステムへのアクセス（thaievisa.go.th）",
+      "アカウント作成〜申請完了までのステップ",
+      "書類アップロードの注意点",
+      "審査期間：通常5〜10営業日",
+      "承認後のビザ受け取り方法",
+      "よくある申請エラーと対処法"
+    ],
+    "internalLinks": [
+      "DTV ビザとは → /blog/dtv-visa-complete-guide",
+      "必要書類チェックリスト → /blog/dtv-required-documents-checklist",
+      "50万バーツ証明 → /blog/dtv-500000-baht-proof-guide"
+    ],
+    "status": "planned"
+  },
+  {
+    "id": "article-003",
+    "week": 3,
+    "date": "2026-05-11",
+    "keywordGroup": "申請プロセス",
+    "mainArticleTitle": "DTV ビザ必要書類 完全チェックリスト【2026年版】",
+    "slug": "dtv-required-documents-checklist",
+    "targetKeyword": "DTV 必要書類",
+    "secondaryKeywords": ["DTV 書類一覧", "DTV 残高証明", "DTV 申請書類"],
+    "priority": 8,
+    "estimatedLength": "2500〜3000文字",
+    "description": "DTV申請に必要な全書類をカテゴリ別に整理。「これだけ用意すればOK」と思える実用的なチェックリスト形式。各書類の取得方法も解説。",
+    "keyPoints": [
+      "基本書類：パスポート（有効期限6ヶ月以上）",
+      "資金証明：50万バーツ以上の残高証明書",
+      "在職証明 / フリーランス証明書",
+      "滞在場所の証明（予約確認書等）",
+      "顔写真の規格",
+      "書類の翻訳が必要かどうか"
+    ],
+    "internalLinks": [
+      "申請手順全ステップ → /blog/dtv-visa-application-steps",
+      "50万バーツ証明の取り方 → /blog/dtv-500000-baht-proof-guide"
+    ],
+    "status": "planned"
+  },
+  {
+    "id": "article-004",
+    "week": 4,
+    "date": "2026-05-18",
+    "keywordGroup": "資金・銀行要件",
+    "mainArticleTitle": "DTV「50万バーツ証明」完全解説【どの口座でもOK？外国銀行は？】",
+    "slug": "dtv-500000-baht-proof-guide",
+    "targetKeyword": "DTV 50万バーツ 証明",
+    "secondaryKeywords": ["DTV 残高証明書", "DTV 貯金要件", "500000バーツ 日本円"],
+    "priority": 8,
+    "estimatedLength": "2500〜3000文字",
+    "description": "多くの人が躓く「50万バーツ証明」を徹底解説。日本の銀行でもOK？証明書の形式は？3ヶ月保有が必要？などよくある疑問をすべて解消。",
+    "keyPoints": [
+      "50万バーツ ≈ 約250万円（2026年レート）",
+      "日本の銀行口座でも証明可能か",
+      "3ヶ月継続保有の要否",
+      "残高証明書の英語翻訳の必要性",
+      "複数口座を合算できるか",
+      "タイ国内銀行口座を先に開設すべきか"
+    ],
+    "internalLinks": [
+      "タイで銀行口座開設 → /blog/thailand-bank-account-opening",
+      "必要書類チェックリスト → /blog/dtv-required-documents-checklist"
+    ],
+    "status": "planned"
+  },
+  {
+    "id": "article-005",
+    "week": 5,
+    "date": "2026-05-25",
+    "keywordGroup": "タイ生活・バンコク情報",
+    "mainArticleTitle": "バンコク生活費リアルレポート【2026年・DTVノマド版】",
+    "slug": "bangkok-living-cost-2026",
+    "targetKeyword": "バンコク 生活費 2026",
+    "secondaryKeywords": ["タイ生活費 日本人", "バンコク 月々費用", "バンコク 20万円 生活"],
+    "priority": 7,
+    "estimatedLength": "3000〜3500文字",
+    "description": "DTV保有のリモートワーカー・フリーランス視点で月々の生活費を項目別に公開。家賃・食費・交通費・通信費など実数値を開示。節約術も紹介。",
+    "keyPoints": [
+      "家賃：エリア別の相場（スクンビット / オンヌット / アソーク）",
+      "食費：屋台〜日本食レストランまで",
+      "交通費：BTS・MRT・Grab",
+      "通信費：SIMカード・コワーキング",
+      "医療保険・健康費用",
+      "月合計：節約 / 標準 / 快適の3パターン"
+    ],
+    "internalLinks": [
+      "バンコクおすすめエリア → /blog/bangkok-residential-area-guide",
+      "DTV ビザとは → /blog/dtv-visa-complete-guide"
+    ],
+    "status": "planned"
+  }
+]

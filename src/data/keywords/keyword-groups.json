@@ -1,0 +1,123 @@
+{
+  "groupA": {
+    "id": "group-a",
+    "name": "DTV ビザ基本情報",
+    "description": "DTV ビザの概要・条件・費用など、初めて知る人向けの入門コンテンツ群",
+    "keywords": [
+      "DTV ビザとは",
+      "DTV ビザ 条件",
+      "DTV ビザ 費用",
+      "DTV 180日 滞在",
+      "DTV タイランドエリート 比較"
+    ],
+    "mainArticle": {
+      "title": "DTV ビザとは？【2026年最新版】完全ガイド",
+      "slug": "dtv-visa-complete-guide",
+      "targetKeyword": "DTV ビザとは",
+      "priority": 8,
+      "description": "DTV ビザの基本概念・申請条件・費用・滞在期間・タイランドエリートとの比較まで網羅的に解説"
+    },
+    "supportingArticles": [
+      {
+        "title": "DTV ビザとタイランドエリート、どちらを選ぶべきか？【徹底比較】",
+        "slug": "dtv-vs-thailand-elite",
+        "targetKeyword": "DTV タイランドエリート 比較"
+      }
+    ],
+    "internalLinkStrategy": "グループA → グループB（申請手順）へ自然に誘導する"
+  },
+
+  "groupB": {
+    "id": "group-b",
+    "name": "申請プロセス",
+    "description": "実際にDTV申請を行う人向けの手順・書類・注意点コンテンツ群",
+    "keywords": [
+      "DTV ビザ 申請",
+      "DTV 必要書類",
+      "DTV e-visa 申請",
+      "DTV ビザ 審査期間",
+      "東京 タイ大使館 DTV",
+      "DTV 拒否 理由"
+    ],
+    "mainArticle": {
+      "title": "DTV ビザ申請の全ステップ【2026年最新・e-visa対応】",
+      "slug": "dtv-visa-application-steps",
+      "targetKeyword": "DTV ビザ 申請",
+      "priority": 8,
+      "description": "Thai e-visaシステムを使ったオンライン申請の手順を、スクリーンショット付きでステップバイステップで解説"
+    },
+    "supportingArticles": [
+      {
+        "title": "DTV ビザ必要書類 完全チェックリスト【2026年版】",
+        "slug": "dtv-required-documents-checklist",
+        "targetKeyword": "DTV 必要書類"
+      },
+      {
+        "title": "DTV ビザが却下される理由と対策【実例付き】",
+        "slug": "dtv-visa-rejection-reasons",
+        "targetKeyword": "DTV 拒否 理由"
+      }
+    ],
+    "internalLinkStrategy": "グループB → グループC（資金要件）とグループD（タイ生活）へ誘導"
+  },
+
+  "groupC": {
+    "id": "group-c",
+    "name": "資金・銀行要件",
+    "description": "50万バーツ要件・銀行口座開設・残高証明に関するコンテンツ群",
+    "keywords": [
+      "DTV 50万バーツ 証明",
+      "タイ 銀行口座 開設 外国人",
+      "DTV 延長 方法",
+      "DTV ビザラン 不要"
+    ],
+    "mainArticle": {
+      "title": "DTV ビザ「50万バーツ証明」完全解説【どの口座でもOK？】",
+      "slug": "dtv-500000-baht-proof-guide",
+      "targetKeyword": "DTV 50万バーツ 証明",
+      "priority": 7,
+      "description": "残高証明書の取得方法・外国銀行口座でのOK/NG判断・よくある疑問を解決"
+    },
+    "supportingArticles": [
+      {
+        "title": "タイで銀行口座を開設する方法【DTV申請前に準備】",
+        "slug": "thailand-bank-account-opening",
+        "targetKeyword": "タイ 銀行口座 開設 外国人"
+      }
+    ],
+    "internalLinkStrategy": "グループC → グループB（申請手順）とグループD（タイ生活）へ誘導"
+  },
+
+  "groupD": {
+    "id": "group-d",
+    "name": "タイ生活・バンコク情報",
+    "description": "DTV取得後のリアルな生活情報。バンコクの住まい・生活費・コワーキングなど",
+    "keywords": [
+      "バンコク 生活費 2026",
+      "バンコク おすすめエリア 日本人",
+      "バンコク 家賃相場 2026",
+      "バンコク コワーキングスペース",
+      "デジタルノマド タイ 生活"
+    ],
+    "mainArticle": {
+      "title": "バンコク生活費リアルレポート【2026年・DTVノマド版】",
+      "slug": "bangkok-living-cost-2026",
+      "targetKeyword": "バンコク 生活費 2026",
+      "priority": 6,
+      "description": "DTV保有のリモートワーカー視点で月々の生活費を項目別に公開。節約術も紹介。"
+    },
+    "supportingArticles": [
+      {
+        "title": "バンコク住居エリア完全ガイド【日本人・ノマド向け】",
+        "slug": "bangkok-residential-area-guide",
+        "targetKeyword": "バンコク おすすめエリア 日本人"
+      },
+      {
+        "title": "バンコクのコワーキングスペース厳選10選【2026年版】",
+        "slug": "bangkok-coworking-spaces-2026",
+        "targetKeyword": "バンコク コワーキングスペース"
+      }
+    ],
+    "internalLinkStrategy": "グループD → グループA（ビザ概要）へ循環誘導。新規読者の獲得窓口"
+  }
+}
