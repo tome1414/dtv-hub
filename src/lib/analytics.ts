@@ -4,6 +4,64 @@
  * GA4 測定 ID: G-FNC897EGPG
  */
 
+// Legacy analytics object for Golf DTV page compatibility
+export const analytics = {
+  languageChange: (locale: string) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'language_change',
+        language: locale,
+        timestamp: new Date().toISOString(),
+      })
+    }
+  },
+  sectionView: (section: string) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'section_view',
+        section: section,
+        timestamp: new Date().toISOString(),
+      })
+    }
+  },
+  scrollDepth: (depth: number) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'scroll_depth',
+        depth: depth,
+        timestamp: new Date().toISOString(),
+      })
+    }
+  },
+  menuToggle: (isOpen: boolean) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'menu_toggle',
+        state: isOpen ? 'open' : 'closed',
+        timestamp: new Date().toISOString(),
+      })
+    }
+  },
+  formSubmit: (formType: string) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'form_submit',
+        form_type: formType,
+        timestamp: new Date().toISOString(),
+      })
+    }
+  },
+  formError: (errorType: string) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'form_error',
+        error_type: errorType,
+        timestamp: new Date().toISOString(),
+      })
+    }
+  },
+}
+
 export const gtmEvents = {
   // Golf DTV リンククリック
   golfDtvClick: (source: string) => {
