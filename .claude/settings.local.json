@@ -43,7 +43,11 @@
       "Bash(cd /tmp)",
       "Bash(python3)",
       "Bash(pdftotext \"C:/Users/Lenovo/Downloads/Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" -)",
-      "Bash(pdftotext \"C:/Users/Lenovo/Downloads/DTV_Club_最終版SEO・情報設計・商品導線戦略提案（AIO_LLM対応版）.pdf\" -)"
+      "Bash(pdftotext \"C:/Users/Lenovo/Downloads/DTV_Club_最終版SEO・情報設計・商品導線戦略提案（AIO_LLM対応版）.pdf\" -)",
+      "Bash(pdftotext -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" -)",
+      "Bash(pdftotext -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" /tmp/dtv_guide.txt)",
+      "Read(//tmp/**)",
+      "Bash(pdftotext -layout -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" /tmp/dtv_guide_layout.txt)"
     ]
   }
 }
