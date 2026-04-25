@@ -28,7 +28,22 @@
       "Bash(rm -f countries.zip)",
       "Bash(curl -s \"https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_continents.geojson\" -o continents-detailed.json)",
       "Bash(curl -s \"https://naciscdn.org/naturalearth/110m/physical/ne_110m_continents.geojson\" -o continents-detailed.json)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(python -c \"import pdfplumber; print\\('OK'\\)\")",
+      "Bash(python3 -m pip install pdfplumber -q)",
+      "Bash(python3 -c ' *)",
+      "PowerShell(python -c \"import pdfplumber; print\\('pdfplumber available'\\)\" 2>&1)",
+      "PowerShell(pip install pdfplumber --quiet 2>&1)",
+      "PowerShell(python -c \"import pdfplumber; print\\('OK'\\)\" 2>&1)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(Get-Command mutool, pdftotext, gs, ghostscript -ErrorAction SilentlyContinue)",
+      "Bash(cd /tmp)",
+      "Bash(python3)",
+      "Bash(pdftotext \"C:/Users/Lenovo/Downloads/Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" -)",
+      "Bash(pdftotext \"C:/Users/Lenovo/Downloads/DTV_Club_最終版SEO・情報設計・商品導線戦略提案（AIO_LLM対応版）.pdf\" -)"
     ]
   }
 }

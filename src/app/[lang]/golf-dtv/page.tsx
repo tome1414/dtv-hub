@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import type { Locale } from '@/middleware'
 import { getDictionary } from '@/lib/dictionaries'
+import { analytics } from '@/lib/analytics'
 
 interface GolfDTVPageProps {
   params: Promise<{ lang: string }>
@@ -12,13 +13,31 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [dict, setDict] = useState<any>(null)
   const [menuOpen, setMenuOpen] = useState(false)
   const [lang, setLang] = useState<string>('ja')
+  const [scrollTracked, setScrollTracked] = useState(false)
+
   useEffect(() => {
     params.then(({ lang: paramLang }) => {
       const locale = (paramLang || 'ja') as Locale
       setLang(locale)
+      analytics.languageChange(locale)
+      analytics.sectionView('golf_dtv_page')
       getDictionary(locale).then(setDict)
     })
   }, [params])
+
+  // スクロール深度追跡
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollTracked) return
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      if (scrollPercent > 50 && !scrollTracked) {
+        analytics.scrollDepth(50)
+        setScrollTracked(true)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [scrollTracked])
 
   const d = dict?.golfDTV
   if (!d) return null
@@ -142,7 +161,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             {/* Mobile: lang + hamburger */}
             <div className="nav-mobile-right">
               <LangSwitcher />
-              <button className="hamburger-btn" onClick={()=>setMenuOpen(!menuOpen)} aria-label="menu">
+              <button className="hamburger-btn" onClick={()=>{setMenuOpen(!menuOpen); analytics.menuToggle(!menuOpen)}} aria-label="menu">
                 <span/><span/><span/>
               </button>
             </div>
@@ -776,8 +795,10 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       })
       if (!res.ok) throw new Error('send failed')
       setSubmitted(true)
+      analytics.formSubmit(plan)
     } catch {
       setSendError(true)
+      analytics.formError('send failed')
     } finally {
       setLoading(false)
     }
