@@ -16,6 +16,8 @@ import { locales } from '@/middleware'
 import { getDictionary } from '@/lib/dictionaries'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { GolfDtvCTA } from '@/components/analytics/golf-dtv-cta'
+import { DiscordCTA } from '@/components/analytics/discord-cta'
 
 interface PageProps {
   params: Promise<{ lang: string }>
@@ -315,13 +317,7 @@ export default async function HomePage({ params }: PageProps) {
                       </p>
                     </div>
                     <div className="flex gap-3">
-                      <Button
-                        size="sm"
-                        className="flex-1 bg-gold-gradient text-navy-950 font-bold border-0 hover:opacity-90"
-                        asChild
-                      >
-                        <Link href={`/${locale}/golf-dtv`}>詳細を見る</Link>
-                      </Button>
+                      <GolfDtvCTA locale={locale} />
                     </div>
                   </div>
                 </CardContent>
@@ -374,16 +370,7 @@ export default async function HomePage({ params }: PageProps) {
             ))}
           </div>
 
-          <Button
-            size="lg"
-            className="inline-flex items-center gap-3 px-10 py-5 h-auto bg-gold-gradient text-navy-950 font-black text-lg rounded-2xl border-0 hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-2xl shadow-gold-500/30"
-            asChild
-          >
-            <a href="https://discord.gg/dtv-hub" target="_blank" rel="noopener noreferrer">
-              <MessageSquare className="w-6 h-6" />
-              {dict.community.cta}
-            </a>
-          </Button>
+          <DiscordCTA label={dict.community.cta} source="community-section" />
 
           <p className="mt-4 text-xs text-navy-600">無料 · 登録不要 · 即時参加</p>
         </div>

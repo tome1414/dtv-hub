@@ -36,36 +36,46 @@ export const viewport: Viewport = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID
 
   return (
     <html suppressHydrationWarning className={cn(inter.variable, geistMono.variable, "font-sans", geist.variable)}>
       <head>
-        {gaId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
-            <Script
-              id="ga-init"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gaId}', {
-                    page_path: window.location.pathname,
-                    send_page_view: true,
-                  });
-                `,
-              }}
-            />
-          </>
+        {/* Google Tag Manager */}
+        {gtmId && (
+          <Script
+            src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+            strategy="afterInteractive"
+          />
+        )}
+        {gtmId && (
+          <Script
+            id="gtm-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              `,
+            }}
+          />
         )}
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Google Tag Manager (noscript) */}
+        {gtmId && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
+        {children}
+      </body>
     </html>
   )
 }
