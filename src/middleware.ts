@@ -33,10 +33,16 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return NextResponse.next()
 
-  // Redirect to detected locale
   const locale = getLocaleFromAcceptLanguage(request)
-  const newUrl = new URL(`/${locale}${pathname === '/' ? '' : pathname}`, request.url)
-  return NextResponse.redirect(newUrl)
+
+  // Root path: rewrite internally (URL stays as "/", no redirect for Google)
+  if (pathname === '/') {
+    return NextResponse.rewrite(new URL(`/${locale}`, request.url))
+  }
+
+  // Other paths without locale: redirect to locale-prefixed URL
+  const newUrl = new URL(`/${locale}${pathname}`, request.url)
+  return NextResponse.redirect(newUrl, 301)
 }
 
 export const config = {
