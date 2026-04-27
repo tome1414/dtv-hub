@@ -1,10 +1,9 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { Calendar, Clock, ChevronRight, ArrowLeft, ExternalLink } from 'lucide-react'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
-import { getBlogPost, getBlogPostSlugs } from '@/lib/blog'
+import { getBlogPost, getBlogPostSlugs, extractToc } from '@/lib/blog'
 import type { Lang } from '@/types/blog'
 
 interface PageProps {
@@ -32,42 +31,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-const ctaConfig: Record<string, { label: string; href: string; style: 'primary' | 'secondary' }> = {
-  'DTV完全ガイドへ': { label: 'DTV完全ガイドへ', href: '/ja/blog/dtv-visa', style: 'primary' },
-  '適性確認': { label: '自分に向いているか確認する', href: '/ja/who-should-choose-golf-dtv', style: 'secondary' },
-  '無料相談': { label: '無料相談はこちら', href: '/ja/golf-dtv#inquiry', style: 'primary' },
-  '問い合わせ': { label: 'お問い合わせ', href: '/ja/golf-dtv#inquiry', style: 'primary' },
-  '必要書類を確認する': { label: '必要書類を確認する', href: '/ja/dtv-required-documents', style: 'secondary' },
-  '申請方法へ': { label: '申請方法を確認する', href: '/ja/dtv-application', style: 'secondary' },
-}
-
-function CTABlock({ primary, secondary }: { primary: string; secondary: string }) {
-  const p = ctaConfig[primary]
-  const s = ctaConfig[secondary]
-  return (
-    <div className="my-10 p-6 bg-navy-900 border border-gold-500/20 rounded-2xl">
-      <p className="text-sm text-navy-400 mb-4">次のステップ</p>
-      <div className="flex flex-col sm:flex-row gap-3">
-        {p && (
-          <Link
-            href={p.href}
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-gold-500 text-navy-950 font-bold rounded-xl hover:bg-gold-400 transition-colors text-sm"
-          >
-            {p.label}
-            <ExternalLink className="w-3.5 h-3.5" />
-          </Link>
-        )}
-        {s && (
-          <Link
-            href={s.href}
-            className="flex items-center justify-center gap-2 px-6 py-3 border border-white/20 text-navy-200 font-semibold rounded-xl hover:bg-white/5 transition-colors text-sm"
-          >
-            {s.label}
-          </Link>
-        )}
-      </div>
-    </div>
-  )
+const C = {
+  bg: '#F8F7F3',
+  bgSub: '#EDEAE3',
+  text: '#172019',
+  sub: '#5C665E',
+  muted: '#9EA89E',
+  border: '#DDD9CE',
+  green: '#0F6A43',
+  gold: '#C9A24A',
 }
 
 const categoryLabel: Record<string, string> = {
@@ -87,6 +59,9 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = await getBlogPost(slug, locale)
   if (!post) notFound()
 
+  const toc = extractToc(post.content)
+  const isJa = locale === 'ja'
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -104,8 +79,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: `https://dtvclub.com/${locale}` },
-          { '@type': 'ListItem', position: 2, name: 'ブログ', item: `https://dtvclub.com/${locale}/blog` },
+          { '@type': 'ListItem', position: 1, name: isJa ? 'ホーム' : 'Home', item: `https://dtvclub.com/${locale}` },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `https://dtvclub.com/${locale}/blog` },
           { '@type': 'ListItem', position: 3, name: post.title, item: `https://dtvclub.com/${locale}/blog/${slug}` },
         ],
       },
@@ -113,119 +88,38 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-navy-950 text-white">
+    <div style={{ background: C.bg, color: C.text, minHeight: '100vh', paddingTop: 64 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* パンくず */}
-      <div className="border-b border-white/10 bg-navy-950/90 backdrop-blur-sm pt-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <nav className="flex items-center gap-1.5 text-xs text-navy-400">
-            <Link href={`/${locale}`} className="hover:text-white transition-colors">ホーム</Link>
-            <ChevronRight className="w-3 h-3" />
-            <Link href={`/${locale}/blog`} className="hover:text-white transition-colors">ブログ</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-navy-300 truncate max-w-48">{post.title}</span>
-          </nav>
-        </div>
-      </div>
-
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-        {/* カテゴリバッジ */}
-        <div className="mb-5">
-          <span className="inline-flex items-center px-3 py-1 bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-bold uppercase tracking-wider rounded-full">
-            {categoryLabel[post.primary_category] ?? post.primary_category}
-          </span>
-        </div>
-
-        {/* タイトル */}
-        <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-6 tracking-tight">
-          {post.title}
-        </h1>
-
-        {/* メタ情報 */}
-        <div className="flex flex-wrap items-center gap-4 text-sm text-navy-400 pb-8 mb-8 border-b border-white/10">
-          <span className="text-navy-300 font-medium">DTV Club編集部</span>
-          <div className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5" />
-            <span>{post.published_at}</span>
-          </div>
-          {post.updated_at !== post.published_at && (
-            <div className="flex items-center gap-1.5">
-              <span className="text-xs bg-navy-800 px-2 py-0.5 rounded">更新 {post.updated_at}</span>
-            </div>
-          )}
-          <div className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5" />
-            <span>読了約{post.read_time_minutes}分</span>
-          </div>
-        </div>
-
-        {/* 記事本文 */}
-        <div
-          className="article-body mb-12"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        />
-
-        {/* 末尾CTA */}
-        <CTABlock primary={post.primary_cta} secondary={post.secondary_cta} />
-
-        {/* 関連記事（静的3件） */}
-        <section className="mt-14 pt-10 border-t border-white/10">
-          <h2 className="text-lg font-bold mb-5">次に読む</h2>
-          <div className="space-y-3">
-            {post.must_link_pages.slice(0, 3).map((href) => (
-              <Link
-                key={href}
-                href={href}
-                className="flex items-center justify-between p-4 bg-navy-900 border border-white/5 rounded-xl hover:border-gold-500/30 transition-all group"
-              >
-                <span className="text-sm text-navy-200 group-hover:text-white transition-colors">{href.replace('/ja/', '').replace(/-/g, ' ')}</span>
-                <ChevronRight className="w-4 h-4 text-navy-500 group-hover:text-gold-400 transition-colors flex-shrink-0" />
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* 戻るボタン */}
-        <div className="mt-10">
-          <Link
-            href={`/${locale}/blog`}
-            className="flex items-center gap-2 text-sm text-navy-400 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            ブログ一覧へ戻る
-          </Link>
-        </div>
-      </main>
-
-      {/* 記事本文スタイル */}
       <style>{`
+        @media (max-width: 860px) {
+          .article-grid { grid-template-columns: 1fr !important; }
+          .article-sidebar { display: none !important; }
+        }
         .article-body h2 {
-          font-size: 1.5rem;
+          font-size: 1.35rem;
           font-weight: 700;
-          color: #fff;
+          color: ${C.text};
           margin-top: 3rem;
           margin-bottom: 1rem;
-          padding-bottom: 0.625rem;
-          border-bottom: 2px solid rgba(240,196,60,0.2);
+          padding-bottom: 0.5rem;
+          border-bottom: 2px solid ${C.border};
           line-height: 1.35;
-          letter-spacing: -0.01em;
         }
         .article-body h3 {
-          font-size: 1.125rem;
+          font-size: 1.05rem;
           font-weight: 700;
-          color: #e2e8f0;
+          color: ${C.text};
           margin-top: 2rem;
-          margin-bottom: 0.75rem;
+          margin-bottom: 0.625rem;
         }
         .article-body p {
-          color: #94a3b8;
+          color: ${C.sub};
           font-size: 1rem;
-          line-height: 1.85;
+          line-height: 1.88;
           margin-bottom: 1.5rem;
         }
-        .article-body strong { color: #f0c43c; font-weight: 700; }
+        .article-body strong { color: ${C.text}; font-weight: 700; }
         .article-body ul, .article-body ol {
           margin: 1.25rem 0 1.5rem;
           padding-left: 1.5rem;
@@ -235,9 +129,9 @@ export default async function BlogPostPage({ params }: PageProps) {
         }
         .article-body ul { list-style-type: disc; }
         .article-body ol { list-style-type: decimal; }
-        .article-body li { color: #94a3b8; font-size: 1rem; line-height: 1.75; }
-        .article-body a { color: #f0c43c; text-decoration: underline; text-underline-offset: 3px; }
-        .article-body a:hover { color: #fbbf24; }
+        .article-body li { color: ${C.sub}; font-size: 1rem; line-height: 1.75; }
+        .article-body a { color: ${C.green}; text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a:hover { opacity: 0.75; }
         .article-body table {
           width: 100%;
           border-collapse: collapse;
@@ -245,34 +139,209 @@ export default async function BlogPostPage({ params }: PageProps) {
           font-size: 0.875rem;
         }
         .article-body th {
-          background: rgba(240,196,60,0.1);
-          color: #f0c43c;
+          background: ${C.bgSub};
+          color: ${C.text};
           font-weight: 700;
           padding: 0.625rem 0.875rem;
           text-align: left;
-          border: 1px solid rgba(255,255,255,0.08);
+          border: 1px solid ${C.border};
         }
         .article-body td {
-          color: #94a3b8;
+          color: ${C.sub};
           padding: 0.625rem 0.875rem;
-          border: 1px solid rgba(255,255,255,0.06);
+          border: 1px solid ${C.border};
           vertical-align: top;
         }
-        .article-body tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+        .article-body tr:nth-child(even) td { background: ${C.bgSub}; }
         .article-body hr {
           border: none;
-          border-top: 1px solid rgba(255,255,255,0.1);
+          border-top: 1px solid ${C.border};
           margin: 2.5rem 0;
         }
         .article-body blockquote {
-          border-left: 3px solid rgba(240,196,60,0.4);
+          border-left: 3px solid ${C.gold};
           padding: 0.75rem 1.25rem;
           margin: 1.5rem 0;
-          background: rgba(240,196,60,0.04);
-          border-radius: 0 0.5rem 0.5rem 0;
+          background: ${C.bgSub};
         }
-        .article-body blockquote p { color: #cbd5e1; margin: 0; }
+        .article-body blockquote p { color: ${C.sub}; margin: 0; }
       `}</style>
+
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 2rem' }}>
+
+        {/* Breadcrumb */}
+        <div style={{ padding: '16px 0', borderBottom: `1px solid ${C.border}`, fontSize: 12, color: C.muted }}>
+          <Link href={`/${locale}`} style={{ color: C.muted, textDecoration: 'none' }}>{isJa ? 'ホーム' : 'Home'}</Link>
+          {' › '}
+          <Link href={`/${locale}/blog`} style={{ color: C.muted, textDecoration: 'none' }}>{isJa ? 'ブログ' : 'Blog'}</Link>
+          {' › '}
+          <span style={{ color: C.sub }}>{post.title}</span>
+        </div>
+
+        {/* Article + Sidebar grid */}
+        <div
+          className="article-grid"
+          style={{ display: 'grid', gridTemplateColumns: '1fr 264px', gap: 60, paddingTop: 44 }}
+        >
+          {/* ── Article ── */}
+          <article>
+            {/* Category */}
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+              <div style={{ background: C.green, width: 4, height: 18 }} />
+              <span style={{ fontSize: 11, fontWeight: 800, color: C.green, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
+                {categoryLabel[post.primary_category] ?? post.primary_category}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 style={{
+              fontFamily: 'Georgia, "Times New Roman", serif',
+              fontSize: 34, fontWeight: 700,
+              lineHeight: 1.25, color: C.text,
+              margin: '0 0 16px', letterSpacing: '-0.01em',
+            }}>
+              {post.title}
+            </h1>
+
+            {/* Meta */}
+            <p style={{
+              fontSize: 12, color: C.muted,
+              margin: '0 0 32px',
+              borderBottom: `1px solid ${C.border}`,
+              paddingBottom: 16,
+            }}>
+              DTV Club編集部 · {post.published_at}
+              {post.updated_at !== post.published_at && ` · 更新 ${post.updated_at}`}
+              · {isJa ? `読了約${post.read_time_minutes}分` : `${post.read_time_minutes} min read`}
+            </p>
+
+            {/* Lead paragraph (excerpt) */}
+            <p style={{
+              fontFamily: 'Georgia, "Times New Roman", serif',
+              fontSize: 17, color: C.sub, lineHeight: 1.85,
+              borderLeft: `4px solid ${C.gold}`,
+              paddingLeft: 20,
+              margin: '0 0 32px',
+            }}>
+              {post.excerpt}
+            </p>
+
+            {/* Article body */}
+            <div
+              className="article-body"
+              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            />
+
+            {/* Bottom CTA */}
+            <div style={{
+              borderTop: `1px solid ${C.border}`,
+              marginTop: 48, paddingTop: 36,
+              display: 'flex', gap: 12, flexWrap: 'wrap',
+            }}>
+              <Link
+                href={`/${locale}/golf-dtv#inquiry`}
+                style={{
+                  background: C.green, color: '#fff',
+                  padding: '12px 24px', fontSize: 14, fontWeight: 800,
+                  textDecoration: 'none', display: 'inline-block',
+                }}
+              >
+                {isJa ? '無料相談はこちら' : 'Free Consultation'}
+              </Link>
+              <Link
+                href={`/${locale}/requirements`}
+                style={{
+                  background: 'transparent', color: C.text,
+                  border: `1px solid ${C.border}`, padding: '12px 24px',
+                  fontSize: 14, textDecoration: 'none', display: 'inline-block',
+                }}
+              >
+                {isJa ? '必要書類を確認する' : 'Check Requirements'}
+              </Link>
+            </div>
+
+            {/* Back link */}
+            <div style={{ marginTop: 32 }}>
+              <Link
+                href={`/${locale}/blog`}
+                style={{ fontSize: 13, color: C.muted, textDecoration: 'none' }}
+              >
+                ← {isJa ? 'ブログ一覧へ戻る' : 'Back to Blog'}
+              </Link>
+            </div>
+          </article>
+
+          {/* ── Sidebar ── */}
+          <aside className="article-sidebar">
+            <div style={{ position: 'sticky', top: 80 }}>
+
+              {/* TOC */}
+              {toc.length > 0 && (
+                <div style={{ marginBottom: 32 }}>
+                  <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: C.muted, margin: '0 0 14px' }}>
+                    {isJa ? '目次' : 'Contents'}
+                  </p>
+                  <nav style={{ borderLeft: `2px solid ${C.border}`, paddingLeft: 16 }}>
+                    {toc.map((item, i) => (
+                      <a
+                        key={i}
+                        href={`#${item.id}`}
+                        style={{
+                          display: 'block',
+                          fontSize: item.level === 2 ? 13 : 12,
+                          color: C.sub,
+                          textDecoration: 'none',
+                          padding: '4px 0',
+                          paddingLeft: item.level === 3 ? 12 : 0,
+                          lineHeight: 1.45,
+                        }}
+                      >
+                        {item.text}
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+              )}
+
+              {/* Sidebar CTA */}
+              <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 24 }}>
+                <p style={{ fontSize: 11, fontWeight: 700, color: C.text, margin: '0 0 8px' }}>
+                  {isJa ? '相談・確認' : 'Get Help'}
+                </p>
+                <p style={{ fontSize: 12, color: C.sub, lineHeight: 1.65, margin: '0 0 16px' }}>
+                  {isJa
+                    ? 'DTVの取得ルートについて専門家に相談できます。'
+                    : 'Consult an expert about your DTV visa route.'}
+                </p>
+                <Link
+                  href={`/${locale}/golf-dtv#inquiry`}
+                  style={{
+                    display: 'block', width: '100%', background: C.green, color: '#fff',
+                    border: 'none', padding: '10px 0', fontSize: 13, fontWeight: 700,
+                    textDecoration: 'none', textAlign: 'center', marginBottom: 8,
+                    boxSizing: 'border-box',
+                  }}
+                >
+                  {isJa ? '無料相談はこちら' : 'Free Consultation'}
+                </Link>
+                <Link
+                  href={`/${locale}/who-should-choose-golf-dtv`}
+                  style={{
+                    display: 'block', width: '100%', background: 'transparent',
+                    color: C.text, border: `1px solid ${C.border}`,
+                    padding: '10px 0', fontSize: 13,
+                    textDecoration: 'none', textAlign: 'center',
+                    boxSizing: 'border-box',
+                  }}
+                >
+                  {isJa ? '自分に向いているか確認' : 'Check Suitability'}
+                </Link>
+              </div>
+
+            </div>
+          </aside>
+        </div>
+      </div>
     </div>
   )
 }

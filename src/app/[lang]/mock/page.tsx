@@ -13,10 +13,10 @@ const T = {
     ctaBg: '#0F6A43', ctaText: '#FFFFFF',
   },
   dark: {
-    bg: '#0B0F17', bgSub: '#111927', card: '#141E2B',
-    text: '#E8ECF4', sub: '#7A90A8', muted: '#384F64',
-    border: '#192840', green: '#1A8C5B', gold: '#F0C43C',
-    ctaBg: '#F0C43C', ctaText: '#0B0F17',
+    bg: '#08101E', bgSub: '#0D1A2F', card: '#102038',
+    text: '#DCE8F5', sub: '#5C7A9A', muted: '#253D57',
+    border: '#142238', green: '#0A6B3C', gold: '#C89A20',
+    ctaBg: '#C89A20', ctaText: '#08101E',
   },
 }
 type Tok = typeof T.light
