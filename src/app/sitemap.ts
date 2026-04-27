@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
-import { getBlogPostSlugs } from '@/lib/blog'
+import fs from 'fs'
+import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://dtvclub.com'
@@ -29,14 +30,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     }
 
-    const blogSlugs = getBlogPostSlugs(locale as 'ja' | 'en')
-    for (const slug of blogSlugs) {
-      urls.push({
-        url: `${baseUrl}/${locale}/blog/${slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      })
+    // Get blog slugs directly from filesystem
+    const langDir = path.join(process.cwd(), 'src/content/blog', locale)
+    if (fs.existsSync(langDir)) {
+      const slugs = fs.readdirSync(langDir)
+        .filter(f => f.endsWith('.md'))
+        .map(f => f.replace(/\.md$/, ''))
+
+      for (const slug of slugs) {
+        urls.push({
+          url: `${baseUrl}/${locale}/blog/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        })
+      }
     }
   }
 
