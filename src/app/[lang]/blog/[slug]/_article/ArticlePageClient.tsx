@@ -10,7 +10,7 @@ const LIGHT = {
   border: '#DDD9CE', green: '#0F6A43', gold: '#C9A24A',
 }
 const DARK = {
-  bg: '#08101E', bgSub: '#0D1A2F',
+  bg: '#0d1427', bgSub: '#0F1A2E',
   text: '#DCE8F5', sub: '#5C7A9A', muted: '#253D57',
   border: '#142238', green: '#0A6B3C', gold: '#C89A20',
 }
@@ -42,16 +42,16 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
           .article-sidebar { display: none !important; }
         }
         .article-body h2 {
-          font-size: 1.35rem; font-weight: 700; color: ${C.text};
+          font-size: 1.375rem; font-weight: 700; color: ${C.text};
           margin-top: 3rem; margin-bottom: 1rem;
           padding-bottom: 0.5rem; border-bottom: 2px solid ${C.border};
           line-height: 1.35;
         }
         .article-body h3 {
-          font-size: 1.05rem; font-weight: 700; color: ${C.text};
+          font-size: 1.0625rem; font-weight: 700; color: ${C.text};
           margin-top: 2rem; margin-bottom: 0.625rem;
         }
-        .article-body p { color: ${C.sub}; font-size: 1rem; line-height: 1.88; margin-bottom: 1.5rem; }
+        .article-body p { color: ${C.sub}; font-size: 0.9375rem; line-height: 1.85; margin-bottom: 1.5rem; }
         .article-body strong { color: ${C.text}; font-weight: 700; }
         .article-body ul, .article-body ol {
           margin: 1.25rem 0 1.5rem; padding-left: 1.5rem;
@@ -59,7 +59,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
         }
         .article-body ul { list-style-type: disc; }
         .article-body ol { list-style-type: decimal; }
-        .article-body li { color: ${C.sub}; font-size: 1rem; line-height: 1.75; }
+        .article-body li { color: ${C.sub}; font-size: 0.9375rem; line-height: 1.75; }
         .article-body a { color: ${C.green}; text-decoration: underline; text-underline-offset: 3px; }
         .article-body a:hover { opacity: 0.75; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.875rem; }
