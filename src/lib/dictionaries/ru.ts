@@ -2,10 +2,10 @@ import type { Dictionary } from '@/types'
 
 const ru: Dictionary = {
   meta: {
-    title: 'DTV HUB | Полный гид по визе DTV в Таиланд',
+    title: 'DTV Club | Полный гид по визе DTV в Таиланд',
     description:
       'Всё о визе DTV (Destination Thailand Visa): как подать заявку, необходимые документы, жизнь в Таиланде. Портал, которому доверяют более 10 000 участников.',
-    siteName: 'DTV HUB',
+    siteName: 'DTV Club',
   },
   nav: {
     guide: 'Гид',
@@ -112,7 +112,7 @@ const ru: Dictionary = {
       { label: 'Контакты', href: '/contact' },
       { label: 'Карта сайта', href: '/sitemap.xml' },
     ],
-    legal: '© 2025 DTV HUB. All rights reserved.',
+    legal: '© 2025 DTV Club. All rights reserved.',
   },
   golfDTV: {
     meta: {
@@ -405,7 +405,7 @@ const ru: Dictionary = {
     },
   },
   aiSummary:
-    'DTV HUB — информационный портал, посвящённый визе Destination Thailand Visa (DTV). Предоставляет руководства по подаче заявки, списки документов, поддержку по визе Soft Power (школы гольфа и др.), информацию о жизни в Таиланде и доступ к Discord-сообществу из более чем 10 000 участников. Доступен на японском, английском, китайском, корейском и русском языках.',
+    'DTV Club — информационный портал, посвящённый визе Destination Thailand Visa (DTV). Предоставляет руководства по подаче заявки, списки документов, поддержку по визе Soft Power (школы гольфа и др.), информацию о жизни в Таиланде и доступ к Discord-сообществу из более чем 10 000 участников. Доступен на японском, английском, китайском, корейском и русском языках.',
 }
 
 export default ru

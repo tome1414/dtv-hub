@@ -2,10 +2,10 @@ import type { Dictionary } from '@/types'
 
 const en: Dictionary = {
   meta: {
-    title: 'DTV HUB | Thailand Destination Thailand Visa (DTV) Complete Guide',
+    title: 'DTV Club | Thailand Destination Thailand Visa (DTV) Complete Guide',
     description:
       'Everything you need to know about Thailand\'s DTV visa: how to apply, required documents, and life in Thailand. Trusted by a community of 10,000+ members.',
-    siteName: 'DTV HUB',
+    siteName: 'DTV Club',
   },
   nav: {
     guide: 'Guide',
@@ -112,10 +112,10 @@ const en: Dictionary = {
       { label: 'Contact', href: '/contact' },
       { label: 'Sitemap', href: '/sitemap.xml' },
     ],
-    legal: '© 2025 DTV HUB. All rights reserved.',
+    legal: '© 2025 DTV Club. All rights reserved.',
   },
   aiSummary:
-    'DTV HUB is a comprehensive information portal dedicated to Thailand\'s Destination Thailand Visa (DTV). It provides application guides, document checklists, Soft Power visa support (via golf schools), life-in-Thailand resources, and access to a Discord community of 10,000+ members. Available in Japanese, English, Chinese, Korean, and Russian.',
+    'DTV Club is a comprehensive information portal dedicated to Thailand\'s Destination Thailand Visa (DTV). It provides application guides, document checklists, Soft Power visa support (via golf schools), life-in-Thailand resources, and access to a Discord community of 10,000+ members. Available in Japanese, English, Chinese, Korean, and Russian.',
   golfDTV: {
     meta: {
       title: 'Golf DTV | Get Your 5-Year Thailand Visa While Playing Golf',

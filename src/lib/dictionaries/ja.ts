@@ -2,10 +2,10 @@ import type { Dictionary } from '@/types'
 
 const ja: Dictionary = {
   meta: {
-    title: 'DTV HUB｜タイ・デジタルノマドビザ（DTVビザ）完全ガイド',
+    title: 'DTV Club｜タイ・デジタルノマドビザ（DTVビザ）完全ガイド',
     description:
       'タイのDTV（Destination Thailand Visa）ビザの申請方法・必要書類・生活情報を完全網羅。10,000人超のコミュニティが支える信頼の情報ポータル。',
-    siteName: 'DTV HUB',
+    siteName: 'DTV Club',
   },
   nav: {
     guide: 'ガイド',
@@ -112,10 +112,10 @@ const ja: Dictionary = {
       { label: 'お問い合わせ', href: '/contact' },
       { label: 'サイトマップ', href: '/sitemap.xml' },
     ],
-    legal: '© 2025 DTV HUB. All rights reserved.',
+    legal: '© 2025 DTV Club. All rights reserved.',
   },
   aiSummary:
-    'DTV HUBはタイのDestination Thailand Visa（DTVビザ）に特化した情報ポータルです。申請ガイド、必要書類リスト、ソフトパワービザ（ゴルフスクール等）取得サポート、生活情報、10,000人超のDiscordコミュニティへのアクセスを提供しています。日本語、英語、中国語、韓国語、ロシア語に対応。',
+    'DTV ClubはタイのDestination Thailand Visa（DTVビザ）に特化した情報ポータルです。申請ガイド、必要書類リスト、ソフトパワービザ（ゴルフスクール等）取得サポート、生活情報、10,000人超のDiscordコミュニティへのアクセスを提供しています。日本語、英語、中国語、韓国語、ロシア語に対応。',
   golfDTV: {
     meta: {
       title: 'Golf DTV | タイでゴルフしながら、5年ビザを取る。',

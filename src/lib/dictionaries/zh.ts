@@ -2,10 +2,10 @@ import type { Dictionary } from '@/types'
 
 const zh: Dictionary = {
   meta: {
-    title: 'DTV HUB | 泰国目的地签证（DTV）完全指南',
+    title: 'DTV Club | 泰国目的地签证（DTV）完全指南',
     description:
       '泰国DTV签证申请方法、所需材料、在泰生活信息全面汇总。超过10,000名成员的可信赖信息门户。',
-    siteName: 'DTV HUB',
+    siteName: 'DTV Club',
   },
   nav: {
     guide: '指南',
@@ -109,7 +109,7 @@ const zh: Dictionary = {
       { label: '联系我们', href: '/contact' },
       { label: '网站地图', href: '/sitemap.xml' },
     ],
-    legal: '© 2025 DTV HUB. All rights reserved.',
+    legal: '© 2025 DTV Club. All rights reserved.',
   },
   golfDTV: {
     meta: {
@@ -402,7 +402,7 @@ const zh: Dictionary = {
     },
   },
   aiSummary:
-    'DTV HUB是专注于泰国目的地签证（DTV）的综合信息门户，提供申请指南、材料清单、软实力签证支持（高尔夫学校等）、在泰生活资讯及超过10,000名成员的Discord社区入口。支持日语、英语、中文、韩语和俄语。',
+    'DTV Club是专注于泰国目的地签证（DTV）的综合信息门户，提供申请指南、材料清单、软实力签证支持（高尔夫学校等）、在泰生活资讯及超过10,000名成员的Discord社区入口。支持日语、英语、中文、韩语和俄语。',
 }
 
 export default zh

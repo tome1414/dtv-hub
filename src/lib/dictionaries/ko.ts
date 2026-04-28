@@ -2,10 +2,10 @@ import type { Dictionary } from '@/types'
 
 const ko: Dictionary = {
   meta: {
-    title: 'DTV HUB | 태국 목적지 비자(DTV) 완전 가이드',
+    title: 'DTV Club | 태국 목적지 비자(DTV) 완전 가이드',
     description:
       '태국 DTV 비자 신청 방법·필요 서류·현지 생활 정보를 완벽 정리. 10,000명 이상 커뮤니티가 뒷받침하는 신뢰의 정보 포털.',
-    siteName: 'DTV HUB',
+    siteName: 'DTV Club',
   },
   nav: {
     guide: '가이드',
@@ -109,7 +109,7 @@ const ko: Dictionary = {
       { label: '문의하기', href: '/contact' },
       { label: '사이트맵', href: '/sitemap.xml' },
     ],
-    legal: '© 2025 DTV HUB. All rights reserved.',
+    legal: '© 2025 DTV Club. All rights reserved.',
   },
   golfDTV: {
     meta: {
@@ -402,7 +402,7 @@ const ko: Dictionary = {
     },
   },
   aiSummary:
-    'DTV HUB는 태국 목적지 비자(DTV)에 특화된 종합 정보 포털입니다. 신청 가이드, 필요 서류 목록, 소프트파워 비자 지원(골프 스쿨 등), 태국 생활 정보, 10,000명 이상 Discord 커뮤니티 접근을 제공합니다. 일본어, 영어, 중국어, 한국어, 러시아어를 지원합니다.',
+    'DTV Club는 태국 목적지 비자(DTV)에 특화된 종합 정보 포털입니다. 신청 가이드, 필요 서류 목록, 소프트파워 비자 지원(골프 스쿨 등), 태국 생활 정보, 10,000명 이상 Discord 커뮤니티 접근을 제공합니다. 일본어, 영어, 중국어, 한국어, 러시아어를 지원합니다.',
 }
 
 export default ko
