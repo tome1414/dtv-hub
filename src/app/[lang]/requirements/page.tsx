@@ -53,6 +53,21 @@ export default function RequirementsPage() {
 
   return (
     <div style={{ background: C.bg, color: C.text, minHeight: '100vh', paddingTop: 64 }}>
+      <style>{`
+        @media (min-width: 768px) {
+          .req-body-text { font-size: 15px !important; }
+          .req-card-title { font-size: 15px !important; }
+          .req-card-desc { font-size: 14px !important; }
+          .req-table-cell { font-size: 14px !important; }
+          .req-faq-q { font-size: 15px !important; }
+          .req-faq-a { font-size: 14px !important; }
+          .req-list-item { font-size: 14px !important; }
+          .req-note { font-size: 14px !important; }
+          .req-cta-body { font-size: 15px !important; }
+          .req-cta-btn { font-size: 15px !important; }
+          .req-related-link { font-size: 14px !important; }
+        }
+      `}</style>
 
       {/* ── Hero ── */}
       <div style={{ background: C.green, color: '#fff', padding: '48px 24px 40px' }}>
@@ -130,7 +145,7 @@ export default function RequirementsPage() {
             title={isJa ? '共通書類一覧' : 'Common Required Documents'}
             color={C.green}
           />
-          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
+          <p className="req-body-text" style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
             {isJa
               ? '申請ルートに関わらず、ほぼすべての申請に共通して求められる書類です。申請先の公館によって細部が異なる場合があるため、最終提出前に最新の公館案内を確認してください。'
               : 'These documents are required for most DTV applications regardless of route. Always verify with your specific embassy before submitting.'}
@@ -145,8 +160,8 @@ export default function RequirementsPage() {
               },
               {
                 icon: '📷',
-                title: isJa ? '顔写真' : 'Passport-size Photos',
-                desc: isJa ? '4×6cm程度、白背景、6ヶ月以内に撮影したもの。公館の指定サイズを確認すること。' : 'Approx. 4×6cm, white background, taken within 6 months. Confirm embassy requirements.',
+                title: isJa ? '顔写真（デジタル可）' : 'Photo (Digital Accepted)',
+                desc: isJa ? 'オンライン申請の場合はJPEGまたはPDF形式でのアップロードが基本。白背景・6ヶ月以内の撮影が目安。在外公館窓口で紙提出を求める場合もあるため、申請先の案内を確認すること。' : 'Online applications typically accept JPEG or PDF upload. White background, taken within 6 months. Some in-person embassies require a printed copy — check your specific embassy.',
               },
               {
                 icon: '🏠',
@@ -167,7 +182,7 @@ export default function RequirementsPage() {
               {
                 icon: '💴',
                 title: isJa ? '申請費用' : 'Application Fee',
-                desc: isJa ? '10,000タイバーツ（約4万円）。支払い方法は公館によって異なる（現金のみの場合あり）。' : '10,000 THB (approx. ¥40,000). Payment method varies by embassy (some accept cash only).',
+                desc: isJa ? '10,000タイバーツ。オンライン申請ではクレジットカードまたは銀行振込が主流。申請先の公館・国によって徴収金額・方法が異なるため、各公館の案内で確認すること。' : '10,000 THB. Online applications typically accept credit card or bank transfer. The amount and payment method vary by country and embassy — confirm with your specific embassy.',
               },
             ].map((item) => (
               <div
@@ -184,8 +199,8 @@ export default function RequirementsPage() {
               >
                 <span style={{ fontSize: 22, flexShrink: 0, marginTop: 1 }}>{item.icon}</span>
                 <div>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: C.text, margin: '0 0 4px' }}>{item.title}</p>
-                  <p style={{ fontSize: 13, color: C.sub, margin: 0, lineHeight: 1.7 }}>{item.desc}</p>
+                  <p className="req-card-title" style={{ fontSize: 14, fontWeight: 700, color: C.text, margin: '0 0 4px' }}>{item.title}</p>
+                  <p className="req-card-desc" style={{ fontSize: 13, color: C.sub, margin: 0, lineHeight: 1.7 }}>{item.desc}</p>
                   {item.highlight && (
                     <p style={{ fontSize: 12, color: C.gold, fontWeight: 700, margin: '6px 0 0' }}>
                       {isJa ? '⚠ 500万円固定ではありません。為替により変動します。' : '⚠ Not a fixed JPY amount — varies with exchange rate.'}
@@ -211,7 +226,7 @@ export default function RequirementsPage() {
             title={isJa ? 'ルート別 追加書類の比較' : 'Additional Documents by Route'}
             color={C.green}
           />
-          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
+          <p className="req-body-text" style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
             {isJa
               ? '共通書類に加えて、申請ルートごとに異なる書類が必要になります。自分のルートを確認してください。'
               : 'In addition to common documents, each route requires different supporting materials.'}
@@ -250,9 +265,9 @@ export default function RequirementsPage() {
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 === 0 ? '#fff' : C.bgSub }}>
                     <td style={{ padding: '12px 14px', fontWeight: 600, color: C.text, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.label}</td>
-                    <td style={{ padding: '12px 14px', color: C.sub, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.freelance}</td>
-                    <td style={{ padding: '12px 14px', color: C.sub, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.softpower}</td>
-                    <td style={{ padding: '12px 14px', color: C.sub, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.medical}</td>
+                    <td className="req-table-cell" style={{ padding: '12px 14px', color: C.sub, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.freelance}</td>
+                    <td className="req-table-cell" style={{ padding: '12px 14px', color: C.sub, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.softpower}</td>
+                    <td className="req-table-cell" style={{ padding: '12px 14px', color: C.sub, borderBottom: `1px solid ${C.border}`, verticalAlign: 'top' }}>{row.medical}</td>
                   </tr>
                 ))}
               </tbody>
@@ -287,7 +302,7 @@ export default function RequirementsPage() {
             title={isJa ? 'フリーランス / ワーケーションの追加書類' : 'Freelance / Workcation Additional Documents'}
             color={C.green}
           />
-          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
+          <p className="req-body-text" style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
             {isJa
               ? 'フリーランス / ワーケーションルートでは、現在の仕事実態を示す資料が中心になります。1枚の契約書だけで十分かどうかは個別状況によるため、実績の説明と書類の一貫性を意識することが重要です。'
               : 'This route focuses on demonstrating your current work situation. Whether one contract is sufficient depends on circumstances — consistency between documents and your actual situation matters.'}
@@ -349,7 +364,7 @@ export default function RequirementsPage() {
             title={isJa ? 'ソフトパワー活動の追加書類' : 'Soft Power Activity Additional Documents'}
             color={C.green}
           />
-          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
+          <p className="req-body-text" style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
             {isJa
               ? 'ソフトパワールートでは、タイ国内の受入機関から発行される活動証明書類が申請の核心となります。雇用契約書や業務実績の証明は不要ですが、活動参加の具体性を示す書類が必要です。'
               : 'The Soft Power route centers on activity confirmation documents issued by Thai institutions. Employment contracts are not required, but documents demonstrating concrete activity participation are needed.'}
@@ -388,8 +403,8 @@ export default function RequirementsPage() {
               >
                 <span style={{ fontSize: 22, flexShrink: 0, marginTop: 1 }}>{item.icon}</span>
                 <div>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: C.text, margin: '0 0 4px' }}>{item.title}</p>
-                  <p style={{ fontSize: 13, color: C.sub, margin: 0, lineHeight: 1.7 }}>{item.desc}</p>
+                  <p className="req-card-title" style={{ fontSize: 14, fontWeight: 700, color: C.text, margin: '0 0 4px' }}>{item.title}</p>
+                  <p className="req-card-desc" style={{ fontSize: 13, color: C.sub, margin: 0, lineHeight: 1.7 }}>{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -409,7 +424,7 @@ export default function RequirementsPage() {
             title={isJa ? '医療目的で進める場合の追加確認事項' : 'Additional Considerations for Medical Purposes'}
             color={C.gold}
           />
-          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
+          <p className="req-body-text" style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
             {isJa
               ? '医療目的での渡航は、制度上はソフトパワー関連活動の一種として案内されるケースがあります（台北経済文化代表処の案内では "hospital / medical center" が明示）。書類の中心は、医療機関が発行する活動の具体性を示す書類です。'
               : 'Medical purposes may be treated as a type of Soft Power activity (the Taipei office explicitly lists "hospital / medical center"). Documentation centers on materials from the medical institution showing specifics of the treatment.'}
@@ -474,6 +489,14 @@ export default function RequirementsPage() {
                 q: '書類はすべて英語でなければいけませんか？',
                 a: '英文での提出が基本です。日本語のみの書類は受理されない場合があります。英文での発行を依頼するか、公証済み翻訳を準備してください。',
               },
+              {
+                q: 'オンラインで申請できますか？書類はデジタルでよいですか？',
+                a: 'タイ外務省のe-Visaシステム（evisa.thaigov.go.th）や各大使館のオンライン申請窓口を通じてオンライン完結で申請できるケースが多くなっています。書類はJPEGまたはPDF形式でのアップロードが基本で、写真の現像・郵送は不要なことがほとんどです。支払いはクレジットカードまたは銀行振込が主流です。ただし、申請先の公館や国によって対応状況が異なるため、最新の公館案内を必ず確認してください。',
+              },
+              {
+                q: '申請費用はいくらですか？',
+                a: 'DTVの申請費用は10,000タイバーツです。ただし、申請先の国や公館によって徴収額・支払い方法が異なる場合があります。各公館の最新案内でご確認ください。',
+              },
             ] : [
               {
                 q: 'Are required documents the same for everyone?',
@@ -486,6 +509,14 @@ export default function RequirementsPage() {
               {
                 q: 'Can I apply for medical purposes?',
                 a: 'Medical purposes may be treated as a type of Soft Power activity. The Taipei office lists hospital/medical center appointment letters as examples. Guidance varies by embassy — confirm in advance.',
+              },
+              {
+                q: 'Can I apply online? Are digital documents accepted?',
+                a: 'Many embassies now support online applications via the Thai e-Visa system (evisa.thaigov.go.th) or embassy-specific portals. Documents are typically uploaded as JPEG or PDF — printed photos and mailed documents are generally not required. Payment is usually by credit card or bank transfer. Confirm with your specific embassy for the latest process.',
+              },
+              {
+                q: 'What is the application fee?',
+                a: 'The DTV application fee is 10,000 THB. However, the amount charged and payment method may vary by country and embassy. Always check the latest guidance from your specific embassy.',
               },
             ]).map((item) => (
               <FaqItem key={item.q} q={item.q} a={item.a} borderColor={C.border} textColor={C.text} subColor={C.sub} />
@@ -569,11 +600,11 @@ function FaqItem({ q, a, borderColor, textColor, subColor }: { q: string; a: str
           cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12,
         }}
       >
-        <span style={{ fontSize: 14, fontWeight: 700, color: textColor, lineHeight: 1.5 }}>Q. {q}</span>
+        <span className="req-faq-q" style={{ fontSize: 14, fontWeight: 700, color: textColor, lineHeight: 1.5 }}>Q. {q}</span>
         <span style={{ fontSize: 18, color: subColor, flexShrink: 0, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform 0.2s' }}>+</span>
       </button>
       {open && (
-        <p style={{ fontSize: 13, color: subColor, lineHeight: 1.8, margin: '0 0 16px', paddingLeft: 4 }}>
+        <p className="req-faq-a" style={{ fontSize: 13, color: subColor, lineHeight: 1.8, margin: '0 0 16px', paddingLeft: 4 }}>
           {a}
         </p>
       )}
