@@ -197,7 +197,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             <h1 style={{fontSize:'clamp(2.2rem,6vw,4rem)',fontWeight:900,color:'#fff',lineHeight:1.2,marginBottom:24}}>
               {d.hero.headline}
             </h1>
-            <p style={{color:'rgba(255,255,255,.82)',fontSize:'clamp(.95rem,2vw,1.1rem)',lineHeight:1.9,maxWidth:680,margin:'0 auto 40px'}}>
+            <p style={{color:'rgba(255,255,255,.82)',fontSize:'clamp(.95rem,2vw,1.1rem)',lineHeight:1.9,maxWidth:680,margin:'0 0 40px',textAlign:'left'}}>
               {d.hero.subheadline}
             </p>
             <div style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap',marginBottom:60}}>

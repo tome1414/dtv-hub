@@ -126,7 +126,7 @@ const en: Dictionary = {
       badge: 'Industry First • 96% Success Rate',
       headline: 'Unlock the 5-Year DTV with Golf',
       subheadline: 'Acquire your DTV visa through a golf school partnership. Thailand PGA-certified coaches ensure your success.',
-      cta: 'Get Free Consultation',
+      cta: 'Free Consultation',
     },
     plans: {
       intro: 'Choose Your Plan',
