@@ -26,13 +26,11 @@ const staticCategories = {
     { cat: '申請ガイド', href: '/requirements', label: 'DTVビザの書類と申請フロー' },
     { cat: 'ソフトパワー', href: '/soft-power', label: 'タイ政府認定プログラムで取得' },
     { cat: '比較', href: '/dtv-soft-power-vs-freelance', label: 'ルート別メリット・デメリット' },
-    { cat: 'Golf DTV', href: '/golf-dtv', label: 'タイ政府認定 5日間プログラム' },
   ],
   en: [
     { cat: 'Application Guide', href: '/requirements', label: 'Documents & Application Flow' },
     { cat: 'Soft Power', href: '/soft-power', label: 'Thai Gov Certified Programs' },
     { cat: 'Comparison', href: '/dtv-soft-power-vs-freelance', label: 'Route Pros & Cons' },
-    { cat: 'Golf DTV', href: '/golf-dtv', label: 'Thai Gov Certified 5-Day Program' },
   ],
 }
 
@@ -148,7 +146,7 @@ export default function HomePageClient({ posts, locale }: Props) {
         )}
 
         {/* ── Category grid ── */}
-        <div className="top-cat-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0 1px', background: C.border, borderBottom: `1px solid ${C.border}` }}>
+        <div className="top-cat-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 1px', background: C.border, borderBottom: `1px solid ${C.border}` }}>
           {cats.map((c, i) => (
             <Link key={i} href={`/${locale}${c.href}`} className="top-cat-item" style={{ textDecoration: 'none', display: 'block', background: C.bg, transition: 'background 0.15s' }}>
               <div style={{ padding: '22px 20px' }}>
@@ -159,15 +157,31 @@ export default function HomePageClient({ posts, locale }: Props) {
           ))}
         </div>
 
-        {/* ── Golf DTV CTA strip ── */}
-        <div className="top-cta-strip" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: `1px solid ${C.border}`, borderTop: 'none', padding: '24px 28px', margin: '0 0 64px' }}>
-          <div>
-            <p style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.14em', color: C.muted, textTransform: 'uppercase', margin: '0 0 6px' }}>Golf DTV</p>
-            <p style={{ fontSize: 18, fontWeight: 700, color: C.text, margin: 0 }}>
-              {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : 'Live long-term in Thailand. Play golf while you stay.'}
-            </p>
+        {/* ── Golf DTV Banner ── */}
+        <div style={{ margin: '0 0 64px', position: 'relative', overflow: 'hidden', background: dark ? '#071A0F' : '#0B3D24', borderRadius: 4 }}>
+          {/* decorative circles */}
+          <div style={{ position: 'absolute', right: -60, top: -60, width: 280, height: 280, borderRadius: '50%', background: 'rgba(201,162,74,0.08)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', right: 60, bottom: -80, width: 200, height: 200, borderRadius: '50%', background: 'rgba(201,162,74,0.05)', pointerEvents: 'none' }} />
+
+          <div className="top-cta-strip" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '32px 36px', gap: 24, position: 'relative' }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+                <div style={{ width: 28, height: 2, background: C.gold }} />
+                <span style={{ fontSize: 10, fontWeight: 800, color: C.gold, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Golf DTV</span>
+              </div>
+              <p style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', fontWeight: 700, color: '#fff', margin: '0 0 8px', lineHeight: 1.3, fontFamily: 'Georgia, serif' }}>
+                {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : 'Play golf in Thailand. Stay long-term.'}
+              </p>
+              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0, lineHeight: 1.6 }}>
+                {isJa
+                  ? 'ソフトパワールートでDTVを取得。タイ政府認定プログラムで受入レターを取得できます。'
+                  : 'Get your DTV via the Soft Power route with a Thai gov-approved program.'}
+              </p>
+            </div>
+            <div style={{ flexShrink: 0 }}>
+              <GolfDtvCTA locale={locale as 'ja' | 'en'} />
+            </div>
           </div>
-          <GolfDtvCTA locale={locale as 'ja' | 'en'} />
         </div>
 
         {/* ── Blog posts grid ── */}
