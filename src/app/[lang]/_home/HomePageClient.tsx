@@ -158,10 +158,10 @@ export default function HomePageClient({ posts, locale }: Props) {
         </div>
 
         {/* ── Golf DTV Banner ── */}
-        <div style={{ margin: '0 0 64px', position: 'relative', overflow: 'hidden', background: dark ? '#071A0F' : '#0B3D24', borderRadius: 4 }}>
+        <div style={{ margin: '0 0 64px', position: 'relative', overflow: 'hidden', background: dark ? '#0A5C30' : '#0B3D24', borderRadius: 4, border: dark ? '1px solid rgba(201,162,74,0.35)' : 'none', boxShadow: dark ? '0 0 0 1px rgba(201,162,74,0.12)' : 'none' }}>
           {/* decorative circles */}
-          <div style={{ position: 'absolute', right: -60, top: -60, width: 280, height: 280, borderRadius: '50%', background: 'rgba(201,162,74,0.08)', pointerEvents: 'none' }} />
-          <div style={{ position: 'absolute', right: 60, bottom: -80, width: 200, height: 200, borderRadius: '50%', background: 'rgba(201,162,74,0.05)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', right: -60, top: -60, width: 280, height: 280, borderRadius: '50%', background: dark ? 'rgba(201,162,74,0.12)' : 'rgba(201,162,74,0.08)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', right: 60, bottom: -80, width: 200, height: 200, borderRadius: '50%', background: dark ? 'rgba(201,162,74,0.07)' : 'rgba(201,162,74,0.05)', pointerEvents: 'none' }} />
 
           <div className="top-cta-strip" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '32px 36px', gap: 24, position: 'relative' }}>
             <div style={{ flex: 1, minWidth: 0 }}>
