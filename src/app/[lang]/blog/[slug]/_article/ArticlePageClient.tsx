@@ -27,6 +27,12 @@ const categoryLabelEn: Record<string, string> = {
   freelance: 'Freelance', locations: 'Locations', 'life-in-thailand': 'Life in Thailand',
 }
 
+const categoryLabelKo: Record<string, string> = {
+  comparison: '비교 기사', basic: '기본 가이드', process: '신청 실무',
+  documents: '필요 서류', 'soft-power': '소프트파워',
+  freelance: '프리랜서', locations: '지역 가이드', 'life-in-thailand': '태국 생활',
+}
+
 interface Props {
   post: BlogPost
   toc: TocItem[]
@@ -99,9 +105,9 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
 
         {/* Breadcrumb */}
         <div style={{ padding: '16px 0', borderBottom: `1px solid ${C.border}`, fontSize: 12, color: C.muted }}>
-          <Link href={`/${locale}`} style={{ color: C.muted, textDecoration: 'none' }}>{isJa ? 'ホーム' : 'Home'}</Link>
+          <Link href={`/${locale}`} style={{ color: C.muted, textDecoration: 'none' }}>{isJa ? 'ホーム' : locale === 'ko' ? '홈' : 'Home'}</Link>
           {' › '}
-          <Link href={`/${locale}/blog`} style={{ color: C.muted, textDecoration: 'none' }}>{isJa ? 'ブログ' : 'Blog'}</Link>
+          <Link href={`/${locale}/blog`} style={{ color: C.muted, textDecoration: 'none' }}>{isJa ? 'ブログ' : locale === 'ko' ? '블로그' : 'Blog'}</Link>
           {' › '}
           <span style={{ color: C.sub }}>{post.title}</span>
         </div>
@@ -114,7 +120,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <div style={{ background: C.green, width: 4, height: 18 }} />
               <span style={{ fontSize: 11, fontWeight: 800, color: C.green, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
-                {(isJa ? categoryLabelJa : categoryLabelEn)[post.primary_category] ?? post.primary_category}
+                {(isJa ? categoryLabelJa : locale === 'ko' ? categoryLabelKo : categoryLabelEn)[post.primary_category] ?? post.primary_category}
               </span>
             </div>
 
@@ -123,9 +129,9 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
             </h1>
 
             <p style={{ fontSize: 12, color: C.muted, margin: '0 0 32px', borderBottom: `1px solid ${C.border}`, paddingBottom: 16 }}>
-              {isJa ? 'DTV Club編集部' : 'DTV Club Editorial'} · {post.published_at}
-              {post.updated_at !== post.published_at && ` · ${isJa ? '更新' : 'Updated'} ${post.updated_at}`}
-              · {isJa ? `読了約${post.read_time_minutes}分` : `${post.read_time_minutes} min read`}
+              {isJa ? 'DTV Club編集部' : locale === 'ko' ? 'DTV Club 편집부' : 'DTV Club Editorial'} · {post.published_at}
+              {post.updated_at !== post.published_at && ` · ${isJa ? '更新' : locale === 'ko' ? '업데이트' : 'Updated'} ${post.updated_at}`}
+              · {isJa ? `読了約${post.read_time_minutes}分` : locale === 'ko' ? `약 ${post.read_time_minutes}분` : `${post.read_time_minutes} min read`}
             </p>
 
             <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 17, color: C.sub, lineHeight: 1.85, borderLeft: `4px solid ${C.gold}`, paddingLeft: 20, margin: '0 0 32px' }}>
@@ -136,16 +142,16 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
 
             <div style={{ borderTop: `1px solid ${C.border}`, marginTop: 48, paddingTop: 36, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <Link href={`/${locale}/golf-dtv#inquiry`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
-                {isJa ? '無料相談はこちら' : 'Free Consultation'}
+                {isJa ? '無料相談はこちら' : locale === 'ko' ? '무료 상담 신청' : 'Free Consultation'}
               </Link>
               <Link href={`/${locale}/requirements`} style={{ background: 'transparent', color: C.text, border: `1px solid ${C.border}`, padding: '12px 24px', fontSize: 14, textDecoration: 'none', display: 'inline-block' }}>
-                {isJa ? '必要書類を確認する' : 'Check Requirements'}
+                {isJa ? '必要書類を確認する' : locale === 'ko' ? '필요 서류 확인' : 'Check Requirements'}
               </Link>
             </div>
 
             <div style={{ marginTop: 32 }}>
               <Link href={`/${locale}/blog`} style={{ fontSize: 13, color: C.muted, textDecoration: 'none' }}>
-                ← {isJa ? 'ブログ一覧へ戻る' : 'Back to Blog'}
+                ← {isJa ? 'ブログ一覧へ戻る' : locale === 'ko' ? '블로그 목록으로 돌아가기' : 'Back to Blog'}
               </Link>
             </div>
           </article>
@@ -156,7 +162,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
               {toc.length > 0 && (
                 <div style={{ marginBottom: 32 }}>
                   <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: C.muted, margin: '0 0 14px' }}>
-                    {isJa ? '目次' : 'Contents'}
+                    {isJa ? '目次' : locale === 'ko' ? '목차' : 'Contents'}
                   </p>
                   <nav style={{ borderLeft: `2px solid ${C.border}`, paddingLeft: 16 }}>
                     {toc.map((item, i) => (
@@ -170,16 +176,16 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
 
               <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 24 }}>
                 <p style={{ fontSize: 11, fontWeight: 700, color: C.text, margin: '0 0 8px' }}>
-                  {isJa ? '相談・確認' : 'Get Help'}
+                  {isJa ? '相談・確認' : locale === 'ko' ? '상담·확인' : 'Get Help'}
                 </p>
                 <p style={{ fontSize: 12, color: C.sub, lineHeight: 1.65, margin: '0 0 16px' }}>
-                  {isJa ? 'DTVの取得ルートについて専門家に相談できます。' : 'Consult an expert about your DTV visa route.'}
+                  {isJa ? 'DTVの取得ルートについて専門家に相談できます。' : locale === 'ko' ? 'DTV 비자 취득 경로에 대해 전문가와 상담할 수 있습니다.' : 'Consult an expert about your DTV visa route.'}
                 </p>
                 <Link href={`/${locale}/golf-dtv#inquiry`} style={{ display: 'block', background: C.green, color: '#fff', padding: '10px 0', fontSize: 13, fontWeight: 700, textDecoration: 'none', textAlign: 'center', marginBottom: 8, boxSizing: 'border-box' }}>
-                  {isJa ? '無料相談はこちら' : 'Free Consultation'}
+                  {isJa ? '無料相談はこちら' : locale === 'ko' ? '무료 상담 신청' : 'Free Consultation'}
                 </Link>
                 <Link href={`/${locale}/who-should-choose-golf-dtv`} style={{ display: 'block', background: 'transparent', color: C.text, border: `1px solid ${C.border}`, padding: '10px 0', fontSize: 13, textDecoration: 'none', textAlign: 'center', boxSizing: 'border-box' }}>
-                  {isJa ? '自分に向いているか確認' : 'Check Suitability'}
+                  {isJa ? '自分に向いているか確認' : locale === 'ko' ? '나에게 적합한지 확인' : 'Check Suitability'}
                 </Link>
               </div>
             </div>

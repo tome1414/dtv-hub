@@ -31,6 +31,17 @@ const categoryLabelEn: Record<string, string> = {
   'life-in-thailand': 'Life in Thailand',
 }
 
+const categoryLabelKo: Record<string, string> = {
+  comparison: '비교 기사',
+  basic: '기본 가이드',
+  process: '신청 실무',
+  documents: '필요 서류',
+  'soft-power': '소프트파워',
+  freelance: '프리랜서',
+  locations: '지역 가이드',
+  'life-in-thailand': '태국 생활',
+}
+
 export default async function BlogListPage({ params }: PageProps) {
   const { lang } = await params
   const locale = (locales.includes(lang as Locale) ? lang : 'ja') as Lang
@@ -54,13 +65,13 @@ export default async function BlogListPage({ params }: PageProps) {
         {posts.length === 0 ? (
           <div className="bg-navy-900 rounded-2xl p-8 border border-white/10 text-center">
             <p className="text-navy-400">
-              {locale === 'ja' ? '記事を準備中です。しばらくお待ちください。' : 'Articles coming soon.'}
+              {locale === 'ja' ? '記事を準備中です。しばらくお待ちください。' : locale === 'ko' ? '기사를 준비 중입니다. 잠시 기다려 주세요.' : 'Articles coming soon.'}
             </p>
           </div>
         ) : (
           <div className="space-y-4">
             {posts.map((post) => {
-              const categoryLabel = locale === 'ja' ? categoryLabelJa : categoryLabelEn
+              const categoryLabel = locale === 'ja' ? categoryLabelJa : locale === 'ko' ? categoryLabelKo : categoryLabelEn
               return (
               <Link
                 key={post.slug}
@@ -85,7 +96,7 @@ export default async function BlogListPage({ params }: PageProps) {
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5" />
-                        <span>{locale === 'ja' ? `約${post.read_time_minutes}分` : `${post.read_time_minutes} min read`}</span>
+                        <span>{locale === 'ja' ? `約${post.read_time_minutes}分` : locale === 'ko' ? `약 ${post.read_time_minutes}분` : `${post.read_time_minutes} min read`}</span>
                       </div>
                     </div>
                   </div>

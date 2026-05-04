@@ -12,7 +12,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = []
-  for (const lang of ['ja', 'en'] as Lang[]) {
+  for (const lang of ['ja', 'en', 'ko'] as Lang[]) {
     const slugs = getBlogPostSlugs(lang)
     slugs.forEach(slug => params.push({ lang, slug }))
   }
@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: lang === 'ja' ? 'ホーム' : 'Home', item: `https://dtvclub.com/${locale}` },
+          { '@type': 'ListItem', position: 1, name: lang === 'ja' ? 'ホーム' : lang === 'ko' ? '홈' : 'Home', item: `https://dtvclub.com/${locale}` },
           { '@type': 'ListItem', position: 2, name: 'Blog', item: `https://dtvclub.com/${locale}/blog` },
           { '@type': 'ListItem', position: 3, name: post.title, item: `https://dtvclub.com/${locale}/blog/${slug}` },
         ],

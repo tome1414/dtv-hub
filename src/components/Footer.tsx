@@ -12,34 +12,49 @@ const footerSections = [
   {
     titleJa: 'ビザ情報',
     titleEn: 'Visa Info',
+    titleKo: '비자 정보',
     links: [
-      { labelJa: 'DTVビザとは', labelEn: 'What is DTV?', href: '/guide/about' },
-      { labelJa: '申請ガイド', labelEn: 'Application Guide', href: '/guide/embassy' },
-      { labelJa: '必要書類', labelEn: 'Required Documents', href: '/requirements' },
-      { labelJa: '更新・再申請', labelEn: 'Renewal & Re-application', href: '/guide/renewal' },
+      { labelJa: 'DTVビザとは', labelEn: 'What is DTV?', labelKo: 'DTV 비자란?', href: '/guide/about' },
+      { labelJa: '申請ガイド', labelEn: 'Application Guide', labelKo: '신청 가이드', href: '/guide/embassy' },
+      { labelJa: '必要書類', labelEn: 'Required Documents', labelKo: '필요 서류', href: '/requirements' },
+      { labelJa: '更新・再申請', labelEn: 'Renewal & Re-application', labelKo: '갱신·재신청', href: '/guide/renewal' },
     ],
   },
   {
     titleJa: 'タイ生活',
     titleEn: 'Life in Thailand',
+    titleKo: '태국 생활',
     links: [
-      { labelJa: 'バンコク', labelEn: 'Bangkok', href: '/life/bangkok' },
-      { labelJa: '住居・物件', labelEn: 'Housing', href: '/life/housing' },
-      { labelJa: '医療・保険', labelEn: 'Health & Insurance', href: '/life/health' },
-      { labelJa: '税金・金融', labelEn: 'Tax & Finance', href: '/life/finance' },
+      { labelJa: 'バンコク', labelEn: 'Bangkok', labelKo: '방콕', href: '/life/bangkok' },
+      { labelJa: '住居・物件', labelEn: 'Housing', labelKo: '주거·부동산', href: '/life/housing' },
+      { labelJa: '医療・保険', labelEn: 'Health & Insurance', labelKo: '의료·보험', href: '/life/health' },
+      { labelJa: '税金・金融', labelEn: 'Tax & Finance', labelKo: '세금·금융', href: '/life/finance' },
     ],
   },
   {
     titleJa: 'サービス',
     titleEn: 'Services',
+    titleKo: '서비스',
     links: [
-      { labelJa: 'ソフトパワービザ', labelEn: 'Soft Power Visa', href: '/soft-power' },
-      { labelJa: 'ゴルフスクールプラン', labelEn: 'Golf DTV Plan', href: '/soft-power/golf' },
-      { labelJa: '家族ビザサポート', labelEn: 'Family Visa Support', href: '/guide/family' },
-      { labelJa: 'Discordコミュニティ', labelEn: 'Discord Community', href: 'https://discord.gg/dtv-hub' },
+      { labelJa: 'ソフトパワービザ', labelEn: 'Soft Power Visa', labelKo: '소프트파워 비자', href: '/soft-power' },
+      { labelJa: 'ゴルフスクールプラン', labelEn: 'Golf DTV Plan', labelKo: '골프 DTV 플랜', href: '/soft-power/golf' },
+      { labelJa: '家族ビザサポート', labelEn: 'Family Visa Support', labelKo: '가족 비자 지원', href: '/guide/family' },
+      { labelJa: 'Discordコミュニティ', labelEn: 'Discord Community', labelKo: 'Discord 커뮤니티', href: 'https://discord.gg/dtv-hub' },
     ],
   },
 ]
+
+function getSectionTitle(locale: Locale, section: typeof footerSections[number]) {
+  if (locale === 'ja') return section.titleJa
+  if (locale === 'ko') return section.titleKo
+  return section.titleEn
+}
+
+function getLinkLabel(locale: Locale, link: typeof footerSections[number]['links'][number]) {
+  if (locale === 'ja') return link.labelJa
+  if (locale === 'ko') return link.labelKo
+  return link.labelEn
+}
 
 export default function Footer({ locale, footer }: FooterProps) {
   return (
@@ -70,7 +85,7 @@ export default function Footer({ locale, footer }: FooterProps) {
           {footerSections.map((section) => (
             <div key={section.titleEn} className="space-y-4">
               <h4 className="text-sm font-semibold text-gold-400 uppercase tracking-wider">
-                {locale === 'ja' ? section.titleJa : section.titleEn}
+                {getSectionTitle(locale, section)}
               </h4>
               <ul className="space-y-2.5">
                 {section.links.map((link) => (
@@ -82,7 +97,7 @@ export default function Footer({ locale, footer }: FooterProps) {
                         ? { target: '_blank', rel: 'noopener noreferrer' }
                         : {})}
                     >
-                      {locale === 'ja' ? link.labelJa : link.labelEn}
+                      {getLinkLabel(locale, link)}
                     </Link>
                   </li>
                 ))}

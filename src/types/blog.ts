@@ -5,7 +5,7 @@ export type MonetizationType = 'none' | 'soft-consultation' | 'golf-dtv'
 export type UpdatePriority = 'high' | 'medium' | 'low'
 export type ImageStyle = 'comparison' | 'guide' | 'process' | 'local' | 'product'
 export type SchemaType = 'Article' | 'FAQPage' | 'BreadcrumbList'
-export type Lang = 'ja' | 'en' | 'zh-hans'
+export type Lang = 'ja' | 'en' | 'zh-hans' | 'ko' | 'ru' | 'zh'
 
 export interface BlogFrontmatter {
   title: string
