@@ -1,0 +1,29 @@
+day,date,slot,priority,title,target_keyword,category,search_intent_type,monetization_type,language,article_type,target_url,primary_cta,secondary_cta,notes
+1,2026-04-26,AM,S,タイ長期滞在ビザ比較｜DTV・LTR・タイランドプリビレッジ・リタイアメントの違い,タイ 長期滞在 ビザ 比較,comparison,comparison,none,ja,comparison,/ja/thailand-long-stay-visa-comparison,DTV完全ガイドへ,適性確認,最上位流入の起点記事
+1,2026-04-26,PM,S,タイDTVビザ完全ガイド｜制度・対象者・取得ルートの基本,タイ DTVビザ,basic,informational,none,ja,guide,/ja/dtv-visa,必要書類を確認する,比較記事へ,母艦記事として以後の内部リンク先に設定
+2,2026-04-27,AM,S,DTVとリタイアメントビザの違い｜年齢条件・資金条件・向いている人を比較,DTV リタイアメントビザ 違い,comparison,comparison,soft-consultation,ja,comparison,/ja/dtv-vs-retirement-visa,ソフトパワー比較へ,無料相談,ゴルフ関心層の主要入口
+2,2026-04-27,PM,S,DTVとThailand Privilegeの違い｜費用・年数・向いている人を比較,DTV Thailand Privilege 違い,comparison,comparison,none,ja,comparison,/ja/dtv-vs-thailand-privilege,DTV完全ガイドへ,無料相談,高価格帯との比較記事
+3,2026-04-28,AM,S,DTVはソフトパワーとフリーランスどっちで取るべきか,DTV ソフトパワー フリーランス,comparison,comparison,soft-consultation,ja,comparison,/ja/dtv-soft-power-vs-freelance,無料相談,Golf DTV適性記事へ,DTV内部比較の中核
+3,2026-04-28,PM,S,タイDTVビザの必要書類一覧｜まず確認したい提出物まとめ,DTV 必要書類,documents,transactional,soft-consultation,ja,process,/ja/dtv-required-documents,無料相談,申請方法へ,CV直前需要の主力記事
+4,2026-04-29,AM,S,タイDTVビザの申請方法｜e-Visa手順と準備の流れ,DTV 申請方法,process,transactional,soft-consultation,ja,process,/ja/dtv-application,問い合わせ,必要書類を確認する,申請前ユーザー向け
+4,2026-04-29,PM,S,DTVソフトパワー申請で必要な受入レターとは,DTV 受入レター,soft-power,transactional,soft-consultation,ja,process,/ja/dtv-acceptance-letter,無料相談,必要書類を確認する,ソフトパワー実務記事
+5,2026-04-30,AM,S,DTVフリーランス申請で必要な契約書・ポートフォリオとは,DTV 契約書 ポートフォリオ,freelance,transactional,none,ja,process,/ja/dtv-portfolio,必要書類を確認する,無料相談,Workcation実務記事
+5,2026-04-30,PM,S,DTV残高証明50万バーツはどう準備する？銀行残高の考え方,DTV 残高証明 50万バーツ,documents,transactional,soft-consultation,ja,process,/ja/dtv-bank-balance,必要書類を確認する,無料相談,資金証明の高需要テーマ
+6,2026-05-01,AM,A,DTVビザの審査期間とpending時の見方｜待っている間に確認したいこと,DTV 審査期間 pending,process,informational,soft-consultation,ja,process,/ja/dtv-processing-time,問い合わせ,申請方法へ,不安解消クエリ向け
+6,2026-05-01,PM,A,東京でDTV申請する人向けガイド｜事前に確認したい流れと注意点,DTV 東京 申請,locations,informational,none,ja,local,/ja/dtv-embassy-guides/tokyo,申請方法へ,必要書類を確認する,地域流入記事
+7,2026-05-02,AM,A,福岡でDTV申請する人向けガイド｜準備と注意点を整理,DTV 福岡 申請,locations,informational,none,ja,local,/ja/dtv-embassy-guides/fukuoka,申請方法へ,必要書類を確認する,地域流入記事
+7,2026-05-02,PM,A,DTVソフトパワー活動の比較｜ゴルフ・ムエタイ・料理教室・医療の違い,DTV ソフトパワー 比較,soft-power,comparison,soft-consultation,ja,comparison,/ja/dtv-soft-power-comparison,無料相談,DTV完全ガイドへ,中立比較だがゴルフ導線を自然に含む
+8,2026-05-03,AM,A,ゴルフDTVはどんな人に向いている？向いていない人も含めて解説,ゴルフ DTV 向いている人,soft-power,transactional,golf-dtv,ja,product_bridge,/ja/who-should-choose-golf-dtv,無料相談,問い合わせ,商品接続の主力記事
+8,2026-05-03,PM,A,DTVとLTRの違い｜高所得者向け制度との比較でわかること,DTV LTR 違い,comparison,comparison,none,ja,comparison,/ja/dtv-vs-ltr,DTV完全ガイドへ,無料相談,高属性層向け比較
+9,2026-05-04,AM,A,DTVデジタルノマドビザとは？他の長期滞在ビザとの位置づけ,DTV デジタルノマドビザ,basic,informational,none,ja,guide,/ja/dtv-digital-nomad-visa,ルート比較へ,DTV完全ガイドへ,定義補強記事
+9,2026-05-04,PM,A,DTVソフトパワービザとは？対象活動と考え方の基本,DTV ソフトパワービザ,soft-power,informational,soft-consultation,ja,guide,/ja/dtv-soft-power,活動比較へ,無料相談,ソフトパワー理解ハブ
+10,2026-05-05,AM,A,DTVフリーランス・ワーケーション枠とは？考え方と準備ポイント,DTV ワーケーション,freelance,informational,none,ja,guide,/ja/dtv-freelance,書類記事へ,DTV完全ガイドへ,Workcation理解ハブ
+10,2026-05-05,PM,A,DTVの申請費用はいくら？制度費用と準備コストの見方,DTV 費用,process,informational,none,ja,guide,/ja/dtv-cost,比較記事へ,必要書類を確認する,費用系の比較補助記事
+11,2026-05-06,AM,A,DTVのe-Visaシステムはどう使う？入力前に知りたい流れ,DTV e-visa,process,transactional,soft-consultation,ja,process,/ja/dtv-evisa-guide,申請方法へ,必要書類を確認する,申請方法記事の補完
+11,2026-05-06,PM,A,DTVの代行サービスは必要？自分で進める場合との違い,DTV 代行サービス,process,comparison,soft-consultation,ja,comparison,/ja/dtv-agent-service,相談へ,申請方法へ,相談導線の補助記事
+12,2026-05-07,AM,A,DTVで180日滞在とはどういう意味？滞在ルールの基本,DTV 180日滞在,basic,informational,none,ja,guide,/ja/dtv-180-days,DTV完全ガイドへ,延長記事へ,制度理解の補強
+12,2026-05-07,PM,A,DTVの延長方法を考える前に知っておきたいこと,DTV 延長方法,process,informational,soft-consultation,ja,process,/ja/dtv-extension,無料相談,DTV完全ガイドへ,運用系の実務記事
+13,2026-05-08,AM,A,DTVで家族帯同はできる？配偶者・子どもに関する基本,DTV 家族帯同,basic,informational,none,ja,guide,/ja/dtv-family,DTV完全ガイドへ,問い合わせ,周辺重要テーマ
+13,2026-05-08,PM,A,DTVと子どものビザはどう考える？家族で動く前の確認ポイント,DTV 子供 ビザ,basic,informational,none,ja,guide,/ja/dtv-children,家族記事へ,問い合わせ,家族帯同記事の補完
+14,2026-05-09,AM,A,タイ生活の生活費はどれくらい？DTV検討者向けに大枠を整理,タイ 生活費,life-in-thailand,informational,none,ja,guide,/ja/thailand-life/cost-of-living,DTV完全ガイドへ,無料相談,取得後検索と上位層育成
+14,2026-05-09,PM,A,タイで銀行口座開設は必要？DTV検討者が知っておきたい前提,タイ 銀行口座開設,life-in-thailand,informational,none,ja,guide,/ja/thailand-bank-account,生活記事へ,無料相談,周辺実務と生活導線

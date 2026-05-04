@@ -15,10 +15,22 @@ const DARK = {
   border: '#142238', green: '#0A6B3C', gold: '#C89A20',
 }
 
-const categoryLabel: Record<string, string> = {
+const categoryLabelJa: Record<string, string> = {
   comparison: '比較', basic: 'ガイド', process: '申請実務',
   documents: '必要書類', 'soft-power': 'ソフトパワー',
   freelance: 'フリーランス', locations: '地域', 'life-in-thailand': 'タイ生活',
+}
+
+const categoryLabelEn: Record<string, string> = {
+  comparison: 'Comparison', basic: 'Guide', process: 'Application',
+  documents: 'Documents', 'soft-power': 'Soft Power',
+  freelance: 'Freelance', locations: 'Locations', 'life-in-thailand': 'Life in Thailand',
+}
+
+const categoryLabelKo: Record<string, string> = {
+  comparison: '비교 기사', basic: '기본 가이드', process: '신청 실무',
+  documents: '필요 서류', 'soft-power': '소프트파워',
+  freelance: '프리랜서', locations: '지역 가이드', 'life-in-thailand': '태국 생활',
 }
 
 const staticCategories = {
@@ -32,6 +44,11 @@ const staticCategories = {
     { cat: 'Soft Power', href: '/soft-power', label: 'Thai Gov Certified Programs' },
     { cat: 'Comparison', href: '/dtv-soft-power-vs-freelance', label: 'Route Pros & Cons' },
   ],
+  ko: [
+    { cat: '신청 가이드', href: '/requirements', label: 'DTV 비자 서류 및 신청 절차' },
+    { cat: '소프트파워', href: '/soft-power', label: '태국 정부 공인 프로그램' },
+    { cat: '비교 기사', href: '/dtv-soft-power-vs-freelance', label: '경로별 장단점' },
+  ],
 }
 
 interface Props {
@@ -44,6 +61,7 @@ export default function HomePageClient({ posts, locale }: Props) {
   const C = dark ? DARK : LIGHT
   const isJa = locale === 'ja'
   const cats = staticCategories[locale as keyof typeof staticCategories] ?? staticCategories.en
+  const categoryLabel = locale === 'ja' ? categoryLabelJa : locale === 'ko' ? categoryLabelKo : categoryLabelEn
 
   const featured = posts[0]
   const secondary = posts.slice(1, 3)

@@ -47,7 +47,27 @@
       "Bash(pdftotext -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" -)",
       "Bash(pdftotext -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" /tmp/dtv_guide.txt)",
       "Read(//tmp/**)",
-      "Bash(pdftotext -layout -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" /tmp/dtv_guide_layout.txt)"
+      "Bash(pdftotext -layout -f 1 -l 3 \"C:\\\\Users\\\\Lenovo\\\\Downloads\\\\Claude_Code向け_DTV_Clubブログ記事執筆指示書_最終版（AIO_LLM対応版）.pdf\" /tmp/dtv_guide_layout.txt)",
+      "Bash(xargs cat *)",
+      "Bash(xargs grep *)",
+      "Bash(python3 -c \" import sys, json lines = sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\) for line in lines[-10:]: try: obj = json.loads\\(line\\) role = obj.get\\('role', obj.get\\('type', ''\\)\\) if 'message' in obj: msg = obj['message'] content = msg.get\\('content', ''\\) if isinstance\\(content, list\\): for c in content: if isinstance\\(c, dict\\) and c.get\\('type'\\) == 'text': print\\(f'[{role}]: {c[\\\\\"text\\\\\"][:300]}'\\) break elif isinstance\\(content, str\\): print\\(f'[{role}]: {content[:300]}'\\) except: pass \")",
+      "Bash(npx tsc *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebFetch(domain:docs.google.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ja/mock)",
+      "Bash(git commit *)",
+      "mcp__mcp-registry__search_mcp_registry",
+      "Bash(gh api *)",
+      "Bash(curl -s http://localhost:3000/en)",
+      "Bash(curl -s http://localhost:3001/ko/blog)",
+      "Bash(curl -s http://localhost:3001/en)",
+      "Bash(curl -s http://localhost:3001/ja)",
+      "Bash(curl -s http://localhost:3000/ja)",
+      "Bash(grep -oP '\\(?<=>\\)[^<]{1,100}\\(?=<\\)')",
+      "Bash(curl -s http://localhost:3000/ko)",
+      "Bash(curl -s http://localhost:3000/en/blog)"
     ]
   }
 }

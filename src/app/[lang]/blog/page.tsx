@@ -81,7 +81,7 @@ export default async function BlogListPage({ params }: PageProps) {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center px-2.5 py-0.5 bg-gold-500/15 border border-gold-500/25 text-gold-400 text-xs font-bold rounded-full">
+                      <span className="inline-flex items-center px-2.5 py-0.5 bg-gold-500/20 border border-gold-500/40 text-gold-500 text-xs font-bold rounded-full">
                         {categoryLabel[post.primary_category] ?? post.primary_category}
                       </span>
                     </div>
