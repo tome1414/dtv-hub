@@ -9,7 +9,7 @@ interface PageProps {
   params: Promise<{ lang: string }>
 }
 
-const categoryLabel: Record<string, string> = {
+const categoryLabelJa: Record<string, string> = {
   comparison: '比較記事',
   basic: '基本ガイド',
   process: '申請実務',
@@ -18,6 +18,17 @@ const categoryLabel: Record<string, string> = {
   freelance: 'フリーランス',
   locations: '地域ガイド',
   'life-in-thailand': 'タイ生活',
+}
+
+const categoryLabelEn: Record<string, string> = {
+  comparison: 'Comparison',
+  basic: 'Guide',
+  process: 'Application',
+  documents: 'Documents',
+  'soft-power': 'Soft Power',
+  freelance: 'Freelance',
+  locations: 'Locations',
+  'life-in-thailand': 'Life in Thailand',
 }
 
 export default async function BlogListPage({ params }: PageProps) {
@@ -42,11 +53,15 @@ export default async function BlogListPage({ params }: PageProps) {
 
         {posts.length === 0 ? (
           <div className="bg-navy-900 rounded-2xl p-8 border border-white/10 text-center">
-            <p className="text-navy-400">記事を準備中です。しばらくお待ちください。</p>
+            <p className="text-navy-400">
+              {locale === 'ja' ? '記事を準備中です。しばらくお待ちください。' : 'Articles coming soon.'}
+            </p>
           </div>
         ) : (
           <div className="space-y-4">
-            {posts.map((post) => (
+            {posts.map((post) => {
+              const categoryLabel = locale === 'ja' ? categoryLabelJa : categoryLabelEn
+              return (
               <Link
                 key={post.slug}
                 href={`/${locale}/blog/${post.slug}`}
@@ -70,14 +85,15 @@ export default async function BlogListPage({ params }: PageProps) {
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5" />
-                        <span>約{post.read_time_minutes}分</span>
+                        <span>{locale === 'ja' ? `約${post.read_time_minutes}分` : `${post.read_time_minutes} min read`}</span>
                       </div>
                     </div>
                   </div>
                   <ChevronRight className="w-5 h-5 text-navy-500 group-hover:text-gold-400 transition-colors flex-shrink-0 mt-1" />
                 </div>
               </Link>
-            ))}
+            )
+            })}
           </div>
         )}
 

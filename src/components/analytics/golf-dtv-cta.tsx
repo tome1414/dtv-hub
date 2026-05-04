@@ -21,7 +21,7 @@ export function GolfDtvCTA({ locale }: GolfDtvCTAProps) {
       asChild
       onClick={handleClick}
     >
-      <Link href={`/${locale}/golf-dtv`}>詳細を見る</Link>
+      <Link href={`/${locale}/golf-dtv`}>{locale === 'ja' ? '詳細を見る' : 'See Details'}</Link>
     </Button>
   )
 }

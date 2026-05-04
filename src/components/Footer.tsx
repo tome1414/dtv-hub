@@ -13,30 +13,30 @@ const footerSections = [
     titleJa: 'ビザ情報',
     titleEn: 'Visa Info',
     links: [
-      { label: 'DTVビザとは', href: '/guide/about' },
-      { label: '申請ガイド', href: '/guide/embassy' },
-      { label: '必要書類', href: '/requirements' },
-      { label: '更新・再申請', href: '/guide/renewal' },
+      { labelJa: 'DTVビザとは', labelEn: 'What is DTV?', href: '/guide/about' },
+      { labelJa: '申請ガイド', labelEn: 'Application Guide', href: '/guide/embassy' },
+      { labelJa: '必要書類', labelEn: 'Required Documents', href: '/requirements' },
+      { labelJa: '更新・再申請', labelEn: 'Renewal & Re-application', href: '/guide/renewal' },
     ],
   },
   {
     titleJa: 'タイ生活',
     titleEn: 'Life in Thailand',
     links: [
-      { label: 'バンコク', href: '/life/bangkok' },
-      { label: '住居・物件', href: '/life/housing' },
-      { label: '医療・保険', href: '/life/health' },
-      { label: '税金・金融', href: '/life/finance' },
+      { labelJa: 'バンコク', labelEn: 'Bangkok', href: '/life/bangkok' },
+      { labelJa: '住居・物件', labelEn: 'Housing', href: '/life/housing' },
+      { labelJa: '医療・保険', labelEn: 'Health & Insurance', href: '/life/health' },
+      { labelJa: '税金・金融', labelEn: 'Tax & Finance', href: '/life/finance' },
     ],
   },
   {
     titleJa: 'サービス',
     titleEn: 'Services',
     links: [
-      { label: 'ソフトパワービザ', href: '/soft-power' },
-      { label: 'ゴルフスクールプラン', href: '/soft-power/golf' },
-      { label: '家族ビザサポート', href: '/guide/family' },
-      { label: 'Discordコミュニティ', href: 'https://discord.gg/dtv-hub' },
+      { labelJa: 'ソフトパワービザ', labelEn: 'Soft Power Visa', href: '/soft-power' },
+      { labelJa: 'ゴルフスクールプラン', labelEn: 'Golf DTV Plan', href: '/soft-power/golf' },
+      { labelJa: '家族ビザサポート', labelEn: 'Family Visa Support', href: '/guide/family' },
+      { labelJa: 'Discordコミュニティ', labelEn: 'Discord Community', href: 'https://discord.gg/dtv-hub' },
     ],
   },
 ]
@@ -70,7 +70,7 @@ export default function Footer({ locale, footer }: FooterProps) {
           {footerSections.map((section) => (
             <div key={section.titleEn} className="space-y-4">
               <h4 className="text-sm font-semibold text-gold-400 uppercase tracking-wider">
-                {section.titleJa}
+                {locale === 'ja' ? section.titleJa : section.titleEn}
               </h4>
               <ul className="space-y-2.5">
                 {section.links.map((link) => (
@@ -82,7 +82,7 @@ export default function Footer({ locale, footer }: FooterProps) {
                         ? { target: '_blank', rel: 'noopener noreferrer' }
                         : {})}
                     >
-                      {link.label}
+                      {locale === 'ja' ? link.labelJa : link.labelEn}
                     </Link>
                   </li>
                 ))}

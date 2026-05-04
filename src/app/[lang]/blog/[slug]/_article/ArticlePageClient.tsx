@@ -15,10 +15,16 @@ const DARK = {
   border: '#142238', green: '#0A6B3C', gold: '#C89A20',
 }
 
-const categoryLabel: Record<string, string> = {
+const categoryLabelJa: Record<string, string> = {
   comparison: '比較記事', basic: '基本ガイド', process: '申請実務',
   documents: '必要書類', 'soft-power': 'ソフトパワー',
   freelance: 'フリーランス', locations: '地域ガイド', 'life-in-thailand': 'タイ生活',
+}
+
+const categoryLabelEn: Record<string, string> = {
+  comparison: 'Comparison', basic: 'Guide', process: 'Application',
+  documents: 'Documents', 'soft-power': 'Soft Power',
+  freelance: 'Freelance', locations: 'Locations', 'life-in-thailand': 'Life in Thailand',
 }
 
 interface Props {
@@ -108,7 +114,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <div style={{ background: C.green, width: 4, height: 18 }} />
               <span style={{ fontSize: 11, fontWeight: 800, color: C.green, textTransform: 'uppercase', letterSpacing: '0.14em' }}>
-                {categoryLabel[post.primary_category] ?? post.primary_category}
+                {(isJa ? categoryLabelJa : categoryLabelEn)[post.primary_category] ?? post.primary_category}
               </span>
             </div>
 
@@ -117,8 +123,8 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
             </h1>
 
             <p style={{ fontSize: 12, color: C.muted, margin: '0 0 32px', borderBottom: `1px solid ${C.border}`, paddingBottom: 16 }}>
-              DTV Club編集部 · {post.published_at}
-              {post.updated_at !== post.published_at && ` · 更新 ${post.updated_at}`}
+              {isJa ? 'DTV Club編集部' : 'DTV Club Editorial'} · {post.published_at}
+              {post.updated_at !== post.published_at && ` · ${isJa ? '更新' : 'Updated'} ${post.updated_at}`}
               · {isJa ? `読了約${post.read_time_minutes}分` : `${post.read_time_minutes} min read`}
             </p>
 
