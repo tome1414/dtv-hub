@@ -60,6 +60,7 @@ export default function HomePageClient({ posts, locale }: Props) {
   const [dark, setDark] = useState(false)
   const C = dark ? DARK : LIGHT
   const isJa = locale === 'ja'
+  const isKo = locale === 'ko'
   const cats = staticCategories[locale as keyof typeof staticCategories] ?? staticCategories.en
   const categoryLabel = locale === 'ja' ? categoryLabelJa : locale === 'ko' ? categoryLabelKo : categoryLabelEn
 
@@ -71,6 +72,8 @@ export default function HomePageClient({ posts, locale }: Props) {
       <p className="sr-only">
         {isJa
           ? 'DTV Club - タイDTVビザの比較・申請・生活情報メディア。ソフトパワービザ、必要書類、申請方法を中立的に解説します。'
+          : isKo
+          ? 'DTV Club - 태국 DTV 비자 비교·신청·생활 정보 미디어. 소프트파워 비자, 필요 서류, 신청 방법을 중립적으로 해설합니다.'
           : 'DTV Club - Thailand DTV Visa information media. Neutral guides on Soft Power visa, required documents, and application.'}
       </p>
 
@@ -111,12 +114,14 @@ export default function HomePageClient({ posts, locale }: Props) {
             <div style={{ paddingRight: 44, paddingBottom: 44, borderRight: `1px solid ${C.border}` }}>
               <div style={{ display: 'inline-block', background: C.green, padding: '3px 10px', marginBottom: 20 }}>
                 <span style={{ fontSize: 10, fontWeight: 800, color: '#fff', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-                  {isJa ? '特集' : 'Featured'}
+                  {isJa ? '特集' : isKo ? '특집' : 'Featured'}
                 </span>
               </div>
               <h1 className="top-h1" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 44, fontWeight: 700, lineHeight: 1.16, color: C.text, margin: '0 0 20px', letterSpacing: '-0.02em' }}>
                 {isJa ? (
                   <>タイへ、長く自由に住む。<br /><span style={{ color: C.green }}>正確な情報</span>が、<br />最初の一歩を助ける。</>
+                ) : isKo ? (
+                  <>태국에서, 길고 자유롭게.<br /><span style={{ color: C.green }}>정확한 정보</span>가<br />첫 걸음을 돕습니다.</>
                 ) : (
                   <>Live in Thailand,<br /><span style={{ color: C.green }}>free and long-term.</span><br />Accurate info, first step.</>
                 )}
@@ -124,20 +129,22 @@ export default function HomePageClient({ posts, locale }: Props) {
               <p style={{ fontSize: 15, color: C.sub, lineHeight: 1.72, margin: '0 0 28px', maxWidth: 440 }}>
                 {isJa
                   ? 'DTVビザの比較・申請・生活情報を中立的に解説。あなたに合ったビザと取得ルートを一緒に整理します。'
+                  : isKo
+                  ? 'DTV 비자 비교·신청·생활 정보를 중립적으로 해설. 나에게 맞는 비자와 취득 경로를 함께 정리합니다.'
                   : 'Neutral guides on DTV visa comparison, application, and life in Thailand. Find the right route for you.'}
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <Link href={`/${locale}/blog`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
-                  {isJa ? 'ビザを比較する' : 'Compare Visas'}
+                  {isJa ? 'ビザを比較する' : isKo ? '비자 비교하기' : 'Compare Visas'}
                 </Link>
                 <Link href={`/${locale}/requirements`} style={{ background: 'transparent', color: C.text, border: `2px solid ${C.border}`, padding: '12px 24px', fontSize: 14, fontWeight: 600, textDecoration: 'none', display: 'inline-block' }}>
-                  {isJa ? '必要書類を確認する' : 'Check Requirements'}
+                  {isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : 'Check Requirements'}
                 </Link>
               </div>
             </div>
             <div className="top-hero-right" style={{ paddingLeft: 36, paddingBottom: 44 }}>
               <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', color: C.muted, textTransform: 'uppercase', margin: '0 0 16px' }}>
-                {isJa ? '最新記事' : 'Latest Articles'}
+                {isJa ? '最新記事' : isKo ? '최신 기사' : 'Latest Articles'}
               </p>
               {[featured, ...secondary].map((post, i) => (
                 <div key={post.slug} style={{ paddingBottom: i < 2 ? 20 : 0, marginBottom: i < 2 ? 20 : 0, borderBottom: i < 2 ? `1px solid ${C.border}` : 'none' }}>
@@ -155,10 +162,10 @@ export default function HomePageClient({ posts, locale }: Props) {
         ) : (
           <div style={{ paddingTop: 60, paddingBottom: 60, borderBottom: `1px solid ${C.border}` }}>
             <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 44, fontWeight: 700, lineHeight: 1.16, color: C.text, margin: '0 0 20px' }}>
-              {isJa ? 'タイへ、長く自由に住む。' : 'Live in Thailand, free and long-term.'}
+              {isJa ? 'タイへ、長く自由に住む。' : isKo ? '태국에서, 길고 자유롭게.' : 'Live in Thailand, free and long-term.'}
             </h1>
             <Link href={`/${locale}/requirements`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
-              {isJa ? '必要書類を確認する' : 'Check Requirements'}
+              {isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : 'Check Requirements'}
             </Link>
           </div>
         )}
@@ -188,16 +195,18 @@ export default function HomePageClient({ posts, locale }: Props) {
                 <span style={{ fontSize: 10, fontWeight: 800, color: C.gold, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Golf DTV</span>
               </div>
               <p style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', fontWeight: 700, color: '#fff', margin: '0 0 8px', lineHeight: 1.3, fontFamily: 'Georgia, serif' }}>
-                {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : 'Play golf in Thailand. Stay long-term.'}
+                {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : isKo ? '태국에서 골프를 즐기며, 장기 체류한다.' : 'Play golf in Thailand. Stay long-term.'}
               </p>
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0, lineHeight: 1.6 }}>
                 {isJa
                   ? 'ソフトパワールートでDTVを取得。タイ政府認定プログラムで受入レターを取得できます。'
+                  : isKo
+                  ? '소프트파워 경로로 DTV를 취득. 태국 정부 인증 프로그램으로 입학 허가서를 받을 수 있습니다.'
                   : 'Get your DTV via the Soft Power route with a Thai gov-approved program.'}
               </p>
             </div>
             <div style={{ flexShrink: 0 }}>
-              <GolfDtvCTA locale={locale as 'ja' | 'en'} />
+              <GolfDtvCTA locale={locale as import('@/middleware').Locale} />
             </div>
           </div>
         </div>
@@ -207,10 +216,10 @@ export default function HomePageClient({ posts, locale }: Props) {
           <div style={{ marginBottom: 64 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
               <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: C.muted, margin: 0 }}>
-                {isJa ? '記事一覧' : 'Articles'}
+                {isJa ? '記事一覧' : isKo ? '기사 목록' : 'Articles'}
               </p>
               <Link href={`/${locale}/blog`} style={{ fontSize: 12, color: C.green, textDecoration: 'none' }}>
-                {isJa ? 'すべて見る →' : 'See all →'}
+                {isJa ? 'すべて見る →' : isKo ? '전체 보기 →' : 'See all →'}
               </Link>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 36px' }}>
