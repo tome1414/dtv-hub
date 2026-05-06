@@ -24,7 +24,7 @@ const content = {
       '通常のフリーランス証明が不要（プログラム参加が根拠になる）',
       '初心者でも参加できる',
       '認定校から公式書類が発行される',
-      '5日間〜の短期プログラムでOK',
+      '書類準備の負担が少なく申請しやすい',
       '返金保証付きサービスあり',
     ],
     cta: 'ゴルフDTVプログラムの詳細を見る',
@@ -45,7 +45,7 @@ const content = {
       'No need for typical freelance income proof — program participation is sufficient',
       'Beginner-friendly',
       'Official documents issued by certified institutions',
-      'Short programs from just 5 days qualify',
+      'Less paperwork burden — easier to apply',
       'Money-back guarantee available',
     ],
     cta: 'View Golf DTV Program Details',
@@ -84,9 +84,6 @@ export default async function SoftPowerPage({ params }: PageProps) {
           >
             <div className="flex items-start justify-between mb-3">
               <span className="text-3xl">⛳</span>
-              <span className="text-xs text-navy-400 bg-navy-800 px-2 py-1 rounded-full">
-                {locale === 'ja' ? '5日間' : '5 days'}
-              </span>
             </div>
             <h3 className="font-bold text-lg mb-2 group-hover:text-gold-400 transition-colors">
               {locale === 'ja' ? 'ゴルフスクール DTV' : 'Golf School DTV'}

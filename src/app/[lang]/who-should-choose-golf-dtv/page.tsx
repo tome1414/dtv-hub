@@ -43,7 +43,6 @@ const content = {
     program: {
       title: 'ゴルフDTVプログラムの概要',
       items: [
-        { label: '期間', value: '5日間（滞在は任意で延長可）' },
         { label: '場所', value: 'タイ・バンコク近郊のゴルフコース' },
         { label: 'レベル', value: '初心者〜経験者まで対応' },
         { label: '書類', value: '入学許可書・推薦状を発行' },
@@ -82,7 +81,6 @@ const content = {
     program: {
       title: 'Golf DTV Program Overview',
       items: [
-        { label: 'Duration', value: '5 days (optional extended stay available)' },
         { label: 'Location', value: 'Golf courses near Bangkok, Thailand' },
         { label: 'Level', value: 'Beginner to experienced — all welcome' },
         { label: 'Documents', value: 'Acceptance letter and recommendation issued' },

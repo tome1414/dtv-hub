@@ -81,10 +81,10 @@ const en: Dictionary = {
   premium: {
     badge: 'Soft Power Visa',
     title: 'Golf School DTV Acquisition Program',
-    subtitle: 'Thailand Government Approved × 5-Day Program',
+    subtitle: 'Thailand Government Approved × Golf-Based Program',
     features: [
       'Thai government-certified Soft Power visa program',
-      'Beginner-friendly golf lessons (5 days)',
+      'Beginner-friendly golf lessons',
       'Complete support for DTV application documents',
       'Official recommendation letter and certification',
       'Refund policy if DTV is not approved',
