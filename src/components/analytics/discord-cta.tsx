@@ -21,7 +21,7 @@ export function DiscordCTA({ label, source = 'unknown' }: DiscordCTAProps) {
       onClick={handleClick}
       asChild
     >
-      <a href="https://discord.gg/dtv-hub" target="_blank" rel="noopener noreferrer">
+      <a href="https://discord.gg/R2gA6jchfk" target="_blank" rel="noopener noreferrer">
         <MessageSquare className="w-6 h-6" />
         {label}
       </a>

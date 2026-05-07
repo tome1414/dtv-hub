@@ -285,7 +285,7 @@ export default function RequirementsPage() {
                 : 'Not sure which route applies to you? Clarify first on Discord.'}
             </p>
             <a
-              href="https://discord.gg/dtvclub"
+              href="https://discord.gg/R2gA6jchfk"
               target="_blank"
               rel="noopener noreferrer"
               style={{ background: C.green, color: '#fff', padding: '10px 20px', fontSize: 13, fontWeight: 700, textDecoration: 'none', borderRadius: 6, whiteSpace: 'nowrap' }}
@@ -560,7 +560,7 @@ export default function RequirementsPage() {
                 : 'General guidance is covered in these pages. For individual circumstances — complex freelance docs, format questions, etc. — get support in the Discord community.'}
             </p>
             <a
-              href="https://discord.gg/dtvclub"
+              href="https://discord.gg/R2gA6jchfk"
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: 'inline-block', background: '#fff', color: C.green, padding: '13px 32px', fontSize: 14, fontWeight: 800, textDecoration: 'none', borderRadius: 8 }}

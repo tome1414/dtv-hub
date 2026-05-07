@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTV Club — デザインサンプル（依頼書準拠）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════════
+   DTV Club — 依頼書準拠デザインサンプル
+   コンセプト：信頼できる専門メディア × 少し軽やかな編集ハブ
+   信頼感70 / 親しみ20 / ライフスタイル10
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Base colors ─────────────────────── */
+  --bg:          #F5F8FA;          /* 青みがかったニュートラル白 */
+  --bg-section:  #EDF1F5;          /* セクション背景 */
+  --bg-card:     #FFFFFF;
+  --bg-dark:     #142130;          /* フッター等のダーク */
+
+  /* ── Text ────────────────────────────── */
+  --ink:         #1A2435;          /* メインテキスト（純黒でなく青みがかった深色） */
+  --ink-sub:     #4A5A6E;          /* サブテキスト */
+  --ink-muted:   #7E8EA4;          /* ミュートテキスト */
+  --ink-faint:   rgba(26,36,53,0.35);
+
+  /* ── Accent ──────────────────────────── */
+  --teal:        #0A7A6A;          /* メインアクセント（青緑） */
+  --teal-lt:     #0D9280;
+  --teal-dim:    rgba(10,122,106,0.1);
+  --teal-dimmer: rgba(10,122,106,0.06);
+
+  /* ── Supplementary ───────────────────── */
+  --sand:        #E8D9B5;          /* 補助色：サンド */
+  --sand-lt:     #F3EDD8;
+  --mint:        #C8E8E0;          /* 補助色：ミント */
+  --peach:       #F2C9B8;          /* 補助色：淡いオレンジ */
+
+  /* ── Border / Shadow ─────────────────── */
+  --border:      rgba(26,36,53,0.1);
+  --border-md:   rgba(26,36,53,0.16);
+  --shadow-xs:   0 1px 4px rgba(26,36,53,0.07);
+  --shadow-sm:   0 2px 12px rgba(26,36,53,0.08);
+  --shadow-md:   0 6px 24px rgba(26,36,53,0.1);
+
+  /* ── Layout ──────────────────────────── */
+  --radius-sm:   8px;
+  --radius:      12px;
+  --radius-lg:   18px;
+  --container:   1140px;
+  --nav-h:       60px;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.f1 { animation: fadeUp 0.6s ease 0.05s both; }
+.f2 { animation: fadeUp 0.6s ease 0.15s both; }
+.f3 { animation: fadeUp 0.6s ease 0.25s both; }
+.f4 { animation: fadeUp 0.6s ease 0.35s both; }
+.f5 { animation: fadeUp 0.6s ease 0.45s both; }
+.f6 { animation: fadeUp 0.6s ease 0.55s both; }
+
+/* ════════════════════════════════════════════════════════════
+   NAVIGATION
+   ユーザーの意思決定順：ビザ比較→申請ガイド→必要書類→ソフトパワー→マガジン→相談
+   ════════════════════════════════════════════════════════════ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: var(--nav-h);
+  background: rgba(245,248,250,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+.nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-right: 36px;
+  flex-shrink: 0;
+}
+.nav-logo-badge {
+  width: 30px; height: 30px;
+  background: var(--teal);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-badge svg {
+  width: 16px; height: 16px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.nav-logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.nav-logo-text span { color: var(--teal); }
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  flex: 1;
+}
+.nav-links a {
+  display: block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-sub);
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.nav-links a:hover {
+  background: var(--teal-dimmer);
+  color: var(--teal);
+}
+
+/* Lang toggle */
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 16px;
+}
+.nav-lang button {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.nav-lang button.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+.nav-lang button:hover:not(.active) {
+  background: var(--bg-section);
+  color: var(--ink-sub);
+}
+
+/* CTA button */
+.nav-cta {
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.12s;
+  flex-shrink: 0;
+}
+.nav-cta:hover { background: var(--teal-lt); transform: translateY(-1px); }
+
+/* ════════════════════════════════════════════════════════════
+   HERO
+   ビジュアル + コピー整理 + 3CTA（初心者/中意図/高意図）
+   ════════════════════════════════════════════════════════════ */
+.hero {
+  padding-top: var(--nav-h);
+  min-height: 88vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* ── Hero left: コピー & CTA ─── */
+.hero-left {
+  padding: 72px 52px 72px 0;
+  max-width: 560px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--teal-dimmer);
+  border: 1px solid rgba(10,122,106,0.18);
+  border-radius: 100px;
+  padding: 4px 12px;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+.hero-eyebrow-dot {
+  width: 6px; height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+.hero-eyebrow-text {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+}
+
+.hero-h1 {
+  font-family: 'Noto Serif JP', Georgia, serif;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.hero-h1 em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+.hero-lead {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--ink-sub);
+  max-width: 420px;
+  margin-bottom: 36px;
+}
+
+/* 3 CTAs */
+.hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+  margin-bottom: 40px;
+}
+.cta-primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--teal);
+  color: white;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+  box-shadow: 0 3px 14px rgba(10,122,106,0.22);
+}
+.cta-primary:hover {
+  background: var(--teal-lt);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(10,122,106,0.28);
+}
+.cta-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: white;
+  color: var(--ink);
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border-md);
+  font-size: 13px;
+  font-weight: 500;
+  transition: border-color 0.15s, background 0.15s, transform 0.12s;
+}
+.cta-secondary:hover {
+  border-color: var(--teal);
+  background: var(--teal-dimmer);
+  transform: translateY(-1px);
+}
+.cta-badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cta-primary .cta-badge {
+  background: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+}
+.cta-secondary .cta-badge {
+  background: var(--bg-section);
+  color: var(--ink-muted);
+}
+.cta-arrow { opacity: 0.7; font-size: 12px; }
+
+/* Stats row */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.hero-stat { display: flex; flex-direction: column; gap: 1px; }
+.hero-stat-n {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+.hero-stat-l {
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+}
+.hero-stat-div {
+  width: 1px; height: 28px;
+  background: var(--border);
+}
+
+/* ── Hero right: visual ─── */
+.hero-right {
+  position: relative;
+  overflow: hidden;
+}
+
+/* CSS visual — タイの雰囲気を抽象的に表現 */
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(145deg,
+      #C8EDE8 0%,
+      #B0D4CF 30%,
+      #D4E9C8 60%,
+      #E8D9B5 85%,
+      #F0E4CA 100%
+    );
+}
+/* 柔らかい光の層 */
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 65% 35%, rgba(255,255,255,0.5) 0%, transparent 60%);
+}
+/* 水平線・地平線 */
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  bottom: 35%;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(10,122,106,0.15), transparent);
+}
+
+/* 木のシルエット（CSS） */
+.tree {
+  position: absolute;
+  bottom: 0;
+  transform-origin: bottom center;
+}
+.tree-1 {
+  right: 60px; bottom: 0;
+  width: 3px; height: 160px;
+  background: rgba(28,74,42,0.25);
+}
+.tree-1::before {
+  content: '';
+  position: absolute;
+  bottom: 80px; left: 50%;
+  transform: translateX(-50%);
+  width: 90px; height: 100px;
+  background: radial-gradient(ellipse at 50% 80%, rgba(28,74,42,0.2) 0%, transparent 70%);
+  border-radius: 50% 50% 20% 20%;
+}
+.tree-2 {
+  right: 140px; bottom: 0;
+  width: 2px; height: 120px;
+  background: rgba(28,74,42,0.2);
+}
+.tree-2::before {
+  content: '';
+  position: absolute;
+  bottom: 60px; left: 50%;
+  transform: translateX(-50%);
+  width: 60px; height: 70px;
+  background: radial-gradient(ellipse at 50% 80%, rgba(28,74,42,0.18) 0%, transparent 70%);
+  border-radius: 50% 50% 20% 20%;
+}
+
+/* フローティングカード — ビジュアル中央に縦並び */
+.hero-cards-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px 28px;
+  z-index: 2;
+}
+.hero-float-card {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.75);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 280px;
+}
+.hero-float-card-1 {
+  align-self: flex-start;
+  margin-left: 10%;
+  animation: fadeUp 0.7s ease 0.4s both;
+}
+.hero-float-card-2 {
+  align-self: flex-end;
+  margin-right: 8%;
+  animation: fadeUp 0.7s ease 0.6s both;
+}
+.hfc-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+}
+.hfc-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.hfc-sub {
+  font-size: 11px;
+  color: var(--ink-sub);
+  margin-top: 1px;
+}
+.hfc-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  background: var(--teal-dim);
+  color: var(--teal);
+  border-radius: 100px;
+}
+
+/* 海の波線（装飾） */
+.wave-decor {
+  position: absolute;
+  bottom: 20%;
+  left: 20px;
+  right: 20px;
+  height: 40px;
+  opacity: 0.18;
+}
+
+/* ════════════════════════════════════════════════════════════
+   PURPOSE CARDS — 目的別カード
+   「運営のカテゴリ」ではなく「ユーザーの迷い方」で入口設計
+   ════════════════════════════════════════════════════════════ */
+.purpose-section {
+  background: white;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border);
+}
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.75rem;
+}
+.section-header {
+  margin-bottom: 32px;
+}
+.section-kicker {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.section-title em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.purpose-card {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 22px;
+  cursor: pointer;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.purpose-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--teal);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.purpose-card:hover {
+  border-color: rgba(10,122,106,0.3);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  background: white;
+}
+.purpose-card:hover::before { transform: scaleX(1); }
+
+.purpose-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.purpose-icon.teal  { background: var(--teal-dimmer); }
+.purpose-icon.sand  { background: rgba(232,217,181,0.3); }
+.purpose-icon.mint  { background: rgba(200,232,224,0.35); }
+.purpose-icon.peach { background: rgba(242,201,184,0.3); }
+
+.purpose-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.purpose-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-sub);
+  line-height: 1.7;
+  flex: 1;
+}
+.purpose-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.15s;
+  margin-top: 4px;
+}
+.purpose-card:hover .purpose-link { gap: 8px; }
+
+/* ════════════════════════════════════════════════════════════
+   STARTER 3 — 初めて読むならこの3本
+   ════════════════════════════════════════════════════════════ */
+.starter-section {
+  background: var(--bg-section);
+  padding: 64px 0;
+}
+.starter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.starter-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.18s, transform 0.15s, border-color 0.18s;
+  position: relative;
+}
+.starter-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: rgba(10,122,106,0.25);
+}
+.starter-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--teal-dim);
+  line-height: 1;
+  border: 2px solid rgba(10,122,106,0.18);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+.starter-cat {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+.starter-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  transition: color 0.15s;
+}
+.starter-card:hover .starter-title { color: var(--teal); }
+.starter-desc {
+  font-size: 12px;
+  color: var(--ink-sub);
+  line-height: 1.75;
+  flex: 1;
+}
+.starter-footer {
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+.starter-footer-link {
+  color: var(--teal);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.15s;
+}
+.starter-card:hover .starter-footer-link { gap: 8px; }
+
+/* ════════════════════════════════════════════════════════════
+   POPULAR THEMES — 人気テーマ
+   ════════════════════════════════════════════════════════════ */
+.themes-section {
+  background: white;
+  padding: 64px 0;
+}
+.themes-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+}
+.theme-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px;
+  cursor: pointer;
+  transition: box-shadow 0.18s, border-color 0.18s, transform 0.15s;
+}
+.theme-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(10,122,106,0.2);
+  transform: translateY(-2px);
+}
+.theme-card.wide { grid-row: span 2; display: flex; flex-direction: column; }
+.theme-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+.theme-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  transition: color 0.15s;
+}
+.theme-card:hover .theme-title { color: var(--teal); }
+.theme-desc {
+  font-size: 12px;
+  color: var(--ink-sub);
+  line-height: 1.75;
+  flex: 1;
+}
+.theme-articles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.theme-article-item {
+  padding: 12px 14px;
+  background: white;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.theme-article-item:hover { border-color: var(--teal); background: var(--teal-dimmer); }
+.theme-article-arrow { color: var(--ink-muted); font-size: 11px; flex-shrink: 0; }
+
+/* ════════════════════════════════════════════════════════════
+   EDITORIAL PICKS — 編集部おすすめ
+   ════════════════════════════════════════════════════════════ */
+.picks-section {
+  background: var(--bg-section);
+  padding: 64px 0;
+}
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.pick-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.15s;
+}
+.pick-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.pick-card-thumb {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.pick-thumb-teal  { background: linear-gradient(135deg, #C8EDE8 0%, #A0D4CC 100%); }
+.pick-thumb-sand  { background: linear-gradient(135deg, #F3EDD8 0%, #E4D0A8 100%); }
+.pick-thumb-slate { background: linear-gradient(135deg, #D4DDE8 0%, #B8C8D8 100%); }
+.pick-card-thumb::after {
+  content: attr(data-icon);
+  position: absolute;
+  bottom: 14px; right: 18px;
+  font-size: 28px;
+  opacity: 0.55;
+}
+.pick-card-body { padding: 20px; }
+.pick-cat {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 7px;
+}
+.pick-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 8px;
+  transition: color 0.15s;
+}
+.pick-card:hover .pick-title { color: var(--teal); }
+.pick-excerpt {
+  font-size: 12px;
+  color: var(--ink-sub);
+  line-height: 1.7;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.pick-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+.pick-readmore {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 11px;
+  display: flex; align-items: center; gap: 3px;
+  transition: gap 0.15s;
+}
+.pick-card:hover .pick-readmore { gap: 6px; }
+
+/* ════════════════════════════════════════════════════════════
+   GOLF DTV — 文脈の中で自然に接続
+   比較・ソフトパワー記事群の直後に置く
+   ════════════════════════════════════════════════════════════ */
+.golf-section {
+  background: white;
+  padding: 64px 0;
+  border-top: 1px solid var(--border);
+}
+.golf-box {
+  background: var(--bg);
+  border: 1.5px solid var(--border-md);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+}
+.golf-content {
+  padding: 44px 44px;
+}
+.golf-context-note {
+  font-size: 11px;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: var(--teal-dimmer);
+  border-radius: 6px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.golf-context-note::before { content: '✓'; color: var(--teal); font-weight: 700; }
+.golf-title {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+.golf-title em { font-style: normal; color: var(--teal); }
+.golf-desc {
+  font-size: 13px;
+  color: var(--ink-sub);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  max-width: 440px;
+}
+.golf-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.golf-btn-main {
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, transform 0.12s;
+  display: inline-block;
+}
+.golf-btn-main:hover { background: var(--teal-lt); transform: translateY(-1px); }
+.golf-btn-text {
+  font-size: 13px;
+  color: var(--ink-sub);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+.golf-btn-text:hover { color: var(--teal); }
+
+/* Golf visual panel */
+.golf-visual {
+  background: linear-gradient(135deg, #D4E9C8 0%, #B8D4B0 40%, #A0C498 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.golf-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 16px,
+    rgba(28,74,42,0.04) 16px,
+    rgba(28,74,42,0.04) 17px
+  );
+}
+.golf-emoji {
+  font-size: 64px;
+  filter: drop-shadow(0 4px 16px rgba(28,74,42,0.2));
+  position: relative;
+  z-index: 1;
+}
+.golf-badge {
+  position: absolute;
+  bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════════════════════════════
+   LATEST ARTICLES — 最新記事（下層導線）
+   ════════════════════════════════════════════════════════════ */
+.latest-section {
+  background: var(--bg-section);
+  padding: 64px 0;
+}
+.latest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: white;
+}
+.latest-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.latest-item:last-child { border-bottom: none; }
+.latest-item:hover { background: var(--teal-dimmer); }
+.latest-idx {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--teal);
+  width: 24px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.latest-cat-pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--bg-section);
+  color: var(--ink-sub);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.latest-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  flex: 1;
+  line-height: 1.5;
+  transition: color 0.15s;
+}
+.latest-item:hover .latest-title { color: var(--teal); }
+.latest-meta {
+  font-size: 11px;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.latest-more {
+  padding: 16px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.latest-more a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.15s;
+}
+.latest-more a:hover { gap: 10px; }
+
+/* ════════════════════════════════════════════════════════════
+   FOOTER — グループ整理
+   ════════════════════════════════════════════════════════════ */
+.footer {
+  background: var(--bg-dark);
+  padding: 56px 0 32px;
+}
+.footer-top {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.footer-brand {}
+.footer-logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.footer-logo-text span { color: var(--teal-lt); }
+.footer-tagline {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.footer-langs {
+  display: flex;
+  gap: 6px;
+}
+.footer-lang-btn {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.footer-lang-btn:hover, .footer-lang-btn.active {
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.footer-col {}
+.footer-col-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 14px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: white; }
+.footer-links a.highlight {
+  color: var(--teal-lt);
+  font-weight: 500;
+}
+
+.footer-bottom {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 24px 1.75rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+}
+.footer-legal {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.footer-legal a {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  transition: color 0.15s;
+}
+.footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .purpose-grid { grid-template-columns: repeat(2, 1fr); }
+  .themes-grid { grid-template-columns: 1fr 1fr; }
+  .theme-card.wide { grid-row: span 1; grid-column: span 2; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { max-width: 100%; padding: 52px 1.75rem 40px; }
+  .hero-right { height: 300px; }
+  .starter-grid { grid-template-columns: 1fr; }
+  .picks-grid { grid-template-columns: 1fr 1fr; }
+  .golf-box { grid-template-columns: 1fr; }
+  .golf-visual { height: 180px; }
+  .nav-links { display: none; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .purpose-grid { grid-template-columns: 1fr; }
+  .themes-grid { grid-template-columns: 1fr; }
+  .picks-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .hero-stats { flex-wrap: wrap; gap: 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ════════ NAVIGATION ════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <span class="nav-logo-text">DTV <span>Club</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">ビザ比較</a></li>
+      <li><a href="#">申請ガイド</a></li>
+      <li><a href="#">必要書類</a></li>
+      <li><a href="#">ソフトパワー</a></li>
+      <li><a href="#">マガジン</a></li>
+    </ul>
+    <div class="nav-lang" style="margin-left:auto;">
+      <button class="active">JA</button>
+      <button>EN</button>
+      <button>KO</button>
+    </div>
+    <button class="nav-cta" style="margin-left:12px;">相談する</button>
+  </div>
+</nav>
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow f1">
+      <div class="hero-eyebrow-dot"></div>
+      <span class="hero-eyebrow-text">Destination Thailand Visa — 専門メディア</span>
+    </div>
+
+    <h1 class="hero-h1 f2">
+      タイへの<em>新しい暮らし</em>を、<br>
+      正確な情報から<br>
+      はじめる。
+    </h1>
+
+    <p class="hero-lead f3">
+      DTVビザの比較・申請・必要書類・生活準備まで、<br>
+      一次情報をもとに中立的に解説するDTV専門メディアです。
+    </p>
+
+    <!-- 3 CTAs: 初心者 / 中意図 / 高意図 -->
+    <div class="hero-ctas f4">
+      <a href="#" class="cta-primary">
+        <span>自分に合うビザを比較する</span>
+        <span class="cta-badge">初めての方はここから</span>
+      </a>
+      <a href="#" class="cta-secondary">
+        <span>DTV申請の流れを見る</span>
+        <span class="cta-badge">申請準備中の方へ</span>
+      </a>
+      <a href="#" class="cta-secondary">
+        <span>必要書類を確認する</span>
+        <span class="cta-badge">申請直前の方へ</span>
+      </a>
+    </div>
+
+    <div class="hero-stats f5">
+      <div class="hero-stat">
+        <span class="hero-stat-n">33+</span>
+        <span class="hero-stat-l">記事</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-n">3言語</span>
+        <span class="hero-stat-l">日・英・韓</span>
+      </div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-n">一次情報</span>
+        <span class="hero-stat-l">大使館公式準拠</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="tree tree-1"></div>
+      <div class="tree tree-2"></div>
+
+      <!-- フローティング情報カード（中央寄せ縦並び） -->
+      <div class="hero-cards-wrap">
+        <div class="hero-float-card hero-float-card-1">
+          <p class="hfc-label">DTV 申請の目安</p>
+          <p class="hfc-value">180日 × 2回</p>
+          <p class="hfc-sub">出入国で実質1年滞在</p>
+          <span class="hfc-tag">詳しく見る →</span>
+        </div>
+
+        <div class="hero-float-card hero-float-card-2">
+          <p class="hfc-label">申請に必要なもの</p>
+          <p class="hfc-value">残高証明 50万THB〜</p>
+          <p class="hfc-sub">他：写真・現在地証明・根拠書類</p>
+          <span class="hfc-tag">書類一覧を見る →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PURPOSE CARDS ════════ -->
+<section class="purpose-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">あなたの状況に合わせて</p>
+      <h2 class="section-title">何を<em>知りたい</em>ですか？</h2>
+    </div>
+    <div class="purpose-grid">
+      <a href="#" class="purpose-card f1">
+        <div class="purpose-icon teal">🗺️</div>
+        <p class="purpose-title">初めてDTVを知る</p>
+        <p class="purpose-desc">「DTVって何？」から始めたい方向け。ビザの種類と全体像をまず把握できます。</p>
+        <span class="purpose-link">全体像を読む →</span>
+      </a>
+      <a href="#" class="purpose-card f2">
+        <div class="purpose-icon sand">📋</div>
+        <p class="purpose-title">必要書類を確認したい</p>
+        <p class="purpose-desc">申請準備を進めている方向け。何を揃えればよいか、チェックリストで整理できます。</p>
+        <span class="purpose-link">書類を確認する →</span>
+      </a>
+      <a href="#" class="purpose-card f3">
+        <div class="purpose-icon mint">⛳</div>
+        <p class="purpose-title">ソフトパワーで検討中</p>
+        <p class="purpose-desc">ゴルフ・料理・ムエタイ等の活動を根拠に申請するルートについて知りたい方向け。</p>
+        <span class="purpose-link">ルートを調べる →</span>
+      </a>
+      <a href="#" class="purpose-card f4">
+        <div class="purpose-icon peach">💼</div>
+        <p class="purpose-title">フリーランスで申請したい</p>
+        <p class="purpose-desc">仕事証明・収入証明・契約書をどう揃えるか気になる方向け。</p>
+        <span class="purpose-link">証明書類を調べる →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ STARTER 3 ════════ -->
+<section class="starter-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">初めて読むなら</p>
+      <h2 class="section-title">まずこの<em>3本</em>から</h2>
+    </div>
+    <div class="starter-grid">
+      <a href="#" class="starter-card">
+        <div class="starter-num">01</div>
+        <p class="starter-cat">基本ガイド</p>
+        <h3 class="starter-title">DTV（Destination Thailand Visa）とは何か</h3>
+        <p class="starter-desc">タイが2024年に導入した長期滞在ビザの仕組みと、誰が対象になるかを整理します。リタイアメントビザや観光ビザとの違いも解説。</p>
+        <div class="starter-footer">
+          <span>約8分</span>
+          <span class="starter-footer-link">読む →</span>
+        </div>
+      </a>
+      <a href="#" class="starter-card">
+        <div class="starter-num">02</div>
+        <p class="starter-cat">必要書類</p>
+        <h3 class="starter-title">DTV申請の必要書類：主要5項目と確認すべきこと</h3>
+        <p class="starter-desc">パスポート・写真・現在地証明・残高証明・根拠書類の5つが主要書類です。それぞれの用意の仕方と注意点を整理します。</p>
+        <div class="starter-footer">
+          <span>約10分</span>
+          <span class="starter-footer-link">読む →</span>
+        </div>
+      </a>
+      <a href="#" class="starter-card">
+        <div class="starter-num">03</div>
+        <p class="starter-cat">申請実務</p>
+        <h3 class="starter-title">DTV申請の流れ：e-Visaか大使館か、どちらで申請するか</h3>
+        <p class="starter-desc">オンライン申請（e-Visa）と大使館・領事館申請の2ルートを比較。どちらが自分の状況に合うかを判断するポイントを解説します。</p>
+        <div class="starter-footer">
+          <span>約9分</span>
+          <span class="starter-footer-link">読む →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ POPULAR THEMES ════════ -->
+<section class="themes-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">人気テーマ</p>
+      <h2 class="section-title">よく読まれている<em>テーマ</em></h2>
+    </div>
+    <div class="themes-grid">
+      <a href="#" class="theme-card wide">
+        <p class="theme-label">ビザ比較</p>
+        <h3 class="theme-title">DTVと他のタイ長期ビザを比較する</h3>
+        <p class="theme-desc">リタイアメントビザ・タイランドプリビレッジ・LTRビザとの違いを整理します。費用・条件・向いている人を中立的に比較。</p>
+        <div class="theme-articles">
+          <div class="theme-article-item">
+            DTVとリタイアメントビザの違い
+            <span class="theme-article-arrow">→</span>
+          </div>
+          <div class="theme-article-item">
+            DTVとタイランド・プリビレッジカードの違い
+            <span class="theme-article-arrow">→</span>
+          </div>
+          <div class="theme-article-item">
+            DTVとLTRビザの比較
+            <span class="theme-article-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="theme-card">
+        <p class="theme-label">申請実務</p>
+        <h3 class="theme-title">申請の流れと<br>よくある書類ミス</h3>
+        <p class="theme-desc">書類不備で審査が遅れるケースと、その対処法を整理します。</p>
+      </a>
+      <a href="#" class="theme-card">
+        <p class="theme-label">ソフトパワー</p>
+        <h3 class="theme-title">受入レターの<br>取得と確認ポイント</h3>
+        <p class="theme-desc">ソフトパワールートの核心書類。何が書かれていれば申請に使えるかを解説。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ EDITORIAL PICKS ════════ -->
+<section class="picks-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">編集部おすすめ</p>
+      <h2 class="section-title">優先して読みたい<em>記事</em></h2>
+    </div>
+    <div class="picks-grid">
+      <a href="#" class="pick-card">
+        <div class="pick-card-thumb pick-thumb-teal" data-icon="📄"></div>
+        <div class="pick-card-body">
+          <p class="pick-cat">必要書類</p>
+          <h3 class="pick-title">DTV申請でよくある書類ミスと対処法</h3>
+          <p class="pick-excerpt">申請書類の不備で審査が遅延するケースを整理。残高証明の日付、氏名表記のズレなど、よくある指摘点を解説します。</p>
+          <div class="pick-meta">
+            <span>2026-05-05 · 約8分</span>
+            <span class="pick-readmore">読む →</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="pick-card">
+        <div class="pick-card-thumb pick-thumb-sand" data-icon="💼"></div>
+        <div class="pick-card-body">
+          <p class="pick-cat">フリーランス</p>
+          <h3 class="pick-title">DTVフリーランス申請の仕事証明：何を揃えるか</h3>
+          <p class="pick-excerpt">フリーランスとしてDTVを申請する場合に必要な書類の種類と、どのように準備すればよいかを整理します。</p>
+          <div class="pick-meta">
+            <span>2026-05-05 · 約9分</span>
+            <span class="pick-readmore">読む →</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="pick-card">
+        <div class="pick-card-thumb pick-thumb-slate" data-icon="⚖️"></div>
+        <div class="pick-card-body">
+          <p class="pick-cat">就労制限</p>
+          <h3 class="pick-title">DTVでできる仕事・注意したい線引き</h3>
+          <p class="pick-excerpt">DTVはリモートワークを根拠に申請できますが、タイ国内での就労はワークパーミットが別途必要です。違いと注意点を解説。</p>
+          <div class="pick-meta">
+            <span>2026-05-05 · 約8分</span>
+            <span class="pick-readmore">読む →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ GOLF DTV（自然な文脈接続） ════════ -->
+<section class="golf-section">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:20px;">
+      <p class="section-kicker">ソフトパワーで申請を検討中の方へ</p>
+      <h2 class="section-title"><em>Golf DTV</em> — ゴルフを根拠に長期滞在する</h2>
+    </div>
+    <div class="golf-box">
+      <div class="golf-content">
+        <p class="golf-context-note">ソフトパワールートを検討中の方に</p>
+        <h3 class="golf-title">
+          タイでゴルフを楽しみながら、<br>
+          <em>長期滞在</em>を実現する。
+        </h3>
+        <p class="golf-desc">
+          DTVのソフトパワールートでは、タイ政府認定プログラムへの参加を根拠に申請できます。Golf DTVは、ゴルフを目的とした長期滞在に特化したサポートを提供しています。
+          受入レターの取得から申請準備まで、一緒に整理します。
+        </p>
+        <div class="golf-links">
+          <a href="#" class="golf-btn-main">Golf DTV 詳細を見る</a>
+          <a href="#" class="golf-btn-text">無料相談はこちら →</a>
+        </div>
+      </div>
+      <div class="golf-visual">
+        <div class="golf-emoji">⛳</div>
+        <div class="golf-badge">ソフトパワー対応ゴルフ場あり</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ LATEST ARTICLES ════════ -->
+<section class="latest-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">記事一覧</p>
+      <h2 class="section-title">最新・人気<em>記事</em></h2>
+    </div>
+    <div class="latest-list">
+      <div class="latest-item">
+        <span class="latest-idx">01</span>
+        <span class="latest-cat-pill">申請実務</span>
+        <span class="latest-title">DTV申請の必要書類チェックリスト完全版</span>
+        <span class="latest-meta">2026-05-05 · 約8分</span>
+      </div>
+      <div class="latest-item">
+        <span class="latest-idx">02</span>
+        <span class="latest-cat-pill">ソフトパワー</span>
+        <span class="latest-title">DTV受入レターとは：取得方法と必要な記載内容</span>
+        <span class="latest-meta">2026-05-05 · 約7分</span>
+      </div>
+      <div class="latest-item">
+        <span class="latest-idx">03</span>
+        <span class="latest-cat-pill">比較記事</span>
+        <span class="latest-title">DTVとリタイアメントビザ：どちらが向いているか</span>
+        <span class="latest-meta">2026-05-05 · 約10分</span>
+      </div>
+      <div class="latest-item">
+        <span class="latest-idx">04</span>
+        <span class="latest-cat-pill">フリーランス</span>
+        <span class="latest-title">DTVフリーランス申請：仕事証明に使える書類</span>
+        <span class="latest-meta">2026-05-05 · 約9分</span>
+      </div>
+      <div class="latest-item">
+        <span class="latest-idx">05</span>
+        <span class="latest-cat-pill">タイ生活</span>
+        <span class="latest-title">DTV取得後のタイ生活準備ガイド：銀行・住居・通信</span>
+        <span class="latest-meta">2026-05-05 · 約8分</span>
+      </div>
+      <div class="latest-item">
+        <span class="latest-idx">06</span>
+        <span class="latest-cat-pill">基本ガイド</span>
+        <span class="latest-title">DTV申請の審査期間：どれくらいかかるか</span>
+        <span class="latest-meta">2026-05-05 · 約6分</span>
+      </div>
+      <div class="latest-more">
+        <a href="#">すべての記事を見る（33本） →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <p class="footer-logo-text">DTV <span>Club</span></p>
+      <p class="footer-tagline">タイDTVビザの比較・申請・生活情報を中立的に解説するメディアです。</p>
+      <div class="footer-langs">
+        <button class="footer-lang-btn active">日本語</button>
+        <button class="footer-lang-btn">English</button>
+        <button class="footer-lang-btn">한국어</button>
+      </div>
+    </div>
+
+    <!-- DTVを知る -->
+    <div class="footer-col">
+      <p class="footer-col-title">DTVを知る</p>
+      <ul class="footer-links">
+        <li><a href="#">DTVとは</a></li>
+        <li><a href="#">ビザ比較</a></li>
+        <li><a href="#">申請ガイド</a></li>
+        <li><a href="#">必要書類</a></li>
+        <li><a href="#">よくある質問</a></li>
+      </ul>
+    </div>
+
+    <!-- 申請後の実務 -->
+    <div class="footer-col">
+      <p class="footer-col-title">申請後の実務</p>
+      <ul class="footer-links">
+        <li><a href="#">入国時の確認</a></li>
+        <li><a href="#">延長・再入国</a></li>
+        <li><a href="#">家族同伴</a></li>
+        <li><a href="#">就労の線引き</a></li>
+        <li><a href="#">銀行・支払い</a></li>
+      </ul>
+    </div>
+
+    <!-- サービス -->
+    <div class="footer-col">
+      <p class="footer-col-title">サービス・コミュニティ</p>
+      <ul class="footer-links">
+        <li><a href="#" class="highlight">⛳ Golf DTV</a></li>
+        <li><a href="#" class="highlight">無料相談</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+
+    <!-- 運営情報 -->
+    <div class="footer-col">
+      <p class="footer-col-title">運営情報</p>
+      <ul class="footer-links">
+        <li><a href="#">会社情報</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">利用規約</a></li>
+        <li><a href="#">サイトマップ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 DTV Club. 一次情報ベースの中立的な解説。本サイトの情報は一般的な情報提供を目的とし、法的助言ではありません。</p>
+    <ul class="footer-legal">
+      <li><a href="#">プライバシー</a></li>
+      <li><a href="#">利用規約</a></li>
+      <li><a href="#">免責事項</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

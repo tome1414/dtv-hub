@@ -48,7 +48,7 @@ export default function ModernPage({ params }: PageProps) {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="https://discord.gg/dtv-hub"
+              href="https://discord.gg/R2gA6jchfk"
               className="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
             >
               Discord
@@ -220,7 +220,7 @@ export default function ModernPage({ params }: PageProps) {
           </p>
 
           <a
-            href="https://discord.gg/dtv-hub"
+            href="https://discord.gg/R2gA6jchfk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition"

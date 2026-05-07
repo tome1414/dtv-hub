@@ -68,7 +68,7 @@ export default function LightPage({ params }: PageProps) {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://discord.gg/dtv-hub"
+              href="https://discord.gg/R2gA6jchfk"
               className="hidden sm:block px-4 py-2 text-sm font-semibold text-white bg-teal-600 rounded hover:bg-teal-700 transition"
             >
               {dict.nav.joinDiscord}
@@ -249,7 +249,7 @@ export default function LightPage({ params }: PageProps) {
           </p>
 
           <a
-            href="https://discord.gg/dtv-hub"
+            href="https://discord.gg/R2gA6jchfk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition"

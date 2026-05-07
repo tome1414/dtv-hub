@@ -114,7 +114,7 @@ export default function MagazinePage({ params }: PageProps) {
           </div>
 
           <a
-            href="https://discord.gg/dtv-hub"
+            href="https://discord.gg/R2gA6jchfk"
             className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-purple-600 text-white font-bold text-sm rounded hover:bg-purple-700 transition"
           >
             <MessageSquare className="w-4 h-4" />

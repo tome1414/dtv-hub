@@ -127,7 +127,7 @@ export default function ArticlePage({ params }: PageProps) {
               className="bg-gold-gradient text-navy-950 font-bold border-0 hover:opacity-90 gap-1.5"
               asChild
             >
-              <a href="https://discord.gg/dtv-hub" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/R2gA6jchfk" target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="w-3.5 h-3.5" />
                 Discord
               </a>
@@ -215,7 +215,7 @@ export default function ArticlePage({ params }: PageProps) {
               className="flex-shrink-0 bg-gold-gradient text-navy-950 font-bold border-0 hover:opacity-90 gap-2"
               asChild
             >
-              <a href="https://discord.gg/dtv-hub" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/R2gA6jchfk" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4" />
                 無料で参加する
               </a>

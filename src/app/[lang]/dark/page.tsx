@@ -53,7 +53,7 @@ export default function DarkPage({ params }: PageProps) {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://discord.gg/dtv-hub"
+              href="https://discord.gg/R2gA6jchfk"
               className="hidden sm:block px-4 py-2 text-sm font-semibold text-gray-900 bg-cyan-400 rounded-lg hover:bg-cyan-300 transition"
             >
               {dict.nav.joinDiscord}
@@ -224,7 +224,7 @@ export default function DarkPage({ params }: PageProps) {
           </p>
 
           <a
-            href="https://discord.gg/dtv-hub"
+            href="https://discord.gg/R2gA6jchfk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-cyan-500 text-gray-900 font-bold rounded-lg hover:bg-cyan-400 transition"

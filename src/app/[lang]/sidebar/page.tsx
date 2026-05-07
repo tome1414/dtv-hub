@@ -85,7 +85,7 @@ export default function SidebarPage({ params }: PageProps) {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://discord.gg/dtv-hub"
+              href="https://discord.gg/R2gA6jchfk"
               className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-orange-500 rounded-lg hover:bg-orange-600"
             >
               <MessageSquare className="w-4 h-4" />

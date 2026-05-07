@@ -182,7 +182,7 @@ export default function Header({ locale, nav }: HeaderProps) {
               className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold hover:opacity-90 shadow-lg shadow-gold-500/20 border-0"
               asChild
             >
-              <a href="https://discord.gg/dtv-hub" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/R2gA6jchfk" target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="w-4 h-4" />
                 {nav.joinDiscord}
               </a>
@@ -260,7 +260,7 @@ export default function Header({ locale, nav }: HeaderProps) {
               asChild
             >
               <a
-                href="https://discord.gg/dtv-hub"
+                href="https://discord.gg/R2gA6jchfk"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}

@@ -67,7 +67,8 @@
       "Bash(curl -s http://localhost:3000/ja)",
       "Bash(grep -oP '\\(?<=>\\)[^<]{1,100}\\(?=<\\)')",
       "Bash(curl -s http://localhost:3000/ko)",
-      "Bash(curl -s http://localhost:3000/en/blog)"
+      "Bash(curl -s http://localhost:3000/en/blog)",
+      "Bash(xargs sed *)"
     ]
   }
 }

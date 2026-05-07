@@ -39,7 +39,7 @@ const footerSections = [
       { labelJa: 'ソフトパワービザ', labelEn: 'Soft Power Visa', labelKo: '소프트파워 비자', href: '/soft-power' },
       { labelJa: 'ゴルフスクールプラン', labelEn: 'Golf DTV Plan', labelKo: '골프 DTV 플랜', href: '/soft-power/golf' },
       { labelJa: '家族ビザサポート', labelEn: 'Family Visa Support', labelKo: '가족 비자 지원', href: '/guide/family' },
-      { labelJa: 'Discordコミュニティ', labelEn: 'Discord Community', labelKo: 'Discord 커뮤니티', href: 'https://discord.gg/dtv-hub' },
+      { labelJa: 'Discordコミュニティ', labelEn: 'Discord Community', labelKo: 'Discord 커뮤니티', href: 'https://discord.gg/R2gA6jchfk' },
     ],
   },
 ]
@@ -71,7 +71,7 @@ export default function Footer({ locale, footer }: FooterProps) {
             </Link>
             <p className="text-sm text-navy-400 leading-relaxed">{footer.tagline}</p>
             <a
-              href="https://discord.gg/dtv-hub"
+              href="https://discord.gg/R2gA6jchfk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 border border-gold-500/20 rounded-lg text-sm text-gold-400 font-medium transition-colors"

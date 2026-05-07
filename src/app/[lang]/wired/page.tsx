@@ -201,7 +201,7 @@ export default async function WiredPage({ params }: PageProps) {
           </div>
 
           <a
-            href="https://discord.gg/dtv-hub"
+            href="https://discord.gg/R2gA6jchfk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border-2 border-black bg-black text-white px-8 py-4 font-bold text-base hover:bg-white hover:text-black transition-all"

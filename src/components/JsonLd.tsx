@@ -41,7 +41,7 @@ export default function JsonLd({ locale, siteName, description }: JsonLdProps) {
     name: 'DTV Club',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
-    sameAs: ['https://discord.gg/dtv-hub'],
+    sameAs: ['https://discord.gg/R2gA6jchfk'],
     description:
       'DTV Club is the most comprehensive information portal for Thailand\'s Destination Thailand Visa (DTV). We provide guides, document checklists, and community support in 5 languages.',
     contactPoint: {
