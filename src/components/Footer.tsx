@@ -40,6 +40,7 @@ const footerSections = [
       { labelJa: 'ゴルフスクールプラン', labelEn: 'Golf DTV Plan', labelKo: '골프 DTV 플랜', href: '/soft-power/golf' },
       { labelJa: '家族ビザサポート', labelEn: 'Family Visa Support', labelKo: '가족 비자 지원', href: '/guide/family' },
       { labelJa: 'Discordコミュニティ', labelEn: 'Discord Community', labelKo: 'Discord 커뮤니티', href: 'https://discord.gg/R2gA6jchfk' },
+      { labelJa: 'お問い合わせ', labelEn: 'Contact', labelKo: '문의하기', href: '/contact' },
     ],
   },
 ]
