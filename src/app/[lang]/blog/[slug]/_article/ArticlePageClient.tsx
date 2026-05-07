@@ -141,7 +141,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
             <div className="article-body" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
 
             <div style={{ borderTop: `1px solid ${C.border}`, marginTop: 48, paddingTop: 36, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <Link href={`/${locale}/golf-dtv#inquiry`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
+              <Link href={`/${locale}/contact`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
                 {isJa ? '無料相談はこちら' : locale === 'ko' ? '무료 상담 신청' : 'Free Consultation'}
               </Link>
               <Link href={`/${locale}/requirements`} style={{ background: 'transparent', color: C.text, border: `1px solid ${C.border}`, padding: '12px 24px', fontSize: 14, textDecoration: 'none', display: 'inline-block' }}>
@@ -181,7 +181,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
                 <p style={{ fontSize: 12, color: C.sub, lineHeight: 1.65, margin: '0 0 16px' }}>
                   {isJa ? 'DTVの取得ルートについて専門家に相談できます。' : locale === 'ko' ? 'DTV 비자 취득 경로에 대해 전문가와 상담할 수 있습니다.' : 'Consult an expert about your DTV visa route.'}
                 </p>
-                <Link href={`/${locale}/golf-dtv#inquiry`} style={{ display: 'block', background: C.green, color: '#fff', padding: '10px 0', fontSize: 13, fontWeight: 700, textDecoration: 'none', textAlign: 'center', marginBottom: 8, boxSizing: 'border-box' }}>
+                <Link href={`/${locale}/contact`} style={{ display: 'block', background: C.green, color: '#fff', padding: '10px 0', fontSize: 13, fontWeight: 700, textDecoration: 'none', textAlign: 'center', marginBottom: 8, boxSizing: 'border-box' }}>
                   {isJa ? '無料相談はこちら' : locale === 'ko' ? '무료 상담 신청' : 'Free Consultation'}
                 </Link>
                 <Link href={`/${locale}/who-should-choose-golf-dtv`} style={{ display: 'block', background: 'transparent', color: C.text, border: `1px solid ${C.border}`, padding: '10px 0', fontSize: 13, textDecoration: 'none', textAlign: 'center', boxSizing: 'border-box' }}>
