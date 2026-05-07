@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, category, message } = await req.json()
+    const { name, email, nationality, category, message } = await req.json()
 
     // 必須項目チェック
     if (!name || !email || !message) {
@@ -40,6 +40,10 @@ export async function POST(req: NextRequest) {
       <tr style="border-bottom:1px solid #e2e8f0;">
         <td style="padding:12px 0;font-weight:700;color:#1a2435;">メールアドレス</td>
         <td style="padding:12px 0;"><a href="mailto:${email}" style="color:#0A7A6A;">${email}</a></td>
+      </tr>
+      <tr style="border-bottom:1px solid #e2e8f0;">
+        <td style="padding:12px 0;font-weight:700;color:#1a2435;">国籍</td>
+        <td style="padding:12px 0;color:#333;">${nationality || '—'}</td>
       </tr>
       <tr style="border-bottom:1px solid #e2e8f0;">
         <td style="padding:12px 0;font-weight:700;color:#1a2435;">お問い合わせ種別</td>

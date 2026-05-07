@@ -1,8 +1,93 @@
 'use client'
 
 import { useState, use } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { CheckCircle, AlertCircle, Send, ChevronRight } from 'lucide-react'
+
+// ── Countries list ────────────────────────────────────────────────────
+const COUNTRIES = [
+  // Africa
+  'Algeria','Angola','Benin','Botswana','Burkina Faso','Burundi','Cabo Verde',
+  'Cameroon','Central African Republic','Chad','Comoros','Congo','DR Congo',
+  'Djibouti','Egypt','Equatorial Guinea','Eritrea','Eswatini','Ethiopia',
+  'Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Ivory Coast','Kenya',
+  'Lesotho','Liberia','Libya','Madagascar','Malawi','Mali','Mauritania',
+  'Mauritius','Morocco','Mozambique','Namibia','Niger','Nigeria','Rwanda',
+  'São Tomé and Príncipe','Senegal','Seychelles','Sierra Leone','Somalia',
+  'South Africa','South Sudan','Sudan','Tanzania','Togo','Tunisia','Uganda',
+  'Zambia','Zimbabwe',
+  // Americas
+  'Antigua and Barbuda','Argentina','Bahamas','Barbados','Belize','Bolivia',
+  'Brazil','Canada','Chile','Colombia','Costa Rica','Cuba','Dominica',
+  'Dominican Republic','Ecuador','El Salvador','Grenada','Guatemala','Guyana',
+  'Haiti','Honduras','Jamaica','Mexico','Nicaragua','Panama','Paraguay','Peru',
+  'Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines',
+  'Suriname','Trinidad and Tobago','United States','Uruguay','Venezuela',
+  // Asia & Pacific
+  'Afghanistan','Armenia','Azerbaijan','Bahrain','Bangladesh','Bhutan','Brunei',
+  'Cambodia','China','Cyprus','Georgia','Hong Kong','India','Indonesia','Iran',
+  'Iraq','Israel','Japan','Jordan','Kazakhstan','Kuwait','Kyrgyzstan','Laos',
+  'Lebanon','Malaysia','Maldives','Mongolia','Myanmar','Nepal','North Korea',
+  'Oman','Pakistan','Palestine','Philippines','Qatar','Saudi Arabia','Singapore',
+  'South Korea','Sri Lanka','Syria','Taiwan','Tajikistan','Thailand','Timor-Leste',
+  'Turkey','Turkmenistan','UAE','Uzbekistan','Vietnam','Yemen',
+  // Europe
+  'Albania','Andorra','Austria','Belarus','Belgium','Bosnia and Herzegovina',
+  'Bulgaria','Croatia','Czech Republic','Denmark','Estonia','Finland','France',
+  'Germany','Greece','Hungary','Iceland','Ireland','Italy','Kosovo','Latvia',
+  'Liechtenstein','Lithuania','Luxembourg','Malta','Moldova','Monaco',
+  'Montenegro','Netherlands','North Macedonia','Norway','Poland','Portugal',
+  'Romania','Russia','San Marino','Serbia','Slovakia','Slovenia','Spain',
+  'Sweden','Switzerland','Ukraine','United Kingdom','Vatican City',
+  // Oceania
+  'Australia','Fiji','Kiribati','Marshall Islands','Micronesia','Nauru',
+  'New Zealand','Palau','Papua New Guinea','Samoa','Solomon Islands',
+  'Tonga','Tuvalu','Vanuatu',
+].sort()
+
+// ── NationalityCombobox ───────────────────────────────────────────────
+function NationalityCombobox({ value, onChange, placeholder, hasError }: {
+  value: string
+  onChange: (v: string) => void
+  placeholder: string
+  hasError?: boolean
+}) {
+  const [query, setQuery] = React.useState(value)
+  const [open, setOpen] = React.useState(false)
+  const filtered = query.length > 0
+    ? COUNTRIES.filter(c => c.toLowerCase().includes(query.toLowerCase()))
+    : COUNTRIES
+  return (
+    <div className="relative">
+      <input
+        type="text"
+        value={query}
+        placeholder={placeholder}
+        onChange={e => { setQuery(e.target.value); onChange(''); setOpen(true) }}
+        onFocus={() => setOpen(true)}
+        onBlur={() => setTimeout(() => setOpen(false), 160)}
+        autoComplete="off"
+        className={`w-full px-4 py-3 rounded-lg bg-navy-950 border text-white placeholder-navy-500 focus:outline-none transition-colors text-sm ${
+          hasError ? 'border-red-500/60 focus:border-red-400' : 'border-white/10 focus:border-teal-500/60'
+        }`}
+      />
+      {open && (
+        <ul className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-white/10 bg-navy-900 max-h-56 overflow-y-auto shadow-xl" style={{listStyle:'none',padding:0,margin:0}}>
+          {filtered.length > 0 ? filtered.map(c => (
+            <li
+              key={c}
+              onMouseDown={() => { onChange(c); setQuery(c); setOpen(false) }}
+              className="px-4 py-2.5 text-sm text-navy-300 cursor-pointer border-b border-white/5 hover:bg-white/5 hover:text-white transition-colors"
+            >{c}</li>
+          )) : (
+            <li className="px-4 py-2.5 text-sm text-navy-500">No results</li>
+          )}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 // ── i18n ───────────────────────────────────────────────────────────────
 const t = {
@@ -15,6 +100,8 @@ const t = {
     placeholderName: '山田 太郎',
     labelEmail: 'メールアドレス',
     placeholderEmail: 'your@email.com',
+    labelNationality: '国籍',
+    placeholderNationality: '例：Japan',
     labelCategory: 'お問い合わせ種別',
     categories: [
       { value: 'DTV申請のご相談', label: 'DTV申請のご相談' },
@@ -43,6 +130,8 @@ const t = {
     placeholderName: 'John Smith',
     labelEmail: 'Email Address',
     placeholderEmail: 'your@email.com',
+    labelNationality: 'Nationality',
+    placeholderNationality: 'e.g. Japan',
     labelCategory: 'Inquiry Type',
     categories: [
       { value: 'DTV申請のご相談', label: 'DTV Application' },
@@ -71,6 +160,8 @@ const t = {
     placeholderName: '홍길동',
     labelEmail: '이메일 주소',
     placeholderEmail: 'your@email.com',
+    labelNationality: '국적',
+    placeholderNationality: '예: Japan',
     labelCategory: '문의 종류',
     categories: [
       { value: 'DTV申請のご相談', label: 'DTV 신청 상담' },
@@ -100,7 +191,7 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
   const locale: Lang = (lang === 'ja' || lang === 'en' || lang === 'ko') ? lang : 'ja'
   const copy = t[locale]
 
-  const [form, setForm] = useState({ name: '', email: '', category: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', nationality: '', category: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [errors, setErrors] = useState<Partial<typeof form>>({})
 
@@ -227,6 +318,18 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
                 autoComplete="email"
               />
               {errors.email && <p className="text-red-400 text-xs mt-1.5">{errors.email}</p>}
+            </div>
+
+            {/* Nationality */}
+            <div>
+              <label className="block text-sm font-semibold text-navy-200 mb-1.5">
+                {copy.labelNationality}
+              </label>
+              <NationalityCombobox
+                value={form.nationality}
+                onChange={v => setForm(p => ({ ...p, nationality: v }))}
+                placeholder={copy.placeholderNationality}
+              />
             </div>
 
             {/* Category */}
