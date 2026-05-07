@@ -82,7 +82,7 @@ export default async function SoftPowerPage({ params }: PageProps) {
             href={`/${locale}/golf-dtv`}
             className="block bg-navy-900 rounded-2xl p-6 border border-gold-500/30 hover:border-gold-500/60 transition-colors group"
           >
-            <div className="flex items-start justify-between mb-3">
+            <div className="mb-3">
               <span className="text-3xl">⛳</span>
             </div>
             <h3 className="font-bold text-lg mb-2 group-hover:text-gold-400 transition-colors">
