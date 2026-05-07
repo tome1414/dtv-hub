@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: `"DTV Club" <${process.env.GMAIL_USER}>`,
-      to: 'dtv.club.thailand@gmail.com',
+      to: process.env.GMAIL_TO ?? process.env.GMAIL_USER,
       bcc: 'saotome14z@gmail.com',
       replyTo: email,
       subject: `【DTV Club】${name}様よりお問い合わせ（${categoryLabel}）`,
