@@ -664,6 +664,7 @@ function LangSwitcher() {
     { code: 'en', label: '🇬🇧 English' },
     { code: 'ko', label: '🇰🇷 한국어' },
     { code: 'zh', label: '🇨🇳 中文' },
+    { code: 'ru', label: '🇷🇺 Русский' },
   ]
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const code = e.target.value
