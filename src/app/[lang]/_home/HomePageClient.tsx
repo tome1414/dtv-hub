@@ -79,18 +79,28 @@ export default function HomePageClient({ posts, locale }: Props) {
 
       <style>{`
         @media (max-width: 768px) {
-          .top-hero-inner { flex-direction: column !important; }
-          .top-hero-left { max-width: 100% !important; padding: 44px 24px 32px !important; }
-          .top-hero-img { position: relative !important; width: 100% !important; height: 240px !important; flex-shrink: 0 !important; }
+          /* Hero: image on top, content below */
+          .top-hero-img {
+            position: relative !important;
+            width: 100% !important; height: 220px !important;
+            background-position: center 30% !important;
+          }
+          .top-hero-gradient { display: none !important; }
+          .top-hero-inner { display: block !important; }
+          .top-hero-left { max-width: 100% !important; padding: 28px 20px 24px !important; }
+          .hero-cta-primary { max-width: 100% !important; font-size: 13px !important; padding: 12px 16px !important; }
+          .hero-cta-secondary { max-width: 100% !important; font-size: 12px !important; }
+          /* Other */
           .top-cat-grid { grid-template-columns: 1fr 1fr !important; }
           .top-cta-strip { flex-direction: column !important; gap: 16px !important; }
-          .top-h1 { font-size: 30px !important; }
+          .top-h1 { font-size: 26px !important; }
           .top-latest { grid-template-columns: 1fr !important; }
-          .hero-stats { gap: 20px !important; }
+          .hero-stats { gap: 16px !important; }
         }
         @media (max-width: 480px) {
           .top-cat-grid { grid-template-columns: 1fr !important; }
-          .top-h1 { font-size: 26px !important; }
+          .top-h1 { font-size: 22px !important; }
+          .top-hero-img { height: 180px !important; }
         }
         .top-cat-item:hover { background: ${C.bgSub} !important; }
         /* カードカラーアクセント */
@@ -130,10 +140,10 @@ export default function HomePageClient({ posts, locale }: Props) {
         .hero-cta-secondary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,36,53,0.10); color: #1A2435; }
       `}</style>
 
-      {/* Theme toggle */}
-      <div style={{
-        position: 'fixed', bottom: 24, right: 24, zIndex: 100,
-        display: 'flex', alignItems: 'center', gap: 8,
+      {/* Theme toggle — desktop only */}
+      <div className="hidden lg:flex" style={{
+        position: 'fixed', bottom: 32, right: 24, zIndex: 100,
+        alignItems: 'center', gap: 8,
         background: dark ? '#142238' : '#fff',
         border: `1px solid ${C.border}`,
         borderRadius: 99, padding: '6px 14px',
@@ -157,13 +167,13 @@ export default function HomePageClient({ posts, locale }: Props) {
             backgroundPosition: '65% center',
           }} />
           {/* Image left-fade */}
-          <div style={{
+          <div className="top-hero-gradient" style={{
             position: 'absolute', top: 0, right: 0, bottom: 0, width: '58%',
             background: `linear-gradient(to right, ${C.bg} 0%, rgba(245,248,250,0.85) 12%, rgba(245,248,250,0.40) 28%, rgba(245,248,250,0.10) 45%, transparent 65%)`,
             pointerEvents: 'none', zIndex: 2,
           }} />
           {/* Right edge vignette */}
-          <div style={{
+          <div className="top-hero-gradient" style={{
             position: 'absolute', top: 0, right: 0, bottom: 0, width: '58%',
             background: 'linear-gradient(to left, rgba(20,33,48,0.28) 0%, transparent 50%)',
             pointerEvents: 'none', zIndex: 2,

@@ -84,7 +84,7 @@ export default function Header({ locale, nav }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1 }} className="hidden lg:flex" aria-label="Main navigation">
+          <nav style={{ alignItems: 'center', gap: 2, flex: 1 }} className="hidden lg:flex" aria-label="Main navigation">
 
             {/* ビザ比較 */}
             <Link href={`/${locale}/blog`} style={{ fontSize: 13, fontWeight: 500, color: '#4A5A6E', padding: '5px 12px', borderRadius: 5, textDecoration: 'none', transition: 'color 0.15s, background 0.15s' }}
@@ -143,7 +143,7 @@ export default function Header({ locale, nav }: HeaderProps) {
           </nav>
 
           {/* Right side */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto', flexShrink: 0 }} className="hidden lg:flex">
+          <div style={{ alignItems: 'center', gap: 8, marginLeft: 'auto', flexShrink: 0 }} className="hidden lg:flex">
 
             {/* Language switcher — inline buttons */}
             <div style={{ display: 'flex', gap: 2 }}>

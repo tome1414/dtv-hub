@@ -143,10 +143,10 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
         .sidebar-toc-link.sub { padding-left: 24px; font-size: 11px; }
       `}</style>
 
-      {/* Theme toggle */}
-      <div style={{
-        position: 'fixed', bottom: 76, right: 16, zIndex: 100,
-        display: 'flex', alignItems: 'center', gap: 8,
+      {/* Theme toggle — hidden on mobile (tab bar conflict) */}
+      <div className="hidden lg:flex" style={{
+        position: 'fixed', bottom: 32, right: 24, zIndex: 100,
+        alignItems: 'center', gap: 8,
         background: dark ? '#142238' : '#fff',
         border: `1px solid ${C.border}`,
         borderRadius: 99, padding: '6px 14px',
