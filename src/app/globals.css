@@ -114,6 +114,115 @@
   }
 }
 
+/* ─────────────────────────────────────────
+   Rich B — Shadow Pop ボタンシステム
+───────────────────────────────────────── */
+.btn-richb-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0D9280 0%, #086558 100%);
+  color: white !important;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 3px 0 #064d41, 0 6px 20px rgba(10,122,106,0.30);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-richb-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.28) 50%, transparent 95%);
+}
+.btn-richb-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #064d41, 0 10px 28px rgba(10,122,106,0.38);
+  color: white !important;
+}
+.btn-richb-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #064d41;
+}
+
+.btn-richb-sub {
+  background: white;
+  color: #1A2435 !important;
+  border: 1.5px solid rgba(26,36,53,0.12) !important;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 2px 4px rgba(26,36,53,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s;
+}
+.btn-richb-sub:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(26,36,53,0.10);
+  border-color: rgba(26,36,53,0.22) !important;
+  color: #1A2435 !important;
+}
+.btn-richb-sub:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Gold CTA — Golf DTV */
+.btn-richb-gold {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E4B84A 0%, #A8832A 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 3px 0 #7a5e1a, 0 6px 16px rgba(201,160,48,0.28) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+.btn-richb-gold::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.35) 50%, transparent 95%);
+}
+.btn-richb-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #7a5e1a, 0 10px 24px rgba(201,160,48,0.38) !important;
+  opacity: 1 !important;
+  color: white !important;
+}
+.btn-richb-gold:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #7a5e1a !important;
+}
+
+/* Header CTA shadow pop */
+.btn-richb-header {
+  box-shadow: 0 3px 0 #7a5e1a, 0 5px 16px rgba(201,160,48,0.25) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease !important;
+}
+.btn-richb-header:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 0 #7a5e1a, 0 10px 24px rgba(201,160,48,0.35) !important;
+  opacity: 1 !important;
+}
+.btn-richb-header:active {
+  transform: translateY(1px) !important;
+  box-shadow: 0 1px 0 #7a5e1a !important;
+}
+
 @layer utilities {
   .line-clamp-2 {
     display: -webkit-box;

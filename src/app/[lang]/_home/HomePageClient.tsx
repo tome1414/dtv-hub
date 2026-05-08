@@ -5,14 +5,14 @@ import type { BlogPostMeta } from '@/types/blog'
 import { GolfDtvCTA } from '@/components/analytics/golf-dtv-cta'
 
 const LIGHT = {
-  bg: '#F8F7F3', bgSub: '#EDEAE3',
-  text: '#172019', sub: '#5C665E', muted: '#9EA89E',
-  border: '#DDD9CE', green: '#0F6A43', gold: '#C9A24A',
+  bg: '#F5F8FA', bgSub: '#EDF1F5',
+  text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
+  border: 'rgba(26,36,53,0.10)', green: '#0A7A6A', gold: '#C9A030',
 }
 const DARK = {
-  bg: '#08101E', bgSub: '#0D1A2F',
-  text: '#DCE8F5', sub: '#5C7A9A', muted: '#253D57',
-  border: '#142238', green: '#0A6B3C', gold: '#C89A20',
+  bg: '#0D1520', bgSub: '#111E2E',
+  text: '#DCE8F5', sub: '#5C7A9A', muted: '#3A5270',
+  border: '#142238', green: '#0A7A6A', gold: '#C9A030',
 }
 
 const categoryLabelJa: Record<string, string> = {
@@ -79,16 +79,55 @@ export default function HomePageClient({ posts, locale }: Props) {
 
       <style>{`
         @media (max-width: 768px) {
-          .top-hero { grid-template-columns: 1fr !important; }
-          .top-hero-right { border-left: none !important; padding-left: 0 !important; border-top: 1px solid ${C.border}; padding-top: 28px !important; margin-top: 32px; }
+          .top-hero-inner { flex-direction: column !important; }
+          .top-hero-left { max-width: 100% !important; padding: 44px 24px 32px !important; }
+          .top-hero-img { position: relative !important; width: 100% !important; height: 240px !important; flex-shrink: 0 !important; }
           .top-cat-grid { grid-template-columns: 1fr 1fr !important; }
           .top-cta-strip { flex-direction: column !important; gap: 16px !important; }
-          .top-h1 { font-size: 32px !important; }
+          .top-h1 { font-size: 30px !important; }
+          .top-latest { grid-template-columns: 1fr !important; }
+          .hero-stats { gap: 20px !important; }
         }
         @media (max-width: 480px) {
           .top-cat-grid { grid-template-columns: 1fr !important; }
+          .top-h1 { font-size: 26px !important; }
         }
         .top-cat-item:hover { background: ${C.bgSub} !important; }
+        /* カードカラーアクセント */
+        .top-cat-item { position: relative; overflow: hidden; }
+        .top-cat-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+        .top-cat-c0::before { background: #0A7A6A; }
+        .top-cat-c1::before { background: #4A62C4; }
+        .top-cat-c2::before { background: #C9A030; }
+        /* Hero CTA buttons */
+        .hero-cta-primary {
+          display: flex; align-items: center; justify-content: space-between;
+          background: #0A7A6A; color: white;
+          padding: 14px 20px; border-radius: 9px;
+          font-size: 14px; font-weight: 700; margin-bottom: 8px;
+          border: none; cursor: pointer; font-family: inherit;
+          max-width: 360px; width: 100%; text-decoration: none;
+          box-shadow: 0 3px 0 #064d41, 0 6px 18px rgba(10,122,106,0.28);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+          position: relative; overflow: hidden;
+        }
+        .hero-cta-primary::before {
+          content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+          background: linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.25) 50%, transparent 95%);
+        }
+        .hero-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 0 #064d41, 0 10px 24px rgba(10,122,106,0.35); color: white; }
+        .hero-cta-primary:active { transform: translateY(1px); box-shadow: 0 1px 0 #064d41; }
+        .hero-cta-secondary {
+          display: flex; align-items: center; justify-content: space-between;
+          background: rgba(245,248,250,0.78); backdrop-filter: blur(8px);
+          padding: 11px 20px; border-radius: 9px;
+          font-size: 13px; font-weight: 500; margin-bottom: 8px;
+          max-width: 360px; width: 100%; text-decoration: none; color: #1A2435;
+          border: 1px solid rgba(26,36,53,0.12); cursor: pointer;
+          box-shadow: 0 1px 4px rgba(26,36,53,0.07);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .hero-cta-secondary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,36,53,0.10); color: #1A2435; }
       `}</style>
 
       {/* Theme toggle */}
@@ -108,46 +147,125 @@ export default function HomePageClient({ posts, locale }: Props) {
 
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 2rem' }}>
 
-        {/* ── Featured hero ── */}
-        {featured ? (
-          <div className="top-hero" style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: 0, borderBottom: `1px solid ${C.border}`, paddingTop: 44 }}>
-            <div style={{ paddingRight: 44, paddingBottom: 44, borderRight: `1px solid ${C.border}` }}>
-              <div style={{ display: 'inline-block', background: C.green, padding: '3px 10px', marginBottom: 20 }}>
-                <span style={{ fontSize: 10, fontWeight: 800, color: '#fff', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-                  {isJa ? '特集' : isKo ? '특집' : 'Featured'}
-                </span>
+        {/* ── Hero — Pattern B (café image right + content left) ── */}
+        <div style={{ position: 'relative', overflow: 'hidden', borderBottom: `1px solid ${C.border}`, marginLeft: '-2rem', marginRight: '-2rem' }}>
+          {/* Right: café image */}
+          <div className="top-hero-img" style={{
+            position: 'absolute', top: 0, right: 0, bottom: 0, width: '58%',
+            backgroundImage: 'url(/hero-cafe.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: '65% center',
+          }} />
+          {/* Image left-fade */}
+          <div style={{
+            position: 'absolute', top: 0, right: 0, bottom: 0, width: '58%',
+            background: `linear-gradient(to right, ${C.bg} 0%, rgba(245,248,250,0.85) 12%, rgba(245,248,250,0.40) 28%, rgba(245,248,250,0.10) 45%, transparent 65%)`,
+            pointerEvents: 'none', zIndex: 2,
+          }} />
+          {/* Right edge vignette */}
+          <div style={{
+            position: 'absolute', top: 0, right: 0, bottom: 0, width: '58%',
+            background: 'linear-gradient(to left, rgba(20,33,48,0.28) 0%, transparent 50%)',
+            pointerEvents: 'none', zIndex: 2,
+          }} />
+
+          {/* Left: content */}
+          <div className="top-hero-inner" style={{ display: 'flex' }}>
+            <div className="top-hero-left" style={{ padding: '72px 52px 60px 2rem', maxWidth: 560, position: 'relative', zIndex: 5 }}>
+
+              {/* Eyebrow */}
+              <div style={{
+                display: 'inline-flex', alignItems: 'center', gap: 7,
+                background: 'rgba(10,122,106,0.08)', border: '1px solid rgba(10,122,106,0.20)',
+                borderRadius: 100, padding: '4px 12px', marginBottom: 20,
+                fontSize: 11, fontWeight: 500, color: C.green, letterSpacing: '0.04em',
+              }}>
+                <span style={{ width: 5, height: 5, borderRadius: '50%', background: C.green, flexShrink: 0 }} />
+                {isJa ? 'Destination Thailand Visa — 専門メディア' : isKo ? 'Destination Thailand Visa — 전문 미디어' : 'Destination Thailand Visa — Media'}
               </div>
-              <h1 className="top-h1" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 44, fontWeight: 700, lineHeight: 1.16, color: C.text, margin: '0 0 20px', letterSpacing: '-0.02em' }}>
+
+              {/* H1 */}
+              <h1 className="top-h1" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 42, fontWeight: 600, lineHeight: 1.3, color: C.text, margin: '0 0 16px', letterSpacing: '-0.01em' }}>
                 {isJa ? (
-                  <>タイへ、長く自由に住む。<br /><span style={{ color: C.green }}>正確な情報</span>が、<br />最初の一歩を助ける。</>
+                  <>タイへの新しい暮らしを、<br /><span style={{ color: C.green }}>正確な情報</span>から<br />はじめる。</>
                 ) : isKo ? (
-                  <>태국에서, 길고 자유롭게.<br /><span style={{ color: C.green }}>정확한 정보</span>가<br />첫 걸음을 돕습니다.</>
+                  <>태국에서의 새로운 삶을,<br /><span style={{ color: C.green }}>정확한 정보</span>로<br />시작하세요.</>
                 ) : (
-                  <>Live in Thailand,<br /><span style={{ color: C.green }}>free and long-term.</span><br />Accurate info, first step.</>
+                  <>A new life in Thailand,<br />starting with <span style={{ color: C.green }}>accurate info.</span></>
                 )}
               </h1>
-              <p style={{ fontSize: 15, color: C.sub, lineHeight: 1.72, margin: '0 0 28px', maxWidth: 440 }}>
+
+              {/* Lead */}
+              <p style={{ fontSize: 13, color: C.sub, lineHeight: 1.85, margin: '0 0 28px', maxWidth: 380 }}>
                 {isJa
-                  ? 'DTVビザの比較・申請・生活情報を中立的に解説。あなたに合ったビザと取得ルートを一緒に整理します。'
+                  ? 'DTVビザの比較・申請・必要書類・生活準備まで、一次情報をもとに中立的に解説するDTV専門メディアです。'
                   : isKo
-                  ? 'DTV 비자 비교·신청·생활 정보를 중립적으로 해설. 나에게 맞는 비자와 취득 경로를 함께 정리합니다.'
-                  : 'Neutral guides on DTV visa comparison, application, and life in Thailand. Find the right route for you.'}
+                  ? 'DTV 비자 비교·신청·필요 서류·생활 준비까지, 1차 정보를 바탕으로 중립적으로 해설하는 DTV 전문 미디어입니다.'
+                  : 'Neutral guides on DTV visa comparison, application, requirements, and life in Thailand. Based on official sources.'}
               </p>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href={`/${locale}/blog`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
-                  {isJa ? 'ビザを比較する' : isKo ? '비자 비교하기' : 'Compare Visas'}
-                </Link>
-                <Link href={`/${locale}/requirements`} style={{ background: 'transparent', color: C.text, border: `2px solid ${C.border}`, padding: '12px 24px', fontSize: 14, fontWeight: 600, textDecoration: 'none', display: 'inline-block' }}>
-                  {isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : 'Check Requirements'}
-                </Link>
+
+              {/* CTAs */}
+              <Link href={`/${locale}/blog`} className="hero-cta-primary">
+                <span>{isJa ? '自分に合うビザを比較する' : isKo ? '나에게 맞는 비자 비교하기' : 'Compare Visas for You'}</span>
+                <span style={{ fontSize: 10, fontWeight: 500, background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap' }}>
+                  {isJa ? '初めての方はここから' : isKo ? '처음 오신 분' : 'Start here'}
+                </span>
+              </Link>
+              <Link href={`/${locale}/guide`} className="hero-cta-secondary">
+                <span>{isJa ? 'DTV申請の流れを見る' : isKo ? 'DTV 신청 절차 보기' : 'See Application Flow'}</span>
+                <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請準備中の方へ' : isKo ? '신청 준비 중' : 'For applicants'}</span>
+              </Link>
+              <Link href={`/${locale}/requirements`} className="hero-cta-secondary">
+                <span>{isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : 'Check Requirements'}</span>
+                <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請直前の方へ' : isKo ? '신청 직전' : 'Before applying'}</span>
+              </Link>
+
+              {/* Stats */}
+              <div className="hero-stats" style={{ display: 'flex', gap: 28, paddingTop: 24, borderTop: `1px solid ${C.border}`, marginTop: 8 }}>
+                <div>
+                  <div style={{ fontFamily: 'Georgia, serif', fontSize: 22, fontWeight: 600, color: C.green }}>{posts.length}+</div>
+                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1 }}>{isJa ? '記事' : isKo ? '기사' : 'Articles'}</div>
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'Georgia, serif', fontSize: 22, fontWeight: 600, color: '#C9A030' }}>3{isJa ? '言語' : isKo ? '개 언어' : ' langs'}</div>
+                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1 }}>{isJa ? '日・英・韓' : isKo ? '일·영·한' : 'JA · EN · KO'}</div>
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'Georgia, serif', fontSize: 22, fontWeight: 600, color: '#4A62C4' }}>{isJa ? '一次情報' : isKo ? '1차 정보' : 'Official'}</div>
+                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1 }}>{isJa ? '大使館公式準拠' : isKo ? '대사관 공식 기준' : 'Embassy-based'}</div>
+                </div>
               </div>
             </div>
-            <div className="top-hero-right" style={{ paddingLeft: 36, paddingBottom: 44 }}>
-              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', color: C.muted, textTransform: 'uppercase', margin: '0 0 16px' }}>
-                {isJa ? '最新記事' : isKo ? '최신 기사' : 'Latest Articles'}
-              </p>
+          </div>
+        </div>
+
+        {/* ── Category grid ── */}
+        {(() => {
+          const cardColors = ['top-cat-c0', 'top-cat-c1', 'top-cat-c2']
+          const accentColors = ['#0A7A6A', '#4A62C4', '#C9A030']
+          return (
+            <div className="top-cat-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 1px', background: C.border, borderBottom: `1px solid ${C.border}` }}>
+              {cats.map((c, i) => (
+                <Link key={i} href={`/${locale}${c.href}`} className={`top-cat-item ${cardColors[i]}`} style={{ textDecoration: 'none', display: 'block', background: C.bg, transition: 'background 0.15s' }}>
+                  <div style={{ padding: '22px 20px 22px 24px' }}>
+                    <span style={{ fontSize: 10, fontWeight: 800, color: accentColors[i], textTransform: 'uppercase', letterSpacing: '0.12em' }}>{c.cat}</span>
+                    <p style={{ fontSize: 14, fontWeight: 600, color: C.text, lineHeight: 1.45, margin: '8px 0 0' }}>{c.label}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )
+        })()}
+
+        {/* ── Latest Articles (moved from hero) ── */}
+        {featured && (
+          <div style={{ paddingTop: 36, paddingBottom: 36, borderBottom: `1px solid ${C.border}` }}>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', color: C.muted, textTransform: 'uppercase', margin: '0 0 20px' }}>
+              {isJa ? '最新記事' : isKo ? '최신 기사' : 'Latest Articles'}
+            </p>
+            <div className="top-latest" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 36px' }}>
               {[featured, ...secondary].map((post, i) => (
-                <div key={post.slug} style={{ paddingBottom: i < 2 ? 20 : 0, marginBottom: i < 2 ? 20 : 0, borderBottom: i < 2 ? `1px solid ${C.border}` : 'none' }}>
+                <div key={post.slug} style={{ paddingBottom: 0 }}>
                   <Link href={`/${locale}/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                     <span style={{ fontSize: 10, fontWeight: 800, color: C.green, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
                       {categoryLabel[post.primary_category] ?? post.primary_category}
@@ -159,51 +277,44 @@ export default function HomePageClient({ posts, locale }: Props) {
               ))}
             </div>
           </div>
-        ) : (
-          <div style={{ paddingTop: 60, paddingBottom: 60, borderBottom: `1px solid ${C.border}` }}>
-            <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 44, fontWeight: 700, lineHeight: 1.16, color: C.text, margin: '0 0 20px' }}>
-              {isJa ? 'タイへ、長く自由に住む。' : isKo ? '태국에서, 길고 자유롭게.' : 'Live in Thailand, free and long-term.'}
-            </h1>
-            <Link href={`/${locale}/requirements`} style={{ background: C.green, color: '#fff', padding: '12px 24px', fontSize: 14, fontWeight: 800, textDecoration: 'none', display: 'inline-block' }}>
-              {isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : 'Check Requirements'}
-            </Link>
-          </div>
         )}
 
-        {/* ── Category grid ── */}
-        <div className="top-cat-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 1px', background: C.border, borderBottom: `1px solid ${C.border}` }}>
-          {cats.map((c, i) => (
-            <Link key={i} href={`/${locale}${c.href}`} className="top-cat-item" style={{ textDecoration: 'none', display: 'block', background: C.bg, transition: 'background 0.15s' }}>
-              <div style={{ padding: '22px 20px' }}>
-                <span style={{ fontSize: 10, fontWeight: 800, color: C.gold, textTransform: 'uppercase', letterSpacing: '0.12em' }}>{c.cat}</span>
-                <p style={{ fontSize: 14, fontWeight: 600, color: C.text, lineHeight: 1.45, margin: '8px 0 0' }}>{c.label}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-
         {/* ── Golf DTV Banner ── */}
-        <div style={{ margin: '0 0 64px', position: 'relative', overflow: 'hidden', background: dark ? '#0A5C30' : '#0B3D24', borderRadius: 4, border: dark ? '1px solid rgba(201,162,74,0.35)' : 'none', boxShadow: dark ? '0 0 0 1px rgba(201,162,74,0.12)' : 'none' }}>
-          {/* decorative circles */}
-          <div style={{ position: 'absolute', right: -60, top: -60, width: 280, height: 280, borderRadius: '50%', background: dark ? 'rgba(201,162,74,0.12)' : 'rgba(201,162,74,0.08)', pointerEvents: 'none' }} />
-          <div style={{ position: 'absolute', right: 60, bottom: -80, width: 200, height: 200, borderRadius: '50%', background: dark ? 'rgba(201,162,74,0.07)' : 'rgba(201,162,74,0.05)', pointerEvents: 'none' }} />
+        <div style={{
+          margin: '0 0 64px', position: 'relative', overflow: 'hidden',
+          background: 'linear-gradient(135deg, #121C10 0%, #1A2C1A 55%, #1C2A12 100%)',
+          borderRadius: 12,
+          border: '1px solid rgba(201,160,48,0.22)',
+          boxShadow: '0 4px 0 rgba(0,0,0,0.28), 0 8px 32px rgba(0,0,0,0.18), inset 0 1px 0 rgba(201,160,48,0.12)',
+        }}>
+          {/* decorative radial glows */}
+          <div style={{ position: 'absolute', right: -50, top: -50, width: 260, height: 260, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,160,48,0.13) 0%, transparent 65%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', right: 80, bottom: -70, width: 180, height: 180, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,160,48,0.07) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
           <div className="top-cta-strip" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '32px 36px', gap: 24, position: 'relative' }}>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-                <div style={{ width: 28, height: 2, background: C.gold }} />
-                <span style={{ fontSize: 10, fontWeight: 800, color: C.gold, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Golf DTV</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 18, flex: 1, minWidth: 0 }}>
+              {/* Gold icon badge */}
+              <div style={{ width: 52, height: 52, flexShrink: 0, background: 'linear-gradient(135deg, #E4B84A, #A8832A)', borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 3px 12px rgba(201,160,48,0.40)' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                </svg>
               </div>
-              <p style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', fontWeight: 700, color: '#fff', margin: '0 0 8px', lineHeight: 1.3, fontFamily: 'Georgia, serif' }}>
-                {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : isKo ? '태국에서 골프를 즐기며, 장기 체류한다.' : 'Play golf in Thailand. Stay long-term.'}
-              </p>
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0, lineHeight: 1.6 }}>
-                {isJa
-                  ? 'ソフトパワールートでDTVを取得。タイ政府認定プログラムで受入レターを取得できます。'
-                  : isKo
-                  ? '소프트파워 경로로 DTV를 취득. 태국 정부 인증 프로그램으로 입학 허가서를 받을 수 있습니다.'
-                  : 'Get your DTV via the Soft Power route with a Thai gov-approved program.'}
-              </p>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+                  <span style={{ fontSize: 10, fontWeight: 800, color: '#E4B84A', letterSpacing: '0.18em', textTransform: 'uppercase' }}>Golf DTV</span>
+                  <span style={{ fontSize: 9, fontWeight: 700, background: 'rgba(201,160,48,0.18)', color: '#E4B84A', padding: '2px 7px', borderRadius: 4, letterSpacing: '0.06em' }}>Premium</span>
+                </div>
+                <p style={{ fontSize: 'clamp(17px, 2.5vw, 22px)', fontWeight: 700, color: '#fff', margin: '0 0 6px', lineHeight: 1.3, fontFamily: 'Georgia, serif' }}>
+                  {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : isKo ? '태국에서 골프를 즐기며, 장기 체류한다.' : 'Play golf in Thailand. Stay long-term.'}
+                </p>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.50)', margin: 0, lineHeight: 1.6 }}>
+                  {isJa
+                    ? 'ソフトパワールートでDTVを取得。タイ政府認定プログラムで受入レターを取得できます。'
+                    : isKo
+                    ? '소프트파워 경로로 DTV를 취득. 태국 정부 인증 프로그램으로 입학 허가서를 받을 수 있습니다.'
+                    : 'Get your DTV via the Soft Power route with a Thai gov-approved program.'}
+                </p>
+              </div>
             </div>
             <div style={{ flexShrink: 0 }}>
               <GolfDtvCTA locale={locale as import('@/middleware').Locale} />

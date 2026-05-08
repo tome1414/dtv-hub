@@ -15,13 +15,13 @@ export function GolfDtvCTA({ locale }: GolfDtvCTAProps) {
   }
 
   return (
-    <Button
-      size="sm"
-      className="flex-1 bg-gold-gradient text-navy-950 font-bold border-0 hover:opacity-90"
-      asChild
+    <Link
+      href={`/${locale}/golf-dtv`}
+      className="btn-richb-gold"
+      style={{ padding: '12px 22px', fontSize: 13, fontFamily: 'inherit' }}
       onClick={handleClick}
     >
-      <Link href={`/${locale}/golf-dtv`}>{locale === 'ja' ? '詳細を見る' : locale === 'ko' ? '자세히 보기' : 'See Details'}</Link>
-    </Button>
+      {locale === 'ja' ? '詳細を見る' : locale === 'ko' ? '자세히 보기' : 'See Details'}
+    </Link>
   )
 }

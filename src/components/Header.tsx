@@ -2,10 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, ChevronDown, MessageSquare, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import type { Locale } from '@/middleware'
 import type { Dictionary } from '@/types'
-import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 interface HeaderProps {
@@ -14,7 +13,7 @@ interface HeaderProps {
 }
 
 const languageLabels: Record<Locale, { short: string; full: string; flag: string }> = {
-  ja: { short: 'JP', full: '日本語', flag: '🇯🇵' },
+  ja: { short: 'JA', full: '日本語', flag: '🇯🇵' },
   en: { short: 'EN', full: 'English', flag: '🇺🇸' },
   zh: { short: '中文', full: '中文', flag: '🇨🇳' },
   ko: { short: 'KO', full: '한국어', flag: '🇰🇷' },
@@ -42,7 +41,6 @@ export default function Header({ locale, nav }: HeaderProps) {
   const [langOpen, setLangOpen] = useState(false)
   const langRef = useRef<HTMLDivElement>(null)
 
-  // 言語ドロップダウン外クリックで閉じる
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) {
@@ -53,43 +51,65 @@ export default function Header({ locale, nav }: HeaderProps) {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
+  // Primary display languages only (JA/EN/KO)
+  const primaryLangs: Locale[] = ['ja', 'en', 'ko']
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-gold-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header style={{
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+      background: 'rgba(245,248,250,0.92)',
+      backdropFilter: 'blur(14px)',
+      WebkitBackdropFilter: 'blur(14px)',
+      borderBottom: '1px solid rgba(26,36,53,0.08)',
+      boxShadow: '0 1px 0 rgba(26,36,53,0.06)',
+    }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 36px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', height: 56, gap: 0 }}>
 
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-2 flex-shrink-0">
-            <span className="text-xl font-bold tracking-wider text-white">
-              DTV <span className="text-gold-400">Club</span>
+          <Link href={`/${locale}`} style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', flexShrink: 0, marginRight: 32 }}>
+            <div style={{
+              width: 28, height: 28,
+              background: 'linear-gradient(135deg, #0D9280, #0A7A6A)',
+              borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 2px 8px rgba(10,122,106,0.35)',
+            }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: '-0.02em', color: '#1A2435' }}>
+              DTV <span style={{ color: '#0A7A6A' }}>Club</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav style={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1 }} className="hidden lg:flex" aria-label="Main navigation">
 
-            {/* Guide - Mega Menu */}
-            <div
-              className="relative"
+            {/* ビザ比較 */}
+            <Link href={`/${locale}/blog`} style={{ fontSize: 13, fontWeight: 500, color: '#4A5A6E', padding: '5px 12px', borderRadius: 5, textDecoration: 'none', transition: 'color 0.15s, background 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#0A7A6A'; e.currentTarget.style.background = 'rgba(10,122,106,0.06)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#4A5A6E'; e.currentTarget.style.background = 'transparent' }}>
+              {locale === 'ja' ? 'ビザ比較' : locale === 'ko' ? '비자 비교' : 'Visa Compare'}
+            </Link>
+
+            {/* 申請ガイド */}
+            <div className="relative"
               onMouseEnter={() => setActiveMenu('guide')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Button
-                variant="ghost"
-                size="sm"
-                className="flex items-center gap-1 text-navy-100 hover:text-gold-400 hover:bg-white/5 data-[state=open]:bg-white/5"
-              >
+              onMouseLeave={() => setActiveMenu(null)}>
+              <button style={{ display: 'flex', alignItems: 'center', gap: 3, fontSize: 13, fontWeight: 500, color: '#4A5A6E', padding: '5px 12px', borderRadius: 5, background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'inherit', transition: 'color 0.15s, background 0.15s' }}
+                onMouseEnter={e => { e.currentTarget.style.color = '#0A7A6A'; e.currentTarget.style.background = 'rgba(10,122,106,0.06)' }}
+                onMouseLeave={e => { e.currentTarget.style.color = '#4A5A6E'; e.currentTarget.style.background = 'transparent' }}>
                 {nav.guide}
-                <ChevronDown className={cn('w-3.5 h-3.5 opacity-60 transition-transform duration-200', activeMenu === 'guide' && 'rotate-180')} />
-              </Button>
+                <ChevronDown className={cn('w-3 h-3 opacity-50 transition-transform duration-200', activeMenu === 'guide' && 'rotate-180')} />
+              </button>
               {activeMenu === 'guide' && (
-                <div className="absolute top-full left-0 w-56 bg-navy-900 border border-gold-500/20 rounded-xl shadow-2xl shadow-black/50 p-2 mt-1">
+                <div style={{ position: 'absolute', top: '100%', left: 0, width: 224, background: 'white', border: '1px solid rgba(26,36,53,0.10)', borderRadius: 12, boxShadow: '0 8px 32px rgba(26,36,53,0.12)', padding: 8, marginTop: 4, zIndex: 50 }}>
                   {megaMenuItems.guide.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={`/${locale}${item.href}`}
-                      className="block px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors"
-                    >
+                    <Link key={item.href} href={`/${locale}${item.href}`}
+                      style={{ display: 'block', padding: '9px 12px', fontSize: 13, color: '#4A5A6E', borderRadius: 8, textDecoration: 'none', transition: 'color 0.15s, background 0.15s' }}
+                      onMouseEnter={e => { e.currentTarget.style.color = '#0A7A6A'; e.currentTarget.style.background = 'rgba(10,122,106,0.06)' }}
+                      onMouseLeave={e => { e.currentTarget.style.color = '#4A5A6E'; e.currentTarget.style.background = 'transparent' }}>
                       {item.label}
                     </Link>
                   ))}
@@ -97,178 +117,116 @@ export default function Header({ locale, nav }: HeaderProps) {
               )}
             </div>
 
-            <Button variant="ghost" size="sm" asChild className="text-navy-100 hover:text-gold-400 hover:bg-white/5">
-              <Link href={`/${locale}/requirements`}>{nav.requirements}</Link>
-            </Button>
+            {/* 必要書類 */}
+            <Link href={`/${locale}/requirements`}
+              style={{ fontSize: 13, fontWeight: 500, color: '#4A5A6E', padding: '5px 12px', borderRadius: 5, textDecoration: 'none', transition: 'color 0.15s, background 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#0A7A6A'; e.currentTarget.style.background = 'rgba(10,122,106,0.06)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#4A5A6E'; e.currentTarget.style.background = 'transparent' }}>
+              {nav.requirements}
+            </Link>
 
-            {/* Life - Mega Menu */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMenu('life')}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Button
-                variant="ghost"
-                size="sm"
-                className="flex items-center gap-1 text-navy-100 hover:text-gold-400 hover:bg-white/5"
-              >
-                {nav.life}
-                <ChevronDown className={cn('w-3.5 h-3.5 opacity-60 transition-transform duration-200', activeMenu === 'life' && 'rotate-180')} />
-              </Button>
-              {activeMenu === 'life' && (
-                <div className="absolute top-full left-0 w-52 bg-navy-900 border border-gold-500/20 rounded-xl shadow-2xl shadow-black/50 p-2 mt-1">
-                  {megaMenuItems.life.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={`/${locale}${item.href}`}
-                      className="block px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* ソフトパワー */}
+            <Link href={`/${locale}/soft-power`}
+              style={{ fontSize: 13, fontWeight: 500, color: '#4A5A6E', padding: '5px 12px', borderRadius: 5, textDecoration: 'none', transition: 'color 0.15s, background 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#0A7A6A'; e.currentTarget.style.background = 'rgba(10,122,106,0.06)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#4A5A6E'; e.currentTarget.style.background = 'transparent' }}>
+              {nav.softPower}
+            </Link>
 
-            <Button variant="ghost" size="sm" asChild className="text-navy-100 hover:text-gold-400 hover:bg-white/5">
-              <Link href={`/${locale}/soft-power`}>{nav.softPower}</Link>
-            </Button>
+            {/* マガジン */}
+            <Link href={`/${locale}/blog`}
+              style={{ fontSize: 13, fontWeight: 500, color: '#4A5A6E', padding: '5px 12px', borderRadius: 5, textDecoration: 'none', transition: 'color 0.15s, background 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#0A7A6A'; e.currentTarget.style.background = 'rgba(10,122,106,0.06)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#4A5A6E'; e.currentTarget.style.background = 'transparent' }}>
+              {locale === 'ja' ? 'マガジン' : locale === 'ko' ? '매거진' : 'Magazine'}
+            </Link>
           </nav>
 
           {/* Right side */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto', flexShrink: 0 }} className="hidden lg:flex">
 
-            {/* 言語ドロップダウン */}
-            <div className="relative" ref={langRef}>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-1.5 bg-white/10 border-gold-500/30 text-navy-100 hover:bg-white/20 hover:text-white hover:border-gold-400"
-              >
-                <Globe className="w-3.5 h-3.5" />
-                <span className="text-xs font-semibold">{languageLabels[locale].short}</span>
-                <ChevronDown className={cn('w-3 h-3 opacity-60 transition-transform duration-200', langOpen && 'rotate-180')} />
-              </Button>
-
-              {langOpen && (
-                <div className="absolute top-full right-0 mt-2 w-44 bg-navy-900 border border-gold-500/20 rounded-xl shadow-2xl shadow-black/50 p-1.5 z-50">
-                  {(Object.keys(languageLabels) as Locale[]).map((lang) => (
-                    <Link
-                      key={lang}
-                      href={`/${lang}`}
-                      onClick={() => setLangOpen(false)}
-                      className={cn(
-                        'flex items-center gap-2.5 px-3 py-2 text-sm rounded-lg transition-colors',
-                        lang === locale
-                          ? 'bg-gold-500/15 text-gold-400 font-semibold'
-                          : 'text-navy-200 hover:text-gold-400 hover:bg-white/5'
-                      )}
-                    >
-                      <span className="text-base">{languageLabels[lang].flag}</span>
-                      <span>{languageLabels[lang].full}</span>
-                      {lang === locale && (
-                        <span className="ml-auto w-1.5 h-1.5 rounded-full bg-gold-400" />
-                      )}
-                    </Link>
-                  ))}
-                </div>
-              )}
+            {/* Language switcher — inline buttons */}
+            <div style={{ display: 'flex', gap: 2 }}>
+              {primaryLangs.map((lang) => (
+                <Link key={lang} href={`/${lang}`}
+                  style={{
+                    fontSize: 10, fontWeight: 700,
+                    padding: '3px 8px', borderRadius: 5,
+                    textDecoration: 'none',
+                    background: lang === locale ? '#1A2435' : 'transparent',
+                    color: lang === locale ? 'white' : '#7E8EA4',
+                    border: '1px solid',
+                    borderColor: lang === locale ? '#1A2435' : 'rgba(26,36,53,0.12)',
+                    transition: 'all 0.15s',
+                  }}
+                  onMouseEnter={e => { if (lang !== locale) { e.currentTarget.style.color = '#1A2435'; e.currentTarget.style.borderColor = 'rgba(26,36,53,0.25)'; } }}
+                  onMouseLeave={e => { if (lang !== locale) { e.currentTarget.style.color = '#7E8EA4'; e.currentTarget.style.borderColor = 'rgba(26,36,53,0.12)'; } }}>
+                  {languageLabels[lang].short}
+                </Link>
+              ))}
             </div>
 
-            {/* Discord CTA */}
-            <Button
-              size="sm"
-              className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold hover:opacity-90 shadow-lg shadow-gold-500/20 border-0"
-              asChild
-            >
-              <a href="https://discord.gg/R2gA6jchfk" target="_blank" rel="noopener noreferrer">
-                <MessageSquare className="w-4 h-4" />
-                {nav.joinDiscord}
-              </a>
-            </Button>
+            {/* CTA: 相談する */}
+            <Link href={`/${locale}/contact`}
+              className="btn-richb-primary"
+              style={{ padding: '8px 20px', fontSize: 13, fontFamily: 'inherit' }}>
+              {locale === 'ja' ? '相談する' : locale === 'ko' ? '상담하기' : 'Contact'}
+            </Link>
           </div>
 
-          {/* Mobile menu toggle */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden text-navy-200 hover:text-gold-400 hover:bg-white/5"
+          {/* Mobile toggle */}
+          <button
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 36, height: 36, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer', color: '#4A5A6E', marginLeft: 'auto' }}
+            className="lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-navy-950 border-t border-gold-500/20">
-          <nav className="px-4 py-4 space-y-1" aria-label="Mobile navigation">
-            <Link
-              href={`/${locale}/guide`}
-              className="block px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {nav.guide}
-            </Link>
-            <Link
-              href={`/${locale}/requirements`}
-              className="block px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {nav.requirements}
-            </Link>
-            <Link
-              href={`/${locale}/life`}
-              className="block px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {nav.life}
-            </Link>
-            <Link
-              href={`/${locale}/soft-power`}
-              className="block px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {nav.softPower}
-            </Link>
+        <div style={{ background: 'white', borderTop: '1px solid rgba(26,36,53,0.08)' }} className="lg:hidden">
+          <nav style={{ padding: '12px 20px 20px' }} aria-label="Mobile navigation">
+            {[
+              { href: '/blog', label: locale === 'ja' ? 'ビザ比較' : locale === 'ko' ? '비자 비교' : 'Visa Compare' },
+              { href: '/requirements', label: nav.requirements },
+              { href: '/soft-power', label: nav.softPower },
+              { href: '/guide', label: nav.guide },
+              { href: '/blog', label: locale === 'ja' ? 'マガジン' : locale === 'ko' ? '매거진' : 'Magazine' },
+            ].map((item) => (
+              <Link key={item.href + item.label} href={`/${locale}${item.href}`}
+                style={{ display: 'block', padding: '10px 8px', fontSize: 14, color: '#4A5A6E', textDecoration: 'none', borderBottom: '1px solid rgba(26,36,53,0.06)' }}
+                onClick={() => setMobileOpen(false)}>
+                {item.label}
+              </Link>
+            ))}
 
-            {/* 言語セレクター（モバイル） */}
-            <div className="flex items-center gap-1 pt-3 pb-1 flex-wrap">
-              {(Object.keys(languageLabels) as Locale[]).map((lang) => (
-                <Link
-                  key={lang}
-                  href={`/${lang}`}
-                  className={cn(
-                    'flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium rounded-lg transition-all',
-                    lang === locale
-                      ? 'bg-gold-500 text-navy-950'
-                      : 'bg-white/5 text-navy-300 hover:text-gold-400'
-                  )}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <span>{languageLabels[lang].flag}</span>
-                  <span>{languageLabels[lang].short}</span>
+            {/* Language */}
+            <div style={{ display: 'flex', gap: 6, padding: '14px 0 10px' }}>
+              {primaryLangs.map((lang) => (
+                <Link key={lang} href={`/${lang}`}
+                  style={{
+                    fontSize: 11, fontWeight: 700, padding: '4px 10px', borderRadius: 6,
+                    textDecoration: 'none', border: '1px solid',
+                    background: lang === locale ? '#1A2435' : 'transparent',
+                    color: lang === locale ? 'white' : '#7E8EA4',
+                    borderColor: lang === locale ? '#1A2435' : 'rgba(26,36,53,0.15)',
+                  }}
+                  onClick={() => setMobileOpen(false)}>
+                  {languageLabels[lang].flag} {languageLabels[lang].short}
                 </Link>
               ))}
             </div>
 
-            <Button
-              className="w-full mt-3 bg-gold-gradient text-navy-950 font-bold border-0 hover:opacity-90"
-              asChild
-            >
-              <a
-                href="https://discord.gg/R2gA6jchfk"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileOpen(false)}
-              >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                {nav.joinDiscord}
-              </a>
-            </Button>
+            <Link href={`/${locale}/contact`}
+              className="btn-richb-primary"
+              style={{ padding: '11px 20px', fontSize: 13, fontFamily: 'inherit', width: '100%', justifyContent: 'center', marginTop: 4 }}
+              onClick={() => setMobileOpen(false)}>
+              {locale === 'ja' ? '相談する' : locale === 'ko' ? '상담하기' : 'Contact'}
+            </Link>
           </nav>
         </div>
       )}

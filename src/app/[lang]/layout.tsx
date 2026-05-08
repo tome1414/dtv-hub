@@ -5,6 +5,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
+import MobileBottomNav from '@/components/MobileBottomNav'
 
 interface LangLayoutProps {
   children: React.ReactNode
@@ -83,6 +84,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
       <Header locale={locale} nav={dict.nav} />
       <main>{children}</main>
       <Footer locale={locale} footer={dict.footer} />
+      <MobileBottomNav locale={locale} />
     </>
   )
 }
