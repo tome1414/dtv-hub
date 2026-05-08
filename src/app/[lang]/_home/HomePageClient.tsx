@@ -95,7 +95,6 @@ export default function HomePageClient({ posts, locale }: Props) {
           .top-cta-strip { flex-direction: column !important; gap: 16px !important; }
           .top-h1 { font-size: 26px !important; }
           .top-latest { grid-template-columns: 1fr !important; }
-          .hero-stats { gap: 16px !important; }
         }
         @media (max-width: 480px) {
           .top-cat-grid { grid-template-columns: 1fr !important; }
@@ -230,21 +229,6 @@ export default function HomePageClient({ posts, locale }: Props) {
                 <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請直前の方へ' : isKo ? '신청 직전' : 'Before applying'}</span>
               </Link>
 
-              {/* Stats */}
-              <div className="hero-stats" style={{ display: 'flex', gap: 28, paddingTop: 24, borderTop: `1px solid ${C.border}`, marginTop: 8 }}>
-                <div>
-                  <div style={{ fontFamily: 'Georgia, serif', fontSize: 22, fontWeight: 600, color: C.green }}>{posts.length}+</div>
-                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1 }}>{isJa ? '記事' : isKo ? '기사' : 'Articles'}</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: 'Georgia, serif', fontSize: 22, fontWeight: 600, color: '#C9A030' }}>3{isJa ? '言語' : isKo ? '개 언어' : ' langs'}</div>
-                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1 }}>{isJa ? '日・英・韓' : isKo ? '일·영·한' : 'JA · EN · KO'}</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: 'Georgia, serif', fontSize: 22, fontWeight: 600, color: '#4A62C4' }}>{isJa ? '一次情報' : isKo ? '1차 정보' : 'Official'}</div>
-                  <div style={{ fontSize: 10, color: C.muted, marginTop: 1 }}>{isJa ? '大使館公式準拠' : isKo ? '대사관 공식 기준' : 'Embassy-based'}</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
