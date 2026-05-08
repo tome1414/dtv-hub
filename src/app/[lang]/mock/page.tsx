@@ -1,25 +1,16 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-type Theme = 'light' | 'dark'
 type Style = 'A' | 'B' | 'C'
 type Page = 'top' | 'article'
 
 const T = {
-  light: {
-    bg: '#F8F7F3', bgSub: '#EDEAE3', card: '#FFFFFF',
-    text: '#172019', sub: '#5C665E', muted: '#9EA89E',
-    border: '#DDD9CE', green: '#0F6A43', gold: '#C9A24A',
-    ctaBg: '#0F6A43', ctaText: '#FFFFFF',
-  },
-  dark: {
-    bg: '#08101E', bgSub: '#0D1A2F', card: '#102038',
-    text: '#DCE8F5', sub: '#5C7A9A', muted: '#253D57',
-    border: '#142238', green: '#0A6B3C', gold: '#C89A20',
-    ctaBg: '#C89A20', ctaText: '#08101E',
-  },
+  bg: '#F8F7F3', bgSub: '#EDEAE3', card: '#FFFFFF',
+  text: '#172019', sub: '#5C665E', muted: '#9EA89E',
+  border: '#DDD9CE', green: '#0F6A43', gold: '#C9A24A',
+  ctaBg: '#0F6A43', ctaText: '#FFFFFF',
 }
-type Tok = typeof T.light
+type Tok = typeof T
 
 const ARTICLES = [
   { cat: '比較', date: '2026-04-27', title: 'タイ長期滞在ビザ比較｜DTV・LTR・タイランドプリビレッジ・リタイアメントの違い' },
@@ -366,10 +357,9 @@ function C_Article({ tok }: { tok: Tok }) {
 
 // ─── ROOT ────────────────────────────────────────────────────────────
 export default function MockPage() {
-  const [theme, setTheme] = useState<Theme>('light')
   const [style, setStyle] = useState<Style>('A')
   const [page, setPage] = useState<Page>('top')
-  const tok = T[theme]
+  const tok = T
 
   useEffect(() => {
     const els: HTMLElement[] = []
@@ -416,11 +406,6 @@ export default function MockPage() {
               {label}
             </button>
           ))}
-        </div>
-        <div style={{ width: 1, height: 18, background: '#333' }} />
-        <div style={{ display: 'flex', gap: 6 }}>
-          <button onClick={() => setTheme('light')} style={{ background: theme === 'light' ? '#F0C43C' : 'transparent', color: theme === 'light' ? '#111' : '#888', border: theme === 'light' ? 'none' : '1px solid #333', borderRadius: 4, padding: '4px 13px', fontSize: 12, cursor: 'pointer' }}>☀ Light</button>
-          <button onClick={() => setTheme('dark')} style={{ background: theme === 'dark' ? '#1A2B3A' : 'transparent', color: theme === 'dark' ? '#F0C43C' : '#888', border: theme === 'dark' ? 'none' : '1px solid #333', borderRadius: 4, padding: '4px 13px', fontSize: 12, cursor: 'pointer' }}>🌙 Dark</button>
         </div>
       </div>
 

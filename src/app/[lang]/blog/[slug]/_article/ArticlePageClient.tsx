@@ -4,19 +4,12 @@ import Link from 'next/link'
 import type { BlogPost } from '@/types/blog'
 import type { TocItem } from '@/lib/blog'
 
-const LIGHT = {
+const C = {
   bg: '#F5F8FA', bgSection: '#EDF1F5', bgCard: '#FFFFFF',
   text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
   border: 'rgba(26,36,53,0.10)', borderMd: 'rgba(26,36,53,0.16)',
   green: '#0A7A6A', greenLt: '#0D9280', gold: '#C9A030',
   tealDim: 'rgba(10,122,106,0.10)', tealDimmer: 'rgba(10,122,106,0.06)',
-}
-const DARK = {
-  bg: '#0d1427', bgSection: '#0F1A2E', bgCard: '#142238',
-  text: '#DCE8F5', sub: '#5C7A9A', muted: '#253D57',
-  border: '#142238', borderMd: '#1E3050',
-  green: '#0A6B3C', greenLt: '#0D8070', gold: '#C89A20',
-  tealDim: 'rgba(10,107,60,0.15)', tealDimmer: 'rgba(10,107,60,0.08)',
 }
 
 const categoryLabelJa: Record<string, string> = {
@@ -43,10 +36,8 @@ interface Props {
 }
 
 export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
-  const [dark, setDark] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [tocOpen, setTocOpen] = useState(true)
-  const C = dark ? DARK : LIGHT
   const isJa = locale === 'ja'
   const isKo = locale === 'ko'
 
@@ -114,7 +105,7 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
           box-shadow: 0 2px 12px rgba(26,36,53,0.08);
         }
         .article-body th {
-          background: ${C.text}; color: ${dark ? C.bg : '#fff'};
+          background: ${C.text}; color: #fff;
           font-weight: 700; padding: 0.625rem 0.875rem;
           text-align: left; font-size: 12px;
         }
@@ -142,21 +133,6 @@ export default function ArticlePageClient({ post, toc, locale, slug }: Props) {
         .sidebar-toc-link + .sidebar-toc-link { margin-top: 2px; }
         .sidebar-toc-link.sub { padding-left: 24px; font-size: 11px; }
       `}</style>
-
-      {/* Theme toggle — hidden on mobile (tab bar conflict) */}
-      <div className="hidden lg:flex" style={{
-        position: 'fixed', bottom: 32, right: 24, zIndex: 100,
-        alignItems: 'center', gap: 8,
-        background: dark ? '#142238' : '#fff',
-        border: `1px solid ${C.border}`,
-        borderRadius: 99, padding: '6px 14px',
-        boxShadow: '0 2px 12px rgba(0,0,0,0.12)',
-        cursor: 'pointer', fontSize: 12, fontWeight: 600,
-        color: C.muted,
-      }} onClick={() => setDark(d => !d)}>
-        <span>{dark ? '☀' : '🌙'}</span>
-        <span>{dark ? 'Light' : 'Dark'}</span>
-      </div>
 
       <div className="article-outer-pad" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 2rem 60px' }}>
 

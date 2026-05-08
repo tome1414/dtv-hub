@@ -1,18 +1,12 @@
 'use client'
-import { useState } from 'react'
 import Link from 'next/link'
 import type { BlogPostMeta } from '@/types/blog'
 import { GolfDtvCTA } from '@/components/analytics/golf-dtv-cta'
 
-const LIGHT = {
+const C = {
   bg: '#F5F8FA', bgSub: '#EDF1F5',
   text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
   border: 'rgba(26,36,53,0.10)', green: '#0A7A6A', gold: '#C9A030',
-}
-const DARK = {
-  bg: '#0D1520', bgSub: '#111E2E',
-  text: '#DCE8F5', sub: '#5C7A9A', muted: '#3A5270',
-  border: '#142238', green: '#0A7A6A', gold: '#C9A030',
 }
 
 const categoryLabelJa: Record<string, string> = {
@@ -79,8 +73,6 @@ interface Props {
 }
 
 export default function HomePageClient({ posts, locale }: Props) {
-  const [dark, setDark] = useState(false)
-  const C = dark ? DARK : LIGHT
   const isJa = locale === 'ja'
   const isKo = locale === 'ko'
   const isRu = locale === 'ru'
@@ -166,21 +158,6 @@ export default function HomePageClient({ posts, locale }: Props) {
         }
         .hero-cta-secondary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,36,53,0.10); color: #1A2435; }
       `}</style>
-
-      {/* Theme toggle — desktop only */}
-      <div className="hidden lg:flex" style={{
-        position: 'fixed', bottom: 32, right: 24, zIndex: 100,
-        alignItems: 'center', gap: 8,
-        background: dark ? '#142238' : '#fff',
-        border: `1px solid ${C.border}`,
-        borderRadius: 99, padding: '6px 14px',
-        boxShadow: '0 2px 12px rgba(0,0,0,0.12)',
-        cursor: 'pointer', fontSize: 12, fontWeight: 600,
-        color: C.muted,
-      }} onClick={() => setDark(d => !d)}>
-        <span>{dark ? '☀' : '🌙'}</span>
-        <span>{dark ? 'Light' : 'Dark'}</span>
-      </div>
 
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 2rem' }}>
 
