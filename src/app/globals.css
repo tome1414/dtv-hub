@@ -223,6 +223,14 @@
   box-shadow: 0 1px 0 #7a5e1a !important;
 }
 
+/* Mobile bottom nav clearance */
+@media (max-width: 1024px) {
+  main > div:first-child,
+  main > section:first-child {
+    padding-bottom: max(80px, env(safe-area-inset-bottom, 80px));
+  }
+}
+
 @layer utilities {
   .line-clamp-2 {
     display: -webkit-box;

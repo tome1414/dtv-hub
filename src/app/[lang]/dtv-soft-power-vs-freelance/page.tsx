@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
-import { Scale, CheckCircle, XCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 interface PageProps {
@@ -21,6 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 const content = {
   ja: {
+    category: '比較記事',
     title: 'ソフトパワー vs フリーランス',
     subtitle: 'あなたに合ったDTVビザの申請ルートはどちら？',
     intro: 'DTVビザには2つの主要な申請ルートがあります。それぞれに必要な書類と条件が異なるため、自分の状況に合ったルートを選ぶことが審査通過の近道です。',
@@ -62,11 +62,12 @@ const content = {
         '書類準備に時間がかかる',
       ],
     },
-    recommendation: 'ソフトパワールートの方が書類要件が明確で審査が通りやすいケースが多いです。特にゴルフDTVは入学許可書が取得でき、申請実績も豊富です。',
+    recommendation: 'ルート選択に迷う場合は、自分の書類状況・目的・スケジュールを整理してから判断することをおすすめします。不明な点は申請先公館の最新案内を確認してください。',
     ctaPrimary: 'ゴルフDTVの詳細を見る',
     ctaSecondary: '申請方法を確認する',
   },
   en: {
+    category: 'Comparison',
     title: 'Soft Power vs Freelance',
     subtitle: 'Which DTV visa route is right for you?',
     intro: 'DTV visa has two main application routes. Each requires different documents and criteria, so choosing the right route for your situation is key to a successful application.',
@@ -108,38 +109,98 @@ const content = {
         'Document preparation takes longer',
       ],
     },
-    recommendation: 'The Soft Power route tends to have clearer criteria and more consistent approval rates. Golf DTV in particular offers a 5-day program with a well-established track record for visa approvals.',
+    recommendation: 'If you\'re unsure which route to take, we recommend reviewing your document situation, goals, and timeline before deciding. For any unclear points, check the latest guidance from the applying embassy.',
     ctaPrimary: 'View Golf DTV Program',
     ctaSecondary: 'Check Application Process',
   },
+  ko: {
+    category: '비교 기사',
+    title: '소프트파워 vs 프리랜서',
+    subtitle: '나에게 맞는 DTV 비자 신청 루트는?',
+    intro: 'DTV 비자에는 두 가지 주요 신청 루트가 있습니다. 각각 필요한 서류와 조건이 다르므로 자신의 상황에 맞는 루트를 선택하는 것이 심사 통과의 지름길입니다.',
+    tableHead: ['비교 항목', '소프트파워 루트', '프리랜서/리모트 루트'],
+    rows: [
+      ['대상자', '태국 문화·스포츠 활동 참가자', '리모트 워커·프리랜서'],
+      ['수입 증명', '불필요 (프로그램 참가가 근거)', '필요 (고용 계약서·수입 증명)'],
+      ['특별 서류', '인정 프로그램 입학 허가서', '고용 증명 또는 사업 증명'],
+      ['재정 증명', '필요 (잔고 증명 등)', '필요 (잔고 증명 등)'],
+      ['준비 기간', '1~2주', '3~4주'],
+    ],
+    softPower: {
+      title: '소프트파워 루트가 맞는 분',
+      pros: [
+        '직장인·자영업자 누구나 신청 가능',
+        '프리랜서 증명 서류 준비가 어려운 분',
+        '태국 문화·스포츠에 관심 있는 분',
+        '빠른 비자 취득을 원하는 분',
+      ],
+      cons: [
+        '인정 프로그램 참가 비용 필요',
+        '실제 프로그램 수강 필요',
+      ],
+    },
+    freelance: {
+      title: '프리랜서 루트가 맞는 분',
+      pros: [
+        '리모트 근무 고용 계약이 있는 분',
+        '안정적인 프리랜서 수입이 있는 분',
+        '프로그램 비용을 피하고 싶은 분',
+      ],
+      cons: [
+        '고용 형태 증명이 복잡해지기 쉬움',
+        '심사 기준이 불명확하여 통과율에 편차',
+      ],
+    },
+    recommendation: '루트 선택에 고민된다면 자신의 서류 상황, 목적, 일정을 정리한 뒤 판단하세요. 불분명한 점은 신청 공관의 최신 안내를 확인해 주세요.',
+    ctaPrimary: '골프DTV 자세히 보기',
+    ctaSecondary: '신청 방법 확인',
+  },
+}
+
+const C = {
+  bg: '#F5F8FA', bgSection: '#EDF1F5', bgCard: '#FFFFFF',
+  text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
+  border: 'rgba(26,36,53,0.10)', borderMd: 'rgba(26,36,53,0.16)',
+  green: '#0A7A6A', tealDim: 'rgba(10,122,106,0.10)',
+}
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }))
 }
 
 export default async function SoftPowerVsFreelancePage({ params }: PageProps) {
   const { lang } = await params
   const locale = (locales.includes(lang as Locale) ? lang : 'en') as Locale
-  const c = content[locale as keyof typeof content] ?? content.en
+  const c = (content as Record<string, typeof content.en>)[locale] ?? content.en
 
   return (
-    <div className="min-h-screen bg-navy-950 text-white pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div style={{ minHeight: '100vh', background: C.bg, color: C.text, paddingTop: 64, paddingBottom: 80 }}>
+      <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 2rem' }}>
 
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-4">
-            <Scale className="w-8 h-8 text-gold-400" />
-            <h1 className="text-3xl sm:text-4xl font-bold">{c.title}</h1>
+        {/* Header */}
+        <div style={{ padding: '40px 0 36px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: C.tealDim, border: '1px solid rgba(10,122,106,0.2)', borderRadius: 100, padding: '3px 10px 3px 6px', marginBottom: 16 }}>
+            <div style={{ width: 5, height: 5, background: C.green, borderRadius: '50%' }} />
+            <span style={{ fontSize: 11, fontWeight: 700, color: C.green, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{c.category}</span>
           </div>
-          <p className="text-gold-300 text-lg font-semibold mb-3">{c.subtitle}</p>
-          <p className="text-navy-300 leading-relaxed">{c.intro}</p>
+          <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 30, fontWeight: 700, color: C.text, margin: '0 0 10px', letterSpacing: '-0.02em' }}>
+            {c.title}
+          </h1>
+          <p style={{ fontSize: 16, fontWeight: 600, color: C.green, margin: '0 0 12px' }}>{c.subtitle}</p>
+          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.75, margin: 0 }}>{c.intro}</p>
         </div>
 
         {/* Comparison table */}
-        <div className="bg-navy-900 rounded-2xl border border-white/10 overflow-hidden mb-10">
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+        <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, overflow: 'hidden', marginBottom: 28, boxShadow: '0 2px 12px rgba(26,36,53,0.08)' }}>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
               <thead>
-                <tr className="border-b border-white/10">
+                <tr>
                   {c.tableHead.map((h, i) => (
-                    <th key={i} className={`px-4 py-3 text-left font-bold ${i === 1 ? 'text-gold-400' : i === 2 ? 'text-navy-300' : 'text-navy-400'}`}>
+                    <th key={i} style={{
+                      padding: '12px 16px', textAlign: 'left', fontWeight: 700,
+                      background: C.text, color: 'white', fontSize: 12,
+                    }}>
                       {h}
                     </th>
                   ))}
@@ -147,10 +208,10 @@ export default async function SoftPowerVsFreelancePage({ params }: PageProps) {
               </thead>
               <tbody>
                 {c.rows.map((row, i) => (
-                  <tr key={i} className="border-b border-white/5 last:border-0">
-                    <td className="px-4 py-3 text-navy-400 font-medium">{row[0]}</td>
-                    <td className="px-4 py-3 text-white">{row[1]}</td>
-                    <td className="px-4 py-3 text-navy-300">{row[2]}</td>
+                  <tr key={i} style={{ borderBottom: `1px solid ${C.border}` }}>
+                    <td style={{ padding: '11px 16px', color: C.muted, fontWeight: 500, fontSize: 12, background: C.bgSection }}>{row[0]}</td>
+                    <td style={{ padding: '11px 16px', color: C.text, fontWeight: 500 }}>{row[1]}</td>
+                    <td style={{ padding: '11px 16px', color: C.sub }}>{row[2]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -159,61 +220,66 @@ export default async function SoftPowerVsFreelancePage({ params }: PageProps) {
         </div>
 
         {/* Pros/cons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-          <div className="bg-navy-900 rounded-2xl p-6 border border-gold-500/20">
-            <h2 className="font-bold mb-4 text-gold-400">{c.softPower.title}</h2>
-            <ul className="space-y-2 mb-4">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
+
+          {/* Soft Power */}
+          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: 24, boxShadow: '0 2px 12px rgba(26,36,53,0.08)', borderTop: `3px solid ${C.green}` }}>
+            <h2 style={{ fontSize: 13, fontWeight: 700, color: C.green, marginBottom: 16 }}>{c.softPower.title}</h2>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 16 }}>
               {c.softPower.pros.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm">
-                  <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy-200">{item}</span>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={C.green} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span style={{ color: C.sub, lineHeight: 1.5 }}>{item}</span>
                 </li>
               ))}
             </ul>
             {c.softPower.cons.map((item, i) => (
-              <div key={i} className="flex items-start gap-2 text-sm">
-                <XCircle className="w-4 h-4 text-navy-500 flex-shrink-0 mt-0.5" />
-                <span className="text-navy-400">{item}</span>
+              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 12, marginTop: 6 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={C.muted} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
+                  <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+                <span style={{ color: C.muted, lineHeight: 1.5 }}>{item}</span>
               </div>
             ))}
           </div>
 
-          <div className="bg-navy-900 rounded-2xl p-6 border border-white/10">
-            <h2 className="font-bold mb-4 text-navy-300">{c.freelance.title}</h2>
-            <ul className="space-y-2 mb-4">
+          {/* Freelance */}
+          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: 24, boxShadow: '0 2px 12px rgba(26,36,53,0.08)' }}>
+            <h2 style={{ fontSize: 13, fontWeight: 700, color: C.sub, marginBottom: 16 }}>{c.freelance.title}</h2>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 16 }}>
               {c.freelance.pros.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm">
-                  <CheckCircle className="w-4 h-4 text-navy-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy-300">{item}</span>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={C.muted} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span style={{ color: C.sub, lineHeight: 1.5 }}>{item}</span>
                 </li>
               ))}
             </ul>
             {c.freelance.cons.map((item, i) => (
-              <div key={i} className="flex items-start gap-2 text-sm">
-                <XCircle className="w-4 h-4 text-red-500/60 flex-shrink-0 mt-0.5" />
-                <span className="text-navy-400">{item}</span>
+              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 12, marginTop: 6 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E05A5A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
+                  <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+                <span style={{ color: C.muted, lineHeight: 1.5 }}>{item}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Recommendation */}
-        <div className="bg-gold-500/10 border border-gold-500/30 rounded-2xl p-6 mb-10">
-          <p className="text-gold-200 leading-relaxed text-sm">{c.recommendation}</p>
+        {/* Recommendation note */}
+        <div style={{ background: 'rgba(10,122,106,0.06)', border: '1px solid rgba(10,122,106,0.18)', borderLeft: `4px solid ${C.green}`, borderRadius: '0 8px 8px 0', padding: '14px 20px', marginBottom: 32, fontSize: 13, color: C.sub, lineHeight: 1.75 }}>
+          {c.recommendation}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href={`/${locale}/golf-dtv`}
-            className="flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
-          >
+        {/* CTAs */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+          <Link href={`/${locale}/golf-dtv`} className="btn-richb-gold" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             {c.ctaPrimary}
-            <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link
-            href={`/${locale}/dtv-application`}
-            className="flex items-center justify-center gap-2 border border-white/20 text-navy-200 font-semibold px-6 py-3 rounded-xl hover:bg-white/5 transition-colors"
-          >
+          <Link href={`/${locale}/dtv-application`} className="btn-richb-sub" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             {c.ctaSecondary}
           </Link>
         </div>

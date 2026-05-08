@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
-import { CheckCircle, XCircle, ArrowRight, Star } from 'lucide-react'
 import Link from 'next/link'
 
 interface PageProps {
@@ -96,86 +95,139 @@ const content = {
     ctaPrimary: 'Get a Free Consultation',
     ctaSecondary: 'View Application Process',
   },
+  ko: {
+    badge: '태국 정부 인정 프로그램',
+    title: '골프DTV는 나에게 맞을까?',
+    subtitle: '5가지 체크로 1분 만에 알 수 있는 적합성 확인',
+    intro: '골프DTV는 태국 정부 인정 골프스쿨 프로그램을 수강함으로써 DTV 비자(장기 체류 비자)를 취득할 수 있는 서비스입니다. 프리랜서 증명 없이도 신청 가능하여 직장인, 주부, 은퇴자 등 다양한 분들이 이용하고 있습니다.',
+    suitableTitle: '이런 분께 적합합니다',
+    suitable: [
+      '태국 장기 체류(3개월 이상)를 검토 중인 분',
+      '프리랜서 증명 서류 준비가 어려운 분',
+      '골프 경험이 있거나 관심 있는 분',
+      '원활한 비자 취득을 원하는 분',
+    ],
+    unsuitableTitle: '이런 분께는 맞지 않을 수 있습니다',
+    unsuitable: [
+      '골프에 전혀 관심 없어 프로그램 참가를 피하고 싶은 분',
+      '단기 체류(1~2개월)만 예정인 분',
+      '리모트 근무 증명 서류가 있어 프리랜서 루트로 신청 가능한 분',
+    ],
+    program: {
+      title: '골프DTV 프로그램 개요',
+      items: [
+        { label: '장소', value: '태국 방콕 근교 골프 코스' },
+        { label: '레벨', value: '초보자~경험자 대응' },
+        { label: '서류', value: '입학 허가서·추천서 발행' },
+        { label: '보증', value: '전액 환불 보증 플랜 있음' },
+        { label: '실적', value: '다수 DTV 취득 지원 실적' },
+      ],
+    },
+    faq: [
+      { q: '골프 초보자도 괜찮나요?', a: '문제없습니다. 초보자용 커리큘럼도 있으며, 골프 실력은 비자 심사에 영향을 미치지 않습니다.' },
+      { q: '프로그램 후에도 태국에 계속 체류할 수 있나요?', a: 'DTV 취득 후 5년간 유효하며, 1회 입국 시 최대 180일 체류 가능합니다.' },
+      { q: '한국어 지원이 가능한가요?', a: '한국어 지원도 가능합니다. 먼저 무료 상담을 이용해 주세요.' },
+    ],
+    ctaPrimary: '무료 상담하기',
+    ctaSecondary: '신청 절차 보기',
+  },
+}
+
+const C = {
+  bg: '#F5F8FA', bgSection: '#EDF1F5', bgCard: '#FFFFFF',
+  text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
+  border: 'rgba(26,36,53,0.10)', borderMd: 'rgba(26,36,53,0.16)',
+  green: '#0A7A6A', tealDim: 'rgba(10,122,106,0.10)',
+}
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }))
 }
 
 export default async function WhoShouldChooseGolfDtvPage({ params }: PageProps) {
   const { lang } = await params
   const locale = (locales.includes(lang as Locale) ? lang : 'en') as Locale
-  const c = content[locale as keyof typeof content] ?? content.en
+  const c = (content as Record<string, typeof content.en>)[locale] ?? content.en
 
   return (
-    <div className="min-h-screen bg-navy-950 text-white pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div style={{ minHeight: '100vh', background: C.bg, color: C.text, paddingTop: 64, paddingBottom: 80 }}>
+      <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 2rem' }}>
 
-        <div className="mb-10">
-          <span className="inline-flex items-center gap-1.5 bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
-            <Star className="w-3 h-3" />
-            {c.badge}
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{c.title}</h1>
-          <p className="text-gold-300 text-lg font-semibold mb-3">{c.subtitle}</p>
-          <p className="text-navy-300 leading-relaxed">{c.intro}</p>
+        {/* Header */}
+        <div style={{ padding: '40px 0 32px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: C.tealDim, border: '1px solid rgba(10,122,106,0.2)', borderRadius: 100, padding: '3px 10px 3px 6px', marginBottom: 16 }}>
+            <div style={{ width: 5, height: 5, background: C.green, borderRadius: '50%' }} />
+            <span style={{ fontSize: 11, fontWeight: 700, color: C.green, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {c.badge}
+            </span>
+          </div>
+          <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 30, fontWeight: 700, color: C.text, margin: '0 0 10px', letterSpacing: '-0.02em' }}>
+            {c.title}
+          </h1>
+          <p style={{ fontSize: 15, fontWeight: 600, color: C.green, margin: '0 0 12px' }}>{c.subtitle}</p>
+          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.75, margin: 0 }}>{c.intro}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-          <div className="bg-navy-900 rounded-2xl p-6 border border-gold-500/20">
-            <h2 className="font-bold text-gold-400 mb-4">{c.suitableTitle}</h2>
-            <ul className="space-y-3">
+        {/* Suitable / Unsuitable */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
+          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderTop: `3px solid ${C.green}`, borderRadius: 12, padding: 24, boxShadow: '0 2px 12px rgba(26,36,53,0.08)' }}>
+            <h2 style={{ fontSize: 13, fontWeight: 700, color: C.green, marginBottom: 16 }}>{c.suitableTitle}</h2>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {c.suitable.map((item, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-sm">
-                  <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy-200">{item}</span>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={C.green} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span style={{ color: C.sub, lineHeight: 1.5 }}>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-navy-900 rounded-2xl p-6 border border-white/10">
-            <h2 className="font-bold text-navy-400 mb-4">{c.unsuitableTitle}</h2>
-            <ul className="space-y-3">
+          <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: 24, boxShadow: '0 2px 12px rgba(26,36,53,0.08)' }}>
+            <h2 style={{ fontSize: 13, fontWeight: 700, color: C.muted, marginBottom: 16 }}>{c.unsuitableTitle}</h2>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {c.unsuitable.map((item, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-sm">
-                  <XCircle className="w-4 h-4 text-navy-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-navy-400">{item}</span>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={C.muted} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
+                    <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                  </svg>
+                  <span style={{ color: C.muted, lineHeight: 1.5 }}>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="bg-navy-900 rounded-2xl p-6 border border-white/10 mb-10">
-          <h2 className="font-bold mb-5">{c.program.title}</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {/* Program overview */}
+        <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: 24, marginBottom: 24, boxShadow: '0 2px 12px rgba(26,36,53,0.08)' }}>
+          <h2 style={{ fontSize: 14, fontWeight: 700, color: C.text, marginBottom: 18 }}>{c.program.title}</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 12 }}>
             {c.program.items.map((item, i) => (
-              <div key={i} className="bg-navy-950/60 rounded-xl p-4">
-                <div className="text-xs text-navy-400 mb-1">{item.label}</div>
-                <div className="text-sm font-semibold text-white">{item.value}</div>
+              <div key={i} style={{ background: C.bgSection, borderRadius: 8, padding: '12px 14px' }}>
+                <div style={{ fontSize: 10, color: C.muted, marginBottom: 4 }}>{item.label}</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: C.text }}>{item.value}</div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="space-y-4 mb-10">
+        {/* FAQ */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 32 }}>
           {c.faq.map((item, i) => (
-            <div key={i} className="bg-navy-900 rounded-2xl p-5 border border-white/10">
-              <p className="font-bold text-sm mb-2 text-gold-300">Q. {item.q}</p>
-              <p className="text-sm text-navy-300 leading-relaxed">A. {item.a}</p>
+            <div key={i} style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 10, padding: '16px 20px', boxShadow: '0 1px 4px rgba(26,36,53,0.06)' }}>
+              <p style={{ fontSize: 13, fontWeight: 700, color: C.green, marginBottom: 6 }}>Q. {item.q}</p>
+              <p style={{ fontSize: 13, color: C.sub, lineHeight: 1.7, margin: 0 }}>A. {item.a}</p>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href={`/${locale}/golf-dtv#inquiry`}
-            className="flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
-          >
+        {/* CTAs */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+          <Link href={`/${locale}/golf-dtv#inquiry`} className="btn-richb-primary" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             {c.ctaPrimary}
-            <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link
-            href={`/${locale}/dtv-application`}
-            className="flex items-center justify-center gap-2 border border-white/20 text-navy-200 font-semibold px-6 py-3 rounded-xl hover:bg-white/5 transition-colors"
-          >
+          <Link href={`/${locale}/dtv-application`} className="btn-richb-sub" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             {c.ctaSecondary}
           </Link>
         </div>

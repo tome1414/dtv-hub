@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Calendar, Clock, ChevronRight } from 'lucide-react'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
 import { getAllBlogPostsMeta } from '@/lib/blog'
@@ -10,103 +9,119 @@ interface PageProps {
 }
 
 const categoryLabelJa: Record<string, string> = {
-  comparison: '比較記事',
-  basic: '基本ガイド',
-  process: '申請実務',
-  documents: '必要書類',
-  'soft-power': 'ソフトパワー',
-  freelance: 'フリーランス',
-  locations: '地域ガイド',
-  'life-in-thailand': 'タイ生活',
+  comparison: '比較記事', basic: '基本ガイド', process: '申請実務',
+  documents: '必要書類', 'soft-power': 'ソフトパワー',
+  freelance: 'フリーランス', locations: '地域ガイド', 'life-in-thailand': 'タイ生活',
 }
-
 const categoryLabelEn: Record<string, string> = {
-  comparison: 'Comparison',
-  basic: 'Guide',
-  process: 'Application',
-  documents: 'Documents',
-  'soft-power': 'Soft Power',
-  freelance: 'Freelance',
-  locations: 'Locations',
-  'life-in-thailand': 'Life in Thailand',
+  comparison: 'Comparison', basic: 'Guide', process: 'Application',
+  documents: 'Documents', 'soft-power': 'Soft Power',
+  freelance: 'Freelance', locations: 'Locations', 'life-in-thailand': 'Life in Thailand',
 }
-
 const categoryLabelKo: Record<string, string> = {
-  comparison: '비교 기사',
-  basic: '기본 가이드',
-  process: '신청 실무',
-  documents: '필요 서류',
-  'soft-power': '소프트파워',
-  freelance: '프리랜서',
-  locations: '지역 가이드',
-  'life-in-thailand': '태국 생활',
+  comparison: '비교 기사', basic: '기본 가이드', process: '신청 실무',
+  documents: '필요 서류', 'soft-power': '소프트파워',
+  freelance: '프리랜서', locations: '지역 가이드', 'life-in-thailand': '태국 생활',
 }
 
 export default async function BlogListPage({ params }: PageProps) {
   const { lang } = await params
   const locale = (locales.includes(lang as Locale) ? lang : 'ja') as Lang
   const posts = getAllBlogPostsMeta(locale)
+  const catLabels = locale === 'ja' ? categoryLabelJa : locale === 'ko' ? categoryLabelKo : categoryLabelEn
+  const isJa = locale === 'ja'
+  const isKo = locale === 'ko'
 
   return (
-    <div className="min-h-screen bg-navy-950 text-white pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div style={{ minHeight: '100vh', background: '#F5F8FA', color: '#1A2435', paddingTop: 64, paddingBottom: 80 }}>
 
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-3">
-            {locale === 'ja' ? 'DTV Club ブログ' : 'DTV Club Blog'}
+      <style>{`
+        .blog-card:hover { border-color: rgba(10,122,106,0.25) !important; box-shadow: 0 4px 20px rgba(26,36,53,0.10) !important; transform: translateY(-1px); }
+        .blog-card { transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+        .blog-card-title { transition: color 0.15s; }
+        .blog-card:hover .blog-card-title { color: #0A7A6A !important; }
+      `}</style>
+
+      <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 2rem' }}>
+
+        {/* Header */}
+        <div style={{ padding: '40px 0 32px', borderBottom: '1px solid rgba(26,36,53,0.10)' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(10,122,106,0.10)', border: '1px solid rgba(10,122,106,0.2)', borderRadius: 100, padding: '3px 12px', marginBottom: 16 }}>
+            <div style={{ width: 5, height: 5, background: '#0A7A6A', borderRadius: '50%' }} />
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#0A7A6A', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              {isJa ? 'ブログ・記事' : isKo ? '블로그' : 'Articles'}
+            </span>
+          </div>
+          <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 30, fontWeight: 700, color: '#1A2435', margin: '0 0 10px', letterSpacing: '-0.02em' }}>
+            {isJa ? 'DTV Club ブログ' : isKo ? 'DTV Club 블로그' : 'DTV Club Blog'}
           </h1>
-          <p className="text-navy-400 text-lg">
-            {locale === 'ja'
-              ? 'タイ長期滞在ビザ（DTV）の比較・申請・生活情報を中立的に解説します。'
+          <p style={{ fontSize: 14, color: '#4A5A6E', lineHeight: 1.7, margin: 0 }}>
+            {isJa
+              ? 'タイ長期滞在ビザ（DTV）の比較・申請・生活情報を一次情報に基づき解説します。'
+              : isKo
+              ? '태국 장기 체류 비자(DTV)의 비교·신청·생활 정보를 일차 정보에 근거하여 해설합니다.'
               : 'Neutral guides on Thailand long-stay visas, DTV applications, and life in Thailand.'}
           </p>
         </div>
 
-        {posts.length === 0 ? (
-          <div className="bg-navy-900 rounded-2xl p-8 border border-white/10 text-center">
-            <p className="text-navy-400">
-              {locale === 'ja' ? '記事を準備中です。しばらくお待ちください。' : locale === 'ko' ? '기사를 준비 중입니다. 잠시 기다려 주세요.' : 'Articles coming soon.'}
-            </p>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {posts.map((post) => {
-              const categoryLabel = locale === 'ja' ? categoryLabelJa : locale === 'ko' ? categoryLabelKo : categoryLabelEn
-              return (
+        {/* Articles */}
+        <div style={{ paddingTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {posts.length === 0 ? (
+            <div style={{ background: '#FFFFFF', border: '1px solid rgba(26,36,53,0.10)', borderRadius: 12, padding: 32, textAlign: 'center', color: '#7E8EA4', fontSize: 14 }}>
+              {isJa ? '記事を準備中です。しばらくお待ちください。' : isKo ? '기사를 준비 중입니다. 잠시 기다려 주세요.' : 'Articles coming soon.'}
+            </div>
+          ) : (
+            posts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/${locale}/blog/${post.slug}`}
-                className="group block bg-navy-900 border border-white/5 rounded-2xl p-6 hover:border-gold-500/30 transition-all"
+                className="blog-card"
+                style={{
+                  display: 'block', textDecoration: 'none',
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(26,36,53,0.10)',
+                  borderRadius: 12, padding: '20px 24px',
+                  boxShadow: '0 1px 4px rgba(26,36,53,0.06)',
+                }}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center px-2.5 py-0.5 bg-gold-500/20 border border-gold-500/40 text-gold-500 text-xs font-bold rounded-full">
-                        {categoryLabel[post.primary_category] ?? post.primary_category}
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    {/* Category pill */}
+                    <div style={{ marginBottom: 10 }}>
+                      <span style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 5,
+                        background: 'rgba(10,122,106,0.10)',
+                        border: '1px solid rgba(10,122,106,0.2)',
+                        borderRadius: 100, padding: '2px 9px 2px 6px',
+                        fontSize: 10, fontWeight: 700, color: '#0A7A6A',
+                        textTransform: 'uppercase', letterSpacing: '0.05em',
+                      }}>
+                        <span style={{ width: 4, height: 4, background: '#0A7A6A', borderRadius: '50%', display: 'inline-block', flexShrink: 0 }} />
+                        {catLabels[post.primary_category] ?? post.primary_category}
                       </span>
                     </div>
-                    <h2 className="text-lg font-bold text-white group-hover:text-gold-300 transition-colors mb-2 leading-snug">
+                    <h2 className="blog-card-title" style={{ fontSize: 16, fontWeight: 700, color: '#1A2435', margin: '0 0 8px', lineHeight: 1.45 }}>
                       {post.title}
                     </h2>
-                    <p className="text-sm text-navy-400 line-clamp-2 mb-4">{post.excerpt}</p>
-                    <div className="flex items-center gap-4 text-xs text-navy-500">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5" />
-                        <span>{post.published_at}</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5" />
-                        <span>{locale === 'ja' ? `約${post.read_time_minutes}分` : locale === 'ko' ? `약 ${post.read_time_minutes}분` : `${post.read_time_minutes} min read`}</span>
-                      </div>
+                    <p style={{ fontSize: 13, color: '#4A5A6E', lineHeight: 1.65, margin: '0 0 14px' }} className="line-clamp-2">
+                      {post.excerpt}
+                    </p>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 11, color: '#7E8EA4' }}>
+                      <span>{post.published_at}</span>
+                      <span>·</span>
+                      <span>
+                        {isJa ? `約${post.read_time_minutes}分` : isKo ? `약 ${post.read_time_minutes}분` : `${post.read_time_minutes} min read`}
+                      </span>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-navy-500 group-hover:text-gold-400 transition-colors flex-shrink-0 mt-1" />
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7E8EA4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}>
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
                 </div>
               </Link>
-            )
-            })}
-          </div>
-        )}
+            ))
+          )}
+        </div>
 
       </div>
     </div>

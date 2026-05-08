@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
-import { ClipboardList, CheckCircle, AlertCircle, ArrowRight, Clock } from 'lucide-react'
 import Link from 'next/link'
 
 interface PageProps {
@@ -44,7 +43,7 @@ const content = {
         items: [
           'パスポート（残存18ヶ月以上）・証明写真・申請書',
           '財政証明：残高証明書（英語）・過去3〜6ヶ月の明細',
-          '海外健康保険の証書（補償額40,000USD以上推奨）',
+          '書類要件の詳細は申請先公館の最新案内を確認してください',
           'ソフトパワーの場合：入学許可書・プログラム料金支払い証明',
         ],
       },
@@ -85,6 +84,7 @@ const content = {
         ],
       },
     ],
+    tipsTitle: '申請時の注意点',
     tips: [
       '申請書類は大使館によって細かい要件が異なるため、必ず事前に公式サイトで確認してください',
       '財政証明は「英語」で発行してもらう必要があります。日本語の証明書には公証翻訳が必要です',
@@ -118,7 +118,7 @@ const content = {
         items: [
           'Passport (18+ months validity), photos, application form',
           'Financial proof: English bank statement, 3–6 months of transactions',
-          'International health insurance (USD 40,000+ coverage recommended)',
+          'Check the latest requirements from your applying embassy',
           'Soft Power only: acceptance letter and proof of program payment',
         ],
       },
@@ -157,6 +157,7 @@ const content = {
         ],
       },
     ],
+    tipsTitle: 'Important Notes',
     tips: [
       'Requirements vary by embassy — always check the official website before applying',
       'Financial documents must be in English. Japanese-language documents require certified translation',
@@ -168,47 +169,73 @@ const content = {
   },
 }
 
+const C = {
+  bg: '#F5F8FA', bgSection: '#EDF1F5', bgCard: '#FFFFFF',
+  text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
+  border: 'rgba(26,36,53,0.10)',
+  green: '#0A7A6A', tealDim: 'rgba(10,122,106,0.10)',
+}
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }))
+}
+
 export default async function DtvApplicationPage({ params }: PageProps) {
   const { lang } = await params
   const locale = (locales.includes(lang as Locale) ? lang : 'en') as Locale
-  const c = content[locale as keyof typeof content] ?? content.en
+  const c = (content as Record<string, typeof content.en>)[locale] ?? content.en
 
   return (
-    <div className="min-h-screen bg-navy-950 text-white pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div style={{ minHeight: '100vh', background: C.bg, color: C.text, paddingTop: 64, paddingBottom: 80 }}>
+      <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 2rem' }}>
 
-        <div className="mb-10">
-          <span className="inline-flex items-center gap-1.5 bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
-            {c.badge}
-          </span>
-          <div className="flex items-center gap-3 mb-4">
-            <ClipboardList className="w-8 h-8 text-gold-400" />
-            <h1 className="text-3xl sm:text-4xl font-bold">{c.title}</h1>
+        {/* Header */}
+        <div style={{ padding: '40px 0 32px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: C.tealDim, border: '1px solid rgba(10,122,106,0.2)', borderRadius: 100, padding: '3px 10px 3px 6px', marginBottom: 16 }}>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke={C.green} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <span style={{ fontSize: 11, fontWeight: 700, color: C.green, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{c.badge}</span>
           </div>
-          <p className="text-navy-300 text-lg">{c.subtitle}</p>
+          <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 30, fontWeight: 700, color: C.text, margin: '0 0 10px', letterSpacing: '-0.02em' }}>
+            {c.title}
+          </h1>
+          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.7, margin: 0 }}>{c.subtitle}</p>
         </div>
 
-        <div className="space-y-6 mb-12">
+        {/* Steps */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 24 }}>
           {c.steps.map((step) => (
-            <div key={step.num} className="bg-navy-900 rounded-2xl p-6 border border-white/10">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 font-bold flex-shrink-0">
+            <div key={step.num} style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: '20px 24px', boxShadow: '0 2px 8px rgba(26,36,53,0.06)' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
+                <div style={{
+                  width: 36, height: 36, flexShrink: 0,
+                  borderRadius: '50%', border: `2px solid ${C.green}`,
+                  background: C.tealDim,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 14, fontWeight: 800, color: C.green,
+                }}>
                   {step.num}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h2 className="text-lg font-bold">{step.title}</h2>
-                    <span className="flex items-center gap-1 text-xs text-navy-400 bg-navy-800 px-2 py-0.5 rounded-full">
-                      <Clock className="w-3 h-3" />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+                    <h2 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: 0 }}>{step.title}</h2>
+                    <span style={{ fontSize: 11, color: C.muted, background: C.bgSection, padding: '2px 8px', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 4 }}>
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                      </svg>
                       {step.duration}
                     </span>
                   </div>
-                  <p className="text-navy-300 text-sm mb-4 leading-relaxed">{step.desc}</p>
-                  <ul className="space-y-2">
+                  <p style={{ fontSize: 13, color: C.sub, margin: '0 0 12px', lineHeight: 1.7 }}>{step.desc}</p>
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 7 }}>
                     {step.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2.5">
-                        <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-navy-200">{item}</span>
+                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 12 }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={C.green} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}>
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span style={{ color: C.sub, lineHeight: 1.5 }}>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -218,33 +245,30 @@ export default async function DtvApplicationPage({ params }: PageProps) {
           ))}
         </div>
 
-        <div className="bg-amber-950/40 border border-amber-500/30 rounded-2xl p-6 mb-10">
-          <div className="flex items-center gap-2 mb-4">
-            <AlertCircle className="w-5 h-5 text-amber-400" />
-            <h3 className="font-bold text-amber-300">{locale === 'ja' ? '申請時の注意点' : 'Important Notes'}</h3>
+        {/* Tips callout */}
+        <div style={{ background: '#FFF9EC', border: '1px solid #E8D5A0', borderLeft: '4px solid #C9A030', borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: 32 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A030" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <h3 style={{ fontSize: 12, fontWeight: 700, color: '#7A5E1A', margin: 0 }}>{c.tipsTitle}</h3>
           </div>
-          <ul className="space-y-2">
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
             {c.tips.map((tip, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-amber-200/80">
-                <span className="text-amber-400 flex-shrink-0">•</span>
+              <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 12, color: '#6B4F1A', lineHeight: 1.65 }}>
+                <span style={{ color: '#C9A030', flexShrink: 0 }}>•</span>
                 {tip}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href={`/${locale}/golf-dtv`}
-            className="flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
-          >
+        {/* CTAs */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+          <Link href={`/${locale}/golf-dtv`} className="btn-richb-gold" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             {c.ctaPrimary}
-            <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link
-            href={`/${locale}/requirements`}
-            className="flex items-center justify-center gap-2 border border-white/20 text-navy-200 font-semibold px-6 py-3 rounded-xl hover:bg-white/5 transition-colors"
-          >
+          <Link href={`/${locale}/requirements`} className="btn-richb-sub" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             {c.ctaSecondary}
           </Link>
         </div>
