@@ -39,6 +39,12 @@ const categoryLabelRu: Record<string, string> = {
   freelance: 'Фриланс', locations: 'Регионы', 'life-in-thailand': 'Жизнь в Таиланде',
 }
 
+const categoryLabelZh: Record<string, string> = {
+  comparison: '比较', basic: '指南', process: '申请实务',
+  documents: '所需材料', 'soft-power': '软实力签证',
+  freelance: '自由职业', locations: '地区', 'life-in-thailand': '泰国生活',
+}
+
 const staticCategories = {
   ja: [
     { cat: '申請ガイド', href: '/requirements', label: 'DTVビザの書類と申請フロー' },
@@ -60,6 +66,11 @@ const staticCategories = {
     { cat: 'Soft Power', href: '/soft-power', label: 'Программы, сертифицированные Таиландом' },
     { cat: 'Сравнение', href: '/dtv-soft-power-vs-freelance', label: 'Плюсы и минусы каждого маршрута' },
   ],
+  zh: [
+    { cat: '申请指南', href: '/requirements', label: 'DTV签证材料与申请流程' },
+    { cat: '软实力签证', href: '/soft-power', label: '泰国政府认证项目通道' },
+    { cat: '路径比较', href: '/dtv-soft-power-vs-freelance', label: '各路径优缺点对比' },
+  ],
 }
 
 interface Props {
@@ -73,8 +84,9 @@ export default function HomePageClient({ posts, locale }: Props) {
   const isJa = locale === 'ja'
   const isKo = locale === 'ko'
   const isRu = locale === 'ru'
+  const isZh = locale === 'zh'
   const cats = staticCategories[locale as keyof typeof staticCategories] ?? staticCategories.en
-  const categoryLabel = isJa ? categoryLabelJa : isKo ? categoryLabelKo : isRu ? categoryLabelRu : categoryLabelEn
+  const categoryLabel = isJa ? categoryLabelJa : isKo ? categoryLabelKo : isRu ? categoryLabelRu : isZh ? categoryLabelZh : categoryLabelEn
 
   const featured = posts[0]
   const secondary = posts.slice(1, 3)
@@ -88,6 +100,8 @@ export default function HomePageClient({ posts, locale }: Props) {
           ? 'DTV Club - 태국 DTV 비자 비교·신청·생활 정보 미디어. 소프트파워 비자, 필요 서류, 신청 방법을 중립적으로 해설합니다.'
           : isRu
           ? 'DTV Club — информационный портал о визе DTV в Таиланд. Нейтральные гиды по Soft Power визе, необходимым документам и подаче заявки.'
+          : isZh
+          ? 'DTV Club - 泰国DTV签证比较·申请·生活信息媒体。中立解说软实力签证、所需材料及申请方法。'
           : 'DTV Club - Thailand DTV Visa information media. Neutral guides on Soft Power visa, required documents, and application.'}
       </p>
 
@@ -204,7 +218,7 @@ export default function HomePageClient({ posts, locale }: Props) {
                 fontSize: 11, fontWeight: 500, color: C.green, letterSpacing: '0.04em',
               }}>
                 <span style={{ width: 5, height: 5, borderRadius: '50%', background: C.green, flexShrink: 0 }} />
-                {isJa ? 'Destination Thailand Visa — 専門メディア' : isKo ? 'Destination Thailand Visa — 전문 미디어' : isRu ? 'Destination Thailand Visa — Медиа' : 'Destination Thailand Visa — Media'}
+                {isJa ? 'Destination Thailand Visa — 専門メディア' : isKo ? 'Destination Thailand Visa — 전문 미디어' : isRu ? 'Destination Thailand Visa — Медиа' : isZh ? 'Destination Thailand Visa — 专业媒体' : 'Destination Thailand Visa — Media'}
               </div>
 
               {/* H1 */}
@@ -215,6 +229,8 @@ export default function HomePageClient({ posts, locale }: Props) {
                   <>태국에서의 새로운 삶을,<br /><span style={{ color: C.green }}>정확한 정보</span>로<br />시작하세요.</>
                 ) : isRu ? (
                   <>Новая жизнь в Таиланде —<br />начни с <span style={{ color: C.green }}>точной информации.</span></>
+                ) : isZh ? (
+                  <>在泰国开始新生活，<br />从<span style={{ color: C.green }}>准确的信息</span>出发。</>
                 ) : (
                   <>A new life in Thailand,<br />starting with <span style={{ color: C.green }}>accurate info.</span></>
                 )}
@@ -228,23 +244,25 @@ export default function HomePageClient({ posts, locale }: Props) {
                   ? 'DTV 비자 비교·신청·필요 서류·생활 준비까지, 1차 정보를 바탕으로 중립적으로 해설하는 DTV 전문 미디어입니다.'
                   : isRu
                   ? 'Нейтральные гиды по сравнению, подаче, документам и жизни в Таиланде по визе DTV. На основе официальных источников.'
+                  : isZh
+                  ? 'DTV签证比较、申请、所需材料及泰国生活的中立指南。基于官方信息来源。'
                   : 'Neutral guides on DTV visa comparison, application, requirements, and life in Thailand. Based on official sources.'}
               </p>
 
               {/* CTAs */}
               <Link href={`/${locale}/blog`} className="hero-cta-primary">
-                <span>{isJa ? '自分に合うビザを比較する' : isKo ? '나에게 맞는 비자 비교하기' : isRu ? 'Сравнить визы' : 'Compare Visas for You'}</span>
+                <span>{isJa ? '自分に合うビザを比較する' : isKo ? '나에게 맞는 비자 비교하기' : isRu ? 'Сравнить визы' : isZh ? '比较适合我的签证' : 'Compare Visas for You'}</span>
                 <span style={{ fontSize: 10, fontWeight: 500, background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap' }}>
-                  {isJa ? '初めての方はここから' : isKo ? '처음 오신 분' : isRu ? 'Начни здесь' : 'Start here'}
+                  {isJa ? '初めての方はここから' : isKo ? '처음 오신 분' : isRu ? 'Начни здесь' : isZh ? '从这里开始' : 'Start here'}
                 </span>
               </Link>
               <Link href={`/${locale}/guide`} className="hero-cta-secondary">
-                <span>{isJa ? 'DTV申請の流れを見る' : isKo ? 'DTV 신청 절차 보기' : isRu ? 'Процесс подачи DTV' : 'See Application Flow'}</span>
-                <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請準備中の方へ' : isKo ? '신청 준비 중' : isRu ? 'Для заявителей' : 'For applicants'}</span>
+                <span>{isJa ? 'DTV申請の流れを見る' : isKo ? 'DTV 신청 절차 보기' : isRu ? 'Процесс подачи DTV' : isZh ? '查看DTV申请流程' : 'See Application Flow'}</span>
+                <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請準備中の方へ' : isKo ? '신청 준비 중' : isRu ? 'Для заявителей' : isZh ? '准备申请中' : 'For applicants'}</span>
               </Link>
               <Link href={`/${locale}/requirements`} className="hero-cta-secondary">
-                <span>{isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : isRu ? 'Список документов' : 'Check Requirements'}</span>
-                <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請直前の方へ' : isKo ? '신청 직전' : isRu ? 'Перед подачей' : 'Before applying'}</span>
+                <span>{isJa ? '必要書類を確認する' : isKo ? '필요 서류 확인하기' : isRu ? 'Список документов' : isZh ? '确认所需材料' : 'Check Requirements'}</span>
+                <span style={{ fontSize: 11, color: '#7E8EA4' }}>{isJa ? '申請直前の方へ' : isKo ? '신청 직전' : isRu ? 'Перед подачей' : isZh ? '申请前确认' : 'Before applying'}</span>
               </Link>
 
             </div>
@@ -273,7 +291,7 @@ export default function HomePageClient({ posts, locale }: Props) {
         {featured && (
           <div style={{ paddingTop: 36, paddingBottom: 36, borderBottom: `1px solid ${C.border}` }}>
             <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', color: C.muted, textTransform: 'uppercase', margin: '0 0 20px' }}>
-              {isJa ? '最新記事' : isKo ? '최신 기사' : isRu ? 'Последние статьи' : 'Latest Articles'}
+              {isJa ? '最新記事' : isKo ? '최신 기사' : isRu ? 'Последние статьи' : isZh ? '最新文章' : 'Latest Articles'}
             </p>
             <div className="top-latest" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 36px' }}>
               {[featured, ...secondary].map((post, i) => (
@@ -317,7 +335,7 @@ export default function HomePageClient({ posts, locale }: Props) {
                   <span style={{ fontSize: 9, fontWeight: 700, background: 'rgba(201,160,48,0.18)', color: '#E4B84A', padding: '2px 7px', borderRadius: 4, letterSpacing: '0.06em' }}>Premium</span>
                 </div>
                 <p style={{ fontSize: 'clamp(17px, 2.5vw, 22px)', fontWeight: 700, color: '#fff', margin: '0 0 6px', lineHeight: 1.3, fontFamily: 'Georgia, serif' }}>
-                  {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : isKo ? '태국에서 골프를 즐기며, 장기 체류한다.' : isRu ? 'Играй в гольф в Таиланде. Живи долго.' : 'Play golf in Thailand. Stay long-term.'}
+                  {isJa ? 'タイでゴルフを続けながら、長期滞在する。' : isKo ? '태국에서 골프를 즐기며, 장기 체류한다.' : isRu ? 'Играй в гольф в Таиланде. Живи долго.' : isZh ? '在泰国打高尔夫，长期居留。' : 'Play golf in Thailand. Stay long-term.'}
                 </p>
                 <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.50)', margin: 0, lineHeight: 1.6 }}>
                   {isJa
@@ -326,6 +344,8 @@ export default function HomePageClient({ posts, locale }: Props) {
                     ? '소프트파워 경로로 DTV를 취득. 태국 정부 인증 프로그램으로 입학 허가서를 받을 수 있습니다.'
                     : isRu
                     ? 'Получи визу DTV через маршрут Soft Power с программой, сертифицированной правительством Таиланда.'
+                    : isZh
+                    ? '通过软实力路径获取DTV签证，依托泰国政府认可的项目。'
                     : 'Get your DTV via the Soft Power route with a Thai gov-approved program.'}
                 </p>
               </div>
@@ -341,10 +361,10 @@ export default function HomePageClient({ posts, locale }: Props) {
           <div style={{ marginBottom: 64 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
               <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: C.muted, margin: 0 }}>
-                {isJa ? '記事一覧' : isKo ? '기사 목록' : isRu ? 'Статьи' : 'Articles'}
+                {isJa ? '記事一覧' : isKo ? '기사 목록' : isRu ? 'Статьи' : isZh ? '文章列表' : 'Articles'}
               </p>
               <Link href={`/${locale}/blog`} style={{ fontSize: 12, color: C.green, textDecoration: 'none' }}>
-                {isJa ? 'すべて見る →' : isKo ? '전체 보기 →' : isRu ? 'Все статьи →' : 'See all →'}
+                {isJa ? 'すべて見る →' : isKo ? '전체 보기 →' : isRu ? 'Все статьи →' : isZh ? '查看全部 →' : 'See all →'}
               </Link>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0 36px' }}>
