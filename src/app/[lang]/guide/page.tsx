@@ -156,10 +156,8 @@ export default async function GuidePage({ params }: PageProps) {
             <Link key={g.href} href={`/${locale}${g.href}`} style={{ textDecoration: 'none' }}>
               <div style={{
                 background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 14, padding: '20px 22px',
-                transition: 'box-shadow 0.2s, border-color 0.2s', cursor: 'pointer',
-              }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 20px rgba(10,122,106,0.10)'; (e.currentTarget as HTMLElement).style.borderColor = C.tealMid }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; (e.currentTarget as HTMLElement).style.borderColor = C.border }}>
+                cursor: 'pointer',
+              }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
                   <div style={{ fontSize: 28, flexShrink: 0, lineHeight: 1, marginTop: 2 }}>{g.emoji}</div>
                   <div style={{ flex: 1 }}>
