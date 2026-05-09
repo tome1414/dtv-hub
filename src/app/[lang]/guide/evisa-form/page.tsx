@@ -225,27 +225,27 @@ export default async function EvisaFormPage({ params }: PageProps) {
           <FieldBlock
             label="Marital Status"
             ja="婚姻状況"
-            example="未婚：Single ／ 既婚：Married ／ 離婚：Divorced ／ 死別：Widowed"
+            example={"未婚：Single ／ 既婚：Married ／ 事実婚：Common Law Marriage\n離婚：Divorced ／ 死別：Widowed ／ 別居：Separated\n同性パートナーシップ：Civil Union/Domestic Partnership"}
           >
-            現在の婚姻状況をプルダウンから選択します。未婚の方は「Single」、既婚の方は「Married」、離婚経験がある方は「Divorced」、配偶者と死別した方は「Widowed」を選択します。
+            現在の婚姻状況をプルダウンから選択します。選択肢は以下の7種類です：「Single（未婚）」「Married（既婚）」「Common Law Marriage（事実婚・内縁関係）」「Civil Union/Domestic Partnership（同性パートナーシップ等）」「Widowed（死別）」「Divorced（離婚）」「Separated（別居中）」。法的に婚姻関係にある方は「Married」、現在離婚済みの方は「Divorced」、配偶者と死別した方は「Widowed」を選択します。
           </FieldBlock>
 
           <FieldBlock
             label="Religion"
-            ja="宗教"
-            example="特定の宗教を信仰していない場合：No Religion または None"
-            warn="この項目は審査の可否を直接左右するものではありませんが、正確な情報を記載してください。入力が必須でない場合や「Prefer not to say」の選択肢がある場合もあります。"
+            ja="宗教（表示されない場合あり）"
+            example="仏教：Buddhism ／ キリスト教：Christianity ／ イスラム教：Islam\n信仰なし：No Religion または None"
+            warn="この項目はビザ種別・公館設定によっては表示されない場合があります。フォームに表示された場合のみ入力してください。審査の合否を直接左右する項目ではありませんが、正確な情報を選択してください。"
           >
-            信仰している宗教をプルダウンから選択します。仏教は「Buddhism」、キリスト教は「Christianity」、イスラム教は「Islam」などが選択肢にあります。特定の宗教を信仰していない場合は「No Religion」または「None」を選択するのが一般的です。
+            信仰している宗教をプルダウンから選択します。一般的な選択肢は「Buddhism（仏教）」「Christianity（キリスト教）」「Islam（イスラム教）」「Hinduism（ヒンドゥー教）」「Sikhism（シーク教）」など。特定の宗教を信仰していない場合は「No Religion」または「None」を選択します。この項目がフォームに表示されない場合は、そのまま次へ進んでください。
           </FieldBlock>
 
           <FieldBlock
             label="Current Occupation / Profession"
             ja="現在の職業・職種"
-            example="会社員：Company Employee ／ エンジニア：Software Engineer ／ フリーランス：Freelancer / Self-employed ／ 無職：Unemployed ／ 専業主婦・主夫：Homemaker"
-            warn="フリーランスや個人事業主の場合は「Freelancer」または「Self-employed」と入力します。DTVのWorkcationルートで申請する場合は、実際の職種（例：Web Designer, Marketing Consultant）を具体的に書くと申請内容との整合性が高まります。"
+            example={"会社員：Employee ／ 経営者：Business owner ／ フリーランス：Freelance\n公務員：Government Official ／ 退職者：Retired ／ 学生：Student\n無職：Unemployed ／ その他：Other"}
+            warn="フリーランス・個人事業主の方は「Freelance」を選択します。DTVのWorkcationルートで申請する場合、「Freelance」や「Employee」の選択は雇用契約書・業務委託契約書などの書類と整合性を持たせることが重要です。選択肢に当てはまるものがない場合は「Other」を選択してください。"
           >
-            現在の職業を英語で入力します。テキスト入力欄またはプルダウンで選択する形式になっています。
+            現在の職業をプルダウンから選択します。選択肢は「Business owner（経営者・事業主）」「Employee（会社員・従業員）」「Freelance（フリーランス・自営業）」「Government Official（公務員）」「Retired（退職者）」「Student（学生）」「Unemployed（無職）」「Other（その他）」の8種類です。
           </FieldBlock>
 
           <FieldBlock
@@ -270,10 +270,10 @@ export default async function EvisaFormPage({ params }: PageProps) {
           <FieldBlock
             label="Type of Travel Document"
             ja="渡航書類の種類"
-            example="一般のパスポート：Ordinary Passport"
-            warn="外交旅券（赤いパスポート）をお持ちの方は「Diplomatic Passport」を選択します。通常の青いパスポートをお持ちの方は「Ordinary Passport」で間違いありません。"
+            example={"通常パスポート（青）：PASSPORT\n渡航書：TRAVEL DOCUMENT\n船員手帳：SEAMAN'S BOOK ／ CI証明書：CERTIFICATE OF IDENTITY-C.I"}
+            warn="日本の一般パスポート（青色・赤色のIC旅券）は「PASSPORT」を選択します。「TRAVEL DOCUMENT」は難民旅行証明書などの特殊書類用です。外交旅券も「PASSPORT」カテゴリに含まれます。"
           >
-            所持しているパスポートの種類をプルダウンから選択します。日本で一般的に発行される青色・赤色のパスポートは「Ordinary Passport（通常旅券）」に該当します。
+            所持している渡航書類の種類をプルダウンから選択します。選択肢は「PASSPORT（旅券）」「TRAVEL DOCUMENT（渡航書）」「SEAMAN'S BOOK（船員手帳）」「CERTIFICATE OF IDENTITY-C.I（身分証明書）」の4種類です。日本国パスポートをお持ちの方は「PASSPORT」を選択してください。
           </FieldBlock>
 
           <FieldBlock
@@ -376,14 +376,13 @@ export default async function EvisaFormPage({ params }: PageProps) {
           <FieldBlock
             label="Purpose of Visit"
             ja="渡航目的（DTVルートの選択）"
-            example={
-              'フリーランス・リモートワーカー → 「Workcation」\nゴルフ・料理・武道など文化活動 → 「Soft Power Activities」'
-            }
-            warn="この選択を間違えると、アップロードした書類と申請根拠が合わず審査で問題が生じます。「Workcation」を選ぶと雇用契約書・リモートワーク許可書が必要になります。「Soft Power Activities」を選ぶとタイ施設からの受入レター（Acceptance Letter）が必要になります。どちらか迷う場合は、まずルートの比較記事を確認してください。"
+            example={"リモートワーカー・フリーランス → 「Workcation (digital nomad/remote worker/foreign talent/freelancer)」\nゴルフ・タイ料理・ムエタイなど → 「Thai soft power-related activities (e.g., Muay Thai, Thai culinary training, and medical treatment)」\nDTV保持者の配偶者・20歳未満の子 → 「Spouse and children under 20 years old of DTV visa holders」"}
+            warn="この選択を間違えると、アップロードした書類と申請根拠が合わず審査で追加確認・却下につながる可能性があります。「Workcation」を選ぶと雇用契約書・リモートワーク許可書などが必要になります。「Soft Power Activities」を選ぶとタイ施設からの受入レター（Acceptance Letter）が必要になります。どちらか迷う場合は、ルート比較記事を先に確認してください。"
           >
-            DTVには2つのルートがあり、この項目でどちらで申請するかを選択します。<br /><br />
-            <strong>Workcation（ワーケーション）</strong>は、タイ国外の雇用主またはクライアントのためにタイからリモートで働くことを目的とする申請です。日本の会社に在籍したままタイで仕事をする会社員、海外クライアントと契約しているフリーランサーなどが該当します。<br /><br />
-            <strong>Soft Power Activities（ソフトパワー活動）</strong>は、タイが政策として推進している文化活動（ゴルフ・タイ料理・ムエタイ・伝統工芸など）に参加することを目的とする申請です。仕事の証明書類が不要なため、リモートワークの書類を準備しにくい方に向いています。
+            DTVには主に2つのルートがあり、この項目でどちらで申請するかを選択します。フォームには多数の選択肢がありますが、DTV申請で使用するのは以下の3つのいずれかです。<br /><br />
+            <strong>「Workcation (digital nomad/remote worker/foreign talent/freelancer)」</strong>は、タイ国外の雇用主またはクライアントのためにタイからリモートで働くことを目的とする申請です。日本の会社に在籍したままタイで仕事をする会社員、海外クライアントと契約しているフリーランサーなどが該当します。<br /><br />
+            <strong>「Thai soft power-related activities」</strong>は、タイが政策として推進している文化活動（ゴルフ・タイ料理・ムエタイ・伝統工芸・医療等）に参加することを目的とする申請です。タイの施設が発行する受入レター（Acceptance Letter）が主要書類になります。<br /><br />
+            <strong>「Spouse and children under 20 years old of DTV visa holders」</strong>は、すでにDTVを保持している配偶者または20歳未満の子どもが同伴する場合の選択肢です。
           </FieldBlock>
 
           <FieldBlock
@@ -424,10 +423,10 @@ export default async function EvisaFormPage({ params }: PageProps) {
 
           <FieldBlock
             label="Port of Entry"
-            ja="入国予定空港（入国地点）"
-            example="バンコク：Suvarnabhumi International Airport（スワンナプーム国際空港）またはDon Mueang International Airport（ドンムアン国際空港）"
+            ja="入国予定地点（入国拠点）"
+            example={"空路での入国：International Airport（国際空港）\n海路での入国：Seaport（海港）\n陸路での入国：Border Checkpoint（国境検問所）"}
           >
-            タイへの入国予定空港をプルダウンから選択します。バンコクへ入国する方はスワンナプーム国際空港またはドンムアン国際空港のいずれかを選択します。チェンマイ・プーケットなど他の都市へ直接入国する場合は、該当する空港を選択してください。
+            タイへの入国方法・入国地点の種類をプルダウンから選択します。選択肢は「International Airport（国際空港）」「Seaport（海港）」「Border Checkpoint（国境検問所）」の3カテゴリで、実際の空港名を選ぶ形式になっています。バンコクへ飛行機で入国する方は、スワンナプーム国際空港またはドンムアン国際空港を選択してください。チェンマイ・プーケットなど他の都市へ直接入国する場合は、該当する空港を選択します。陸路または海路での入国を予定している方は対応するカテゴリから選択してください。
           </FieldBlock>
         </section>
 

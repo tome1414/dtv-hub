@@ -22,9 +22,9 @@ const languageLabels: Record<Locale, { short: string; full: string; flag: string
 
 const megaMenuItems = {
   guide: [
-    { label: '大使館別申請ガイド', href: '/guide/embassy' },
+    { label: 'e-Visaフォーム入力ガイド', href: '/guide/evisa-form' },
+    { label: '大使館・申請窓口', href: '/embassy' },
     { label: '書類チェックリスト', href: '/requirements' },
-    { label: '申請フロー図解', href: '/guide/flow' },
     { label: 'よくある質問', href: '/guide/faq' },
   ],
   life: [
