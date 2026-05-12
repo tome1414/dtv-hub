@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface PageProps {
   params: Promise<{ lang: string }>
@@ -12,11 +13,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isJa = lang === 'ja'
   return {
     title: isJa
-      ? 'タイe-Visa（DTV）申請フォームの入力方法を全項目解説'
-      : 'Thailand e-Visa DTV Application Form: Every Field Explained',
+      ? 'タイe-Visa（DTV）申請フォームの入力方法を全項目解説 | thaievisa.go.th'
+      : 'Thailand e-Visa (DTV) Application Form: Complete Field-by-Field Guide',
     description: isJa
-      ? 'thaievisa.go.th のDTV申請フォームを画面ごとに全項目解説。各入力欄の意味・入力例・よくあるミスを日本語で丁寧に説明します。'
-      : 'A complete field-by-field walkthrough of the Thailand e-Visa DTV application form on thaievisa.go.th, with input examples and warnings.',
+      ? 'thaievisa.go.th のDTV申請フォームを画面ごとに全項目解説。各入力欄の意味・入力例・よくあるミスを実際の画面画像つきで日本語で丁寧に説明します。'
+      : 'A complete walkthrough of every field in the Thailand e-Visa DTV application form with screenshots and examples.',
   }
 }
 
@@ -29,7 +30,7 @@ const C = {
   text: '#1A2435', sub: '#4A5A6E', muted: '#7E8EA4',
   border: 'rgba(26,36,53,0.10)',
   green: '#0A7A6A', tealDim: 'rgba(10,122,106,0.08)', tealMid: 'rgba(10,122,106,0.18)',
-  gold: '#C9A030', goldDim: 'rgba(201,160,48,0.10)',
+  gold: '#C9A030',
 }
 
 export default async function EvisaFormPage({ params }: PageProps) {
@@ -38,22 +39,18 @@ export default async function EvisaFormPage({ params }: PageProps) {
   const isJa = locale === 'ja'
 
   if (!isJa) {
-    // English version – abbreviated for now, full JA below
     return (
       <div style={{ minHeight: '100vh', background: C.bg, paddingTop: 64, paddingBottom: 96 }}>
         <div style={{ maxWidth: 760, margin: '0 auto', padding: '40px 1.25rem' }}>
           <h1 style={{ fontFamily: 'Georgia, serif', fontSize: 28, fontWeight: 700, color: C.text, marginBottom: 12 }}>
             Thailand e-Visa (DTV) Application Form — Complete Guide
           </h1>
-          <p style={{ fontSize: 14, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
-            A detailed walkthrough of every field in the thaievisa.go.th DTV application form, with input examples and notes on common mistakes.
+          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
+            A detailed, screenshot-by-screenshot walkthrough of the thaievisa.go.th DTV application form. English version coming soon.
           </p>
-          <p style={{ fontSize: 13, color: C.muted }}>English version coming soon. Please refer to the Japanese guide for now.</p>
-          <div style={{ marginTop: 24 }}>
-            <Link href={`/ja/guide/evisa-form`} className="btn-richb-primary" style={{ padding: '11px 22px', fontSize: 13, fontFamily: 'inherit' }}>
-              日本語版を見る
-            </Link>
-          </div>
+          <Link href="/ja/guide/evisa-form" className="btn-richb-primary" style={{ padding: '11px 22px', fontSize: 13, fontFamily: 'inherit' }}>
+            日本語版を見る
+          </Link>
         </div>
       </div>
     )
@@ -61,442 +58,303 @@ export default async function EvisaFormPage({ params }: PageProps) {
 
   return (
     <div style={{ minHeight: '100vh', background: C.bg, color: C.text, paddingTop: 64, paddingBottom: 96 }}>
-      <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 1.25rem' }}>
+      <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 1.25rem' }}>
 
         {/* ── ヘッダー ── */}
-        <div style={{ padding: '40px 0 32px' }}>
+        <div style={{ padding: '40px 0 28px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: C.tealDim, border: `1px solid ${C.tealMid}`, borderRadius: 100, padding: '3px 12px 3px 8px', marginBottom: 14 }}>
             <span style={{ fontSize: 15 }}>📋</span>
             <span style={{ fontSize: 11, fontWeight: 700, color: C.green, textTransform: 'uppercase', letterSpacing: '0.07em' }}>
               thaievisa.go.th 入力ガイド
             </span>
           </div>
-          <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 27, fontWeight: 700, color: C.text, margin: '0 0 12px', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-            タイe-Visa（DTV）申請フォームの<br />入力方法を全項目解説
+          <h1 style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: 26, fontWeight: 700, color: C.text, margin: '0 0 14px', lineHeight: 1.35 }}>
+            タイe-Visa（DTV）申請フォームの<br />入力方法を全画面・全項目解説
           </h1>
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, margin: 0, maxWidth: 640 }}>
-            公式サイト（thaievisa.go.th）のDTV申請フォームは全て英語表記です。このページでは、各入力欄に何を・どう入力するかを画面ごとに丁寧に説明します。フォームを開きながらこのページを参照してください。
+          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.85, margin: 0 }}>
+            公式サイト（thaievisa.go.th）のDTV申請フォームは全て英語です。このページでは、実際の入力画面の画像をもとに各欄の意味・入力内容・注意点を日本語で丁寧に解説します。フォームを開きながら参照してください。
           </p>
+          <div style={{ marginTop: 16, padding: '12px 16px', background: '#FFFBF0', border: `1px solid #E8D5A0`, borderLeft: `4px solid ${C.gold}`, borderRadius: '0 8px 8px 0' }}>
+            <p style={{ fontSize: 12.5, color: '#6B4F1A', margin: 0, lineHeight: 1.65 }}>
+              ⚠ このガイドはタイ外務省公式マニュアル（2025年版）をもとに作成しています。フォームの仕様は随時変更される場合があります。申請時は公式サイトの最新表示を優先してください。
+            </p>
+          </div>
         </div>
 
         {/* ── 目次 ── */}
-        <nav style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: '16px 20px', marginBottom: 32 }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: C.muted, margin: '0 0 10px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>このページの内容</p>
-          <ol style={{ margin: 0, padding: '0 0 0 18px', display: 'flex', flexDirection: 'column', gap: 6 }}>
+        <nav style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: '16px 20px', marginBottom: 36 }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: C.muted, margin: '0 0 10px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>このページの内容</p>
+          <ol style={{ margin: 0, padding: '0 0 0 18px', display: 'flex', flexDirection: 'column', gap: 7 }}>
             {[
-              ['step1', 'STEP 1：ビザ種別の選択'],
-              ['step2', 'STEP 2：個人情報の入力'],
-              ['step3', 'STEP 3：パスポート情報'],
-              ['step4', 'STEP 4：連絡先情報'],
-              ['step5', 'STEP 5：渡航情報・申請目的（最重要）'],
-              ['step6', 'STEP 6：書類のアップロード'],
+              ['step1', 'STEP 1：適格確認（国籍・現在地・申請公館・ビザタイプ）'],
+              ['step2', 'STEP 2：申請者情報（パスポート・個人情報・住所・職業）'],
+              ['step3', 'STEP 3：渡航情報（入国日・滞在先・訪問歴）'],
+              ['step4', 'STEP 4：書類のアップロード'],
               ['checklist', '提出前の最終チェックリスト'],
             ].map(([id, label]) => (
               <li key={id}>
-                <a href={`#${id}`} style={{ fontSize: 13, color: C.green, textDecoration: 'none' }}>
-                  {label}
-                </a>
+                <a href={`#${id}`} style={{ fontSize: 13, color: C.green, textDecoration: 'none' }}>{label}</a>
               </li>
             ))}
           </ol>
         </nav>
 
-        {/* ════════════════════════════════════════
-            STEP 1
-        ════════════════════════════════════════ */}
-        <section id="step1" style={{ marginBottom: 40 }}>
-          <StepHeading num={1} title="ビザ種別の選択" screen="SCREEN 1" />
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
-            申請を開始すると最初に表示される基本設定画面です。ここでDTVを選択することで、以降の入力項目がDTV向けに切り替わります。入力内容は少ないですが、ここで設定を誤ると正しい申請フォームが表示されないため、順番通りに確認してください。
+        {/* ════════════════ STEP 1 ════════════════ */}
+        <section id="step1" style={{ marginBottom: 48 }}>
+          <StepHeading num={1} title="適格確認" subtitle="Check your eligibility" />
+
+          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.85, marginBottom: 20 }}>
+            申請フォームの最初の画面です。ここで入力した「国籍・現在地・申請公館」によって、その後の申請内容が決まります。入力ミスをするとDTVのフォームが表示されない場合もあるため、確実に確認しながら進めてください。
           </p>
 
-          <FieldBlock
-            label="Document issuing country/region"
-            ja="旅行書類（パスポート）の発行国"
-            example="Japan"
-          >
-            パスポートを発行した国を選択します。日本のパスポートをお持ちの方は「Japan」を選択してください。この項目は「国籍」ではなく「パスポートを発行した国」を指します。日本に住んでいる外国籍の方が自国のパスポートで申請する場合は、そのパスポートを発行した国を選択してください。
+          <ScreenShot src="/evisa-manual/evisa-manual-p21.png" alt="STEP1 適格確認フォーム画面" caption="STEP1 – Check your eligibility（適格確認）" />
+
+          <FieldBlock label="Country/Territory of Passport/TD" ja="パスポート発行国">
+            所持しているパスポートを発行した国を選択します。日本のパスポートをお持ちの方は <strong>Japan</strong> を選択してください。「国籍」ではなく「パスポートを発行した国」です。外国籍で日本在住の方は、自国のパスポート発行国を選択します。
           </FieldBlock>
 
-          <FieldBlock
-            label="Current location"
-            ja="現在地（申請時に生活・居住している国）"
-            example="Japan"
-          >
-            申請時点で実際に生活・居住している国を選択します。観光旅行中などで一時的に別の国にいる場合ではなく、「現在住んでいる国」を選択します。日本に住んでいる方は「Japan」を選択してください。
+          <FieldBlock label="Current Location" ja="現在地（申請時に住んでいる国）">
+            申請時点で実際に居住している国を選択します。旅行中に別の国から申請する場合は注意が必要です。日本在住の方は <strong>Japan</strong> を選択してください。
           </FieldBlock>
 
-          <FieldBlock
-            label="Place of application"
-            ja="申請場所（管轄のタイ大使館・領事館）"
-            example="Royal Thai Embassy, Tokyo（東京のタイ王国大使館）など管轄の公館"
-            warn="居住地の管轄外の公館を選択することは推奨されていません。日本在住の方は、居住地を管轄するタイ大使館または総領事館を選んでください。"
-          >
-            申請を行うタイ大使館または総領事館を選択します。DTVはe-Visaによるオンライン申請のため、通常は現在地を管轄する公館が選択肢に表示されます。日本在住の方は「Royal Thai Embassy, Tokyo（タイ王国大使館・東京）」「Royal Thai Consulate-General, Osaka（タイ王国総領事館・大阪）」などから、お住まいの地域を管轄する公館を選択してください。
+          <FieldBlock label="Apply at" ja="申請公館（管轄のタイ大使館・領事館）" warn="居住地の管轄外公館への申請は推奨されていません。日本在住の方は、居住地を管轄するタイ大使館または総領事館を選択してください（東京・大阪・福岡・名古屋等）。">
+            申請を行うタイ大使館または総領事館を選択します。日本在住の方は「Royal Thai Embassy, Tokyo（東京）」「Royal Thai Consulate-General, Osaka（大阪）」などから管轄公館を選択します。
           </FieldBlock>
 
-          <FieldBlock
-            label="Visa type"
-            ja="ビザの種類"
-            example='Destination Thailand Visa (DTV)'
-            warn="プルダウンに「DTV」「Destination Thailand Visa」など複数の表記がある場合は、「Destination Thailand Visa (DTV)」を選択してください。この選択によって以降の入力項目がDTV向けに切り替わります。"
-          >
-            申請するビザの種類を選択します。このガイドはDTV（Destination Thailand Visa）の申請を前提としているため、プルダウンから「Destination Thailand Visa (DTV)」を選択してください。タイには観光ビザ・就労ビザなど複数の種類があるため、必ずDTVを選択していることを確認してから次に進んでください。
-          </FieldBlock>
-        </section>
+          <div style={{ height: 1, background: C.border, margin: '28px 0' }} />
 
-        {/* ════════════════════════════════════════
-            STEP 2
-        ════════════════════════════════════════ */}
-        <section id="step2" style={{ marginBottom: 40 }}>
-          <StepHeading num={2} title="個人情報の入力" screen="SCREEN 2" />
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
-            パスポートに記載されている情報をそのまま入力します。スペルや生年月日の形式ミスが最も発生しやすいステップです。パスポートを手元に置いた状態で入力してください。入力内容は残高証明書・雇用契約書など他の書類の名前表記と一致している必要があります。
+          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.85, marginBottom: 16 }}>
+            上記3項目を入力後、「渡航目的（Purpose of Visit）」の選択画面に移ります。<strong>ここがDTV申請で最も重要な選択です。</strong>
           </p>
 
-          <FieldBlock
-            label="Title"
-            ja="敬称"
-            example="男性：Mr. ／ 既婚女性：Mrs. ／ 未婚女性：Miss ／ 指定しない：Ms."
-          >
-            申請者の敬称を選択します。男性は「Mr.」、既婚女性は「Mrs.」、未婚女性は「Miss」、敬称を指定しない場合は「Ms.」を選ぶのが一般的です。パスポートに敬称が記載されている場合は、それに合わせて選択してください。
+          <ScreenShot src="/evisa-manual/evisa-manual-p22.png" alt="渡航目的・ビザタイプ選択画面" caption="Purpose of Visit（渡航目的）選択画面" />
+
+          <FieldBlock label="Travel Document Type" ja="渡航書類の種類">
+            パスポートの種類を選択します。日本の一般旅券（青・赤）は <strong>PASSPORT</strong>。選択肢は「PASSPORT」「TRAVEL DOCUMENT」「SEAMAN'S BOOK」「CERTIFICATE OF IDENTITY-C.I」の4種類です。
           </FieldBlock>
 
-          <FieldBlock
-            label="Surname (Family Name)"
-            ja="姓（ファミリーネーム）"
-            example="YAMADA（パスポートの英字表記と完全一致）"
-            warn="他の提出書類（残高証明書・雇用契約書など）の氏名表記と一致していることも必ず確認してください。書類間で氏名の表記が食い違うと、審査で追加確認が入ることがあります。"
-          >
-            パスポートに記載されているローマ字表記の姓を入力します。パスポートの英字表記（例：YAMADA）と完全に一致するよう、大文字・小文字・スペルを確認してください。日本のパスポートはすべて大文字（ALL CAPS）で記載されています。
+          <FieldBlock label="Visa Type" ja="ビザの種類">
+            申請するビザの種類を選択します。このガイドの対象は <strong>Destination Thailand Visa (DTV)</strong> です。プルダウンから必ずDTVを選択してください。観光ビザや就労ビザなど他の種類が表示されますが、DTVを選択します。
           </FieldBlock>
-
-          <FieldBlock
-            label="Given Name (First Name)"
-            ja="名（ファーストネーム）"
-            example="TARO（パスポートの英字表記と完全一致）"
-            warn="ミドルネームがパスポートに記載されている場合は、ファーストネームとの間にスペースを入れて一緒に入力します。パスポートに記載されていないミドルネームは入力しないでください。"
-          >
-            パスポートに記載されているローマ字表記の名（ファーストネーム）を入力します。姓と同様に、パスポートの表記と完全に一致させてください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Date of Birth"
-            ja="生年月日"
-            example="例：1985年3月15日生まれ → 15 / 03 / 1985（DD / MM / YYYY）"
-            warn="日本では「年/月/日」の順が一般的ですが、このフォームは「日/月/年」の逆順です。最も入力ミスが多い項目のひとつです。入力後は必ず「15/03/1985」のように日・月・年の順になっていることを確認してください。"
-          >
-            生年月日を「DD/MM/YYYY」形式で入力します。「DD」が日、「MM」が月、「YYYY」が西暦年を表します。例えば1985年3月15日生まれの場合は「15/03/1985」と入力します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Place of Birth (City)"
-            ja="出生地（市区町村）"
-            example="東京生まれ：TOKYO ／ 大阪生まれ：OSAKA ／ 横浜生まれ：YOKOHAMA"
-          >
-            出生した市区町村をローマ字（英語）で入力します。出生地が不明な場合は、戸籍謄本などで確認するか、出生県の県庁所在地（例：愛知県なら「NAGOYA」）を入力する方法もあります。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Place of Birth (Country)"
-            ja="出生地（国）"
-            example="Japan"
-          >
-            出生した国をプルダウンから選択します。日本で生まれた方は「Japan」を選択してください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Nationality"
-            ja="国籍"
-            example="Japanese"
-            warn="二重国籍の場合は、今回の申請に使用するパスポートの国籍を選択してください。"
-          >
-            国籍をプルダウンから選択します。日本国籍の方は「Japanese」を選択してください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Gender"
-            ja="性別"
-            example="Male（男性）または Female（女性）"
-          >
-            「Male（男性）」または「Female（女性）」を選択します。パスポートの性別記載と一致させてください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Marital Status"
-            ja="婚姻状況"
-            example={"未婚：Single ／ 既婚：Married ／ 事実婚：Common Law Marriage\n離婚：Divorced ／ 死別：Widowed ／ 別居：Separated\n同性パートナーシップ：Civil Union/Domestic Partnership"}
-          >
-            現在の婚姻状況をプルダウンから選択します。選択肢は以下の7種類です：「Single（未婚）」「Married（既婚）」「Common Law Marriage（事実婚・内縁関係）」「Civil Union/Domestic Partnership（同性パートナーシップ等）」「Widowed（死別）」「Divorced（離婚）」「Separated（別居中）」。法的に婚姻関係にある方は「Married」、現在離婚済みの方は「Divorced」、配偶者と死別した方は「Widowed」を選択します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Religion"
-            ja="宗教（表示されない場合あり）"
-            example="仏教：Buddhism ／ キリスト教：Christianity ／ イスラム教：Islam\n信仰なし：No Religion または None"
-            warn="この項目はビザ種別・公館設定によっては表示されない場合があります。フォームに表示された場合のみ入力してください。審査の合否を直接左右する項目ではありませんが、正確な情報を選択してください。"
-          >
-            信仰している宗教をプルダウンから選択します。一般的な選択肢は「Buddhism（仏教）」「Christianity（キリスト教）」「Islam（イスラム教）」「Hinduism（ヒンドゥー教）」「Sikhism（シーク教）」など。特定の宗教を信仰していない場合は「No Religion」または「None」を選択します。この項目がフォームに表示されない場合は、そのまま次へ進んでください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Current Occupation / Profession"
-            ja="現在の職業・職種"
-            example={"会社員：Employee ／ 経営者：Business owner ／ フリーランス：Freelance\n公務員：Government Official ／ 退職者：Retired ／ 学生：Student\n無職：Unemployed ／ その他：Other"}
-            warn="フリーランス・個人事業主の方は「Freelance」を選択します。DTVのWorkcationルートで申請する場合、「Freelance」や「Employee」の選択は雇用契約書・業務委託契約書などの書類と整合性を持たせることが重要です。選択肢に当てはまるものがない場合は「Other」を選択してください。"
-          >
-            現在の職業をプルダウンから選択します。選択肢は「Business owner（経営者・事業主）」「Employee（会社員・従業員）」「Freelance（フリーランス・自営業）」「Government Official（公務員）」「Retired（退職者）」「Student（学生）」「Unemployed（無職）」「Other（その他）」の8種類です。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Name and Address of Employer / School"
-            ja="勤務先・学校の名称と住所"
-            example="会社員：勤務先の英語社名と住所 ／ フリーランス：Self-employed ／ 学生：学校名と所在地"
-            warn="勤務先名称は英語の正式名称を入力してください。日本語社名しかない場合は、ローマ字またはヘボン式表記で入力します。フリーランスや個人事業主で特定の勤務先がない場合は「Self-employed」と入力して構いません。"
-          >
-            現在の勤務先または在籍している学校の名称と住所を入力します。会社員の方は会社名と所在地（英語）を記入します。
-          </FieldBlock>
-        </section>
-
-        {/* ════════════════════════════════════════
-            STEP 3
-        ════════════════════════════════════════ */}
-        <section id="step3" style={{ marginBottom: 40 }}>
-          <StepHeading num={3} title="パスポート情報" screen="SCREEN 3" />
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
-            パスポートの記載情報を転記します。パスポートを手元に置き、番号・発行日・有効期限を一字一句正確に入力してください。このステップでの転記ミスは、書類間の不一致として審査で指摘される原因になります。
-          </p>
-
-          <FieldBlock
-            label="Type of Travel Document"
-            ja="渡航書類の種類"
-            example={"通常パスポート（青）：PASSPORT\n渡航書：TRAVEL DOCUMENT\n船員手帳：SEAMAN'S BOOK ／ CI証明書：CERTIFICATE OF IDENTITY-C.I"}
-            warn="日本の一般パスポート（青色・赤色のIC旅券）は「PASSPORT」を選択します。「TRAVEL DOCUMENT」は難民旅行証明書などの特殊書類用です。外交旅券も「PASSPORT」カテゴリに含まれます。"
-          >
-            所持している渡航書類の種類をプルダウンから選択します。選択肢は「PASSPORT（旅券）」「TRAVEL DOCUMENT（渡航書）」「SEAMAN'S BOOK（船員手帳）」「CERTIFICATE OF IDENTITY-C.I（身分証明書）」の4種類です。日本国パスポートをお持ちの方は「PASSPORT」を選択してください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Passport Number"
-            ja="パスポート番号（旅券番号）"
-            example="例：TK1234567（英字2文字＋数字7桁）"
-            warn="「1（数字のイチ）」と「I（アルファベットのアイ）」、「0（ゼロ）」と「O（オー）」を間違えやすいので注意してください。また、残高証明書・雇用契約書など他の書類に記載したパスポート番号と一致していることも確認してください。"
-          >
-            パスポートに記載されている旅券番号を入力します。日本のパスポートは英字2文字＋数字7桁の形式です（例：TK1234567）。アルファベットの大文字と数字を正確に転記してください。パスポートの顔写真ページ右上付近に記載されています。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Date of Issue"
-            ja="パスポート発行日（交付年月日）"
-            example="例：2022年6月10日発行 → 10 / 06 / 2022（DD / MM / YYYY）"
-            warn="「Date of Issue（発行日）」と「Date of Expiry（有効期限）」を混同しないよう注意してください。パスポートの顔写真ページに両方の日付が記載されています。"
-          >
-            パスポートの発行（交付）年月日を「DD/MM/YYYY」形式で入力します。パスポート内側の「Date of Issue（発行日）」欄に記載されている日付を転記してください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Date of Expiry"
-            ja="パスポート有効期限"
-            example="例：2032年6月9日まで → 09 / 06 / 2032（DD / MM / YYYY）"
-            warn="DTVの申請には、パスポートの残存有効期間が申請時点から6ヶ月以上必要です。有効期限が6ヶ月を切っている場合は、先にパスポートを更新してから申請してください。審査中に有効期限が近づいた場合も、追加確認が入ることがあります。"
-          >
-            パスポートの有効期限を「DD/MM/YYYY」形式で入力します。パスポート内側の「Date of Expiry（有効期限）」欄の日付を転記してください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Issuing Authority / Office"
-            ja="発行機関（パスポートを発行した機関）"
-            example="日本国パスポート：Ministry of Foreign Affairs, Japan"
-          >
-            パスポートを発行した機関名を入力します。日本国パスポートの場合は「Ministry of Foreign Affairs, Japan（外務省）」と入力します。パスポートの裏表紙付近に発行機関が記載されている場合があります。
-          </FieldBlock>
-        </section>
-
-        {/* ════════════════════════════════════════
-            STEP 4
-        ════════════════════════════════════════ */}
-        <section id="step4" style={{ marginBottom: 40 }}>
-          <StepHeading num={4} title="連絡先情報" screen="SCREEN 4" />
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
-            審査結果・追加書類の依頼・承認通知はすべてここで入力したメールアドレスに届きます。スペルミスなく正確に入力することが最重要です。
-          </p>
-
-          <FieldBlock
-            label="Email Address"
-            ja="メールアドレス"
-            example="普段使っているメールアドレスを正確に入力"
-            warn="メールアドレスを1文字でも間違えると、審査結果・追加書類の依頼・ビザ承認通知を受け取れなくなります。入力後は必ず確認してください。また、タイe-Visaからのメールが迷惑メールフォルダに振り分けられないよう、受信設定も確認しておくことをおすすめします。"
-          >
-            審査結果や追加確認の連絡が届くメールアドレスを入力します。申請後も定期的に確認できるアドレスを使用してください。GmailやYahooメールなど一般的なメールサービスで問題ありません。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Confirm Email Address"
-            ja="メールアドレス（確認入力）"
-            example="上で入力したアドレスをもう一度入力"
-            warn="コピー＆ペーストではなく、手で再入力することをおすすめします。コピペではスペルミスがある場合もそのままコピーされてしまいます。"
-          >
-            入力したメールアドレスの確認欄です。同じアドレスをもう一度入力します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Mobile Phone Number"
-            ja="携帯電話番号（国際番号形式）"
-            example="090-1234-5678 の場合 → +81-90-1234-5678（先頭の0を除いて+81を付ける）"
-            warn="日本の電話番号は先頭の「0」を取り除き、国番号「+81」を付けた国際形式で入力します。例えば「090-1234-5678」は「+81-90-1234-5678」と入力します。"
-          >
-            携帯電話番号を国際形式で入力します。日本の番号の場合は先頭の「0」を除き、国番号「+81」を付けて入力します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Address in Country of Residence"
-            ja="現住所（日本の住所を英語で）"
-            example="東京都新宿区新宿1-2-3 → 1-2-3 Shinjuku, Shinjuku-ku, Tokyo, 160-0022, Japan"
-          >
-            現在住んでいる日本の住所を英語（ローマ字）で入力します。番地・町名・区市町村・都道府県・郵便番号・国名の順で記載するのが一般的です。マンションや建物名がある場合は、建物名と部屋番号も含めると丁寧です。
-          </FieldBlock>
-        </section>
-
-        {/* ════════════════════════════════════════
-            STEP 5（最重要）
-        ════════════════════════════════════════ */}
-        <section id="step5" style={{ marginBottom: 40 }}>
-          <StepHeading num={5} title="渡航情報・申請目的" screen="SCREEN 5" important />
-
-          {/* 重要バナー */}
-          <div style={{ background: C.tealDim, border: `2px solid ${C.tealMid}`, borderRadius: 10, padding: '14px 18px', marginBottom: 24 }}>
-            <p style={{ fontSize: 13, fontWeight: 700, color: C.green, margin: '0 0 6px' }}>
-              ⭐ このステップがDTV申請の核心です
-            </p>
-            <p style={{ fontSize: 13, color: C.sub, margin: 0, lineHeight: 1.7 }}>
-              「Purpose of Visit（渡航目的）」の選択によって、必要な書類が大きく変わります。選択を間違えると書類と申請内容が合わず、審査で追加確認や却下につながる可能性があります。フォームを進める前に必ず自分のルートを確認してください。
-            </p>
-          </div>
 
           <FieldBlock
             label="Purpose of Visit"
-            ja="渡航目的（DTVルートの選択）"
-            example={"リモートワーカー・フリーランス → 「Workcation (digital nomad/remote worker/foreign talent/freelancer)」\nゴルフ・タイ料理・ムエタイなど → 「Thai soft power-related activities (e.g., Muay Thai, Thai culinary training, and medical treatment)」\nDTV保持者の配偶者・20歳未満の子 → 「Spouse and children under 20 years old of DTV visa holders」"}
-            warn="この選択を間違えると、アップロードした書類と申請根拠が合わず審査で追加確認・却下につながる可能性があります。「Workcation」を選ぶと雇用契約書・リモートワーク許可書などが必要になります。「Soft Power Activities」を選ぶとタイ施設からの受入レター（Acceptance Letter）が必要になります。どちらか迷う場合は、ルート比較記事を先に確認してください。"
+            ja="渡航目的（DTVルートの選択）★最重要★"
+            warn="ここで選んだルートによって、Step 4でアップロードする書類が変わります。Workcationを選んだのにSoft Powerの書類をアップロードしても審査が通りません。事前にどちらのルートで申請するか必ず決めてから進んでください。"
           >
-            DTVには主に2つのルートがあり、この項目でどちらで申請するかを選択します。フォームには多数の選択肢がありますが、DTV申請で使用するのは以下の3つのいずれかです。<br /><br />
-            <strong>「Workcation (digital nomad/remote worker/foreign talent/freelancer)」</strong>は、タイ国外の雇用主またはクライアントのためにタイからリモートで働くことを目的とする申請です。日本の会社に在籍したままタイで仕事をする会社員、海外クライアントと契約しているフリーランサーなどが該当します。<br /><br />
-            <strong>「Thai soft power-related activities」</strong>は、タイが政策として推進している文化活動（ゴルフ・タイ料理・ムエタイ・伝統工芸・医療等）に参加することを目的とする申請です。タイの施設が発行する受入レター（Acceptance Letter）が主要書類になります。<br /><br />
-            <strong>「Spouse and children under 20 years old of DTV visa holders」</strong>は、すでにDTVを保持している配偶者または20歳未満の子どもが同伴する場合の選択肢です。
+            DTV申請で最も重要な選択です。以下の3つのいずれかを選びます：
+            <ul style={{ marginTop: 8, paddingLeft: 18, lineHeight: 2 }}>
+              <li><strong>Workcation (digital nomad/remote worker/foreign talent/freelancer)</strong> — 海外の雇用主・クライアントへのリモートワークが目的の方</li>
+              <li><strong>Thai soft power-related activities</strong> — ゴルフ・タイ料理・ムエタイ等タイの文化活動が目的の方</li>
+              <li><strong>Spouse and children under 20 years old of DTV visa holders</strong> — すでにDTVを持つ配偶者・20歳未満の子どもとして同伴する方</li>
+            </ul>
           </FieldBlock>
 
-          <FieldBlock
-            label="Expected Date of Arrival"
-            ja="タイへの予定入国日"
-            example="例：2025年9月1日入国予定 → 01 / 09 / 2025（DD / MM / YYYY）"
-            warn="まだ航空券を購入していない場合は、おおよその予定日を入力して構いません。ただし、審査完了まで数日〜数週間かかることがあるため、余裕を持った日程を設定することをおすすめします。審査中に予定が変わっても、入国日の変更が可能なケースがあります。"
-          >
-            タイへの入国予定日を「DD/MM/YYYY」形式で入力します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Expected Period of Stay (days)"
-            ja="滞在予定日数"
-            example="最長180日（例：90日間滞在なら「90」と入力）"
-            warn="DTVの1回の入国あたりの滞在上限は180日（約6ヶ月）です。180を超える数値は入力できません。「180日＝5年間ずっと滞在できる」という意味ではなく、1回の入国で滞在できる最大日数が180日という意味です。"
-          >
-            タイでの滞在予定日数を数字で入力します。長期滞在を希望する場合でも上限の180を超えることはできません。短期の予定であれば実際の滞在日数を入力してください。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Expected Address in Thailand"
-            ja="タイでの滞在先住所（最初の宿泊先）"
-            example="例：Novotel Bangkok Sukhumvit 20, 19 Sukhumvit Soi 20, Khlong Toei, Bangkok 10110"
-            warn="まだ宿泊先が決まっていない場合は、バンコク中心部のホテルを仮入力するケースがよく見られます。入力した住所が実際と異なっても申請段階では大きな問題になりにくいですが、入国審査で滞在先を確認された際にスムーズに答えられるよう、実際の宿泊先を把握しておくことが重要です。"
-          >
-            タイ到着後に最初に宿泊する場所の住所を英語で入力します。ホテルの場合はホテル名と住所、コンドミニアムや知人宅の場合はその住所を入力します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Have you previously visited Thailand?"
-            ja="タイへの訪問歴"
-            example="訪問歴がある場合：Yes ／ ない場合：No"
-            warn="「Yes」を選択すると過去の訪問回数・滞在期間を入力する欄が表示される場合があります。正直に申告してください。過去の訪問歴があっても申請に不利になるわけではありません。"
-          >
-            タイへの過去の訪問歴があるかどうかを「Yes」または「No」で回答します。
-          </FieldBlock>
-
-          <FieldBlock
-            label="Port of Entry"
-            ja="入国予定地点（入国拠点）"
-            example={"空路での入国：International Airport（国際空港）\n海路での入国：Seaport（海港）\n陸路での入国：Border Checkpoint（国境検問所）"}
-          >
-            タイへの入国方法・入国地点の種類をプルダウンから選択します。選択肢は「International Airport（国際空港）」「Seaport（海港）」「Border Checkpoint（国境検問所）」の3カテゴリで、実際の空港名を選ぶ形式になっています。バンコクへ飛行機で入国する方は、スワンナプーム国際空港またはドンムアン国際空港を選択してください。チェンマイ・プーケットなど他の都市へ直接入国する場合は、該当する空港を選択します。陸路または海路での入国を予定している方は対応するカテゴリから選択してください。
+          <FieldBlock label="Number of Entries" ja="入国回数">
+            DTVは <strong>Multiple（マルチプルエントリー）</strong> が自動選択されます。5年間で何度でも入国可能です。
           </FieldBlock>
         </section>
 
-        {/* ════════════════════════════════════════
-            STEP 6
-        ════════════════════════════════════════ */}
-        <section id="step6" style={{ marginBottom: 40 }}>
-          <StepHeading num={6} title="書類のアップロード" screen="SCREEN 6" />
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 24 }}>
-            必要書類をPDFまたはJPEG形式でアップロードします。ファイルサイズの上限（目安1〜5MB）と文字の鮮明さを確認してからアップロードしてください。アップロード後は各ファイルが正しく表示・閲覧できることを確認してから次のステップに進んでください。
+        {/* ════════════════ STEP 2 ════════════════ */}
+        <section id="step2" style={{ marginBottom: 48 }}>
+          <StepHeading num={2} title="申請者情報" subtitle="Applicant Information" />
+
+          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.85, marginBottom: 20 }}>
+            このステップは3つのセクションに分かれています。①パスポートの顔写真ページのアップロード、②申請者写真のアップロード、③個人情報の手入力です。パスポートを手元に用意してから進めてください。
           </p>
 
-          <FieldBlock
-            label="Passport Bio-data Page"
-            ja="パスポート顔写真ページのスキャン"
-            example="PDF または JPEG ／ 文字・顔・MRZ（機械読取帯）がすべて鮮明に読めること"
-            warn="スキャンの品質が低い（暗い・傾いている・文字が読めない・四隅が切れている）と差し戻しの原因になります。明るい場所でフラットにスキャンし、氏名・生年月日・パスポート番号・顔写真・MRZ（パスポート下部の機械読取帯）がすべて鮮明に読めることを確認してください。"
-          >
-            パスポートの顔写真・個人情報が記載されているページ（顔写真ページ）をスキャンまたは撮影してアップロードします。スマートフォンで撮影する場合は明るい場所で真上から撮影し、書類全体が収まっていることを確認してください。
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: '0 0 12px' }}>3.1 パスポート顔写真ページのアップロード</h3>
+          <ScreenShot src="/evisa-manual/evisa-manual-p23.png" alt="パスポートアップロード画面" caption="Upload Biodata Page of Passport（パスポート顔写真ページのアップロード）" />
+
+          <FieldBlock label="Upload Biodata Page of Passport" ja="パスポート顔写真ページ（必須）" warn="アップロード後、氏名・生年月日・パスポート番号などの個人情報フィールドが自動入力されます。自動入力の内容を必ず手動で確認・修正してください。文字認識エラーで誤入力される場合があります。">
+            パスポートの顔写真・個人情報が記載されているページをスキャンまたは撮影してアップロードします。ファイル形式はJPG/JPEGまたはPDF、上限3MBです。<br /><br />
+            ポイント：明るい場所でフラットに撮影し、四隅が収まっていること。MRZ（パスポート下部の機械読取帯）が鮮明に読めること。
           </FieldBlock>
 
-          <FieldBlock
-            label="Photo of Applicant"
-            ja="申請者の顔写真"
-            example="白または薄い無地の背景・正面向き・最近撮影した写真（JPEG）"
-            warn="スマートフォンで撮影した写真を使用する場合は、システムが指定するピクセル数・縦横比の要件を事前に確認してください。背景が要件を満たしていない、または画像サイズが不適切な場合はアップロード時にエラーが出ることがあります。証明写真機の利用が確実です。"
-          >
-            申請者本人の顔写真をアップロードします。白または薄い無地の背景、正面向き、最近撮影した写真が必要です。
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: '20px 0 12px' }}>3.2 申請者写真のアップロード</h3>
+          <ScreenShot src="/evisa-manual/evisa-manual-p24.png" alt="申請者写真アップロード画面" caption="Upload a photograph（申請者写真のアップロード）" />
+
+          <FieldBlock label="Upload a photograph" ja="申請者の顔写真（必須）" warn="6ヶ月以内に撮影した写真が必要です。背景が白または薄い無地でない場合や、サングラス・帽子着用の写真は不適切として差し戻される可能性があります。">
+            申請者本人の顔写真をアップロードします。ファイル形式はJPG/JPEG、上限3MBです。証明写真（白背景・正面向き・6ヶ月以内）が推奨されます。
           </FieldBlock>
 
-          <FieldBlock
-            label="Bank Statement / Balance Certificate"
-            ja="残高証明書（英語・500,000タイバーツ以上）"
-            example="英語発行の残高証明書（申請直前1〜2週間以内に発行したもの）"
-            warn="残高証明書は申請直前（1〜2週間以内）に発行したものを使用してください。発行から時間が経った書類は、審査時点での残高を証明できないと判断されることがあります。また、口座名義（英語表記）がパスポートの氏名表記と一致していることを確認してください。日本円で残高証明を取得した場合は、500,000タイバーツ以上に相当する額であることが分かるよう、換算額を明示した書類を添付することをおすすめします。"
-          >
-            500,000タイバーツ（約200万円、為替レートによって変動）以上の残高を証明する銀行発行の残高証明書をアップロードします。英語で発行されたものが必要です。日本の主要銀行では英語の残高証明書の発行サービスを提供しています（申請から発行まで数日〜1週間程度かかる場合があります）。
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: '20px 0 12px' }}>3.3 個人情報の入力</h3>
+          <ScreenShot src="/evisa-manual/evisa-manual-p25.png" alt="個人情報入力フォーム" caption="Personal Information（個人情報の入力）" />
+
+          <FieldBlock label="Title / Sex" ja="敬称・性別">
+            Titleは「Mr.」「Mrs.」「Miss」「Ms.」などから選択。Sexは「Male」「Female」。いずれもパスポートの記載と一致させてください。
           </FieldBlock>
 
-          <FieldBlock
-            label="Supporting Documents（ルート別書類）"
-            ja="申請根拠となる書類（選択したルートによって異なる）"
-            example={'Workcationの場合 → 雇用契約書（英語）＋リモートワーク許可書\nSoft Powerの場合 → タイ施設からの受入レター（Acceptance Letter）'}
-            warn="書類は英語での提出が基本です。日本語の書類しかない場合は、英語の概要説明や翻訳を添付することをおすすめします。ただし、認定翻訳が必要かどうかは申請先の公館によって異なります。"
-          >
-            STEP 5で選択した「Purpose of Visit（渡航目的）」に対応する書類をアップロードします。<br /><br />
-            <strong>Workcationを選択した場合</strong>は、雇用契約書（英語）および雇用主からのリモートワーク許可書が主要書類です。フリーランスの場合は業務委託契約書と過去数ヶ月分の請求書が主要書類になります。<br /><br />
-            <strong>Soft Power Activitiesを選択した場合</strong>は、タイ国内のゴルフ場・料理学校・武術ジムなどの施設が発行した受入レター（Acceptance Letter）が主要書類です。受入レターには申請者氏名・活動内容・活動期間・施設情報が明記されている必要があります。
+          <FieldBlock label="First name / Middle name / Family name" ja="名・ミドルネーム・姓" warn="パスポートに記載されているローマ字表記と完全一致させてください。1文字でも違うと書類間の不一致になります。ミドルネームはパスポートに記載がある場合のみ入力します。">
+            パスポートの英字表記（ALL CAPS）をそのまま入力します。日本のパスポートは全て大文字表記です。Family nameが姓（例：YAMADA）、First nameが名（例：TARO）です。
+          </FieldBlock>
+
+          <FieldBlock label="Contact No." ja="電話番号（国際形式）">
+            携帯電話番号を国際形式で入力します。日本の番号は先頭の「0」を除いて国番号「+81」を付けます。例：090-1234-5678 → +81-90-1234-5678。国旗のプルダウンで国番号を選択できます。
+          </FieldBlock>
+
+          <FieldBlock label="E-mail" ja="メールアドレス" warn="審査結果・追加書類依頼・ビザ承認通知はすべてこのアドレスに届きます。1文字でもミスがあると通知を受け取れません。入力後に必ずスペルを確認してください。">
+            申請後も定期的に確認できるメールアドレスを入力します。
+          </FieldBlock>
+
+          <FieldBlock label="Nationality / Nationality at birth" ja="国籍・出生時の国籍">
+            「Nationality」は現在の国籍（日本国籍の方はJapanese）。「Nationality at birth」は生まれた時の国籍です。通常は同じですが、帰化等で変わっている場合は出生時の国籍を入力します。
+          </FieldBlock>
+
+          <FieldBlock label="Do you hold any other nationality?" ja="他の国籍を持っているか">
+            二重国籍の場合は「Yes」を選択します。日本国籍のみの方は「No」。
+          </FieldBlock>
+
+          <FieldBlock label="Place of birth (Country) / City of birth" ja="出生地（国・都市）">
+            生まれた国と都市を入力します。日本生まれの方はCountryで「Japan」を選択し、City of birthに出生都市のローマ字（例：TOKYO、OSAKA）を入力します。
+          </FieldBlock>
+
+          <FieldBlock label="Date of birth" ja="生年月日" warn="日本では「年/月/日」の順が一般的ですが、このフォームは「日/月/年（DD/MM/YYYY）」の逆順です。最も入力ミスが多い項目です。入力後に必ず確認してください。">
+            カレンダーアイコンをクリックして日付を選択するか、直接入力します。形式はDD/MM/YYYY（日・月・年）です。例：1985年3月15日 → 15/03/1985。
+          </FieldBlock>
+
+          <FieldBlock label="Marital status" ja="婚姻状況">
+            選択肢は「Single（未婚）」「Married（既婚）」「Common Law Marriage（事実婚）」「Civil Union/Domestic Partnership」「Widowed（死別）」「Divorced（離婚）」「Separated（別居）」の7種類です。
+          </FieldBlock>
+
+          <div style={{ height: 1, background: C.border, margin: '24px 0' }} />
+
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: '0 0 12px' }}>渡航書類（Travel Document）</h3>
+          <ScreenShot src="/evisa-manual/evisa-manual-p26.png" alt="渡航書類情報入力フォーム" caption="Travel Document（渡航書類情報）" />
+
+          <FieldBlock label="Type of Travel Document" ja="渡航書類の種類">
+            選択肢は「PASSPORT」「TRAVEL DOCUMENT」「SEAMAN'S BOOK」「CERTIFICATE OF IDENTITY-C.I」の4種類。日本の通常パスポートは <strong>PASSPORT</strong> を選択してください。
+          </FieldBlock>
+
+          <FieldBlock label="Travel Document No." ja="パスポート番号" warn="「1（数字のイチ）」と「I（アルファベット）」、「0（ゼロ）」と「O（オー）」を間違えやすいです。残高証明書など他の書類に記載したパスポート番号と必ず一致させてください。">
+            パスポートの旅券番号を入力します。日本のパスポートは英字2文字＋数字7桁です（例：TK1234567）。
+          </FieldBlock>
+
+          <FieldBlock label="Place of Issue" ja="発行地（発行機関）">
+            パスポートを発行した機関を入力します。日本国パスポートは「Ministry of Foreign Affairs, Japan」と入力します。
+          </FieldBlock>
+
+          <FieldBlock label="Date of Issue / Date of Expiry" ja="発行日・有効期限" warn="「Date of Issue（発行日）」と「Date of Expiry（有効期限）」を混同しないよう注意。DTVの申請にはパスポートの残存有効期間が6ヶ月以上必要です。">
+            パスポートに記載されている発行日と有効期限を「DD/MM/YYYY」形式で入力します。
+          </FieldBlock>
+
+          <div style={{ height: 1, background: C.border, margin: '24px 0' }} />
+
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: '0 0 12px' }}>住所・職業情報</h3>
+          <ScreenShot src="/evisa-manual/evisa-manual-p27.png" alt="住所・職業情報入力フォーム" caption="Address Information & Employment Details（住所・職業情報）" />
+
+          <FieldBlock label="Home address / Country / City" ja="自宅住所">
+            現在住んでいる日本の住所を英語（ローマ字）で入力します。番地・町名・区市町村の順で記載します。例：1-2-3 Shinjuku, Shinjuku-ku, Tokyo。
+          </FieldBlock>
+
+          <FieldBlock label="Is your permanent address same as your current address?" ja="現住所と常住所が同じか">
+            通常は「Yes」を選択します。日本で住民票がある住所と異なる場所に住んでいる場合は「No」を選択して別途入力します。
+          </FieldBlock>
+
+          <FieldBlock label="Occupation" ja="職業" warn="フリーランス・個人事業主の方は「Freelance」を選択。Workcationルートで申請する場合、職業の選択は雇用契約書・業務委託契約書との整合性が重要です。">
+            プルダウンから選択します。選択肢：Business owner / Employee / Freelance / Government Official / Retired / Student / Unemployed / Other の8種類。
+          </FieldBlock>
+
+          <FieldBlock label="Annual Income" ja="年収">
+            年収の範囲をプルダウンから選択します。正確な金額ではなく、収入帯（レンジ）を選択する形式です。
           </FieldBlock>
         </section>
 
-        {/* ════════════════════════════════════════
-            最終チェックリスト
-        ════════════════════════════════════════ */}
+        {/* ════════════════ STEP 3 ════════════════ */}
+        <section id="step3" style={{ marginBottom: 48 }}>
+          <StepHeading num={3} title="渡航情報" subtitle="Travel Information" />
+
+          <ScreenShot src="/evisa-manual/evisa-manual-p29.png" alt="渡航情報入力フォーム" caption="Travel Information（渡航情報の入力）" />
+
+          <FieldBlock label="Intended date of arrival / departure" ja="タイへの入国予定日・出国予定日" warn="申請は入国予定日の3ヶ月前以内から可能です。まだ航空券を購入していない場合はおおよその予定日を入力して構いません。審査中に日程が変わっても対応できる場合があります。">
+            タイへの入国予定日と出国予定日をカレンダーで選択します。入力後に「Duration of stay」（滞在日数）が自動計算されます。
+          </FieldBlock>
+
+          <FieldBlock label="Last port of embarkation – Country/Territory" ja="最終出発地（国）">
+            タイへ向かう直前に出発する国を選択します。日本から直行便でタイへ向かう場合は「Japan」を選択。経由地がある場合は最後に乗り継いだ国を入力します。
+          </FieldBlock>
+
+          <FieldBlock label="Port of arrival" ja="入国方法（空路・陸路・海路）">
+            <strong>AIR（空路）</strong>・<strong>LAND（陸路）</strong>・<strong>SEA（海路）</strong> の3種類から選択します。日本からタイへ飛行機で入国する方はAIRを選択。AIRを選ぶと空港のプルダウンが表示されるので、入国予定空港（例：Suvarnabhumi International Airport）を選択します。
+          </FieldBlock>
+
+          <FieldBlock label="Schedule (Commercial) / Flight No." ja="フライトスケジュール・便名">
+            航空会社の定期便の場合は「Schedule (Commercial)」を選択し、便名（例：TG641）を入力します。まだ航空券を購入していない場合は空欄または仮入力で構いません。
+          </FieldBlock>
+
+          <FieldBlock label="Have you ever visited Thailand?" ja="タイ訪問歴">
+            タイへの過去の訪問経験を「Yes」または「No」で回答します。「Yes」の場合は過去の訪問回数・最後の訪問日を入力する欄が追加表示されます。正直に申告してください（訪問歴が多くても不利にはなりません）。
+          </FieldBlock>
+
+          <FieldBlock label="Have you ever applied for Thai visa?" ja="タイビザの申請歴">
+            過去にタイのビザを申請したことがあるかを「Yes」または「No」で回答します。
+          </FieldBlock>
+
+          <FieldBlock label="Are you travelling as part of a tour group?" ja="ツアーグループでの渡航か">
+            個人申請の場合は「No」を選択します。
+          </FieldBlock>
+
+          <div style={{ height: 1, background: C.border, margin: '24px 0' }} />
+
+          <h3 style={{ fontSize: 15, fontWeight: 700, color: C.text, margin: '0 0 12px' }}>タイでの滞在先情報</h3>
+          <ScreenShot src="/evisa-manual/evisa-manual-p30.png" alt="タイ滞在先情報入力フォーム" caption="Accommodation in Thailand（タイでの滞在先情報）" />
+
+          <FieldBlock label="Accommodation Type" ja="滞在先の種類">
+            「Hotel（ホテル）」「Private Property（賃貸・知人宅）」「Own Property（自己所有物件）」の3種類から選択します。バンコクのホテルに滞在する場合は「Hotel」を選択します。
+          </FieldBlock>
+
+          <FieldBlock label="Accommodation Name / Street Address" ja="滞在先の名称・住所" warn="まだ宿泊先が決まっていない場合は、バンコク中心部のホテル（例：Novotel Bangkok Sukhumvit）などを仮入力するケースが多く見られます。入国審査で聞かれることもあるため、実際の滞在先を把握しておくことが重要です。">
+            ホテルや滞在先の名称と住所を英語で入力します。City（都市）・District（区）・Subdistrict（サブ区）・Postcode（郵便番号）も必要です。
+          </FieldBlock>
+
+          <FieldBlock label="Duration of stay (Days)" ja="滞在日数">
+            その滞在先での宿泊予定日数を入力します。複数の滞在先がある場合は「Additional accommodation in Thailand」を「Yes」に設定して追加入力できます。
+          </FieldBlock>
+        </section>
+
+        {/* ════════════════ STEP 4 ════════════════ */}
+        <section id="step4" style={{ marginBottom: 48 }}>
+          <StepHeading num={4} title="書類のアップロード" subtitle="Supporting Documents" />
+
+          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.85, marginBottom: 20 }}>
+            アップロードする書類はStep 1で選択した渡航目的（Workcation / Soft Power）によって異なります。ファイル形式はJPG・JPEG・PDF、1ファイルの上限は3MBです。アップロード後は各ファイルが正常に表示されることを確認してから「Done」ボタンを押してください。
+          </p>
+
+          <ScreenShot src="/evisa-manual/evisa-manual-p31.png" alt="書類アップロード画面" caption="Supporting Documents（書類のアップロード）" />
+
+          <FieldBlock label="1. Biodata page of Passport or Travel Document" ja="パスポート顔写真ページ（必須）">
+            Step 2でアップロード済みのものが自動反映されます。ファイル名（Document-1.jpg等）が表示されていれば完了です。
+          </FieldBlock>
+
+          <FieldBlock label="2. Photograph taken within the last six months" ja="6ヶ月以内に撮影した顔写真（必須）">
+            Step 2でアップロード済みの写真が反映されます。
+          </FieldBlock>
+
+          <FieldBlock label="3. Document indicating current location" ja="現在地証明（必須）" warn="現在地証明として認められやすいのは、住民票（英語版または英訳付き）、銀行の明細書、公共料金の領収書などです。日本語書類の場合は英語の説明を添付することが推奨されます。">
+            現在住んでいる国を証明する書類をアップロードします。
+          </FieldBlock>
+
+          <FieldBlock label="4. Supporting documents（ルート別）" ja="申請根拠書類（Workcation or Soft Power）" warn="書類の内容とStep 1で選んだ渡航目的が一致していない場合、審査で問題になります。Workcationなら雇用契約書・業務委託契約書等、Soft Powerなら受入レターをアップロードします。">
+            <strong>Workcationの場合：</strong>雇用主または海外クライアントとの契約書（英語）。会社員の方はリモートワーク許可書も有効。フリーランスの方は業務委託契約書＋請求書。
+            <br /><br />
+            <strong>Soft Power Activitiesの場合：</strong>タイのゴルフ場・料理学校・ムエタイジム等の施設が発行した受入レター（Acceptance Letter）。氏名・活動内容・期間・施設名が明記されたもの。
+          </FieldBlock>
+        </section>
+
+        {/* ════════════════ チェックリスト ════════════════ */}
         <section id="checklist" style={{ marginBottom: 40 }}>
           <h2 style={{ fontSize: 18, fontWeight: 800, color: C.text, margin: '0 0 12px', paddingTop: 8, borderTop: `2px solid ${C.tealMid}` }}>
             提出前の最終チェックリスト
           </h2>
-          <p style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.8, marginBottom: 20 }}>
-            「送信」ボタンを押す前に、以下の項目を必ず確認してください。書類間の不一致や入力ミスはここで防ぐことができます。
-          </p>
           <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 12, padding: '18px 20px' }}>
             {[
-              ['全書類のフルネーム・パスポート番号が一致しているか', '残高証明書・雇用契約書・受入レターなど全書類の氏名・パスポート番号をパスポートと照合する'],
-              ['生年月日・有効期限の日付形式は正しいか（DD/MM/YYYY）', '日本式（YYYY/MM/DD）ではなく「日→月→年」の順になっているか再確認する'],
-              ['残高証明書は最近（1〜2週間以内）発行されたものか', '発行日が古すぎる書類は現時点の残高を証明できないと判断される場合がある'],
-              ['メールアドレスのスペルミスはないか', '審査結果・追加書類依頼・承認通知はこのアドレスに届く'],
-              ['Purpose of Visitの選択と、アップロードした書類は一致しているか', 'Workcationを選んだなら雇用契約書、Soft Powerを選んだなら受入レターがアップロードされているか'],
-              ['すべてのファイルが正常に表示・閲覧できるか', 'アップロード後に各ファイルをクリックして開き、文字が読めることを確認する'],
-              ['パスポートの残存有効期間は6ヶ月以上あるか', '申請時点から6ヶ月未満の場合は申請前にパスポートを更新する必要がある'],
+              ['全書類の氏名・パスポート番号が一致しているか', 'パスポート・残高証明・雇用契約書・受入レター等すべての氏名・番号を照合する'],
+              ['Purpose of Visitの選択と書類が一致しているか', 'Workcation選択→雇用契約書等、Soft Power選択→受入レター'],
+              ['日付形式はDD/MM/YYYYになっているか', '日本式（YYYY/MM/DD）ではなく日→月→年の順になっているか確認'],
+              ['メールアドレスのスペルミスはないか', '審査結果・追加依頼・承認通知はこのアドレスにのみ届く'],
+              ['パスポートの残存有効期間は6ヶ月以上あるか', '申請時点から6ヶ月未満の場合は先にパスポートを更新する'],
+              ['残高証明書は1〜2週間以内に発行されたものか', '発行が古すぎると現時点の残高を証明できないと判断される場合がある'],
+              ['全ファイルが正常にアップロードされているか', 'Doneを押す前に各ファイルをクリックして内容が閲覧できることを確認'],
             ].map(([title, detail], i) => (
               <div key={i} style={{ display: 'flex', gap: 12, marginBottom: i < 6 ? 14 : 0, paddingBottom: i < 6 ? 14 : 0, borderBottom: i < 6 ? `1px solid ${C.border}` : 'none' }}>
                 <div style={{ width: 20, height: 20, borderRadius: 4, border: `2px solid ${C.tealMid}`, flexShrink: 0, marginTop: 1 }} />
@@ -514,13 +372,13 @@ export default async function EvisaFormPage({ params }: PageProps) {
           <Link href={`/${locale}/requirements`} className="btn-richb-primary" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
             必要書類チェックリストを見る
           </Link>
-          <Link href={`/${locale}/blog/dtv-common-document-mistakes`} className="btn-richb-sub" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
-            よくある書類ミスを確認する
+          <Link href={`/${locale}/contact`} className="btn-richb-sub" style={{ padding: '12px 24px', fontSize: 13, fontFamily: 'inherit' }}>
+            申請について相談する
           </Link>
         </div>
 
-        <p style={{ fontSize: 11, color: C.muted, lineHeight: 1.7 }}>
-          ※ フォームの画面構成・項目名はthaievisa.go.thの仕様変更により変わる場合があります。申請時は公式サイトの最新表示を優先してください。本ページの内容は一般的な情報提供を目的としており、個別の申請を保証するものではありません。
+        <p style={{ fontSize: 11, color: C.muted, lineHeight: 1.7, marginBottom: 80 }}>
+          ※ 本ガイドはタイ外務省公式マニュアル（English-Manual.pdf）の画面をもとに作成しています。フォームの仕様は随時変更される場合があります。館差・時期差により手続きが異なる場合があるため、申請先公館の最新案内を必ず確認してください。本ページの内容は一般的な情報提供を目的としており、個別の申請結果を保証するものではありません。
         </p>
 
       </div>
@@ -532,85 +390,67 @@ export default async function EvisaFormPage({ params }: PageProps) {
 // 共通コンポーネント
 // ────────────────────────────────────────────────────
 
-function StepHeading({ num, title, screen, important }: { num: number; title: string; screen: string; important?: boolean }) {
+function StepHeading({ num, title, subtitle }: { num: number; title: string; subtitle: string }) {
+  const C2 = { green: '#0A7A6A', tealDim: 'rgba(10,122,106,0.08)', tealMid: 'rgba(10,122,106,0.18)', text: '#1A2435', muted: '#7E8EA4', border: 'rgba(26,36,53,0.10)' }
   return (
-    <div style={{
-      display: 'flex', alignItems: 'center', gap: 12,
-      marginBottom: 20,
-      paddingBottom: 14,
-      borderBottom: `2px solid ${important ? C.tealMid : C.border}`,
-    }}>
-      <div style={{
-        width: 40, height: 40, borderRadius: '50%', flexShrink: 0,
-        background: important ? C.green : C.tealDim,
-        border: `2px solid ${important ? C.green : C.tealMid}`,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: 16, fontWeight: 900,
-        color: important ? '#fff' : C.green,
-        boxShadow: important ? '0 2px 10px rgba(10,122,106,0.25)' : 'none',
-      }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20, paddingBottom: 16, borderBottom: `2px solid ${C2.tealMid}` }}>
+      <div style={{ width: 44, height: 44, borderRadius: '50%', flexShrink: 0, background: C2.green, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, fontWeight: 900, color: '#fff', boxShadow: '0 2px 10px rgba(10,122,106,0.25)' }}>
         {num}
       </div>
       <div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <h2 style={{ fontSize: 18, fontWeight: 800, color: important ? C.green : C.text, margin: 0 }}>
-            STEP {num}：{title}
-          </h2>
-          {important && (
-            <span style={{ fontSize: 10, fontWeight: 700, background: C.green, color: '#fff', padding: '2px 8px', borderRadius: 100 }}>
-              最重要
-            </span>
-          )}
-        </div>
-        <span style={{ fontSize: 11, color: C.muted, fontFamily: 'monospace' }}>{screen}</span>
+        <h2 style={{ fontSize: 19, fontWeight: 800, color: C2.green, margin: 0, lineHeight: 1.2 }}>
+          STEP {num}：{title}
+        </h2>
+        <span style={{ fontSize: 11, color: C2.muted, fontFamily: 'monospace' }}>{subtitle}</span>
       </div>
     </div>
   )
 }
 
+function ScreenShot({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+  const C2 = { border: 'rgba(26,36,53,0.10)', muted: '#7E8EA4', bgSection: '#EDF1F5' }
+  return (
+    <div style={{ margin: '0 0 24px', border: `1px solid ${C2.border}`, borderRadius: 10, overflow: 'hidden', background: C2.bgSection }}>
+      <div style={{ position: 'relative', width: '100%' }}>
+        <Image
+          src={src}
+          alt={alt}
+          width={980}
+          height={680}
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+          priority={src.includes('p21') || src.includes('p22')}
+        />
+      </div>
+      <p style={{ fontSize: 11, color: C2.muted, margin: 0, padding: '6px 12px', textAlign: 'center', borderTop: `1px solid ${C2.border}` }}>
+        {caption}（出典：タイ外務省公式e-Visaマニュアル）
+      </p>
+    </div>
+  )
+}
+
 function FieldBlock({
-  label, ja, example, warn, children,
+  label, ja, warn, children,
 }: {
   label: string
   ja: string
-  example: string
   warn?: string
   children: React.ReactNode
 }) {
-  const multiLine = example.includes('\n')
+  const C2 = { green: '#0A7A6A', tealDim: 'rgba(10,122,106,0.08)', tealMid: 'rgba(10,122,106,0.18)', text: '#1A2435', sub: '#4A5A6E', border: 'rgba(26,36,53,0.10)', gold: '#C9A030' }
   return (
-    <div style={{ marginBottom: 28, paddingBottom: 28, borderBottom: `1px solid ${C.border}` }}>
-      {/* フィールド名 */}
+    <div style={{ marginBottom: 22, paddingBottom: 22, borderBottom: `1px solid ${C2.border}` }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: '4px 10px', marginBottom: 8 }}>
-        <code style={{ fontSize: 12, fontWeight: 700, color: C.green, background: C.tealDim, border: `1px solid ${C.tealMid}`, padding: '2px 8px', borderRadius: 5 }}>
+        <code style={{ fontSize: 12, fontWeight: 700, color: C2.green, background: C2.tealDim, border: `1px solid ${C2.tealMid}`, padding: '2px 8px', borderRadius: 5 }}>
           {label}
         </code>
-        <span style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{ja}</span>
+        <span style={{ fontSize: 13, fontWeight: 700, color: C2.text }}>{ja}</span>
       </div>
-
-      {/* 説明文 */}
-      <div style={{ fontSize: 13.5, color: C.sub, lineHeight: 1.85, marginBottom: 12 }}>
+      <div style={{ fontSize: 13.5, color: C2.sub, lineHeight: 1.85 }}>
         {children}
       </div>
-
-      {/* 入力例 */}
-      <div style={{ background: C.tealDim, border: `1px solid ${C.tealMid}`, borderRadius: 8, padding: '10px 14px', marginBottom: warn ? 10 : 0 }}>
-        <p style={{ fontSize: 10, fontWeight: 700, color: C.green, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-          入力例
-        </p>
-        {example.split('\n').map((line, i) => (
-          <p key={i} style={{ fontSize: 13, fontWeight: 600, color: '#0A5A4E', margin: i > 0 ? '4px 0 0' : 0, lineHeight: 1.6 }}>
-            {line}
-          </p>
-        ))}
-      </div>
-
-      {/* 注意書き */}
       {warn && (
-        <div style={{ background: '#FFFBF0', border: '1px solid #E8D5A0', borderLeft: `4px solid ${C.gold}`, borderRadius: '0 8px 8px 0', padding: '10px 14px', marginTop: 0 }}>
-          <p style={{ fontSize: 10, fontWeight: 700, color: C.gold, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-            ⚠ 注意
-          </p>
+        <div style={{ background: '#FFFBF0', border: '1px solid #E8D5A0', borderLeft: `4px solid ${C2.gold}`, borderRadius: '0 8px 8px 0', padding: '10px 14px', marginTop: 10 }}>
+          <p style={{ fontSize: 10, fontWeight: 700, color: C2.gold, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>⚠ 注意</p>
           <p style={{ fontSize: 12.5, color: '#6B4F1A', margin: 0, lineHeight: 1.7 }}>{warn}</p>
         </div>
       )}
