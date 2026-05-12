@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTV Club — ボタンアニメーション比較</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #0A7A6A;
+  --teal-lt: #0D9280;
+  --teal-dark: #086558;
+  --ink: #1A2435;
+  --ink-sub: #4A5A6E;
+  --border: rgba(26,36,53,0.12);
+  --bg: #F5F8FA;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
+  background: #1A2435;
+  -webkit-font-smoothing: antialiased;
+  padding: 48px 24px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.card-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.card-desc {
+  font-size: 11px;
+  color: var(--ink-sub);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.btn-wrap { display: flex; flex-direction: column; gap: 8px; }
+
+/* ── Base button styles ── */
+.btn-base {
+  display: block;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  color: white;
+  background: var(--teal);
+}
+.btn-sub {
+  display: block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--border);
+}
+
+/* ════════════════════════════
+   Pattern 1: シンプルフェード
+   ════════════════════════════ */
+.p1-primary {
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+.p1-primary:hover { background: var(--teal-lt); }
+.p1-primary:active { opacity: 0.8; }
+.p1-sub {
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.p1-sub:hover { background: var(--bg); border-color: var(--teal); color: var(--teal); }
+.p1-sub:active { background: #EDF1F5; }
+
+/* ════════════════════════════
+   Pattern 2: 浮き上がる（shadow pop）
+   ════════════════════════════ */
+.p2-primary {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  box-shadow: 0 2px 0 var(--teal-dark);
+}
+.p2-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10,122,106,0.35);
+  background: var(--teal-lt);
+}
+.p2-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 var(--teal-dark);
+}
+.p2-sub {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 1px 0 rgba(26,36,53,0.12);
+}
+.p2-sub:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26,36,53,0.12);
+}
+.p2-sub:active { transform: translateY(0); box-shadow: none; }
+
+/* ════════════════════════════
+   Pattern 3: スケール
+   ════════════════════════════ */
+.p3-primary {
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.15s ease;
+}
+.p3-primary:hover { transform: scale(1.03); background: var(--teal-lt); }
+.p3-primary:active { transform: scale(0.97); }
+.p3-sub {
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.p3-sub:hover { transform: scale(1.03); }
+.p3-sub:active { transform: scale(0.97); }
+
+/* ════════════════════════════
+   Pattern 4: スライド矢印
+   ════════════════════════════ */
+.p4-primary {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s ease, padding-right 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.p4-primary .arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-size: 14px;
+  margin-left: 0;
+}
+.p4-primary:hover { background: var(--teal-lt); }
+.p4-primary:hover .arrow {
+  opacity: 1;
+  transform: translateX(6px);
+}
+.p4-sub {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.p4-sub .arrow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-size: 13px;
+}
+.p4-sub:hover { color: var(--teal); border-color: var(--teal); }
+.p4-sub:hover .arrow {
+  opacity: 1;
+  transform: translateX(6px);
+}
+
+/* ════════════════════════════
+   Pattern 5: リップル（波紋）
+   ════════════════════════════ */
+.p5-primary {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+.p5-primary:hover { background: var(--teal-lt); }
+.p5-primary:active::after {
+  content: '';
+  position: absolute;
+  width: 200px; height: 200px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.5s ease-out forwards;
+}
+.p5-sub {
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+.p5-sub:hover { border-color: var(--teal); color: var(--teal); }
+.p5-sub:active::after {
+  content: '';
+  position: absolute;
+  width: 200px; height: 200px;
+  background: rgba(10,122,106,0.1);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.5s ease-out forwards;
+}
+@keyframes ripple {
+  to { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+
+/* ════════════════════════════
+   Pattern 6: 背景スライド（fill）
+   ════════════════════════════ */
+.p6-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.25s ease;
+}
+.p6-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--teal-dark);
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  z-index: -1;
+}
+.p6-primary:hover::before { transform: translateX(0); }
+.p6-sub {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.25s ease;
+}
+.p6-sub::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--teal);
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  z-index: -1;
+}
+.p6-sub:hover::before { transform: translateY(0); }
+.p6-sub:hover { color: white; border-color: var(--teal); }
+
+/* Title */
+.page-title {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.page-title h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+}
+.page-title p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>ボタンアニメーション — 6パターン比較</h1>
+  <p>各ボタンにマウスオーバー・クリックして動きを確認してください</p>
+</div>
+
+<div class="grid">
+
+  <!-- P1 -->
+  <div class="card">
+    <div class="card-label">Pattern 1</div>
+    <div class="card-title">シンプルフェード</div>
+    <div class="card-desc">色がなめらかに切り替わる。最もシンプルで汎用性が高い。</div>
+    <div class="btn-wrap">
+      <a class="btn-base p1-primary">自分に合うビザを比較する</a>
+      <a class="btn-sub p1-sub">必要書類を確認する</a>
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div class="card">
+    <div class="card-label">Pattern 2</div>
+    <div class="card-title">浮き上がる（Shadow Pop）</div>
+    <div class="card-desc">ホバーで浮き上がり影が広がる。押したときに沈む感触。</div>
+    <div class="btn-wrap">
+      <a class="btn-base p2-primary">自分に合うビザを比較する</a>
+      <a class="btn-sub p2-sub">必要書類を確認する</a>
+    </div>
+  </div>
+
+  <!-- P3 -->
+  <div class="card">
+    <div class="card-label">Pattern 3</div>
+    <div class="card-title">スケール（バネ）</div>
+    <div class="card-desc">ホバーでわずかに拡大。バネのような弾力感が出る。</div>
+    <div class="btn-wrap">
+      <a class="btn-base p3-primary">自分に合うビザを比較する</a>
+      <a class="btn-sub p3-sub">必要書類を確認する</a>
+    </div>
+  </div>
+
+  <!-- P4 -->
+  <div class="card">
+    <div class="card-label">Pattern 4</div>
+    <div class="card-title">スライド矢印</div>
+    <div class="card-desc">ホバーで矢印がスライドして現れる。行動を促す演出。</div>
+    <div class="btn-wrap">
+      <a class="btn-base p4-primary">自分に合うビザを比較する <span class="arrow">→</span></a>
+      <a class="btn-sub p4-sub">必要書類を確認する <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- P5 -->
+  <div class="card">
+    <div class="card-label">Pattern 5</div>
+    <div class="card-title">リップル（波紋）</div>
+    <div class="card-desc">クリック時に波紋が広がる。タッチデバイスとの相性も良い。</div>
+    <div class="btn-wrap">
+      <a class="btn-base p5-primary">自分に合うビザを比較する</a>
+      <a class="btn-sub p5-sub">必要書類を確認する</a>
+    </div>
+  </div>
+
+  <!-- P6 -->
+  <div class="card">
+    <div class="card-label">Pattern 6</div>
+    <div class="card-title">背景スライド（Fill）</div>
+    <div class="card-desc">ホバーで背景色が横・縦からスライドして塗り替わる。</div>
+    <div class="btn-wrap">
+      <a class="btn-base p6-primary">自分に合うビザを比較する</a>
+      <a class="btn-sub p6-sub">必要書類を確認する</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

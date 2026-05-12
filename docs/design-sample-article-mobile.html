@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTV Club — 記事ページ＆スマホ画面 デザインサンプル</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════
+   DTV Club — 記事ページ & スマホ画面 デザインサンプル
+   ══════════════════════════════════════════════════ */
+
+:root {
+  --bg:          #F5F8FA;
+  --bg-section:  #EDF1F5;
+  --bg-card:     #FFFFFF;
+  --bg-dark:     #142130;
+  --ink:         #1A2435;
+  --ink-sub:     #4A5A6E;
+  --ink-muted:   #7E8EA4;
+  --teal:        #0A7A6A;
+  --teal-lt:     #0D9280;
+  --teal-dim:    rgba(10,122,106,0.10);
+  --teal-dimmer: rgba(10,122,106,0.06);
+  --sand:        #E8D9B5;
+  --border:      rgba(26,36,53,0.10);
+  --border-md:   rgba(26,36,53,0.16);
+  --shadow-sm:   0 2px 12px rgba(26,36,53,0.08);
+  --shadow-md:   0 6px 24px rgba(26,36,53,0.10);
+  --radius:      12px;
+  --radius-sm:   8px;
+  --container:   1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
+  font-size: 15px;
+  background: #E8ECF0;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ── Section Labels ───────────────────────────── */
+.section-label {
+  text-align: center;
+  padding: 56px 24px 20px;
+}
+.section-label h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.section-label p {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.section-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--teal);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+/* ═══════════════════════════════════════════
+   PART 1: ARTICLE PAGE (DESKTOP)
+   ═══════════════════════════════════════════ */
+.desktop-frame {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+.desktop-browser {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+.browser-bar {
+  background: #F0F0F0;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #DCDCDC;
+}
+.browser-dots {
+  display: flex; gap: 6px;
+}
+.browser-dot {
+  width: 11px; height: 11px; border-radius: 50%;
+}
+.browser-dot:nth-child(1) { background: #FF5F57; }
+.browser-dot:nth-child(2) { background: #FFBD2E; }
+.browser-dot:nth-child(3) { background: #28C840; }
+.browser-url {
+  flex: 1;
+  background: #fff;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #666;
+  border: 1px solid #DDD;
+  max-width: 500px;
+}
+
+/* ── Article Nav ── */
+.art-nav {
+  height: 56px;
+  background: rgba(245,248,250,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 0;
+}
+.art-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 32px;
+}
+.art-nav-badge {
+  width: 26px; height: 26px;
+  background: var(--teal);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+}
+.art-nav-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.art-nav-name span { color: var(--teal); }
+.art-nav-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  flex: 1;
+}
+.art-nav-links a {
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-sub);
+  border-radius: 5px;
+  transition: all 0.15s;
+}
+.art-nav-links a:hover, .art-nav-links a.active {
+  background: var(--teal-dimmer);
+  color: var(--teal);
+}
+.art-nav-cta {
+  background: var(--teal);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ── Article Body ── */
+.art-body {
+  background: var(--bg);
+  padding: 32px;
+}
+.art-breadcrumb {
+  font-size: 11px;
+  color: var(--ink-muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.art-breadcrumb span { color: var(--teal); }
+.art-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ── Article Main ── */
+.art-main {}
+.art-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal-dim);
+  border: 1px solid rgba(10,122,106,0.2);
+  border-radius: 100px;
+  padding: 3px 10px 3px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+.art-category-tag-dot {
+  width: 5px; height: 5px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+.art-h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.art-meta {
+  font-size: 11px;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.art-excerpt {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink-sub);
+  padding: 16px 20px;
+  border-left: 4px solid var(--teal);
+  background: var(--teal-dimmer);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 28px;
+}
+.art-section-h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 28px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--teal-dim);
+}
+.art-section-h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 20px 0 10px;
+}
+.art-para {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink-sub);
+  margin-bottom: 16px;
+}
+.art-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 16px 0 24px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.art-table th {
+  background: var(--ink);
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+}
+.art-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: white;
+  color: var(--ink-sub);
+  font-size: 13px;
+}
+.art-table tr:last-child td { border-bottom: none; }
+.art-callout {
+  background: #FFF8E6;
+  border: 1px solid #E8D5A0;
+  border-left: 4px solid #C9A84C;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #6B4F1A;
+  line-height: 1.75;
+  margin: 20px 0;
+}
+.art-callout strong { color: #4F3A0F; }
+
+/* Article Bottom CTA */
+.art-cta-block {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.art-cta-primary {
+  background: var(--teal);
+  color: white;
+  padding: 11px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+}
+.art-cta-secondary {
+  background: transparent;
+  color: var(--ink);
+  padding: 11px 22px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-md);
+  cursor: pointer;
+}
+.art-back {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+/* ── Article Sidebar ── */
+.art-sidebar {}
+.sidebar-toc {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.sidebar-toc-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+}
+.sidebar-toc a {
+  display: block;
+  font-size: 12px;
+  color: var(--ink-sub);
+  padding: 4px 0 4px 12px;
+  border-left: 2px solid var(--border);
+  line-height: 1.45;
+  transition: color 0.15s, border-color 0.15s;
+}
+.sidebar-toc a:hover, .sidebar-toc a.active {
+  color: var(--teal);
+  border-left-color: var(--teal);
+}
+.sidebar-toc a + a { margin-top: 2px; }
+.sidebar-toc a.sub { padding-left: 24px; font-size: 11px; }
+
+.sidebar-cta {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.sidebar-cta-heading {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.sidebar-cta-body {
+  font-size: 11px;
+  color: var(--ink-sub);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.sidebar-cta-btn {
+  display: block;
+  background: var(--teal);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+.sidebar-cta-btn-sub {
+  display: block;
+  background: transparent;
+  color: var(--ink-sub);
+  text-align: center;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-md);
+}
+
+/* ── Related ── */
+.art-related {
+  background: var(--bg-section);
+  padding: 28px 32px;
+  border-top: 1px solid var(--border);
+}
+.art-related-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.art-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.art-related-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.art-related-card-thumb {
+  height: 80px;
+  background: linear-gradient(135deg, #C8E8E0 0%, #EDF1F5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.art-related-card-body {
+  padding: 12px;
+}
+.art-related-card-tag {
+  font-size: 10px;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.art-related-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+/* ── Article Footer ── */
+.art-footer {
+  background: var(--bg-dark);
+  padding: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  gap: 32px;
+}
+.art-footer-brand .name {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+.art-footer-brand .name span { color: #5EC4B8; }
+.art-footer-brand .tag {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+.art-footer-col h5 {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5EC4B8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.art-footer-col a {
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 6px;
+  transition: color 0.15s;
+}
+.art-footer-col a:hover { color: rgba(255,255,255,0.8); }
+
+/* ═══════════════════════════════════════════
+   PART 2: MOBILE FRAMES
+   ═══════════════════════════════════════════ */
+.mobile-showcase {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.mobile-label {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mobile-label h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.mobile-label p {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+/* Phone frame */
+.phone {
+  width: 320px;
+  margin: 0 auto;
+  background: #1A1A1A;
+  border-radius: 44px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.1),
+    0 30px 80px rgba(0,0,0,0.4),
+    inset 0 0 0 2px #2A2A2A;
+}
+.phone-screen {
+  background: var(--bg);
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+}
+.phone-notch {
+  height: 28px;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.phone-notch-pill {
+  width: 80px;
+  height: 20px;
+  background: #1A1A1A;
+  border-radius: 0 0 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.phone-notch-dot { width: 8px; height: 8px; background: #333; border-radius: 50%; }
+.phone-notch-bar { width: 30px; height: 4px; background: #333; border-radius: 2px; }
+
+/* ── Mobile Top Page ── */
+.mob-top {}
+/* Nav */
+.mob-nav {
+  height: 44px;
+  background: rgba(245,248,250,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.mob-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.mob-nav-badge {
+  width: 22px; height: 22px;
+  background: var(--teal);
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+}
+.mob-nav-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.mob-nav-name span { color: var(--teal); }
+.mob-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mob-nav-lang {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  background: var(--bg-section);
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.mob-hamburger {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.mob-hamburger span {
+  display: block;
+  height: 1.5px;
+  background: var(--ink);
+  border-radius: 1px;
+}
+.mob-hamburger span:nth-child(3) { width: 70%; }
+
+/* Hero Mobile */
+.mob-hero {
+  background: var(--bg);
+  padding: 24px 16px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.mob-hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(10,122,106,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.mob-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--teal-dim);
+  border: 1px solid rgba(10,122,106,0.2);
+  border-radius: 100px;
+  padding: 3px 8px;
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+.mob-hero-eyebrow-dot {
+  width: 4px; height: 4px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+.mob-hero-h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.mob-hero-h1 em { font-style: normal; color: var(--teal); }
+.mob-hero-lead {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--ink-sub);
+  margin-bottom: 18px;
+}
+.mob-hero-cta-primary {
+  display: block;
+  background: var(--teal);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+.mob-hero-cta-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.mob-hero-cta-sm {
+  background: var(--bg-card);
+  border: 1px solid var(--border-md);
+  color: var(--ink);
+  text-align: center;
+  padding: 9px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+/* Stats strip */
+.mob-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.mob-stat {
+  padding: 12px 8px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.mob-stat:last-child { border-right: none; }
+.mob-stat-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--teal);
+}
+.mob-stat-label {
+  font-size: 9px;
+  color: var(--ink-muted);
+  margin-top: 2px;
+}
+
+/* Purpose cards mobile */
+.mob-section {
+  padding: 20px 16px;
+  background: var(--bg-section);
+}
+.mob-section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mob-section-title::before {
+  content: '';
+  display: block;
+  width: 3px; height: 14px;
+  background: var(--teal);
+  border-radius: 2px;
+}
+.mob-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.mob-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  padding: 14px 12px;
+  border: 1px solid var(--border);
+}
+.mob-card-icon { font-size: 18px; margin-bottom: 6px; }
+.mob-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.mob-card-desc {
+  font-size: 9.5px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+.mob-card.highlight {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.mob-card.highlight .mob-card-title,
+.mob-card.highlight .mob-card-desc { color: rgba(255,255,255,0.9); }
+
+/* Latest articles mobile */
+.mob-articles {
+  padding: 20px 16px;
+  background: var(--bg);
+}
+.mob-art-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.mob-art-item:last-child { border-bottom: none; }
+.mob-art-thumb {
+  width: 60px;
+  height: 52px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--teal-dim) 0%, #EDF1F5 100%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.mob-art-content {}
+.mob-art-tag {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+.mob-art-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+}
+.mob-art-date {
+  font-size: 10px;
+  color: var(--ink-muted);
+  margin-top: 3px;
+}
+
+/* Golf DTV banner mobile */
+.mob-golf-banner {
+  background: linear-gradient(135deg, #082d21 0%, #0d4f3c 100%);
+  margin: 0 16px 20px;
+  border-radius: var(--radius);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.mob-golf-banner::after {
+  content: '⛳';
+  position: absolute;
+  bottom: -8px; right: 12px;
+  font-size: 48px;
+  opacity: 0.2;
+}
+.mob-golf-eyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  color: #C9A84C;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.mob-golf-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+.mob-golf-cta {
+  display: inline-block;
+  background: #C9A84C;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+/* Bottom nav bar */
+.mob-bottom-nav {
+  background: rgba(245,248,250,0.96);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  padding: 6px 0 2px;
+}
+.mob-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 0;
+  font-size: 9px;
+  color: var(--ink-muted);
+}
+.mob-tab.active { color: var(--teal); }
+.mob-tab-icon { font-size: 16px; }
+
+
+/* ── Mobile Article Page ── */
+.mob-art-page {}
+.mob-art-nav {
+  height: 44px;
+  background: rgba(245,248,250,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.mob-art-back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 500;
+}
+.mob-art-nav-logo {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.mob-art-nav-logo span { color: var(--teal); }
+.mob-art-share {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+/* Article scroll progress */
+.mob-progress {
+  height: 3px;
+  background: var(--border);
+}
+.mob-progress-fill {
+  width: 40%;
+  height: 100%;
+  background: var(--teal);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Article header area */
+.mob-art-header {
+  padding: 20px 16px 16px;
+  background: var(--bg);
+}
+.mob-art-breadcrumb {
+  font-size: 10px;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+}
+.mob-art-breadcrumb span { color: var(--teal); }
+.mob-art-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--teal-dim);
+  border: 1px solid rgba(10,122,106,0.2);
+  border-radius: 100px;
+  padding: 3px 8px;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.mob-art-h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.mob-art-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: var(--ink-muted);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.mob-art-excerpt {
+  padding: 14px 14px 14px 18px;
+  border-left: 3px solid var(--teal);
+  background: var(--teal-dimmer);
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ink-sub);
+  margin: 14px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* TOC mobile */
+.mob-toc {
+  margin: 0 16px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.mob-toc-header {
+  background: var(--bg-section);
+  padding: 10px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mob-toc-list {
+  padding: 10px 14px;
+  list-style: none;
+}
+.mob-toc-list li {
+  padding: 4px 0;
+  font-size: 11px;
+  color: var(--ink-sub);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-bottom: 1px solid var(--bg-section);
+}
+.mob-toc-list li:last-child { border-bottom: none; }
+.mob-toc-num {
+  font-size: 10px;
+  color: var(--teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Article content mobile */
+.mob-art-content {
+  padding: 0 16px;
+  background: var(--bg);
+}
+.mob-art-h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 20px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--teal-dim);
+}
+.mob-art-para {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--ink-sub);
+  margin-bottom: 12px;
+}
+.mob-art-callout {
+  background: #FFF8E6;
+  border-left: 3px solid #C9A84C;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #6B4F1A;
+  line-height: 1.75;
+  margin: 14px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mob-art-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  margin: 14px 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.mob-art-table th {
+  background: var(--ink);
+  color: white;
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+}
+.mob-art-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  background: white;
+  color: var(--ink-sub);
+}
+.mob-art-table tr:last-child td { border-bottom: none; }
+
+/* Article CTA mobile */
+.mob-art-cta {
+  margin: 24px 16px 16px;
+  padding: 18px;
+  background: linear-gradient(135deg, #0A7A6A 0%, #0d9280 100%);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.mob-art-cta-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.mob-art-cta-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.mob-art-cta-btn {
+  display: block;
+  background: white;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+.mob-art-cta-btn-sub {
+  display: block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 9px;
+  border-radius: var(--radius-sm);
+}
+
+/* Related articles mobile */
+.mob-related {
+  padding: 16px;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border);
+}
+.mob-related-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.mob-related-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.mob-related-item:last-child { border-bottom: none; }
+.mob-related-thumb {
+  width: 52px;
+  height: 44px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--teal-dim), #EDF1F5);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.mob-related-text {}
+.mob-related-tag {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+.mob-related-ttl {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+/* ── Presentation wrapper ── */
+.presentation-bg {
+  background: linear-gradient(160deg, #D8DFE8 0%, #C8D2DC 100%);
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* ── Note labels ── */
+.note-label {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+</style>
+</head>
+<body class="presentation-bg">
+
+<!-- ─────────────────────────────────────────
+     SECTION 1: ARTICLE PAGE (DESKTOP)
+     ───────────────────────────────────────── -->
+<div class="section-label">
+  <span class="note-label">Pattern A</span>
+  <h2>記事ページ — デスクトップ</h2>
+  <p>本文2カラム（記事 + スティッキーサイドバー）+ 関連記事 + フッター</p>
+  <div class="section-divider"></div>
+</div>
+
+<div class="desktop-frame">
+  <div class="desktop-browser">
+    <!-- Browser chrome -->
+    <div class="browser-bar">
+      <div class="browser-dots">
+        <div class="browser-dot"></div>
+        <div class="browser-dot"></div>
+        <div class="browser-dot"></div>
+      </div>
+      <div class="browser-url">dtvclub.com/ja/blog/dtv-acceptance-letter</div>
+    </div>
+
+    <!-- Nav -->
+    <div class="art-nav">
+      <div class="art-nav-logo">
+        <div class="art-nav-badge">D</div>
+        <span class="art-nav-name">DTV <span>Club</span></span>
+      </div>
+      <ul class="art-nav-links">
+        <li><a href="#">ビザ情報</a></li>
+        <li><a href="#">申請ガイド</a></li>
+        <li><a href="#">必要書類</a></li>
+        <li><a href="#">タイ生活</a></li>
+        <li><a href="#" class="active">ソフトパワー</a></li>
+        <li><a href="#">マガジン</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;margin-left:auto">
+        <div style="display:flex;gap:2px;">
+          <button style="font-size:10px;padding:3px 7px;border:1px solid var(--border);border-radius:4px;background:var(--ink);color:white;cursor:pointer;font-family:inherit">JP</button>
+          <button style="font-size:10px;padding:3px 7px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--ink-muted);cursor:pointer;font-family:inherit">EN</button>
+          <button style="font-size:10px;padding:3px 7px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--ink-muted);cursor:pointer;font-family:inherit">KO</button>
+        </div>
+        <button class="art-nav-cta">無料相談はこちら</button>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="art-body">
+      <!-- Breadcrumb -->
+      <div class="art-breadcrumb">
+        ホーム &rsaquo; ブログ &rsaquo; <span>DTV受入レターで見られやすいポイント</span>
+      </div>
+
+      <!-- 2-col grid -->
+      <div class="art-grid">
+        <!-- Main -->
+        <div class="art-main">
+          <div class="art-category-tag">
+            <div class="art-category-tag-dot"></div>
+            ソフトパワー
+          </div>
+          <h1 class="art-h1">DTV受入レターで見られやすいポイント</h1>
+          <div class="art-meta">DTV Club編集部 · 2026-05-01 · 更新 2026-05-07 · 読了約7分</div>
+
+          <div class="art-excerpt">
+            DTVソフトパワールートの申請で核心となる受入レター。どのような情報が記載されていれば申請に役立えるのか、確認すべきポイントを整理します。
+          </div>
+
+          <h2 class="art-section-h2">受入レターとは</h2>
+          <p class="art-para">受入レター（Acceptance Letter）は、タイ国内のゴルフ場・料理学校・武術道場など、ソフトパワー活動を提供する施設が発行する書類です。「申請者がこの施設でこの活動に参加します」という証明書の役割を果たします。</p>
+
+          <h2 class="art-section-h2">受入レターに含まれるべき情報</h2>
+          <p class="art-para">品質の高い受入レターには、以下の情報が明確に記載されています。</p>
+
+          <table class="art-table">
+            <thead>
+              <tr>
+                <th style="width:160px">項目</th>
+                <th>内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>発行機関の情報</td><td>施設名、住所、連絡先、代表者または担当者の署名</td></tr>
+              <tr><td>申請者のフルネーム</td><td>パスポートと一致した英語表記</td></tr>
+              <tr><td>活動内容</td><td>ゴルフ、料理、ムエタイなど具体的な活動名</td></tr>
+              <tr><td>活動期間</td><td>開始日〜終了日または活動期間</td></tr>
+              <tr><td>活動内容の詳細</td><td>どのような形式で参加するかの概要</td></tr>
+              <tr><td>発行日</td><td>レターの作成・発行日</td></tr>
+            </tbody>
+          </table>
+
+          <h2 class="art-section-h2">確認すべきポイント</h2>
+
+          <h3 class="art-section-h3">氏名のスペルがパスポートと一致しているか</h3>
+          <p class="art-para">申請者のフルネームが、パスポートの表記と完全に一致していることを確認します。スペルミス・略書きのある場合は修正を依頼します。</p>
+
+          <div class="art-callout">
+            <strong>⚠ 注意点：</strong>「Golf DTV対応のゴルフ場・アカデミーでは、DTV申請に対応した受入レターの発行に慣れているため、書類品質が安定しやすいメリットがあります。詳しくはGolf DTVページをご確認ください。
+          </div>
+
+          <h3 class="art-section-h3">活動期間が明確か</h3>
+          <p class="art-para">「いつからいつまで」という期間が具体的に記載されているかを確認します。「適宜」「随時」のような曖昧な期間表記は避けた方が良いです。</p>
+
+          <!-- Bottom CTA -->
+          <div class="art-cta-block">
+            <button class="art-cta-primary">無料相談はこちら</button>
+            <button class="art-cta-secondary">必要書類を確認する</button>
+          </div>
+          <div class="art-back">← ブログ一覧へ戻る</div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="art-sidebar">
+          <!-- TOC -->
+          <div class="sidebar-toc">
+            <div class="sidebar-toc-label">目次</div>
+            <a href="#" class="active">受入レターとは</a>
+            <a href="#">受入レターに含まれるべき情報</a>
+            <a href="#">確認すべきポイント</a>
+            <a href="#" class="sub">氏名のスペル</a>
+            <a href="#" class="sub">活動期間</a>
+            <a href="#" class="sub">機関情報の正確さ</a>
+            <a href="#" class="sub">活動内容が具体的か</a>
+            <a href="#">受入レターの品質が重要な理由</a>
+            <a href="#">FAQ</a>
+            <a href="#">関連記事</a>
+          </div>
+
+          <!-- CTA -->
+          <div class="sidebar-cta">
+            <div class="sidebar-cta-heading">相談・確認</div>
+            <div class="sidebar-cta-body">DTVの取得ルートについて専門家に相談できます。</div>
+            <a href="#" class="sidebar-cta-btn">無料相談はこちら</a>
+            <a href="#" class="sidebar-cta-btn-sub">自分に向いているか確認</a>
+          </div>
+        </div>
+      </div><!-- /art-grid -->
+    </div><!-- /art-body -->
+
+    <!-- Related articles -->
+    <div class="art-related">
+      <div class="art-related-title">関連記事</div>
+      <div class="art-related-grid">
+        <div class="art-related-card">
+          <div class="art-related-card-thumb">📄</div>
+          <div class="art-related-card-body">
+            <div class="art-related-card-tag">必要書類</div>
+            <div class="art-related-card-title">DTV受入レターとは：取得方法と必要な記載内容</div>
+          </div>
+        </div>
+        <div class="art-related-card">
+          <div class="art-related-card-thumb">⛳</div>
+          <div class="art-related-card-body">
+            <div class="art-related-card-tag">ソフトパワー</div>
+            <div class="art-related-card-title">DTVソフトパワービザとは</div>
+          </div>
+        </div>
+        <div class="art-related-card">
+          <div class="art-related-card-thumb">🏌️</div>
+          <div class="art-related-card-body">
+            <div class="art-related-card-tag">Golf DTV</div>
+            <div class="art-related-card-title">Golf DTVを選んでいる人たちへ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="art-footer">
+      <div class="art-footer-brand">
+        <div class="name">DTV <span>Club</span></div>
+        <div class="tag">タイ・デジタルノマドビザの<br>情報ハブ</div>
+      </div>
+      <div class="art-footer-col">
+        <h5>ビザ情報</h5>
+        <a href="#">DTVビザとは</a>
+        <a href="#">申請ガイド</a>
+        <a href="#">必要書類</a>
+        <a href="#">更新・再申請</a>
+      </div>
+      <div class="art-footer-col">
+        <h5>タイ生活</h5>
+        <a href="#">バンコク</a>
+        <a href="#">住居・物件</a>
+        <a href="#">医療・保険</a>
+        <a href="#">税金・金融</a>
+      </div>
+      <div class="art-footer-col">
+        <h5>サービス</h5>
+        <a href="#">ソフトパワービザ</a>
+        <a href="#">ゴルフスクールプラン</a>
+        <a href="#">お問い合わせ</a>
+        <a href="#">Discord</a>
+      </div>
+    </div>
+  </div><!-- /desktop-browser -->
+</div><!-- /desktop-frame -->
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 2: MOBILE PATTERNS
+     ───────────────────────────────────────── -->
+<div class="section-label">
+  <span class="note-label">Pattern B &amp; C</span>
+  <h2>スマホ画面</h2>
+  <p>左：トップページ（ホーム）&nbsp;&nbsp;右：記事ページ</p>
+  <div class="section-divider"></div>
+</div>
+
+<div class="mobile-showcase">
+
+  <!-- LEFT: Mobile Top Page -->
+  <div>
+    <div class="mobile-label">
+      <h3>トップページ（スマホ）</h3>
+      <p>ヒーロー → スタッツ → 目的別カード → 最新記事 → Golf DTV</p>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <!-- Notch -->
+        <div class="phone-notch">
+          <div class="phone-notch-pill">
+            <div class="phone-notch-dot"></div>
+            <div class="phone-notch-bar"></div>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="mob-nav">
+          <div class="mob-nav-logo">
+            <div class="mob-nav-badge">D</div>
+            <span class="mob-nav-name">DTV <span>Club</span></span>
+          </div>
+          <div class="mob-nav-right">
+            <span class="mob-nav-lang">JP</span>
+            <div class="mob-hamburger">
+              <span></span><span></span><span style="width:70%"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="mob-hero">
+          <div class="mob-hero-eyebrow">
+            <div class="mob-hero-eyebrow-dot"></div>
+            タイ・デジタルノマドビザの情報ハブ
+          </div>
+          <h1 class="mob-hero-h1">
+            タイで暮らす、<br>
+            <em>自分らしい選択</em>を。
+          </h1>
+          <p class="mob-hero-lead">DTVビザの申請から現地生活まで、必要な情報をすべてここで。</p>
+          <a href="#" class="mob-hero-cta-primary">DTVビザを調べる</a>
+          <div class="mob-hero-cta-group">
+            <a href="#" class="mob-hero-cta-sm">必要書類を確認</a>
+            <a href="#" class="mob-hero-cta-sm">⛳ Golf DTV</a>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="mob-stats">
+          <div class="mob-stat">
+            <div class="mob-stat-num">180+</div>
+            <div class="mob-stat-label">対象国</div>
+          </div>
+          <div class="mob-stat">
+            <div class="mob-stat-num">5年</div>
+            <div class="mob-stat-label">有効期間</div>
+          </div>
+          <div class="mob-stat">
+            <div class="mob-stat-num">180日</div>
+            <div class="mob-stat-label">1回の滞在</div>
+          </div>
+        </div>
+
+        <!-- Purpose cards -->
+        <div class="mob-section">
+          <div class="mob-section-title">目的から探す</div>
+          <div class="mob-card-grid">
+            <div class="mob-card">
+              <div class="mob-card-icon">✈️</div>
+              <div class="mob-card-title">初めてのDTV</div>
+              <div class="mob-card-desc">制度の概要から申請方法まで</div>
+            </div>
+            <div class="mob-card highlight">
+              <div class="mob-card-icon">📋</div>
+              <div class="mob-card-title">必要書類を確認</div>
+              <div class="mob-card-desc">最新の書類リスト</div>
+            </div>
+            <div class="mob-card">
+              <div class="mob-card-icon">⛳</div>
+              <div class="mob-card-title">Golf DTV</div>
+              <div class="mob-card-desc">ゴルフ×ビザのプラン</div>
+            </div>
+            <div class="mob-card">
+              <div class="mob-card-icon">🏠</div>
+              <div class="mob-card-title">現地生活</div>
+              <div class="mob-card-desc">住居・医療・金融</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest articles -->
+        <div class="mob-articles">
+          <div class="mob-section-title" style="padding:0;margin-bottom:12px;">最新記事</div>
+          <div class="mob-art-item">
+            <div class="mob-art-thumb">📄</div>
+            <div class="mob-art-content">
+              <div class="mob-art-tag">必要書類</div>
+              <div class="mob-art-title">DTV受入レターで見られやすいポイント</div>
+              <div class="mob-art-date">2026-05-07 · 7分</div>
+            </div>
+          </div>
+          <div class="mob-art-item">
+            <div class="mob-art-thumb">🏦</div>
+            <div class="mob-art-content">
+              <div class="mob-art-tag">申請ガイド</div>
+              <div class="mob-art-title">残高証明はどの銀行が使いやすいか</div>
+              <div class="mob-art-date">2026-05-05 · 5分</div>
+            </div>
+          </div>
+          <div class="mob-art-item">
+            <div class="mob-art-thumb">⛳</div>
+            <div class="mob-art-content">
+              <div class="mob-art-tag">Golf DTV</div>
+              <div class="mob-art-title">Golf DTVを選んでいる人たちへ</div>
+              <div class="mob-art-date">2026-05-01 · 6分</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Golf DTV Banner -->
+        <div class="mob-golf-banner">
+          <div class="mob-golf-eyebrow">Soft Power</div>
+          <div class="mob-golf-title">ゴルフ×DTVビザ。<br>タイで上達しながら暮らす。</div>
+          <a href="#" class="mob-golf-cta">Golf DTVを見る</a>
+        </div>
+
+        <!-- Bottom nav -->
+        <div class="mob-bottom-nav">
+          <div class="mob-tab active">
+            <span class="mob-tab-icon">🏠</span>
+            ホーム
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">📖</span>
+            ガイド
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">📋</span>
+            書類
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">⛳</span>
+            Golf
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">✉️</span>
+            相談
+          </div>
+        </div>
+      </div><!-- /phone-screen -->
+    </div><!-- /phone -->
+  </div>
+
+  <!-- RIGHT: Mobile Article Page -->
+  <div>
+    <div class="mobile-label">
+      <h3>記事ページ（スマホ）</h3>
+      <p>ヘッダー → 目次 → 本文 → CTA → 関連記事</p>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <!-- Notch -->
+        <div class="phone-notch">
+          <div class="phone-notch-pill">
+            <div class="phone-notch-dot"></div>
+            <div class="phone-notch-bar"></div>
+          </div>
+        </div>
+
+        <!-- Article nav -->
+        <div class="mob-art-nav">
+          <div class="mob-art-back">‹ ブログ</div>
+          <div class="mob-art-nav-logo">DTV <span>Club</span></div>
+          <div class="mob-art-share">⬆</div>
+        </div>
+
+        <!-- Scroll progress -->
+        <div class="mob-progress">
+          <div class="mob-progress-fill"></div>
+        </div>
+
+        <!-- Article header -->
+        <div class="mob-art-header">
+          <div class="mob-art-breadcrumb">ホーム &rsaquo; ブログ &rsaquo; <span>ソフトパワー</span></div>
+          <div class="mob-art-category">
+            <span style="width:4px;height:4px;background:var(--teal);border-radius:50%;display:inline-block"></span>
+            ソフトパワー
+          </div>
+          <h1 class="mob-art-h1">DTV受入レターで見られやすいポイント</h1>
+          <div class="mob-art-meta-row">
+            <span>DTV Club編集部</span>
+            <span>·</span>
+            <span>2026-05-07</span>
+            <span>·</span>
+            <span>約7分</span>
+          </div>
+        </div>
+
+        <!-- Excerpt -->
+        <div class="mob-art-excerpt">
+          DTVソフトパワールートの申請で核心となる受入レター。確認すべきポイントを整理します。
+        </div>
+
+        <!-- TOC -->
+        <div class="mob-toc">
+          <div class="mob-toc-header">
+            <span>目次</span>
+            <span style="font-size:10px;color:var(--ink-muted)">▾</span>
+          </div>
+          <ul class="mob-toc-list">
+            <li><span class="mob-toc-num">1</span>受入レターとは</li>
+            <li><span class="mob-toc-num">2</span>含まれるべき情報</li>
+            <li><span class="mob-toc-num">3</span>確認すべきポイント</li>
+            <li><span class="mob-toc-num">4</span>品質が重要な理由</li>
+            <li><span class="mob-toc-num">5</span>FAQ</li>
+          </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="mob-art-content">
+          <h2 class="mob-art-h2">受入レターとは</h2>
+          <p class="mob-art-para">タイ国内のゴルフ場・料理学校・武術道場など、ソフトパワー活動を提供する施設が発行する書類です。申請ストーリーの核心となります。</p>
+
+          <h2 class="mob-art-h2">含まれるべき情報</h2>
+
+          <table class="mob-art-table">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>施設情報</td><td>施設名・住所・代表者署名</td></tr>
+              <tr><td>氏名</td><td>パスポートと一致した表記</td></tr>
+              <tr><td>活動内容</td><td>ゴルフ・料理・ムエタイなど</td></tr>
+              <tr><td>活動期間</td><td>開始日〜終了日</td></tr>
+            </tbody>
+          </table>
+
+          <div class="mob-art-callout">
+            <strong>💡</strong> Golf DTV対応のゴルフ場では、DTV申請に慣れた受入レターの発行が期待できます。
+          </div>
+
+          <h2 class="mob-art-h2">確認すべきポイント</h2>
+          <p class="mob-art-para">氏名のスペルがパスポートと一致しているか、活動期間が明確に記載されているかが特に重要です。</p>
+        </div>
+
+        <!-- CTA block -->
+        <div class="mob-art-cta">
+          <div class="mob-art-cta-label">専門家に相談</div>
+          <div class="mob-art-cta-title">受入レターの手配から申請まで、まとめてサポート</div>
+          <a href="#" class="mob-art-cta-btn">無料相談はこちら</a>
+          <a href="#" class="mob-art-cta-btn-sub">必要書類を確認する</a>
+        </div>
+
+        <!-- Related -->
+        <div class="mob-related">
+          <div class="mob-related-title">関連記事</div>
+          <div class="mob-related-item">
+            <div class="mob-related-thumb">📄</div>
+            <div class="mob-related-text">
+              <div class="mob-related-tag">必要書類</div>
+              <div class="mob-related-ttl">DTV受入レターとは：取得方法と必要な記載内容</div>
+            </div>
+          </div>
+          <div class="mob-related-item">
+            <div class="mob-related-thumb">⛳</div>
+            <div class="mob-related-text">
+              <div class="mob-related-tag">Golf DTV</div>
+              <div class="mob-related-ttl">Golf DTVを選んでいる人たちへ</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom nav -->
+        <div class="mob-bottom-nav">
+          <div class="mob-tab">
+            <span class="mob-tab-icon">🏠</span>
+            ホーム
+          </div>
+          <div class="mob-tab active">
+            <span class="mob-tab-icon">📖</span>
+            ガイド
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">📋</span>
+            書類
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">⛳</span>
+            Golf
+          </div>
+          <div class="mob-tab">
+            <span class="mob-tab-icon">✉️</span>
+            相談
+          </div>
+        </div>
+      </div><!-- /phone-screen -->
+    </div><!-- /phone -->
+  </div>
+
+</div><!-- /mobile-showcase -->
+
+<div style="height:60px"></div>
+
+</body>
+</html>

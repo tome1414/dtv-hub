@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTV Club — スマホトップ 画像パターン</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #0A7A6A; --teal-lt: #0D9280;
+  --teal-dim: rgba(10,122,106,0.12);
+  --ink: #1A2435; --ink-sub: #4A5A6E; --ink-muted: #7E8EA4;
+  --bg: #F5F8FA; --bg-section: #EDF1F5; --bg-card: #FFFFFF;
+  --border: rgba(26,36,53,0.10); --border-md: rgba(26,36,53,0.16);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
+  background: #1A2435;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Stage ── */
+.stage {
+  padding: 48px 32px;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.col { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.col-label { text-align: center; }
+.col-label span {
+  display: inline-block;
+  background: var(--teal);
+  color: white; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 100px; margin-bottom: 8px;
+}
+.col-label h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px; font-weight: 600; color: white; margin-bottom: 4px;
+}
+.col-label p { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+/* ── Phone frame ── */
+.phone {
+  width: 320px;
+  background: #1A1A1A;
+  border-radius: 44px;
+  padding: 12px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 30px 80px rgba(0,0,0,0.5), inset 0 0 0 2px #2A2A2A;
+}
+.phone-screen {
+  background: var(--bg);
+  border-radius: 34px;
+  overflow: hidden;
+}
+.phone-notch {
+  height: 28px; background: #1A1A1A;
+  display: flex; align-items: center; justify-content: center;
+}
+.phone-notch-pill {
+  width: 80px; height: 20px; background: #1A1A1A;
+  border-radius: 0 0 14px 14px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.dot-cam { width: 8px; height: 8px; background: #333; border-radius: 50%; }
+.dot-bar { width: 30px; height: 4px; background: #333; border-radius: 2px; }
+
+/* ── Nav ── */
+.mob-nav {
+  height: 44px;
+  background: rgba(245,248,250,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px;
+}
+.mob-nav-logo { display: flex; align-items: center; gap: 6px; }
+.mob-nav-badge {
+  width: 22px; height: 22px; background: var(--teal);
+  border-radius: 5px; display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 9px; font-weight: 800;
+}
+.mob-nav-name { font-size: 14px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+.mob-nav-name span { color: var(--teal); }
+.mob-nav-right { display: flex; align-items: center; gap: 8px; }
+.mob-nav-lang {
+  font-size: 10px; font-weight: 600; color: var(--ink-muted);
+  background: var(--bg-section); padding: 3px 7px;
+  border-radius: 4px; border: 1px solid var(--border);
+}
+.mob-hamburger { width: 22px; height: 22px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.mob-hamburger span { display: block; height: 1.5px; background: var(--ink); border-radius: 1px; }
+
+/* ── HERO A: グラデのみ（現状） ── */
+.mob-hero-plain {
+  padding: 24px 16px 20px;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.mob-hero-plain::before {
+  content: '';
+  position: absolute; top: -40px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(10,122,106,0.12) 0%, transparent 70%);
+}
+
+/* ── HERO B: 画像あり（右フェード） ── */
+.mob-hero-img {
+  padding: 24px 16px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+}
+.mob-hero-img-bg {
+  position: absolute; inset: 0;
+  background-image: url('/hero-cafe.webp');
+  background-size: cover;
+  background-position: 65% 10%;
+  z-index: 0;
+}
+.mob-hero-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(245,248,250,0.97) 0%,
+    rgba(245,248,250,0.92) 45%,
+    rgba(245,248,250,0.55) 68%,
+    rgba(245,248,250,0.10) 88%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+.mob-hero-img > *:not(.mob-hero-img-bg):not(.mob-hero-img-overlay) {
+  position: relative; z-index: 2;
+}
+
+/* ── Hero content (shared) ── */
+.mob-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--teal-dim); border: 1px solid rgba(10,122,106,0.2);
+  border-radius: 100px; padding: 3px 8px;
+  font-size: 9px; font-weight: 600; color: var(--teal);
+  margin-bottom: 10px;
+}
+.mob-hero-eyebrow-dot { width: 4px; height: 4px; background: var(--teal); border-radius: 50%; }
+.mob-hero-h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px; font-weight: 600; line-height: 1.45;
+  color: var(--ink); margin-bottom: 8px;
+}
+.mob-hero-h1 em { font-style: normal; color: var(--teal); }
+.mob-hero-lead {
+  font-size: 11px; line-height: 1.8;
+  color: var(--ink-sub); margin-bottom: 16px;
+  max-width: 180px;
+}
+.mob-hero-cta-primary {
+  display: block; background: var(--teal); color: white;
+  text-align: center; padding: 12px;
+  font-size: 13px; font-weight: 700;
+  border-radius: 8px; margin-bottom: 7px;
+  max-width: 220px;
+}
+.mob-hero-cta-group { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-width: 220px; }
+.mob-hero-cta-sm {
+  background: rgba(255,255,255,0.75); backdrop-filter: blur(6px);
+  border: 1px solid var(--border-md); color: var(--ink);
+  text-align: center; padding: 8px 4px;
+  font-size: 10px; font-weight: 600; border-radius: 7px;
+}
+
+/* ── Stats ── */
+.mob-stats {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.mob-stat { padding: 11px 6px; text-align: center; border-right: 1px solid var(--border); }
+.mob-stat:last-child { border-right: none; }
+.mob-stat-num { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--teal); }
+.mob-stat-label { font-size: 9px; color: var(--ink-muted); margin-top: 2px; }
+
+/* ── Cards ── */
+.mob-section { padding: 18px 16px; background: var(--bg-section); }
+.mob-section-title {
+  font-family: 'Noto Serif JP', serif; font-size: 13px; font-weight: 600;
+  color: var(--ink); margin-bottom: 11px;
+  display: flex; align-items: center; gap: 7px;
+}
+.mob-section-title::before {
+  content: ''; display: block; width: 3px; height: 13px;
+  background: var(--teal); border-radius: 2px;
+}
+.mob-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.mob-card { background: var(--bg-card); border-radius: 8px; padding: 13px 11px; border: 1px solid var(--border); }
+.mob-card-icon { font-size: 17px; margin-bottom: 5px; }
+.mob-card-title { font-size: 11px; font-weight: 700; color: var(--ink); margin-bottom: 3px; line-height: 1.4; }
+.mob-card-desc { font-size: 9.5px; color: var(--ink-muted); line-height: 1.6; }
+.mob-card.hl { background: var(--teal); border-color: var(--teal); }
+.mob-card.hl .mob-card-title, .mob-card.hl .mob-card-desc { color: rgba(255,255,255,0.9); }
+
+/* ── Articles ── */
+.mob-articles { padding: 18px 16px; background: var(--bg); }
+.mob-art-item { display: flex; gap: 11px; padding: 10px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+.mob-art-item:last-child { border-bottom: none; }
+.mob-art-thumb {
+  width: 56px; height: 50px; border-radius: 6px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--teal-dim) 0%, #EDF1F5 100%);
+  display: flex; align-items: center; justify-content: center; font-size: 19px;
+}
+.mob-art-tag { font-size: 9px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+.mob-art-title { font-size: 11.5px; font-weight: 700; color: var(--ink); line-height: 1.45; }
+.mob-art-date { font-size: 9.5px; color: var(--ink-muted); margin-top: 3px; }
+
+/* ── Bottom nav ── */
+.mob-bottom-nav {
+  background: rgba(245,248,250,0.96); backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  display: flex; padding: 6px 0 2px;
+}
+.mob-tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 4px 0; font-size: 9px; color: var(--ink-muted); }
+.mob-tab.active { color: var(--teal); }
+.mob-tab-icon { font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <!-- Pattern A: グラデのみ（現状） -->
+  <div class="col">
+    <div class="col-label">
+      <span>現状</span>
+      <h3>グラデーションのみ</h3>
+      <p>CSSグラデ背景</p>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="phone-notch"><div class="phone-notch-pill"><div class="dot-cam"></div><div class="dot-bar"></div></div></div>
+        <div class="mob-nav">
+          <div class="mob-nav-logo"><div class="mob-nav-badge">D</div><span class="mob-nav-name">DTV <span>Club</span></span></div>
+          <div class="mob-nav-right"><span class="mob-nav-lang">JP</span><div class="mob-hamburger"><span></span><span></span><span style="width:70%"></span></div></div>
+        </div>
+        <div class="mob-hero-plain">
+          <div class="mob-hero-eyebrow"><div class="mob-hero-eyebrow-dot"></div>タイ・デジタルノマドビザの情報ハブ</div>
+          <h1 class="mob-hero-h1">タイで暮らす、<br><em>自分らしい選択</em>を。</h1>
+          <p class="mob-hero-lead">DTVビザの申請から現地生活まで、必要な情報をすべてここで。</p>
+          <a class="mob-hero-cta-primary">DTVビザを調べる</a>
+          <div class="mob-hero-cta-group">
+            <a class="mob-hero-cta-sm">必要書類を確認</a>
+            <a class="mob-hero-cta-sm">⛳ Golf DTV</a>
+          </div>
+        </div>
+        <div class="mob-stats">
+          <div class="mob-stat"><div class="mob-stat-num">180+</div><div class="mob-stat-label">対象国</div></div>
+          <div class="mob-stat"><div class="mob-stat-num">5年</div><div class="mob-stat-label">有効期間</div></div>
+          <div class="mob-stat"><div class="mob-stat-num">180日</div><div class="mob-stat-label">1回の滞在</div></div>
+        </div>
+        <div class="mob-section">
+          <div class="mob-section-title">目的から探す</div>
+          <div class="mob-card-grid">
+            <div class="mob-card"><div class="mob-card-icon">✈️</div><div class="mob-card-title">初めてのDTV</div><div class="mob-card-desc">制度の概要から申請方法まで</div></div>
+            <div class="mob-card hl"><div class="mob-card-icon">📋</div><div class="mob-card-title">必要書類を確認</div><div class="mob-card-desc">最新の書類リスト</div></div>
+            <div class="mob-card"><div class="mob-card-icon">⛳</div><div class="mob-card-title">Golf DTV</div><div class="mob-card-desc">ゴルフ×ビザのプラン</div></div>
+            <div class="mob-card"><div class="mob-card-icon">🏠</div><div class="mob-card-title">現地生活</div><div class="mob-card-desc">住居・医療・金融</div></div>
+          </div>
+        </div>
+        <div class="mob-articles">
+          <div class="mob-section-title" style="padding:0;margin-bottom:11px;">最新記事</div>
+          <div class="mob-art-item"><div class="mob-art-thumb">📄</div><div><div class="mob-art-tag">必要書類</div><div class="mob-art-title">DTV受入レターで見られやすいポイント</div><div class="mob-art-date">2026-05-07 · 7分</div></div></div>
+          <div class="mob-art-item"><div class="mob-art-thumb">🏦</div><div><div class="mob-art-tag">申請ガイド</div><div class="mob-art-title">残高証明はどの銀行が使いやすいか</div><div class="mob-art-date">2026-05-05 · 5分</div></div></div>
+        </div>
+        <div class="mob-bottom-nav">
+          <div class="mob-tab active"><span class="mob-tab-icon">🏠</span>ホーム</div>
+          <div class="mob-tab"><span class="mob-tab-icon">📖</span>ガイド</div>
+          <div class="mob-tab"><span class="mob-tab-icon">📋</span>書類</div>
+          <div class="mob-tab"><span class="mob-tab-icon">⛳</span>Golf</div>
+          <div class="mob-tab"><span class="mob-tab-icon">✉️</span>相談</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pattern B: カフェ画像あり -->
+  <div class="col">
+    <div class="col-label">
+      <span>画像あり</span>
+      <h3>カフェ画像 + 左フェード</h3>
+      <p>右側に画像、左テキストは白グラデ</p>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="phone-notch"><div class="phone-notch-pill"><div class="dot-cam"></div><div class="dot-bar"></div></div></div>
+        <div class="mob-nav">
+          <div class="mob-nav-logo"><div class="mob-nav-badge">D</div><span class="mob-nav-name">DTV <span>Club</span></span></div>
+          <div class="mob-nav-right"><span class="mob-nav-lang">JP</span><div class="mob-hamburger"><span></span><span></span><span style="width:70%"></span></div></div>
+        </div>
+        <div class="mob-hero-img">
+          <div class="mob-hero-img-bg"></div>
+          <div class="mob-hero-img-overlay"></div>
+          <div class="mob-hero-eyebrow"><div class="mob-hero-eyebrow-dot"></div>タイ・デジタルノマドビザの情報ハブ</div>
+          <h1 class="mob-hero-h1">タイで暮らす、<br><em>自分らしい選択</em>を。</h1>
+          <p class="mob-hero-lead">DTVビザの申請から現地生活まで、必要な情報をすべてここで。</p>
+          <a class="mob-hero-cta-primary">DTVビザを調べる</a>
+          <div class="mob-hero-cta-group">
+            <a class="mob-hero-cta-sm">必要書類を確認</a>
+            <a class="mob-hero-cta-sm">⛳ Golf DTV</a>
+          </div>
+        </div>
+        <div class="mob-stats">
+          <div class="mob-stat"><div class="mob-stat-num">180+</div><div class="mob-stat-label">対象国</div></div>
+          <div class="mob-stat"><div class="mob-stat-num">5年</div><div class="mob-stat-label">有効期間</div></div>
+          <div class="mob-stat"><div class="mob-stat-num">180日</div><div class="mob-stat-label">1回の滞在</div></div>
+        </div>
+        <div class="mob-section">
+          <div class="mob-section-title">目的から探す</div>
+          <div class="mob-card-grid">
+            <div class="mob-card"><div class="mob-card-icon">✈️</div><div class="mob-card-title">初めてのDTV</div><div class="mob-card-desc">制度の概要から申請方法まで</div></div>
+            <div class="mob-card hl"><div class="mob-card-icon">📋</div><div class="mob-card-title">必要書類を確認</div><div class="mob-card-desc">最新の書類リスト</div></div>
+            <div class="mob-card"><div class="mob-card-icon">⛳</div><div class="mob-card-title">Golf DTV</div><div class="mob-card-desc">ゴルフ×ビザのプラン</div></div>
+            <div class="mob-card"><div class="mob-card-icon">🏠</div><div class="mob-card-title">現地生活</div><div class="mob-card-desc">住居・医療・金融</div></div>
+          </div>
+        </div>
+        <div class="mob-articles">
+          <div class="mob-section-title" style="padding:0;margin-bottom:11px;">最新記事</div>
+          <div class="mob-art-item"><div class="mob-art-thumb">📄</div><div><div class="mob-art-tag">必要書類</div><div class="mob-art-title">DTV受入レターで見られやすいポイント</div><div class="mob-art-date">2026-05-07 · 7分</div></div></div>
+          <div class="mob-art-item"><div class="mob-art-thumb">🏦</div><div><div class="mob-art-tag">申請ガイド</div><div class="mob-art-title">残高証明はどの銀行が使いやすいか</div><div class="mob-art-date">2026-05-05 · 5分</div></div></div>
+        </div>
+        <div class="mob-bottom-nav">
+          <div class="mob-tab active"><span class="mob-tab-icon">🏠</span>ホーム</div>
+          <div class="mob-tab"><span class="mob-tab-icon">📖</span>ガイド</div>
+          <div class="mob-tab"><span class="mob-tab-icon">📋</span>書類</div>
+          <div class="mob-tab"><span class="mob-tab-icon">⛳</span>Golf</div>
+          <div class="mob-tab"><span class="mob-tab-icon">✉️</span>相談</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

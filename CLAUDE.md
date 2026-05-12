@@ -3,10 +3,146 @@
 ## プロジェクト概要
 
 - **サイト**: https://dtvclub.com
-- **技術**: Next.js 14 App Router + Vercel（自動デプロイ）
+- **技術**: Next.js 15 App Router + Vercel（自動デプロイ）
 - **対応言語**: 日本語（ja）/ 英語（en）/ 韓国語（ko）
 - **リポジトリ**: https://github.com/tome1414/dtv-hub.git
-- **デプロイフロー**: `git push origin master` → Vercel 自動デプロイ → 本番反映
+- **デプロイフロー**: `git push origin master` → Vercel 自動デプロイ → 本番反映（約1〜2分）
+
+---
+
+## ファイル構成（主要）
+
+```
+src/
+├── app/
+│   ├── [lang]/
+│   │   ├── layout.tsx              ← Header + Footer + MobileBottomNav を配置
+│   │   ├── page.tsx                ← ホームページ（HomePageClient を呼ぶ）
+│   │   ├── _home/
+│   │   │   └── HomePageClient.tsx  ← ホームページ本体（'use client'）
+│   │   ├── blog/
+│   │   │   ├── page.tsx            ← ブログ一覧
+│   │   │   └── [slug]/
+│   │   │       ├── page.tsx        ← 記事ページ（ArticlePageClient を呼ぶ）
+│   │   │       └── _article/
+│   │   │           └── ArticlePageClient.tsx ← 記事ページ本体
+│   │   ├── dtv-soft-power-vs-freelance/page.tsx
+│   │   ├── who-should-choose-golf-dtv/page.tsx
+│   │   ├── soft-power/page.tsx
+│   │   ├── dtv-application/page.tsx
+│   │   ├── requirements/page.tsx   ← 独自ライトデザイン（inline styles）
+│   │   ├── golf-dtv/               ← ダークプレミアムデザイン維持（変更禁止）
+│   │   │   └── components/         ← Faq / Plans / Trust / Addon / Inquiry / Hero
+│   │   ├── contact/page.tsx
+│   │   └── ...
+│   └── globals.css                 ← btn-richb-* CSS クラス + モバイル対応
+├── components/
+│   ├── Header.tsx                  ← フロストガラス・ライトデザイン
+│   ├── Footer.tsx                  ← ダーク #142130 + teal ヘッダー
+│   ├── MobileBottomNav.tsx         ← モバイル固定タブバー（lg:hidden）
+│   └── analytics/
+│       └── golf-dtv-cta.tsx        ← btn-richb-gold ボタン
+└── content/
+    ├── blog/ja/    日本語記事（33本）
+    ├── blog/en/    英語記事
+    └── blog/ko/    韓国語記事（13本）
+```
+
+---
+
+## 現在のデザインシステム
+
+### カラートークン（全ページ共通）
+
+```
+bg:      #F5F8FA   ページ背景
+bgCard:  #FFFFFF   カード背景
+bgSec:   #EDF1F5   セクション背景
+text:    #1A2435   見出し・本文
+sub:     #4A5A6E   サブテキスト
+muted:   #7E8EA4   補足・日付
+border:  rgba(26,36,53,0.10)
+green:   #0A7A6A   teal（メインアクセント）
+greenLt: #0D9280   teal 薄め
+gold:    #C9A030   ゴールド（Golf DTV）
+```
+
+### ボタン CSS クラス（globals.css 定義済み）
+
+| クラス | 用途 |
+|---|---|
+| `.btn-richb-primary` | teal グラデ Shadow Pop（主要CTA） |
+| `.btn-richb-sub` | 白地・枠線（サブCTA） |
+| `.btn-richb-gold` | ゴールドグラデ（Golf DTV CTA） |
+| `.btn-richb-header` | ヘッダー用ゴールドシャドウ |
+
+### ヘッダー（Header.tsx）
+
+- フロストガラス: `rgba(245,248,250,0.92)` + `backdropFilter: blur(14px)`
+- ロゴ: teal グラデ正方形バッジ + "DTV Club"（teal）
+- デスクトップナブ: `className="hidden lg:flex"` ← **inline style に `display:'flex'` を入れない（バグ原因）**
+- 言語切替: JA/EN/KO インラインピル
+- CTA: "相談する" → `btn-richb-primary`
+- モバイル: ハンバーガー → スライドダウンメニュー
+
+### モバイルタブバー（MobileBottomNav.tsx）
+
+- `className="lg:hidden"` で固定表示
+- 5タブ: ホーム / ガイド / 書類 / Golf / 相談（SVGアイコン）
+- `usePathname` でアクティブ検知
+- 背景: フロストガラス + teal アクティブ丸
+
+### フッター（Footer.tsx）
+
+- 背景: `#142130`（ダーク）
+- 列ヘッダー: teal `#0A7A6A`
+- リンク: `rgba(255,255,255,0.42)`
+- 4カラムグリッド: ブランド / ビザ情報 / タイ生活 / サービス
+
+### ヒーロー（HomePageClient.tsx）
+
+- Pattern B: 右58%カフェ画像（絶対配置） + 左コンテンツ
+- モバイル: 画像を上段（220px）・コンテンツを下段に積み重ね
+- グラデーション div に `className="top-hero-gradient"` → モバイルで非表示
+- テーマトグル: `className="hidden lg:flex"` でデスクトップのみ表示
+
+### 記事ページ（ArticlePageClient.tsx）
+
+- スクロールプログレスバー（fixed top: 56px）
+- カテゴリタグ: teal ドット付き丸ピル
+- エクスプト: teal 左ボーダー + 薄teal背景
+- サイドバー: 白カード + border + shadow
+- TOC: `.sidebar-toc-link` ホバーで teal + 左ボーダー変色
+- CTAデスクトップ: `btn-richb-primary` + `btn-richb-sub`
+- CTAモバイル: teal グラデブロック（白ボタン）
+- モバイルTOC: アコーディオン（番号付き）
+- テーマトグル: `className="hidden lg:flex"` デスクトップのみ
+
+---
+
+## 注意事項：よくある落とし穴
+
+### inline style と Tailwind の競合
+
+`className="hidden lg:flex"` の要素に `style={{ display: 'flex' }}` を入れると、
+inline style が `hidden` クラスを上書きしてモバイルでも表示されてしまう。
+
+```tsx
+// ❌ NG（モバイルで表示されてしまう）
+<nav style={{ display: 'flex', gap: 2 }} className="hidden lg:flex">
+
+// ✅ OK（display は inline style に入れない）
+<nav style={{ gap: 2 }} className="hidden lg:flex">
+```
+
+### golf-dtv ページのデザイン
+
+`src/app/[lang]/golf-dtv/` はプレミアムダークデザイン（ゴールド×ダーク緑）で**意図的に**
+ライトデザインとは別系統。変更禁止。
+
+### モバイルのボトムナブ対策
+
+各ページの最下部に `paddingBottom: 80` を入れるか、 CSS で `@media (max-width: 1024px)` に padding-bottom を設定する。
 
 ---
 
@@ -17,6 +153,62 @@ src/content/blog/ja/   日本語記事（33本）
 src/content/blog/en/   英語記事
 src/content/blog/ko/   韓国語記事（13本）
 ```
+
+---
+
+## 現在の実装済み機能（2025年5月時点）
+
+- [x] フロストガラスヘッダー（ライトデザイン）
+- [x] ホームページ Pattern B ヒーロー（カフェ画像）
+- [x] Rich B Shadow Pop ボタンシステム
+- [x] Golf DTV バナー（ダーク緑×ゴールド）
+- [x] モバイルボトムタブバー（MobileBottomNav）
+- [x] 記事ページ：PC 2カラムサイドバー（カードスタイル）
+- [x] 記事ページ：スクロールプログレスバー
+- [x] 記事ページ：モバイルTOCアコーディオン
+- [x] 記事ページ：モバイルグラデCTAブロック
+- [x] フッター刷新（ダーク + teal ヘッダー）
+- [x] ブログ一覧ページ ライトデザイン化
+- [x] dtv-soft-power-vs-freelance ライトデザイン化
+- [x] who-should-choose-golf-dtv ライトデザイン化
+- [x] soft-power ライトデザイン化
+- [x] dtv-application ライトデザイン化
+- [x] モバイルレイアウト修正（header nav 表示バグ修正）
+
+---
+
+## 次にやること（優先度順）
+
+### 高優先度
+
+1. **残りのダークページを確認・ライト化**
+   - `contact/page.tsx` — フォームページ
+   - `life/` 系 4ページ（bangkok / housing / health / finance）
+   - `embassy/[id]/` と `embassy-map/` コンポーネント
+
+2. **ブログ記事の追加**（`docs/追加記事戦略指示書` 参照）
+   - 執筆ルールは本ファイルの「記事執筆ルール」セクションを厳守
+
+### 中優先度
+
+3. **requirements/page.tsx のカラートークン更新**
+   - 現在は `#F8F7F3` / `#0F6A43` の旧トークン
+   - 新トークン `#F5F8FA` / `#0A7A6A` に統一する
+
+4. **記事一覧ページの絞り込み機能**
+   - カテゴリフィルター（teal ピルで実装）
+   - 現状はすべて一覧表示のみ
+
+5. **articles/[id]/page.tsx の確認**
+   - 旧ダーク Tailwind クラスが残っている可能性あり
+
+### 低優先度
+
+6. **多言語コンテンツ補完**
+   - 英語・韓国語記事の追加
+7. **SEO強化**
+   - OGP画像の設定
+   - sitemap.xml の確認
 
 ---
 

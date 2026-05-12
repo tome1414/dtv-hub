@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTV Club — Rich B + SVGアイコン</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #0A7A6A; --teal-lt: #0D9280; --teal-dark: #086558;
+  --gold: #C9A84C; --gold-lt: #E0C06A;
+  --ink: #1A2435; --ink-sub: #4A5A6E; --ink-muted: #7E8EA4;
+  --bg: #F5F8FA; --bg-section: #EDF1F5;
+  --border: rgba(26,36,53,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
+  background: #111820;
+  -webkit-font-smoothing: antialiased;
+  padding: 48px 24px 80px;
+}
+.page-title { text-align: center; margin-bottom: 44px; }
+.page-title h1 { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 600; color: white; margin-bottom: 6px; }
+.page-title p { font-size: 12px; color: rgba(255,255,255,0.35); }
+.section { max-width: 900px; margin: 0 auto 56px; }
+.section-head { margin-bottom: 20px; }
+.section-head h2 { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+.section-head p { font-size: 13px; color: rgba(255,255,255,0.45); }
+.card { background: var(--bg); border-radius: 16px; padding: 28px 24px; }
+.card-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.btn-row { display: flex; flex-direction: column; gap: 8px; }
+
+/* ══════════════════════════════════
+   RICH B: ヘッダーナビ
+   ══════════════════════════════════ */
+.nav-rich-b {
+  height: 56px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(245,248,250,0.92);
+  backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(10,122,106,0.12);
+  box-shadow: 0 1px 0 rgba(10,122,106,0.08), 0 4px 24px rgba(26,36,53,0.07);
+  border-radius: 10px;
+}
+.nav-logo { display: flex; align-items: center; gap: 9px; }
+.nav-badge {
+  width: 30px; height: 30px;
+  background: linear-gradient(135deg, #0D9280, #0A7A6A);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(10,122,106,0.35);
+}
+.nav-badge svg { width: 16px; height: 16px; }
+.nav-name { font-size: 15px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+.nav-name span { color: var(--teal); }
+.nav-links { display: flex; gap: 2px; }
+.nav-links a {
+  font-size: 12px; font-weight: 500; color: var(--ink-sub);
+  padding: 5px 11px; border-radius: 6px; cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: var(--teal); background: rgba(10,122,106,0.06); }
+.nav-cta {
+  background: var(--teal); color: white;
+  font-size: 12px; font-weight: 700; padding: 8px 18px;
+  border-radius: 8px; border: none; cursor: pointer; font-family: inherit;
+  box-shadow: 0 2px 0 var(--teal-dark), 0 4px 14px rgba(10,122,106,0.28);
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-cta svg { width: 13px; height: 13px; }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 0 var(--teal-dark), 0 8px 20px rgba(10,122,106,0.32); }
+.nav-cta:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--teal-dark); }
+
+/* ══════════════════════════════════
+   RICH B: CTAボタン
+   ══════════════════════════════════ */
+.btn-rich-b {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0A7A6A 0%, #086558 100%);
+  color: white; border-radius: 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.01em;
+  border: none; cursor: pointer; font-family: inherit;
+  position: relative; overflow: hidden;
+  box-shadow: 0 3px 0 #064d41, 0 6px 20px rgba(10,122,106,0.32);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-rich-b::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.25) 50%, transparent 95%);
+}
+.btn-rich-b:hover { transform: translateY(-2px); box-shadow: 0 5px 0 #064d41, 0 10px 28px rgba(10,122,106,0.38); }
+.btn-rich-b:active { transform: translateY(1px); box-shadow: 0 1px 0 #064d41; }
+.btn-rich-b svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+.btn-rich-b-sub {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px;
+  background: white; color: var(--ink);
+  border-radius: 10px; font-size: 12px; font-weight: 600;
+  border: 1px solid var(--border); cursor: pointer; font-family: inherit;
+  box-shadow: 0 1px 4px rgba(26,36,53,0.07);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s;
+}
+.btn-rich-b-sub:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(26,36,53,0.10); border-color: rgba(26,36,53,0.18); }
+.btn-rich-b-sub .left { display: flex; align-items: center; gap: 8px; }
+.btn-rich-b-sub .left svg { width: 15px; height: 15px; color: var(--teal); flex-shrink: 0; }
+.btn-rich-b-sub .right { font-size: 10px; color: var(--ink-muted); font-weight: 400; }
+
+/* ══════════════════════════════════
+   RICH B: ボトムタブ (SVG版)
+   ══════════════════════════════════ */
+.tab-bar-wrap { padding: 8px 10px 10px; background: rgba(245,248,250,0.5); border-radius: 0 0 12px 12px; }
+.tab-bar {
+  background: white;
+  border-radius: 18px;
+  display: flex; padding: 5px;
+  box-shadow: 0 4px 24px rgba(26,36,53,0.13), 0 1px 3px rgba(26,36,53,0.07);
+  border: 1px solid rgba(26,36,53,0.05);
+}
+.tab {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  gap: 3px; padding: 7px 4px;
+  font-size: 9px; color: var(--ink-muted); cursor: pointer;
+  border-radius: 13px; transition: all 0.2s ease;
+}
+.tab svg { width: 18px; height: 18px; }
+.tab.active {
+  background: var(--teal); color: white;
+  box-shadow: 0 3px 10px rgba(10,122,106,0.38);
+}
+.tab.active svg { stroke: white; }
+.tab:not(.active):hover { background: rgba(26,36,53,0.04); }
+.tab:not(.active) svg { stroke: var(--ink-muted); }
+
+/* ══════════════════════════════════
+   スマホフレーム
+   ══════════════════════════════════ */
+.phone {
+  width: 300px; margin: 0 auto;
+  background: #1A1A1A; border-radius: 42px; padding: 11px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 28px 70px rgba(0,0,0,0.5), inset 0 0 0 2px #2A2A2A;
+}
+.phone-screen { background: var(--bg); border-radius: 32px; overflow: hidden; }
+.notch { height: 26px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; }
+.notch-pill { width: 72px; height: 18px; background: #1A1A1A; border-radius: 0 0 12px 12px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.notch-dot { width: 7px; height: 7px; background: #2a2a2a; border-radius: 50%; }
+.notch-bar { width: 26px; height: 3px; background: #2a2a2a; border-radius: 2px; }
+/* mob nav */
+.mob-nav {
+  height: 42px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 14px;
+  background: rgba(245,248,250,0.94); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(10,122,106,0.10);
+  box-shadow: 0 1px 0 rgba(10,122,106,0.06);
+}
+.mob-badge {
+  width: 22px; height: 22px;
+  background: linear-gradient(135deg, #0D9280, #0A7A6A);
+  border-radius: 5px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 5px rgba(10,122,106,0.30);
+}
+.mob-badge svg { width: 12px; height: 12px; }
+.mob-name { font-size: 13px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; margin-left: 6px; }
+.mob-name span { color: var(--teal); }
+.mob-right { display: flex; align-items: center; gap: 7px; }
+.mob-lang { font-size: 9px; font-weight: 700; color: var(--ink-muted); background: var(--bg-section); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+.mob-menu { display: flex; flex-direction: column; gap: 3.5px; cursor: pointer; }
+.mob-menu span { display: block; width: 18px; height: 1.5px; background: var(--ink); border-radius: 1px; }
+.mob-menu span:last-child { width: 12px; }
+/* hero */
+.mob-hero {
+  padding: 22px 14px 18px;
+  background: var(--bg); position: relative; overflow: hidden;
+}
+.mob-hero::before {
+  content: ''; position: absolute; top: -30px; right: -50px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(10,122,106,0.10) 0%, transparent 70%);
+}
+.mob-eyebrow {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(10,122,106,0.08); border: 1px solid rgba(10,122,106,0.18);
+  border-radius: 100px; padding: 3px 8px;
+  font-size: 9px; font-weight: 600; color: var(--teal); margin-bottom: 9px;
+}
+.mob-eyebrow-dot { width: 4px; height: 4px; background: var(--teal); border-radius: 50%; }
+.mob-h1 { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; line-height: 1.45; color: var(--ink); margin-bottom: 7px; }
+.mob-h1 em { font-style: normal; color: var(--teal); }
+.mob-lead { font-size: 10.5px; line-height: 1.8; color: var(--ink-sub); margin-bottom: 15px; }
+
+/* mob btn rich b */
+.mob-btn-primary {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  width: 100%; max-width: 220px; padding: 11px 16px;
+  background: linear-gradient(135deg, #0A7A6A 0%, #086558 100%);
+  color: white; border-radius: 9px; font-size: 12px; font-weight: 700;
+  border: none; cursor: pointer; font-family: inherit; position: relative;
+  box-shadow: 0 3px 0 #064d41, 0 5px 16px rgba(10,122,106,0.30);
+  transition: transform 0.15s, box-shadow 0.15s;
+  margin-bottom: 6px;
+}
+.mob-btn-primary::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.22) 50%, transparent 95%);
+}
+.mob-btn-primary svg { width: 13px; height: 13px; flex-shrink: 0; }
+.mob-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 0 #064d41, 0 8px 20px rgba(10,122,106,0.35); }
+.mob-btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; max-width: 220px; }
+.mob-btn-sub {
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  padding: 8px 6px; background: white; color: var(--ink);
+  border-radius: 8px; font-size: 10px; font-weight: 600;
+  border: 1px solid var(--border); cursor: pointer; font-family: inherit;
+  box-shadow: 0 1px 3px rgba(26,36,53,0.06);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mob-btn-sub svg { width: 12px; height: 12px; stroke: var(--teal); flex-shrink: 0; }
+.mob-btn-sub:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(26,36,53,0.09); }
+/* stats */
+.mob-stats { display: grid; grid-template-columns: repeat(3,1fr); background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.mob-stat { padding: 10px 6px; text-align: center; border-right: 1px solid var(--border); }
+.mob-stat:last-child { border-right: none; }
+.mob-stat-num { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; color: var(--teal); }
+.mob-stat-label { font-size: 8.5px; color: var(--ink-muted); margin-top: 2px; }
+/* cards */
+.mob-cards { padding: 16px 14px; background: var(--bg-section); }
+.mob-cards-title { font-family: 'Noto Serif JP', serif; font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.mob-cards-title::before { content: ''; display: block; width: 3px; height: 12px; background: var(--teal); border-radius: 2px; }
+.mob-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.mob-card {
+  background: white; border-radius: 9px; padding: 12px 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(26,36,53,0.06);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mob-card:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,36,53,0.09); }
+.mob-card.hl {
+  background: linear-gradient(135deg, #0A7A6A 0%, #086558 100%);
+  border-color: transparent;
+  box-shadow: 0 3px 0 #064d41, 0 5px 14px rgba(10,122,106,0.28);
+}
+.mob-card-icon { width: 28px; height: 28px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; border-radius: 7px; background: rgba(10,122,106,0.08); }
+.mob-card-icon svg { width: 15px; height: 15px; stroke: var(--teal); }
+.mob-card.hl .mob-card-icon { background: rgba(255,255,255,0.15); }
+.mob-card.hl .mob-card-icon svg { stroke: white; }
+.mob-card-title { font-size: 10.5px; font-weight: 700; color: var(--ink); line-height: 1.4; }
+.mob-card.hl .mob-card-title { color: white; }
+.mob-card-desc { font-size: 9px; color: var(--ink-muted); line-height: 1.55; margin-top: 2px; }
+.mob-card.hl .mob-card-desc { color: rgba(255,255,255,0.75); }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>Rich B + SVGアイコン — 統合プレビュー</h1>
+  <p>ヘッダー・CTAボタン・スマホ画面すべてRich B仕様</p>
+</div>
+
+<!-- ── ヘッダーナビ ── -->
+<div class="section">
+  <div class="section-head">
+    <h2>ヘッダーナビ — Rich B</h2>
+    <p>ロゴにグラデバッジ、CTAボタンに立体感、リンクにtealホバー</p>
+  </div>
+  <div class="card">
+    <div class="nav-rich-b">
+      <div class="nav-logo">
+        <div class="nav-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span class="nav-name">DTV <span>Club</span></span>
+      </div>
+      <div class="nav-links">
+        <a>ビザ比較</a><a>申請ガイド</a><a>必要書類</a><a>ソフトパワー</a><a>マガジン</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="display:flex;gap:2px;">
+          <button style="font-size:10px;padding:3px 7px;border:1px solid var(--border);border-radius:4px;background:var(--ink);color:white;cursor:pointer;font-family:inherit;">JP</button>
+          <button style="font-size:10px;padding:3px 7px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--ink-muted);cursor:pointer;font-family:inherit;">EN</button>
+          <button style="font-size:10px;padding:3px 7px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--ink-muted);cursor:pointer;font-family:inherit;">KO</button>
+        </div>
+        <button class="nav-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          相談する
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTAボタン ── -->
+<div class="section">
+  <div class="section-head">
+    <h2>CTAボタン — Rich B + SVG</h2>
+    <p>グラデ・立体シャドウ・光沢ライン。サブボタンにもSVGアイコン</p>
+  </div>
+  <div class="compare">
+    <div class="card">
+      <div class="card-label">PC版 ヒーローCTA</div>
+      <div class="btn-row">
+        <button class="btn-rich-b">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          自分に合うビザを比較する
+        </button>
+        <button class="btn-rich-b-sub">
+          <div class="left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            DTV申請の流れを見る
+          </div>
+          <span class="right">申請準備中の方へ</span>
+        </button>
+        <button class="btn-rich-b-sub">
+          <div class="left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            必要書類を確認する
+          </div>
+          <span class="right">申請直前の方へ</span>
+        </button>
+      </div>
+    </div>
+    <div class="card" style="background:#f0f4f8">
+      <div class="card-label">記事ページ サイドバーCTA</div>
+      <div class="btn-row">
+        <button class="btn-rich-b" style="font-size:12px;padding:12px 16px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          無料相談はこちら
+        </button>
+        <button class="btn-rich-b-sub" style="font-size:11px;">
+          <div class="left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+            自分に向いているか確認
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── スマホ画面 ── -->
+<div class="section">
+  <div class="section-head">
+    <h2>スマホ トップページ — Rich B</h2>
+    <p>全要素Rich B統一。絵文字→SVGアイコンに置換</p>
+  </div>
+  <div style="display:flex;justify-content:center;">
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="notch"><div class="notch-pill"><div class="notch-dot"></div><div class="notch-bar"></div></div></div>
+
+        <!-- Nav -->
+        <div class="mob-nav">
+          <div style="display:flex;align-items:center;">
+            <div class="mob-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <span class="mob-name">DTV <span>Club</span></span>
+          </div>
+          <div class="mob-right">
+            <span class="mob-lang">JP</span>
+            <div class="mob-menu"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="mob-hero">
+          <div class="mob-eyebrow"><div class="mob-eyebrow-dot"></div>タイ・デジタルノマドビザの情報ハブ</div>
+          <h1 class="mob-h1">タイで暮らす、<br><em>自分らしい選択</em>を。</h1>
+          <p class="mob-lead">DTVビザの申請から現地生活まで、必要な情報をすべてここで。</p>
+          <button class="mob-btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            DTVビザを調べる
+          </button>
+          <div class="mob-btn-group">
+            <button class="mob-btn-sub">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              必要書類
+            </button>
+            <button class="mob-btn-sub">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7"/><path d="M16 20l2 2 4-4"/></svg>
+              Golf DTV
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="mob-stats">
+          <div class="mob-stat"><div class="mob-stat-num">180+</div><div class="mob-stat-label">対象国</div></div>
+          <div class="mob-stat"><div class="mob-stat-num">5年</div><div class="mob-stat-label">有効期間</div></div>
+          <div class="mob-stat"><div class="mob-stat-num">180日</div><div class="mob-stat-label">1回の滞在</div></div>
+        </div>
+
+        <!-- Cards -->
+        <div class="mob-cards">
+          <div class="mob-cards-title">目的から探す</div>
+          <div class="mob-card-grid">
+            <div class="mob-card">
+              <div class="mob-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <div class="mob-card-title">初めてのDTV</div>
+              <div class="mob-card-desc">制度の概要から申請方法まで</div>
+            </div>
+            <div class="mob-card hl">
+              <div class="mob-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div class="mob-card-title">必要書類を確認</div>
+              <div class="mob-card-desc">最新の書類リスト</div>
+            </div>
+            <div class="mob-card">
+              <div class="mob-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div class="mob-card-title">Golf DTV</div>
+              <div class="mob-card-desc">ゴルフ×ビザのプラン</div>
+            </div>
+            <div class="mob-card">
+              <div class="mob-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="mob-card-title">現地生活</div>
+              <div class="mob-card-desc">住居・医療・金融</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom tab bar Rich B -->
+        <div class="tab-bar-wrap">
+          <div class="tab-bar">
+            <div class="tab active">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              ホーム
+            </div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              ガイド
+            </div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              書類
+            </div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              Golf
+            </div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              相談
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
