@@ -120,8 +120,8 @@ export default async function EvisaFormPage({ params }: PageProps) {
             申請時点で実際に居住している国を選択します。旅行中に別の国から申請する場合は注意が必要です。日本在住の方は <strong>Japan</strong> を選択してください。
           </FieldBlock>
 
-          <FieldBlock label="Apply at" ja="申請公館（管轄のタイ大使館・領事館）" warn="居住地の管轄外公館への申請は推奨されていません。日本在住の方は、居住地を管轄するタイ大使館または総領事館を選択してください（東京・大阪・福岡・名古屋等）。">
-            申請を行うタイ大使館または総領事館を選択します。日本在住の方は「Royal Thai Embassy, Tokyo（東京）」「Royal Thai Consulate-General, Osaka（大阪）」などから管轄公館を選択します。
+          <FieldBlock label="Apply at" ja="申請公館（管轄のタイ大使館・領事館）" warn="居住地を管轄するタイ大使館または総領事館を選択してください。管轄外の公館への申請は推奨されていません。">
+            申請を行うタイ大使館または総領事館を選択します。日本在住の方は、居住地を管轄するタイ大使館・総領事館をリストから選択してください。
           </FieldBlock>
 
           <div style={{ height: 1, background: C.border, margin: '28px 0' }} />
@@ -306,7 +306,7 @@ export default async function EvisaFormPage({ params }: PageProps) {
             「Hotel（ホテル）」「Private Property（賃貸・知人宅）」「Own Property（自己所有物件）」の3種類から選択します。バンコクのホテルに滞在する場合は「Hotel」を選択します。
           </FieldBlock>
 
-          <FieldBlock label="Accommodation Name / Street Address" ja="滞在先の名称・住所" warn="まだ宿泊先が決まっていない場合は、バンコク中心部のホテル（例：Novotel Bangkok Sukhumvit）などを仮入力するケースが多く見られます。入国審査で聞かれることもあるため、実際の滞在先を把握しておくことが重要です。">
+          <FieldBlock label="Accommodation Name / Street Address" ja="滞在先の名称・住所" warn="未確定の場合は申請先の案内に従い、実際の滞在予定に沿って入力内容を整理してください。入国審査で滞在先を確認される場合があります。">
             ホテルや滞在先の名称と住所を英語で入力します。City（都市）・District（区）・Subdistrict（サブ区）・Postcode（郵便番号）も必要です。
           </FieldBlock>
 
@@ -356,7 +356,7 @@ export default async function EvisaFormPage({ params }: PageProps) {
               ['日付形式はDD/MM/YYYYになっているか', '日本式（YYYY/MM/DD）ではなく日→月→年の順になっているか確認'],
               ['メールアドレスのスペルミスはないか', '審査結果・追加依頼・承認通知はこのアドレスにのみ届く'],
               ['パスポートの残存有効期間は6ヶ月以上あるか', '申請時点から6ヶ月未満の場合は先にパスポートを更新する'],
-              ['残高証明書は1〜2週間以内に発行されたものか', '発行が古すぎると現時点の残高を証明できないと判断される場合がある'],
+              ['残高証明書の発行時期は適切か', '発行時期は申請先公館の案内を確認し、古すぎる書類は避けてください'],
               ['全ファイルが正常にアップロードされているか', 'Doneを押す前に各ファイルをクリックして内容が閲覧できることを確認'],
             ].map(([title, detail], i) => (
               <div key={i} style={{ display: 'flex', gap: 12, marginBottom: i < 6 ? 14 : 0, paddingBottom: i < 6 ? 14 : 0, borderBottom: i < 6 ? `1px solid ${C.border}` : 'none' }}>
