@@ -75,7 +75,7 @@ The most significant difference is the cost structure.
 | **5-year total estimate** | 100,000–200,000 THB (incl. insurance) | 650,000–2,500,000 THB+ |
 | **How costs appear** | Low headline, but prep costs add up | High headline, but "paperwork-free" |
 
-The DTV's application fee looks very low, but factor in annual health insurance, bank balance certificate preparation, and acceptance letter support — the true cost is higher than 10,000 THB. Thailand Privilege is expensive upfront, but ongoing administrative work is minimal and concierge-handled.
+The DTV's application fee looks very low, but factor in bank balance certificate preparation and acceptance letter support — the true cost is higher than 10,000 THB. Some applicants also prepare insurance-related documents depending on embassy expectations. Thailand Privilege is expensive upfront, but ongoing administrative work is minimal and concierge-handled.
 
 ---
 
@@ -85,7 +85,7 @@ The DTV's application fee looks very low, but factor in annual health insurance,
 |---|---|---|
 | **Activity proof** | Required (contract or acceptance letter) | Not required |
 | **Bank balance proof** | Required (500,000 THB+) | Not required |
-| **Health insurance** | Required (USD 40,000+) | Not required (optional) |
+| **Health insurance** | May be requested depending on embassy guidance | Not required (optional) |
 | **Application review** | Embassy assessment | Membership registration |
 | **Process complexity** | Documents to prepare and submit | Primarily a payment process |
 

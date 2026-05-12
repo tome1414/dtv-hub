@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'ゴルフDTVプログラムが向いている人・向いていない人を解説。タイ長期滞在ビザ（DTV）をゴルフで取得する方法を確認できます。'
       : 'Find out if the Golf DTV program is right for you. Learn who benefits most from obtaining a DTV visa through golf.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/who-should-choose-golf-dtv`,
+    },
   }
 }
 

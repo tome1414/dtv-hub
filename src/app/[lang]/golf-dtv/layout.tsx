@@ -19,10 +19,13 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
   return {
     title: dict.golfDTV.meta.title,
     description: dict.golfDTV.meta.description,
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/golf-dtv`,
+    },
     openGraph: {
       title: dict.golfDTV.meta.title,
       description: dict.golfDTV.meta.description,
-      url: `/golf-dtv`,
+      url: `https://dtvclub.com/${lang}/golf-dtv`,
     },
   }
 }

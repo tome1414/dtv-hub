@@ -48,7 +48,6 @@ The DTV (Destination Thailand Visa) includes a "Soft Power route" — an applica
 | Core document | Acceptance letter from a Thai institution |
 | Employment / income docs | Not required |
 | Bank balance | 500,000 THB (same as all DTV routes) |
-| Health insurance | USD 40,000+ coverage (same as all DTV routes) |
 
 **The key point:** The Soft Power route removes the need for employment contracts, freelance agreements, or income history. If you're a salaried employee who can't get remote work documentation, or a freelancer whose paperwork isn't in order, the Soft Power route offers a viable alternative — provided you can secure an acceptance letter from a Thai institution.
 
@@ -120,7 +119,7 @@ Golf DTV refers to applying for the DTV Soft Power route using golf as the activ
 
 1. **Confirm eligibility:** Check if Golf DTV matches your situation
 2. **Obtain acceptance letter:** Via a support service and partnered Thai golf facility
-3. **Prepare remaining documents:** Bank balance proof, health insurance, passport
+3. **Prepare remaining documents:** Bank balance proof, passport, and any additionally required documents per your embassy's guidance
 4. **Submit application:** At a Thai embassy/consulate or via e-Visa
 
 Full details, costs, and FAQs are on the [Golf DTV page](/en/golf-dtv).
@@ -134,12 +133,11 @@ Full details, costs, and FAQs are on the [Golf DTV page](/en/golf-dtv).
 | Passport | 1+ year validity remaining | Include copy of photo page |
 | Acceptance letter | Issued by Thai institution | Original or PDF |
 | Bank balance proof | 500,000 THB+ in English | Issued within 3 months |
-| Health insurance certificate | USD 40,000+ coverage | Covering your stay period |
 | Passport photos | Per embassy specifications | |
 | Application form | Embassy format | |
 | Application fee | 10,000 THB | |
 
-Exact requirements vary by embassy. Always verify with your local Thai embassy. Full document guidance: [DTV required documents](/en/blog/dtv-required-documents).
+Exact requirements vary by embassy. Some embassies may additionally request insurance-related documents — always verify the latest guidance with your specific application embassy. Full document guidance: [DTV required documents](/en/blog/dtv-required-documents).
 
 ---
 

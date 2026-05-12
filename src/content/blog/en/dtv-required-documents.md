@@ -1,5 +1,5 @@
 ---
-title: "DTV Visa Required Documents | Bank Balance, Insurance & Acceptance Letter"
+title: "DTV Visa Required Documents | Bank Balance, Acceptance Letter & Application Checklist"
 slug: "dtv-required-documents"
 lang: "en"
 published_at: "2026-04-28"
@@ -29,7 +29,7 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "Complete DTV visa document checklist. Covers common required documents (bank balance, insurance, passport) and route-specific requirements (acceptance letter vs. employment contract)."
+excerpt: "Complete DTV visa document checklist. Covers main required documents (bank balance, passport, route-specific documents) and practical notes on what embassies may additionally request."
 read_time_minutes: 8
 ---
 
@@ -50,7 +50,6 @@ DTV documents fall into two categories: **documents required for all applicants*
 | **Passport (original)** | 1+ year validity remaining | Include copy of photo page |
 | **Passport photos** | Per embassy specifications | Recent (within 6 months) |
 | **Bank balance certificate** | 500,000 THB+ (in English) | Bank-issued original; typically valid for 3 months from issue |
-| **Health insurance certificate** | USD 40,000+ coverage | Must cover your stay period |
 | **Application form** | Embassy format | Download from embassy website |
 | **Application fee** | 10,000 THB | Payment methods vary by embassy |
 
@@ -93,22 +92,11 @@ Full details on the 500,000 THB requirement, what it means, and how to manage ti
 
 ---
 
-### 3. Health Insurance
+### 3. Additional Documents — Note on Health Insurance
 
-**Requirement:** Coverage of at least USD 40,000 for medical expenses during your stay in Thailand.
+The main DTV documents generally center on your passport, bank balance evidence, and route-specific supporting documents. However, **some embassies may additionally request insurance-related documents** as part of individual review. Embassy guidance on this varies — always check the latest instructions from your specific application embassy.
 
-**Options:**
-
-| Insurance Type | Notes |
-|---|---|
-| International travel insurance | Short-term; annual renewal versions available |
-| Long-stay expat insurance | Monthly premiums; designed for extended stays |
-| Private health insurance with international rider | Verify that coverage amount meets requirements |
-
-**Key points:**
-- You need a document proving USD 40,000+ coverage — the certificate should be in English
-- Coverage must encompass your planned stay period
-- Requirements vary slightly by embassy; verify with yours
+If your embassy requests insurance documentation, common options include international travel insurance, long-stay expat insurance, or private health insurance with international coverage. Any document provided should be in English and cover your planned stay period.
 
 ---
 
@@ -161,7 +149,6 @@ The Thai Embassy in major cities and regional consulates may have slightly diffe
 | Passport | 1+ year validity ✓ / Copy ready ✓ |
 | Passport photos | Embassy spec size ✓ / Recent ✓ |
 | Bank balance certificate | 500,000 THB+ ✓ / English ✓ / Within 3 months ✓ |
-| Health insurance | USD 40,000+ ✓ / English certificate ✓ / Period covered ✓ |
 | Route document | Acceptance letter OR employment contract ✓ |
 | Application form | Embassy format ✓ / Completed ✓ |
 | Application fee | 10,000 THB prepared ✓ |
@@ -173,8 +160,8 @@ The Thai Embassy in major cities and regional consulates may have slightly diffe
 **Q. Can I use a bank balance statement from my home country?**
 A. Yes. A bank balance certificate from your home-country bank (in English) is accepted in most cases. You don't need a Thai bank account. 500,000 THB equivalent in your home currency is acceptable.
 
-**Q. Does my national health insurance (e.g., government health scheme) qualify?**
-A. National health schemes typically don't meet the DTV's requirement of USD 40,000+ coverage documentation. Private international travel insurance or expat health insurance is generally needed.
+**Q. Does DTV require health insurance?**
+A. Insurance requirements vary by embassy — some embassies may request insurance-related documents as part of individual review; others may not. Always check the latest guidance from your specific application embassy before preparing documents.
 
 **Q. Do all documents need to be originals?**
 A. Requirements vary by embassy. Bank balance certificates are typically required as originals. Check the specific guidance from your application embassy.

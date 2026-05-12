@@ -90,8 +90,8 @@ All categories have significant income, asset, or credential requirements — th
 ### DTV
 
 - Bank balance: 500,000 THB (home-country account accepted)
-- Health insurance: USD 40,000+ coverage
 - Activity proof: Employment/freelance contract OR acceptance letter
+- *Note: Some embassies may request insurance-related documents — check your application embassy's latest guidance*
 
 The DTV is designed to be accessible to regular income earners. There is no income floor — the balance proof is the key financial criterion, and it can be shown from a home-country bank account.
 
@@ -151,7 +151,7 @@ A. No. It applies specifically to the Work-from-Thailand Professional and Highly
 A. The DTV costs 10,000 THB for a 5-year visa. LTR costs vary by category and may include facilitation fees, but the total is typically far higher. The tax savings from the 17% flat rate may partially offset this for high earners.
 
 **Q. Does LTR require health insurance?**
-A. Some LTR categories require USD 50,000+ health insurance coverage — more than the DTV's USD 40,000 requirement.
+A. Some LTR categories require USD 50,000+ health insurance coverage. For the DTV, insurance requirements vary by embassy — always check with your specific application embassy for the latest guidance.
 
 ---
 

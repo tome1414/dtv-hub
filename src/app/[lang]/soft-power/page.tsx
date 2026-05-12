@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'タイ政府認定プログラム（ゴルフ・マッサージ等）でDTVビザを取得できるソフトパワールートを解説します。'
       : 'Learn how to obtain a DTV visa through Thai government-certified Soft Power programs like golf and wellness.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/soft-power`,
+    },
   }
 }
 

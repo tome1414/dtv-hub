@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'DTVビザ（Destination Thailand Visa）の申請手順を全ステップ解説。必要書類・大使館予約・審査期間まで詳しく説明します。'
       : 'Complete step-by-step guide to applying for a DTV visa. Covers documents, embassy appointments, and processing times.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/dtv-application`,
+    },
   }
 }
 

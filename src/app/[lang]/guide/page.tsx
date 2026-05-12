@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'タイe-VisaのDTV申請に関するガイドをまとめました。フォーム入力方法・必要書類・よくある質問など。'
       : 'Guides for the Thailand DTV application: form walkthrough, required documents, FAQ, and more.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/guide`,
+    },
   }
 }
 

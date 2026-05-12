@@ -97,9 +97,11 @@ Thailand is one of Asia's premier golf destinations. Bangkok, Chiang Mai, Hua Hi
 
 ### Profile 6: Prefers simpler paperwork
 
-Compared to the Workcation route, the Soft Power/Golf DTV document set is more straightforward. The core documents are: passport, acceptance letter, bank balance certificate, and health insurance. No contracts, no work history, no portfolio.
+Compared to the Workcation route, the Soft Power/Golf DTV document set is more straightforward. The core documents are: passport, acceptance letter, and bank balance certificate. No contracts, no work history, no portfolio.
 
 **Indicator:** You want to minimize application complexity → **Soft Power / Golf DTV is the simpler path**
+
+The core documents for this route are: passport, acceptance letter, and bank balance certificate. Some embassies may additionally request insurance-related documents — confirm with your application embassy.
 
 ---
 
@@ -158,7 +160,7 @@ A. Yes. Golf DTV is open to employees and freelancers alike. Your employment typ
 A. Thailand is significantly more affordable than most high-income countries. In Bangkok, green fees typically range from 3,000–8,000 THB (approximately USD 85–230) per round, including caddie. Many courses offer excellent facilities at these prices.
 
 **Q. What does Golf DTV cost overall?**
-A. The DTV application fee is 10,000 THB (~USD 280). Add to that: acceptance letter support service fees, health insurance, and bank balance certificate preparation. See the [Golf DTV page](/en/golf-dtv) for a more detailed cost breakdown.
+A. The DTV application fee is 10,000 THB (~USD 280). Add to that: acceptance letter support service fees and bank balance certificate preparation. Some applicants also prepare insurance-related documents depending on embassy expectations. See the [Golf DTV page](/en/golf-dtv) for a more detailed cost breakdown.
 
 **Q. Can my family apply together?**
 A. Spouses and children under 20 can accompany you on a DTV, but each person must apply individually with their own documents.

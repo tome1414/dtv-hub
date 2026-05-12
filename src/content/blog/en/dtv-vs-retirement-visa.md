@@ -60,8 +60,8 @@ The biggest structural differences: **age restriction and renewal frequency.** T
 
 **DTV requirements:**
 - Bank balance: **500,000 THB or equivalent** (home-country bank account accepted)
-- Health insurance: **USD 40,000+** coverage
 - Activity proof: Employment/freelance contract OR Soft Power acceptance letter
+- *Note: Some embassies may request insurance-related documents — always check your application embassy's latest guidance*
 
 **Retirement visa requirements:**
 - Bank balance: **800,000 THB** (in a **Thai bank account**), OR
@@ -73,7 +73,7 @@ The biggest structural differences: **age restriction and renewal frequency.** T
 |---|---|---|
 | Balance required | 500,000 THB (overseas account accepted) | 800,000 THB (Thai account required) |
 | Income proof alternative | Not available | Yes (65,000 THB/month) |
-| Health insurance | USD 40,000 coverage | THB 40,000 / 400,000 |
+| Health insurance | May be requested depending on embassy guidance | THB 40,000 / 400,000 |
 | Annual renewal | Not required (5-year visa) | Required (Thai Immigration) |
 | Thai bank account | Not required (home-country statement works) | Required for balance route (currently very difficult to open on tourist/visa-exempt entry) |
 
@@ -132,7 +132,7 @@ A. No. Thai visas are generally held one at a time — you choose one and apply 
 A. The process itself involves visiting a Thai Immigration office annually, which becomes routine for long-term residents. However, **renewal screening has tightened significantly in recent years, and there have been reports of renewals being denied** over documentation issues. For those splitting time between Thailand and their home country, the logistics and renewal risk are worth weighing carefully.
 
 **Q. Are health insurance requirements different between the two visas?**
-A. The required amounts differ (DTV: USD 40,000; Retirement: THB 40,000/400,000). In practice, choosing a plan that satisfies both sets of requirements provides a safety net. Always verify current requirements with your local Thai embassy.
+A. For the Retirement visa, insurance requirements are specified (THB 40,000 outpatient / 400,000 inpatient). For the DTV, insurance-related documents may be requested depending on the embassy — always verify the latest requirements with your specific application embassy.
 
 ---
 

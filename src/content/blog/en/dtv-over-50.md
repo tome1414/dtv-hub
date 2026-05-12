@@ -44,7 +44,7 @@ read_time_minutes: 8
 
 **DTV (Destination Thailand Visa) has no age restriction for applicants.**
 
-Applicants over 50 can apply as long as they meet the requirements (500,000 THB+ bank balance, health insurance, and an application basis). 
+Applicants over 50 can apply as long as they meet the requirements (500,000 THB+ bank balance proof and a route-specific application basis). 
 
 You may have seen accounts online of people over 50 being guided toward the Retirement Visa. This reflects guidance offered by individual staff members — it is not a policy that prohibits people over 50 from applying for DTV.
 
@@ -70,7 +70,7 @@ You may have seen accounts online of people over 50 being guided toward the Reti
 | Required balance | 500,000 THB | 800,000 THB (or 65,000 THB/month proof) |
 | Visa validity | 5 years (multiple-entry) | 1 year (annual renewal required) |
 | Application basis | Soft Power activity or remote work | None (age and balance only) |
-| Health insurance | Required (coverage of 40,000 USD+) | Requirements vary by year |
+| Health insurance | May be requested depending on embassy guidance | Requirements vary by year |
 
 For a full comparison, see [DTV vs Retirement Visa](/en/blog/dtv-vs-retirement-visa).
 

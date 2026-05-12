@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'DTVビザのソフトパワールートとフリーランス・リモートワークルートを徹底比較。どちらが自分に向いているか分かります。'
       : 'Compare the DTV Soft Power route and the Freelance/Remote Work route to find which one suits you best.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/dtv-soft-power-vs-freelance`,
+    },
   }
 }
 

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import type { Locale } from '@/middleware'
 import { locales } from '@/middleware'
 import { getAllBlogPostsMeta } from '@/lib/blog'
@@ -6,6 +7,21 @@ import type { Lang } from '@/types/blog'
 
 interface PageProps {
   params: Promise<{ lang: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang } = await params
+  const isJa = lang === 'ja'
+  const isKo = lang === 'ko'
+  return {
+    title: isJa ? 'DTV・タイビザ 記事一覧 | DTV Club' : isKo ? 'DTV·태국 비자 기사 목록 | DTV Club' : 'DTV & Thailand Visa Articles | DTV Club',
+    description: isJa
+      ? 'DTVビザ・タイ長期滞在に関する記事一覧。比較ガイド、必要書類、申請実務など。'
+      : 'Browse all articles on the DTV visa and long-stay options in Thailand.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/blog`,
+    },
+  }
 }
 
 const categoryLabelJa: Record<string, string> = {

@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'DTV申請に関するよくある質問をまとめました。残高証明・インタビュー・健康保険・家族同伴など、疑問を解消します。'
       : 'Frequently asked questions about the DTV application: bank balance, interview, insurance, family, and more.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/guide/faq`,
+    },
   }
 }
 

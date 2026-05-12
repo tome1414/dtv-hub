@@ -18,6 +18,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: isJa
       ? 'thaievisa.go.th のDTV申請フォームを画面ごとに全項目解説。各入力欄の意味・入力例・よくあるミスを実際の画面画像つきで日本語で丁寧に説明します。'
       : 'A complete walkthrough of every field in the Thailand e-Visa DTV application form with screenshots and examples.',
+    alternates: {
+      canonical: `https://dtvclub.com/${lang}/guide/evisa-form`,
+    },
   }
 }
 

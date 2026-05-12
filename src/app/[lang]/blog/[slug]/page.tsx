@@ -19,6 +19,8 @@ export async function generateStaticParams() {
   return params
 }
 
+const BASE_URL = 'https://dtvclub.com'
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, slug } = await params
   const locale = (locales.includes(lang as Locale) ? lang : 'ja') as Lang
@@ -28,6 +30,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.title,
     description: post.excerpt,
     keywords: [post.primary_keyword, ...post.secondary_keywords].join(', '),
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/blog/${slug}`,
+      languages: {
+        'ja': `${BASE_URL}/ja/blog/${slug}`,
+        'en': `${BASE_URL}/en/blog/${slug}`,
+        'ko': `${BASE_URL}/ko/blog/${slug}`,
+        'x-default': `${BASE_URL}/en/blog/${slug}`,
+      },
+    },
   }
 }
 

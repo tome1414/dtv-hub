@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: metadata.description,
     keywords: metadata.keywords,
     alternates: {
+      canonical: `https://dtvclub.com/${lang}/embassy/${id}`,
       languages: {
         ja: `https://dtvclub.com/ja/embassy/${id}`,
         en: `https://dtvclub.com/en/embassy/${id}`,
