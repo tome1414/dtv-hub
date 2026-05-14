@@ -251,6 +251,10 @@ const en: Dictionary = {
               q: 'Do I get a refund without the agency plan?',
               a: 'Yes, 50% of school fees. The agency plan provides 100% refund protection.',
             },
+            {
+              q: 'Is a bank balance certificate alone sufficient, or is a transaction history also needed?',
+              a: 'A bank balance certificate showing 500,000+ THB equivalent is required at the time of application. However, there is a growing trend of consulates also requesting 3 months of bank transaction statements (transaction history) in addition to the balance certificate. We recommend preparing both documents in advance to be safe.',
+            },
           ],
         },
         {
