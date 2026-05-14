@@ -215,6 +215,10 @@ const en: Dictionary = {
               q: 'Is prior golf experience required?',
               a: 'No. This program doesn\'t require golf skills. It\'s designed to support Thailand\'s sports promotion policy, not to develop athletes.',
             },
+            {
+              q: 'What documents are needed as "proof of residence" for the application?',
+              a: 'This document does not prove your permanent home address — it proves that you are legally present in the jurisdiction of the consulate where you apply. You can apply at any Thai consulate or embassy outside Thailand, including from a third country. Examples: (1) Applying at a Thai embassy in your home country → driver\'s license, utility bills, etc. (2) Applying in Vietnam while traveling → Vietnamese tourist visa + hotel receipt, or a flight ticket to Thailand. (3) Applying from any other third country → a valid visa for that country, proof of accommodation, or flight tickets. Note: Rules for third-country applications vary by consulate. For example, the Thai Embassy in Seoul may not accept applications from foreign nationals on tourist visas. Always confirm directly with the consulate before applying.',
+            },
           ],
         },
         {
