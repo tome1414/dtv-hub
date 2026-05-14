@@ -50,6 +50,7 @@ DTV documents fall into two categories: **documents required for all applicants*
 | **Passport (original)** | 1+ year validity remaining | Include copy of photo page |
 | **Passport photos** | Per embassy specifications | Recent (within 6 months) |
 | **Bank balance certificate** | 500,000 THB+ (in English) | Bank-issued original; typically valid for 3 months from issue |
+| **Bank transaction statements** | 3 months of transaction history (in English) | Increasingly requested by embassies. Prepare from the same account as the balance certificate. |
 | **Document indicating current location** | Proof of lawful stay in the consulate's jurisdiction at time of application | Differs by situation — see section below. Requirements vary by embassy; confirm in advance. |
 | **Application form** | Embassy format | Download from embassy website |
 | **Application fee** | 10,000 THB | Payment methods vary by embassy |
@@ -90,6 +91,8 @@ This is typically the most time-consuming document to prepare.
 - If your application date shifts, you may need to reissue closer to the date
 
 Full details on the 500,000 THB requirement, what it means, and how to manage timing: [DTV bank balance guide](/en/blog/dtv-bank-balance).
+
+> **Note on bank transaction statements:** In addition to the balance certificate, an increasing number of Thai embassies are requesting 3 months of bank transaction statements. Whether required depends on your embassy — but preparing statements from the same account in advance is strongly recommended.
 
 ---
 
@@ -168,6 +171,7 @@ The Thai Embassy in major cities and regional consulates may have slightly diffe
 | Passport | 1+ year validity ✓ / Copy ready ✓ |
 | Passport photos | Embassy spec size ✓ / Recent ✓ |
 | Bank balance certificate | 500,000 THB+ ✓ / English ✓ / Within 3 months ✓ |
+| Bank transaction statements | 3 months ✓ / Same account as balance cert ✓ (prepare in case embassy requests) |
 | Current location document | Appropriate doc for your application embassy confirmed ✓ / Third-country applicants: embassy conditions verified ✓ |
 | Route document | Acceptance letter OR employment contract ✓ |
 | Application form | Embassy format ✓ / Completed ✓ |

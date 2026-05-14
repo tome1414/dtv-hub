@@ -75,6 +75,18 @@ If balances across multiple accounts add up to 500,000 THB, submitting balance c
 
 If the balance shown in the certificate significantly exceeds your typical account balance — for example, because of a large deposit immediately before obtaining the certificate — you may be asked to explain the source of the funds. Artificially inflating your balance through a temporary transfer is best avoided.
 
+**Important:** An increasing number of embassies are requesting 3 months of bank transaction statements. These statements make any sudden large deposit clearly visible — a pre-application lump sum to inflate the balance is identifiable and can prompt questions about the source of funds.
+
+### Should I also prepare bank transaction statements?
+
+In addition to the balance certificate, many embassies are now requesting 3 months of bank transaction statements. Whether it is required depends on the embassy, but we recommend preparing them in advance so you can respond immediately if asked.
+
+**Preparation guidelines:**
+- Cover the 3 months immediately before your application
+- Use the same account as your balance certificate
+- English preferred; if only available in your home language, consider attaching an English summary note
+- Online banking PDF exports are often accepted (confirm with your embassy)
+
 ### Can I use a balance certificate for a foreign currency account?
 
 A foreign-currency balance certificate can be used, but the amount must be equivalent to 500,000 THB or more based on the exchange rate at the time of application. If no exchange rate is included, consider attaching a supplementary note with the conversion.

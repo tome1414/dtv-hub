@@ -93,6 +93,29 @@ A good mental model: **issue the bank balance certificate last.** Get all other 
 
 ---
 
+## Bank Transaction Statements: An Increasingly Common Requirement
+
+In addition to the balance certificate, **an increasing number of Thai embassies are requesting 3 months of bank transaction statements (bank statements).**
+
+### Why statements are being requested
+
+| Purpose | Explanation |
+|---|---|
+| Verify authenticity of balance | Confirms the balance is the result of normal ongoing activity, not a temporary deposit made just before applying |
+| Review income and transaction patterns | Demonstrates regular financial activity |
+| Cross-reference with application | Confirms the financial picture is consistent with the application content |
+
+### How to prepare
+
+- **Period covered:** Typically the 3 months immediately prior to application
+- **Account:** Use the same account as your balance certificate
+- **Language:** English preferred. If only available in your home language, consider attaching an English summary note
+- **Format:** Bank-issued paper statements or PDF downloads from online banking (confirm with your embassy whether PDFs are accepted)
+
+> **Note on embassy variation:** Not all embassies currently require transaction statements, but the trend is increasing. We recommend **preparing 3 months of statements alongside your balance certificate** so you can respond immediately if requested.
+
+---
+
 ## Can You Combine Multiple Accounts?
 
 "I don't have 500,000 THB in a single account — can I combine balances from different accounts?"
@@ -115,7 +138,7 @@ Contact your intended application embassy or consult an application support serv
 Options to consider:
 
 **1. Consolidate your funds**
-If your assets are spread across savings, investment accounts, or multiple banks, moving liquid assets into a single account is straightforward. Avoid large, sudden fund movements immediately before applying — sudden large deposits can occasionally raise questions. A few months of normal account history is ideal.
+If your assets are spread across savings, investment accounts, or multiple banks, moving liquid assets into a single account is straightforward. Avoid large, sudden fund movements immediately before applying — **sudden large deposits stand out clearly in 3 months of transaction statements and may trigger a request to explain the source of funds.** A few months of normal account history is ideal.
 
 **2. Time your application**
 If you expect your balance to reach the threshold after a specific event (bonus, sale of assets, etc.), time your application accordingly.
@@ -138,6 +161,9 @@ A. The certificate reflects the balance on the day it was issued. Normal fluctua
 
 **Q. My bank only issues certificates in my local language. What can I do?**
 A. Some banks can provide English certificates if requested through international departments or through their online portal. Large international banks generally offer this. If your bank truly cannot issue in English, consult the embassy about whether a certified translation is acceptable.
+
+**Q. Do I also need to submit bank transaction statements?**
+A. An increasing number of Thai embassies are requesting 3 months of bank transaction statements in addition to the balance certificate. Whether it's required depends on your specific embassy, but we recommend **preparing 3 months of statements from the same account as your balance certificate** so you can respond quickly if asked.
 
 **Q. Are there alternative documents to prove financial sufficiency?**
 A. Bank balance certificates are the standard. Some embassies may accept supplementary documents (property valuations, etc.) but the bank certificate is the expected primary document. Always check with your embassy.
