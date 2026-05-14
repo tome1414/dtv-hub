@@ -50,6 +50,7 @@ DTV documents fall into two categories: **documents required for all applicants*
 | **Passport (original)** | 1+ year validity remaining | Include copy of photo page |
 | **Passport photos** | Per embassy specifications | Recent (within 6 months) |
 | **Bank balance certificate** | 500,000 THB+ (in English) | Bank-issued original; typically valid for 3 months from issue |
+| **Document indicating current location** | Proof of lawful stay in the consulate's jurisdiction at time of application | Differs by situation — see section below. Requirements vary by embassy; confirm in advance. |
 | **Application form** | Embassy format | Download from embassy website |
 | **Application fee** | 10,000 THB | Payment methods vary by embassy |
 
@@ -92,7 +93,25 @@ Full details on the 500,000 THB requirement, what it means, and how to manage ti
 
 ---
 
-### 3. Additional Documents — Note on Health Insurance
+### 3. Document Indicating Current Location
+
+This document is **not a proof of home address** — it is proof that you are **lawfully present in the jurisdiction of the embassy or consulate where you are applying** at the time of application.
+
+The DTV can be applied at any Thai embassy or consulate outside Thailand. This means a Japanese national staying in Vietnam can apply at the Thai consulate in Hanoi. The document's purpose is to confirm you are legally in that consulate's jurisdiction, not to confirm where you live.
+
+**Common examples by situation:**
+
+| Situation | Typical acceptable documents |
+|---|---|
+| Applying at the Thai Embassy in Japan (Japan resident) | Driver's license, utility bill, resident registration certificate (English version) |
+| Applying in Vietnam during a stay | Vietnamese tourist visa + hotel receipt, or Thailand-bound flight ticket |
+| Applying from any third country | Valid visa for that country, accommodation proof, or flight ticket to Thailand |
+
+**Important:** Rules for applying from a third country vary by consulate. For example, the Thai Embassy in Seoul has been reported to not accept applications from foreign nationals on tourist visas. Always confirm the specific conditions with your target embassy before proceeding.
+
+---
+
+### 4. Additional Documents — Note on Health Insurance
 
 The main DTV documents generally center on your passport, bank balance evidence, and route-specific supporting documents. However, **some embassies may additionally request insurance-related documents** as part of individual review. Embassy guidance on this varies — always check the latest instructions from your specific application embassy.
 
@@ -100,7 +119,7 @@ If your embassy requests insurance documentation, common options include interna
 
 ---
 
-### 4. Acceptance Letter (Soft Power Route)
+### 5. Acceptance Letter (Soft Power Route)
 
 If you're applying via the Soft Power route, the acceptance letter from a Thai institution replaces the employment contract.
 
@@ -114,7 +133,7 @@ Full acceptance letter guide: [DTV acceptance letter](/en/blog/dtv-acceptance-le
 
 ---
 
-### 5. Employment / Freelance Documents (Workcation Route)
+### 6. Employment / Freelance Documents (Workcation Route)
 
 **For salaried employees:**
 - Employment contract (in English)
@@ -149,6 +168,7 @@ The Thai Embassy in major cities and regional consulates may have slightly diffe
 | Passport | 1+ year validity ✓ / Copy ready ✓ |
 | Passport photos | Embassy spec size ✓ / Recent ✓ |
 | Bank balance certificate | 500,000 THB+ ✓ / English ✓ / Within 3 months ✓ |
+| Current location document | Appropriate doc for your application embassy confirmed ✓ / Third-country applicants: embassy conditions verified ✓ |
 | Route document | Acceptance letter OR employment contract ✓ |
 | Application form | Embassy format ✓ / Completed ✓ |
 | Application fee | 10,000 THB prepared ✓ |
@@ -159,6 +179,9 @@ The Thai Embassy in major cities and regional consulates may have slightly diffe
 
 **Q. Can I use a bank balance statement from my home country?**
 A. Yes. A bank balance certificate from your home-country bank (in English) is accepted in most cases. You don't need a Thai bank account. 500,000 THB equivalent in your home currency is acceptable.
+
+**Q. Can I apply at a Thai embassy in a country I don't live in?**
+A. Yes — the DTV can be applied at any Thai embassy or consulate outside Thailand. The "document indicating current location" requirement is not about proving your home address; it's about showing you are lawfully present in that embassy's jurisdiction at the time of application. However, rules for applying from a third country vary by consulate — some consulates (e.g., Bangkok in Seoul) have been reported not to accept applications from tourists on short-term visas. Always verify with your specific target embassy before applying.
 
 **Q. Does DTV require health insurance?**
 A. Insurance requirements vary by embassy — some embassies may request insurance-related documents as part of individual review; others may not. Always check the latest guidance from your specific application embassy before preparing documents.

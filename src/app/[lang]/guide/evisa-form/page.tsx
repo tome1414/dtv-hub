@@ -333,8 +333,13 @@ export default async function EvisaFormPage({ params }: PageProps) {
             Step 2でアップロード済みの写真が反映されます。
           </FieldBlock>
 
-          <FieldBlock label="3. Document indicating current location" ja="現在地証明（必須）" warn="現在地証明として認められやすいのは、住民票（英語版または英訳付き）、銀行の明細書、公共料金の領収書などです。日本語書類の場合は英語の説明を添付することが推奨されます。">
-            現在住んでいる国を証明する書類をアップロードします。
+          <FieldBlock label="3. Document indicating current location" ja="申請時の滞在場所証明（必須）" warn="この書類は「現住所証明」ではなく、「申請時点でその公館の管轄地域に合法的に滞在していること」を示す書類です。申請先が日本の公館か第三国の公館かによって、認められる書類の種類が変わります。また、第三国の公館では外国人の観光ビザでの申請を受け付けていないケースもあるため（例：ソウルのタイ大使館など）、必ず申請先公館の条件を事前に確認してください。">
+            申請先の公館管轄地域に、申請時点で合法的に滞在していることを示す書類をアップロードします。具体例は以下の通りです：
+            <ul style={{ marginTop: 8, paddingLeft: 18, lineHeight: 2 }}>
+              <li><strong>日本の公館で申請する場合：</strong>運転免許証、公共料金の請求書、住民票（英語版または英訳付き）など</li>
+              <li><strong>ベトナム等の第三国公館で申請する場合：</strong>その国の有効なビザ（観光ビザ等）＋ホテル領収書、またはタイ行き航空券のいずれか</li>
+              <li><strong>第三国申請全般：</strong>当該国への合法的な滞在許可書類（ビザ）、宿泊証明、または航空券のいずれか</li>
+            </ul>
           </FieldBlock>
 
           <FieldBlock label="4. Supporting documents（ルート別）" ja="申請根拠書類（Workcation or Soft Power）" warn="書類の内容とStep 1で選んだ渡航目的が一致していない場合、審査で問題になります。Workcationなら雇用契約書・業務委託契約書等、Soft Powerなら受入レターをアップロードします。">
