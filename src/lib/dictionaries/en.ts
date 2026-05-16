@@ -217,7 +217,7 @@ const en: Dictionary = {
             },
             {
               q: 'What documents are needed as "proof of residence" for the application?',
-              a: 'This document does not prove your permanent home address — it proves that you are legally present in the jurisdiction of the consulate where you apply. You can apply at any Thai consulate or embassy outside Thailand, including from a third country. Examples: (1) Applying at a Thai embassy in your home country → driver\'s license, utility bills, etc. (2) Applying in Vietnam while traveling → Vietnamese tourist visa + hotel receipt, or a flight ticket to Thailand. (3) Applying from any other third country → a valid visa for that country, proof of accommodation, or flight tickets. Note: Rules for third-country applications vary by consulate. For example, the Thai Embassy in Seoul may not accept applications from foreign nationals on tourist visas. Always confirm directly with the consulate before applying.',
+              a: 'This document does not prove your permanent home address — it proves that you are legally present in the jurisdiction of the consulate where you apply. You can apply at any Thai consulate or embassy outside Thailand, including from a third country.\n\n[Examples]\n① Applying at a Thai embassy in your home country → driver\'s license, utility bills, etc.\n② Applying in Vietnam while traveling → Vietnamese tourist visa + hotel receipt, or a flight ticket to Thailand\n③ Applying from any other third country → a valid visa for that country, proof of accommodation, or flight tickets\n\n※ Rules for third-country applications vary by consulate (e.g. the Thai Embassy in Seoul may not accept applications from foreign nationals on tourist visas). Always confirm directly with the consulate before applying.',
             },
           ],
         },
@@ -253,7 +253,7 @@ const en: Dictionary = {
             },
             {
               q: 'Is a bank balance certificate alone sufficient, or is a transaction history also needed?',
-              a: 'A bank balance certificate showing 500,000+ THB equivalent is required at the time of application. However, there is a growing trend of consulates also requesting 3 months of bank transaction statements (transaction history) in addition to the balance certificate. We recommend preparing both documents in advance to be safe.',
+              a: 'A bank balance certificate showing 500,000+ THB equivalent is required at the time of application.\n\nHowever, there is a growing trend of consulates also requesting 3 months of bank transaction statements (transaction history) in addition to the balance certificate.\n\nWe recommend preparing both documents in advance to be safe.',
             },
           ],
         },

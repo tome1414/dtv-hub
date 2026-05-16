@@ -96,14 +96,13 @@ export default function MobileBottomNav({ locale }: MobileBottomNavProps) {
 
   return (
     <nav
-      className="lg:hidden"
+      className="flex lg:hidden"
       style={{
         position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 50,
         background: 'rgba(245,248,250,0.96)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
         borderTop: '1px solid rgba(26,36,53,0.08)',
-        display: 'flex',
         paddingTop: 6,
         paddingBottom: 'env(safe-area-inset-bottom, 4px)',
       }}

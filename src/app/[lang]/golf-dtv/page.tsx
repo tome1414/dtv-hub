@@ -652,7 +652,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <span className={`accordion-icon${open?' open':''}`}>+</span>
       </button>
       <div className={`accordion-content${open?' open':''}`}>
-        <div style={{paddingBottom:20,color:'#555',fontSize:'.9rem',lineHeight:1.9}}>{a}</div>
+        <div style={{paddingBottom:20,color:'#555',fontSize:'.9rem',lineHeight:1.9,whiteSpace:'pre-line'}}>{a}</div>
       </div>
     </div>
   )
