@@ -785,9 +785,9 @@ function LangSwitcher() {
       defaultValue={currentLang}
       onChange={handleChange}
       style={{
-        background:'rgba(255,255,255,.08)',
-        border:'1px solid rgba(255,255,255,.2)',
-        color:'rgba(255,255,255,.8)',
+        background:'rgba(8,45,33,.06)',
+        border:'1px solid rgba(8,45,33,.2)',
+        color:'#1a3a2a',
         padding:'6px 12px',
         borderRadius:8,
         fontSize:'.8rem',
