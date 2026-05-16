@@ -22,10 +22,23 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
     alternates: {
       canonical: `https://dtvclub.com/${lang}/golf-dtv`,
     },
+    icons: {
+      icon: [
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon.ico' },
+      ],
+      apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    },
     openGraph: {
       title: dict.golfDTV.meta.title,
       description: dict.golfDTV.meta.description,
       url: `https://dtvclub.com/${lang}/golf-dtv`,
+      images: [{ url: '/golf-dtv-logo.webp', width: 1200, alt: 'GolfDTV' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/golf-dtv-logo.webp'],
     },
   }
 }

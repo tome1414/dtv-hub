@@ -161,12 +161,9 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         }}>
           <div style={{maxWidth:1200,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}>
             {/* Logo */}
-            <div style={{display:'flex',alignItems:'center',gap:8}}>
-              <div style={{width:32,height:32,background:'linear-gradient(135deg,#0d4f3c,#c9a84c)',borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}>
-                <span style={{color:'#fff',fontWeight:900,fontSize:'.9rem'}}>G</span>
-              </div>
-              <span style={{color:'#082d21',fontWeight:700,fontSize:'1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
-            </div>
+            <a href="#" style={{display:'flex',alignItems:'center',textDecoration:'none'}}>
+              <img src="/golf-dtv-logo-nav.webp" alt="GolfDTV" style={{height:40,width:'auto'}} />
+            </a>
             {/* Desktop nav */}
             <div className="nav-desktop">
               <a href="#flow" className="nav-link">{d.nav.flow}</a>
@@ -603,11 +600,8 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           <div style={{maxWidth:1100,margin:'0 auto'}}>
             <div style={{display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:48,marginBottom:40}} className="two-col">
               <div>
-                <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:16}}>
-                  <div style={{width:32,height:32,background:'linear-gradient(135deg,#0d4f3c,#c9a84c)',borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}>
-                    <span style={{color:'#fff',fontWeight:900,fontSize:'.9rem'}}>G</span>
-                  </div>
-                  <span style={{color:'#fff',fontWeight:700,fontSize:'1.1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
+                <div style={{marginBottom:16}}>
+                  <img src="/golf-dtv-logo-footer.webp" alt="GolfDTV" style={{height:32,width:'auto'}} />
                 </div>
                 <p style={{fontSize:'.85rem',lineHeight:1.9,maxWidth:320}}>{d.footerNav.about}</p>
               </div>
