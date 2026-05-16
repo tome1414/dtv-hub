@@ -14,6 +14,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [lang, setLang] = useState<string>('ja')
   const [scrollTracked, setScrollTracked] = useState(false)
+  const [navScrolled, setNavScrolled] = useState(false)
 
   useEffect(() => {
     params.then(({ lang: paramLang }) => {
@@ -25,17 +26,18 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
     })
   }, [params])
 
-  // スクロール深度追跡
+  // スクロール深度追跡 + ナビ透過制御
   useEffect(() => {
     const handleScroll = () => {
+      setNavScrolled(window.scrollY > 20)
       if (scrollTracked) return
       const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-      if (scrollPercent > 50 && !scrollTracked) {
+      if (scrollPercent > 50) {
         analytics.scrollDepth(50)
         setScrollTracked(true)
       }
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [scrollTracked])
 
@@ -94,13 +96,13 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         @keyframes ticker-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
         .ticker-item { display:inline-flex;align-items:center;gap:12px;padding:10px 32px;color:rgba(255,255,255,.9);font-size:.82rem;font-weight:500;flex-shrink:0; }
         .ticker-dot { width:5px;height:5px;border-radius:50%;background:#c9a84c;flex-shrink:0; }
-        .nav-link { font-size:.85rem;color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s;font-weight:500; }
-        .nav-link:hover { color:#e2c46e; }
+        .nav-link { font-size:.85rem;color:#1a3a2a;text-decoration:none;transition:color .2s;font-weight:500; }
+        .nav-link:hover { color:#0d6b4a; }
         .nav-desktop { display:flex;gap:24px;align-items:center; }
         .nav-mobile-right { display:none;align-items:center;gap:10px; }
-        .hamburger-btn { background:none;border:none;cursor:pointer;padding:6px;color:#fff;display:flex;flex-direction:column;gap:5px; }
-        .hamburger-btn span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s; }
-        .nav-mobile-menu { display:none;flex-direction:column;padding:12px 16px;gap:8px;border-top:1px solid rgba(255,255,255,.1);background:#082d21;max-width:240px;margin:0 auto; }
+        .hamburger-btn { background:none;border:none;cursor:pointer;padding:6px;color:#1a3a2a;display:flex;flex-direction:column;gap:5px; }
+        .hamburger-btn span { display:block;width:22px;height:2px;background:#1a3a2a;border-radius:2px;transition:all .3s; }
+        .nav-mobile-menu { display:none;flex-direction:column;padding:12px 16px;gap:8px;border-top:1px solid rgba(26,58,42,.12);background:rgba(255,255,255,.97);max-width:240px;margin:0 auto; }
         .nav-mobile-menu.open { display:flex; }
         .counter { font-size:clamp(2rem,5vw,3.5rem);font-weight:900; }
         .flow-grid { grid-template-columns: repeat(3,1fr); }
@@ -141,14 +143,22 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
       <div className="golf-root">
 
         {/* NAV */}
-        <nav style={{background:'#082d21',position:'sticky',top:0,zIndex:50,borderBottom:'1px solid rgba(255,255,255,.08)'}}>
+        <nav style={{
+          position:'sticky',top:0,zIndex:50,
+          background: navScrolled ? 'rgba(255,255,255,0.90)' : 'rgba(255,255,255,0.60)',
+          backdropFilter:'blur(16px)',
+          WebkitBackdropFilter:'blur(16px)',
+          borderBottom: navScrolled ? '1px solid rgba(26,58,42,0.12)' : '1px solid rgba(26,58,42,0.06)',
+          boxShadow: navScrolled ? '0 1px 12px rgba(26,58,42,0.08)' : 'none',
+          transition:'background .3s,box-shadow .3s,border-color .3s',
+        }}>
           <div style={{maxWidth:1200,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}>
             {/* Logo */}
             <div style={{display:'flex',alignItems:'center',gap:8}}>
               <div style={{width:32,height:32,background:'linear-gradient(135deg,#0d4f3c,#c9a84c)',borderRadius:8,display:'flex',alignItems:'center',justifyContent:'center'}}>
                 <span style={{color:'#fff',fontWeight:900,fontSize:'.9rem'}}>G</span>
               </div>
-              <span style={{color:'#fff',fontWeight:700,fontSize:'1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
+              <span style={{color:'#082d21',fontWeight:700,fontSize:'1rem'}}>Golf<span style={{color:'#c9a84c'}}>DTV</span></span>
             </div>
             {/* Desktop nav */}
             <div className="nav-desktop">
