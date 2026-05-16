@@ -34,7 +34,7 @@ export default async function GolfDTVLayout({ children, params }: LayoutProps) {
   return (
     <>
       <style>{`
-        /* Hide parent layout header and footer for golf-dtv */
+        /* Hide parent layout header, footer and mobile bottom nav for golf-dtv */
         header {
           display: none !important;
         }
@@ -44,6 +44,9 @@ export default async function GolfDTVLayout({ children, params }: LayoutProps) {
         body > footer,
         main ~ footer,
         #__next > footer {
+          display: none !important;
+        }
+        nav[aria-label="Mobile navigation"] {
           display: none !important;
         }
       `}</style>
