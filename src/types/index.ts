@@ -186,6 +186,22 @@ export interface Dictionary {
       copyright: string
       disclaimer: string
     }
+    affiliate?: {
+      footerLink: string
+      footerDesc: string
+      footerCta: string
+      modalTitle: string
+      modalDesc: string
+      nameLabel: string
+      emailLabel: string
+      platformLabel: string
+      platformPlaceholder: string
+      messageLabel: string
+      messagePlaceholder: string
+      required: string
+      submit: string
+      success: string
+    }
     legal?: {
       title: string
       sections: {

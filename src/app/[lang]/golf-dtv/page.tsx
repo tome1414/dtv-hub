@@ -15,6 +15,9 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
   const [lang, setLang] = useState<string>('ja')
   const [scrollTracked, setScrollTracked] = useState(false)
   const [navScrolled, setNavScrolled] = useState(false)
+  const [affiliateOpen, setAffiliateOpen] = useState(false)
+  const [affiliateForm, setAffiliateForm] = useState({ name: '', email: '', platform: '', message: '' })
+  const [affiliateStatus, setAffiliateStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
 
   useEffect(() => {
     params.then(({ lang: paramLang }) => {
@@ -87,6 +90,10 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         .form-label { font-size:.85rem;font-weight:600;color:#333;margin-bottom:6px;display:block; }
         .btn-gold { background:linear-gradient(135deg,#c9a84c,#e2c46e);color:#fff;padding:14px 32px;border-radius:999px;font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:none;cursor:pointer;text-decoration:none;font-family:inherit; }
         .btn-gold:hover { transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,.4); }
+        .aff-input { width:100%;padding:10px 14px;border:1px solid rgba(8,45,33,.2);border-radius:8px;font-size:.9rem;font-family:inherit;outline:none;transition:border-color .2s;box-sizing:border-box; }
+        .aff-input:focus { border-color:#0d4f3c;box-shadow:0 0 0 3px rgba(13,79,60,.1); }
+        .aff-overlay { position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;display:flex;align-items:center;justify-content:center;padding:16px; }
+        .aff-modal { background:#fff;border-radius:20px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.25); }
         .btn-outline { background:transparent;color:#0d4f3c;padding:13px 32px;border-radius:999px;font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:2px solid #0d4f3c;cursor:pointer;text-decoration:none;font-family:inherit; }
         .btn-outline:hover { background:#0d4f3c;color:#fff; }
         .btn-platinum { background:transparent;color:#c9a84c;padding:13px 32px;border-radius:999px;font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:2px solid #c9a84c;cursor:pointer;text-decoration:none;font-family:inherit; }
@@ -621,6 +628,23 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
                 </ul>
               </div>
             </div>
+            {/* Partner / Affiliate band */}
+            {d.affiliate && (
+              <div style={{borderTop:'1px solid rgba(255,255,255,.1)',paddingTop:28,marginBottom:24}}>
+                <div style={{background:'rgba(201,168,76,.08)',border:'1px solid rgba(201,168,76,.25)',borderRadius:14,padding:'20px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:16}}>
+                  <div>
+                    <p style={{margin:'0 0 4px',color:'#e2c46e',fontWeight:700,fontSize:'.95rem'}}>🤝 {d.affiliate.footerLink}</p>
+                    <p style={{margin:0,color:'rgba(255,255,255,.65)',fontSize:'.82rem'}}>{d.affiliate.footerDesc}</p>
+                  </div>
+                  <button onClick={()=>setAffiliateOpen(true)} style={{background:'transparent',border:'1px solid rgba(201,168,76,.6)',color:'#e2c46e',padding:'8px 20px',borderRadius:999,fontSize:'.82rem',fontWeight:600,cursor:'pointer',whiteSpace:'nowrap',fontFamily:'inherit',transition:'all .2s'}}
+                    onMouseEnter={e=>{e.currentTarget.style.background='rgba(201,168,76,.15)'}}
+                    onMouseLeave={e=>{e.currentTarget.style.background='transparent'}}>
+                    {d.affiliate.footerCta}
+                  </button>
+                </div>
+              </div>
+            )}
+
             <div style={{borderTop:'1px solid rgba(255,255,255,.1)',paddingTop:20,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
               <p style={{fontSize:'.78rem',color:'rgba(255,255,255,.4)'}}>{d.footerNav.copyright}</p>
               <p style={{fontSize:'.75rem',color:'rgba(255,255,255,.35)',maxWidth:500,textAlign:'right',lineHeight:1.6}}>{d.footerNav.disclaimer}</p>
@@ -629,6 +653,77 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         </footer>
 
       </div>
+
+      {/* Affiliate / Partner Modal */}
+      {affiliateOpen && d.affiliate && (
+        <div className="aff-overlay" onClick={e=>{if(e.target===e.currentTarget)setAffiliateOpen(false)}}>
+          <div className="aff-modal">
+            {/* Header */}
+            <div style={{background:'#082d21',padding:'24px 28px',borderRadius:'20px 20px 0 0',display:'flex',justifyContent:'space-between',alignItems:'flex-start'}}>
+              <div>
+                <p style={{margin:'0 0 4px',color:'#c9a84c',fontSize:'.75rem',letterSpacing:'.1em',textTransform:'uppercase'}}>GolfDTV</p>
+                <h2 style={{margin:0,color:'#fff',fontSize:'1.15rem',fontWeight:700}}>{d.affiliate.modalTitle}</h2>
+              </div>
+              <button onClick={()=>setAffiliateOpen(false)} style={{background:'rgba(255,255,255,.1)',border:'none',color:'#fff',width:32,height:32,borderRadius:'50%',cursor:'pointer',fontSize:'1.1rem',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>✕</button>
+            </div>
+            {/* Body */}
+            <div style={{padding:'24px 28px'}}>
+              <p style={{margin:'0 0 20px',color:'#555',fontSize:'.88rem',lineHeight:1.7}}>{d.affiliate.modalDesc}</p>
+              {affiliateStatus === 'done' ? (
+                <div style={{textAlign:'center',padding:'32px 0',color:'#0d4f3c',fontWeight:700,fontSize:'1rem'}}>{d.affiliate.success}</div>
+              ) : (
+                <form onSubmit={async e=>{
+                  e.preventDefault()
+                  setAffiliateStatus('sending')
+                  try {
+                    const res = await fetch('/api/affiliate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(affiliateForm)})
+                    setAffiliateStatus(res.ok ? 'done' : 'error')
+                  } catch { setAffiliateStatus('error') }
+                }}>
+                  <div style={{display:'flex',flexDirection:'column',gap:14}}>
+                    <div>
+                      <label style={{display:'block',fontSize:'.82rem',fontWeight:600,color:'#1a3a2a',marginBottom:5}}>
+                        {d.affiliate.nameLabel} <span style={{color:'#c9a84c'}}>*</span>
+                      </label>
+                      <input className="aff-input" required value={affiliateForm.name}
+                        onChange={e=>setAffiliateForm(f=>({...f,name:e.target.value}))} />
+                    </div>
+                    <div>
+                      <label style={{display:'block',fontSize:'.82rem',fontWeight:600,color:'#1a3a2a',marginBottom:5}}>
+                        {d.affiliate.emailLabel} <span style={{color:'#c9a84c'}}>*</span>
+                      </label>
+                      <input className="aff-input" type="email" required value={affiliateForm.email}
+                        onChange={e=>setAffiliateForm(f=>({...f,email:e.target.value}))} />
+                    </div>
+                    <div>
+                      <label style={{display:'block',fontSize:'.82rem',fontWeight:600,color:'#1a3a2a',marginBottom:5}}>
+                        {d.affiliate.platformLabel}
+                      </label>
+                      <input className="aff-input" placeholder={d.affiliate.platformPlaceholder} value={affiliateForm.platform}
+                        onChange={e=>setAffiliateForm(f=>({...f,platform:e.target.value}))} />
+                    </div>
+                    <div>
+                      <label style={{display:'block',fontSize:'.82rem',fontWeight:600,color:'#1a3a2a',marginBottom:5}}>
+                        {d.affiliate.messageLabel}
+                      </label>
+                      <textarea className="aff-input" rows={4} placeholder={d.affiliate.messagePlaceholder}
+                        style={{resize:'vertical'}} value={affiliateForm.message}
+                        onChange={e=>setAffiliateForm(f=>({...f,message:e.target.value}))} />
+                    </div>
+                    {affiliateStatus === 'error' && (
+                      <p style={{color:'#c00',fontSize:'.82rem',margin:0}}>送信に失敗しました。時間をおいて再度お試しください。</p>
+                    )}
+                    <button type="submit" className="btn-gold" disabled={affiliateStatus==='sending'}
+                      style={{width:'100%',justifyContent:'center',opacity:affiliateStatus==='sending'?.6:1}}>
+                      {affiliateStatus === 'sending' ? '...' : d.affiliate.submit}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

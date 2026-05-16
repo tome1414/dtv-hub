@@ -422,6 +422,22 @@ const ja: Dictionary = {
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: '当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。',
     },
+    affiliate: {
+      footerLink: '紹介・パートナープログラム',
+      footerDesc: 'ご友人へのご紹介やパートナーシップにご興味の方はこちら',
+      footerCta: '詳細を見る →',
+      modalTitle: 'パートナープログラムのご案内',
+      modalDesc: 'GolfDTVのサービスをご紹介いただける方・パートナー企業様からのお問い合わせをお待ちしております。',
+      nameLabel: 'お名前',
+      emailLabel: 'メールアドレス',
+      platformLabel: '紹介媒体',
+      platformPlaceholder: 'SNS・ブログ・Webサイトなど（任意）',
+      messageLabel: 'メッセージ・ご質問',
+      messagePlaceholder: 'ご自由にお書きください',
+      required: '必須',
+      submit: '送信する',
+      success: '✓ 送信完了！担当者より順次ご連絡いたします。',
+    },
   },
 }
 

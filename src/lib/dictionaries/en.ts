@@ -413,6 +413,22 @@ const en: Dictionary = {
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: 'This service provides visa application support and does not guarantee visa approval.',
     },
+    affiliate: {
+      footerLink: 'Referral & Partner Program',
+      footerDesc: 'Interested in referring friends or becoming a partner?',
+      footerCta: 'Learn more →',
+      modalTitle: 'Partner & Referral Program',
+      modalDesc: 'We welcome inquiries from those who would like to introduce our service or partner with us.',
+      nameLabel: 'Name',
+      emailLabel: 'Email',
+      platformLabel: 'Platform / Channel',
+      platformPlaceholder: 'SNS, blog, website, etc. (optional)',
+      messageLabel: 'Message / Questions',
+      messagePlaceholder: 'Tell us about yourself',
+      required: 'Required',
+      submit: 'Send',
+      success: "✓ Sent! We'll be in touch shortly.",
+    },
   },
 }
 
