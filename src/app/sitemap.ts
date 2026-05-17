@@ -4,7 +4,7 @@ import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://dtvclub.com'
-  const locales = ['ja', 'en']
+  const locales = ['ja', 'en', 'zh', 'ko', 'ru']
 
   const staticPages = [
     '',
@@ -25,8 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       urls.push({
         url: `${baseUrl}/${locale}${page}`,
         lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: page === '' ? 1.0 : 0.8,
+        changeFrequency: page === '/golf-dtv' ? 'daily' : 'weekly',
+        priority: page === '' || page === '/golf-dtv' ? 1.0 : 0.8,
       })
     }
 

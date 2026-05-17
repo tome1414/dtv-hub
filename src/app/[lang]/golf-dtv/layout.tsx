@@ -21,6 +21,14 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
     description: dict.golfDTV.meta.description,
     alternates: {
       canonical: `https://dtvclub.com/${lang}/golf-dtv`,
+      languages: {
+        'ja': 'https://dtvclub.com/ja/golf-dtv',
+        'en': 'https://dtvclub.com/en/golf-dtv',
+        'zh-Hans': 'https://dtvclub.com/zh/golf-dtv',
+        'ko': 'https://dtvclub.com/ko/golf-dtv',
+        'ru': 'https://dtvclub.com/ru/golf-dtv',
+        'x-default': 'https://dtvclub.com/ja/golf-dtv',
+      },
     },
     icons: {
       icon: [
