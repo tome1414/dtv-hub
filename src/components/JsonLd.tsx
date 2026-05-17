@@ -15,7 +15,7 @@ const localeToLanguage: Record<Locale, string> = {
 }
 
 export default function JsonLd({ locale, siteName, description }: JsonLdProps) {
-  const baseUrl = 'https://dtv-hub.com'
+  const baseUrl = 'https://dtvclub.com'
   const language = localeToLanguage[locale]
 
   const websiteSchema = {
