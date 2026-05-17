@@ -69,6 +69,8 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
         .golf-root { font-family: 'Noto Sans JP', sans-serif; color: #1a1a1a; background: #fff; }
         .hero-bg { position: relative; overflow: hidden; }
+        .hero-sub { line-height:1.85; }
+        @media(max-width:768px){ .hero-sub { line-height:1.6; text-align:left!important; } }
         .hero-circle { position: absolute; border-radius: 50%; background: rgba(201,168,76,0.07); animation: pulse-slow 6s ease-in-out infinite; }
         @keyframes pulse-slow { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.05);opacity:1} }
         .badge-green { display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:#e2c46e;padding:4px 16px;border-radius:999px;font-size:.75rem;letter-spacing:.1em;font-weight:500; }
@@ -162,7 +164,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
           <div style={{maxWidth:1200,margin:'0 auto',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}>
             {/* Logo */}
             <a href="#" style={{display:'flex',alignItems:'center',textDecoration:'none'}}>
-              <img src="/golf-dtv-logo-nav.webp" alt="GolfDTV" style={{height:40,width:'auto'}} />
+              <img src="/golf-dtv-logo-nav.webp" alt="GolfDTV" style={{height:48,width:'auto'}} />
             </a>
             {/* Desktop nav */}
             <div className="nav-desktop">
@@ -211,7 +213,7 @@ export default function GolfDTVPage({ params }: GolfDTVPageProps) {
             <h1 style={{fontSize:'clamp(2.2rem,6vw,4rem)',fontWeight:900,color:'#fff',lineHeight:1.2,marginBottom:24}}>
               {d.hero.headline}
             </h1>
-            <p style={{color:'rgba(255,255,255,.82)',fontSize:'clamp(.95rem,2vw,1.1rem)',lineHeight:1.9,maxWidth:680,margin:'0 0 40px',textAlign:'left'}}>
+            <p className="hero-sub" style={{color:'rgba(255,255,255,.82)',fontSize:'clamp(.95rem,2vw,1.1rem)',maxWidth:640,margin:'0 auto 40px',textAlign:'center'}}>
               {d.hero.subheadline}
             </p>
             <div style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap',marginBottom:60}}>
