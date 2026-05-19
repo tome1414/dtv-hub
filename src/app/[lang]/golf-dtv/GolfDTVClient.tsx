@@ -147,12 +147,12 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               <a href="#flow" className="nav-link">{d.nav.flow}</a>
               <a href="#plans" className="nav-link">{d.nav.plans}</a>
               <a href="#faq" className="nav-link">{d.nav.faq}</a>
-              <LangSwitcher />
+              <LangSwitcher currentLocale={locale} />
               <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
             </div>
             {/* Mobile: lang + hamburger */}
             <div className="nav-mobile-right">
-              <LangSwitcher />
+              <LangSwitcher currentLocale={locale} />
               <button className="hamburger-btn" onClick={()=>{setMenuOpen(!menuOpen); analytics.menuToggle(!menuOpen)}} aria-label="menu">
                 <span/><span/><span/>
               </button>
@@ -471,6 +471,29 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                       ['設立', '2024年'],
                       ['事業内容', 'DTVビザ申請サポートサービス、ゴルフスクール受講斡旋、タイ長期滞在コンサルティング'],
                       ['お問い合わせ', 'お問い合わせフォームよりご連絡ください'],
+                    ].map(([k,v])=>(
+                      <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
+                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:140}}>{k}</td>
+                        <td style={{padding:'10px 0',color:'#444'}}>{v}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </LegalBox>
+
+              <LegalBox id="academy" title="ゴルフアカデミー概要（提携スクール）">
+                <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
+                  <tbody>
+                    {[
+                      ['スクール名', "Ken's Golf Bangkok"],
+                      ['設立', '2021年'],
+                      ['所在地', 'バンコク（タイ）'],
+                      ['公式サイト', 'www.kensgolfbangkok.com'],
+                      ['ヘッドプロ', '杉山ケン（Ken Sugiyama）'],
+                      ['経歴', '日本生まれ・2歳からタイ在住。水城高校ゴルフ部（茨城県）にて競技経験を積み、タイで活躍するプロゴルファー。'],
+                      ['対応言語', '日本語・英語・タイ語・ベトナム語'],
+                      ['提供サービス', 'ゴルフレッスン（初心者〜上級者）、DTV申請書類サポート、クラブリペア・フィッティング'],
+                      ['特徴', 'Thailand PGA認定コーチによる指導。日本語完全対応で、ゴルフ未経験の方でも安心してレッスンを受講可能。DTVビザのソフトパワー枠（スポーツ）に対応した公式カリキュラムを提供。'],
                     ].map(([k,v])=>(
                       <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
                         <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:140}}>{k}</td>
@@ -831,26 +854,20 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   )
 }
 
-function LangSwitcher() {
+function LangSwitcher({ currentLocale }: { currentLocale: string }) {
   const langs = [
-    { code: 'ja', label: '🇯🇵 日本語' },
     { code: 'en', label: '🇬🇧 English' },
+    { code: 'ja', label: '🇯🇵 日本語' },
     { code: 'ko', label: '🇰🇷 한국어' },
     { code: 'zh', label: '🇨🇳 中文' },
     { code: 'ru', label: '🇷🇺 Русский' },
   ]
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const code = e.target.value
-    if (typeof window !== 'undefined') {
-      window.location.href = `/${code}/golf-dtv`
-    }
+    window.location.href = `/${e.target.value}/golf-dtv`
   }
-  const currentLang = typeof window !== 'undefined'
-    ? window.location.pathname.split('/')[1] || 'ja'
-    : 'ja'
   return (
     <select
-      defaultValue={currentLang}
+      value={currentLocale}
       onChange={handleChange}
       style={{
         background:'rgba(8,45,33,.06)',
