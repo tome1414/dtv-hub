@@ -551,18 +551,41 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </>
               ) : (
                 <>
-              <LegalBox id="company" title="Company Information">
+              <LegalBox id="academy" title={
+                locale === 'zh' ? '高尔夫学院概要（合作学校）' :
+                locale === 'ko' ? '골프 아카데미 개요（제휴 스쿨）' :
+                locale === 'ru' ? 'О гольф-академии（партнёрская школа）' :
+                'Golf Academy（Partner School）'
+              }>
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
-                    {[
-                      ['Company Name', 'Toy World Company'],
-                      ['Address', 'Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960'],
-                      ['Established', '2024'],
-                      ['Business', 'DTV Visa Application Support, Golf School Enrollment, Thailand Long-term Residency Consultation'],
-                      ['Contact', 'Please use the contact form on this website'],
-                    ].map(([k,v])=>(
+                    {(locale === 'zh' ? [
+                      ['学校名称', "Ken's Golf Bangkok"],
+                      ['成立', '2021年'],
+                      ['地址', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
+                      ['服务语言', '日语・英语・泰语・越南语'],
+                      ['提供服务', '高尔夫课程（初学者至高级）、球杆修理・配件'],
+                    ] : locale === 'ko' ? [
+                      ['스쿨명', "Ken's Golf Bangkok"],
+                      ['설립', '2021년'],
+                      ['소재지', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
+                      ['대응 언어', '일본어・영어・태국어・베트남어'],
+                      ['제공 서비스', '골프 레슨（초보자〜상급자）、클럽 리페어・피팅'],
+                    ] : locale === 'ru' ? [
+                      ['Название', "Ken's Golf Bangkok"],
+                      ['Основана', '2021 г.'],
+                      ['Адрес', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
+                      ['Языки', 'Японский, английский, тайский, вьетнамский'],
+                      ['Услуги', 'Уроки гольфа (для начинающих и продвинутых), ремонт и подгонка клюшек'],
+                    ] : [
+                      ['School Name', "Ken's Golf Bangkok"],
+                      ['Established', '2021'],
+                      ['Location', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
+                      ['Languages', 'Japanese, English, Thai, Vietnamese'],
+                      ['Services', 'Golf lessons (beginners to advanced), Club repair & fitting'],
+                    ]).map(([k,v])=>(
                       <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
-                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:120}}>{k}</td>
+                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:130}}>{k}</td>
                         <td style={{padding:'10px 0',color:'#444'}}>{v}</td>
                       </tr>
                     ))}
