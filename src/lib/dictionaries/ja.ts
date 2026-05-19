@@ -405,6 +405,7 @@ const ja: Dictionary = {
       messageLabel: 'ご質問・ご相談内容',
       messagePlaceholder: 'お気軽にご記載ください',
       privacyConsent: 'プライバシーポリシーに同意して送信する',
+      refundPolicyConsent: '返金ポリシーを読み、内容に同意します',
       successMessage: '✓ 送信が完了しました！担当者より1営業日以内にご連絡します。',
     },
     nav: {

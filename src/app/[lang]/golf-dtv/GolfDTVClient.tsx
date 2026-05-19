@@ -481,6 +481,92 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </table>
               </LegalBox>
 
+              <LegalBox id="refund" title="返金ポリシー">
+                <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:20}}>
+                  <p style={{fontSize:'.8rem',color:'#999',margin:0}}>最終更新日：2026年5月17日</p>
+
+                  <div>
+                    <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:8}}>1. スクール受講料の返金</p>
+                    <div style={{display:'flex',flexDirection:'column',gap:10}}>
+                      <div style={{background:'#f5f0e6',borderRadius:8,padding:'12px 16px'}}>
+                        <p style={{fontWeight:600,color:'#0a2e1f',margin:'0 0 4px'}}>【申請代行サービスをご利用の場合】</p>
+                        <p style={{margin:0}}>タイ大使館・領事館によるビザ審査の結果、申請が却下された場合は、スクール受講料を<strong>100%全額返金</strong>いたします。</p>
+                      </div>
+                      <div style={{background:'#f5f0e6',borderRadius:8,padding:'12px 16px'}}>
+                        <p style={{fontWeight:600,color:'#0a2e1f',margin:'0 0 4px'}}>【申請代行サービスをご利用でない場合（自己申請）】</p>
+                        <p style={{margin:0}}>ビザ申請が却下された場合は、スクール受講料の<strong>50%を返金</strong>いたします。</p>
+                      </div>
+                      <div style={{background:'#fef2f2',borderRadius:8,padding:'12px 16px',border:'1px solid #fca5a5'}}>
+                        <p style={{fontWeight:600,color:'#b91c1c',margin:'0 0 8px'}}>【以下の場合はいずれのプランも返金対象外】</p>
+                        <ul style={{margin:0,paddingLeft:16,display:'flex',flexDirection:'column',gap:4}}>
+                          {[
+                            '審査基準の変更・審査官の裁量による却下',
+                            'お客様による虚偽申告・情報の不備・不足',
+                            'お客様提出書類の不備・提出漏れ・期限超過',
+                            '追加書類（Additional Documents）の未対応・対応期限超過',
+                            'お客様都合による申請放棄（最終連絡から14日間以上応答がない場合）',
+                            'お客様都合による連絡遅延（弊社からの連絡に対し7日間以上応答がない場合）',
+                          ].map((item,i)=><li key={i}>{item}</li>)}
+                        </ul>
+                      </div>
+                      <div style={{background:'#f0f9f5',borderRadius:8,padding:'12px 16px',border:'1px solid #86efac'}}>
+                        <p style={{fontWeight:600,color:'#0a2e1f',margin:'0 0 4px'}}>【返金確認プロセス】</p>
+                        <p style={{margin:0}}>返金対応にあたり、弊社にてThai e-VisaシステムへのログインID（メールアドレス・パスワード）をお客様よりご提供いただき、審査結果（却下）を直接確認した上で返金手続きを進めます。</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:8}}>2. ビザ申請料（約10,000 THB）について</p>
+                    <p style={{margin:0}}>ビザ申請料はタイ大使館・領事館へ直接お支払いいただく政府費用です。弊社を経由しない支払いのため、<strong>いかなる場合も返金対象外</strong>となります。</p>
+                  </div>
+
+                  <div>
+                    <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:8}}>3. 申請代行サービス料（10,000 THB）の返金</p>
+                    <div style={{display:'flex',flexDirection:'column',gap:10}}>
+                      <div style={{background:'#f5f0e6',borderRadius:8,padding:'12px 16px'}}>
+                        <p style={{fontWeight:600,color:'#0a2e1f',margin:'0 0 4px'}}>【弊社起因による却下の場合】</p>
+                        <p style={{margin:0}}>弊社の書類作成ミス・申請手続きの不備など、弊社に起因すると客観的事実に基づき判断された場合、申請代行サービス料（10,000 THB）を<strong>全額返金</strong>いたします。</p>
+                      </div>
+                      <div style={{background:'#fef2f2',borderRadius:8,padding:'12px 16px',border:'1px solid #fca5a5'}}>
+                        <p style={{fontWeight:600,color:'#b91c1c',margin:'0 0 8px'}}>【以下の場合は返金対象外】</p>
+                        <ul style={{margin:0,paddingLeft:16,display:'flex',flexDirection:'column',gap:4}}>
+                          {[
+                            '審査基準の変更・審査官の裁量による却下',
+                            'お客様による虚偽申告・情報の不備・不足',
+                            'お客様提出書類の不備・提出漏れ・期限超過',
+                            '追加書類（Additional Documents）の未対応・対応期限超過',
+                            'お客様都合による申請放棄（最終連絡から14日間以上応答がない場合）',
+                            'お客様都合による連絡遅延（弊社からの連絡に対し7日間以上応答がない場合）',
+                          ].map((item,i)=><li key={i}>{item}</li>)}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:8}}>4. 返金の手続き</p>
+                    <ul style={{margin:0,paddingLeft:16,display:'flex',flexDirection:'column',gap:6}}>
+                      {[
+                        '返金のご申請は、不許可通知の受領後14日以内にお問い合わせフォームよりご連絡ください。',
+                        '返金の審査・確認には最大14営業日いただく場合があります。',
+                        '返金はお申し込み時と同一の支払い方法にて対応いたします。',
+                        '返金額はお申し込み時のTHB建て金額を基準とし、為替変動による差額は補償対象外となります。',
+                      ].map((item,i)=><li key={i}>{item}</li>)}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:8}}>5. キャンセル（ビザ申請前）について</p>
+                    <p style={{margin:0}}>スクール受講料のお支払い後、ビザ申請前にキャンセルをご希望の場合は、弊社が受入レター等の書類を発行済みかどうかにより対応が異なります。詳細はお問い合わせフォームよりご相談ください。</p>
+                  </div>
+
+                  <p style={{fontSize:'.8rem',color:'#888',borderTop:'1px solid #e5e0d5',paddingTop:12,margin:0}}>
+                    ※ 当サービスはビザ申請のサポートを行うものであり、ビザ取得を保証するものではありません。
+                  </p>
+                </div>
+              </LegalBox>
+
               <LegalBox id="sct" title="特定商取引法に基づく表記">
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
@@ -939,12 +1025,22 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
         <label className="form-label">{f.messageLabel}</label>
         <textarea className="form-input" rows={4} placeholder={f.messagePlaceholder} style={{resize:'vertical'}} value={message} onChange={e=>setMessage(e.target.value)}/>
       </div>
-      <div style={{marginBottom:20,fontSize:'.8rem',color:'#888'}}>
+      <div style={{marginBottom:12,fontSize:'.8rem',color:'#888'}}>
         <label style={{display:'flex',gap:8,alignItems:'flex-start',cursor:'pointer'}}>
           <input type="checkbox" required style={{accentColor:'#0d4f3c',marginTop:2}}/>
           <span>{f.privacyConsent}</span>
         </label>
       </div>
+      {f.refundPolicyConsent && (
+        <div style={{marginBottom:20,fontSize:'.8rem',color:'#888'}}>
+          <label style={{display:'flex',gap:8,alignItems:'flex-start',cursor:'pointer'}}>
+            <input type="checkbox" required style={{accentColor:'#0d4f3c',marginTop:2}}/>
+            <span>
+              <a href="#refund" style={{color:'#0d4f3c',textDecoration:'underline'}}>{f.refundPolicyConsent}</a>
+            </span>
+          </label>
+        </div>
+      )}
       {sendError && (
         <div style={{marginBottom:16,padding:'12px 16px',background:'#fef2f2',border:'1px solid #fca5a5',borderRadius:8,fontSize:'.85rem',color:'#b91c1c'}}>
           送信に失敗しました。時間をおいて再度お試しください。

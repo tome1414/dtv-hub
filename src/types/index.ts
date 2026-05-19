@@ -169,6 +169,7 @@ export interface Dictionary {
       messageLabel: string
       messagePlaceholder: string
       privacyConsent: string
+      refundPolicyConsent?: string
       successMessage: string
     }
     nav: {
