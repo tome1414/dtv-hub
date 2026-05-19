@@ -570,6 +570,78 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </table>
               </LegalBox>
 
+              <LegalBox id="refund" title={
+                locale === 'zh' ? '退款政策' :
+                locale === 'ko' ? '환불 정책' :
+                locale === 'ru' ? 'Политика возврата' :
+                'Refund Policy'
+              }>
+                <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
+                  <p style={{fontSize:'.8rem',color:'#999',margin:0}}>
+                    {locale === 'zh' ? '最后更新：2026年5月17日' :
+                     locale === 'ko' ? '최종 업데이트: 2026년 5월 17일' :
+                     locale === 'ru' ? 'Последнее обновление: 17 мая 2026 г.' :
+                     'Last updated: May 17, 2026'}
+                  </p>
+                  {(locale === 'zh' ? [
+                    ['1. 学费退款',
+                      '【使用申请代办服务时】\n若泰国大使馆/领事馆的签证审核结果为拒签，我们将全额退还100%的学费。\n\n【未使用申请代办服务时（自行申请）】\n若签证申请被拒，我们将退还学费的50%。\n\n【以下情况均不予退款】\n・审核标准变更或审核官自由裁量导致的拒签\n・申请人虚假申报、信息不完整或不足\n・申请人提交的材料不完整、遗漏或超期\n・未响应或超过补充材料（Additional Documents）截止日期\n・申请人主动放弃申请（自最后联系之日起14天以上无回复）\n・申请人延迟回复（对我方联系7天以上无回复）\n\n【退款确认流程】\n为办理退款，我们需要您提供泰国电子签证系统的登录信息（电子邮件地址及密码），以便直接确认审核结果（拒签）后再进行退款处理。'],
+                    ['2. 签证申请费（约10,000泰铢）',
+                      '签证申请费为直接支付给泰国大使馆/领事馆的政府费用，不经由本公司收取，因此任何情况下均不予退款。'],
+                    ['3. 申请代办服务费（10,000泰铢）的退款',
+                      '【因本公司原因导致拒签时】\n若经客观事实认定，拒签原因为本公司的文件准备失误或申请手续不当，我们将全额退还申请代办服务费（10,000泰铢）。\n\n【以下情况不予退款】\n・审核标准变更或审核官自由裁量导致的拒签\n・申请人虚假申报、信息不完整或不足\n・申请人提交的材料不完整、遗漏或超期\n・未响应或超过补充材料截止日期\n・申请人主动放弃申请（自最后联系之日起14天以上无回复）\n・申请人延迟回复（对我方联系7天以上无回复）'],
+                    ['4. 退款手续',
+                      '・请在收到拒签通知后14天内通过咨询表格申请退款。\n・退款审核及确认最长需要14个工作日。\n・退款将通过申请时使用的相同支付方式处理。\n・退款金额以申请时的泰铢金额为基准，汇率波动产生的差额不在补偿范围内。'],
+                    ['5. 取消（签证申请前）',
+                      '若您在支付学费后、提交签证申请前希望取消，处理方式将根据我方是否已发出录取函等文件而有所不同。详情请通过咨询表格与我们联系。'],
+                  ] : locale === 'ko' ? [
+                    ['1. 수강료 환불',
+                      '【대행 서비스 이용 시】\n태국 대사관·영사관의 비자 심사 결과 신청이 거절된 경우, 수강료를 100% 전액 환불해 드립니다.\n\n【대행 서비스 미이용 시（자체 신청）】\n비자 신청이 거절된 경우, 수강료의 50%를 환불해 드립니다.\n\n【다음의 경우 모든 플랜에서 환불 불가】\n・심사 기준 변경 또는 심사관의 재량에 의한 거절\n・신청인의 허위 신고, 정보 불비 또는 부족\n・신청인이 제출한 서류의 불비, 누락 또는 기한 초과\n・추가 서류(Additional Documents) 미대응 또는 대응 기한 초과\n・신청인 사정에 의한 신청 포기（마지막 연락으로부터 14일 이상 무응답）\n・신청인 사정에 의한 연락 지연（당사의 연락에 7일 이상 무응답）\n\n【환불 확인 절차】\n환불 처리를 위해 태국 전자비자 시스템 로그인 정보（이메일 주소·비밀번호）를 고객님으로부터 제공받아, 심사 결과（거절）를 직접 확인한 후 환불 절차를 진행합니다.'],
+                    ['2. 비자 신청비（약 10,000 THB）에 대하여',
+                      '비자 신청비는 태국 대사관·영사관에 직접 납부하는 정부 수수료입니다. 당사를 통하지 않는 결제이므로 어떠한 경우에도 환불되지 않습니다.'],
+                    ['3. 대행 서비스 수수료（10,000 THB）환불',
+                      '【당사 귀책 사유에 의한 거절의 경우】\n당사의 서류 작성 오류·신청 절차 불비 등, 당사에 귀책 사유가 있다고 객관적 사실에 근거하여 판단된 경우, 대행 서비스 수수료（10,000 THB）를 전액 환불해 드립니다.\n\n【다음의 경우 환불 불가】\n・심사 기준 변경 또는 심사관의 재량에 의한 거절\n・신청인의 허위 신고, 정보 불비 또는 부족\n・신청인이 제출한 서류의 불비, 누락 또는 기한 초과\n・추가 서류 미대응 또는 대응 기한 초과\n・신청인 사정에 의한 신청 포기（마지막 연락으로부터 14일 이상 무응답）\n・신청인 사정에 의한 연락 지연（당사의 연락에 7일 이상 무응답）'],
+                    ['4. 환불 절차',
+                      '・환불 신청은 불허가 통지 수령 후 14일 이내에 문의 양식을 통해 연락해 주세요.\n・환불 심사·확인에는 최대 14 영업일이 소요될 수 있습니다.\n・환불은 신청 시와 동일한 결제 수단으로 처리됩니다.\n・환불 금액은 신청 시의 THB 기준 금액으로 하며, 환율 변동에 의한 차액은 보상 대상이 아닙니다.'],
+                    ['5. 취소（비자 신청 전）에 대하여',
+                      '수강료 납부 후 비자 신청 전에 취소를 원하시는 경우, 당사가 입학 허가서 등의 서류를 발행했는지 여부에 따라 대응이 달라집니다. 자세한 내용은 문의 양식을 통해 상담해 주세요.'],
+                  ] : locale === 'ru' ? [
+                    ['1. Возврат платы за обучение',
+                      '【При использовании услуги сопровождения заявки】\nЕсли тайское посольство или консульство отклонит вашу визовую заявку, мы вернём 100% оплаты за обучение.\n\n【Без использования услуги сопровождения（самостоятельная подача）】\nЕсли визовая заявка отклонена, мы вернём 50% оплаты за обучение.\n\n【Случаи, при которых возврат невозможен（для всех планов）】\n・Отказ вследствие изменения критериев или по усмотрению сотрудника\n・Ложные сведения, неполная или недостаточная информация со стороны заявителя\n・Отсутствие, неполнота или просрочка документов заявителя\n・Непредоставление доп. документов (Additional Documents) или нарушение срока\n・Отказ от подачи по инициативе заявителя（без ответа более 14 дней）\n・Задержка ответа со стороны заявителя（нет ответа в течение 7 дней）\n\n【Процедура проверки для возврата】\nДля оформления возврата мы попросим вас предоставить данные для входа в Thai e-Visa（адрес эл. почты и пароль）, чтобы напрямую подтвердить результат（отказ）перед началом процедуры.'],
+                    ['2. Сбор за подачу визовой заявки（около 10 000 THB）',
+                      'Сбор за подачу визовой заявки является государственной пошлиной, уплачиваемой непосредственно в тайское посольство или консульство. Поскольку эта оплата не проходит через нас, она не подлежит возврату ни при каких обстоятельствах.'],
+                    ['3. Возврат платы за услугу сопровождения（10 000 THB）',
+                      '【В случае отказа по нашей вине】\nЕсли отказ объективно обусловлен ошибками в подготовке документов или процедурными нарушениями с нашей стороны, мы полностью возместим плату за услугу сопровождения（10 000 THB）.\n\n【Случаи, при которых возврат невозможен】\n・Отказ вследствие изменения критериев или по усмотрению сотрудника\n・Ложные сведения, неполная или недостаточная информация заявителя\n・Отсутствие, неполнота или просрочка документов\n・Непредоставление доп. документов или нарушение срока\n・Отказ от подачи по инициативе заявителя（более 14 дней без ответа）\n・Задержка ответа заявителя（нет ответа в течение 7 дней）'],
+                    ['4. Процедура возврата',
+                      '・Запрос на возврат необходимо подать в течение 14 дней с момента получения уведомления об отказе через форму обратной связи.\n・Проверка и подтверждение возврата может занять до 14 рабочих дней.\n・Возврат осуществляется тем же способом оплаты, что и при подаче заявки.\n・Сумма возврата основана на сумме в THB на момент подачи; разница из-за колебаний курса не компенсируется.'],
+                    ['5. Отмена（до подачи визовой заявки）',
+                      'Если вы хотите отменить заказ после оплаты обучения, но до подачи визовой заявки, условия зависят от того, были ли уже выданы письма о зачислении и другие документы. Для получения подробной информации свяжитесь с нами через форму обратной связи.'],
+                  ] : [
+                    ['1. School Tuition Refund',
+                      '【With Application Agency Service】\nIf your visa application is rejected by a Thai embassy or consulate, we will refund 100% of your school tuition fee.\n\n【Without Application Agency Service (Self-Application)】\nIf your visa application is rejected, we will refund 50% of your school tuition fee.\n\n【Non-Refundable Cases (All Plans)】\n・Changes in screening criteria or rejection at the discretion of the reviewing officer\n・False declarations, incomplete or insufficient information by the applicant\n・Missing, incomplete, or expired documents submitted by the applicant\n・Failure to respond to or missing the deadline for Additional Documents requests\n・Abandonment of application at the applicant\'s discretion (no response for 14+ days since last contact)\n・Delayed response by the applicant (no response within 7 days of our contact)\n\n【Refund Verification Process】\nTo process your refund, we will ask you to provide your Thai e-Visa system login credentials (email address and password) so we can directly verify the rejection result before proceeding.'],
+                    ['2. Visa Application Fee (approx. 10,000 THB)',
+                      'The visa application fee is a government fee paid directly to the Thai embassy or consulate. As this payment does not go through us, it is non-refundable under any circumstances.'],
+                    ['3. Application Agency Service Fee (10,000 THB) Refund',
+                      '【In Case of Rejection Due to Our Error】\nIf rejection is objectively determined to be caused by our document preparation errors or procedural deficiencies, we will refund the full application agency service fee (10,000 THB).\n\n【Non-Refundable Cases】\n・Changes in screening criteria or rejection at the discretion of the reviewing officer\n・False declarations, incomplete or insufficient information by the applicant\n・Missing, incomplete, or expired documents submitted by the applicant\n・Failure to respond to or missing the deadline for Additional Documents requests\n・Abandonment of application at the applicant\'s discretion (no response for 14+ days since last contact)\n・Delayed response by the applicant (no response within 7 days of our contact)'],
+                    ['4. Refund Procedure',
+                      '・Refund requests must be submitted within 14 days of receiving the rejection notice via the contact form.\n・Refund review and verification may take up to 14 business days.\n・Refunds will be processed using the same payment method used at the time of application.\n・Refund amounts are based on the THB amount at the time of application; differences due to exchange rate fluctuations are not covered.'],
+                    ['5. Cancellation (Before Visa Application)',
+                      'If you wish to cancel after paying the school tuition fee but before submitting the visa application, the process will vary depending on whether we have already issued acceptance letters or other documents. Please contact us via the contact form for details.'],
+                  ]).map(([heading, body]) => (
+                    <div key={heading}>
+                      <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
+                      <p style={{whiteSpace:'pre-line'}}>{body}</p>
+                    </div>
+                  ))}
+                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>
+                    {locale === 'zh' ? '※ 本服务为签证申请提供支持，不保证签证获批。' :
+                     locale === 'ko' ? '※ 본 서비스는 비자 신청 지원을 위한 것이며, 비자 취득을 보증하지 않습니다.' :
+                     locale === 'ru' ? '※ Данная услуга обеспечивает поддержку при подаче визовой заявки и не гарантирует получение визы.' :
+                     '※ This service provides support for visa applications and does not guarantee visa approval.'}
+                  </p>
+                </div>
+              </LegalBox>
+
               <LegalBox id="privacy" title="Privacy Policy">
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
                   <p>Toy World Company (hereinafter &quot;the Company&quot;) recognizes the protection of customer personal information as an important responsibility and establishes this privacy policy.</p>

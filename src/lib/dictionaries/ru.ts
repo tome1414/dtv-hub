@@ -394,6 +394,7 @@ const ru: Dictionary = {
       messageLabel: 'Вопросы / сообщение',
       messagePlaceholder: 'Спрашивай что угодно',
       privacyConsent: 'Я соглашаюсь с политикой конфиденциальности',
+      refundPolicyConsent: 'Я прочитал(а) и согласен(на) с политикой возврата',
       successMessage: '✓ Отправлено! Мы свяжемся с тобой в течение 1 рабочего дня.',
     },
     nav: {

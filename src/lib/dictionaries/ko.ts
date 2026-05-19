@@ -391,6 +391,7 @@ const ko: Dictionary = {
       messageLabel: '질문/메시지',
       messagePlaceholder: '편하게 문의해 주세요',
       privacyConsent: '개인정보처리방침에 동의합니다',
+      refundPolicyConsent: '환불 정책을 읽고 동의합니다',
       successMessage: '✓ 제출 완료! 1 영업일 이내에 연락드리겠습니다.',
     },
     nav: {

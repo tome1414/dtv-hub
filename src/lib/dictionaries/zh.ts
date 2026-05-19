@@ -391,6 +391,7 @@ const zh: Dictionary = {
       messageLabel: '问题/留言',
       messagePlaceholder: '请随时咨询',
       privacyConsent: '我同意隐私政策',
+      refundPolicyConsent: '我已阅读并同意退款政策',
       successMessage: '✓ 提交成功！我们将在1个工作日内与您联系。',
     },
     nav: {

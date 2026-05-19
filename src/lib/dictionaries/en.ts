@@ -396,6 +396,7 @@ const en: Dictionary = {
       messageLabel: 'Questions / Message',
       messagePlaceholder: 'Feel free to ask anything',
       privacyConsent: 'I agree to the Privacy Policy',
+      refundPolicyConsent: 'I have read and agree to the Refund Policy',
       successMessage: '✓ Submitted! We will contact you within 1 business day.',
     },
     nav: {
