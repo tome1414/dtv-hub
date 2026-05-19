@@ -462,38 +462,15 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             <div style={{display:'flex',flexDirection:'column',gap:12}}>
               {locale === 'ja' ? (
                 <>
-              <LegalBox id="company" title="会社概要">
-                <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
-                  <tbody>
-                    {[
-                      ['会社名', 'Toy World Company'],
-                      ['所在地', 'Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960'],
-                      ['設立', '2024年'],
-                      ['事業内容', 'DTVビザ申請サポートサービス、ゴルフスクール受講斡旋、タイ長期滞在コンサルティング'],
-                      ['お問い合わせ', 'お問い合わせフォームよりご連絡ください'],
-                    ].map(([k,v])=>(
-                      <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
-                        <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:140}}>{k}</td>
-                        <td style={{padding:'10px 0',color:'#444'}}>{v}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </LegalBox>
-
               <LegalBox id="academy" title="ゴルフアカデミー概要（提携スクール）">
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
                     {[
                       ['スクール名', "Ken's Golf Bangkok"],
                       ['設立', '2021年'],
-                      ['所在地', 'バンコク（タイ）'],
-                      ['公式サイト', 'www.kensgolfbangkok.com'],
-                      ['ヘッドプロ', '杉山ケン（Ken Sugiyama）'],
-                      ['経歴', '日本生まれ・2歳からタイ在住。水城高校ゴルフ部（茨城県）にて競技経験を積み、タイで活躍するプロゴルファー。'],
+                      ['所在地', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['対応言語', '日本語・英語・タイ語・ベトナム語'],
-                      ['提供サービス', 'ゴルフレッスン（初心者〜上級者）、DTV申請書類サポート、クラブリペア・フィッティング'],
-                      ['特徴', 'Thailand PGA認定コーチによる指導。日本語完全対応で、ゴルフ未経験の方でも安心してレッスンを受講可能。DTVビザのソフトパワー枠（スポーツ）に対応した公式カリキュラムを提供。'],
+                      ['提供サービス', 'ゴルフレッスン（初心者〜上級者）、クラブリペア・フィッティング'],
                     ].map(([k,v])=>(
                       <tr key={k} style={{borderBottom:'1px solid #ede8df'}}>
                         <td style={{padding:'10px 16px 10px 0',fontWeight:600,color:'#0a2e1f',whiteSpace:'nowrap',verticalAlign:'top',width:140}}>{k}</td>
