@@ -363,77 +363,87 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
           </div>
         </section>
 
-        {/* CONTINUATION OPTIONS */}
-        {locale === 'ja' && (
-          <section style={{padding:'48px 24px 56px',background:'#fff'}}>
-            <div style={{maxWidth:860,margin:'0 auto'}}>
-              <div style={{textAlign:'center',marginBottom:28}}>
-                <span style={{display:'inline-flex',alignItems:'center',gap:10,color:'#0d4f3c',fontSize:'.75rem',fontWeight:600,letterSpacing:'.12em',textTransform:'uppercase' as const}}>
-                  <span style={{width:32,height:1,background:'#c9a84c',display:'inline-block'}}/>
-                  スクール継続オプション
-                  <span style={{width:32,height:1,background:'#c9a84c',display:'inline-block'}}/>
-                </span>
-                <p style={{margin:'10px auto 0',maxWidth:620,fontSize:'.85rem',color:'#555',lineHeight:1.85}}>
-                  DTVビザは5年有効ですが、再入国・滞在延長時にイミグレから受講継続の証明を求められるケースがあります。スクール修了後も在籍し続けることで、証拠書類の提示に備えられます。いずれも任意のオプションです。
-                </p>
-              </div>
-              <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:16}}>
-                <div style={{background:'linear-gradient(135deg,#fdf8ee,#faf3e0)',border:'1.5px solid #c9a84c',borderRadius:16,padding:'24px 28px'}}>
-                  <span style={{background:'linear-gradient(135deg,#c9a84c,#e2c46e)',color:'#fff',fontSize:'.7rem',fontWeight:700,padding:'3px 10px',borderRadius:999,display:'inline-block',marginBottom:12}}>まとめ払い特典</span>
-                  <h3 style={{fontSize:'1rem',fontWeight:800,color:'#0a2e1f',margin:'0 0 8px'}}>5年まとめてプラン</h3>
-                  <p style={{fontSize:'.83rem',color:'#555',lineHeight:1.8,margin:'0 0 6px'}}>
-                    1年目は通常料金、2〜5年目は <strong style={{color:'#c9a84c'}}>20%OFF</strong> で継続できます。
-                  </p>
-                  <p style={{fontSize:'.77rem',color:'#999',margin:'0 0 16px'}}>※初回にまとめてお支払いが条件です。</p>
-                  <a href="#inquiry" className="btn-gold" style={{fontSize:'.82rem',padding:'10px 20px'}}>詳しく相談する</a>
-                </div>
-                <div style={{background:'#fff',border:'1.5px solid #d5d0c5',borderRadius:16,padding:'24px 28px'}}>
-                  <span style={{background:'#0d4f3c',color:'#fff',fontSize:'.7rem',fontWeight:700,padding:'3px 10px',borderRadius:999,display:'inline-block',marginBottom:12}}>更新時割引</span>
-                  <h3 style={{fontSize:'1rem',fontWeight:800,color:'#0a2e1f',margin:'0 0 8px'}}>年次更新プラン</h3>
-                  <p style={{fontSize:'.83rem',color:'#555',lineHeight:1.8,margin:'0 0 6px'}}>
-                    更新のたびに選択プランを <strong style={{color:'#0d4f3c'}}>10%OFF</strong> で継続できます。
-                  </p>
-                  <p style={{fontSize:'.77rem',color:'#999',margin:'0 0 16px'}}>※更新ごとに割引価格でお支払いいただきます。</p>
-                  <a href="#inquiry" className="btn-outline" style={{fontSize:'.82rem',padding:'10px 20px'}}>詳しく相談する</a>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* ADDON */}
-        <section style={{padding:'64px 24px',background:'#f5f0e6'}}>
-          <div style={{maxWidth:700,margin:'0 auto'}}>
-            {/* Connector line */}
-            <div style={{textAlign:'center',marginBottom:24}}>
-              <span style={{display:'inline-flex',alignItems:'center',gap:10,color:'#0d4f3c',fontSize:'.82rem',fontWeight:600}}>
-                <span style={{width:40,height:1,background:'#c9a84c',display:'inline-block'}}/>
-                オプション追加可能
-                <span style={{width:40,height:1,background:'#c9a84c',display:'inline-block'}}/>
+        {/* OPTIONS — 申請代行 + 継続プラン（ja のみ） */}
+        <section style={{padding:'64px 24px',background:'#0a2e1f'}}>
+          <div style={{maxWidth:900,margin:'0 auto'}}>
+            <div style={{textAlign:'center',marginBottom:40}}>
+              <span style={{display:'inline-block',background:'rgba(201,168,76,.18)',border:'1px solid rgba(201,168,76,.45)',color:'#e2c46e',padding:'4px 16px',borderRadius:999,fontSize:'.72rem',letterSpacing:'.12em',fontWeight:600,marginBottom:14}}>
+                ADD-ON OPTIONS
               </span>
+              <h2 style={{fontSize:'clamp(1.3rem,3vw,1.9rem)',fontWeight:900,color:'#fff',margin:'0 0 10px'}}>
+                {locale === 'ja' ? 'オプションサービス' : 'Optional Services'}
+              </h2>
+              <p style={{color:'rgba(255,255,255,.55)',fontSize:'.87rem',maxWidth:520,margin:'0 auto',lineHeight:1.85}}>
+                {locale === 'ja'
+                  ? 'いずれかのプランにプラスして選べるオプションです。'
+                  : 'These services can be added to any plan.'}
+              </p>
             </div>
-            <div style={{background:'linear-gradient(135deg,#fdf8ee,#faf3e0)',borderRadius:24,border:'2px solid #c9a84c',boxShadow:'0 4px 24px rgba(201,168,76,.18)',overflow:'hidden'}}>
-              {/* Gold top bar */}
-              <div style={{background:'linear-gradient(90deg,#c9a84c,#e2c46e)',padding:'10px 32px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-                <span style={{color:'#fff',fontWeight:700,fontSize:'.82rem',letterSpacing:'.08em'}}>OPTIONAL ADD-ON</span>
-                <span style={{color:'rgba(255,255,255,.85)',fontSize:'.75rem',fontWeight:500}}>{d.addon.label}</span>
-              </div>
-              <div style={{padding:'32px 36px'}}>
-                <h2 style={{fontSize:'clamp(1.3rem,3vw,1.8rem)',fontWeight:900,marginBottom:8,color:'#0a2e1f'}}>{d.addon.title}</h2>
-                <p style={{color:'#555',marginBottom:24,fontSize:'.9rem',lineHeight:1.8}}>{d.addon.description}</p>
-                <div style={{marginBottom:24,display:'flex',alignItems:'baseline',gap:6}}>
-                  <span style={{fontSize:'2rem',fontWeight:900,color:'#c9a84c'}}>+{d.addon.price.toLocaleString()}</span>
-                  <span style={{color:'#777',fontSize:'.9rem'}}>THB</span>
+
+            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:16}}>
+              {/* 申請代行サービス — 全言語 */}
+              <div style={{background:'rgba(201,168,76,.07)',border:'1px solid rgba(201,168,76,.35)',borderRadius:18,padding:'28px 24px',display:'flex',flexDirection:'column' as const}}>
+                <span style={{display:'inline-block',background:'linear-gradient(135deg,#c9a84c,#e2c46e)',color:'#fff',fontSize:'.68rem',fontWeight:700,padding:'3px 10px',borderRadius:999,marginBottom:14,alignSelf:'flex-start' as const}}>
+                  RECOMMENDED
+                </span>
+                <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:10}}>
+                  <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>{d.addon.title}</h3>
+                  <span style={{fontSize:'1.2rem',fontWeight:900,color:'#e2c46e',whiteSpace:'nowrap' as const}}>+{d.addon.price.toLocaleString()} THB</span>
                 </div>
-                <ul style={{listStyle:'none',padding:0,margin:'0 0 28px',display:'flex',flexDirection:'column',gap:10}}>
-                  {d.addon.features.map((f: string,i: number)=>(
-                    <li key={i} style={{display:'flex',gap:8,alignItems:'flex-start',fontSize:'.88rem',color:'#333'}}>
-                      <span style={{color:'#0d4f3c',flexShrink:0,fontWeight:700}}>✓</span>{f}
+                <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 14px'}}>{d.addon.description}</p>
+                <ul style={{listStyle:'none',padding:0,margin:'0 0 22px',display:'flex',flexDirection:'column' as const,gap:7,flexGrow:1}}>
+                  {d.addon.features.map((feat: string,i: number)=>(
+                    <li key={i} style={{display:'flex',gap:8,fontSize:'.8rem',color:'rgba(255,255,255,.7)',lineHeight:1.6}}>
+                      <span style={{color:'#c9a84c',flexShrink:0,fontWeight:700}}>✓</span>{feat}
                     </li>
                   ))}
                 </ul>
-                <a href="#inquiry" className="btn-gold">{d.addon.cta}</a>
+                <a href="#inquiry" className="btn-gold" style={{fontSize:'.82rem',padding:'11px 22px',alignSelf:'flex-start' as const}}>{d.addon.cta}</a>
               </div>
+
+              {/* 5年まとめてプラン — ja のみ */}
+              {locale === 'ja' && (
+                <div style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.12)',borderRadius:18,padding:'28px 24px',display:'flex',flexDirection:'column' as const}}>
+                  <span style={{display:'inline-block',background:'rgba(201,168,76,.22)',color:'#e2c46e',fontSize:'.68rem',fontWeight:700,padding:'3px 10px',borderRadius:999,marginBottom:14,alignSelf:'flex-start' as const}}>
+                    まとめ払い特典
+                  </span>
+                  <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:10}}>
+                    <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>5年まとめてプラン</h3>
+                    <span style={{fontSize:'.88rem',fontWeight:700,color:'#e2c46e',whiteSpace:'nowrap' as const,background:'rgba(201,168,76,.15)',padding:'3px 10px',borderRadius:999}}>2〜5年目 20%OFF</span>
+                  </div>
+                  <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>
+                    1年目は通常料金、2〜5年目は20%OFFで継続できます。
+                  </p>
+                  <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>
+                    ※ 初回一括払いが条件です。DTVビザは5年有効ですが、再入国・延長時にイミグレから受講継続の証明を求められるケースがあるため、在籍を維持することで証拠書類の提示に対応できます。任意のオプションです。
+                  </p>
+                  <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}}>
+                    詳しく相談する
+                  </a>
+                </div>
+              )}
+
+              {/* 年次更新プラン — ja のみ */}
+              {locale === 'ja' && (
+                <div style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.12)',borderRadius:18,padding:'28px 24px',display:'flex',flexDirection:'column' as const}}>
+                  <span style={{display:'inline-block',background:'rgba(13,79,60,.5)',color:'rgba(255,255,255,.7)',fontSize:'.68rem',fontWeight:700,padding:'3px 10px',borderRadius:999,marginBottom:14,alignSelf:'flex-start' as const}}>
+                    更新時割引
+                  </span>
+                  <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:10}}>
+                    <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>年次更新プラン</h3>
+                    <span style={{fontSize:'.88rem',fontWeight:700,color:'rgba(255,255,255,.7)',whiteSpace:'nowrap' as const,background:'rgba(13,79,60,.5)',padding:'3px 10px',borderRadius:999}}>更新時 10%OFF</span>
+                  </div>
+                  <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>
+                    更新のたびに選択プランを10%OFFで継続できます。
+                  </p>
+                  <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>
+                    ※ まとめ払い不要で、更新時に都度お支払いいただく形式です。スクール在籍を維持することで、イミグレへの証拠書類提示に対応できます。任意のオプションです。
+                  </p>
+                  <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}}>
+                    詳しく相談する
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </section>
