@@ -217,7 +217,7 @@ const en: Dictionary = {
             },
             {
               q: 'What documents are needed as "proof of residence" for the application?',
-              a: 'This document does not prove your permanent home address — it proves that you are legally present in the jurisdiction of the consulate where you apply. You can apply at any Thai consulate or embassy outside Thailand, including from a third country.\n\n[Examples]\n① Applying at a Thai embassy in your home country → driver\'s license, utility bills, etc.\n② Applying in Vietnam while traveling → Vietnamese tourist visa + hotel receipt, or a flight ticket to Thailand\n③ Applying from any other third country → a valid visa for that country, proof of accommodation, or flight tickets\n\n※ Rules for third-country applications vary by consulate (e.g. the Thai Embassy in Seoul may not accept applications from foreign nationals on tourist visas). Always confirm directly with the consulate before applying.',
+              a: 'This document does not prove your permanent home address — it proves that you are legally present in the jurisdiction of the consulate where you apply. You can apply at any Thai consulate or embassy outside Thailand, including from a third country.\n\n[Examples]\n① Applying at a Thai embassy in your home country → driver\'s license, utility bills, etc.\n② Applying in Vietnam while traveling → Vietnamese tourist visa + hotel receipt, or a flight ticket to Thailand\n③ Applying from any other third country → a valid visa for that country, proof of accommodation, or flight tickets\n\n※ Rules for third-country applications vary by consulate (e.g. the Thai Embassy in Seoul may not accept applications from foreign nationals on tourist visas). Always confirm directly with the consulate before applying.\n\n※ Nationals of certain countries designated by the Thai government as "Special Observation Countries" (e.g. Afghanistan, Iran, Iraq, Nigeria, Pakistan) may face restrictions when applying at Thai consulates in third countries. They may need to apply in their home country or submit additional documents such as a criminal record clearance. Please contact us in advance if this applies to you.',
             },
           ],
         },
@@ -245,7 +245,7 @@ const en: Dictionary = {
           questions: [
             {
               q: 'What if my visa is rejected?',
-              a: 'With the agency plan, we refund 100% of your school fees. Without the agency plan, we refund 50%. The 10,000 THB visa application fee is non-refundable in both cases.',
+              a: 'With the agency plan, we refund 100% of your school fees. Without the agency plan, we refund 50%. The 10,000 THB visa application fee is non-refundable in both cases. (Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand.)',
             },
             {
               q: 'Do I get a refund without the agency plan?',
@@ -275,6 +275,10 @@ const en: Dictionary = {
           id: 'E',
           name: 'General',
           questions: [
+            {
+              q: 'I heard the visa-free stay period in Thailand is changing from 60 days — what\'s happening?',
+              a: 'Thailand\'s Cabinet formally approved reverting the visa-free stay from 60 to 30 days on May 19, 2026 (effective 15 days after publication in the Royal Gazette). This effectively eliminates long-term visa-free stays for Japanese and most Western nationals.\n\nNote: South Korea, Brazil, Peru, Argentina, and Chile are exempt from this change under bilateral agreements and continue to enjoy 90-day visa-free stays.\n\nWith a DTV visa, you can stay up to 180 days per entry (approx. 1 year with the in-country extension), making DTV more valuable than ever.',
+            },
             {
               q: 'What\'s the minimum age?',
               a: 'You must be 18+ to apply for a DTV visa. There\'s no maximum age limit.',
