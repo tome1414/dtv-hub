@@ -565,6 +565,8 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                       '・返金のご申請は、不許可通知の受領後14日以内にお問い合わせフォームよりご連絡ください。\n・返金の審査・確認には最大14営業日いただく場合があります。\n・返金はお申し込み時と同一の支払い方法にて対応いたします。\n・返金額はお申し込み時のTHB建て金額を基準とし、為替変動による差額は補償対象外となります。'],
                     ['5. キャンセル（ビザ申請前）について',
                       'スクール受講料のお支払い後、ビザ申請前にキャンセルをご希望の場合は、弊社が受入レター等の書類を発行済みかどうかにより対応が異なります。詳細はお問い合わせフォームよりご相談ください。'],
+                    ['6. 特別審査対象国籍の方への返金上限について',
+                      'タイ政府が安全保障上の理由から「特別審査対象国（Countries under Special Observation）」に指定している以下の国籍の方については、DTV申請代行サービスをご利用の場合であっても、ビザ申請却下時のスクール受講料の返金は50%を上限とします。\n\n【対象国籍（29カ国）】\nアフガニスタン／イラン／イラク／シリア／イエメン／レバノン／パレスチナ／パキスタン／バングラデシュ／ネパール／北朝鮮（朝鮮民主主義人民共和国）／中国／ナイジェリア／ソマリア／スーダン／リビア／アルジェリア／エジプト／カメルーン／中央アフリカ共和国／コンゴ共和国／コンゴ民主共和国／赤道ギニア／ガーナ／ギニア／リベリア／マリ／サントメ・プリンシペ／シエラレオネ\n\n上記国籍の方は、第三国でのビザ申請制限・追加書類義務・厳格な面接審査など通常とは異なる審査プロセスが適用されます。これらに起因するビザ却下リスクは弊社のコントロール外となるため、申請代行サービスを含む全プランにおいて返金上限を設けております。'],
                   ].map(([heading, body])=>(
                     <div key={heading}>
                       <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
@@ -975,6 +977,15 @@ const COUNTRIES = [
   'Tonga','Tuvalu','Vanuatu',
 ].sort()
 
+const RESTRICTED_NATIONALITIES = new Set([
+  'Afghanistan','Iran','Iraq','Syria','Yemen','Lebanon','Palestine',
+  'Pakistan','Bangladesh','Nepal','North Korea','China',
+  'Nigeria','Somalia','Sudan','Libya','Algeria','Egypt',
+  'Cameroon','Central African Republic','Congo','DR Congo',
+  'Equatorial Guinea','Ghana','Guinea','Liberia','Mali',
+  'São Tomé and Príncipe','Sierra Leone',
+])
+
 function NationalityCombobox({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder: string }) {
   const [query, setQuery] = React.useState(value)
   const [open, setOpen] = React.useState(false)
@@ -1087,6 +1098,20 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.nationalityLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
         <NationalityCombobox value={nationality} onChange={setNationality} placeholder={f.nationalityPlaceholder}/>
+        {RESTRICTED_NATIONALITIES.has(nationality) && (
+          <div style={{marginTop:10,padding:'12px 14px',background:'#fff5f5',border:'1.5px solid #e05a5a',borderRadius:10,fontSize:'.8rem',color:'#c0392b',lineHeight:1.85}}>
+            <p style={{fontWeight:700,margin:'0 0 6px',display:'flex',alignItems:'center',gap:6}}>
+              <span>⚠️</span> ご注意：選択された国籍はタイ政府の「特別審査対象国」に指定されています
+            </p>
+            <ul style={{margin:0,padding:'0 0 0 16px'}}>
+              <li>日本など第三国のタイ領事館での申請が<strong>制限される場合</strong>があります</li>
+              <li>無犯罪証明書など<strong>追加書類の提出が必要</strong>になる場合があります</li>
+              <li>本国または長期滞在ビザ保有国での申請が必要になる場合があります</li>
+              <li>申請代行プランご利用の場合でも、<strong>ビザ却下時の返金はスクール受講料の50%が上限</strong>となります</li>
+            </ul>
+            <p style={{margin:'8px 0 0',fontWeight:700}}>お申し込み前に必ずお問い合わせください。</p>
+          </div>
+        )}
       </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.emailLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
