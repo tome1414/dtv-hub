@@ -493,7 +493,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             </div>
             {/* Form */}
             <div style={{background:'#f5f0e6',borderRadius:24,padding:40}}>
-              <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} />
+              <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} locale={locale} />
             </div>
           </div>
         </section>
@@ -515,6 +515,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                   <tbody>
                     {[
                       ['スクール名', "Ken's Golf Bangkok"],
+                      ['法人名', 'PREMIER GOLF TOUR Co.,Ltd'],
                       ['設立', '2021年'],
                       ['所在地', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['対応言語', '日本語・英語・タイ語・ベトナム語'],
@@ -527,6 +528,30 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                     ))}
                   </tbody>
                 </table>
+
+                {/* Ken Sugiyama プロフィール */}
+                <div style={{marginTop:24,paddingTop:20,borderTop:'1px solid #ede8df'}}>
+                  <p style={{fontWeight:700,fontSize:'.82rem',color:'#0a2e1f',letterSpacing:'.06em',marginBottom:14}}>代表講師</p>
+                  <div style={{display:'flex',gap:20,alignItems:'flex-start',flexWrap:'wrap' as const}}>
+                    <img
+                      src="/ken-sugiyama.avif"
+                      alt="Ken Sugiyama - Head Pro"
+                      style={{width:96,height:96,borderRadius:'50%',objectFit:'cover' as const,flexShrink:0,border:'2px solid #e5e0d5'}}
+                    />
+                    <div style={{flex:1,minWidth:200}}>
+                      <p style={{fontWeight:800,fontSize:'1rem',color:'#0a2e1f',margin:'0 0 2px'}}>Ken Sugiyama</p>
+                      <p style={{fontSize:'.78rem',color:'#c9a84c',fontWeight:600,margin:'0 0 10px',letterSpacing:'.04em'}}>HEAD PRO</p>
+                      <p style={{fontSize:'.83rem',color:'#444',lineHeight:1.85,margin:'0 0 10px'}}>
+                        日本出身・2歳からタイ育ち。茨城県の水城高校ゴルフ部で技術を磨き、プロコーチとしてタイで活躍。日本語・英語・タイ語・ベトナム語の4言語に対応し、国籍やレベルを問わずすべてのゴルファーに親しみやすいレッスンを提供しています。
+                      </p>
+                      <div style={{display:'flex',flexWrap:'wrap' as const,gap:6}}>
+                        {['多言語コーチング','国際大会対応','ユース育成','ゴルフエチケット指導'].map(tag=>(
+                          <span key={tag} style={{fontSize:'.72rem',background:'#f5f0e6',color:'#0a2e1f',padding:'3px 10px',borderRadius:999,fontWeight:500}}>{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </LegalBox>
 
               <LegalBox id="sct" title="特定商取引法に基づく表記">
@@ -1023,12 +1048,14 @@ function NationalityCombobox({ value, onChange, placeholder }: { value: string; 
   )
 }
 
-function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
+function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: any; locale: string }) {
   const [submitted, setSubmitted] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
   const [sendError, setSendError] = React.useState(false)
   const [plan, setPlan] = React.useState('')
   const [agencyService, setAgencyService] = React.useState(false)
+  const [fiveYearPlan, setFiveYearPlan] = React.useState(false)
+  const [annualRenewal, setAnnualRenewal] = React.useState(false)
   const [name, setName] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [nationality, setNationality] = React.useState('')
@@ -1044,7 +1071,7 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, nationality, plan, agencyService, sources, referral, message }),
+        body: JSON.stringify({ name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal, sources, referral, message }),
       })
       if (!res.ok) throw new Error('send failed')
       setSubmitted(true)
@@ -1081,7 +1108,7 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
         </select>
       </div>
       {/* Agency service checkbox */}
-      <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc'}}>
+      <div style={{background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc',marginBottom:8}}>
         <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
           <input type="checkbox" checked={agencyService} onChange={e=>setAgencyService(e.target.checked)} style={{accentColor:'#0d4f3c',marginTop:3,width:16,height:16,flexShrink:0}}/>
           <div>
@@ -1091,6 +1118,36 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
             </ul>
           </div>
         </label>
+      </div>
+      {/* 継続オプション */}
+      <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc'}}>
+        <p style={{margin:'0 0 8px',fontWeight:700,fontSize:'.88rem',color:'#0a2e1f'}}>
+          {locale === 'ja' ? 'スクール継続オプション（任意）' : 'School Continuation Options (optional)'}
+        </p>
+        <div style={{display:'flex',flexDirection:'column' as const,gap:8}}>
+          <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
+            <input type="checkbox" checked={fiveYearPlan} onChange={e=>setFiveYearPlan(e.target.checked)} style={{accentColor:'#0d4f3c',marginTop:2,width:15,height:15,flexShrink:0}}/>
+            <div>
+              <span style={{fontWeight:600,fontSize:'.85rem',color:'#0a2e1f'}}>
+                {locale === 'ja' ? '5年まとめてプラン' : '5-Year Bundle Plan'}
+              </span>
+              <span style={{fontSize:'.76rem',color:'#666',marginLeft:6}}>
+                {locale === 'ja' ? '2〜5年目20%OFF・一括払い' : '20% off years 2–5 · Upfront payment'}
+              </span>
+            </div>
+          </label>
+          <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
+            <input type="checkbox" checked={annualRenewal} onChange={e=>setAnnualRenewal(e.target.checked)} style={{accentColor:'#0d4f3c',marginTop:2,width:15,height:15,flexShrink:0}}/>
+            <div>
+              <span style={{fontWeight:600,fontSize:'.85rem',color:'#0a2e1f'}}>
+                {locale === 'ja' ? '年次更新プラン' : 'Annual Renewal Plan'}
+              </span>
+              <span style={{fontSize:'.76rem',color:'#666',marginLeft:6}}>
+                {locale === 'ja' ? '更新時10%OFF' : '10% off at each renewal'}
+              </span>
+            </div>
+          </label>
+        </div>
       </div>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.nameLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
