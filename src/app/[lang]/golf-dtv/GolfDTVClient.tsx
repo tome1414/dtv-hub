@@ -1033,6 +1033,7 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
   const [email, setEmail] = React.useState('')
   const [nationality, setNationality] = React.useState('')
   const [referral, setReferral] = React.useState('')
+  const [sources, setSources] = React.useState<string[]>([])
   const [message, setMessage] = React.useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -1043,7 +1044,7 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, nationality, plan, agencyService, referral, message }),
+        body: JSON.stringify({ name, email, nationality, plan, agencyService, sources, referral, message }),
       })
       if (!res.ok) throw new Error('send failed')
       setSubmitted(true)
@@ -1117,6 +1118,28 @@ function InquiryForm({ plans, cta, f }: { plans: any[]; cta: string; f: any }) {
         <label className="form-label">{f.emailLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
         <input type="email" className="form-input" placeholder="your@email.com" required value={email} onChange={e=>setEmail(e.target.value)}/>
       </div>
+      {/* 流入経路アンケート */}
+      {f.sourceOptions && (
+        <div style={{marginBottom:20}}>
+          <label className="form-label">
+            {f.sourceLabel}
+            <span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>{f.sourceNote}</span>
+          </label>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))',gap:'8px 16px',marginTop:8}}>
+            {f.sourceOptions.map((opt: string) => (
+              <label key={opt} style={{display:'flex',alignItems:'center',gap:8,cursor:'pointer',fontSize:'.85rem',color:'#333'}}>
+                <input
+                  type="checkbox"
+                  checked={sources.includes(opt)}
+                  onChange={e => setSources(prev => e.target.checked ? [...prev, opt] : prev.filter(s => s !== opt))}
+                  style={{accentColor:'#0d4f3c',width:15,height:15,flexShrink:0}}
+                />
+                {opt}
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.referralLabel}<span style={{fontSize:'.75rem',color:'#999',marginLeft:6,fontWeight:400}}>{f.referralNote}</span></label>
         <input type="text" className="form-input" placeholder={f.referralPlaceholder} value={referral} onChange={e=>setReferral(e.target.value)}/>

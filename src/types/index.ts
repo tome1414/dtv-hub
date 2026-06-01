@@ -163,6 +163,9 @@ export interface Dictionary {
       nameLabel: string
       emailLabel: string
       required: string
+      sourceLabel?: string
+      sourceNote?: string
+      sourceOptions?: string[]
       referralLabel: string
       referralNote: string
       referralPlaceholder: string
