@@ -542,10 +542,10 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                       <p style={{fontWeight:800,fontSize:'1rem',color:'#0a2e1f',margin:'0 0 2px'}}>Ken Sugiyama</p>
                       <p style={{fontSize:'.78rem',color:'#c9a84c',fontWeight:600,margin:'0 0 10px',letterSpacing:'.04em'}}>HEAD PRO</p>
                       <p style={{fontSize:'.83rem',color:'#444',lineHeight:1.85,margin:'0 0 10px'}}>
-                        日本出身・2歳からタイ育ち。茨城県の水城高校ゴルフ部で技術を磨き、プロコーチとしてタイで活躍。日本語・英語・タイ語・ベトナム語の4言語に対応し、国籍やレベルを問わずすべてのゴルファーに親しみやすいレッスンを提供しています。
+                        タイPGA認定の現役プロインストラクター。完全初心者から競技・トーナメントレベルまで対応した体系的なカリキュラムを持ち、多国籍クライアントへの指導実績多数。日本語・英語・タイ語・ベトナム語の4言語対応により、国際的な環境でも高い評価を受けている。
                       </p>
                       <div style={{display:'flex',flexWrap:'wrap' as const,gap:6}}>
-                        {['多言語コーチング','国際大会対応','ユース育成','ゴルフエチケット指導'].map(tag=>(
+                        {['タイPGA認定','初心者〜プロ対応','トーナメント準備','4言語対応'].map(tag=>(
                           <span key={tag} style={{fontSize:'.72rem',background:'#f5f0e6',color:'#0a2e1f',padding:'3px 10px',borderRadius:999,fontWeight:500}}>{tag}</span>
                         ))}
                       </div>
@@ -1122,7 +1122,7 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
       {/* 継続オプション */}
       <div style={{marginBottom:20,background:'#f0ede4',borderRadius:10,padding:'12px 14px',border:'1px solid #ddd8cc'}}>
         <p style={{margin:'0 0 8px',fontWeight:700,fontSize:'.88rem',color:'#0a2e1f'}}>
-          {locale === 'ja' ? 'スクール継続オプション（任意）' : 'School Continuation Options (optional)'}
+          {locale === 'ja' ? 'スクール継続オプション' : 'School Continuation Options'}
         </p>
         <div style={{display:'flex',flexDirection:'column' as const,gap:8}}>
           <label style={{display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}>
