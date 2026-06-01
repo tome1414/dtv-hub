@@ -636,24 +636,28 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                   <tbody>
                     {(locale === 'zh' ? [
                       ['学校名称', "Ken's Golf Bangkok"],
+                      ['法人名称', 'PREMIER GOLF TOUR Co.,Ltd'],
                       ['成立', '2021年'],
                       ['地址', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['服务语言', '日语・英语・泰语・越南语'],
                       ['提供服务', '高尔夫课程（初学者至高级）、球杆修理・配件'],
                     ] : locale === 'ko' ? [
                       ['스쿨명', "Ken's Golf Bangkok"],
+                      ['법인명', 'PREMIER GOLF TOUR Co.,Ltd'],
                       ['설립', '2021년'],
                       ['소재지', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['대응 언어', '일본어・영어・태국어・베트남어'],
                       ['제공 서비스', '골프 레슨（초보자〜상급자）、클럽 리페어・피팅'],
                     ] : locale === 'ru' ? [
                       ['Название', "Ken's Golf Bangkok"],
+                      ['Юр. лицо', 'PREMIER GOLF TOUR Co.,Ltd'],
                       ['Основана', '2021 г.'],
                       ['Адрес', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['Языки', 'Японский, английский, тайский, вьетнамский'],
                       ['Услуги', 'Уроки гольфа (для начинающих и продвинутых), ремонт и подгонка клюшек'],
                     ] : [
                       ['School Name', "Ken's Golf Bangkok"],
+                      ['Legal Entity', 'PREMIER GOLF TOUR Co.,Ltd'],
                       ['Established', '2021'],
                       ['Location', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['Languages', 'Japanese, English, Thai, Vietnamese'],
@@ -666,6 +670,45 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                     ))}
                   </tbody>
                 </table>
+
+                {/* Ken Sugiyama プロフィール（多言語） */}
+                <div style={{marginTop:24,paddingTop:20,borderTop:'1px solid #ede8df'}}>
+                  <p style={{fontWeight:700,fontSize:'.82rem',color:'#0a2e1f',letterSpacing:'.06em',marginBottom:14}}>
+                    {locale === 'zh' ? '首席教练' : locale === 'ko' ? '헤드 프로' : locale === 'ru' ? 'Главный тренер' : 'Head Instructor'}
+                  </p>
+                  <div style={{display:'flex',gap:20,alignItems:'flex-start',flexWrap:'wrap' as const}}>
+                    <img
+                      src="/ken-sugiyama.avif"
+                      alt="Ken Sugiyama - Head Pro"
+                      style={{width:96,height:96,borderRadius:'50%',objectFit:'cover' as const,flexShrink:0,border:'2px solid #e5e0d5'}}
+                    />
+                    <div style={{flex:1,minWidth:200}}>
+                      <p style={{fontWeight:800,fontSize:'1rem',color:'#0a2e1f',margin:'0 0 2px'}}>Ken Sugiyama</p>
+                      <p style={{fontSize:'.78rem',color:'#c9a84c',fontWeight:600,margin:'0 0 10px',letterSpacing:'.04em'}}>HEAD PRO</p>
+                      <p style={{fontSize:'.83rem',color:'#444',lineHeight:1.85,margin:'0 0 10px'}}>
+                        {locale === 'zh'
+                          ? '泰国PGA认证的现役专业教练。拥有从完全初学者到竞技、锦标赛级别的系统化课程，拥有丰富的多国籍学员指导经验。精通日语、英语、泰语、越南语四种语言，在国际环境中享有高度评价。'
+                          : locale === 'ko'
+                          ? '태국 PGA 공인 현역 프로 인스트럭터. 완전 초보자부터 대회 레벨까지 폭넓은 수준에 대응하는 체계적인 커리큘럼을 갖추고 있으며, 다국적 클라이언트 지도 실적이 풍부합니다. 일본어・영어・태국어・베트남어 4개 국어 대응으로 국제적인 환경에서 높은 평가를 받고 있습니다.'
+                          : locale === 'ru'
+                          ? 'Действующий профессиональный инструктор, сертифицированный PGA Таиланда. Располагает системной программой для всех уровней — от абсолютных новичков до турнирного уровня. Богатый опыт работы с клиентами из разных стран. Владеет четырьмя языками: японским, английским, тайским и вьетнамским.'
+                          : 'Thailand PGA certified professional instructor. Offers a structured curriculum for all levels — from complete beginners to tournament-level players — with extensive experience coaching international clients. Fluent in Japanese, English, Thai, and Vietnamese, he is highly regarded in multicultural environments.'}
+                      </p>
+                      <div style={{display:'flex',flexWrap:'wrap' as const,gap:6}}>
+                        {(locale === 'zh'
+                          ? ['泰国PGA认证','初学者至职业','锦标赛准备','4语言对应']
+                          : locale === 'ko'
+                          ? ['태국PGA공인','초보자〜프로대응','토너먼트준비','4개국어대응']
+                          : locale === 'ru'
+                          ? ['Сертификат PGA','Все уровни','Турнирная подготовка','4 языка']
+                          : ['Thailand PGA Certified','All Levels','Tournament Ready','4 Languages']
+                        ).map((tag: string)=>(
+                          <span key={tag} style={{fontSize:'.72rem',background:'#f5f0e6',color:'#0a2e1f',padding:'3px 10px',borderRadius:999,fontWeight:500}}>{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </LegalBox>
 
               <LegalBox id="refund" title={
