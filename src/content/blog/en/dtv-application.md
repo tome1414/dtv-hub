@@ -88,7 +88,7 @@ Assemble every required document. See the full [DTV required documents checklist
 **Key preparation points:**
 - Bank balance certificate must be in English and typically valid for 3 months from issue date
 - Health insurance certificate must be in English
-- For Soft Power route: begin the acceptance letter process early — it often takes 1–3 weeks
+- For Soft Power route: begin the acceptance letter process early — typically issued within a few days to about 1 week after school fee payment; start the facility contact first
 - Verify passport validity (1 year remaining recommended)
 
 ---
@@ -126,10 +126,12 @@ Many Thai embassies use an appointment system for visa applications. Check your 
 
 | Method | Estimated Time |
 |---|---|
-| In-person embassy | 5–10 business days |
-| e-Visa | Varies by embassy |
+| In-person embassy | 1–3 weeks |
+| e-Visa | 1–3 weeks (varies by embassy) |
 
-Processing times can vary based on embassy workload and document completeness. Apply with enough lead time — 2–3 weeks before you need the visa is a safe buffer.
+Processing times can vary based on embassy workload and document completeness. Apply with enough lead time — plan for up to 3 weeks before you plan to travel.
+
+**After approval:** Once you receive the DTV approval PDF by email, you can enter Thailand **at any time** within the 5-year visa validity. There is no fixed entry date requirement. Confirm your flights and accommodation after receiving the PDF.
 
 **Picking up your visa (in-person):**
 - Return on the stated date to collect your passport with the visa sticker
@@ -137,14 +139,19 @@ Processing times can vary based on embassy workload and document completeness. A
 
 ---
 
-### Step 6: Check Your Visa
+### Step 6: Receive and Check Your Approval
 
-Once you receive your visa, verify the following:
+For e-Visa applicants, the DTV is issued as a **PDF sent to your registered email**. For in-person applicants, the visa sticker is affixed to your passport.
 
-- Visa sticker is correctly affixed
-- **Validity: 5 years** from issuance
-- **Entry type: MR (Multiple Re-entry)**
-- Your name and passport number match exactly
+**For e-Visa (PDF):**
+- Save the PDF and create a backup copy
+- Verify your name, passport number, validity (5 years), and entry type (Multiple Re-entry)
+- **Once you receive the approval PDF, you can enter Thailand at any time within the 5-year validity** — there is no fixed required entry date
+- Book flights and accommodation after receiving approval
+
+**For in-person applicants:**
+- Return on the stated collection date
+- Verify the sticker is correctly affixed with your correct details
 
 If there are any discrepancies, contact the embassy promptly.
 
@@ -182,7 +189,7 @@ The DTV is valid for 5 years, but **each entry grants a stay permit of up to 180
 ## FAQ
 
 **Q. How long does the whole process take from start to finish?**
-A. Allow 2–4 weeks from when your documents are complete. Embassy processing is 5–10 business days, but gathering the acceptance letter (Soft Power route) or employer documents can add time.
+A. Plan for 3–4 weeks from when you start gathering documents. Embassy review typically takes 1–3 weeks once documents are submitted. For the Soft Power route, the acceptance letter is usually issued within a few days to about 1 week after school fee payment — contact the facility first. Once you receive the approval PDF, you can enter Thailand anytime within the 5-year validity.
 
 **Q. Do I need to go to the embassy in person?**
 A. Not necessarily — where e-Visa is available, you can apply entirely online. Check whether the Thai embassy in your country offers this option.

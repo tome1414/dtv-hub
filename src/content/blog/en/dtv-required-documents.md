@@ -95,6 +95,8 @@ This is typically the most time-consuming document to prepare.
 Full details on the 500,000 THB requirement, what it means, and how to manage timing: [DTV bank balance guide](/en/blog/dtv-bank-balance).
 
 > **Note on bank transaction statements:** In addition to the balance certificate, an increasing number of Thai embassies are requesting 3 months of bank transaction statements. Whether required depends on your embassy — but preparing statements from the same account in advance is strongly recommended.
+>
+> **Why transaction statements are being requested:** Cases are increasing where applicants temporarily deposit a large sum just before applying to meet the 500,000 THB threshold. As a countermeasure, embassies (particularly for Soft Power route applications) are requesting 3 months of transaction history to verify that the balance was genuinely maintained — not just temporarily inflated. Maintaining 500,000+ THB consistently for the 3 months prior to your application date is the key. A large one-time deposit immediately before applying will be visible in the statements and may prompt further questions.
 
 ---
 
