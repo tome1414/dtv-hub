@@ -140,6 +140,18 @@ inline style が `hidden` クラスを上書きしてモバイルでも表示さ
 `src/app/[lang]/golf-dtv/` はプレミアムダークデザイン（ゴールド×ダーク緑）で**意図的に**
 ライトデザインとは別系統。変更禁止。
 
+### ⚠️ Golf DTV ランディングページの編集禁止（別セッションで管理）
+
+以下の5ページは別セッションで編集権限を限定管理しているため、**このセッションでは一切編集しない**：
+
+- https://dtvclub.com/ja/golf-dtv
+- https://dtvclub.com/en/golf-dtv
+- https://dtvclub.com/ko/golf-dtv
+- https://dtvclub.com/zh/golf-dtv
+- https://dtvclub.com/ru/golf-dtv
+
+対応するファイル：`src/app/[lang]/golf-dtv/` 配下のすべてのファイル
+
 ### モバイルのボトムナブ対策
 
 各ページの最下部に `paddingBottom: 80` を入れるか、 CSS で `@media (max-width: 1024px)` に padding-bottom を設定する。

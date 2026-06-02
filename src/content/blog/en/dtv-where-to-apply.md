@@ -47,7 +47,7 @@ The standard principle for DTV (e-Visa) applications is to **apply at the Thai e
 
 For applicants residing in Japan, the relevant Thai missions include those in Tokyo, Osaka, Fukuoka, Sendai, Nagoya, and others.
 
-This principle reflects the standard structure of Thailand's visa system. Applying at a third country's embassy during travel, or at a mission in a country where you have no residency, is not the recommended approach.
+This principle reflects the standard structure of Thailand's visa system. Applying at a third country's embassy during travel, or at a mission in a country where you have no residency, is not the recommended approach. Additionally, applicants from certain nationalities may face additional requirements or restrictions when applying outside their home country — see [DTV Application Notes by Nationality](/en/blog/dtv-application-nationality-notes) for details.
 
 ---
 

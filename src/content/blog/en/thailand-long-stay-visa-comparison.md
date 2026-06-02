@@ -63,7 +63,7 @@ Introduced in 2024 for remote workers and participants in Thailand's Soft Power 
 **Key requirements (general guidance):**
 - Bank balance: 500,000 THB or equivalent
 - Health insurance: USD 40,000+ coverage
-- Application fee: 10,000 THB
+- Application fee: 10,000 THB *(some nationalities exempt — [details](/en/blog/dtv-fee-by-nationality))*
 - Activity proof: Employment/freelance contract OR acceptance letter
 
 **Characteristics:** Up to 180 days per entry, multiple entries within the 5-year validity. Work Permit required for employment in Thailand.

@@ -52,6 +52,8 @@ read_time_minutes: 7
 | Primary purpose | Workcation / Soft Power activities | Retired life in Thailand |
 | Work authorization | Not permitted (WP required) | Not permitted |
 
+*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-fee-by-nationality)*
+
 The biggest structural differences: **age restriction and renewal frequency.** The Retirement visa requires applicants to be 50 or older; the DTV has no age limit. The Retirement visa requires annual renewal at a Thai Immigration office; the DTV is valid for 5 years without renewal.
 
 ---

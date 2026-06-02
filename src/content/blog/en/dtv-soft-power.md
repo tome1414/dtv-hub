@@ -137,6 +137,8 @@ Full details, costs, and FAQs are on the [Golf DTV page](/en/golf-dtv).
 | Application form | Embassy format | |
 | Application fee | 10,000 THB | |
 
+*Some nationalities are exempt from the application fee → [Details](/en/blog/dtv-fee-by-nationality)*
+
 Exact requirements vary by embassy. Some embassies may additionally request insurance-related documents — always verify the latest guidance with your specific application embassy. Full document guidance: [DTV required documents](/en/blog/dtv-required-documents).
 
 ---

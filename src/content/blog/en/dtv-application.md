@@ -175,6 +175,8 @@ The DTV is valid for 5 years, but **each entry grants a stay permit of up to 180
 | Application fee (10,000 THB) prepared | ✓ |
 | Passport has 1+ year of validity remaining | ✓ |
 
+*Some nationalities are exempt from the application fee → [DTV fee exemptions by nationality](/en/blog/dtv-fee-by-nationality)*
+
 ---
 
 ## FAQ
