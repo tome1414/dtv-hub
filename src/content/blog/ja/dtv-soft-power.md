@@ -142,7 +142,7 @@ Golf DTVの詳細フロー・費用感・よくある質問は[Golf DTV専用ペ
 | 申請書 | 公館様式 | |
 | 申請費用 | 10,000バーツ（約4万円） | |
 
-※ 国籍によって申請料が免除される場合があります → [詳細：国籍別DTV申請料の特例](/ja/blog/dtv-fee-by-nationality)
+※ 国籍によって申請料が免除される場合があります → [詳細：国籍によるDTV申請の注意点](/ja/blog/dtv-application-nationality-notes)
 
 詳細な書類要件は[DTV必要書類一覧](/ja/blog/dtv-required-documents)と各公館の案内でご確認ください。公館によって要求書類が若干異なる場合があります。
 

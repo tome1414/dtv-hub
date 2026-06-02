@@ -63,7 +63,7 @@ read_time_minutes: 8
 | 申請根拠 | 会員費の支払い（活動証明は不要） |
 | 就労 | 不可（別途ビザ・WP必要） |
 
-※ DTVの申請費用は国籍によって免除される場合があります → [詳細：国籍別DTV申請料の特例](/ja/blog/dtv-fee-by-nationality)
+※ DTVの申請費用は国籍によって免除される場合があります → [詳細：国籍によるDTV申請の注意点](/ja/blog/dtv-application-nationality-notes)
 
 ---
 
