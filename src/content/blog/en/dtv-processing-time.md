@@ -3,7 +3,7 @@ title: "DTV Processing Time and Pending Status: What to Do When Asked for More D
 slug: "dtv-processing-time"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-06-02"
 primary_keyword: "DTV processing time pending"
 secondary_keywords:
   - "DTV application wait time"
@@ -31,12 +31,12 @@ avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
 excerpt: "A practical guide to DTV processing times and how to handle a pending notification. Covers what to expect, how to respond to additional document requests, and how to manage your timeline."
-read_time_minutes: 8
+read_time_minutes: 11
 ---
 
 Waiting for a DTV (e-Visa) result — and knowing how to handle a "pending" notification along the way — is a source of anxiety for many applicants.
 
-**What you'll learn:** A realistic view of processing times, what "pending" means, and how to respond when additional documents are requested.
+**What you'll learn:** A realistic view of processing times, what each application status means, how to respond when additional documents are requested, and what to do while you wait.
 
 ---
 
@@ -57,6 +57,22 @@ Factors that may affect processing time:
 
 ---
 
+## Application Status: What Each Stage Means
+
+After submitting through the e-Visa system, you can check your application status online. Here is a reference for the main statuses you may see:
+
+| Status | What It Means | Action Required |
+|---|---|---|
+| Submitted | Your application has been received by the system | None — wait for review to begin |
+| Under Review | An officer is actively reviewing your application | None — check email regularly |
+| Additional Documents Required | The officer needs more information or materials | Respond promptly — see below |
+| Approved | Your DTV has been issued | Download and save the PDF |
+| Rejected | The application was not approved | Review the reason; reapplication is generally possible |
+
+Status labels may differ slightly depending on the e-Visa portal version. If you are unsure what a status means, contact your application embassy for clarification.
+
+---
+
 ## What Does "Pending" Mean?
 
 After submitting through the e-Visa system, your application status may show "Pending." This means your application has been received but the review is not yet complete.
@@ -68,6 +84,22 @@ Your application is received and under review. No action needed — simply wait 
 
 **Pattern 2: Request for additional documents or information**
 The reviewing officer sends a message requesting additional materials or clarifications.
+
+---
+
+## Soft Power Route: What to Expect After Submission
+
+Applicants using the Soft Power route (e.g., a golf school acceptance letter) may sometimes experience a slightly different review flow compared to the Workcation route. A few specific points worth keeping in mind:
+
+**Watch your email carefully.** Notifications for additional document requests or status changes are sent by email. Missing a message — or having it land in spam — can delay your application significantly. Check your inbox and spam folder at least once a day during the review period.
+
+**If you receive an additional document request, common asks include:**
+
+- **Full passport scan (all pages with stamps):** You may be asked to submit scans of all stamped pages in your passport, not just the photo page. Prepare a complete set of clear scans in advance.
+- **Bank statements (3 months):** Beyond the bank balance certificate, some reviewers request full transaction history for the past 3 months to verify the source and consistency of funds. If you can obtain bank statements (not just the balance certificate) when you prepare your documents, having them ready saves time.
+- **Online interview scheduling:** In some cases — particularly for Soft Power route applications — the embassy may request an online interview or video call to verify the application. If this happens, you will typically be asked to propose available dates and times. Respond promptly, keep your calendar flexible during the review period, and prepare to confirm your activity plans and stay intentions clearly.
+
+None of these requests signals a rejection. They are part of the review process.
 
 ---
 
@@ -100,9 +132,12 @@ Use the waiting period productively:
 | Preparation | Details |
 |---|---|
 | Keep copies of submitted documents | So you can reference them quickly if additional requests arrive |
+| Prepare full passport stamp scans | Have a complete set ready in case they are requested |
+| Obtain bank statements (3 months) | If not already submitted, prepare these in case they are needed |
 | Monitor your bank balance certificate | Longer reviews mean the issue date may become outdated |
-| Watch for email notifications | Don't miss messages from the e-Visa system |
+| Watch for email notifications | Check inbox and spam daily — don't miss messages from the e-Visa system |
 | Build schedule flexibility | Account for the possibility that the review doesn't complete before your planned travel date |
+| Keep your calendar open | If applying via Soft Power, an online interview request could come at any time |
 
 ---
 
@@ -110,7 +145,7 @@ Use the waiting period productively:
 
 **"Two weeks have passed and I've heard nothing"**
 
-A status remaining as "Pending" does not mean rejection. If a significant period has passed with no communication, consider contacting the embassy to inquire about the status.
+A status remaining as "Pending" or "Under Review" does not mean rejection. If a significant period has passed with no communication, consider contacting the embassy to inquire about the status.
 
 **"I was asked for additional documents. Does that mean I'll be rejected?"**
 
@@ -118,7 +153,7 @@ An additional document request is part of the review process — it does not nec
 
 **"My travel date is approaching and the review still isn't done"**
 
-If there's a real risk the review won't complete before your departure, contact the embassy early to check on the status.
+If there's a real risk the review won't complete before your departure, contact the embassy early to check on the status. Avoid booking non-refundable flights until after you receive your approval PDF.
 
 ---
 
@@ -136,6 +171,9 @@ A. Reapplication is generally possible. Before reapplying, confirm the reason fo
 **Q. Is there any way to speed up the review?**
 A. No official method for expediting the review is offered. Submitting complete, accurate documents from the start is the best way to avoid delays caused by additional verification.
 
+**Q. What if I'm asked for an online interview?**
+A. Treat it as a straightforward confirmation of your plans. Be ready to clearly explain your intended activities in Thailand and the supporting documents you submitted. Respond to the scheduling request quickly and propose dates within the next few days if possible.
+
 ---
 
 ## Related Articles
@@ -147,4 +185,4 @@ A. No official method for expediting the review is offered. Submitting complete,
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+*Based on Thai embassy official guidance. Last updated: June 2026*

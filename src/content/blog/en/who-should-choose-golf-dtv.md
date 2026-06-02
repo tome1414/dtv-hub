@@ -160,7 +160,7 @@ A. Yes. Golf DTV is open to employees and freelancers alike. Your employment typ
 A. Thailand is significantly more affordable than most high-income countries. In Bangkok, green fees typically range from 3,000–8,000 THB (approximately USD 85–230) per round, including caddie. Many courses offer excellent facilities at these prices.
 
 **Q. What does Golf DTV cost overall?**
-A. The DTV application fee is 10,000 THB (~USD 280) — note that some nationalities are exempt ([details](/en/blog/dtv-fee-by-nationality)). Add to that: acceptance letter support service fees and bank balance certificate preparation. Some applicants also prepare insurance-related documents depending on embassy expectations. See the [Golf DTV page](/en/golf-dtv) for a more detailed cost breakdown.
+A. The DTV application fee is 10,000 THB (~USD 280) — note that some nationalities are exempt ([details](/en/blog/dtv-application-nationality-notes)). Add to that: acceptance letter support service fees and bank balance certificate preparation. Some applicants also prepare insurance-related documents depending on embassy expectations. See the [Golf DTV page](/en/golf-dtv) for a more detailed cost breakdown.
 
 **Q. Can my family apply together?**
 A. Spouses and children under 20 can accompany you on a DTV, but each person must apply individually with their own documents.

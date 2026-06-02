@@ -101,7 +101,7 @@ How does the DTV compare to explicit digital nomad visas offered by countries li
 | Work authorization | Overseas work only | Varies |
 | Application documents | Contract + bank balance + insurance | Income proof + insurance |
 
-*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-fee-by-nationality)*
+*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-application-nationality-notes)*
 
 The DTV's standout feature compared to income-based digital nomad visas: **no monthly income floor.** Instead, you prove a bank balance. This is particularly useful for freelancers whose income is variable — a steady bank balance is easier to demonstrate than consistent monthly income.
 

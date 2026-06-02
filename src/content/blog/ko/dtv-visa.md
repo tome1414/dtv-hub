@@ -49,7 +49,7 @@ read_time_minutes: 10
 | 신청 수수료 | 10,000 THB (약 USD 280) |
 | 신청 방법 | Thai e-Visa 온라인 시스템 |
 
-※ 국적에 따라 신청 수수료가 면제되는 경우가 있습니다 → [자세히: 국적별 DTV 신청 수수료 특례](/ko/blog/dtv-fee-by-nationality)
+※ 국적에 따라 신청 수수료가 면제되는 경우가 있습니다 → [자세히: 국적별 DTV 신청 수수료 특례](/ko/blog/dtv-application-nationality-notes)
 
 DTV는 태국 정부가 원격 근무자와 장기 체류자를 유치하기 위해 도입한 비자입니다. 종전의 단기 비자나 관광 비자와 달리, 5년간 안정적으로 태국을 거점으로 삼을 수 있습니다.
 
@@ -102,7 +102,7 @@ DTV는 태국 정부가 원격 근무자와 장기 체류자를 유치하기 위
 
 1. **Thai e-Visa 계정 생성** — thaievisa.go.th에서 등록
 2. **신청서 작성 및 서류 업로드** — 비자 종류: DTV 선택
-3. **수수료 결제** — 10,000 THB (신용카드 등)（※ 국적에 따라 면제 → [자세히](/ko/blog/dtv-fee-by-nationality)）
+3. **수수료 결제** — 10,000 THB (신용카드 등)（※ 국적에 따라 면제 → [자세히](/ko/blog/dtv-application-nationality-notes)）
 4. **심사 대기** — 통상 1~3주 소요
 5. **승인 이메일 수신** — PDF 형식의 e-Visa 발급
 

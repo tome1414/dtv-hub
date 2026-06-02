@@ -49,6 +49,16 @@ const nextConfig: NextConfig = {
         destination: '/ja/blog/thailand-long-stay-visa-comparison',
         permanent: true,
       },
+      {
+        source: '/en/blog/dtv-fee-by-nationality',
+        destination: '/en/blog/dtv-application-nationality-notes',
+        permanent: true,
+      },
+      {
+        source: '/ko/blog/dtv-fee-by-nationality',
+        destination: '/ko/blog/dtv-application-nationality-notes',
+        permanent: true,
+      },
     ]
   },
 }

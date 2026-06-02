@@ -80,7 +80,7 @@ read_time_minutes: 8
 | **취업 허가** | 해외 원격 근무만 가능 | 일부 카테고리에서 간소화 |
 | **신청 기관** | 태국 대사관·영사관 | BOI (투자청) |
 
-※ 국적에 따라 DTV 신청 수수료가 면제되는 경우가 있습니다 → [자세히](/ko/blog/dtv-fee-by-nationality)
+※ 국적에 따라 DTV 신청 수수료가 면제되는 경우가 있습니다 → [자세히](/ko/blog/dtv-application-nationality-notes)
 
 ---
 

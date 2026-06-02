@@ -55,7 +55,7 @@ A long-stay visa introduced by the Thai government in 2024. Valid for 5 years, w
 | Work authorization | Not permitted (Work Permit required separately) |
 | Target applicants | Workcation (remote work) and Soft Power activity participants |
 
-*Some nationalities are exempt from the application fee → [DTV fee exemptions by nationality](/en/blog/dtv-fee-by-nationality)*
+*Some nationalities are exempt from the application fee → [DTV nationality notes & fee exemptions](/en/blog/dtv-application-nationality-notes)*
 
 The DTV is neither a tourist visa extension nor a work visa. It is a **new category designed for foreigners who wish to live long-term in Thailand while engaging in purposeful activities — Workcation or Soft Power.**
 

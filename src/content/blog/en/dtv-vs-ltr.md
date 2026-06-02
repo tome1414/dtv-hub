@@ -83,7 +83,7 @@ All categories have significant income, asset, or credential requirements — th
 | **Work authorization** | Overseas work only (WP for Thai employment) | Streamlined WP for qualifying categories |
 | **Application authority** | Thai embassy / consulate | BOI (Board of Investment) |
 
-*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-fee-by-nationality)*
+*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-application-nationality-notes)*
 
 ---
 

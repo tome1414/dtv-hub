@@ -51,7 +51,7 @@ When exploring long-stay options in Thailand, many people compare the DTV and Th
 | Basis for application | Workcation (remote work) or Soft Power activity |
 | Work authorization | Overseas work only (Thai employment requires WP) |
 
-*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-fee-by-nationality)*
+*Some nationalities are exempt from the DTV application fee → [Details](/en/blog/dtv-application-nationality-notes)*
 
 ### Thailand Privilege
 

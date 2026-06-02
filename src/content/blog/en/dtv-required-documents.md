@@ -55,7 +55,7 @@ DTV documents fall into two categories: **documents required for all applicants*
 | **Application form** | Embassy format | Download from embassy website |
 | **Application fee** | 10,000 THB | Payment methods vary by embassy |
 
-*Some nationalities are exempt from the application fee → [DTV fee exemptions by nationality](/en/blog/dtv-fee-by-nationality)*
+*Some nationalities are exempt from the application fee → [DTV nationality notes & fee exemptions](/en/blog/dtv-application-nationality-notes)*
 
 ### Route-Specific Documents
 
