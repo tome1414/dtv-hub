@@ -26,18 +26,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = (locales.includes(lang as Locale) ? lang : 'ja') as Lang
   const post = await getBlogPost(slug, locale)
   if (!post) return {}
+
+  // Build hreflang only for languages where this slug actually exists
+  const langMap: Record<string, string> = { ja: 'ja', en: 'en', ko: 'ko' }
+  const availableLanguages: Record<string, string> = {}
+  for (const l of ['ja', 'en', 'ko'] as Lang[]) {
+    const slugs = getBlogPostSlugs(l)
+    if (slugs.includes(slug)) {
+      availableLanguages[langMap[l]] = `${BASE_URL}/${l}/blog/${slug}`
+    }
+  }
+  // x-default: prefer EN if available, otherwise JA
+  availableLanguages['x-default'] =
+    availableLanguages['en'] ?? availableLanguages['ja'] ?? `${BASE_URL}/ja/blog/${slug}`
+
   return {
     title: post.title,
     description: post.excerpt,
     keywords: [post.primary_keyword, ...post.secondary_keywords].join(', '),
     alternates: {
       canonical: `${BASE_URL}/${locale}/blog/${slug}`,
-      languages: {
-        'ja': `${BASE_URL}/ja/blog/${slug}`,
-        'en': `${BASE_URL}/en/blog/${slug}`,
-        'ko': `${BASE_URL}/ko/blog/${slug}`,
-        'x-default': `${BASE_URL}/en/blog/${slug}`,
-      },
+      languages: availableLanguages,
     },
   }
 }
