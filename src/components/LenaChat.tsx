@@ -451,104 +451,23 @@ const inputStyle = (hasError?: boolean): React.CSSProperties => ({
 
 function LenaIcon({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      {/* Shoulders - teal background */}
-      <ellipse cx="120" cy="240" rx="90" ry="40" fill="#7FD4C9" opacity="0.9" />
-
-      {/* Neck */}
-      <rect x="110" y="190" width="20" height="20" fill="#F5D5C0" />
-
-      {/* Head - skin tone */}
-      <circle cx="120" cy="120" r="65" fill="#F5D5C0" />
-
-      {/* Hair - warm brown/auburn with waves */}
-      <path d="M55 100c0-38 28-55 65-55s65 17 65 55c0 12-4 25-6 35-15-5-25 8-40 8-15 0-25-13-40-8-2-10-6-23-6-35z" fill="#A0704D" />
-
-      {/* Hair side waves */}
-      <ellipse cx="48" cy="115" rx="15" ry="40" fill="#8B5A3C" opacity="0.9" />
-      <ellipse cx="192" cy="115" rx="15" ry="40" fill="#8B5A3C" opacity="0.9" />
-
-      {/* Hair highlight/volume on top */}
-      <ellipse cx="120" cy="75" rx="45" ry="30" fill="#B8805D" opacity="0.6" />
-
-      {/* Hair strands - side bangs effect */}
-      <path d="M75 100c-8 18 -5 40 0 50" stroke="#6B4C35" strokeWidth="5" fill="none" strokeLinecap="round" />
-      <path d="M165 100c8 18 5 40 0 50" stroke="#6B4C35" strokeWidth="5" fill="none" strokeLinecap="round" />
-
-      {/* Eyes */}
-      <ellipse cx="95" cy="105" rx="9" ry="14" fill="#5C4033" />
-      <ellipse cx="145" cy="105" rx="9" ry="14" fill="#5C4033" />
-      <circle cx="98" cy="100" r="4" fill="#fff" opacity="0.8" />
-      <circle cx="148" cy="100" r="4" fill="#fff" opacity="0.8" />
-
-      {/* Eyebrows - soft arch */}
-      <path d="M80 88Q95 82 110 88" stroke="#6B4C35" strokeWidth="3" strokeLinecap="round" fill="none" />
-      <path d="M130 88Q145 82 160 88" stroke="#6B4C35" strokeWidth="3" strokeLinecap="round" fill="none" />
-
-      {/* Nose */}
-      <line x1="120" y1="110" x2="120" y2="135" stroke="#E8B8A0" strokeWidth="2" />
-
-      {/* Mouth - warm, confident smile */}
-      <path d="M98 152Q120 168 142 152" stroke="#D97E7A" strokeWidth="3" strokeLinecap="round" fill="none" />
-      <path d="M98 152Q120 160 142 152" fill="#FFB3AA" opacity="0.3" />
-
-      <defs>
-        <linearGradient id="lena-bg" x1="0" y1="0" x2="240" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0F9488" />
-          <stop offset="1" stopColor="#0A7A6A" />
-        </linearGradient>
-      </defs>
-    </svg>
+    <img
+      src="/lena_avatar_icon_simple_transparent.png"
+      alt="Lena"
+      style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover' }}
+      aria-hidden="true"
+    />
   )
 }
 
 function MikiIcon({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      {/* Shoulders - teal background */}
-      <ellipse cx="120" cy="240" rx="90" ry="40" fill="#7FD4C9" opacity="0.9" />
-
-      {/* Neck */}
-      <rect x="110" y="190" width="20" height="20" fill="#F5D5C0" />
-
-      {/* Head - skin tone */}
-      <circle cx="120" cy="120" r="65" fill="#F5D5C0" />
-
-      {/* Hair - dark, voluminous, shoulder-length */}
-      <path d="M55 110c0-40 30-50 65-50s65 10 65 50c0 15-5 30-8 40-20-8-30 10-45 10-15 0-25-18-45-10-3-10-8-25-8-40z" fill="#1A1414" />
-
-      {/* Hair volume/texture on sides */}
-      <ellipse cx="50" cy="110" rx="12" ry="35" fill="#1A1414" opacity="0.8" />
-      <ellipse cx="190" cy="110" rx="12" ry="35" fill="#1A1414" opacity="0.8" />
-
-      {/* Hair front strands (bangs style) */}
-      <path d="M100 85c-8 15-5 35 0 50" stroke="#0F0F0F" strokeWidth="4" fill="none" strokeLinecap="round" />
-      <path d="M140 85c8 15 5 35 0 50" stroke="#0F0F0F" strokeWidth="4" fill="none" strokeLinecap="round" />
-
-      {/* Eyes */}
-      <ellipse cx="95" cy="105" rx="9" ry="14" fill="#3D2817" />
-      <ellipse cx="145" cy="105" rx="9" ry="14" fill="#3D2817" />
-      <circle cx="98" cy="100" r="4" fill="#fff" opacity="0.8" />
-      <circle cx="148" cy="100" r="4" fill="#fff" opacity="0.8" />
-
-      {/* Eyebrows */}
-      <path d="M85 90Q95 85 105 90" stroke="#2B1810" strokeWidth="3" strokeLinecap="round" fill="none" />
-      <path d="M135 90Q145 85 155 90" stroke="#2B1810" strokeWidth="3" strokeLinecap="round" fill="none" />
-
-      {/* Nose */}
-      <line x1="120" y1="110" x2="120" y2="135" stroke="#E8B8A0" strokeWidth="2" />
-
-      {/* Mouth - gentle smile */}
-      <path d="M100 150Q120 165 140 150" stroke="#D97E7A" strokeWidth="3" strokeLinecap="round" fill="none" />
-      <path d="M100 150Q120 158 140 150" fill="#FFB3AA" opacity="0.3" />
-
-      <defs>
-        <linearGradient id="miki-bg" x1="0" y1="0" x2="240" y2="280" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0F9488" />
-          <stop offset="1" stopColor="#0A7A6A" />
-        </linearGradient>
-      </defs>
-    </svg>
+    <img
+      src="/miki_avatar_icon_simple_transparent.png"
+      alt="Miki"
+      style={{ width: size, height: size, borderRadius: '50%', objectFit: 'cover' }}
+      aria-hidden="true"
+    />
   )
 }
 
