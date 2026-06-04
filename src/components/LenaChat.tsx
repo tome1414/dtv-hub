@@ -451,45 +451,50 @@ const inputStyle = (hasError?: boolean): React.CSSProperties => ({
 
 function LenaIcon({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      {/* Background */}
-      <circle cx="20" cy="20" r="20" fill="url(#lena-grad)" />
-
-      {/* Hair - warm brown/auburn */}
-      <path d="M8 16c0-6 6-8 12-8s12 2 12 8v8c0 0-2-2-4-2s-4 2-8 2-6-2-8-2c-2 0-4 2-4 2v-8z" fill="#A0704D" />
-
-      {/* Head - skin tone */}
-      <circle cx="20" cy="18" r="8" fill="#F4C5A0" />
-
-      {/* Hair front - side bangs */}
-      <path d="M12 16c-1.5 0-2 1-2 2.5v3c0 1.5.5 2 2 2" fill="#8B5A3C" />
-      <path d="M28 16c1.5 0 2 1 2 2.5v3c0 1.5-.5 2-2 2" fill="#8B5A3C" />
-
-      {/* Eyes */}
-      <ellipse cx="16" cy="17" rx="1.5" ry="2" fill="#4A3728" />
-      <ellipse cx="24" cy="17" rx="1.5" ry="2" fill="#4A3728" />
-      <circle cx="16.5" cy="16.5" r="0.7" fill="#fff" opacity="0.6" />
-      <circle cx="24.5" cy="16.5" r="0.7" fill="#fff" opacity="0.6" />
-
-      {/* Eyebrows */}
-      <path d="M15 15.5Q16 15 17 15.5" stroke="#6B4C35" strokeWidth="0.8" strokeLinecap="round" fill="none" />
-      <path d="M23 15.5Q24 15 25 15.5" stroke="#6B4C35" strokeWidth="0.8" strokeLinecap="round" fill="none" />
-
-      {/* Nose */}
-      <line x1="20" y1="17" x2="20" y2="19.5" stroke="#D4A574" strokeWidth="0.6" />
-
-      {/* Mouth - warm smile */}
-      <path d="M17.5 21.5Q20 22.5 22.5 21.5" stroke="#D98880" strokeWidth="1" strokeLinecap="round" fill="none" />
+    <svg width={size} height={size} viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Shoulders - teal background */}
+      <ellipse cx="120" cy="240" rx="90" ry="40" fill="#7FD4C9" opacity="0.9" />
 
       {/* Neck */}
-      <rect x="18" y="26" width="4" height="2.5" fill="#F4C5A0" />
+      <rect x="110" y="190" width="20" height="20" fill="#F5D5C0" />
 
-      {/* Shoulders - teal */}
-      <path d="M10 32c0-3 4-6 10-6s10 3 10 6" fill="#0A7A6A" opacity="0.85" />
+      {/* Head - skin tone */}
+      <circle cx="120" cy="120" r="65" fill="#F5D5C0" />
+
+      {/* Hair - warm brown/auburn with waves */}
+      <path d="M55 100c0-38 28-55 65-55s65 17 65 55c0 12-4 25-6 35-15-5-25 8-40 8-15 0-25-13-40-8-2-10-6-23-6-35z" fill="#A0704D" />
+
+      {/* Hair side waves */}
+      <ellipse cx="48" cy="115" rx="15" ry="40" fill="#8B5A3C" opacity="0.9" />
+      <ellipse cx="192" cy="115" rx="15" ry="40" fill="#8B5A3C" opacity="0.9" />
+
+      {/* Hair highlight/volume on top */}
+      <ellipse cx="120" cy="75" rx="45" ry="30" fill="#B8805D" opacity="0.6" />
+
+      {/* Hair strands - side bangs effect */}
+      <path d="M75 100c-8 18 -5 40 0 50" stroke="#6B4C35" strokeWidth="5" fill="none" strokeLinecap="round" />
+      <path d="M165 100c8 18 5 40 0 50" stroke="#6B4C35" strokeWidth="5" fill="none" strokeLinecap="round" />
+
+      {/* Eyes */}
+      <ellipse cx="95" cy="105" rx="9" ry="14" fill="#5C4033" />
+      <ellipse cx="145" cy="105" rx="9" ry="14" fill="#5C4033" />
+      <circle cx="98" cy="100" r="4" fill="#fff" opacity="0.8" />
+      <circle cx="148" cy="100" r="4" fill="#fff" opacity="0.8" />
+
+      {/* Eyebrows - soft arch */}
+      <path d="M80 88Q95 82 110 88" stroke="#6B4C35" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M130 88Q145 82 160 88" stroke="#6B4C35" strokeWidth="3" strokeLinecap="round" fill="none" />
+
+      {/* Nose */}
+      <line x1="120" y1="110" x2="120" y2="135" stroke="#E8B8A0" strokeWidth="2" />
+
+      {/* Mouth - warm, confident smile */}
+      <path d="M98 152Q120 168 142 152" stroke="#D97E7A" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M98 152Q120 160 142 152" fill="#FFB3AA" opacity="0.3" />
 
       <defs>
-        <linearGradient id="lena-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0D9280" />
+        <linearGradient id="lena-bg" x1="0" y1="0" x2="240" y2="280" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#0F9488" />
           <stop offset="1" stopColor="#0A7A6A" />
         </linearGradient>
       </defs>
@@ -499,45 +504,46 @@ function LenaIcon({ size = 32 }: { size?: number }) {
 
 function MikiIcon({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      {/* Background */}
-      <circle cx="20" cy="20" r="20" fill="url(#miki-grad)" />
-
-      {/* Hair - dark with volume */}
-      <path d="M6 18c0-6.5 6.5-9 14-9s14 2.5 14 9v6c0 0-2-1.5-4-1.5-2.5 0-4 1.5-8 1.5s-5.5-1.5-8-1.5c-2 0-4 1.5-4 1.5v-6z" fill="#1A1A2E" />
-
-      {/* Head - skin tone */}
-      <circle cx="20" cy="17.5" r="8.5" fill="#F7D7C4" />
-
-      {/* Short hair strands on sides */}
-      <circle cx="11" cy="16" r="2" fill="#141420" />
-      <circle cx="29" cy="16" r="2" fill="#141420" />
-
-      {/* Eyes - bright and friendly */}
-      <ellipse cx="16" cy="16.5" rx="1.8" ry="2.2" fill="#5C3D2E" />
-      <ellipse cx="24" cy="16.5" rx="1.8" ry="2.2" fill="#5C3D2E" />
-      <circle cx="16.6" cy="15.8" r="0.8" fill="#fff" opacity="0.7" />
-      <circle cx="24.6" cy="15.8" r="0.8" fill="#fff" opacity="0.7" />
-
-      {/* Eyebrows - friendly arc */}
-      <path d="M15 14.8Q16 14 17.2 14.5" stroke="#3D2815" strokeWidth="0.9" strokeLinecap="round" fill="none" />
-      <path d="M22.8 14.5Q24 14 25 14.8" stroke="#3D2815" strokeWidth="0.9" strokeLinecap="round" fill="none" />
-
-      {/* Nose */}
-      <line x1="20" y1="17" x2="20" y2="19" stroke="#E8B9A0" strokeWidth="0.7" />
-
-      {/* Mouth - cheerful smile */}
-      <path d="M17 21Q20 22.2 23 21" stroke="#E8847B" strokeWidth="1.1" strokeLinecap="round" fill="none" />
-      <path d="M17 21Q20 21.5 23 21" fill="#FFB3A8" opacity="0.4" />
+    <svg width={size} height={size} viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Shoulders - teal background */}
+      <ellipse cx="120" cy="240" rx="90" ry="40" fill="#7FD4C9" opacity="0.9" />
 
       {/* Neck */}
-      <rect x="18" y="25.5" width="4" height="2.5" fill="#F7D7C4" />
+      <rect x="110" y="190" width="20" height="20" fill="#F5D5C0" />
 
-      {/* Shoulders - teal */}
-      <path d="M8 32.5c0-3.5 5-7 12-7s12 3.5 12 7" fill="#0A7A6A" opacity="0.9" />
+      {/* Head - skin tone */}
+      <circle cx="120" cy="120" r="65" fill="#F5D5C0" />
+
+      {/* Hair - dark, voluminous, shoulder-length */}
+      <path d="M55 110c0-40 30-50 65-50s65 10 65 50c0 15-5 30-8 40-20-8-30 10-45 10-15 0-25-18-45-10-3-10-8-25-8-40z" fill="#1A1414" />
+
+      {/* Hair volume/texture on sides */}
+      <ellipse cx="50" cy="110" rx="12" ry="35" fill="#1A1414" opacity="0.8" />
+      <ellipse cx="190" cy="110" rx="12" ry="35" fill="#1A1414" opacity="0.8" />
+
+      {/* Hair front strands (bangs style) */}
+      <path d="M100 85c-8 15-5 35 0 50" stroke="#0F0F0F" strokeWidth="4" fill="none" strokeLinecap="round" />
+      <path d="M140 85c8 15 5 35 0 50" stroke="#0F0F0F" strokeWidth="4" fill="none" strokeLinecap="round" />
+
+      {/* Eyes */}
+      <ellipse cx="95" cy="105" rx="9" ry="14" fill="#3D2817" />
+      <ellipse cx="145" cy="105" rx="9" ry="14" fill="#3D2817" />
+      <circle cx="98" cy="100" r="4" fill="#fff" opacity="0.8" />
+      <circle cx="148" cy="100" r="4" fill="#fff" opacity="0.8" />
+
+      {/* Eyebrows */}
+      <path d="M85 90Q95 85 105 90" stroke="#2B1810" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M135 90Q145 85 155 90" stroke="#2B1810" strokeWidth="3" strokeLinecap="round" fill="none" />
+
+      {/* Nose */}
+      <line x1="120" y1="110" x2="120" y2="135" stroke="#E8B8A0" strokeWidth="2" />
+
+      {/* Mouth - gentle smile */}
+      <path d="M100 150Q120 165 140 150" stroke="#D97E7A" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M100 150Q120 158 140 150" fill="#FFB3AA" opacity="0.3" />
 
       <defs>
-        <linearGradient id="miki-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+        <linearGradient id="miki-bg" x1="0" y1="0" x2="240" y2="280" gradientUnits="userSpaceOnUse">
           <stop stopColor="#0F9488" />
           <stop offset="1" stopColor="#0A7A6A" />
         </linearGradient>
