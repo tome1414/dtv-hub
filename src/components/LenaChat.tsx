@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -191,7 +191,8 @@ const CHOICE_TO_CATEGORY: Record<ChoiceKey, string> = {
 // ─── i18n texts ───────────────────────────────────────────────────────────────
 
 type TextSet = {
-  buttonLabel: string
+  buttonLabelDesktop: string
+  buttonLabelMobile: string
   headerTitle: string
   headerSub: string
   autoNotice: string
@@ -231,7 +232,8 @@ type TextSet = {
 
 const TEXTS: Record<string, TextSet> = {
   ja: {
-    buttonLabel: 'Lenaに聞く',
+    buttonLabelDesktop: '担当者に無料相談',
+    buttonLabelMobile: '無料相談する',
     headerTitle: 'Lena',
     headerSub: 'DTV Club 自動案内',
     autoNotice: 'まずは自動案内で、ご状況に合う記事や相談先をご案内します。',
@@ -286,7 +288,8 @@ const TEXTS: Record<string, TextSet> = {
     emailInvalid: '正しいメールアドレスを入力してください',
   },
   ko: {
-    buttonLabel: 'Lena에게 묻기',
+    buttonLabelDesktop: '담당자에게 무료 상담',
+    buttonLabelMobile: '무료 상담하기',
     headerTitle: 'Lena',
     headerSub: 'DTV Club 자동 안내',
     autoNotice: '먼저 자동 안내로 상황에 맞는 기사나 상담 창구를 안내해 드립니다.',
@@ -341,7 +344,8 @@ const TEXTS: Record<string, TextSet> = {
     emailInvalid: '올바른 이메일 주소를 입력해 주세요',
   },
   en: {
-    buttonLabel: 'Ask Lena',
+    buttonLabelDesktop: 'Free Consultation',
+    buttonLabelMobile: 'Get Help',
     headerTitle: 'Lena',
     headerSub: 'DTV Club Auto Guide',
     autoNotice: 'This is an automated guide to help you find the right articles or contact options.',
@@ -501,6 +505,7 @@ export default function LenaChat({ lang }: { lang: string }) {
   const [step, setStep] = useState<Step>('greeting')
   const [choice, setChoice] = useState<ChoiceKey | null>(null)
   const [opened, setOpened] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(true)
 
   // form state
   const [formData, setFormData] = useState({ name: '', email: '', nationality: '', category: '', message: '' })
@@ -511,6 +516,18 @@ export default function LenaChat({ lang }: { lang: string }) {
   const pageType = detectPageType(pathname)
 
   if (pathname.includes('/contact')) return null
+
+  // Track window size for responsive button label
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(typeof window !== 'undefined' && window.innerWidth >= 1024)
+    }
+    if (typeof window !== 'undefined') {
+      setIsDesktop(window.innerWidth >= 1024)
+      window.addEventListener('resize', handleResize)
+      return () => window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   const openChat = useCallback(() => {
     setOpen(true)
@@ -703,7 +720,7 @@ export default function LenaChat({ lang }: { lang: string }) {
       {!open && (
         <button
           onClick={openChat}
-          aria-label={t.buttonLabel}
+          aria-label={isDesktop ? t.buttonLabelDesktop : t.buttonLabelMobile}
           style={{
             position: 'fixed', bottom: '80px', right: '20px', zIndex: 9999,
             display: 'flex', alignItems: 'center', gap: '8px',
@@ -714,7 +731,7 @@ export default function LenaChat({ lang }: { lang: string }) {
           }}
         >
           <LenaIcon size={26} />
-          <span>{t.buttonLabel}</span>
+          <span>{isDesktop ? t.buttonLabelDesktop : t.buttonLabelMobile}</span>
         </button>
       )}
 
