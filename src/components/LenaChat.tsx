@@ -517,8 +517,8 @@ export default function LenaChat({ lang }: { lang: string }) {
 
   if (pathname.includes('/contact')) return null
 
-  // Golf DTV ページは日本語のみ表示
-  if (pathname.includes('/golf-dtv') && lang !== 'ja') return null
+  // Golf DTV ページは表示しない
+  if (pathname.includes('/golf-dtv')) return null
 
   // Track window size for responsive button label
   useEffect(() => {
