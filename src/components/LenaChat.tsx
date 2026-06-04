@@ -233,10 +233,10 @@ type TextSet = {
 
 const TEXTS: Record<string, TextSet> = {
   ja: {
-    buttonLabelDesktop: 'Lenaに相談',
-    buttonLabelMobile: 'Lenaに相談',
-    headerTitle: 'Lena',
-    headerSub: 'DTV Clubご案内',
+    buttonLabelDesktop: '担当者へ相談',
+    buttonLabelMobile: '担当者へ相談',
+    headerTitle: 'Miki',
+    headerSub: 'DTV Club案内',
     autoNotice: '※必要に応じて担当者へおつなぎします。',
     greeting: (pt, isMiki) => {
       return `こんにちは、案内役の${isMiki ? 'Miki' : 'Lena'}です。\n状況に合わせて、読むべき記事や相談先をご案内します。`
