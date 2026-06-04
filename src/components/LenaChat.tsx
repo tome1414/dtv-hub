@@ -197,6 +197,7 @@ type TextSet = {
   headerSub: string
   autoNotice: string
   greeting: (pageType: PageType) => string
+  greetingNote: string
   choiceLabel: string
   choices: Record<ChoiceKey, string>
   recIntro: string
@@ -232,18 +233,15 @@ type TextSet = {
 
 const TEXTS: Record<string, TextSet> = {
   ja: {
-    buttonLabelDesktop: '担当者に無料相談',
-    buttonLabelMobile: '無料相談する',
+    buttonLabelDesktop: 'Lenaに相談',
+    buttonLabelMobile: 'Lenaに相談',
     headerTitle: 'Lena',
-    headerSub: 'DTV Club 自動案内',
-    autoNotice: 'まずは自動案内で、ご状況に合う記事や相談先をご案内します。',
+    headerSub: 'DTV Clubご案内',
+    autoNotice: '※必要に応じて担当者へおつなぎします。',
     greeting: (pt) => {
-      if (pt === 'comparison') return 'こんにちは、案内役のLenaです。\nどのDTVルートや関連ビザが合うか、自動案内で整理します。'
-      if (pt === 'product_bridge') return 'こんにちは、案内役のLenaです。\nGolf DTVが合うか、何を確認すべきかを自動案内で整理します。'
-      if (pt === 'lp') return 'こんにちは、案内役のLenaです。\n自動案内で、相談前に今の状況を短く整理できます。'
-      if (pt === 'process') return 'こんにちは、案内役のLenaです。\n必要書類や申請手順で迷っている点を自動案内で整理します。'
-      return 'こんにちは、案内役のLenaです。\n読むべき記事や相談先を自動案内でご案内します。'
+      return 'こんにちは、案内役のLenaです。\n状況に合わせて、読むべき記事や相談先をご案内します。'
     },
+    greetingNote: '気になる内容に近いものを選んでください。',
     choiceLabel: '気になる内容に近いものを選んでください。',
     choices: {
       understand_dtv: 'まずDTV制度の全体像を知りたい',
@@ -256,8 +254,8 @@ const TEXTS: Record<string, TextSet> = {
     recIntro: 'こちらの記事が参考になりそうです。',
     stillUnresolved: 'まだ解決しない / 個別に相談したい',
     contactButton: '担当者に相談する',
-    contactBridgeMsg: 'ここから先は個別事情によって変わる可能性があります。\n担当者に引き継げます。',
-    contactDirectMsg: '担当者に直接お問い合わせいただけます。',
+    contactBridgeMsg: 'ここから先は個別事情によって変わる可能性があります。\n必要であれば、担当者にご相談いただけます。',
+    contactDirectMsg: '担当者にご相談いただけます。',
     closeLabel: '閉じる',
     fallbackNote: '一部の論点は申請先・公館・時期・個別事情によって変わります。関連記事または個別問い合わせをご利用ください。',
     backLabel: '← 最初に戻る',
@@ -288,18 +286,15 @@ const TEXTS: Record<string, TextSet> = {
     emailInvalid: '正しいメールアドレスを入力してください',
   },
   ko: {
-    buttonLabelDesktop: '담당자에게 무료 상담',
-    buttonLabelMobile: '무료 상담하기',
+    buttonLabelDesktop: 'Lena와 상담',
+    buttonLabelMobile: 'Lena와 상담',
     headerTitle: 'Lena',
-    headerSub: 'DTV Club 자동 안내',
-    autoNotice: '먼저 자동 안내로 상황에 맞는 기사나 상담 창구를 안내해 드립니다.',
+    headerSub: 'DTV Club 안내',
+    autoNotice: '※필요하면 담당자에게 연결해 드립니다.',
     greeting: (pt) => {
-      if (pt === 'comparison') return '안녕하세요, 안내 담당 Lena입니다.\n어떤 DTV 루트나 비자가 맞는지 자동 안내로 정리해 드립니다.'
-      if (pt === 'product_bridge') return '안녕하세요, 안내 담당 Lena입니다.\nGolf DTV가 맞는지, 무엇을 확인해야 하는지 자동 안내로 정리해 드립니다.'
-      if (pt === 'lp') return '안녕하세요, 안내 담당 Lena입니다.\n자동 안내로 상담 전 현재 상황을 간단히 정리할 수 있습니다.'
-      if (pt === 'process') return '안녕하세요, 안내 담당 Lena입니다.\n필요 서류나 신청 절차에서 막히는 부분을 자동 안내로 정리해 드립니다.'
-      return '안녕하세요, 안내 담당 Lena입니다.\n읽어야 할 기사나 상담 창구를 자동 안내로 알려 드립니다.'
+      return '안녕하세요, 안내 담당 Lena입니다.\n상황에 맞게 읽을 기사나 상담 창구를 안내해 드립니다.'
     },
+    greetingNote: '궁금한 내용과 가장 가까운 것을 선택해 주세요.',
     choiceLabel: '궁금한 내용과 가장 가까운 것을 선택해 주세요.',
     choices: {
       understand_dtv: 'DTV 제도의 전체 개요를 알고 싶다',
@@ -312,8 +307,8 @@ const TEXTS: Record<string, TextSet> = {
     recIntro: '다음 기사가 도움이 될 것 같습니다.',
     stillUnresolved: '아직 해결되지 않았다 / 개별 상담을 원한다',
     contactButton: '담당자에게 상담하기',
-    contactBridgeMsg: '이 이후로는 개별 상황에 따라 달라질 수 있습니다.\n담당자에게 연결해 드립니다.',
-    contactDirectMsg: '담당자에게 직접 문의하실 수 있습니다.',
+    contactBridgeMsg: '이 이후로는 개별 상황에 따라 달라질 수 있습니다.\n필요하면 담당자에게 상담하실 수 있습니다.',
+    contactDirectMsg: '담당자에게 상담하실 수 있습니다.',
     closeLabel: '닫기',
     fallbackNote: '일부 사항은 신청 공관·시기·개별 상황에 따라 다를 수 있습니다. 관련 기사 또는 개별 문의를 이용해 주세요.',
     backLabel: '← 처음으로 돌아가기',
@@ -344,18 +339,15 @@ const TEXTS: Record<string, TextSet> = {
     emailInvalid: '올바른 이메일 주소를 입력해 주세요',
   },
   en: {
-    buttonLabelDesktop: 'Free Consultation',
-    buttonLabelMobile: 'Get Help',
+    buttonLabelDesktop: 'Consult with Lena',
+    buttonLabelMobile: 'Consult with Lena',
     headerTitle: 'Lena',
-    headerSub: 'DTV Club Auto Guide',
-    autoNotice: 'This is an automated guide to help you find the right articles or contact options.',
+    headerSub: 'DTV Club Guide',
+    autoNotice: '※I can connect you with our team if needed.',
     greeting: (pt) => {
-      if (pt === 'comparison') return "Hi, I'm Lena, your DTV Club guide.\nLet me help you find which DTV route or visa fits your situation."
-      if (pt === 'product_bridge') return "Hi, I'm Lena, your DTV Club guide.\nLet me help you figure out if Golf DTV is right for you."
-      if (pt === 'lp') return "Hi, I'm Lena, your DTV Club guide.\nLet me quickly help you organize your situation before consulting."
-      if (pt === 'process') return "Hi, I'm Lena, your DTV Club guide.\nLet me help you sort out documents or application steps."
-      return "Hi, I'm Lena, your DTV Club guide.\nI'll point you to the right articles or contact options."
+      return "Hi, I'm Lena, your DTV Club guide.\nI'll help you find the right articles or consultation options based on your situation."
     },
+    greetingNote: 'Choose the option that best matches your question.',
     choiceLabel: 'Choose the option that best matches your question.',
     choices: {
       understand_dtv: 'I want to understand the DTV system overall',
@@ -368,8 +360,8 @@ const TEXTS: Record<string, TextSet> = {
     recIntro: 'These articles should help.',
     stillUnresolved: 'Still unresolved / I want individual advice',
     contactButton: 'Contact a consultant',
-    contactBridgeMsg: "Beyond this point, answers depend on your individual circumstances.\nI can connect you with a consultant.",
-    contactDirectMsg: 'You can contact our consultant directly.',
+    contactBridgeMsg: "Beyond this point, answers depend on your individual circumstances.\nYou can consult with our team if needed.",
+    contactDirectMsg: 'You can consult with our team.',
     closeLabel: 'Close',
     fallbackNote: 'Some details vary depending on the consulate, timing, and individual circumstances. Please refer to related articles or contact us directly.',
     backLabel: '← Back to start',
@@ -758,9 +750,9 @@ export default function LenaChat({ lang }: { lang: string }) {
             {/* ── GREETING / CHOICE step ── */}
             {(step === 'greeting' || step === 'choice') && (
               <>
-                <AutoNoticeBadge text={t.autoNotice} />
                 <LenaBubble><span style={{ whiteSpace: 'pre-line' }}>{t.greeting(pageType)}</span></LenaBubble>
-                <p style={{ fontSize: '13px', color: '#4A5A6E', margin: 0 }}>{t.choiceLabel}</p>
+                <AutoNoticeBadge text={t.autoNotice} />
+                <p style={{ fontSize: '13px', color: '#4A5A6E', margin: 0 }}>{t.greetingNote}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
                   {(Object.keys(t.choices) as ChoiceKey[]).map(key => (
                     <button key={key} onClick={() => handleChoice(key)} style={choiceBtnStyle(key === 'talk_now')}>
