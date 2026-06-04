@@ -196,7 +196,7 @@ type TextSet = {
   headerTitle: string
   headerSub: string
   autoNotice: string
-  greeting: (pageType: PageType) => string
+  greeting: (pageType: PageType, isMiki?: boolean) => string
   greetingNote: string
   choiceLabel: string
   choices: Record<ChoiceKey, string>
@@ -238,8 +238,8 @@ const TEXTS: Record<string, TextSet> = {
     headerTitle: 'Lena',
     headerSub: 'DTV Clubご案内',
     autoNotice: '※必要に応じて担当者へおつなぎします。',
-    greeting: (pt) => {
-      return 'こんにちは、案内役のLenaです。\n状況に合わせて、読むべき記事や相談先をご案内します。'
+    greeting: (pt, isMiki) => {
+      return `こんにちは、案内役の${isMiki ? 'Miki' : 'Lena'}です。\n状況に合わせて、読むべき記事や相談先をご案内します。`
     },
     greetingNote: '気になる内容に近いものを選んでください。',
     choiceLabel: '気になる内容に近いものを選んでください。',
@@ -291,8 +291,8 @@ const TEXTS: Record<string, TextSet> = {
     headerTitle: 'Lena',
     headerSub: 'DTV Club 안내',
     autoNotice: '※필요하면 담당자에게 연결해 드립니다.',
-    greeting: (pt) => {
-      return '안녕하세요, 안내 담당 Lena입니다.\n상황에 맞게 읽을 기사나 상담 창구를 안내해 드립니다.'
+    greeting: (pt, isMiki) => {
+      return `안녕하세요, 안내 담당 ${isMiki ? 'Miki' : 'Lena'}입니다.\n상황에 맞게 읽을 기사나 상담 창구를 안내해 드립니다.`
     },
     greetingNote: '궁금한 내용과 가장 가까운 것을 선택해 주세요.',
     choiceLabel: '궁금한 내용과 가장 가까운 것을 선택해 주세요.',
@@ -344,8 +344,8 @@ const TEXTS: Record<string, TextSet> = {
     headerTitle: 'Lena',
     headerSub: 'DTV Club Guide',
     autoNotice: '※I can connect you with our team if needed.',
-    greeting: (pt) => {
-      return "Hi, I'm Lena, your DTV Club guide.\nI'll help you find the right articles or consultation options based on your situation."
+    greeting: (pt, isMiki) => {
+      return `Hi, I'm ${isMiki ? 'Miki' : 'Lena'}, your DTV Club guide.\nI'll help you find the right articles or consultation options based on your situation.`
     },
     greetingNote: 'Choose the option that best matches your question.',
     choiceLabel: 'Choose the option that best matches your question.',
@@ -447,18 +447,98 @@ const inputStyle = (hasError?: boolean): React.CSSProperties => ({
   fontFamily: 'inherit',
 })
 
-// ─── Lena SVG icon ────────────────────────────────────────────────────────────
+// ─── Avatar Icons ────────────────────────────────────────────────────────────
 
 function LenaIcon({ size = 32 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="20" cy="20" r="20" fill="url(#lena-bg)" />
-      <ellipse cx="20" cy="16" rx="7" ry="7.5" fill="#fff" fillOpacity="0.92" />
-      <path d="M13 15c0-3.9 3.1-7 7-7s7 3.1 7 7c0 1-.2 2-.5 2.8C25.3 17 24 16 22 16c-1 0-2 .4-2.8 1a3.6 3.6 0 01-2.4 1c-1.2 0-2.2-.4-3-.9-.5-.9-.8-1.9-.8-2.1z" fill="#C9A030" fillOpacity="0.85" />
-      <path d="M10 34c0-5.5 4.5-10 10-10s10 4.5 10 10" fill="#0A7A6A" fillOpacity="0.85" />
+      {/* Background */}
+      <circle cx="20" cy="20" r="20" fill="url(#lena-grad)" />
+
+      {/* Hair - warm brown/auburn */}
+      <path d="M8 16c0-6 6-8 12-8s12 2 12 8v8c0 0-2-2-4-2s-4 2-8 2-6-2-8-2c-2 0-4 2-4 2v-8z" fill="#A0704D" />
+
+      {/* Head - skin tone */}
+      <circle cx="20" cy="18" r="8" fill="#F4C5A0" />
+
+      {/* Hair front - side bangs */}
+      <path d="M12 16c-1.5 0-2 1-2 2.5v3c0 1.5.5 2 2 2" fill="#8B5A3C" />
+      <path d="M28 16c1.5 0 2 1 2 2.5v3c0 1.5-.5 2-2 2" fill="#8B5A3C" />
+
+      {/* Eyes */}
+      <ellipse cx="16" cy="17" rx="1.5" ry="2" fill="#4A3728" />
+      <ellipse cx="24" cy="17" rx="1.5" ry="2" fill="#4A3728" />
+      <circle cx="16.5" cy="16.5" r="0.7" fill="#fff" opacity="0.6" />
+      <circle cx="24.5" cy="16.5" r="0.7" fill="#fff" opacity="0.6" />
+
+      {/* Eyebrows */}
+      <path d="M15 15.5Q16 15 17 15.5" stroke="#6B4C35" strokeWidth="0.8" strokeLinecap="round" fill="none" />
+      <path d="M23 15.5Q24 15 25 15.5" stroke="#6B4C35" strokeWidth="0.8" strokeLinecap="round" fill="none" />
+
+      {/* Nose */}
+      <line x1="20" y1="17" x2="20" y2="19.5" stroke="#D4A574" strokeWidth="0.6" />
+
+      {/* Mouth - warm smile */}
+      <path d="M17.5 21.5Q20 22.5 22.5 21.5" stroke="#D98880" strokeWidth="1" strokeLinecap="round" fill="none" />
+
+      {/* Neck */}
+      <rect x="18" y="26" width="4" height="2.5" fill="#F4C5A0" />
+
+      {/* Shoulders - teal */}
+      <path d="M10 32c0-3 4-6 10-6s10 3 10 6" fill="#0A7A6A" opacity="0.85" />
+
       <defs>
-        <linearGradient id="lena-bg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+        <linearGradient id="lena-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
           <stop stopColor="#0D9280" />
+          <stop offset="1" stopColor="#0A7A6A" />
+        </linearGradient>
+      </defs>
+    </svg>
+  )
+}
+
+function MikiIcon({ size = 32 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Background */}
+      <circle cx="20" cy="20" r="20" fill="url(#miki-grad)" />
+
+      {/* Hair - dark with volume */}
+      <path d="M6 18c0-6.5 6.5-9 14-9s14 2.5 14 9v6c0 0-2-1.5-4-1.5-2.5 0-4 1.5-8 1.5s-5.5-1.5-8-1.5c-2 0-4 1.5-4 1.5v-6z" fill="#1A1A2E" />
+
+      {/* Head - skin tone */}
+      <circle cx="20" cy="17.5" r="8.5" fill="#F7D7C4" />
+
+      {/* Short hair strands on sides */}
+      <circle cx="11" cy="16" r="2" fill="#141420" />
+      <circle cx="29" cy="16" r="2" fill="#141420" />
+
+      {/* Eyes - bright and friendly */}
+      <ellipse cx="16" cy="16.5" rx="1.8" ry="2.2" fill="#5C3D2E" />
+      <ellipse cx="24" cy="16.5" rx="1.8" ry="2.2" fill="#5C3D2E" />
+      <circle cx="16.6" cy="15.8" r="0.8" fill="#fff" opacity="0.7" />
+      <circle cx="24.6" cy="15.8" r="0.8" fill="#fff" opacity="0.7" />
+
+      {/* Eyebrows - friendly arc */}
+      <path d="M15 14.8Q16 14 17.2 14.5" stroke="#3D2815" strokeWidth="0.9" strokeLinecap="round" fill="none" />
+      <path d="M22.8 14.5Q24 14 25 14.8" stroke="#3D2815" strokeWidth="0.9" strokeLinecap="round" fill="none" />
+
+      {/* Nose */}
+      <line x1="20" y1="17" x2="20" y2="19" stroke="#E8B9A0" strokeWidth="0.7" />
+
+      {/* Mouth - cheerful smile */}
+      <path d="M17 21Q20 22.2 23 21" stroke="#E8847B" strokeWidth="1.1" strokeLinecap="round" fill="none" />
+      <path d="M17 21Q20 21.5 23 21" fill="#FFB3A8" opacity="0.4" />
+
+      {/* Neck */}
+      <rect x="18" y="25.5" width="4" height="2.5" fill="#F7D7C4" />
+
+      {/* Shoulders - teal */}
+      <path d="M8 32.5c0-3.5 5-7 12-7s12 3.5 12 7" fill="#0A7A6A" opacity="0.9" />
+
+      <defs>
+        <linearGradient id="miki-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#0F9488" />
           <stop offset="1" stopColor="#0A7A6A" />
         </linearGradient>
       </defs>
@@ -476,22 +556,18 @@ function AutoNoticeBadge({ text }: { text: string }) {
   )
 }
 
-// ─── Lena bubble ─────────────────────────────────────────────────────────────
+// ─── Main component ───────────────────────────────────────────────────────────
 
-function LenaBubble({ children }: { children: React.ReactNode }) {
-  return (
+export default function LenaChat({ lang }: { lang: string }) {
+  // Avatar bubble component (defined here to access IconComponent)
+  const AvatarBubble = ({ children }: { children: React.ReactNode }) => (
     <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-      <div style={{ flexShrink: 0, marginTop: '2px' }}><LenaIcon size={24} /></div>
+      <div style={{ flexShrink: 0, marginTop: '2px' }}><IconComponent size={24} /></div>
       <div style={{ background: '#F5F8FA', borderRadius: '0 12px 12px 12px', padding: '10px 12px', fontSize: '13.5px', color: '#1A2435', lineHeight: 1.6, flex: 1 }}>
         {children}
       </div>
     </div>
   )
-}
-
-// ─── Main component ───────────────────────────────────────────────────────────
-
-export default function LenaChat({ lang }: { lang: string }) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [step, setStep] = useState<Step>('greeting')
@@ -506,6 +582,9 @@ export default function LenaChat({ lang }: { lang: string }) {
 
   const t = getTexts(lang)
   const pageType = detectPageType(pathname)
+  const isMiki = lang === 'ja'
+  const IconComponent = isMiki ? MikiIcon : LenaIcon
+  const headerName = isMiki ? 'Miki' : 'Lena'
 
   if (pathname.includes('/contact')) return null
 
@@ -725,20 +804,20 @@ export default function LenaChat({ lang }: { lang: string }) {
             fontSize: '14px', fontWeight: 600, lineHeight: 1,
           }}
         >
-          <LenaIcon size={26} />
+          <IconComponent size={26} />
           <span>{isDesktop ? t.buttonLabelDesktop : t.buttonLabelMobile}</span>
         </button>
       )}
 
       {/* Chat panel */}
       {open && (
-        <div role="dialog" aria-label={`${t.headerTitle} - ${t.headerSub}`} aria-modal="false" style={panelStyle}>
+        <div role="dialog" aria-label={`${headerName} - ${t.headerSub}`} aria-modal="false" style={panelStyle}>
 
           {/* Header */}
           <div style={headerStyle}>
-            <LenaIcon size={36} />
+            <IconComponent size={36} />
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ color: '#fff', fontWeight: 700, fontSize: '15px', lineHeight: 1.2 }}>{t.headerTitle}</div>
+              <div style={{ color: '#fff', fontWeight: 700, fontSize: '15px', lineHeight: 1.2 }}>{headerName}</div>
               <div style={{ color: 'rgba(255,255,255,0.78)', fontSize: '11px', marginTop: '2px' }}>{t.headerSub}</div>
             </div>
             <button onClick={closeChat} aria-label={t.closeLabel} style={closeBtnStyle}>✕</button>
@@ -750,7 +829,7 @@ export default function LenaChat({ lang }: { lang: string }) {
             {/* ── GREETING / CHOICE step ── */}
             {(step === 'greeting' || step === 'choice') && (
               <>
-                <LenaBubble><span style={{ whiteSpace: 'pre-line' }}>{t.greeting(pageType)}</span></LenaBubble>
+                <AvatarBubble><span style={{ whiteSpace: 'pre-line' }}>{t.greeting(pageType, isMiki)}</span></AvatarBubble>
                 <AutoNoticeBadge text={t.autoNotice} />
                 <p style={{ fontSize: '13px', color: '#4A5A6E', margin: 0 }}>{t.greetingNote}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
@@ -772,7 +851,7 @@ export default function LenaChat({ lang }: { lang: string }) {
                     {t.fallbackNote}
                   </div>
                 )}
-                <LenaBubble>{t.recIntro}</LenaBubble>
+                <AvatarBubble>{t.recIntro}</AvatarBubble>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {RECS[choice].map(rec => (
                     <a key={rec.slug} href={`/${lang}/blog/${rec.slug}`} onClick={() => handleRecClick(rec.slug)} style={recLinkStyle}>
@@ -790,7 +869,7 @@ export default function LenaChat({ lang }: { lang: string }) {
             {step === 'contact' && (
               <>
                 <AutoNoticeBadge text={t.autoNotice} />
-                <LenaBubble><span style={{ whiteSpace: 'pre-line' }}>{choice ? t.contactBridgeMsg : t.contactDirectMsg}</span></LenaBubble>
+                <AvatarBubble><span style={{ whiteSpace: 'pre-line' }}>{choice ? t.contactBridgeMsg : t.contactDirectMsg}</span></AvatarBubble>
                 <button onClick={openForm} style={ctaBtnStyle}>{t.contactButton}</button>
                 <button
                   onClick={() => choice ? setStep('recommendation') : (setStep('greeting'), setChoice(null))}
