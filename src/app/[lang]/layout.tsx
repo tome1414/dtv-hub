@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
 import MobileBottomNav from '@/components/MobileBottomNav'
+import LenaChat from '@/components/LenaChat'
 
 interface LangLayoutProps {
   children: React.ReactNode
@@ -85,6 +86,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
       <main>{children}</main>
       <Footer locale={locale} footer={dict.footer} />
       <MobileBottomNav locale={locale} />
+      <LenaChat lang={locale} />
     </>
   )
 }

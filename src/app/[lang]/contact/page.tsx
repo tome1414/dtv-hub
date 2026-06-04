@@ -3,11 +3,10 @@
 import { useState, use } from 'react'
 import React from 'react'
 import Link from 'next/link'
-import { CheckCircle, AlertCircle, Send, ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 
 // ── Countries list ────────────────────────────────────────────────────
 const COUNTRIES = [
-  // Africa
   'Algeria','Angola','Benin','Botswana','Burkina Faso','Burundi','Cabo Verde',
   'Cameroon','Central African Republic','Chad','Comoros','Congo','DR Congo',
   'Djibouti','Egypt','Equatorial Guinea','Eritrea','Eswatini','Ethiopia',
@@ -17,14 +16,12 @@ const COUNTRIES = [
   'São Tomé and Príncipe','Senegal','Seychelles','Sierra Leone','Somalia',
   'South Africa','South Sudan','Sudan','Tanzania','Togo','Tunisia','Uganda',
   'Zambia','Zimbabwe',
-  // Americas
   'Antigua and Barbuda','Argentina','Bahamas','Barbados','Belize','Bolivia',
   'Brazil','Canada','Chile','Colombia','Costa Rica','Cuba','Dominica',
   'Dominican Republic','Ecuador','El Salvador','Grenada','Guatemala','Guyana',
   'Haiti','Honduras','Jamaica','Mexico','Nicaragua','Panama','Paraguay','Peru',
   'Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines',
   'Suriname','Trinidad and Tobago','United States','Uruguay','Venezuela',
-  // Asia & Pacific
   'Afghanistan','Armenia','Azerbaijan','Bahrain','Bangladesh','Bhutan','Brunei',
   'Cambodia','China','Cyprus','Georgia','Hong Kong','India','Indonesia','Iran',
   'Iraq','Israel','Japan','Jordan','Kazakhstan','Kuwait','Kyrgyzstan','Laos',
@@ -32,7 +29,6 @@ const COUNTRIES = [
   'Oman','Pakistan','Palestine','Philippines','Qatar','Saudi Arabia','Singapore',
   'South Korea','Sri Lanka','Syria','Taiwan','Tajikistan','Thailand','Timor-Leste',
   'Turkey','Turkmenistan','UAE','Uzbekistan','Vietnam','Yemen',
-  // Europe
   'Albania','Andorra','Austria','Belarus','Belgium','Bosnia and Herzegovina',
   'Bulgaria','Croatia','Czech Republic','Denmark','Estonia','Finland','France',
   'Germany','Greece','Hungary','Iceland','Ireland','Italy','Kosovo','Latvia',
@@ -40,7 +36,6 @@ const COUNTRIES = [
   'Montenegro','Netherlands','North Macedonia','Norway','Poland','Portugal',
   'Romania','Russia','San Marino','Serbia','Slovakia','Slovenia','Spain',
   'Sweden','Switzerland','Ukraine','United Kingdom','Vatican City',
-  // Oceania
   'Australia','Fiji','Kiribati','Marshall Islands','Micronesia','Nauru',
   'New Zealand','Palau','Papua New Guinea','Samoa','Solomon Islands',
   'Tonga','Tuvalu','Vanuatu',
@@ -68,21 +63,38 @@ function NationalityCombobox({ value, onChange, placeholder, hasError }: {
         onFocus={() => setOpen(true)}
         onBlur={() => setTimeout(() => setOpen(false), 160)}
         autoComplete="off"
-        className={`w-full px-4 py-3 rounded-lg bg-navy-950 border text-white placeholder-navy-500 focus:outline-none transition-colors text-sm ${
-          hasError ? 'border-red-500/60 focus:border-red-400' : 'border-white/10 focus:border-teal-500/60'
-        }`}
+        style={{
+          width: '100%',
+          padding: '11px 14px',
+          borderRadius: '10px',
+          border: `1px solid ${hasError ? '#f87171' : 'rgba(26,36,53,0.14)'}`,
+          background: '#fff',
+          fontSize: '14px',
+          color: '#1A2435',
+          outline: 'none',
+          boxSizing: 'border-box',
+          fontFamily: 'inherit',
+        }}
       />
-      {open && (
-        <ul className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-white/10 bg-navy-900 max-h-56 overflow-y-auto shadow-xl" style={{listStyle:'none',padding:0,margin:0}}>
-          {filtered.length > 0 ? filtered.map(c => (
+      {open && filtered.length > 0 && (
+        <ul style={{
+          position: 'absolute', top: 'calc(100% + 4px)', left: 0, right: 0,
+          zIndex: 50, borderRadius: '10px', border: '1px solid rgba(26,36,53,0.10)',
+          background: '#fff', maxHeight: '200px', overflowY: 'auto',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.10)', listStyle: 'none', padding: 0, margin: 0,
+        }}>
+          {filtered.map(c => (
             <li
               key={c}
               onMouseDown={() => { onChange(c); setQuery(c); setOpen(false) }}
-              className="px-4 py-2.5 text-sm text-navy-300 cursor-pointer border-b border-white/5 hover:bg-white/5 hover:text-white transition-colors"
+              style={{
+                padding: '9px 14px', fontSize: '13px', color: '#1A2435',
+                cursor: 'pointer', borderBottom: '1px solid rgba(26,36,53,0.05)',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#F5F8FA')}
+              onMouseLeave={e => (e.currentTarget.style.background = '')}
             >{c}</li>
-          )) : (
-            <li className="px-4 py-2.5 text-sm text-navy-500">No results</li>
-          )}
+          ))}
         </ul>
       )}
     </div>
@@ -99,7 +111,6 @@ const t = {
     labelName: 'お名前',
     placeholderName: '山田 太郎',
     labelEmail: 'メールアドレス',
-    placeholderEmail: 'your@email.com',
     labelNationality: '国籍',
     placeholderNationality: '例：Japan',
     labelCategory: 'お問い合わせ種別',
@@ -120,16 +131,17 @@ const t = {
     errorBody: '申し訳ありません。時間をおいて再度お試しいただくか、直接 dtv.club.thailand@gmail.com までご連絡ください。',
     requiredNote: '* は必須項目です',
     privacy: 'お預かりした個人情報は、お問い合わせへの対応以外の目的には使用しません。',
+    selectPlaceholder: '選択してください',
+    emailDirect: '直接メールでのお問い合わせ：',
   },
   en: {
     breadcrumb: 'Contact',
     heading: 'Contact Us',
-    subheading: 'Have a question about DTV visas? We\'re happy to help.',
+    subheading: "Have a question about DTV visas? We're happy to help.",
     note: 'We typically reply within 1–3 business days.',
     labelName: 'Your Name',
     placeholderName: 'John Smith',
     labelEmail: 'Email Address',
-    placeholderEmail: 'your@email.com',
     labelNationality: 'Nationality',
     placeholderNationality: 'e.g. Japan',
     labelCategory: 'Inquiry Type',
@@ -144,12 +156,14 @@ const t = {
     submit: 'Send Message',
     sending: 'Sending...',
     successTitle: 'Message Received',
-    successBody: 'Thank you for reaching out. We\'ll reply to your email within 1–3 business days.',
+    successBody: "Thank you for reaching out. We'll reply to your email within 1–3 business days.",
     successBack: 'Back to Home',
     errorTitle: 'Failed to Send',
     errorBody: 'Sorry, something went wrong. Please try again or email us directly at dtv.club.thailand@gmail.com.',
     requiredNote: '* Required fields',
     privacy: 'Your personal information will only be used to respond to your inquiry.',
+    selectPlaceholder: 'Select a category',
+    emailDirect: 'Direct email: ',
   },
   ko: {
     breadcrumb: '문의하기',
@@ -159,7 +173,6 @@ const t = {
     labelName: '이름',
     placeholderName: '홍길동',
     labelEmail: '이메일 주소',
-    placeholderEmail: 'your@email.com',
     labelNationality: '국적',
     placeholderNationality: '예: Japan',
     labelCategory: '문의 종류',
@@ -180,10 +193,27 @@ const t = {
     errorBody: '죄송합니다. 잠시 후 다시 시도하거나 dtv.club.thailand@gmail.com 으로 직접 연락해 주세요.',
     requiredNote: '* 필수 항목',
     privacy: '수집된 개인정보는 문의 응대 목적으로만 사용됩니다.',
+    selectPlaceholder: '선택해 주세요',
+    emailDirect: '직접 이메일 문의：',
   },
 } as const
 
 type Lang = keyof typeof t
+
+// ── Input style helper ─────────────────────────────────────────────────
+const inputCss = (hasError?: boolean): React.CSSProperties => ({
+  width: '100%',
+  padding: '11px 14px',
+  borderRadius: '10px',
+  border: `1px solid ${hasError ? '#f87171' : 'rgba(26,36,53,0.14)'}`,
+  background: '#fff',
+  fontSize: '14px',
+  color: '#1A2435',
+  outline: 'none',
+  boxSizing: 'border-box',
+  fontFamily: 'inherit',
+  transition: 'border-color 0.15s',
+})
 
 // ── Page ──────────────────────────────────────────────────────────────
 export default function ContactPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -197,10 +227,10 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
 
   const validate = () => {
     const e: Partial<typeof form> = {}
-    if (!form.name.trim()) e.name = locale === 'ja' ? 'お名前を入力してください' : locale === 'ko' ? '이름을 입력해 주세요' : 'Name is required'
+    if (!form.name.trim()) e.name = locale === 'ja' ? '必須項目です' : locale === 'ko' ? '필수 항목입니다' : 'Required'
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      e.email = locale === 'ja' ? '正しいメールアドレスを入力してください' : locale === 'ko' ? '올바른 이메일 주소를 입력해 주세요' : 'Valid email is required'
-    if (!form.message.trim()) e.message = locale === 'ja' ? 'お問い合わせ内容を入力してください' : locale === 'ko' ? '문의 내용을 입력해 주세요' : 'Message is required'
+      e.email = locale === 'ja' ? '正しいメールアドレスを入力してください' : locale === 'ko' ? '올바른 이메일 주소를 입력해 주세요' : 'Valid email required'
+    if (!form.message.trim()) e.message = locale === 'ja' ? '必須項目です' : locale === 'ko' ? '필수 항목입니다' : 'Required'
     return e
   }
 
@@ -223,27 +253,38 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
     }
   }
 
-  const inputClass = (field: keyof typeof form) =>
-    `w-full px-4 py-3 rounded-lg bg-navy-950 border text-white placeholder-navy-500 focus:outline-none transition-colors text-sm ${
-      errors[field] ? 'border-red-500/60 focus:border-red-400' : 'border-white/10 focus:border-teal-500/60'
-    }`
+  const labelStyle: React.CSSProperties = {
+    display: 'block',
+    fontSize: '13px',
+    fontWeight: 600,
+    color: '#1A2435',
+    marginBottom: '6px',
+  }
 
   // ── Success ──────────────────────────────────────────────────────────
   if (status === 'success') {
     return (
-      <div className="min-h-screen bg-navy-950 pt-24 pb-16 flex items-center justify-center px-4">
-        <div className="max-w-md w-full text-center">
-          <div className="w-16 h-16 rounded-full bg-teal-500/15 flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-8 h-8 text-teal-400" />
+      <div style={{ minHeight: '100vh', background: '#F5F8FA', paddingTop: '96px', paddingBottom: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '96px 16px 80px' }}>
+        <div style={{ maxWidth: '420px', width: '100%', textAlign: 'center' }}>
+          <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(10,122,106,0.10)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M5 13l4 4L19 7" stroke="#0A7A6A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </div>
-          <h2 className="text-2xl font-bold text-white mb-3">{copy.successTitle}</h2>
-          <p className="text-navy-400 text-sm leading-relaxed mb-8">{copy.successBody}</p>
+          <h2 style={{ fontSize: '22px', fontWeight: 700, color: '#1A2435', marginBottom: '12px' }}>{copy.successTitle}</h2>
+          <p style={{ fontSize: '14px', color: '#4A5A6E', lineHeight: 1.7, marginBottom: '32px' }}>{copy.successBody}</p>
           <Link
             href={`/${locale}`}
-            className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '6px',
+              background: 'linear-gradient(135deg, #0D9280 0%, #0A7A6A 100%)',
+              color: '#fff', fontWeight: 700, padding: '12px 24px',
+              borderRadius: '10px', textDecoration: 'none', fontSize: '14px',
+              boxShadow: '0 3px 12px rgba(10,122,106,0.30)',
+            }}
           >
             {copy.successBack}
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight size={16} />
           </Link>
         </div>
       </div>
@@ -252,79 +293,84 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
 
   // ── Form ─────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-navy-950 pt-24 pb-16">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+    <div style={{ minHeight: '100vh', background: '#F5F8FA', paddingTop: '88px', paddingBottom: '80px' }}>
+      <div style={{ maxWidth: '600px', margin: '0 auto', padding: '0 16px' }}>
 
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-navy-500 mb-8">
-          <Link href={`/${locale}`} className="hover:text-navy-300 transition-colors">
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#7E8EA4', marginBottom: '32px' }}>
+          <Link href={`/${locale}`} style={{ color: '#7E8EA4', textDecoration: 'none' }}>
             {locale === 'ja' ? 'ホーム' : locale === 'ko' ? '홈' : 'Home'}
           </Link>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-navy-300">{copy.breadcrumb}</span>
+          <ChevronRight size={12} />
+          <span style={{ color: '#4A5A6E' }}>{copy.breadcrumb}</span>
         </nav>
 
         {/* Header */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold text-white mb-3">{copy.heading}</h1>
-          <p className="text-navy-400 text-sm leading-relaxed">{copy.subheading}</p>
-          <p className="text-teal-400 text-xs mt-2 font-medium">{copy.note}</p>
+        <div style={{ marginBottom: '32px' }}>
+          <h1 style={{ fontSize: '28px', fontWeight: 700, color: '#1A2435', marginBottom: '8px' }}>{copy.heading}</h1>
+          <p style={{ fontSize: '14px', color: '#4A5A6E', lineHeight: 1.6, marginBottom: '4px' }}>{copy.subheading}</p>
+          <p style={{ fontSize: '13px', color: '#0A7A6A', fontWeight: 600 }}>{copy.note}</p>
         </div>
 
         {/* Error banner */}
         {status === 'error' && (
-          <div className="flex gap-3 items-start bg-red-500/10 border border-red-500/30 rounded-lg p-4 mb-6">
-            <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', background: '#FEF2F2', border: '1px solid rgba(248,113,113,0.35)', borderRadius: '10px', padding: '14px', marginBottom: '20px' }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0, marginTop: '1px' }}>
+              <circle cx="12" cy="12" r="10" stroke="#f87171" strokeWidth="2"/>
+              <path d="M12 8v4M12 16h.01" stroke="#f87171" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
             <div>
-              <p className="text-red-300 font-semibold text-sm">{copy.errorTitle}</p>
-              <p className="text-red-400/80 text-xs mt-1 leading-relaxed">{copy.errorBody}</p>
+              <p style={{ fontSize: '13px', fontWeight: 700, color: '#b91c1c', marginBottom: '4px' }}>{copy.errorTitle}</p>
+              <p style={{ fontSize: '12px', color: '#dc2626', lineHeight: 1.5 }}>{copy.errorBody}</p>
             </div>
           </div>
         )}
 
         {/* Form card */}
-        <div className="bg-navy-900 border border-white/8 rounded-2xl p-6 sm:p-8">
-          <p className="text-navy-500 text-xs mb-6">{copy.requiredNote}</p>
+        <div style={{ background: '#fff', border: '1px solid rgba(26,36,53,0.10)', borderRadius: '16px', padding: '28px 24px', boxShadow: '0 2px 16px rgba(26,36,53,0.06)' }}>
+          <p style={{ fontSize: '12px', color: '#7E8EA4', marginBottom: '20px' }}>{copy.requiredNote}</p>
 
-          <form onSubmit={handleSubmit} noValidate className="space-y-5">
+          <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
 
             {/* Name */}
             <div>
-              <label className="block text-sm font-semibold text-navy-200 mb-1.5">
-                {copy.labelName} <span className="text-teal-400">*</span>
+              <label style={labelStyle}>
+                {copy.labelName} <span style={{ color: '#0A7A6A' }}>*</span>
               </label>
               <input
                 type="text"
                 value={form.name}
                 onChange={e => setForm(p => ({ ...p, name: e.target.value }))}
                 placeholder={copy.placeholderName}
-                className={inputClass('name')}
+                style={inputCss(!!errors.name)}
                 autoComplete="name"
+                onFocus={e => { e.currentTarget.style.borderColor = errors.name ? '#f87171' : '#0A7A6A' }}
+                onBlur={e => { e.currentTarget.style.borderColor = errors.name ? '#f87171' : 'rgba(26,36,53,0.14)' }}
               />
-              {errors.name && <p className="text-red-400 text-xs mt-1.5">{errors.name}</p>}
+              {errors.name && <p style={{ fontSize: '12px', color: '#f87171', marginTop: '4px' }}>{errors.name}</p>}
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-navy-200 mb-1.5">
-                {copy.labelEmail} <span className="text-teal-400">*</span>
+              <label style={labelStyle}>
+                {copy.labelEmail} <span style={{ color: '#0A7A6A' }}>*</span>
               </label>
               <input
                 type="email"
                 value={form.email}
                 onChange={e => setForm(p => ({ ...p, email: e.target.value }))}
-                placeholder={copy.placeholderEmail}
-                className={inputClass('email')}
+                placeholder="your@email.com"
+                style={inputCss(!!errors.email)}
                 autoComplete="email"
+                onFocus={e => { e.currentTarget.style.borderColor = errors.email ? '#f87171' : '#0A7A6A' }}
+                onBlur={e => { e.currentTarget.style.borderColor = errors.email ? '#f87171' : 'rgba(26,36,53,0.14)' }}
               />
-              {errors.email && <p className="text-red-400 text-xs mt-1.5">{errors.email}</p>}
+              {errors.email && <p style={{ fontSize: '12px', color: '#f87171', marginTop: '4px' }}>{errors.email}</p>}
             </div>
 
             {/* Nationality */}
             <div>
-              <label className="block text-sm font-semibold text-navy-200 mb-1.5">
-                {copy.labelNationality}
-              </label>
+              <label style={labelStyle}>{copy.labelNationality}</label>
               <NationalityCombobox
                 value={form.nationality}
                 onChange={v => setForm(p => ({ ...p, nationality: v }))}
@@ -334,76 +380,87 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
 
             {/* Category */}
             <div>
-              <label className="block text-sm font-semibold text-navy-200 mb-1.5">
-                {copy.labelCategory}
-              </label>
+              <label style={labelStyle}>{copy.labelCategory}</label>
               <select
                 value={form.category}
                 onChange={e => setForm(p => ({ ...p, category: e.target.value }))}
-                className="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-white focus:outline-none focus:border-teal-500/60 transition-colors text-sm appearance-none cursor-pointer"
+                style={{ ...inputCss(), appearance: 'auto' as React.CSSProperties['appearance'], cursor: 'pointer' }}
+                onFocus={e => { e.currentTarget.style.borderColor = '#0A7A6A' }}
+                onBlur={e => { e.currentTarget.style.borderColor = 'rgba(26,36,53,0.14)' }}
               >
-                <option value="" style={{ background: '#0d1a2f' }}>
-                  {locale === 'ja' ? '選択してください' : locale === 'ko' ? '선택해 주세요' : 'Select a category'}
-                </option>
+                <option value="">{copy.selectPlaceholder}</option>
                 {copy.categories.map(c => (
-                  <option key={c.value} value={c.value} style={{ background: '#0d1a2f' }}>
-                    {c.label}
-                  </option>
+                  <option key={c.value} value={c.value}>{c.label}</option>
                 ))}
               </select>
             </div>
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-semibold text-navy-200 mb-1.5">
-                {copy.labelMessage} <span className="text-teal-400">*</span>
+              <label style={labelStyle}>
+                {copy.labelMessage} <span style={{ color: '#0A7A6A' }}>*</span>
               </label>
               <textarea
                 value={form.message}
                 onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
                 placeholder={copy.placeholderMessage}
                 rows={6}
-                className={`${inputClass('message')} resize-none leading-relaxed`}
+                style={{ ...inputCss(!!errors.message), resize: 'vertical', lineHeight: 1.6 }}
+                onFocus={e => { e.currentTarget.style.borderColor = errors.message ? '#f87171' : '#0A7A6A' }}
+                onBlur={e => { e.currentTarget.style.borderColor = errors.message ? '#f87171' : 'rgba(26,36,53,0.14)' }}
               />
-              {errors.message && <p className="text-red-400 text-xs mt-1.5">{errors.message}</p>}
+              {errors.message && <p style={{ fontSize: '12px', color: '#f87171', marginTop: '4px' }}>{errors.message}</p>}
             </div>
 
-            {/* Privacy note */}
-            <p className="text-navy-500 text-xs leading-relaxed pt-1">{copy.privacy}</p>
+            {/* Privacy */}
+            <p style={{ fontSize: '12px', color: '#7E8EA4', lineHeight: 1.6, margin: 0 }}>{copy.privacy}</p>
 
             {/* Submit */}
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg transition-colors text-sm"
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                background: 'linear-gradient(135deg, #0D9280 0%, #0A7A6A 100%)',
+                color: '#fff', fontWeight: 700, padding: '14px',
+                borderRadius: '10px', border: 'none', cursor: status === 'sending' ? 'not-allowed' : 'pointer',
+                fontSize: '15px', boxShadow: '0 3px 12px rgba(10,122,106,0.30)',
+                opacity: status === 'sending' ? 0.7 : 1, width: '100%',
+                transition: 'opacity 0.15s',
+              }}
             >
               {status === 'sending' ? (
                 <>
-                  <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ animation: 'contact-spin 0.8s linear infinite' }}>
+                    <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.3)" strokeWidth="4"/>
+                    <path d="M4 12a8 8 0 018-8" stroke="#fff" strokeWidth="4" strokeLinecap="round"/>
                   </svg>
                   {copy.sending}
                 </>
               ) : (
                 <>
-                  <Send className="w-4 h-4" />
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                   {copy.submit}
                 </>
               )}
             </button>
+
           </form>
         </div>
 
-        {/* Direct email fallback */}
-        <p className="text-center text-navy-600 text-xs mt-6">
-          {locale === 'ja' ? '直接メールでのお問い合わせ：' : locale === 'ko' ? '직접 이메일 문의：' : 'Direct email: '}
-          <a href="mailto:dtv.club.thailand@gmail.com" className="text-navy-400 hover:text-teal-400 transition-colors underline underline-offset-2">
+        {/* Direct email */}
+        <p style={{ textAlign: 'center', fontSize: '12px', color: '#7E8EA4', marginTop: '20px' }}>
+          {copy.emailDirect}
+          <a href="mailto:dtv.club.thailand@gmail.com" style={{ color: '#0A7A6A', textDecoration: 'underline', textUnderlineOffset: '2px' }}>
             dtv.club.thailand@gmail.com
           </a>
         </p>
 
       </div>
+
+      <style>{`@keyframes contact-spin { to { transform: rotate(360deg); } }`}</style>
     </div>
   )
 }
