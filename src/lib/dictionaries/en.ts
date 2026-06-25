@@ -131,7 +131,7 @@ const en: Dictionary = {
     plans: {
       intro: 'Choose Your Plan',
       subtext: 'Select your golf school plan and submit your inquiry. Payment details will be discussed after consultation.',
-      feeNote: '※ The visa application fee (approx. 10,000 THB) is a government fee paid directly to the Thai embassy or consulate — separate from our tuition fees. Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand.',
+      feeNote: '※ The visa application fee (approx. 10,000 THB) is a government fee paid directly to the Thai embassy or consulate — separate from our tuition fees. Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand. Tuition prices are subject to Thai VAT (7%).',
       items: [
         {
           name: 'Silver',
