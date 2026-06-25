@@ -383,7 +383,7 @@ const zh: Dictionary = {
       planPlaceholder: '请选择方案',
       planUndecided: '尚未决定，希望咨询',
       agencyLabel: '我希望使用DTV申请代理服务',
-      agencyBullets: ['+10,000 THB（追加费用）', '从准备文件到大使馆申请全程代理', '拒签时：全额退还学费'],
+      agencyBullets: ['+10,000 THB +VAT 7%（追加费用）', '从准备文件到大使馆申请全程代理', '拒签时：全额退还学费'],
       nationalityLabel: '国籍',
       nationalityPlaceholder: '输入或选择国家',
       nameLabel: '姓名',

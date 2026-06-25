@@ -405,7 +405,7 @@ const ja: Dictionary = {
       planPlaceholder: 'プランを選択してください',
       planUndecided: 'まだ決めていない・相談したい',
       agencyLabel: 'DTV申請代行サービスを希望する',
-      agencyBullets: ['+10,000 THB（追加費用）', '書類作成〜大使館申請まで全代行', '申請却下時：スクール代金100%返金保証'],
+      agencyBullets: ['+10,000 THB +VAT 7%（追加費用）', '書類作成〜大使館申請まで全代行', '申請却下時：スクール代金100%返金保証'],
       nationalityLabel: '国籍',
       nationalityPlaceholder: '国名を入力または選択',
       nameLabel: 'お名前',

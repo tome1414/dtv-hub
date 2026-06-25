@@ -339,6 +339,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                       <div style={{marginTop:20}}>
                         <span style={{fontSize:'2.2rem',fontWeight:900,color:priceColor}}>{plan.price.toLocaleString()}</span>
                         <span style={{fontSize:'.9rem',color:unitColor,marginLeft:4}}>{plan.currency} / {plan.period}</span>
+                        <span style={{fontSize:'.68rem',color:unitColor,opacity:.6,marginLeft:6}}>+VAT 7%</span>
                       </div>
                       <p style={{fontSize:'.82rem',color:descColor,marginTop:4}}>{plan.description}</p>
                       <div style={{height:1,background:isPopular?'rgba(255,255,255,.15)':isPlatinum?'rgba(201,168,76,.2)':'#e5e0d5',margin:'20px 0'}}/>
@@ -1144,7 +1145,7 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
           <option value="">{f.planPlaceholder}</option>
           {plans.map((p: any,i: number)=>(
             <option key={i} value={`${p.name} — ${p.price.toLocaleString()} ${p.currency} / ${p.period}`}>
-              {p.name} — {p.price.toLocaleString()} {p.currency} / {p.period}
+              {p.name} — {p.price.toLocaleString()} {p.currency} / {p.period} +VAT 7%
             </option>
           ))}
           <option value={f.planUndecided}>{f.planUndecided}</option>

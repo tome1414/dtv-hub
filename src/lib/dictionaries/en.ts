@@ -388,7 +388,7 @@ const en: Dictionary = {
       planPlaceholder: 'Select a plan',
       planUndecided: 'Not decided yet · Would like to consult',
       agencyLabel: 'I want DTV Application Agency Service',
-      agencyBullets: ['+10,000 THB (additional fee)', 'Full support from document prep to embassy submission', 'Rejection: 100% school fee refund guarantee'],
+      agencyBullets: ['+10,000 THB +VAT 7% (additional fee)', 'Full support from document prep to embassy submission', 'Rejection: 100% school fee refund guarantee'],
       nationalityLabel: 'Nationality',
       nationalityPlaceholder: 'Type or select your country',
       nameLabel: 'Full Name',
