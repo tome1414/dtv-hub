@@ -511,10 +511,7 @@ export default function LenaChat({ lang }: { lang: string }) {
   const IconComponent = isMiki ? MikiIcon : LenaIcon
   const headerName = isMiki ? 'Miki' : 'Lena'
 
-  if (pathname.includes('/contact')) return null
-
-  // Golf DTV ページは表示しない
-  if (pathname.includes('/golf-dtv')) return null
+  const shouldHide = pathname.includes('/contact') || pathname.includes('/golf-dtv')
 
   // Track window size for responsive button label
   useEffect(() => {
@@ -712,6 +709,8 @@ export default function LenaChat({ lang }: { lang: string }) {
     color: '#1A2435',
     marginBottom: '4px',
   }
+
+  if (shouldHide) return null
 
   return (
     <>
