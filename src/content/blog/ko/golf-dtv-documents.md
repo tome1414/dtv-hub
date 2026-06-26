@@ -1,5 +1,5 @@
 ---
-title: "골프 DTV에 필요한 서류는 무엇이 다른가? 일반 DTV와의 서류 차이 정리"
+title: "골프 DTV 서류, 일반 DTV와 무엇이 다를까? | 입학 허가서 중심으로 정리"
 slug: "golf-dtv-documents"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "documents"
 primary_category: "documents"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV 신청에 필요한 서류를 파악하고 준비를 시작하려는 한국인"
+search_intent: "실무 확인 — 워크케이션 루트와의 서류 차이, 입학 허가서의 역할과 취득 방법을 이해하는 것"
+article_goal: "독자가 공통 서류와 골프 DTV 고유 서류(입학 허가서)의 차이를 이해하고 준비 타임라인에 따라 행동할 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -29,11 +33,13 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV의 서류 요건을 일반 DTV 필요 서류와 비교하면서 정리. 입학 허가서란 무엇인지, 어떻게 준비하는지, Golf DTV 문맥에서의 서류 보이는 법을 해설합니다."
+excerpt: "골프 DTV는 취로 증명 서류가 불필요한 대신 입학 허가서(태국 골프 시설 발행)가 핵심 서류입니다. 워크케이션 루트와의 서류 차이와 준비 타임라인을 정리합니다."
 read_time_minutes: 8
 ---
 
-'골프 DTV 서류는 일반 DTV와 무엇이 다른가요?'라는 의문은 자주 들립니다. 대답은 '핵심 서류가 1개 다르다'입니다. 이 글에서는 Golf DTV 문맥에서의 서류 요건과 특히 중요한 입학 허가서에 관해 정리합니다.
+**골프 DTV와 워크케이션 DTV의 가장 큰 서류 차이는 취로 증명의 유무입니다.** 골프 DTV(소프트파워 루트)는 고용 계약서나 원격 근무 허가서가 불필요한 대신, 태국 골프 시설이 발행하는 입학 허가서가 핵심 서류가 됩니다.
+
+이 글에서는 공통 서류·골프 DTV 고유 서류·준비 타임라인을 정리합니다.
 
 ---
 

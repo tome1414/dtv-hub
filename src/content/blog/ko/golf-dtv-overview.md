@@ -1,5 +1,5 @@
 ---
-title: "Golf DTV란? 태국 DTV 비자를 골프로 목표하는 구조 정리"
+title: "Golf DTV란 무엇인가? | DTV 소프트파워 루트를 골프로 신청하는 구조 정리"
 slug: "golf-dtv-overview"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "basic"
 primary_category: "soft-power"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV가 무엇인지 처음 알아보는 한국인"
+search_intent: "정보 수집 — 골프 DTV의 구조·정의·오해를 파악하는 것"
+article_goal: "독자가 골프 DTV가 DTV 소프트파워 루트의 통칭임을 이해하고 골프 기술 불문·취로 증명 불필요라는 핵심을 파악할 수 있도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -29,11 +33,13 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "Golf DTV란 무엇인가, 태국 DTV 비자와 어떻게 연결되는지를 정리합니다. 제도의 구조, 신청 근거로서의 골프의 위치, 자주 있는 오해를 알기 쉽게 해설."
+excerpt: "골프 DTV는 골프 전용 비자가 아닙니다. DTV의 소프트파워 루트를 골프로 신청하는 방법의 통칭입니다. 골프 기술 수준·취로 증명 불필요. 구조와 오해를 정리합니다."
 read_time_minutes: 7
 ---
 
-'골프 DTV'라는 말을 보고 '골프를 할 수 있으면 취득할 수 있는 비자?'라고 생각한 분이 많을 것입니다. 이 글에서는 골프 DTV란 무엇인가, DTV 제도 전체에서 어떻게 자리매김되는지를 정리합니다.
+**골프 DTV란 'DTV(Destination Thailand Visa)'를 골프를 활동 근거로 신청하는 방법의 통칭입니다.** 골프 전용 비자가 따로 있는 것이 아닙니다. 골프 기술 수준 요건은 없으며, 취로 증명 서류도 불필요합니다.
+
+이 글에서는 골프 DTV의 구조, DTV 제도 전체에서의 위치, 자주 있는 오해를 정리합니다.
 
 ---
 

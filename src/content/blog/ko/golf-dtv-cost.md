@@ -1,5 +1,5 @@
 ---
-title: "골프 DTV 비용은 얼마? 신청비·지원비·도항 후 비용 사고방식"
+title: "골프 DTV, 실제로 얼마나 드나? | 4가지 비용 카테고리와 예산 사고방식"
 slug: "golf-dtv-cost"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "guide"
 primary_category: "soft-power"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV 검토 중에 실제로 얼마나 드는지 전체 비용 감이 잡히지 않는 한국인"
+search_intent: "실무 확인 — 비자 신청비·잔액 요건·지원비·현지 비용의 4가지 카테고리를 파악하는 것"
+article_goal: "독자가 비자 신청비와 잔액 보유 요건을 혼동하지 않고, 자신의 체류 스타일에 맞는 예산 감을 갖출 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -29,11 +33,13 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV에 드는 비용을 신청비·잔액 증명 요건·지원비·현지 비용의 4가지 카테고리로 정리. 고정 금액 단정이 아니라 비용의 사고방식과 예산 설계의 참고가 되는 내용입니다."
+excerpt: "골프 DTV 비용은 ①비자 신청비 ②잔액 보유 요건(비용 아님) ③지원 서비스비 ④현지 체류비로 나뉩니다. 잔액 요건은 '납부 비용'이 아니라 '보유 자산'임에 주의하세요."
 read_time_minutes: 8
 ---
 
-골프 DTV를 검토할 때 '실제로 얼마나 돈이 드나요?'는 많은 분이 신경 쓰는 포인트입니다. 이 글에서는 비용을 4가지 카테고리로 나눠 정리합니다.
+**골프 DTV 비용을 생각할 때 가장 중요한 구분은 '납부하는 비용'과 '보유해야 하는 자산'입니다.** 잔액 증명 요건(50만 THB)은 지불하는 것이 아니라 계좌에 두어야 하는 자산입니다. 실제로 납부하는 비용은 비자 신청비와 지원 서비스비입니다.
+
+이 글에서는 4가지 카테고리로 비용 구조를 정리합니다.
 
 ---
 

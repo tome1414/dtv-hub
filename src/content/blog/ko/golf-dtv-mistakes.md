@@ -1,5 +1,5 @@
 ---
-title: "골프 DTV 신청에서 실패하기 쉬운 포인트 | 체크리스트 첨부"
+title: "골프 DTV 신청에서 실수하지 않으려면? | 3가지 실패 패턴과 체크리스트"
 slug: "golf-dtv-mistakes"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "guide"
 primary_category: "application"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV 신청 준비 중인데 서류 불비나 일정 부족으로 실수하지 않을지 불안한 한국인"
+search_intent: "실패 회피 — 자주 발생하는 실수 패턴을 미리 파악하고 체크리스트로 자가 점검하는 것"
+article_goal: "독자가 준비 부족·정합성 부족·일정 부족의 3가지 실패 패턴을 이해하고 제출 전 자가 체크를 통해 반려 리스크를 줄일 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -29,11 +33,13 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV 신청에서 발생하기 쉬운 실수를 '준비 부족' '정합성 부족' '일정 부족'의 3가지 카테고리로 정리. 체크리스트 형식으로 확인할 수 있습니다."
+excerpt: "골프 DTV 신청에서 수속이 지연되는 원인은 대부분 ①준비 부족 ②정합성 부족 ③일정 부족 중 하나입니다. 제출 전 체크리스트로 실수를 미리 방지하세요."
 read_time_minutes: 7
 ---
 
-골프 DTV 신청은 제도 자체의 난이도가 높은 것은 아닙니다. 하지만 준비 놓침이나 서류 불일치를 원인으로 수속이 지연되는 케이스가 있습니다. 자주 있는 실패 패턴을 체크리스트 형식으로 정리합니다.
+**골프 DTV 신청에서 수속이 지연되는 원인은 대부분 준비 부족·정합성 부족·일정 부족 중 하나입니다.** 제도 자체의 난이도보다 서류 간 불일치나 일정 착오가 더 자주 문제가 됩니다.
+
+이 글에서는 3가지 실패 패턴을 체크리스트 형식으로 정리합니다. 제출 전에 확인하세요.
 
 ---
 

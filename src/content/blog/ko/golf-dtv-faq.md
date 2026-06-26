@@ -1,5 +1,5 @@
 ---
-title: "골프 DTV 자주 있는 질문 10선 | 신청 전 불안을 한번에 해소"
+title: "골프 DTV 신청 전 10가지 궁금증 | 비용·서류·취로·재입국 FAQ"
 slug: "golf-dtv-faq"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "faq"
 primary_category: "soft-power"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV를 검토 중인데 비용·서류·가족·취로·재입국 등 의문이 많아 판단을 못 하고 있는 한국인"
+search_intent: "불안 해소 — 신청 전 궁금증을 한번에 해소하고 판단을 앞당기는 것"
+article_goal: "독자가 10개의 핵심 질문을 통해 골프 DTV의 기본을 이해하고 다음 상담 또는 신청 준비 행동으로 나아갈 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -30,11 +34,11 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV 신청 전에 자주 받는 10개의 질문을 정리했습니다. 비용, 서류, 가족 동반, 재입국, 취로, 골프 실력 등 검토자가 갖는 의문에 순서대로 답합니다."
+excerpt: "골프 DTV 검토 시 자주 나오는 10가지 궁금증에 답합니다. 골프 실력·잔액 유지 의무·가족 동반·180일 초과·원격 근무·비자 갱신 등 판단에 필요한 정보를 정리합니다."
 read_time_minutes: 10
 ---
 
-골프 DTV 검토 단계에서 자주 떠오르는 의문을 10개 정리했습니다. 신청 전 불안 해소에 활용하세요.
+골프 DTV 검토 단계에서 자주 떠오르는 10가지 궁금증을 정리했습니다. 비용·서류·취로·재입국 등 판단을 앞당기는 정보를 확인하세요.
 
 ---
 

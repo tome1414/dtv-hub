@@ -1,5 +1,5 @@
 ---
-title: "태국에서 골프를 즐기면서 DTV 비자를 취득하는 흐름 【신청 전~도항 후】"
+title: "골프 DTV 신청, 어디서부터 시작할까? | 신청 전~도항 후 4단계 로드맵"
 slug: "golf-dtv-process"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "process"
 primary_category: "application"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV 신청을 시작하려는데 전체 흐름과 일정 감이 잡히지 않는 한국인"
+search_intent: "실무 확인 — 신청 전~도항 후까지 4단계 흐름과 각 단계의 소요 기간을 파악하는 것"
+article_goal: "독자가 도항 희망일로부터 역산해 언제 어떤 행동을 취해야 하는지 이해하고 첫 번째 행동(입학 허가서 수배)을 시작할 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "필요 서류 확인하기"
 must_link_pages:
@@ -29,11 +33,13 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV의 취득부터 도항 후까지 무엇을 어떤 순서로 진행하는지를 4단계로 정리. 신청 전 검토부터 입학 허가서 취득, 대사관 신청, 태국 도항 후 흐름까지 정리한 로드맵 기사입니다."
+excerpt: "가장 먼저 해야 할 일은 입학 허가서 수배입니다. 도항 희망일 2개월 전부터 시작하면 여유가 생깁니다. 검토→서류 준비→신청→도항 후의 4단계를 정리합니다."
 read_time_minutes: 9
 ---
 
-골프 DTV를 취득하고 싶지만 '어디서부터 시작하면 좋을지 모르겠다'는 분을 위해 신청 전부터 도항 후까지 전체 흐름을 정리합니다. 일정감과 각 단계의 포인트를 파악함으로써 준비를 원활하게 진행할 수 있습니다.
+**가장 먼저 해야 할 일은 입학 허가서 수배입니다.** 이 서류가 가장 시간이 걸리기 때문에 도항 희망일 2개월(8주) 전에는 시작해야 여유가 생깁니다. 전체 흐름은 검토→서류 준비→대사관 신청→도항 후의 4단계입니다.
+
+이 글에서는 단계별 소요 기간과 포인트를 정리합니다.
 
 ---
 

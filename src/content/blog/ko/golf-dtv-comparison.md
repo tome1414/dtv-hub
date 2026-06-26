@@ -1,5 +1,5 @@
 ---
-title: "골프 DTV와 태국 장기 체류 다른 제도 비교 | 목적과의 궁합으로 선택한다"
+title: "골프 DTV, 다른 비자와 어떻게 다를까? | 리타이어먼트·Privilege와 목적별 비교"
 slug: "golf-dtv-comparison"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "comparison"
 primary_category: "comparison"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV와 리타이어먼트 비자·Thailand Privilege 등 다른 장기 체류 제도를 비교해 선택하고 싶은 한국인"
+search_intent: "비교 판단 — 제도 간 우열이 아니라 자신의 상황에 맞는 선택지를 판단하는 것"
+article_goal: "독자가 4가지 제도의 주요 차이를 이해하고 취로 증명 유무·나이·비용·갱신 빈도 등 자신의 조건에서 어느 제도가 맞는지 판단할 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -29,11 +33,13 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV, 일반 DTV, Retirement 비자, Thailand Privilege를 목적과의 궁합으로 비교. 제도의 우열이 아니라 어떤 사람에게 어느 선택지가 맞는가를 정리한 비교 기사입니다."
+excerpt: "골프 DTV·워크케이션 DTV·리타이어먼트 비자·Thailand Privilege를 목적별로 비교합니다. 제도의 우열이 아니라 자신의 상황에 무엇이 맞는지 판단하기 위한 기사입니다."
 read_time_minutes: 10
 ---
 
-'골프 DTV 이외에도 장기 체류 선택지가 있다고 들었는데 어떻게 다른가?'라는 의문을 가진 분을 위해 태국의 주요 중장기 체류 비자·제도를 목적과의 궁합으로 비교합니다. 제도의 우열이 아니라 **당신의 상황에 무엇이 맞는가**를 판단하는 재료를 제공합니다.
+**골프 DTV가 맞는지, 리타이어먼트 비자나 Thailand Privilege 쪽이 좋은지는 상황에 따라 다릅니다.** 취로 증명의 유무, 나이 요건, 비용, 갱신 빈도에 따라 맞는 제도가 달라집니다. 어느 제도가 우수하다는 것이 아니라 자신의 상황과의 궁합이 중요합니다.
+
+이 글에서는 4가지 제도를 목적별로 비교해 선택 기준을 정리합니다.
 
 ---
 

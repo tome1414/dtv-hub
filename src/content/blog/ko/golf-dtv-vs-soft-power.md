@@ -1,5 +1,5 @@
 ---
-title: "골프 DTV와 일반 Soft Power DTV의 차이 | 준비의 축과 보이는 법 비교"
+title: "골프 DTV와 다른 소프트파워 루트, 어떻게 다를까? | 활동 근거와 준비 방법 비교"
 slug: "golf-dtv-vs-soft-power"
 lang: "ko"
 published_at: "2026-05-16"
@@ -14,7 +14,11 @@ article_type: "comparison"
 primary_category: "soft-power"
 search_intent_type: "informational"
 monetization_type: "golf-dtv"
+dtv_route: "soft-power"
 update_priority: "high"
+target_reader: "골프 DTV와 다른 소프트파워 루트(요리·무에타이 등)의 차이가 궁금한 한국인"
+search_intent: "비교 판단 — 제도상의 차이가 없음을 이해하고 준비 프로세스와 활동 근거의 실질적 차이를 파악하는 것"
+article_goal: "독자가 골프 DTV와 다른 소프트파워 루트가 같은 DTV임을 이해하고 어느 활동이 자신의 상황에 맞는지 판단할 수 있는 상태가 되도록 한다"
 primary_cta: "골프 DTV 상세·무료 상담"
 secondary_cta: "신청 흐름 확인하기"
 must_link_pages:
@@ -29,7 +33,7 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "골프 DTV와 일반 Soft Power DTV는 제도상 같은 DTV입니다. 준비의 핵심 서류와 '활동 근거의 보이는 법'이 다를 뿐. 골프 문맥에서 헷갈리는 사람을 위해 양쪽을 정리합니다."
+excerpt: "골프 DTV와 요리·무에타이 루트는 같은 DTV 소프트파워 루트입니다. 비자 내용은 동일하며 차이는 활동 근거 시설과 입학 허가서 발행원뿐. 어느 루트가 자신에게 맞는지 정리합니다."
 read_time_minutes: 8
 ---
 
