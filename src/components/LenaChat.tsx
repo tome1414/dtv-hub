@@ -511,7 +511,7 @@ export default function LenaChat({ lang }: { lang: string }) {
   const IconComponent = isMiki ? MikiIcon : LenaIcon
   const headerName = isMiki ? 'Miki' : 'Lena'
 
-  const shouldHide = pathname.includes('/contact') || pathname.includes('/golf-dtv')
+  const shouldHide = pathname.includes('/contact') || pathname === `/${lang}/golf-dtv`
 
   // Track window size for responsive button label
   useEffect(() => {
