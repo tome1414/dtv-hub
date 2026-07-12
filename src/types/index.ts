@@ -101,6 +101,22 @@ export interface Dictionary {
       features: string[]
       cta: string
     }
+    fiveYearPlan?: {
+      badge: string
+      title: string
+      discount: string
+      description: string
+      note: string
+      cta: string
+    }
+    annualRenewal?: {
+      badge: string
+      title: string
+      discount: string
+      description: string
+      note: string
+      cta: string
+    }
     faq: {
       title: string
       categories: {
@@ -173,6 +189,11 @@ export interface Dictionary {
       messagePlaceholder: string
       privacyConsent: string
       refundPolicyConsent?: string
+      restrictedWarning?: {
+        title: string
+        bullets: string[]
+        footer: string
+      }
       successMessage: string
     }
     nav: {

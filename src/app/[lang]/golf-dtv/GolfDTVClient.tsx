@@ -402,46 +402,38 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 <a href="#inquiry" className="btn-gold" style={{fontSize:'.82rem',padding:'11px 22px',alignSelf:'flex-start' as const}}>{d.addon.cta}</a>
               </div>
 
-              {/* 5年まとめてプラン — ja のみ */}
-              {locale === 'ja' && (
+              {/* 5年まとめてプラン — 全言語 */}
+              {d.fiveYearPlan && (
                 <div style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.12)',borderRadius:18,padding:'28px 24px',display:'flex',flexDirection:'column' as const}}>
                   <span style={{display:'inline-block',background:'rgba(201,168,76,.22)',color:'#e2c46e',fontSize:'.68rem',fontWeight:700,padding:'3px 10px',borderRadius:999,marginBottom:14,alignSelf:'flex-start' as const}}>
-                    まとめ払い特典
+                    {d.fiveYearPlan.badge}
                   </span>
                   <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:10}}>
-                    <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>5年まとめてプラン</h3>
-                    <span style={{fontSize:'.88rem',fontWeight:700,color:'#e2c46e',whiteSpace:'nowrap' as const,background:'rgba(201,168,76,.15)',padding:'3px 10px',borderRadius:999}}>2〜5年目 20%OFF</span>
+                    <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>{d.fiveYearPlan.title}</h3>
+                    <span style={{fontSize:'.88rem',fontWeight:700,color:'#e2c46e',whiteSpace:'nowrap' as const,background:'rgba(201,168,76,.15)',padding:'3px 10px',borderRadius:999}}>{d.fiveYearPlan.discount}</span>
                   </div>
-                  <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>
-                    1年目は通常料金、2〜5年目は20%OFFで継続できます。
-                  </p>
-                  <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>
-                    ※ 初回一括払いが条件です。DTVビザは5年有効ですが、再入国・延長時にイミグレから受講継続の証明を求められるケースがあるため、在籍を維持することで証拠書類の提示に対応できます。任意のオプションです。
-                  </p>
+                  <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>{d.fiveYearPlan.description}</p>
+                  <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>{d.fiveYearPlan.note}</p>
                   <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}}>
-                    詳しく相談する
+                    {d.fiveYearPlan.cta}
                   </a>
                 </div>
               )}
 
-              {/* 年次更新プラン — ja のみ */}
-              {locale === 'ja' && (
+              {/* 年次更新プラン — 全言語 */}
+              {d.annualRenewal && (
                 <div style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.12)',borderRadius:18,padding:'28px 24px',display:'flex',flexDirection:'column' as const}}>
                   <span style={{display:'inline-block',background:'rgba(13,79,60,.5)',color:'rgba(255,255,255,.7)',fontSize:'.68rem',fontWeight:700,padding:'3px 10px',borderRadius:999,marginBottom:14,alignSelf:'flex-start' as const}}>
-                    更新時割引
+                    {d.annualRenewal.badge}
                   </span>
                   <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:10}}>
-                    <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>年次更新プラン</h3>
-                    <span style={{fontSize:'.88rem',fontWeight:700,color:'rgba(255,255,255,.7)',whiteSpace:'nowrap' as const,background:'rgba(13,79,60,.5)',padding:'3px 10px',borderRadius:999}}>更新時 10%OFF</span>
+                    <h3 style={{fontSize:'1rem',fontWeight:800,color:'#fff',margin:0,lineHeight:1.4}}>{d.annualRenewal.title}</h3>
+                    <span style={{fontSize:'.88rem',fontWeight:700,color:'rgba(255,255,255,.7)',whiteSpace:'nowrap' as const,background:'rgba(13,79,60,.5)',padding:'3px 10px',borderRadius:999}}>{d.annualRenewal.discount}</span>
                   </div>
-                  <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>
-                    更新のたびに選択プランを10%OFFで継続できます。
-                  </p>
-                  <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>
-                    ※ まとめ払い不要で、更新時に都度お支払いいただく形式です。スクール在籍を維持することで、イミグレへの証拠書類提示に対応できます。任意のオプションです。
-                  </p>
+                  <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>{d.annualRenewal.description}</p>
+                  <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>{d.annualRenewal.note}</p>
                   <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}}>
-                    詳しく相談する
+                    {d.annualRenewal.cta}
                   </a>
                 </div>
               )}
@@ -1200,18 +1192,15 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.nationalityLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
         <NationalityCombobox value={nationality} onChange={setNationality} placeholder={f.nationalityPlaceholder}/>
-        {RESTRICTED_NATIONALITIES.has(nationality) && (
+        {RESTRICTED_NATIONALITIES.has(nationality) && f.restrictedWarning && (
           <div style={{marginTop:10,padding:'12px 14px',background:'#fff5f5',border:'1.5px solid #e05a5a',borderRadius:10,fontSize:'.8rem',color:'#c0392b',lineHeight:1.85}}>
             <p style={{fontWeight:700,margin:'0 0 6px',display:'flex',alignItems:'center',gap:6}}>
-              <span>⚠️</span> ご注意：選択された国籍はタイ政府の「特別審査対象国」に指定されています
+              <span>⚠️</span> {f.restrictedWarning.title}
             </p>
             <ul style={{margin:0,padding:'0 0 0 16px'}}>
-              <li>日本など第三国のタイ領事館での申請が<strong>制限される場合</strong>があります</li>
-              <li>無犯罪証明書など<strong>追加書類の提出が必要</strong>になる場合があります</li>
-              <li>本国または長期滞在ビザ保有国での申請が必要になる場合があります</li>
-              <li>申請代行プランご利用の場合でも、<strong>ビザ却下時の返金はスクール受講料の50%が上限</strong>となります</li>
+              {f.restrictedWarning.bullets.map((b: string, i: number) => <li key={i}>{b}</li>)}
             </ul>
-            <p style={{margin:'8px 0 0',fontWeight:700}}>お申し込み前に必ずお問い合わせください。</p>
+            <p style={{margin:'8px 0 0',fontWeight:700}}>{f.restrictedWarning.footer}</p>
           </div>
         )}
       </div>

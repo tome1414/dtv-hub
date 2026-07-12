@@ -191,6 +191,22 @@ const zh: Dictionary = {
       ],
       cta: '添加代理服务',
     },
+    fiveYearPlan: {
+      badge: '一次性付款优惠',
+      title: '5年一次性套餐',
+      discount: '2〜5年享20%折扣',
+      description: '第1年按正常费用，第2至5年享受20%折扣继续就读。',
+      note: '※ 需一次性全额付款。DTV签证有效期为5年，但在重新入境或延期时，移民局可能要求提供继续就读证明，维持在籍可应对此要求。为可选项目。',
+      cta: '了解更多',
+    },
+    annualRenewal: {
+      badge: '续费折扣',
+      title: '年度续费套餐',
+      discount: '每次续费享10%折扣',
+      description: '每次续费时，可享受所选套餐10%的折扣继续就读。',
+      note: '※ 无需一次性付款，每次续费时分别支付。维持在籍可向移民局提供继续就读的证明文件。为可选项目。',
+      cta: '了解更多',
+    },
     faq: {
       title: '常见问题',
       categories: [
@@ -410,6 +426,16 @@ const zh: Dictionary = {
       messagePlaceholder: '请随时咨询',
       privacyConsent: '我同意隐私政策',
       refundPolicyConsent: '我已阅读并同意退款政策',
+      restrictedWarning: {
+        title: '注意：您选择的国籍已被泰国政府列为"特别审查对象国"',
+        bullets: [
+          '在日本等第三国泰国领事馆的申请可能受到限制',
+          '可能需要提交无犯罪记录等额外文件',
+          '可能需要在本国或持有长期签证的国家申请',
+          '即使使用代办套餐，签证被拒时退款上限为学费的50%',
+        ],
+        footer: '申请前请务必与我们联系。',
+      },
       successMessage: '✓ 提交成功！我们将在1个工作日内与您联系。',
     },
     nav: {

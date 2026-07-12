@@ -196,6 +196,22 @@ const en: Dictionary = {
       ],
       cta: 'Add Agency Plan',
     },
+    fiveYearPlan: {
+      badge: 'Bundle Discount',
+      title: '5-Year Bundle Plan',
+      discount: '20% OFF Years 2–5',
+      description: 'Year 1 at the standard rate, years 2–5 at 20% off.',
+      note: '※ Requires upfront full payment. DTV visa is valid for 5 years, but immigration may request proof of continued enrollment upon re-entry or extension. Maintaining enrollment covers this requirement. Optional.',
+      cta: 'Learn More',
+    },
+    annualRenewal: {
+      badge: 'Renewal Discount',
+      title: 'Annual Renewal Plan',
+      discount: '10% OFF Each Renewal',
+      description: 'Continue with your chosen plan at 10% off at each annual renewal.',
+      note: '※ No lump-sum payment required — pay each year at renewal. Maintaining enrollment allows you to provide immigration with proof of continued study. Optional.',
+      cta: 'Learn More',
+    },
     faq: {
       title: 'Frequently Asked Questions',
       categories: [
@@ -415,6 +431,16 @@ const en: Dictionary = {
       messagePlaceholder: 'Feel free to ask anything',
       privacyConsent: 'I agree to the Privacy Policy',
       refundPolicyConsent: 'I have read and agree to the Refund Policy',
+      restrictedWarning: {
+        title: 'Notice: Your selected nationality is designated as a "Special Scrutiny Country" by the Thai government',
+        bullets: [
+          'Applications at Thai consulates in third countries (e.g. Japan) may be restricted',
+          'Additional documents such as a criminal record certificate may be required',
+          'You may need to apply from your home country or a country where you hold a long-term visa',
+          'Even with the Agency Plan, refunds are capped at 50% of school fees if the visa is rejected',
+        ],
+        footer: 'Please contact us before applying.',
+      },
       successMessage: '✓ Submitted! We will contact you within 1 business day.',
     },
     nav: {
