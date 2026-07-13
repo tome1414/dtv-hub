@@ -20,6 +20,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrollTracked, setScrollTracked] = useState(false)
   const [navScrolled, setNavScrolled] = useState(false)
+  const [inquirySubmitted, setInquirySubmitted] = useState(false)
   const [affiliateOpen, setAffiliateOpen] = useState(false)
   const [affiliateForm, setAffiliateForm] = useState({ name: '', email: '', platform: '', message: '' })
   const [affiliateStatus, setAffiliateStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
@@ -475,27 +476,36 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
         {/* INQUIRY */}
         <section style={{padding:'80px 24px',background:'#fff'}} id="inquiry">
           <div style={{maxWidth:700,margin:'0 auto'}}>
-            <div style={{textAlign:'center',marginBottom:48}}>
-              <span className="section-label">INQUIRY</span>
-              <h2 className="section-title" style={{marginTop:8}}>{d.inquiry.title}</h2>
-              <p className="section-body" style={{marginTop:12}}>{d.inquiry.description}</p>
-            </div>
-            {/* Steps */}
-            <div style={{display:'flex',justifyContent:'center',gap:8,marginBottom:40,flexWrap:'wrap'}}>
-              {d.inquiry.steps.map((s: any,i: number)=>(
-                <div key={i} style={{display:'flex',alignItems:'center',gap:8}}>
-                  <div style={{display:'flex',alignItems:'center',gap:6,background:'#f5f0e6',borderRadius:999,padding:'8px 16px'}}>
-                    <span style={{width:24,height:24,background:'#0d4f3c',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontWeight:700,fontSize:'.8rem',flexShrink:0}}>{s.number}</span>
-                    <span style={{fontSize:'.85rem',fontWeight:600,color:'#333'}}>{s.label}</span>
-                  </div>
-                  {i < d.inquiry.steps.length-1 && <span style={{color:'#ccc',fontSize:'1rem'}}>→</span>}
+            {inquirySubmitted ? (
+              <div style={{textAlign:'center',padding:'80px 0'}}>
+                <div style={{fontSize:'3rem',marginBottom:16}}>✓</div>
+                <p style={{color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem',margin:0}}>{d.form.successMessage}</p>
+              </div>
+            ) : (
+              <>
+                <div style={{textAlign:'center',marginBottom:48}}>
+                  <span className="section-label">INQUIRY</span>
+                  <h2 className="section-title" style={{marginTop:8}}>{d.inquiry.title}</h2>
+                  <p className="section-body" style={{marginTop:12}}>{d.inquiry.description}</p>
                 </div>
-              ))}
-            </div>
-            {/* Form */}
-            <div style={{background:'#f5f0e6',borderRadius:24,padding:40}}>
-              <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} locale={locale} />
-            </div>
+                {/* Steps */}
+                <div style={{display:'flex',justifyContent:'center',gap:8,marginBottom:40,flexWrap:'wrap'}}>
+                  {d.inquiry.steps.map((s: any,i: number)=>(
+                    <div key={i} style={{display:'flex',alignItems:'center',gap:8}}>
+                      <div style={{display:'flex',alignItems:'center',gap:6,background:'#f5f0e6',borderRadius:999,padding:'8px 16px'}}>
+                        <span style={{width:24,height:24,background:'#0d4f3c',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontWeight:700,fontSize:'.8rem',flexShrink:0}}>{s.number}</span>
+                        <span style={{fontSize:'.85rem',fontWeight:600,color:'#333'}}>{s.label}</span>
+                      </div>
+                      {i < d.inquiry.steps.length-1 && <span style={{color:'#ccc',fontSize:'1rem'}}>→</span>}
+                    </div>
+                  ))}
+                </div>
+                {/* Form */}
+                <div style={{background:'#f5f0e6',borderRadius:24,padding:40}}>
+                  <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} locale={locale} onSubmitDone={()=>setInquirySubmitted(true)} />
+                </div>
+              </>
+            )}
           </div>
         </section>
 
@@ -1109,8 +1119,7 @@ function normalizePlan(plan: string): 'silver' | 'gold' | 'platinum' | 'undecide
   return 'undecided'
 }
 
-function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: any; locale: string }) {
-  const [submitted, setSubmitted] = React.useState(false)
+function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; cta: string; f: any; locale: string; onSubmitDone: () => void }) {
   const [loading, setLoading] = React.useState(false)
   const [sendError, setSendError] = React.useState(false)
   const formStarted = React.useRef(false)
@@ -1141,7 +1150,7 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
         body: JSON.stringify({ name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal, sources, referral, message }),
       })
       if (!res.ok) throw new Error('api')
-      setSubmitted(true)
+      onSubmitDone()
       pushGolfDtvLead(locale, normalizePlan(plan), agencyService, fiveYearPlan, annualRenewal)
     } catch (err) {
       setSendError(true)
@@ -1155,15 +1164,6 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
     } finally {
       setLoading(false)
     }
-  }
-
-  if (submitted) {
-    return (
-      <div style={{textAlign:'center',padding:'48px 0'}}>
-        <div style={{fontSize:'2.5rem',marginBottom:12}}>✓</div>
-        <p style={{color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem',margin:0}}>{f.successMessage}</p>
-      </div>
-    )
   }
 
   return (
