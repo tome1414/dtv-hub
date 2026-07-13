@@ -420,10 +420,7 @@ function detectPageType(pathname: string): PageType {
 }
 
 // ─── dataLayer helper ─────────────────────────────────────────────────────────
-
-declare global {
-  interface Window { dataLayer?: object[] }
-}
+// Global Window.dataLayer type is declared in src/lib/analytics.ts
 
 function pushEvent(event: string, params: Record<string, string | undefined>) {
   if (typeof window !== 'undefined') {

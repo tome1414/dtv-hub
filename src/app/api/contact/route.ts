@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, nationality, plan, agencyService, referral, message } = await req.json()
+    const { name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal, sources, referral, message } = await req.json()
 
     // ── Gmail 送信 ──────────────────────────────────────────────
     const transporter = nodemailer.createTransport({
@@ -45,6 +45,14 @@ export async function POST(req: NextRequest) {
             ${agencyService ? '希望する (+10,000 THB)' : '希望しない'}
           </span>
         </td>
+      </tr>
+      <tr style="border-bottom:1px solid #e8e0d0;">
+        <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">継続オプション</td>
+        <td style="padding:10px 0;color:#333;">${[fiveYearPlan ? '5年まとめてプラン（20%OFF）' : '', annualRenewal ? '年次更新プラン（10%OFF）' : ''].filter(Boolean).join(' / ') || '—'}</td>
+      </tr>
+      <tr style="border-bottom:1px solid #e8e0d0;">
+        <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">流入経路</td>
+        <td style="padding:10px 0;color:#333;">${Array.isArray(sources) && sources.length ? sources.join(' / ') : '—'}</td>
       </tr>
       ${referral ? `
       <tr style="border-bottom:1px solid #e8e0d0;">

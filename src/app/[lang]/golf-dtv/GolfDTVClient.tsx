@@ -2,7 +2,14 @@
 
 import React, { useEffect, useState } from 'react'
 import type { Locale } from '@/middleware'
-import { analytics } from '@/lib/analytics'
+import {
+  analytics,
+  pushGolfDtvView,
+  pushGolfDtvCtaClick,
+  pushGolfDtvFormStart,
+  pushGolfDtvLead,
+  pushGolfDtvFormError,
+} from '@/lib/analytics'
 
 interface GolfDTVClientProps {
   dict: any
@@ -20,6 +27,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
   useEffect(() => {
     analytics.languageChange(locale)
     analytics.sectionView('golf_dtv_page')
+    pushGolfDtvView(locale)
   }, [locale])
 
   // スクロール深度追跡 + ナビ透過制御
@@ -148,7 +156,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               <a href="#plans" className="nav-link">{d.nav.plans}</a>
               <a href="#faq" className="nav-link">{d.nav.faq}</a>
               <LangSwitcher currentLocale={locale} />
-              <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}}>{d.hero.cta}</a>
+              <a href="#inquiry" className="btn-gold" style={{padding:'8px 20px',fontSize:'.82rem'}} onClick={()=>pushGolfDtvCtaClick(locale,'nav_inquiry','#inquiry')}>{d.hero.cta}</a>
             </div>
             {/* Mobile: lang + hamburger */}
             <div className="nav-mobile-right">
@@ -163,7 +171,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             <a href="#flow" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.flow}</a>
             <a href="#plans" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.plans}</a>
             <a href="#faq" className="nav-link" onClick={()=>setMenuOpen(false)}>{d.nav.faq}</a>
-            <a href="#inquiry" className="btn-gold" style={{padding:'10px 24px',fontSize:'.88rem',justifyContent:'center'}} onClick={()=>setMenuOpen(false)}>{d.hero.cta}</a>
+            <a href="#inquiry" className="btn-gold" style={{padding:'10px 24px',fontSize:'.88rem',justifyContent:'center'}} onClick={()=>{setMenuOpen(false);pushGolfDtvCtaClick(locale,'nav_inquiry_mobile','#inquiry')}}>{d.hero.cta}</a>
           </div>
         </nav>
 
@@ -193,7 +201,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               {d.hero.subheadline}
             </p>
             <div style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap',marginBottom:60}}>
-              <a href="#inquiry" className="btn-gold" style={{fontSize:'1rem',padding:'16px 40px'}}>{d.hero.cta}</a>
+              <a href="#inquiry" className="btn-gold" style={{fontSize:'1rem',padding:'16px 40px'}} onClick={()=>pushGolfDtvCtaClick(locale,'hero_primary','#inquiry')}>{d.hero.cta}</a>
             </div>
             {/* Trust stats */}
             <div className="hero-stats-bar">
@@ -355,7 +363,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                       </ul>
                     </div>
                     <div style={{padding:28}}>
-                      <a href="#inquiry" className={isPopular?'btn-gold':isPlatinum?'btn-platinum':'btn-outline'} style={{width:'100%',justifyContent:'center'}}>{plan.cta}</a>
+                      <a href="#inquiry" className={isPopular?'btn-gold':isPlatinum?'btn-platinum':'btn-outline'} style={{width:'100%',justifyContent:'center'}} onClick={()=>pushGolfDtvCtaClick(locale,planCtaName(plan.name),'#inquiry')}>{plan.cta}</a>
                     </div>
                   </div>
                 )
@@ -399,7 +407,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                     </li>
                   ))}
                 </ul>
-                <a href="#inquiry" className="btn-gold" style={{fontSize:'.82rem',padding:'11px 22px',alignSelf:'flex-start' as const}}>{d.addon.cta}</a>
+                <a href="#inquiry" className="btn-gold" style={{fontSize:'.82rem',padding:'11px 22px',alignSelf:'flex-start' as const}} onClick={()=>pushGolfDtvCtaClick(locale,'addon_agency','#inquiry')}>{d.addon.cta}</a>
               </div>
 
               {/* 5年まとめてプラン — 全言語 */}
@@ -414,7 +422,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                   </div>
                   <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>{d.fiveYearPlan.description}</p>
                   <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>{d.fiveYearPlan.note}</p>
-                  <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}}>
+                  <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}} onClick={()=>pushGolfDtvCtaClick(locale,'option_five_year','#inquiry')}>
                     {d.fiveYearPlan.cta}
                   </a>
                 </div>
@@ -432,7 +440,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                   </div>
                   <p style={{fontSize:'.82rem',color:'rgba(255,255,255,.6)',lineHeight:1.8,margin:'0 0 10px'}}>{d.annualRenewal.description}</p>
                   <p style={{fontSize:'.77rem',color:'rgba(255,255,255,.35)',lineHeight:1.7,margin:'0 0 22px',flexGrow:1}}>{d.annualRenewal.note}</p>
-                  <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}}>
+                  <a href="#inquiry" style={{fontSize:'.82rem',padding:'11px 22px',borderRadius:999,fontWeight:700,border:'1.5px solid rgba(255,255,255,.25)',color:'rgba(255,255,255,.8)',display:'inline-flex',alignItems:'center',gap:8,transition:'all .3s',textDecoration:'none',alignSelf:'flex-start' as const}} onClick={()=>pushGolfDtvCtaClick(locale,'option_annual_renewal','#inquiry')}>
                     {d.annualRenewal.cta}
                   </a>
                 </div>
@@ -1084,10 +1092,33 @@ function NationalityCombobox({ value, onChange, placeholder }: { value: string; 
   )
 }
 
+function planCtaName(name: string): string {
+  switch (name.toLowerCase()) {
+    case 'silver': return 'plan_silver'
+    case 'gold': return 'plan_gold'
+    case 'platinum': return 'plan_platinum'
+    default: return 'plan_unknown'
+  }
+}
+
+function normalizePlan(plan: string): 'silver' | 'gold' | 'platinum' | 'undecided' {
+  const lower = plan.toLowerCase()
+  if (lower.includes('silver')) return 'silver'
+  if (lower.includes('gold')) return 'gold'
+  if (lower.includes('platinum')) return 'platinum'
+  return 'undecided'
+}
+
 function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: any; locale: string }) {
   const [submitted, setSubmitted] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
   const [sendError, setSendError] = React.useState(false)
+  const formStarted = React.useRef(false)
+  const handleFormStart = () => {
+    if (formStarted.current) return
+    formStarted.current = true
+    pushGolfDtvFormStart(locale)
+  }
   const [plan, setPlan] = React.useState('')
   const [agencyService, setAgencyService] = React.useState(false)
   const [fiveYearPlan, setFiveYearPlan] = React.useState(false)
@@ -1109,12 +1140,18 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal, sources, referral, message }),
       })
-      if (!res.ok) throw new Error('send failed')
+      if (!res.ok) throw new Error('api')
       setSubmitted(true)
-      analytics.formSubmit(plan)
-    } catch {
+      pushGolfDtvLead(locale, normalizePlan(plan), agencyService, fiveYearPlan, annualRenewal)
+    } catch (err) {
       setSendError(true)
-      analytics.formError('send failed')
+      let errorType: 'api' | 'network' | 'unknown' = 'unknown'
+      if (err instanceof TypeError) {
+        errorType = 'network'
+      } else if (err instanceof Error && err.message === 'api') {
+        errorType = 'api'
+      }
+      pushGolfDtvFormError(locale, errorType)
     } finally {
       setLoading(false)
     }
@@ -1130,7 +1167,7 @@ function InquiryForm({ plans, cta, f, locale }: { plans: any[]; cta: string; f: 
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} onFocus={handleFormStart}>
       <div style={{marginBottom:20}}>
         <label className="form-label">{f.planLabel}</label>
         <select className="form-input" style={{cursor:'pointer'}} value={plan} onChange={e=>setPlan(e.target.value)}>
