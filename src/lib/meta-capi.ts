@@ -66,9 +66,13 @@ export interface CAPILeadParams {
 }
 
 export async function sendCapiLead(params: CAPILeadParams): Promise<void> {
+  console.log('[CAPI] entered — event_id:', params.eventId)
+
   const pixelId = process.env.META_PIXEL_ID
   const accessToken = process.env.META_CAPI_ACCESS_TOKEN
   const testEventCode = process.env.META_CAPI_TEST_EVENT_CODE
+
+  console.log('[CAPI] env check: pixelId=', pixelId ?? '(unset)', 'accessToken=', accessToken ? '(set)' : '(unset)')
 
   if (!pixelId || !accessToken) {
     console.warn('[CAPI] META_PIXEL_ID or META_CAPI_ACCESS_TOKEN not configured — skipping')

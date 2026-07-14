@@ -111,6 +111,7 @@ export async function POST(req: NextRequest) {
 
     // ── Meta Conversions API（CAPI）────────────────────────────
     // メール送信成功後のみ送信。CAPI 失敗はログのみ、ユーザーへはエラーを返さない。
+    console.log('[CAPI] guard check: eventId=', eventId, 'emailType=', typeof email)
     if (eventId && typeof email === 'string') {
       const clientIp =
         req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
@@ -118,6 +119,7 @@ export async function POST(req: NextRequest) {
         ''
       const userAgent = req.headers.get('user-agent') ?? ''
 
+      console.log('[CAPI] before sendCapiLead')
       sendCapiLead({
         email,
         eventId: String(eventId),
@@ -126,6 +128,8 @@ export async function POST(req: NextRequest) {
         userAgent,
         fbp: typeof fbp === 'string' ? fbp : undefined,
         fbc: typeof fbc === 'string' ? fbc : undefined,
+      }).then(() => {
+        console.log('[CAPI] after sendCapiLead — promise resolved')
       }).catch((capiErr: unknown) => {
         console.error('[CAPI] sendCapiLead failed:', capiErr instanceof Error ? capiErr.message : 'unknown error')
       })
