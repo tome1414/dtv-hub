@@ -1102,6 +1102,13 @@ function NationalityCombobox({ value, onChange, placeholder }: { value: string; 
   )
 }
 
+function getCookie(name: string): string | undefined {
+  if (typeof document === 'undefined') return undefined
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const match = document.cookie.match(new RegExp('(?:^|; )' + escaped + '=([^;]*)'))
+  return match ? decodeURIComponent(match[1]) : undefined
+}
+
 function planCtaName(name: string): string {
   switch (name.toLowerCase()) {
     case 'silver': return 'plan_silver'
@@ -1144,14 +1151,23 @@ function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; ct
     setLoading(true)
     setSendError(false)
     try {
+      const eventId = crypto.randomUUID()
+      const fbp = getCookie('_fbp')
+      const fbc = getCookie('_fbc')
+      const eventSourceUrl = window.location.href
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal, sources, referral, message }),
+        body: JSON.stringify({
+          name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal,
+          sources, referral, message,
+          eventId, fbp, fbc, eventSourceUrl,
+        }),
       })
       if (!res.ok) throw new Error('api')
       onSubmitDone()
-      pushGolfDtvLead(locale, normalizePlan(plan), agencyService, fiveYearPlan, annualRenewal)
+      pushGolfDtvLead(locale, normalizePlan(plan), agencyService, fiveYearPlan, annualRenewal, eventId)
     } catch (err) {
       setSendError(true)
       let errorType: 'api' | 'network' | 'unknown' = 'unknown'

@@ -1,9 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { sendCapiLead } from '@/lib/meta-capi'
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal, sources, referral, message } = await req.json()
+    const {
+      name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal,
+      sources, referral, message,
+      eventId, fbp, fbc, eventSourceUrl,
+    } = await req.json()
 
     // ── Gmail 送信 ──────────────────────────────────────────────
     const transporter = nodemailer.createTransport({
@@ -102,6 +107,28 @@ export async function POST(req: NextRequest) {
         // Sheets への書き込みに失敗してもメール送信は成功扱い
         console.error('Sheets webhook error:', sheetErr)
       }
+    }
+
+    // ── Meta Conversions API（CAPI）────────────────────────────
+    // メール送信成功後のみ送信。CAPI 失敗はログのみ、ユーザーへはエラーを返さない。
+    if (eventId && typeof email === 'string') {
+      const clientIp =
+        req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+        req.headers.get('x-real-ip') ??
+        ''
+      const userAgent = req.headers.get('user-agent') ?? ''
+
+      sendCapiLead({
+        email,
+        eventId: String(eventId),
+        eventSourceUrl: typeof eventSourceUrl === 'string' ? eventSourceUrl : `https://dtvclub.com/golf-dtv`,
+        clientIp,
+        userAgent,
+        fbp: typeof fbp === 'string' ? fbp : undefined,
+        fbc: typeof fbc === 'string' ? fbc : undefined,
+      }).catch((capiErr: unknown) => {
+        console.error('[CAPI] sendCapiLead failed:', capiErr instanceof Error ? capiErr.message : 'unknown error')
+      })
     }
 
     return NextResponse.json({ success: true })

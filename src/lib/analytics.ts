@@ -66,6 +66,7 @@ export function pushGolfDtvLead(
   agencyService: boolean,
   fiveYearPlan: boolean,
   annualRenewal: boolean,
+  eventId: string,
 ): void {
   push({
     event: 'golf_dtv_lead',
@@ -75,6 +76,7 @@ export function pushGolfDtvLead(
     agency_service: agencyService,
     five_year_plan: fiveYearPlan,
     annual_renewal: annualRenewal,
+    event_id: eventId,
   })
 }
 
