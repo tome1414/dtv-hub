@@ -3,12 +3,6 @@ import nodemailer from 'nodemailer'
 import { sendCapiLead } from '@/lib/meta-capi'
 
 export async function POST(req: NextRequest) {
-  // CAPI params declared here so they're accessible after the email try/catch
-  let capiParams: {
-    email: string; eventId: string; eventSourceUrl: string
-    clientIp: string; userAgent: string; fbp?: string; fbc?: string
-  } | null = null
-
   try {
     const {
       name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal,
@@ -115,36 +109,35 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // メール成功後にCAPIパラメータを準備（CAPI実行はemail try/catchの外で行う）
+    // ── Meta Conversions API（CAPI）────────────────────────────
+    // メール送信成功後のみ送信。CAPI 失敗はログのみ、ユーザーへはエラーを返さない。
+    console.log('[CAPI] guard check: eventId=', eventId, 'emailType=', typeof email)
     if (eventId && typeof email === 'string') {
-      capiParams = {
+      const clientIp =
+        req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+        req.headers.get('x-real-ip') ??
+        ''
+      const userAgent = req.headers.get('user-agent') ?? ''
+
+      console.log('[CAPI] before sendCapiLead')
+      sendCapiLead({
         email,
         eventId: String(eventId),
-        eventSourceUrl: typeof eventSourceUrl === 'string' ? eventSourceUrl : 'https://dtvclub.com/golf-dtv',
-        clientIp: req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? req.headers.get('x-real-ip') ?? '',
-        userAgent: req.headers.get('user-agent') ?? '',
+        eventSourceUrl: typeof eventSourceUrl === 'string' ? eventSourceUrl : `https://dtvclub.com/golf-dtv`,
+        clientIp,
+        userAgent,
         fbp: typeof fbp === 'string' ? fbp : undefined,
         fbc: typeof fbc === 'string' ? fbc : undefined,
-      }
+      }).then(() => {
+        console.log('[CAPI] after sendCapiLead — promise resolved')
+      }).catch((capiErr: unknown) => {
+        console.error('[CAPI] sendCapiLead failed:', capiErr instanceof Error ? capiErr.message : 'unknown error')
+      })
     }
+
+    return NextResponse.json({ success: true })
   } catch (err) {
     console.error('Contact API error:', err)
     return NextResponse.json({ error: 'Failed to send' }, { status: 500 })
   }
-
-  // ── Meta Conversions API（CAPI）────────────────────────────────────────────
-  // メール送信成功後のみここに到達。CAPI は問い合わせ受付をブロックしない。
-  // 失敗・タイムアウト・例外のいずれでも 200 を返す。
-  if (capiParams) {
-    console.log('[CAPI] guard check: eventId=', capiParams.eventId)
-    console.log('[CAPI] before sendCapiLead')
-    try {
-      await sendCapiLead(capiParams)
-      console.log('[CAPI] after sendCapiLead — completed')
-    } catch (capiErr: unknown) {
-      console.error('[CAPI] non-blocking error:', capiErr instanceof Error ? capiErr.message : 'unknown error')
-    }
-  }
-
-  return NextResponse.json({ success: true })
 }

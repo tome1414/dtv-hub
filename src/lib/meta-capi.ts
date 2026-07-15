@@ -108,13 +108,11 @@ export async function sendCapiLead(params: CAPILeadParams): Promise<void> {
 
   const endpoint = `https://graph.facebook.com/v21.0/${pixelId}/events`
 
-  console.log('[CAPI] payload:', JSON.stringify({ ...body, access_token: '***' }, null, 2))
-
   const res = await fetch(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
-    signal: AbortSignal.timeout(5000),
+    signal: AbortSignal.timeout(8000),
   })
 
   const json = (await res.json()) as CAPIResponse
