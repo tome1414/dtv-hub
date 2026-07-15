@@ -88,6 +88,8 @@ export async function sendCapiLead(params: CAPILeadParams): Promise<void> {
   if (params.fbp) userData.fbp = params.fbp
   if (params.fbc) userData.fbc = params.fbc
 
+  console.log('[CAPI] user_data check: fbp=', !!params.fbp, 'fbc=', !!params.fbc, 'ip=', params.clientIp.slice(0, 3) + '***', 'ua=', params.userAgent.slice(0, 30))
+
   const body: CAPIBody = {
     data: [
       {
