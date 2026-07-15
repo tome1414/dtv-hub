@@ -22,7 +22,7 @@ interface EventPayload {
   event_time: number
   action_source: 'website'
   event_source_url: string
-  event_id?: string
+  event_id: string
   user_data: UserData
 }
 
@@ -97,6 +97,7 @@ export async function sendCapiLead(params: CAPILeadParams): Promise<void> {
         event_time: Math.floor(Date.now() / 1000),
         action_source: 'website',
         event_source_url: params.eventSourceUrl,
+        event_id: params.eventId,
         user_data: userData,
       },
     ],
