@@ -110,7 +110,8 @@ export async function POST(req: NextRequest) {
     }
 
     // ── Meta Conversions API（CAPI）────────────────────────────
-    // メール送信成功後のみ送信。CAPI 失敗はログのみ、ユーザーへはエラーを返さない。
+    // メール送信成功後のみ送信。await で完了を待つ（fire-and-forgetだとVercel Functionが先に終了するため）。
+    // CAPI 失敗はログのみ — ユーザーへは問い合わせ成功（200）を返す。
     console.log('[CAPI] guard check: eventId=', eventId, 'emailType=', typeof email)
     if (eventId && typeof email === 'string') {
       const clientIp =
@@ -120,19 +121,20 @@ export async function POST(req: NextRequest) {
       const userAgent = req.headers.get('user-agent') ?? ''
 
       console.log('[CAPI] before sendCapiLead')
-      sendCapiLead({
-        email,
-        eventId: String(eventId),
-        eventSourceUrl: typeof eventSourceUrl === 'string' ? eventSourceUrl : `https://dtvclub.com/golf-dtv`,
-        clientIp,
-        userAgent,
-        fbp: typeof fbp === 'string' ? fbp : undefined,
-        fbc: typeof fbc === 'string' ? fbc : undefined,
-      }).then(() => {
-        console.log('[CAPI] after sendCapiLead — promise resolved')
-      }).catch((capiErr: unknown) => {
+      try {
+        await sendCapiLead({
+          email,
+          eventId: String(eventId),
+          eventSourceUrl: typeof eventSourceUrl === 'string' ? eventSourceUrl : `https://dtvclub.com/golf-dtv`,
+          clientIp,
+          userAgent,
+          fbp: typeof fbp === 'string' ? fbp : undefined,
+          fbc: typeof fbc === 'string' ? fbc : undefined,
+        })
+        console.log('[CAPI] after sendCapiLead — completed')
+      } catch (capiErr: unknown) {
         console.error('[CAPI] sendCapiLead failed:', capiErr instanceof Error ? capiErr.message : 'unknown error')
-      })
+      }
     }
 
     return NextResponse.json({ success: true })
