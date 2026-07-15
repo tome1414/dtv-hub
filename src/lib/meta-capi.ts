@@ -114,7 +114,7 @@ export async function sendCapiLead(params: CAPILeadParams): Promise<void> {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
-    signal: AbortSignal.timeout(8000),
+    signal: AbortSignal.timeout(5000),
   })
 
   const json = (await res.json()) as CAPIResponse
