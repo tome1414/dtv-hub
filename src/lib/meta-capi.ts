@@ -18,7 +18,7 @@ interface UserData {
 }
 
 interface EventPayload {
-  event_name: 'Lead'
+  event_name: 'FormSubmit'
   event_time: number
   action_source: 'website'
   event_source_url: string
@@ -93,7 +93,7 @@ export async function sendCapiLead(params: CAPILeadParams): Promise<void> {
   const body: CAPIBody = {
     data: [
       {
-        event_name: 'Lead',
+        event_name: 'FormSubmit',
         event_time: Math.floor(Date.now() / 1000),
         action_source: 'website',
         event_source_url: params.eventSourceUrl,
