@@ -107,8 +107,8 @@ const ru: Dictionary = {
   footer: {
     tagline: 'Всё для долгосрочного проживания в Таиланде.',
     links: [
-      { label: 'Политика конфиденциальности', href: '/privacy' },
-      { label: 'Условия использования', href: '/terms' },
+      { label: 'Политика конфиденциальности', href: '/golf-dtv#privacy' },
+      { label: 'Условия использования', href: '/golf-dtv#sct' },
       { label: 'Контакты', href: '/contact' },
       { label: 'Карта сайта', href: '/sitemap.xml' },
     ],

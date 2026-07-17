@@ -107,8 +107,8 @@ const ja: Dictionary = {
   footer: {
     tagline: 'タイ長期滞在の、すべてがここに。',
     links: [
-      { label: 'プライバシーポリシー', href: '/privacy' },
-      { label: '利用規約', href: '/terms' },
+      { label: 'プライバシーポリシー', href: '/golf-dtv#privacy' },
+      { label: '利用規約', href: '/golf-dtv#sct' },
       { label: 'お問い合わせ', href: '/contact' },
       { label: 'サイトマップ', href: '/sitemap.xml' },
     ],

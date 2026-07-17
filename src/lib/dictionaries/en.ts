@@ -107,8 +107,8 @@ const en: Dictionary = {
   footer: {
     tagline: 'Everything for your long-term stay in Thailand.',
     links: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Use', href: '/terms' },
+      { label: 'Privacy Policy', href: '/golf-dtv#privacy' },
+      { label: 'Terms of Use', href: '/golf-dtv#sct' },
       { label: 'Contact', href: '/contact' },
       { label: 'Sitemap', href: '/sitemap.xml' },
     ],

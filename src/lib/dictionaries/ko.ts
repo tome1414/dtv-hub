@@ -104,8 +104,8 @@ const ko: Dictionary = {
   footer: {
     tagline: '태국 장기 체류의 모든 것이 여기에.',
     links: [
-      { label: '개인정보처리방침', href: '/privacy' },
-      { label: '이용약관', href: '/terms' },
+      { label: '개인정보처리방침', href: '/golf-dtv#privacy' },
+      { label: '이용약관', href: '/golf-dtv#sct' },
       { label: '문의하기', href: '/contact' },
       { label: '사이트맵', href: '/sitemap.xml' },
     ],

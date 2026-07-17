@@ -104,8 +104,8 @@ const zh: Dictionary = {
   footer: {
     tagline: '泰国长期居住的一切，尽在这里。',
     links: [
-      { label: '隐私政策', href: '/privacy' },
-      { label: '使用条款', href: '/terms' },
+      { label: '隐私政策', href: '/golf-dtv#privacy' },
+      { label: '使用条款', href: '/golf-dtv#sct' },
       { label: '联系我们', href: '/contact' },
       { label: '网站地图', href: '/sitemap.xml' },
     ],
