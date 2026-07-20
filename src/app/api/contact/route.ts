@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
   try {
     const {
       name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal,
-      sources, referral, message,
+      dependentVisa, sources, referral, message,
       eventId, fbp, fbc, eventSourceUrl,
     } = await req.json()
 
@@ -54,6 +54,14 @@ export async function POST(req: NextRequest) {
       <tr style="border-bottom:1px solid #e8e0d0;">
         <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">継続オプション</td>
         <td style="padding:10px 0;color:#333;">${[fiveYearPlan ? '5年まとめてプラン（20%OFF）' : '', annualRenewal ? '年次更新プラン（10%OFF）' : ''].filter(Boolean).join(' / ') || '—'}</td>
+      </tr>
+      <tr style="border-bottom:1px solid #e8e0d0;">
+        <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">扶養ビザ相談</td>
+        <td style="padding:10px 0;">
+          <span style="background:${dependentVisa === 'consult' ? '#0d4f3c' : '#999'};color:#fff;padding:3px 10px;border-radius:999px;font-size:.8rem;font-weight:600;">
+            ${dependentVisa === 'consult' ? '相談したい' : dependentVisa === 'no' ? '不要' : '—'}
+          </span>
+        </td>
       </tr>
       <tr style="border-bottom:1px solid #e8e0d0;">
         <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">流入経路</td>

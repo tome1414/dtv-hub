@@ -194,6 +194,10 @@ export interface Dictionary {
         bullets: string[]
         footer: string
       }
+      dependentVisaLabel?: string
+      dependentVisaConsult?: string
+      dependentVisaNo?: string
+      dependentVisaNote?: string
       successMessage: string
     }
     nav: {

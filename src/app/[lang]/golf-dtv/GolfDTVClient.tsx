@@ -458,7 +458,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               <h2 className="section-title" style={{marginTop:8}}>{d.faq.title}</h2>
             </div>
             {d.faq.categories.map((cat: any)=>(
-              <div key={cat.id} style={{marginBottom:32}}>
+              <div key={cat.id} id={`faq-cat-${cat.id}`} style={{marginBottom:32}}>
                 <div style={{display:'inline-flex',alignItems:'center',gap:8,marginBottom:16}}>
                   <span style={{width:28,height:28,background:'#0d4f3c',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontWeight:700,fontSize:'.8rem',flexShrink:0}}>{cat.id}</span>
                   <span style={{fontWeight:700,fontSize:'1rem',color:'#0a2e1f'}}>{cat.name}</span>
@@ -1143,6 +1143,7 @@ function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; ct
   const [email, setEmail] = React.useState('')
   const [nationality, setNationality] = React.useState('')
   const [referral, setReferral] = React.useState('')
+  const [dependentVisa, setDependentVisa] = React.useState('')
   const [sources, setSources] = React.useState<string[]>([])
   const [message, setMessage] = React.useState('')
 
@@ -1161,7 +1162,7 @@ function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; ct
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name, email, nationality, plan, agencyService, fiveYearPlan, annualRenewal,
-          sources, referral, message,
+          dependentVisa, sources, referral, message,
           eventId, fbp, fbc, eventSourceUrl,
         }),
       })
@@ -1261,6 +1262,28 @@ function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; ct
         <label className="form-label">{f.emailLabel}<span style={{color:'#e05a5a',fontSize:'.7rem',marginLeft:4}}>{f.required}</span></label>
         <input type="email" className="form-input" placeholder="your@email.com" required value={email} onChange={e=>setEmail(e.target.value)}/>
       </div>
+      {/* 扶養ビザ（jaのみ） */}
+      {f.dependentVisaLabel && (
+        <div style={{marginBottom:20}}>
+          <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:6}}>
+            <label className="form-label" style={{margin:0}}>{f.dependentVisaLabel}</label>
+            <span style={{color:'#e05a5a',fontSize:'.7rem'}}>{f.required}</span>
+          </div>
+          <div style={{display:'flex',gap:20,marginBottom:4}}>
+            <label style={{display:'flex',alignItems:'center',gap:6,cursor:'pointer',fontSize:'.88rem',color:'#333'}}>
+              <input type="radio" name="dependentVisa" value="consult" required checked={dependentVisa==='consult'} onChange={()=>setDependentVisa('consult')} style={{accentColor:'#0d4f3c'}}/>
+              {f.dependentVisaConsult}
+            </label>
+            <label style={{display:'flex',alignItems:'center',gap:6,cursor:'pointer',fontSize:'.88rem',color:'#333'}}>
+              <input type="radio" name="dependentVisa" value="no" required checked={dependentVisa==='no'} onChange={()=>setDependentVisa('no')} style={{accentColor:'#0d4f3c'}}/>
+              {f.dependentVisaNo}
+            </label>
+          </div>
+          <p style={{margin:0,fontSize:'.75rem',color:'#888'}}>
+            ※ <a href="#faq-cat-C" style={{color:'#0d4f3c',textDecoration:'underline'}}>{f.dependentVisaNote}</a>
+          </p>
+        </div>
+      )}
       {/* 流入経路アンケート */}
       {f.sourceOptions && (
         <div style={{marginBottom:20}}>
