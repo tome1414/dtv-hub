@@ -485,6 +485,8 @@ const zh: Dictionary = {
       dependentVisaNo: '不需要',
       dependentVisaNote: '关于家属签证的费用与手续',
       successMessage: '✓ 提交成功！我们将在1个工作日内与您联系。',
+      receiptNote: '通过Messenger联系时，\n请先发送此受理编号。',
+      messengerCta: '通过Messenger咨询',
     },
     nav: {
       plans: '价格方案',

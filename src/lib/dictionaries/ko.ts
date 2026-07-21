@@ -485,6 +485,8 @@ const ko: Dictionary = {
       dependentVisaNo: '필요 없습니다',
       dependentVisaNote: '부양 비자 비용 및 절차 안내',
       successMessage: '✓ 제출 완료! 1 영업일 이내에 연락드리겠습니다.',
+      receiptNote: 'Messenger로 문의하실 경우,\n이 접수 번호를 먼저 보내주세요.',
+      messengerCta: 'Messenger로 상담하기',
     },
     nav: {
       plans: '요금 플랜',

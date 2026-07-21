@@ -491,6 +491,8 @@ const ja: Dictionary = {
         footer: 'お申し込み前に必ずお問い合わせください。',
       },
       successMessage: '✓ 送信が完了しました！担当者より1営業日以内にご連絡します。',
+      receiptNote: 'Messengerでご連絡いただく場合は、\nこの受付番号を最初にお送りください。',
+      messengerCta: 'Messengerで相談する',
     },
     nav: {
       plans: '料金プラン',

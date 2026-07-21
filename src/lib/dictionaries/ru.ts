@@ -488,6 +488,8 @@ const ru: Dictionary = {
       dependentVisaNo: 'Не нужна',
       dependentVisaNote: 'О стоимости и процедуре визы для иждивенцев',
       successMessage: '✓ Отправлено! Мы свяжемся с тобой в течение 1 рабочего дня.',
+      receiptNote: 'При обращении через Messenger\nсначала отправьте этот номер заявки.',
+      messengerCta: 'Написать в Messenger',
     },
     nav: {
       plans: 'План ценообразования',

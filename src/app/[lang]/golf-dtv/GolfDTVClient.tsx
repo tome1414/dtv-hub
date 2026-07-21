@@ -21,6 +21,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
   const [scrollTracked, setScrollTracked] = useState(false)
   const [navScrolled, setNavScrolled] = useState(false)
   const [inquirySubmitted, setInquirySubmitted] = useState(false)
+  const [receiptNumber, setReceiptNumber] = useState('')
   const [affiliateOpen, setAffiliateOpen] = useState(false)
   const [affiliateForm, setAffiliateForm] = useState({ name: '', email: '', platform: '', message: '' })
   const [affiliateStatus, setAffiliateStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
@@ -485,7 +486,20 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             {inquirySubmitted ? (
               <div style={{textAlign:'center',padding:'80px 0'}}>
                 <div style={{fontSize:'3rem',marginBottom:16}}>✓</div>
-                <p style={{color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem',margin:0}}>{d.form.successMessage}</p>
+                <p style={{color:'#0d4f3c',fontWeight:700,fontSize:'1.1rem',margin:'0 0 24px'}}>{d.form.successMessage}</p>
+                {receiptNumber && (
+                  <div style={{display:'inline-block',background:'#f5f0e6',borderRadius:12,padding:'20px 32px',textAlign:'center'}}>
+                    <p style={{margin:'0 0 4px',fontSize:'.8rem',color:'#888',letterSpacing:'.05em',textTransform:'uppercase'}}>Receipt No.</p>
+                    <p style={{margin:'0 0 16px',fontSize:'1.4rem',fontWeight:700,color:'#0d4f3c',letterSpacing:'.05em'}}>{receiptNumber}</p>
+                    <p style={{margin:'0 0 16px',fontSize:'.85rem',color:'#555',lineHeight:1.7}}>{d.form.receiptNote}</p>
+                    {process.env.NEXT_PUBLIC_MESSENGER_URL && (
+                      <a href={process.env.NEXT_PUBLIC_MESSENGER_URL} target="_blank" rel="noopener noreferrer"
+                        style={{display:'inline-block',background:'#0084ff',color:'#fff',fontWeight:700,fontSize:'.9rem',padding:'12px 24px',borderRadius:999,textDecoration:'none'}}>
+                        {d.form.messengerCta}
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             ) : (
               <>
@@ -508,7 +522,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </div>
                 {/* Form */}
                 <div style={{background:'#f5f0e6',borderRadius:24,padding:40}}>
-                  <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} locale={locale} onSubmitDone={()=>setInquirySubmitted(true)} />
+                  <InquiryForm plans={d.plans.items} cta={d.inquiry.cta} f={d.form} locale={locale} onSubmitDone={(rn)=>{setInquirySubmitted(true);setReceiptNumber(rn)}} />
                 </div>
               </>
             )}
@@ -1132,7 +1146,7 @@ function normalizePlan(plan: string): 'silver' | 'gold' | 'platinum' | 'undecide
   return 'undecided'
 }
 
-function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; cta: string; f: any; locale: string; onSubmitDone: () => void }) {
+function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; cta: string; f: any; locale: string; onSubmitDone: (receiptNumber: string) => void }) {
   const [loading, setLoading] = React.useState(false)
   const [sendError, setSendError] = React.useState(false)
   const formStarted = React.useRef(false)
@@ -1173,7 +1187,8 @@ function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; ct
         }),
       })
       if (!res.ok) throw new Error('api')
-      onSubmitDone()
+      const data = await res.json()
+      onSubmitDone(data.receiptNumber || '')
       pushGolfDtvLead(locale, normalizePlan(plan), agencyService, fiveYearPlan, annualRenewal, eventId)
     } catch (err) {
       setSendError(true)

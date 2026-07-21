@@ -2,6 +2,17 @@ import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { sendCapiLead } from '@/lib/meta-capi'
 
+function generateReceiptNumber(): string {
+  const now = new Date()
+  const jst = new Date(now.getTime() + 9 * 60 * 60 * 1000)
+  const yy = String(jst.getUTCFullYear()).slice(2)
+  const mm = String(jst.getUTCMonth() + 1).padStart(2, '0')
+  const dd = String(jst.getUTCDate()).padStart(2, '0')
+  const hh = String(jst.getUTCHours()).padStart(2, '0')
+  const mi = String(jst.getUTCMinutes()).padStart(2, '0')
+  return `GD-${yy}${mm}${dd}-${hh}${mi}`
+}
+
 export async function POST(req: NextRequest) {
   try {
     const {
@@ -9,6 +20,8 @@ export async function POST(req: NextRequest) {
       dependentVisa, sources, referral, message,
       eventId, fbp, fbc, eventSourceUrl,
     } = await req.json()
+
+    const receiptNumber = generateReceiptNumber()
 
     // ── Gmail 送信 ──────────────────────────────────────────────
     const transporter = nodemailer.createTransport({
@@ -24,6 +37,7 @@ export async function POST(req: NextRequest) {
   <div style="background:#082d21;padding:24px 28px;">
     <p style="margin:0;color:#c9a84c;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">GolfDTV — New Inquiry</p>
     <h1 style="margin:6px 0 0;color:#fff;font-size:1.2rem;">新規お問い合わせ</h1>
+    <p style="margin:8px 0 0;color:#c9a84c;font-size:.85rem;font-weight:700;">受付番号: ${receiptNumber}</p>
   </div>
   <div style="background:#fdf8ee;padding:28px;">
     <table style="width:100%;border-collapse:collapse;font-size:.9rem;">
@@ -101,12 +115,17 @@ export async function POST(req: NextRequest) {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            receiptNumber,
             timestamp: new Date().toISOString(),
             name,
             email,
             nationality: nationality || '',
             plan: plan || '',
             agencyService: agencyService ? '希望' : '不要',
+            dependentVisa: dependentVisa === 'consult' ? '相談したい' : dependentVisa === 'no' ? '不要' : '—',
+            fiveYearPlan: fiveYearPlan ? '希望' : '—',
+            annualRenewal: annualRenewal ? '希望' : '—',
+            sources: Array.isArray(sources) && sources.length ? sources.join(' / ') : '—',
             referral: referral || '',
             message: message || '',
           }),
@@ -145,7 +164,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true, receiptNumber })
   } catch (err) {
     console.error('Contact API error:', err)
     return NextResponse.json({ error: 'Failed to send' }, { status: 500 })

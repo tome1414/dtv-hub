@@ -490,6 +490,8 @@ const en: Dictionary = {
       dependentVisaNo: 'Not needed',
       dependentVisaNote: 'About dependent visa fees and procedures',
       successMessage: '✓ Submitted! We will contact you within 1 business day.',
+      receiptNote: 'When contacting us via Messenger,\nplease send this reference number first.',
+      messengerCta: 'Chat on Messenger',
     },
     nav: {
       plans: 'Pricing Plans',
