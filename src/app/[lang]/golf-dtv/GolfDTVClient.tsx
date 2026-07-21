@@ -977,7 +977,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <span className={`accordion-icon${open?' open':''}`}>+</span>
       </button>
       <div className={`accordion-content${open?' open':''}`}>
-        <div style={{paddingBottom:20,color:'#555',fontSize:'.9rem',lineHeight:1.9,whiteSpace:'pre-line'}}>{a}</div>
+        <div style={{paddingBottom:20,color:'#555',fontSize:'.9rem',lineHeight:1.9}} dangerouslySetInnerHTML={{__html:a.replace(/\n/g,'<br/>')}} />
       </div>
     </div>
   )
@@ -1280,7 +1280,7 @@ function InquiryForm({ plans, cta, f, locale, onSubmitDone }: { plans: any[]; ct
             </label>
           </div>
           <p style={{margin:0,fontSize:'.75rem',color:'#888'}}>
-            ※ <a href="#faq-cat-C" style={{color:'#0d4f3c',textDecoration:'underline'}}>{f.dependentVisaNote}</a>
+            ※ <a href="#faq-cat-F" style={{color:'#0d4f3c',textDecoration:'underline'}}>{f.dependentVisaNote}</a>
           </p>
         </div>
       )}
