@@ -31,6 +31,12 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
     pushGolfDtvView(locale)
   }, [locale])
 
+  useEffect(() => {
+    if (inquirySubmitted) {
+      document.getElementById('inquiry')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [inquirySubmitted])
+
   // スクロール深度追跡 + ナビ透過制御
   useEffect(() => {
     const handleScroll = () => {
