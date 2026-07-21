@@ -217,91 +217,135 @@ const en: Dictionary = {
       categories: [
         {
           id: 'A',
-          name: 'About DTV Visa',
+          name: 'Can I Apply?',
           questions: [
             {
-              q: 'Can you really get a DTV visa through golf?',
-              a: 'Yes, it\'s part of Thailand\'s official "Soft Power Visa Program." Golf is a government-recognized sport, and through our partnership with Ken\'s Golf Bangkok (Thailand PGA-certified), you can legitimately apply for a DTV visa. Our 96% success rate proves it works.',
+              q: 'I am currently in Thailand. Can I still apply?',
+              a: 'Yes, but the DTV visa must generally be applied for outside Thailand at a Thai embassy or consulate. If you are currently in Thailand, you will usually need to leave the country first and submit your application from a nearby country or from your home country.',
             },
             {
-              q: 'How long is a DTV visa valid?',
-              a: 'The DTV visa is valid for 5 years, making it Thailand\'s longest-stay option for digital professionals and retirees.',
-            },
-            {
-              q: 'Is prior golf experience required?',
-              a: 'No. This program doesn\'t require golf skills. It\'s designed to support Thailand\'s sports promotion policy, not to develop athletes.',
-            },
-            {
-              q: 'What documents are needed as "proof of residence" for the application?',
-              a: 'This document does not prove your permanent home address — it proves that you are legally present in the jurisdiction of the consulate where you apply. You can apply at any Thai consulate or embassy outside Thailand, including from a third country.\n\n[Examples]\n① Applying at a Thai embassy in your home country → driver\'s license, utility bills, etc.\n② Applying in Vietnam while traveling → Vietnamese tourist visa + hotel receipt, or a flight ticket to Thailand\n③ Applying from any other third country → a valid visa for that country, proof of accommodation, or flight tickets\n\n※ Rules for third-country applications vary by consulate (e.g. the Thai Embassy in Seoul may not accept applications from foreign nationals on tourist visas). Always confirm directly with the consulate before applying.\n\n※ Nationals of certain countries designated by the Thai government as "Special Observation Countries" (e.g. Afghanistan, Iran, Iraq, Nigeria, Pakistan) may face restrictions when applying at Thai consulates in third countries. They may need to apply in their home country or submit additional documents such as a criminal record clearance. Please contact us in advance if this applies to you.',
+              q: 'Where do Thailand-based applicants usually apply from?',
+              a: 'Many Thailand-based applicants consider applying through Thai embassies or consulates in nearby countries such as Vietnam, Laos, Malaysia, or Japan. However, the most suitable location depends on your nationality, immigration status, and timing. Since third-country application rules and required documents can vary by embassy or consulate, we recommend checking with us in advance before you travel.',
             },
           ],
         },
         {
           id: 'B',
-          name: 'Plans & Pricing',
+          name: 'Required Documents (Bank Balance, Passport, and Related Items)',
           questions: [
             {
-              q: 'What\'s the difference between Silver, Gold, and Platinum?',
-              a: 'The plans differ in lesson frequency, course rounds, and facility access. Silver = 12 lessons/year, Gold = 6 one-on-one + 1 course round, Platinum = 12 one-on-one + 4 course rounds.',
+              q: 'Can I use a bank account from any country for the financial proof?',
+              a: 'In general, your financial proof should be issued under your own name and clearly show the required balance. The document should be in English or officially translated. Investment accounts, brokerage accounts, and crypto asset accounts are often less likely to be accepted. In addition, a complete PDF statement is usually required rather than cropped images or screenshots. If you are unsure about your account type or document format, please contact us in advance.',
             },
             {
-              q: 'How do I pay?',
-              a: 'We accept bank transfers and credit card payments. Details will be provided after your initial consultation.',
+              q: 'Do I need to maintain THB 500,000 for three months?',
+              a: 'Yes, you are generally required to show at least THB 500,000 in financial proof. In the past, a balance certificate alone was sometimes enough, but the review process has become stricter, and many embassies and consulates now request bank transaction statements for the most recent three months as well. For that reason, it is important not to rely on a last-minute deposit only. In practice, it is safer to maintain the required balance from before filing until your visa is approved. If your funds were deposited only shortly before application, you may be asked to provide additional explanation.',
             },
             {
-              q: 'What\'s the difference between plans and the agency add-on?',
-              a: 'Plans cover your golf school program only. The agency add-on handles all visa paperwork and embassy procedures, plus provides the refund guarantee.',
+              q: 'What counts as proof of residence for DTV application purposes?',
+              a: 'In this context, proof of residence does not simply mean your current home address. It means proof that you are legally staying within the jurisdiction of the Thai embassy or consulate where you are applying. Since DTV applications can be submitted outside Thailand, some applicants also apply while staying in a third country.\n\nTypical examples:\n① Applying at the Thai embassy or consulate in your home country → Driver\'s license, utility bill, or similar local address documents\n② Applying at the Thai consulate in Hanoi while staying in Vietnam → Vietnamese tourist visa plus hotel receipt, or a flight ticket related to your stay\n③ Applying from another third country → A valid visa for that country, accommodation proof, or flight documentation\n\nThird-country application rules vary by embassy and consulate. Some missions do not accept applications from foreign nationals who are staying only on a tourist visa. You should therefore confirm the latest rules directly with the specific embassy or consulate before applying.\n\nNationals of countries that may be subject to special review by Thai authorities, such as Afghanistan, Iran, Iraq, Nigeria, or Pakistan, may face restrictions on third-country applications. In some cases, applying from the home country or submitting additional documents such as a police clearance certificate may be required. If this may apply to you, please contact us before proceeding.',
+            },
+            {
+              q: 'How long does it take to receive the school documents after I sign up?',
+              a: 'After your course payment is confirmed, we usually issue the official DTV application documents, such as the acceptance letter and study certificate, within 3 to 5 business days. If additional confirmation is needed due to individual circumstances, processing may take slightly longer.',
+            },
+            {
+              q: 'What should I do if my passport has limited validity remaining?',
+              a: 'Although DTV is generally issued as a five-year visa, your passport should still have at least 12 months of validity remaining at the time of application. In many cases, you may also be asked to submit images of the pages in your passport that contain visa stamps. If your passport is close to expiry or has many stamped pages already filled, renewing or reissuing it in advance may make the application process smoother.',
             },
           ],
         },
         {
           id: 'C',
-          name: 'Refunds & Guarantees',
+          name: 'Golf Experience and Lesson Attendance',
           questions: [
             {
-              q: 'What if my visa is rejected?',
-              a: 'With the agency plan, we refund 100% of your school fees. Without the agency plan, we refund 50%. The 10,000 THB visa application fee is non-refundable in both cases. (Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand.)',
+              q: 'Can I apply even if I have never played golf before?',
+              a: 'Yes, you can. Golf DTV is not designed for professional golf training. It is structured as a program centered on golf as part of a Thai soft-power and cultural activity route. Even complete beginners who have never held a golf club can follow the course and receive the required documentation. Golf clubs are also available free of charge.',
             },
             {
-              q: 'Do I get a refund without the agency plan?',
-              a: 'Yes, 50% of school fees. The agency plan provides 100% refund protection.',
+              q: 'Do I need to actually attend the lessons in person?',
+              a: 'Yes. Golf DTV is designed on the basis of in-person participation. The program is intended to involve actual lesson attendance, and online-only participation is not available.',
             },
             {
-              q: 'Is a bank balance certificate alone sufficient, or is a transaction history also needed?',
-              a: 'A bank balance certificate showing 500,000+ THB equivalent is required at the time of application.\n\nHowever, there is a growing trend of consulates also requesting 3 months of bank transaction statements (transaction history) in addition to the balance certificate.\n\nWe recommend preparing both documents in advance to be safe.',
+              q: 'Where do the lessons take place?',
+              a: 'Lessons are provided through a partner facility, and they are generally held at Ken\'s Golf Bangkok in central Bangkok.',
             },
           ],
         },
         {
           id: 'D',
-          name: 'Lessons & Facilities',
+          name: 'Fees and Refunds',
           questions: [
             {
-              q: 'Where do the lessons take place?',
-              a: 'At Ken\'s Golf Bangkok, our partner facility in Bangkok with indoor and outdoor ranges.',
+              q: 'What is the total cost?',
+              a: 'In general, the total cost includes the school fee plus the visa application fee paid to the Thai embassy or consulate of THB 10,000, or the equivalent in local currency depending on the place of application. Additional costs apply if you include dependent applications or a visa support service. If you want to know the total cost for your own case, please feel free to contact us.',
             },
             {
-              q: 'Can I take lessons online?',
-              a: 'No, in-person lessons at the facility are required as part of the official program.',
+              q: 'If my visa is refused by the embassy, will I receive a refund?',
+              a: 'Refund terms depend on the plan you choose.\n\n・Visa Support Plan: If your visa is refused, we offer a full refund of both the school fee and the support fee.\n・Standard Plan: If the refusal is not caused by missing or incorrect school documents, we will refund the applicable amount after deducting the cancellation fee or in accordance with the applicable refund condition.\n・Important Note: Refusals caused by clearly applicant-related reasons, such as insufficient bank balance, criminal history, or overstay history, are not eligible for refund.\n\nPlease see our <a href="#refund" style="color:#0d4f3c;text-decoration:underline;">Refund Policy</a> for full details.',
+            },
+            {
+              q: 'What is the difference between the visa support plan and the standard plan?',
+              a: 'The standard plan mainly covers the course-related side of the process, while the visa support plan also includes document preparation guidance and assistance with the visa application process. Refund conditions also differ depending on the plan, so we recommend reviewing the differences before applying.',
+            },
+            {
+              q: 'What payment methods are available?',
+              a: 'We may offer multiple payment methods, including bank transfer and card payment. Available options and settlement currency may vary, so please follow the payment guidance provided at the time of application.',
             },
           ],
         },
         {
           id: 'E',
-          name: 'General',
+          name: 'Basic Visa Comparisons',
           questions: [
             {
-              q: 'I heard the visa-free stay period in Thailand is changing from 60 days — what\'s happening?',
-              a: 'Thailand\'s Cabinet formally approved reverting the visa-free stay from 60 to 30 days on May 19, 2026 (effective 15 days after publication in the Royal Gazette). This effectively eliminates long-term visa-free stays for Japanese and most Western nationals.\n\nNote: South Korea, Brazil, Peru, Argentina, and Chile are exempt from this change under bilateral agreements and continue to enjoy 90-day visa-free stays.\n\nWith a DTV visa, you can stay up to 180 days per entry (approx. 1 year with the in-country extension), making DTV more valuable than ever.',
+              q: 'What is the DTV visa?',
+              a: 'DTV is a long-stay visa introduced by the Thai government. In general, it is a five-year multiple-entry visa, allowing stays of up to 180 days per entry, with the possibility of an additional 180-day extension inside Thailand. It is different from work visas and retirement visas in both eligibility and structure, so it is important to compare routes and choose the one that best fits your purpose.',
             },
             {
-              q: 'What\'s the minimum age?',
-              a: 'You must be 18+ to apply for a DTV visa. There\'s no maximum age limit.',
+              q: 'Can I really apply for DTV through golf lessons?',
+              a: 'Yes. To apply under the DTV soft-power route, it is not enough to simply attend casual lessons. The program must be supported by an official curriculum that meets the relevant Thai government-related requirements, along with documentation prepared in line with the applicable standards. Our school provides the structure, experience, and application know-how required for the Golf DTV route, and many applicants have already obtained their five-year DTV visa through our program.',
             },
             {
-              q: 'Can my family join?',
-              a: 'Yes, each family member applies individually to their own plan. Contact us for family discounts.',
+              q: 'How is this different from Thailand Elite (Thailand Privilege)?',
+              a: 'The main difference is upfront cost and the basis of eligibility. Thailand Privilege requires a high membership fee, while Golf DTV is structured around the school tuition and the embassy application fee. As a result, it offers a more accessible path for people seeking a similar long-term stay period at a significantly lower initial cost.',
+            },
+            {
+              q: 'How is this different from an ED visa or a retirement visa?',
+              a: 'An ED visa is centered on school enrollment and attendance control, whereas Golf DTV follows the DTV framework. It offers a more flexible stay without the frequent renewal burden and attendance or language-test obligations commonly associated with some ED visa arrangements.\n\nIt is also different from a retirement visa in that it does not require you to keep THB 800,000 in a Thai bank account on an ongoing basis, and there is no upper age limit. For that reason, some applicants also consider switching from a retirement visa to DTV.',
+            },
+          ],
+        },
+        {
+          id: 'F',
+          name: 'Family Accompaniment',
+          questions: [
+            {
+              q: 'Can my spouse or children apply with me?',
+              a: 'Yes, they can. The legal spouse of the main DTV applicant, as well as children under the age of 20, can apply together under the DTV dependent category.\n\nOur dependent visa support fees are as follows.\n・First dependent (spouse or unmarried child under 20): +10,000 THB\n・Second and each additional dependent: +5,000 THB per person\n\nPlease note that the embassy visa application fee of 10,000 THB equivalent is also charged separately for each dependent, just as it is for the main applicant. If you are interested, please select the dependent visa option on the inquiry form.',
+            },
+            {
+              q: 'Do my family members also need to enroll in the golf school?',
+              a: 'No, they do not. For a Golf DTV application, only the main applicant needs to enroll in the school. Family members can apply without paying school tuition as long as they prepare documents proving the family relationship, such as a marriage certificate or birth certificate.',
+            },
+          ],
+        },
+        {
+          id: 'G',
+          name: 'After Approval and Renewal-Related Options',
+          questions: [
+            {
+              q: 'Will I need an updated school certificate after the first year?',
+              a: 'The DTV visa itself remains valid for five years once issued. However, based on the latest operational practices our school has confirmed with Thai consular posts in multiple countries, there are cases where immigration officers request an updated document showing that the applicant is still continuing the relevant soft-power activity when re-entering Thailand or applying for a 180-day in-country extension.\n\nFor that reason, we offer a school continuation option that allows us to issue updated acceptance letters or continuation certificates at a lower cost from the second year onward. This is designed for applicants who want to reduce risk when re-entering Thailand or extending their stay. Please contact us through the inquiry form for more details.',
+            },
+            {
+              q: 'What is the 5-year lump-sum plan?',
+              a: 'This is an option that allows you to contract the continuation program for five years in one arrangement. The first year is charged at the normal selected-plan rate, and years two through five are offered at 20% off the regular price. Full payment is required upfront. We issue updated acceptance letters whenever needed for re-entry or 180-day extension procedures. This option is voluntary and is recommended for those who want stronger long-term preparation in case supporting documents are requested after the initial school period.',
+            },
+            {
+              q: 'What is the annual renewal plan?',
+              a: 'This is a yearly continuation option. Each renewal is available at 10% off the regular price of your selected school plan. Unlike the five-year lump-sum plan, this option is paid at each renewal rather than all at once, giving you more flexibility. This is also a voluntary option.',
             },
           ],
         },
@@ -441,6 +485,10 @@ const en: Dictionary = {
         ],
         footer: 'Please contact us before applying.',
       },
+      dependentVisaLabel: 'Dependent Visa (Spouse / Children)',
+      dependentVisaConsult: 'I\'d like to discuss this',
+      dependentVisaNo: 'Not needed',
+      dependentVisaNote: 'About dependent visa fees and procedures',
       successMessage: '✓ Submitted! We will contact you within 1 business day.',
     },
     nav: {
