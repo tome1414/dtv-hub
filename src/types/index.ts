@@ -199,6 +199,8 @@ export interface Dictionary {
       dependentVisaNo?: string
       dependentVisaNote?: string
       successMessage: string
+      receiptNote?: string
+      messengerCta?: string
     }
     nav: {
       plans: string
