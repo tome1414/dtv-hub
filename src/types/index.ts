@@ -73,6 +73,22 @@ export interface Dictionary {
       headline: string
       subheadline: string
       cta: string
+      ctaPrimary?: string
+    }
+    regulationAlert?: {
+      title: string
+      body: string
+      cta: string
+    }
+    japanApplicationSection?: {
+      title: string
+      body: string
+      cta: string
+    }
+    octoberUpdate?: {
+      title: string
+      body: string
+      cta: string
     }
     plans: {
       intro: string

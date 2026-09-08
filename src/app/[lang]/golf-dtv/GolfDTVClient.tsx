@@ -209,7 +209,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               {d.hero.subheadline}
             </p>
             <div style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap',marginBottom:60}}>
-              <a href="#inquiry" className="btn-gold" style={{fontSize:'1rem',padding:'16px 40px'}} onClick={()=>pushGolfDtvCtaClick(locale,'hero_primary','#inquiry')}>{d.hero.cta}</a>
+              <a href="#inquiry" className="btn-gold" style={{fontSize:'1rem',padding:'16px 40px'}} onClick={()=>pushGolfDtvCtaClick(locale,'hero_primary','#inquiry')}>{d.hero.ctaPrimary || d.hero.cta}</a>
             </div>
             {/* Trust stats */}
             <div className="hero-stats-bar">
@@ -232,6 +232,17 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             </div>
           </div>
         </section>
+
+        {/* REGULATION ALERT（jaのみ） */}
+        {d.regulationAlert && (
+          <section style={{padding:'0 24px',marginTop:-32,position:'relative',zIndex:2}}>
+            <div style={{maxWidth:800,margin:'0 auto',background:'#fff8e6',border:'2px solid #e2c46e',borderRadius:16,padding:'28px 32px',boxShadow:'0 8px 24px rgba(0,0,0,.08)'}}>
+              <h2 style={{fontSize:'clamp(1.05rem,2.2vw,1.3rem)',fontWeight:900,color:'#7a5c00',margin:'0 0 14px',lineHeight:1.5}}>{d.regulationAlert.title}</h2>
+              <p style={{color:'#5c4400',fontSize:'.88rem',lineHeight:1.9,margin:'0 0 20px',whiteSpace:'pre-line'}}>{d.regulationAlert.body}</p>
+              <a href="#inquiry" className="btn-gold" style={{fontSize:'.88rem',padding:'12px 28px'}} onClick={()=>pushGolfDtvCtaClick(locale,'regulation_alert','#inquiry')}>{d.regulationAlert.cta}</a>
+            </div>
+          </section>
+        )}
 
         {/* WHY SAFE */}
         <section style={{padding:'72px 24px',background:'#082d21'}}>
@@ -313,6 +324,17 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
           </div>
         </section>
 
+        {/* JAPAN APPLICATION（jaのみ） */}
+        {d.japanApplicationSection && (
+          <section style={{padding:'64px 24px',background:'#fff'}}>
+            <div style={{maxWidth:760,margin:'0 auto',textAlign:'center'}}>
+              <h2 style={{fontSize:'clamp(1.2rem,2.8vw,1.7rem)',fontWeight:900,color:'#0a2e1f',marginBottom:20}}>{d.japanApplicationSection.title}</h2>
+              <p style={{color:'#555',fontSize:'.9rem',lineHeight:1.9,whiteSpace:'pre-line',textAlign:'left',background:'#f9f6ef',borderRadius:16,padding:'28px 32px',marginBottom:24}}>{d.japanApplicationSection.body}</p>
+              <a href="#inquiry" className="btn-gold" style={{fontSize:'.9rem',padding:'14px 32px'}} onClick={()=>pushGolfDtvCtaClick(locale,'japan_application','#inquiry')}>{d.japanApplicationSection.cta}</a>
+            </div>
+          </section>
+        )}
+
         {/* PLANS */}
         <section style={{padding:'80px 24px',background:'#f5f0e6'}} id="plans">
           <div style={{maxWidth:1100,margin:'0 auto'}}>
@@ -377,6 +399,13 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 )
               })}
             </div>
+            {d.octoberUpdate && (
+              <div style={{maxWidth:800,margin:'40px auto 0',background:'#0a2e1f',border:'1px solid rgba(201,168,76,.4)',borderRadius:16,padding:'28px 32px',textAlign:'center'}}>
+                <h2 style={{fontSize:'clamp(1.05rem,2.2vw,1.3rem)',fontWeight:900,color:'#e2c46e',margin:'0 0 14px',lineHeight:1.5}}>{d.octoberUpdate.title}</h2>
+                <p style={{color:'rgba(255,255,255,.8)',fontSize:'.87rem',lineHeight:1.9,margin:'0 0 20px',whiteSpace:'pre-line',textAlign:'left'}}>{d.octoberUpdate.body}</p>
+                <a href="#inquiry" className="btn-gold" style={{fontSize:'.87rem',padding:'12px 28px'}} onClick={()=>pushGolfDtvCtaClick(locale,'october_update','#inquiry')}>{d.octoberUpdate.cta}</a>
+              </div>
+            )}
           </div>
         </section>
 
