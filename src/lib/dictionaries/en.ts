@@ -410,7 +410,7 @@ const en: Dictionary = {
         'Industry first golf school DTV acquisition',
         'Supervised by state-certified legal expert',
         '100% refund guarantee (with agency plan)',
-        'Direct liaison with Thai embassies worldwide',
+        'Embassy-Specific Application Guidance',
       ],
     },
     whySafe: {
