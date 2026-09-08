@@ -92,6 +92,13 @@ export interface Dictionary {
       note: string
       cta: string
     }
+    globalApplicationSection?: {
+      title: string
+      intro: string
+      items: string[]
+      note: string
+      cta: string
+    }
     octoberUpdate?: {
       title: string
       body: string

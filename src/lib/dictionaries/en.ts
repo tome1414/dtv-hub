@@ -118,20 +118,45 @@ const en: Dictionary = {
     'DTV Club is a comprehensive information portal dedicated to Thailand\'s Destination Thailand Visa (DTV). It provides application guides, document checklists, Soft Power visa support (via golf schools), life-in-Thailand resources, and access to a Discord community of 10,000+ members. Available in Japanese, English, Chinese, Korean, and Russian.',
   golfDTV: {
     meta: {
-      title: 'Golf DTV | Get Your 5-Year Thailand Visa While Playing Golf',
+      title: 'Thailand DTV Visa Through Golf | 2026 Requirements Guide',
       description:
-        'Golf DTV – The first agency to establish golf school-based DTV visa acquisition. Partnership with Thailand PGA-certified professionals ensures your 5-year Thai visa. 96% success rate with 100% refund guarantee (with agency plan).',
+        "Thailand's 5-year DTV visa through golf. Updated for the 31 August 2026 rules — criminal record clearance, proof of residence, and where you can apply.",
     },
     hero: {
       badge: 'Industry First • 96% Success Rate',
       headline: 'Unlock the 5-Year DTV with Golf',
-      subheadline: 'Acquire your DTV visa through a golf school partnership. Thailand PGA-certified coaches ensure your success.',
+      subheadline: "Apply for Thailand's 5-year DTV through golf. Updated for the new DTV requirements introduced on 31 August 2026, with support based on your nationality, residency status and application location.",
       cta: 'Free Consultation',
+      ctaPrimary: 'Check If You Can Apply',
+    },
+    regulationAlert: {
+      title: 'Important: DTV Application Requirements Changed on 31 August 2026',
+      body: "The supporting-document requirements for DTV applications changed on 31 August 2026.\n\nApplicants may now need to provide residence-related documentation required by the Thai embassy or consulate handling the application, and a Criminal Record Clearance is also required.\n\nYou should no longer assume that simply travelling from Thailand to a nearby country will allow you to apply there. Requirements vary by embassy, nationality and residency status.\n\nTell us your situation and we'll help you understand which application route and documents may apply to you.",
+      cta: 'Check Your Application Route',
+    },
+    globalApplicationSection: {
+      title: 'Where Can You Apply for a DTV?',
+      intro: "Your application location affects which documents you need. Here's what to confirm before you book flights or start preparing paperwork.",
+      items: [
+        'DTV applications must be submitted from outside Thailand',
+        'The embassy or consulate handling your application may require specific residence-related evidence',
+        'Travelling to another country on a short-term basis does not automatically mean you can apply there',
+        'Different embassies may interpret acceptable residence documentation differently',
+        'A Criminal Record Clearance is required, and the accepted format may differ by application location',
+        'Confirm the correct application location before booking flights or preparing documents',
+      ],
+      note: 'Requirements vary by Thai embassy or consulate. Additional documents may be required depending on your application location and circumstances. We review your nationality and circumstances to help you understand which application route may be suitable before you apply.',
+      cta: 'Check Your Application Route',
+    },
+    octoberUpdate: {
+      title: 'GolfDTV Is Updating in October 2026',
+      body: 'To support the new DTV application requirements, we are strengthening our document review and application support process.\n\nWe are also planning to add golf booking support through our partnership with Club Thailand.\n\nAs our service expands, GolfDTV plan pricing is scheduled to change from 1 October 2026.\n\nContact us for details about the updated plans and pricing.',
+      cta: 'Ask About October Plans',
     },
     plans: {
       intro: 'Choose Your Plan',
       subtext: 'Select your golf school plan and submit your inquiry. Payment details will be discussed after consultation.',
-      feeNote: '※ The visa application fee (approx. 10,000 THB) is a government fee paid directly to the Thai embassy or consulate — separate from our tuition fees. Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand. Tuition prices are subject to Thai VAT (7%).',
+      feeNote: '※ The standard government visa application fee is generally equivalent to THB 10,000, paid directly to the Thai embassy or consulate — separate from our tuition fees. Fees and exemptions vary by nationality and application location; nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand. Tuition prices are subject to Thai VAT (7%).',
       items: [
         {
           name: 'Silver',
@@ -220,12 +245,20 @@ const en: Dictionary = {
           name: 'Can I Apply?',
           questions: [
             {
-              q: 'I am currently in Thailand. Can I still apply?',
-              a: 'Yes, but the DTV visa must generally be applied for outside Thailand at a Thai embassy or consulate. If you are currently in Thailand, you will usually need to leave the country first and submit your application from a nearby country or from your home country.',
+              q: 'What changed in the DTV application requirements on 31 August 2026?',
+              a: 'The supporting-document requirements for DTV applications changed on 31 August 2026. Applicants may now need to provide residence-related documentation required by the Thai embassy or consulate handling the application, and a Criminal Record Clearance is also required. Requirements vary by embassy, nationality and residency status, so we recommend confirming your situation with us before applying.',
             },
             {
-              q: 'Where do Thailand-based applicants usually apply from?',
-              a: 'Many Thailand-based applicants consider applying through Thai embassies or consulates in nearby countries such as Vietnam, Laos, Malaysia, or Japan. However, the most suitable location depends on your nationality, immigration status, and timing. Since third-country application rules and required documents can vary by embassy or consulate, we recommend checking with us in advance before you travel.',
+              q: 'Can I apply for a DTV while I am in Thailand?',
+              a: 'No. DTV applications must be submitted from outside Thailand at a Thai embassy or consulate. If you are currently in Thailand, you will need to apply from another country where you have an eligible application route. Tell us your situation and we can help you understand what may apply to you.',
+            },
+            {
+              q: 'Can I simply travel to a nearby country and apply there?',
+              a: 'Not automatically. Travelling to another country on a short-term basis does not by itself mean you can apply for a DTV there. The embassy or consulate handling your application may require specific residence-related evidence, and requirements vary by location. We recommend confirming the appropriate application route before booking flights or preparing documents.',
+            },
+            {
+              q: 'How do I know which Thai embassy or consulate I can apply through?',
+              a: 'This depends on your nationality, residency status, and where you are able to provide the residence-related evidence required for that application location. Since this varies case by case, we review your situation and help you understand a suitable application route — please contact us to get started.',
             },
           ],
         },
@@ -242,16 +275,20 @@ const en: Dictionary = {
               a: 'Yes, you are generally required to show at least THB 500,000 in financial proof. In the past, a balance certificate alone was sometimes enough, but the review process has become stricter, and many embassies and consulates now request bank transaction statements for the most recent three months as well. For that reason, it is important not to rely on a last-minute deposit only. In practice, it is safer to maintain the required balance from before filing until your visa is approved. If your funds were deposited only shortly before application, you may be asked to provide additional explanation.',
             },
             {
-              q: 'What counts as proof of residence for DTV application purposes?',
-              a: 'In this context, proof of residence does not simply mean your current home address. It means proof that you are legally staying within the jurisdiction of the Thai embassy or consulate where you are applying. Since DTV applications can be submitted outside Thailand, some applicants also apply while staying in a third country.\n\nTypical examples:\n① Applying at the Thai embassy or consulate in your home country → Driver\'s license, utility bill, or similar local address documents\n② Applying at the Thai consulate in Hanoi while staying in Vietnam → Vietnamese tourist visa plus hotel receipt, or a flight ticket related to your stay\n③ Applying from another third country → A valid visa for that country, accommodation proof, or flight documentation\n\nThird-country application rules vary by embassy and consulate. Some missions do not accept applications from foreign nationals who are staying only on a tourist visa. You should therefore confirm the latest rules directly with the specific embassy or consulate before applying.\n\nNationals of countries that may be subject to special review by Thai authorities, such as Afghanistan, Iran, Iraq, Nigeria, or Pakistan, may face restrictions on third-country applications. In some cases, applying from the home country or submitting additional documents such as a police clearance certificate may be required. If this may apply to you, please contact us before proceeding.',
+              q: 'What residence documents are required?',
+              a: 'In this context, proof of residence does not simply mean your current home address. It means evidence accepted by the Thai embassy or consulate handling your application that you have an eligible connection to that jurisdiction. Different embassies may interpret acceptable residence documentation differently, and requirements vary by nationality and application location. We review your situation and help you understand which documents are likely to apply — please contact us before proceeding.',
             },
             {
-              q: 'How long does it take to receive the school documents after I sign up?',
-              a: 'After your course payment is confirmed, we usually issue the official DTV application documents, such as the acceptance letter and study certificate, within 3 to 5 business days. If additional confirmation is needed due to individual circumstances, processing may take slightly longer.',
+              q: 'Is a Criminal Record Clearance required?',
+              a: 'Yes. Since 31 August 2026, a Criminal Record Clearance is a required supporting document for DTV applications. The accepted format, validity period, and any translation or legalization requirements may vary by embassy or consulate, so we recommend confirming the specifics for your application location with us.',
+            },
+            {
+              q: 'How long does DTV application preparation take?',
+              a: 'School documents are normally prepared within a few business days after payment, once the required information has been confirmed. Overall preparation time also depends on how quickly you can obtain your own personal documents, including any residence-related evidence and your Criminal Record Clearance.',
             },
             {
               q: 'What should I do if my passport has limited validity remaining?',
-              a: 'Although DTV is generally issued as a five-year visa, your passport should still have at least 12 months of validity remaining at the time of application. In many cases, you may also be asked to submit images of the pages in your passport that contain visa stamps. If your passport is close to expiry or has many stamped pages already filled, renewing or reissuing it in advance may make the application process smoother.',
+              a: 'You will need a valid passport at the time of application. Required passport validity may vary by application location — check the latest Thai e-Visa or embassy requirements. In many cases, you may also be asked to submit images of the pages in your passport that contain visa stamps. If your passport is close to expiry or has many stamped pages already filled, renewing or reissuing it in advance may make the application process smoother.',
             },
           ],
         },
@@ -279,7 +316,7 @@ const en: Dictionary = {
           questions: [
             {
               q: 'What is the total cost?',
-              a: 'In general, the total cost includes the school fee plus the visa application fee paid to the Thai embassy or consulate of THB 10,000, or the equivalent in local currency depending on the place of application. Additional costs apply if you include dependent applications or a visa support service. If you want to know the total cost for your own case, please feel free to contact us.',
+              a: 'In general, the total cost includes the school fee plus the government visa application fee. The standard government visa application fee is generally equivalent to THB 10,000, but fees and exemptions vary by nationality and application location — this is separate from our own Application Support service fee. Additional costs apply if you include dependent applications or the Application Support service. If you want to know the total cost for your own case, please feel free to contact us.',
             },
             {
               q: 'If my visa is refused by the embassy, will I receive a refund?',
@@ -292,6 +329,10 @@ const en: Dictionary = {
             {
               q: 'What payment methods are available?',
               a: 'We may offer multiple payment methods, including bank transfer and card payment. Available options and settlement currency may vary, so please follow the payment guidance provided at the time of application.',
+            },
+            {
+              q: 'What happens to GolfDTV pricing from October 2026?',
+              a: 'GolfDTV plan pricing is scheduled to change from 1 October 2026 as we strengthen our document review and application support process, and add golf booking support through our partnership with Club Thailand. Contact us for details about the updated plans and pricing.',
             },
           ],
         },
@@ -378,15 +419,15 @@ const en: Dictionary = {
       items: [
         {
           number: '01',
-          title: 'Direct Liaison with Thai Embassies Worldwide',
+          title: 'Embassy-Specific Application Guidance',
           subtitle: 'Fact-based Operation',
-          body: 'DTV is a newly introduced visa category, and grey areas exist that are not reflected on official websites — including discretionary criteria applied by individual immigration officers. We never rely on internet rumors or outdated information. Our team regularly contacts Thai embassies and consulates across the globe to stay current with official screening standards and real-world immigration practices. This meticulous fact-checking allows us to prepare documents that eliminate risk at the application stage.',
+          body: 'DTV is a newly introduced visa category, and grey areas exist that are not reflected on official websites — including discretionary criteria applied by individual immigration officers. We never rely on internet rumors or outdated information. We review the latest requirements published or provided by the Thai embassy or consulate relevant to your application and help you prepare accordingly, so we can help reduce avoidable document issues before submission.',
         },
         {
           number: '02',
           title: 'Supervised by a Japanese State-Certified Legal Expert',
           subtitle: 'Certified Legal Specialist — Immigration & Documentation (Gyoseishoshi)',
-          body: 'Our visa acquisition framework and compliance procedures are fully supervised by a holder of Japan\'s national license in administrative law — a Gyoseishoshi (State-Certified Legal Specialist in Immigration & Documentation). This rigorous legal oversight ensures that every document we prepare meets both the letter and spirit of Thai immigration law, minimizing the risk of rejection due to errors or inconsistencies. When a Japanese-standard legal expert stands behind your application, confidence is built-in.',
+          body: 'Our visa acquisition framework and compliance procedures are fully supervised by a holder of Japan\'s national license in administrative law — a Gyoseishoshi (State-Certified Legal Specialist in Immigration & Documentation). We review your supporting documents against the current requirements relevant to your application location before submission.',
         },
       ],
     },
@@ -396,13 +437,14 @@ const en: Dictionary = {
       phases: [
         {
           number: '1',
-          title: 'Enrollment & Document Preparation',
-          duration: 'Approx. 1 week',
+          title: 'Application Route Check & Document Preparation',
+          note: 'Preparation time varies depending on how quickly you can obtain your personal documents.',
           steps: [
-            { number: '1', title: 'Inquiry & Plan Confirmation', body: 'Choose your plan and decide whether to add the agency service. Confirm which country you are based in (for embassy selection).' },
-            { number: '2', title: 'Pay Tuition Fee', body: 'Transfer the tuition fee via our designated payment method.' },
-            { number: '3', title: 'Official Documents Issued', body: 'Within 1–3 business days of payment, we email you the enrollment letter and other required Thai-side documents in PDF.' },
-            { number: '4', title: 'Prepare Personal Documents', body: 'Gather: passport (6+ months validity), photo, proof of residence, and bank statement (500,000+ THB equivalent, in English).' },
+            { number: '1', title: 'Tell Us Your Situation', body: 'Share your nationality and current situation so we can review the likely application route and the requirements of the relevant embassy or consulate.' },
+            { number: '2', title: 'Choose Your Plan', body: 'Decide on your plan and whether to add the application support service.' },
+            { number: '3', title: 'Pay Tuition Fee', body: 'Transfer the tuition fee via our designated payment method.' },
+            { number: '4', title: 'GolfDTV Documents Issued', body: 'Once payment is confirmed, we email you the enrollment letter and other required Thai-side documents in PDF, once the required information has been confirmed.' },
+            { number: '5', title: 'Prepare Personal Documents', body: 'Gather: a valid passport, photo, residence-related documents required by the application embassy, Criminal Record Clearance, and financial evidence.\nRequired documents vary by Thai embassy or consulate.\nRequired passport validity may vary by application location. Check the latest Thai e-Visa or embassy requirements.' },
           ],
         },
         {
@@ -478,8 +520,8 @@ const en: Dictionary = {
       restrictedWarning: {
         title: 'Notice: Your selected nationality is designated as a "Special Scrutiny Country" by the Thai government',
         bullets: [
-          'Applications at Thai consulates in third countries (e.g. Japan) may be restricted',
-          'Additional documents such as a criminal record certificate may be required',
+          'Applications through certain embassies or consulates outside your home country may be restricted',
+          'In addition to the standard DTV documents, additional documents or additional review may be required',
           'You may need to apply from your home country or a country where you hold a long-term visa',
           'Even with the Agency Plan, refunds are capped at 50% of school fees if the visa is rejected',
         ],
