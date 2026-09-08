@@ -235,8 +235,8 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
 
         {/* REGULATION ALERT（jaのみ） */}
         {d.regulationAlert && (
-          <section style={{padding:'0 24px',marginTop:-32,position:'relative',zIndex:2}}>
-            <div style={{maxWidth:800,margin:'0 auto',background:'#fff8e6',border:'2px solid #e2c46e',borderRadius:16,padding:'28px 32px',boxShadow:'0 8px 24px rgba(0,0,0,.08)'}}>
+          <section style={{padding:'56px 24px 64px',background:'#fff'}}>
+            <div style={{maxWidth:800,margin:'0 auto',background:'#fff8e6',border:'2px solid #e2c46e',borderRadius:16,padding:'clamp(24px,5vw,36px)',boxShadow:'0 4px 20px rgba(0,0,0,.06)'}}>
               <h2 style={{fontSize:'clamp(1.05rem,2.2vw,1.3rem)',fontWeight:900,color:'#7a5c00',margin:'0 0 14px',lineHeight:1.5}}>{d.regulationAlert.title}</h2>
               <p style={{color:'#5c4400',fontSize:'.88rem',lineHeight:1.9,margin:'0 0 20px',whiteSpace:'pre-line'}}>{d.regulationAlert.body}</p>
               <a href="#inquiry" className="btn-gold" style={{fontSize:'.88rem',padding:'12px 28px'}} onClick={()=>pushGolfDtvCtaClick(locale,'regulation_alert','#inquiry')}>{d.regulationAlert.cta}</a>
