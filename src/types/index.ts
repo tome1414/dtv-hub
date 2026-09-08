@@ -85,6 +85,13 @@ export interface Dictionary {
       body: string
       cta: string
     }
+    koreaApplicationSection?: {
+      title: string
+      intro: string
+      items: string[]
+      note: string
+      cta: string
+    }
     octoberUpdate?: {
       title: string
       body: string

@@ -335,6 +335,28 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
           </section>
         )}
 
+        {/* KOREA APPLICATION（koのみ） */}
+        {d.koreaApplicationSection && (
+          <section style={{padding:'64px 24px',background:'#fff'}}>
+            <div style={{maxWidth:760,margin:'0 auto'}}>
+              <h2 style={{fontSize:'clamp(1.2rem,2.8vw,1.7rem)',fontWeight:900,color:'#0a2e1f',margin:'0 0 12px',textAlign:'center'}}>{d.koreaApplicationSection.title}</h2>
+              <p style={{color:'#666',fontSize:'.88rem',lineHeight:1.8,margin:'0 0 28px',textAlign:'center'}}>{d.koreaApplicationSection.intro}</p>
+              <ul style={{listStyle:'none',padding:'clamp(24px,5vw,32px)',margin:'0 0 20px',background:'#f9f6ef',borderRadius:16,display:'flex',flexDirection:'column',gap:14}}>
+                {d.koreaApplicationSection.items.map((item: string,i: number)=>(
+                  <li key={i} style={{display:'flex',gap:10,alignItems:'flex-start',fontSize:'.88rem',lineHeight:1.8,color:'#333'}}>
+                    <span style={{flexShrink:0,color:'#0d4f3c',fontWeight:700,marginTop:1}}>✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p style={{color:'#888',fontSize:'.78rem',lineHeight:1.8,margin:'0 0 24px'}}>{d.koreaApplicationSection.note}</p>
+              <div style={{textAlign:'center'}}>
+                <a href="#inquiry" className="btn-gold" style={{fontSize:'.9rem',padding:'14px 32px'}} onClick={()=>pushGolfDtvCtaClick(locale,'korea_application','#inquiry')}>{d.koreaApplicationSection.cta}</a>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* PLANS */}
         <section style={{padding:'80px 24px',background:'#f5f0e6'}} id="plans">
           <div style={{maxWidth:1100,margin:'0 auto'}}>
