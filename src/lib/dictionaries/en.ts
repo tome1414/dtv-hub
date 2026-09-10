@@ -217,7 +217,7 @@ const en: Dictionary = {
         'Complete document preparation & review',
         'Embassy application & interview support',
         'Full refund of school fees if visa rejected',
-        'Visa application fee (10,000 THB) non-refundable',
+        'Government visa fees, when applicable, are non-refundable',
       ],
       cta: 'Add Agency Plan',
     },
@@ -272,7 +272,7 @@ const en: Dictionary = {
             },
             {
               q: 'Do I need to maintain THB 500,000 for three months?',
-              a: 'Yes, you are generally required to show at least THB 500,000 in financial proof. In the past, a balance certificate alone was sometimes enough, but the review process has become stricter, and many embassies and consulates now request bank transaction statements for the most recent three months as well. For that reason, it is important not to rely on a last-minute deposit only. In practice, it is safer to maintain the required balance from before filing until your visa is approved. If your funds were deposited only shortly before application, you may be asked to provide additional explanation.',
+              a: 'In general, DTV requires financial proof of at least THB 500,000. However, "maintaining the balance continuously for three months" is not a universal rule. Some embassies or consulates may request financial records covering recent months, and requirements vary by application location, so applicants should confirm the latest rules before applying. Rather than relying only on a last-minute deposit, check the requirements for your specific application location. If you are unsure, please contact us in advance.',
             },
             {
               q: 'What residence documents are required?',
@@ -364,7 +364,7 @@ const en: Dictionary = {
           questions: [
             {
               q: 'Can my spouse or children apply with me?',
-              a: 'Yes, they can. The legal spouse of the main DTV applicant, as well as children under the age of 20, can apply together under the DTV dependent category.\n\nOur dependent visa support fees are as follows.\n・First dependent (spouse or unmarried child under 20): +10,000 THB\n・Second and each additional dependent: +5,000 THB per person\n\nPlease note that the embassy visa application fee of 10,000 THB equivalent is also charged separately for each dependent, just as it is for the main applicant. If you are interested, please select the dependent visa option on the inquiry form.',
+              a: 'Yes, they can. The legal spouse of the main DTV applicant, as well as children under the age of 20, can apply together under the DTV dependent category.\n\nOur dependent visa support fees are as follows.\n・First dependent (spouse or unmarried child under 20): +10,000 THB\n・Second and each additional dependent: +5,000 THB per person\n\nPlease note that the government visa application fee also applies separately for each dependent, just as it does for the main applicant. The standard government visa application fee is generally equivalent to THB 10,000, but fees and exemptions vary by nationality and application location. If you are interested, please select the dependent visa option on the inquiry form.',
             },
             {
               q: 'Do my family members also need to enroll in the golf school?',
@@ -455,7 +455,7 @@ const en: Dictionary = {
           steps: [
             { number: '5', title: 'Create Account', body: 'Register at the official Thai E-Visa website (thaievisa.go.th) with your email and password.' },
             { number: '6', title: 'Fill in Details & Upload Documents', body: 'Enter your application information and upload all documents from Phase 1.' },
-            { number: '7', title: 'Pay Visa Application Fee', body: 'Pay approx. 10,000 THB by credit card. Payment completes your official application submission.' },
+            { number: '7', title: 'Complete the Payment Step', body: 'The standard government visa application fee is generally equivalent to THB 10,000, but fees and exemptions vary by nationality and application location. You still need to complete the payment step in the Thai e-Visa system to finalize your official application submission.' },
           ],
         },
         {
