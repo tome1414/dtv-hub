@@ -3,7 +3,7 @@ title: "DTV e-Visaの書類アップロードで詰まりやすい点"
 slug: "dtv-upload-documents"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV e-Visa 書類 アップロード"
 secondary_keywords:
   - "DTV e-Visa PDF"
@@ -19,8 +19,8 @@ primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-application"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-common-document-mistakes"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -118,9 +118,15 @@ A. e-Visaシステムの仕様によります。多くの場合、該当の書�
 ## 関連記事
 
 - [DTV申請の流れと手順](/ja/dtv-application)
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
-- [DTV申請でよくある書類ミスと差し戻しポイント](/ja/dtv-common-document-mistakes)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
+- [DTV申請でよくある書類ミスと差し戻しポイント](/ja/blog/dtv-common-document-mistakes)
 
 ---
 
-*e-Visaシステムの仕様は変更される場合があります。申請時は公式サイトの案内を優先してください。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*e-Visaシステムの仕様は変更される場合があります。申請時は公式サイトの案内を優先してください。最終更新：2026年9月*
