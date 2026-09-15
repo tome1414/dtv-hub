@@ -3,7 +3,7 @@ title: "DTV面接・追加確認でよく聞かれやすいこと"
 slug: "dtv-interview-questions"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 面接 質問"
 secondary_keywords:
   - "DTV 大使館 面接 内容"
@@ -18,10 +18,10 @@ update_priority: "high"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-interview-format"
+  - "/ja/blog/dtv-interview-format"
   - "/ja/dtv-application"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-acceptance-letter"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-acceptance-letter"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -37,6 +37,9 @@ read_time_minutes: 9
 ---
 
 **DTVの面接や追加確認では、難しい専門質問よりも、「なぜその活動なのか」「タイで何をするのか」「生活費や滞在計画はどう考えているのか」といった基本的な整合性確認が中心になりやすいです。したがって、上手い回答を作るより、申請内容と矛盾しない説明を準備することが重要です。**
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 この記事では、面接・追加確認で確認されやすい論点を整理します。
 
@@ -159,11 +162,17 @@ A. 同伴者の有無を確認されることがあります。家族の帯同�
 
 ## 関連記事
 
-- [DTV面接・面談の実態：対面・オンライン・言語差をどう考えるか](/ja/dtv-interview-format)
+- [DTV面接・面談の実態：対面・オンライン・言語差をどう考えるか](/ja/blog/dtv-interview-format)
 - [DTV申請の流れと手順](/ja/dtv-application)
-- [DTVフリーランス申請の仕事証明](/ja/dtv-freelance-proof)
-- [DTV受入レターで見られやすいポイント](/ja/dtv-acceptance-letter-checkpoints)
+- [DTVフリーランス申請の仕事証明](/ja/blog/dtv-freelance-proof)
+- [DTV受入レターで見られやすいポイント](/ja/blog/dtv-acceptance-letter-checkpoints)
 
 ---
 
-*申請者体験談および大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*申請者体験談および大使館公式案内をもとに作成。最終更新：2026年9月*
