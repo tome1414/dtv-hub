@@ -3,7 +3,7 @@ title: "DTV受入レターとは｜ソフトパワー申請に必要な書類の
 slug: "dtv-acceptance-letter"
 lang: "ja"
 published_at: "2026-04-29"
-updated_at: "2026-04-29"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 受入レター"
 secondary_keywords:
   - "DTV acceptance letter"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Golf DTV詳細を見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-soft-power"
+  - "/ja/blog/dtv-soft-power"
   - "/ja/dtv-required-documents"
 schema_types:
   - "Article"
@@ -35,6 +35,9 @@ read_time_minutes: 7
 ---
 
 DTVのソフトパワールートで申請する場合、「受入レター（Acceptance Letter）」がWorkcationルートにおける雇用契約書に相当する申請根拠書類となります。受入レターとは何か、どのように取得するかを整理します。
+
+> **【2026年8月31日更新】**
+> DTV Supporting Documents（補強書類）に**Proof of Permanent Residence（居住証明書）**と**Certificate of Criminal Record Clearance（犯罪経歴証明書）**が追加されました。必要な書類の形式・内容は申請先公館によって異なります。詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)および申請先公館の最新案内をご確認ください。
 
 **この記事で分かること：** 受入レターの役割・記載内容・発行元・個人での取得方法・サポートサービス経由での取得方法。
 
@@ -163,4 +166,11 @@ A. 受入レターに記載された活動のためにタイに渡航するこ�
 
 ---
 
-*本記事の情報はタイ公館案内をもとにしていますが、要件は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| GolfDTV（サービス・プログラム情報） | Tier C（GolfDTVサービス現行情報） | 2026年9月 |
+
+*本記事の情報はタイ公館案内をもとにしていますが、要件は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年9月*
