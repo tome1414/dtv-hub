@@ -3,7 +3,7 @@ title: "DTV承認後〜タイ生活セットアップガイド：出発前準備
 slug: "dtv-life-setup"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV タイ 生活 準備"
 secondary_keywords:
   - "DTV 承認後 出発 準備"
@@ -20,9 +20,9 @@ update_priority: "high"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-visa"
-  - "/ja/dtv-bank-account"
-  - "/ja/dtv-extension-and-reentry"
+  - "/ja/blog/dtv-visa"
+  - "/ja/blog/dtv-bank-account"
+  - "/ja/blog/dtv-extension-and-reentry"
 schema_types:
   - "Article"
   - "BreadcrumbList"
@@ -255,7 +255,7 @@ DTVでタイに入国した直後は、やることが多く優先順位に迷�
 
 ### 6. 銀行・送金手段の確認
 
-DTVでのタイ国内銀行口座開設については、DTV所持者が開設できるかどうか、開設条件がどの銀行かによって異なります。詳細は[DTVでタイ銀行口座は開ける？](/ja/dtv-bank-account)を参照してください。
+DTVでのタイ国内銀行口座開設については、DTV所持者が開設できるかどうか、開設条件がどの銀行かによって異なります。詳細は[DTVでタイ銀行口座は開ける？](/ja/blog/dtv-bank-account)を参照してください。
 
 **現実的な選択肢：**
 - 日本の銀行カードでのATM引き出し（海外ATM対応のデビットカード）
@@ -292,11 +292,17 @@ A. バンコク・チェンマイの観光エリアや国際的な居住エリ�
 
 ## 関連記事
 
-- [DTV（Destination Thailand Visa）とは](/ja/dtv-visa)
-- [DTVでタイ銀行口座は開ける？](/ja/dtv-bank-account)
-- [DTVの180日後はどうする？](/ja/dtv-extension-and-reentry)
+- [DTV（Destination Thailand Visa）とは](/ja/blog/dtv-visa)
+- [DTVでタイ銀行口座は開ける？](/ja/blog/dtv-bank-account)
+- [DTVの180日後はどうする？](/ja/blog/dtv-extension-and-reentry)
 - [タイ入国時のチェックポイント](/ja/blog/dtv-entry-checks)
 
 ---
 
-*情報は2026年6月時点のものです。現地の状況は変わることがあります。最終更新：2026年6月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*情報は2026年9月時点のものです。現地の状況は変わることがあります。最終更新：2026年9月*
