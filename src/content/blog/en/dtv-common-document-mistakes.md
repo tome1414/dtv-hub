@@ -3,7 +3,7 @@ title: "Common DTV Document Mistakes and How to Avoid Them"
 slug: "dtv-common-document-mistakes"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV document mistakes rejection"
 secondary_keywords:
   - "DTV application issues"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-upload-documents"
   - "/en/dtv-application"
 schema_types:
@@ -161,11 +161,30 @@ A. If the balance shown in the certificate significantly exceeds your typical ac
 
 ## Related Articles
 
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 - [DTV e-Visa Document Upload: Common Issues](/en/blog/dtv-upload-documents)
 - [DTV Application Steps](/en/blog/dtv-application)
 - [DTV Processing Time and Pending Status](/en/blog/dtv-processing-time)
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting document requirements now include:
+
+- **Proof of Permanent Residence** — format and certification requirements vary by embassy
+- **Certificate of Criminal Record Clearance** — language, validity, and issuance method vary by embassy
+
+These are new documents to add to your preparation checklist. The same principles in this article apply: use the correct format, ensure documents are in English (or meet your embassy's language requirements), and verify acceptance criteria with your intended embassy. For the full updated checklist, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official document requirements |
+| Thai embassy / consulate guidance | Tier A | Document format and review criteria vary by embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Based on Thai embassy official guidance. Requirements may change — verify with your intended embassy before applying.*
