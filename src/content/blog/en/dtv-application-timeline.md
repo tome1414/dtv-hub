@@ -3,7 +3,7 @@ title: "When to Apply for the DTV | Working Backwards from Your Travel Date"
 slug: "dtv-application-timeline"
 lang: "en"
 published_at: "2026-06-03"
-updated_at: "2026-06-03"
+updated_at: "2026-09-16"
 primary_keyword: "DTV application timeline"
 secondary_keywords:
   - "DTV when to apply"
@@ -53,7 +53,7 @@ DTV preparation involves multiple sequential steps. Taking them all together, **
 | Bank transaction statements | A few days | Prepare from the same account as the balance certificate |
 | Final document check | A few days | Name matching, validity dates |
 | Embassy application | 1 day (the submission itself) | e-Visa online or in-person |
-| Embassy review | Typically 1–3 weeks | Varies by embassy and season |
+| Embassy review | Varies by embassy and season | Allow several weeks; do not book non-refundable travel before approval |
 | Receive approval PDF | — | Can enter Thailand any time after receiving it |
 
 See [DTV processing times and status tracking](/en/blog/dtv-processing-time) for more on the review phase.
@@ -107,7 +107,7 @@ Once the embassy completes its review, you'll receive a **DTV approval PDF by em
 | Stage | What Happens |
 |---|---|
 | Documents submitted | Embassy begins review |
-| Review period (1–3 weeks) | Embassy processes your application |
+| Review period (varies by embassy) | Embassy processes your application |
 | Approval PDF received | Travel to Thailand at any time you choose |
 | Entry | Up to 180 days per entry, multiple entries over 5 years |
 
@@ -121,4 +121,18 @@ Timing only matters after you've decided on your application route and confirmed
 
 ---
 
-*This article is based on general DTV process information. Processing times vary by embassy and season. Always confirm the latest requirements with your intended embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These require additional preparation time — especially if your residence certificate needs to be translated or certified, or if a criminal record certificate takes time to obtain from your country's issuing authority. Build this into your timeline. For the full updated document list, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and application process |
+| Thai embassy / consulate guidance | Tier A | Processing times and procedures vary by embassy and season |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Processing times vary by embassy and season. Always confirm the latest requirements with your intended embassy before applying.*
