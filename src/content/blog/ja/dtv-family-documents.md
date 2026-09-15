@@ -3,7 +3,7 @@ title: "DTVで家族申請するときの必要書類・準備フロー・スケ
 slug: "dtv-family-documents"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 家族 申請"
 secondary_keywords:
   - "DTV 配偶者 同伴"
@@ -21,7 +21,7 @@ secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-required-documents"
   - "/ja/dtv-application"
-  - "/ja/dtv-bank-balance"
+  - "/ja/blog/dtv-bank-balance"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -39,6 +39,9 @@ read_time_minutes: 14
 DTVを取得してタイに長期滞在するとき、家族と一緒に動く場合は準備の複雑さが増します。書類、渡航スケジュール、現地での生活基盤まで、漏れがないように全体を整理しましょう。
 
 **この記事で分かること：** 家族申請の基本的な仕組み、必要書類の種類と関係証明の考え方、準備フロー全体、申請スケジュールの設計、公式確認が必要な理由。
+
+> **【2026年8月31日更新】**
+> DTV Supporting Documents（補強書類）に**Proof of Permanent Residence（居住証明書）**と**Certificate of Criminal Record Clearance（犯罪経歴証明書）**が追加されました。家族全員（申請者本人・配偶者・子ども）それぞれについて、これらの書類が必要になる場合があります。必要な書類の形式・内容は申請先公館によって異なります。詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)および申請先公館の最新案内をご確認ください。
 
 ---
 
@@ -194,10 +197,16 @@ A. 公館によって解釈が異なる可能性があります。申請前に�
 
 ## 関連記事
 
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
 - [DTV申請の流れと手順](/ja/dtv-application)
-- [DTV残高証明の考え方](/ja/dtv-bank-balance)
+- [DTV残高証明の考え方](/ja/blog/dtv-bank-balance)
 
 ---
 
-*家族申請の詳細は申請先のタイ大使館・領事館へ直接確認してください。最終更新：2026年6月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*家族申請の詳細は申請先のタイ大使館・領事館へ直接確認してください。最終更新：2026年9月*
