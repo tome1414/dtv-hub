@@ -3,7 +3,7 @@ title: "DTVのe-Visaフォーム入力で迷いやすい項目まとめ"
 slug: "dtv-evisa-form-guide"
 lang: "ja"
 published_at: "2026-06-02"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV e-Visa フォーム 入力"
 secondary_keywords:
   - "DTV e-Visa 記入 迷う"
@@ -25,7 +25,8 @@ schema_types:
   - "Article"
   - "BreadcrumbList"
 image_style: "guide"
-translation_targets: []
+translation_targets:
+  - "en"
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
@@ -135,4 +136,10 @@ DTVの申請目的は大きく2つです。
 
 ---
 
-*本記事はDTV申請フォームの一般的な入力方針を整理したものです。フォームの仕様は変更される場合があります。申請前に申請予定公館の最新案内をご確認ください。最終更新：2026年6月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*本記事はDTV申請フォームの一般的な入力方針を整理したものです。フォームの仕様は変更される場合があります。申請前に申請予定公館の最新案内をご確認ください。最終更新：2026年9月*
