@@ -2,6 +2,7 @@
 
 **Completed:** 2026-09-16  
 **Scope:** 31 JA blog articles + 1 reference article (dtv-application.md)  
+**JA実記事数（最終）:** 46本（47 - 1 deleted: who-should-choose-golf-dtv.md）  
 **Build status:** PASSED (278 pages, TypeScript clean)
 
 ---
@@ -71,7 +72,7 @@ Applied the 2026-09 editorial audit to all 31 SAFE_AUTO_FIX JA articles (17 P1 +
 
 | File | SHA | Key changes |
 |---|---|---|
-| dtv-application.md | f7769da | Time expressions softened at L102/L261/L333 (no updated_at change; was already 2026-09-13) |
+| dtv-application.md | f7769da | **P2軽微修正（時間表現のみ）**: L102「2〜4週間かかるため」→「相応の準備期間が必要なため」、L261「1〜3週間程度」→「数週間程度（公館・時期によって異なります）」、L333同様。updated_at変更なし（2026-09-13維持）。事前分類「NO_CHANGE」は誤りで実際は修正実施。 |
 
 ---
 
@@ -87,9 +88,19 @@ Applied the 2026-09 editorial audit to all 31 SAFE_AUTO_FIX JA articles (17 P1 +
 - `/ja/dtv-soft-power-vs-freelance` — app page, correct as-is
 - `/ja/who-should-choose-golf-dtv` — app page, correct as-is in must_link
 
-**`/ja/blog/who-should-choose-golf-dtv` → `/ja/blog/golf-dtv-suitability`** applied in 5 articles (dtv-soft-power, dtv-soft-power-vs-freelance, dtv-over-50, thailand-long-stay-visa-comparison, dtv-vs-ltr, dtv-vs-retirement-visa).
+**`/ja/blog/who-should-choose-golf-dtv` → `/ja/blog/golf-dtv-suitability`** applied in **5 articles**: dtv-soft-power, dtv-soft-power-vs-freelance, dtv-vs-ltr, dtv-vs-retirement-visa, thailand-long-stay-visa-comparison. Grep confirmed 0 remaining occurrences of `/ja/blog/who-should-choose-golf-dtv`.
+
+**`/ja/who-should-choose-golf-dtv`** (APP PAGE URL, no `/blog/` prefix) links remain in 7 articles' must_link_pages and bodies — these correctly point to the still-existing LP at `src/app/[lang]/who-should-choose-golf-dtv/page.tsx` and require no change.
 
 **Numerical data:** No unverified prices/percentages/timeframes were migrated between articles per coordinator constraint.
+
+**golf-dtv-suitability.md (commit 832d25c):** Golf course price FAQ (3,000〜8,000 THB/round) that was initially migrated from deleted who-should-choose-golf-dtv.md was subsequently removed. Reason: value not registered in GOLFDTV_CONFIRMED_FACTS.md and source was an outdated unverified article (2026-04-29). Removed before push to master.
+
+**SEO処理確認（who-should-choose-golf-dtv）:**
+- `/ja/blog/who-should-choose-golf-dtv`: MDファイル削除済み → SSGでページ非生成 → Sitemapから自動除外
+- 301リダイレクト: `next.config.ts` に設定済み（permanent: true）
+- Internal links: `/ja/blog/who-should-choose-golf-dtv` 0件（confirmed by grep）
+- Canonical参照: なし（ページ非生成のため）
 
 ---
 
