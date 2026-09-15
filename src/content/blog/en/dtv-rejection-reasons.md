@@ -3,7 +3,7 @@ title: "Why DTV Applications Are Rejected | Common Reasons and Pre-Reapplication
 slug: "dtv-rejection-reasons"
 lang: "en"
 published_at: "2026-06-03"
-updated_at: "2026-06-03"
+updated_at: "2026-09-16"
 primary_keyword: "DTV rejection reasons"
 secondary_keywords:
   - "DTV application denied"
@@ -58,6 +58,7 @@ Common examples:
 - Bank transaction statements weren't prepared (an increasing number of embassies request these)
 - Acceptance letter (Soft Power route) doesn't meet the embassy's format requirements
 - Passport has less than 1 year of validity remaining
+- Missing Proof of Permanent Residence or Certificate of Criminal Record Clearance (added as central requirements effective 2026-08-31)
 
 See the full [DTV required documents checklist](/en/blog/dtv-required-documents) for a complete list of requirements.
 
@@ -143,4 +144,17 @@ See the full [DTV application guide](/en/blog/dtv-application) to review the pro
 
 ---
 
-*This article is based on general DTV process information and reported applicant experiences. Internal review criteria are not publicly disclosed. This article does not guarantee any outcome. Always confirm requirements with your intended embassy. Last updated: June 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV supporting-document requirements |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific review criteria vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*This article is based on general DTV process information and reported applicant experiences. Internal review criteria are not publicly disclosed. This article does not guarantee any outcome. Always confirm requirements with your intended embassy. Last updated: 2026-09-16*
