@@ -3,7 +3,7 @@ title: "DTV面接・面談の実態：対面・オンライン・言語差をど
 slug: "dtv-interview-format"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 面接 面談"
 secondary_keywords:
   - "DTV 面接 オンライン"
@@ -19,9 +19,9 @@ primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-application"
-  - "/ja/dtv-interview-questions"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-where-to-apply"
+  - "/ja/blog/dtv-interview-questions"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-where-to-apply"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -38,6 +38,9 @@ read_time_minutes: 9
 ---
 
 **DTVの面接・面談は、すべての申請で必須と断定できるものではありませんが、館やケースによって対面・オンライン・言語差が出る可能性があります。したがって、面接があるかないかを気にするより、どの形式でも説明できる状態を作っておく方が実務的です。**
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 この記事では、面接形式の差がなぜ生じるのかを整理し、準備の考え方を解説します。
 
@@ -127,10 +130,16 @@ A. 申請内容（目的・活動・資金・滞在計画）を1〜2分で説明
 ## 関連記事
 
 - [DTV申請の流れと手順](/ja/dtv-application)
-- [DTV面接・追加確認でよく聞かれやすいこと](/ja/dtv-interview-questions)
-- [DTV申請先の選び方](/ja/dtv-where-to-apply)
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
+- [DTV面接・追加確認でよく聞かれやすいこと](/ja/blog/dtv-interview-questions)
+- [DTV申請先の選び方](/ja/blog/dtv-where-to-apply)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
 
 ---
 
-*申請者体験談および大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*申請者体験談および大使館公式案内をもとに作成。最終更新：2026年9月*
