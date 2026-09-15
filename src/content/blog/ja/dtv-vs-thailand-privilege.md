@@ -3,7 +3,7 @@ title: "DTV vs タイランドプリビレッジ｜費用・条件・向いて�
 slug: "dtv-vs-thailand-privilege"
 lang: "ja"
 published_at: "2026-04-28"
-updated_at: "2026-04-28"
+updated_at: "2026-09-16"
 primary_keyword: "DTV タイランドプリビレッジ 違い"
 secondary_keywords:
   - "Thailand Privilege DTV"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "read-next"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/thailand-long-stay-visa-comparison"
+  - "/ja/blog/thailand-long-stay-visa-comparison"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -171,4 +171,10 @@ A. 残高証明を準備できない場合、タイランドプリビレッジ�
 
 ---
 
-*本記事の制度情報はタイ公館案内・各プログラムの公式情報をもとにしていますが、制度・料金は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*本記事の制度情報はタイ公館案内・各プログラムの公式情報をもとにしていますが、制度・料金は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年9月*
