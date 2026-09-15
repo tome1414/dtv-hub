@@ -3,7 +3,7 @@ title: "DTV残高証明のFAQ：いつの時点の残高が必要か"
 slug: "dtv-bank-balance-faq"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 残高証明 FAQ"
 secondary_keywords:
   - "DTV 銀行残高 時点"
@@ -18,9 +18,9 @@ update_priority: "medium"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-bank-balance"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-common-document-mistakes"
+  - "/ja/blog/dtv-bank-balance"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -62,7 +62,7 @@ DTV申請において残高証明（500,000 THB以上、約200万円）は必須
 
 ### 英語の残高証明書はどこで取得できますか？
 
-日本の主要銀行の多くは、英語での残高証明書を発行するサービスを提供しています。銀行窓口または郵送で申請できます。発行には数日〜1週間程度かかる場合があります。余裕をもって依頼してください。
+日本の主要銀行の多くは、英語での残高証明書を発行するサービスを提供しています。銀行窓口または郵送で申請できます。発行には数日以上かかる場合があります（銀行・手続きの種類・時期によって異なります）。余裕をもって依頼してください。
 
 ### 口座名義とパスポート名義が違う場合は？
 
@@ -116,10 +116,16 @@ A. 残高証明はDTV申請の必須書類の一つです。代替書類での�
 
 ## 関連記事
 
-- [DTV残高証明の考え方](/ja/dtv-bank-balance)
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
-- [DTV申請でよくある書類ミスと差し戻しポイント](/ja/dtv-common-document-mistakes)
+- [DTV残高証明の考え方](/ja/blog/dtv-bank-balance)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
+- [DTV申請でよくある書類ミスと差し戻しポイント](/ja/blog/dtv-common-document-mistakes)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
