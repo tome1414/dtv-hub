@@ -3,7 +3,7 @@ title: "What Happens to Your DTV If Your Job Changes After Applying?"
 slug: "dtv-job-change-after-application"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV job change after application"
 secondary_keywords:
   - "DTV career change visa"
@@ -97,4 +97,17 @@ A. Applying via the Soft Power route for your next DTV application is possible. 
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa conditions and Workcation route intent |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific re-entry document requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy official guidance. Last updated: 2026-09-16*
