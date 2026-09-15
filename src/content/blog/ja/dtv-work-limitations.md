@@ -3,7 +3,7 @@ title: "DTVでできる仕事・注意したい線引き"
 slug: "dtv-work-limitations"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 就労 制限"
 secondary_keywords:
   - "DTV 仕事 できること"
@@ -18,8 +18,8 @@ update_priority: "high"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-visa"
-  - "/ja/dtv-freelance-proof"
+  - "/ja/blog/dtv-visa"
+  - "/ja/blog/dtv-freelance-proof"
   - "/ja/dtv-soft-power-vs-freelance"
 schema_types:
   - "Article"
@@ -36,6 +36,9 @@ read_time_minutes: 8
 ---
 
 DTVを取得してタイで暮らしながら仕事をしたいと考えている方に、「タイで仕事をして大丈夫なのか」という疑問はよく出てきます。DTVは就労ビザではありませんが、リモートワークを根拠として申請できるビザです。この違いを理解しておくことが重要です。
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 **この記事で分かること：** DTV所持者がタイでできること・できないこと、リモートワークと現地就労の違い、よくある誤解の整理。
 
@@ -105,10 +108,16 @@ A. オンラインで完結する点だけで判断するのは不十分な場�
 
 ## 関連記事
 
-- [DTV（Destination Thailand Visa）とは](/ja/dtv-visa)
-- [DTVフリーランス申請の仕事証明](/ja/dtv-freelance-proof)
+- [DTV（Destination Thailand Visa）とは](/ja/blog/dtv-visa)
+- [DTVフリーランス申請の仕事証明](/ja/blog/dtv-freelance-proof)
 - [DTVソフトパワー vs フリーランス：どちらで申請するか](/ja/dtv-soft-power-vs-freelance)
 
 ---
 
-*この記事は一般的な情報提供を目的としており、法的助言ではありません。個別の状況については専門家へご相談ください。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*この記事は一般的な情報提供を目的としており、法的助言ではありません。個別の状況については専門家へご相談ください。最終更新：2026年9月*
