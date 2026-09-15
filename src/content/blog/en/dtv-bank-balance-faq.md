@@ -3,7 +3,7 @@ title: "DTV Bank Balance Certificate FAQ: Timing, Names, and Common Questions"
 slug: "dtv-bank-balance-faq"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV bank balance certificate FAQ"
 secondary_keywords:
   - "DTV bank balance timing"
@@ -19,7 +19,7 @@ primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/blog/dtv-bank-balance"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -34,7 +34,7 @@ excerpt: "Answers to common questions about the DTV bank balance requirement (50
 read_time_minutes: 7
 ---
 
-The bank balance certificate showing 500,000 THB or more (approximately USD 14,000) is one of the mandatory documents for DTV applications. Here's a practical breakdown of common questions around timing, account names, language, and sudden deposits.
+The bank balance certificate showing 500,000 THB or more is one of the mandatory documents for DTV applications. Here's a practical breakdown of common questions around timing, account names, language, and sudden deposits.
 
 **What you'll learn:** When to obtain your bank balance certificate, name matching requirements, language, multiple accounts, and how to handle pre-application deposits.
 
@@ -44,7 +44,7 @@ The bank balance certificate showing 500,000 THB or more (approximately USD 14,0
 
 | Item | Details |
 |---|---|
-| Required balance | 500,000 THB or more (roughly USD 14,000; fluctuates with exchange rates) |
+| Required balance | 500,000 THB or more (set in Thai baht; check current exchange rate for home-currency equivalent) |
 | Document type | Bank-issued balance certificate |
 | Language | English as standard |
 | Account holder | Must be in the applicant's own name |
@@ -117,9 +117,22 @@ A. The bank balance certificate is a mandatory document for DTV applications. Fo
 ## Related Articles
 
 - [DTV Bank Balance Guide](/en/blog/dtv-bank-balance)
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 - [Common DTV Document Mistakes](/en/blog/dtv-common-document-mistakes)
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and financial evidence requirements |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy official guidance. Last updated: 2026-09-16*
