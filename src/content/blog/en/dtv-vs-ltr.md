@@ -3,7 +3,7 @@ title: "DTV vs LTR Visa Thailand | Which Long-Stay Option Fits You?"
 slug: "dtv-vs-ltr"
 lang: "en"
 published_at: "2026-04-29"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV vs LTR visa Thailand"
 secondary_keywords:
   - "Thailand LTR visa requirements"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Read Next"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/thailand-long-stay-visa-comparison"
+  - "/en/blog/thailand-long-stay-visa-comparison"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -166,4 +166,18 @@ A. Some LTR categories require USD 50,000+ health insurance coverage. For the DT
 
 ---
 
-*Based on Thai embassy and BOI official guidance. Requirements may change — always verify before applying. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category and conditions |
+| Thailand Board of Investment (BOI) — LTR Visa program | Tier A | Official LTR categories, income and asset thresholds |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy and the BOI before applying.*
+
+---
+
+*Based on Thai embassy and BOI official guidance. Requirements may change — always verify before applying. Last updated: 2026-09-16*
