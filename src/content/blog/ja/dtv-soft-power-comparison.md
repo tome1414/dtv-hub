@@ -3,7 +3,7 @@ title: "DTVソフトパワー活動比較：ゴルフ・ムエタイ・料理、
 slug: "dtv-soft-power-comparison"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV ソフトパワー 活動 比較"
 secondary_keywords:
   - "DTV ソフトパワー ゴルフ"
@@ -18,8 +18,8 @@ update_priority: "high"
 primary_cta: "Golf DTV詳細を見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-soft-power"
-  - "/ja/dtv-acceptance-letter"
+  - "/ja/blog/dtv-soft-power"
+  - "/ja/blog/dtv-acceptance-letter"
   - "/ja/who-should-choose-golf-dtv"
 schema_types:
   - "Article"
@@ -36,6 +36,9 @@ read_time_minutes: 9
 ---
 
 DTVのソフトパワールートは、「ゴルフしか使えない」という誤解をよく見かけます。タイ政府のソフトパワー政策が定める対象活動は複数あり、ゴルフはその中の一つです。
+
+> **【2026年8月31日更新】**
+> DTV Supporting Documents（補強書類）に**Proof of Permanent Residence（居住証明書）**と**Certificate of Criminal Record Clearance（犯罪経歴証明書）**が追加されました。必要な書類の形式・内容は申請先公館によって異なります。詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)および申請先公館の最新案内をご確認ください。
 
 **この記事で分かること：** ソフトパワールートの対象活動の種類、活動ごとの受入レター取得のしやすさの違い、自分に合った活動の選び方。
 
@@ -107,7 +110,7 @@ DTVソフトパワールートの申請で核心となるのは、**受入レタ
 
 ソフトパワールートで申請する場合、どの活動を選ぶかよりも、**その活動に対応した適切な受入レターが取得できるか**の方が実務上重要です。
 
-受入レターに含まれるべき情報の詳細は[DTV受入レターの取得と確認ポイント](/ja/dtv-acceptance-letter)を参照してください。
+受入レターに含まれるべき情報の詳細は[DTV受入レターの取得と確認ポイント](/ja/blog/dtv-acceptance-letter)を参照してください。
 
 ---
 
@@ -129,11 +132,18 @@ A. ソフトパワールートは「タイに滞在して活動に参加する�
 
 ## 関連記事
 
-- [DTVソフトパワービザとは](/ja/dtv-soft-power)
-- [DTV受入レターの取得と確認ポイント](/ja/dtv-acceptance-letter)
+- [DTVソフトパワービザとは](/ja/blog/dtv-soft-power)
+- [DTV受入レターの取得と確認ポイント](/ja/blog/dtv-acceptance-letter)
 - [ゴルフDTVが向いているのはこんな人](/ja/who-should-choose-golf-dtv)
 - [DTVソフトパワー vs フリーランス：どちらで申請するか](/ja/dtv-soft-power-vs-freelance)
 
 ---
 
-*タイ政府ソフトパワー政策および大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| GolfDTV（サービス・プログラム情報） | Tier C（GolfDTVサービス現行情報） | 2026年9月 |
+
+*タイ政府ソフトパワー政策および大使館公式案内をもとに作成。最終更新：2026年9月*
