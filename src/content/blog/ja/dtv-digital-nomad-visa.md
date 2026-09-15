@@ -3,7 +3,7 @@ title: "タイDTVはデジタルノマドビザか？制度の実態と正しい
 slug: "dtv-digital-nomad-visa"
 lang: "ja"
 published_at: "2026-04-29"
-updated_at: "2026-04-29"
+updated_at: "2026-09-16"
 primary_keyword: "DTV デジタルノマド"
 secondary_keywords:
   - "タイ デジタルノマドビザ"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "read-next"
 secondary_cta: "DTVビザ完全ガイドを読む"
 must_link_pages:
-  - "/ja/dtv-visa"
+  - "/ja/blog/dtv-visa"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -170,4 +170,10 @@ DTVの制度の全体像は[タイDTVビザ完全ガイド](/ja/blog/dtv-visa)�
 
 ---
 
-*本記事の制度情報はタイ公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*本記事の制度情報はタイ公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年9月*
