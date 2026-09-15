@@ -3,7 +3,7 @@ title: "Thailand Long-Stay Visa Comparison | DTV, LTR, Thailand Privilege & Reti
 slug: "thailand-long-stay-visa-comparison"
 lang: "en"
 published_at: "2026-04-26"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "Thailand long stay visa comparison"
 secondary_keywords:
   - "DTV visa Thailand"
@@ -19,9 +19,9 @@ update_priority: "high"
 primary_cta: "Read the DTV Complete Guide"
 secondary_cta: "Check Your Eligibility"
 must_link_pages:
-  - "/en/dtv-visa"
+  - "/en/blog/dtv-visa"
   - "/en/dtv-soft-power-vs-freelance"
-  - "/en/who-should-choose-golf-dtv"
+  - "/en/blog/golf-dtv-suitability"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -209,4 +209,19 @@ For a deeper look at the DTV, the [DTV Complete Guide](/en/blog/dtv-visa) covers
 
 ---
 
-*Based on embassy, BOI, and program official guidance. Subject to change — verify with official sources before applying. Last updated: June 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category and conditions |
+| Thailand Board of Investment (BOI) — LTR Visa program | Tier A | Official LTR categories and requirements |
+| Thailand Privilege Card Co., Ltd. — Thailand Privilege program | Tier A | Official membership program information |
+| Thai Immigration Bureau — Retirement Visa (Non-Immigrant O) | Tier A | Official retirement visa requirements |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy and relevant program offices before applying.*
+
+---
+
+*Based on embassy, BOI, and program official guidance. Subject to change — verify with official sources before applying. Last updated: 2026-09-16*
