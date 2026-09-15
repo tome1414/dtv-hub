@@ -3,7 +3,7 @@ title: "DTV Soft Power vs Workcation Route | Which Should You Apply Under?"
 slug: "dtv-soft-power-vs-freelance"
 lang: "en"
 published_at: "2026-04-28"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV soft power vs workcation"
 secondary_keywords:
   - "DTV application route"
@@ -18,9 +18,9 @@ update_priority: "high"
 primary_cta: "See Golf DTV Details"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-soft-power"
+  - "/en/blog/dtv-soft-power"
   - "/en/who-should-choose-golf-dtv"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -195,4 +195,19 @@ The choice isn't about which route is superior — it's about which route you ca
 
 ---
 
-*Based on Thai embassy guidance. Requirements may change — always verify with official sources before applying. Last updated: May 2026*
+## 2026-08-31 Note
+
+As of 2026-08-31, DTV supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance — applicable to both the Soft Power and Workcation routes. For the full updated document list, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official route definitions, conditions, and document requirements |
+| Thai embassy / consulate guidance | Tier A | Route verification and document review criteria vary by embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Golf acceptance letter procurement and support |
+
+*Requirements may change — always verify with official sources and your intended embassy before applying.*
