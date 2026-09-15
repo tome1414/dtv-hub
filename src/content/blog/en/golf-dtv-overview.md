@@ -3,7 +3,7 @@ title: "Golf DTV Explained: Thailand's No-Employment-Doc Visa Route via Golf"
 slug: "golf-dtv-overview"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV Thailand"
 secondary_keywords:
   - "what is Golf DTV"
@@ -65,7 +65,7 @@ This matters because it clears up one of the most common misconceptions: **there
 | Application Fee | THB 10,000 (waived for some nationalities) |
 | Where to Apply | Thai embassy or consulate outside Thailand |
 
-> **Fee waivers:** Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from the THB 10,000 fee under bilateral agreements. See [DTV Application Fee by Nationality](/en/blog/dtv-fee-by-nationality) for details.
+> **Fee waivers:** Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from the THB 10,000 fee under bilateral agreements. See [DTV Application Nationality Notes](/en/blog/dtv-application-nationality-notes) for details.
 
 The DTV has two main application routes. The **Workcation route** is for those working remotely for an overseas employer or client. The **Soft Power route** — which Golf DTV falls under — is for those participating in Thai government-designated cultural activities, with golf being one of them.
 
@@ -144,4 +144,19 @@ Or if you're ready to understand the application process → [How the Golf DTV A
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Requirements are subject to change and may vary by embassy. Verify current requirements with the relevant embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance in addition to the core documents above. These requirements apply to Golf DTV (Soft Power route) applications. Specific format and validity requirements vary by embassy — confirm with your intended application embassy. See [DTV Required Documents](/en/blog/dtv-required-documents) for the full document list.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
+| Thai embassy / consulate guidance | Tier A | Mission-specific requirements vary; verify with your intended embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Acceptance Letter procurement and application support |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
