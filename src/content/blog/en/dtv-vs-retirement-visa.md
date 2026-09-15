@@ -118,7 +118,7 @@ The Retirement visa's balance route requires 800,000 THB in a Thai bank account.
 
 For those in Thailand on a DTV, **True Money Wallet** (a widely accepted Thai e-wallet with QR payment capability) serves as a practical alternative for day-to-day payments.
 
-See the [Golf DTV suitability guide](/en/blog/who-should-choose-golf-dtv) to assess whether the Soft Power route fits your situation. For help choosing between routes, see [Soft Power vs Workcation](/en/blog/dtv-soft-power-vs-freelance).
+See the [Golf DTV suitability guide](/en/blog/golf-dtv-suitability) to assess whether the Soft Power route fits your situation. For help choosing between routes, see [Soft Power vs Workcation](/en/blog/dtv-soft-power-vs-freelance).
 
 ---
 

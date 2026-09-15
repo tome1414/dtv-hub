@@ -64,6 +64,11 @@ const nextConfig: NextConfig = {
         destination: '/ja/blog/golf-dtv-suitability',
         permanent: true,
       },
+      {
+        source: '/en/blog/who-should-choose-golf-dtv',
+        destination: '/en/blog/golf-dtv-suitability',
+        permanent: true,
+      },
     ]
   },
 }

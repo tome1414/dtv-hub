@@ -135,7 +135,7 @@ See our full [DTV Soft Power visa guide](/en/blog/dtv-soft-power) for more.
 
 ### Not sure?
 
-If you're on the fence, the [Golf DTV suitability article](/en/blog/who-should-choose-golf-dtv) walks through real-life scenarios to help you decide.
+If you're on the fence, the [Golf DTV suitability article](/en/blog/golf-dtv-suitability) walks through real-life scenarios to help you decide.
 
 ---
 
@@ -185,7 +185,7 @@ A. Without freelance documentation, the Workcation route will be difficult. The 
 | Documentation is difficult to produce | Soft Power route |
 | Interested in golf, cooking, etc. | Soft Power — natural fit |
 | Want simpler paperwork | Soft Power (acceptance letter-centered) |
-| Undecided | [Check Golf DTV suitability](/en/blog/who-should-choose-golf-dtv) |
+| Undecided | [Check Golf DTV suitability](/en/blog/golf-dtv-suitability) |
 
 The choice isn't about which route is superior — it's about which route you can genuinely document. When in doubt, a consultation with a specialist can help clarify your options.
 

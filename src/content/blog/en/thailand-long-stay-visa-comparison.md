@@ -91,7 +91,7 @@ Introduced in 2024 for remote workers and participants in Thailand's Soft Power 
 
 **Best for:** Remote workers, freelancers, and those who want to participate in golf or other Soft Power activities. Also well-suited to under-50s who don't qualify for the Retirement visa.
 
-Full details in the [DTV Complete Guide](/en/blog/dtv-visa). Unsure if the DTV is right for you? See [who Golf DTV suits](/en/blog/who-should-choose-golf-dtv).
+Full details in the [DTV Complete Guide](/en/blog/dtv-visa). Unsure if the DTV is right for you? See [Is Golf DTV right for you?](/en/blog/golf-dtv-suitability).
 
 ---
 

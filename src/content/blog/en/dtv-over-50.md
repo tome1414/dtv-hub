@@ -20,7 +20,7 @@ secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/blog/dtv-vs-retirement-visa"
   - "/en/dtv-soft-power"
-  - "/en/blog/who-should-choose-golf-dtv"
+  - "/en/blog/golf-dtv-suitability"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -92,7 +92,7 @@ For those in their 50s and 60s who want to enjoy golf while based in Thailand lo
 - Ideal for those who want to stay active after retiring from a traditional career
 - No work documentation required (income proof is not needed for Soft Power)
 
-For more, see [Who Should Choose Golf DTV?](/en/blog/who-should-choose-golf-dtv)
+For more, see [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability)
 
 ---
 
@@ -116,7 +116,7 @@ A. Technical skill is not an application requirement. Having the intention to pa
 
 - [DTV vs Retirement Visa: Which Is Right for You?](/en/blog/dtv-vs-retirement-visa)
 - [What Is the DTV Soft Power Visa?](/en/dtv-soft-power)
-- [Who Should Choose Golf DTV?](/en/blog/who-should-choose-golf-dtv)
+- [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability)
 
 ---
 

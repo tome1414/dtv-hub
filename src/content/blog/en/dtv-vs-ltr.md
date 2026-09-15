@@ -162,7 +162,7 @@ A. Some LTR categories require USD 50,000+ health insurance coverage. For the DT
 - [Compare all Thailand long-stay visas](/en/blog/thailand-long-stay-visa-comparison)
 - [DTV vs Thailand Privilege](/en/blog/dtv-vs-thailand-privilege)
 - [DTV Complete Guide](/en/blog/dtv-visa)
-- [Who should choose Golf DTV](/en/blog/who-should-choose-golf-dtv)
+- [Is Golf DTV right for you?](/en/blog/golf-dtv-suitability)
 
 ---
 

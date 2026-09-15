@@ -145,7 +145,7 @@ Exact requirements vary by embassy. Some embassies may additionally request insu
 
 ## Is Golf DTV Right for You?
 
-If you're interested in the Soft Power route but unsure it fits your situation, the [Golf DTV suitability guide](/en/blog/who-should-choose-golf-dtv) walks through type-by-type scenarios.
+If you're interested in the Soft Power route but unsure it fits your situation, the [Golf DTV suitability guide](/en/blog/golf-dtv-suitability) walks through type-by-type scenarios.
 
 **Golf DTV tends to suit people who:**
 - Can't easily produce remote work documentation
@@ -177,7 +177,7 @@ A. The core document differs. Soft Power requires an acceptance letter; Workcati
 
 ## Next Steps
 
-- **Check if Golf DTV fits you:** [Golf DTV suitability guide](/en/blog/who-should-choose-golf-dtv)
+- **Check if Golf DTV fits you:** [Golf DTV suitability guide](/en/blog/golf-dtv-suitability)
 - **Understand all required documents:** [DTV required documents](/en/blog/dtv-required-documents)
 - **Learn about the acceptance letter:** [DTV acceptance letter guide](/en/blog/dtv-acceptance-letter)
 - **Golf DTV details and consultation:** [Golf DTV page](/en/golf-dtv#inquiry)

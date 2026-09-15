@@ -130,7 +130,7 @@ A. The Soft Power route requires physical presence in Thailand to participate in
 
 - [What Is the DTV Soft Power Visa?](/en/blog/dtv-soft-power)
 - [DTV Acceptance Letter: How to Obtain and What to Check](/en/blog/dtv-acceptance-letter)
-- [Who Should Choose Golf DTV?](/en/blog/who-should-choose-golf-dtv)
+- [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability)
 - [DTV Soft Power vs. Workcation: Which Route Should You Choose?](/en/blog/dtv-soft-power-vs-freelance)
 
 ---

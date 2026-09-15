@@ -19,7 +19,7 @@ secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/dtv-acceptance-letter"
   - "/en/dtv-soft-power"
-  - "/en/blog/who-should-choose-golf-dtv"
+  - "/en/blog/golf-dtv-suitability"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -108,7 +108,7 @@ A. The acceptance letter is the application basis document for the Soft Power ro
 
 - [DTV Acceptance Letter: How to Obtain and What to Check](/en/dtv-acceptance-letter)
 - [What Is the DTV Soft Power Visa?](/en/dtv-soft-power)
-- [Who Should Choose Golf DTV?](/en/blog/who-should-choose-golf-dtv)
+- [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability)
 
 ---
 
