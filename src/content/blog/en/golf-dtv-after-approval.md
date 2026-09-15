@@ -3,7 +3,7 @@ title: "Golf DTV Approved: What You Can Do, What You Can't, and What to Track"
 slug: "golf-dtv-after-approval"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV after approval"
 secondary_keywords:
   - "Golf DTV what can I do Thailand"
@@ -148,4 +148,19 @@ For specific questions about your situation, visit the [Golf DTV page](/en/golf-
 
 ---
 
-*This article provides general information about Golf DTV and is not legal advice. Work authorization and tax obligations are complex and depend on individual circumstances. Verify rules with qualified professionals where relevant. Requirements are subject to change. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting document requirements were updated to include Proof of Permanent Residence and Certificate of Criminal Record Clearance at the application stage. This affects new applications — not stays already in progress. If you are planning a new application or renewal, check the updated document list at [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa conditions, entry limits, and 90-day report requirement |
+| Thai Immigration Bureau | Tier A | 90-day report procedures and stay management rules |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Golf DTV application support and post-approval guidance |
+
+*This article provides general information and is not legal advice. Work authorization and tax obligations are complex — verify with qualified professionals where relevant. Requirements are subject to change.*
