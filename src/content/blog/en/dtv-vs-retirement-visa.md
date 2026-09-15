@@ -3,7 +3,7 @@ title: "DTV vs Thailand Retirement Visa | Age, Funding Requirements & Who Each S
 slug: "dtv-vs-retirement-visa"
 lang: "en"
 published_at: "2026-04-27"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV vs Thailand retirement visa"
 secondary_keywords:
   - "Thailand retirement visa requirements"
@@ -18,8 +18,8 @@ update_priority: "high"
 primary_cta: "Free Consultation"
 secondary_cta: "Check Your Eligibility"
 must_link_pages:
-  - "/en/dtv-visa"
-  - "/en/who-should-choose-golf-dtv"
+  - "/en/blog/dtv-visa"
+  - "/en/blog/golf-dtv-suitability"
   - "/en/dtv-soft-power-vs-freelance"
 schema_types:
   - "Article"
@@ -150,4 +150,18 @@ Start with the [DTV Complete Guide](/en/blog/dtv-visa) to understand the DTV in 
 
 ---
 
-*Based on Thai embassy guidance. Regulations change — always verify with official sources before applying. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category and conditions |
+| Thai Immigration Bureau — Retirement Visa (Non-Immigrant O) | Tier A | Official retirement visa requirements and renewal conditions |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy guidance. Regulations change — always verify with official sources before applying. Last updated: 2026-09-16*
