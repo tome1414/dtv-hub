@@ -3,7 +3,7 @@ title: "DTV Income Proof: Employment Contracts, Certificates, and Invoices Expla
 slug: "dtv-income-proof"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV income proof"
 secondary_keywords:
   - "DTV employment certificate"
@@ -18,7 +18,7 @@ update_priority: "medium"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-freelance-proof"
   - "/en/blog/dtv-bank-balance"
 schema_types:
@@ -73,7 +73,7 @@ Invoices issued to clients serve as supporting documents demonstrating ongoing w
 
 ### Bank Balance Certificate
 
-A document certifying the balance in a bank account. DTV requires a balance of 500,000 THB (approximately USD 14,000) or more. This is evidence of **financial means**, not of income per se.
+A document certifying the balance in a bank account. DTV requires a balance of 500,000 THB or more. This is evidence of **financial means**, not of income per se.
 
 ### Bank Statement (Transaction History)
 
@@ -109,11 +109,24 @@ A. English documents are the standard. Consider attaching an English summary or 
 
 ## Related Articles
 
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 - [DTV Freelance Work Proof: Contracts, Invoices & Portfolio](/en/blog/dtv-freelance-proof)
 - [DTV Bank Balance Guide](/en/blog/dtv-bank-balance)
 - [Supporting Documents to Strengthen Your DTV Application](/en/blog/dtv-portfolio-supporting-documents)
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official Workcation route document requirements |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy official guidance. Last updated: 2026-09-16*
