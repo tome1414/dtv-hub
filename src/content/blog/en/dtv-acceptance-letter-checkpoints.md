@@ -3,7 +3,7 @@ title: "DTV Acceptance Letter: What to Check Before Submitting"
 slug: "dtv-acceptance-letter-checkpoints"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV acceptance letter checklist"
 secondary_keywords:
   - "DTV acceptance letter content"
@@ -17,8 +17,8 @@ update_priority: "high"
 primary_cta: "See Golf DTV Details"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-acceptance-letter"
-  - "/en/dtv-soft-power"
+  - "/en/blog/dtv-acceptance-letter"
+  - "/en/blog/dtv-soft-power"
   - "/en/blog/golf-dtv-suitability"
 schema_types:
   - "Article"
@@ -106,10 +106,25 @@ A. The acceptance letter is the application basis document for the Soft Power ro
 
 ## Related Articles
 
-- [DTV Acceptance Letter: How to Obtain and What to Check](/en/dtv-acceptance-letter)
-- [What Is the DTV Soft Power Visa?](/en/dtv-soft-power)
+- [DTV Acceptance Letter: How to Obtain and What to Check](/en/blog/dtv-acceptance-letter)
+- [What Is the DTV Soft Power Visa?](/en/blog/dtv-soft-power)
 - [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability)
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. Your acceptance letter checklist is unchanged, but the full document package at the embassy now includes these additional items. Verify the complete current requirements with your intended embassy. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official Soft Power route requirements |
+| Thai embassy / consulate guidance | Tier A | Acceptance letter review criteria may vary by embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Golf acceptance letter procurement |
+
+*Based on Thai embassy official guidance. Requirements may change — verify with your intended embassy before applying.*
