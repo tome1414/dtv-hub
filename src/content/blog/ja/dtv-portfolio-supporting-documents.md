@@ -3,7 +3,7 @@ title: "DTV申請で用意すると安心な補強資料：在職証明・CV・�
 slug: "dtv-portfolio-supporting-documents"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 補強資料 在職証明"
 secondary_keywords:
   - "DTV CV 提出"
@@ -18,9 +18,9 @@ update_priority: "medium"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-freelance-proof"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-common-document-mistakes"
+  - "/ja/blog/dtv-freelance-proof"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -122,10 +122,16 @@ A. 公認翻訳が必要かどうかは申請先の公館によって異なり�
 
 ## 関連記事
 
-- [DTVフリーランス申請の仕事証明](/ja/dtv-freelance-proof)
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
-- [DTV申請でよくある書類ミスと差し戻しポイント](/ja/dtv-common-document-mistakes)
+- [DTVフリーランス申請の仕事証明](/ja/blog/dtv-freelance-proof)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
+- [DTV申請でよくある書類ミスと差し戻しポイント](/ja/blog/dtv-common-document-mistakes)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
