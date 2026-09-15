@@ -3,7 +3,7 @@ title: "DTV After 180 Days: Extension, Re-Entry, and Stay Management"
 slug: "dtv-extension-and-reentry"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 180 days extension re-entry"
 secondary_keywords:
   - "DTV stay extension"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-visa"
+  - "/en/blog/dtv-visa"
   - "/en/dtv-application"
   - "/en/blog/dtv-entry-checks"
 schema_types:
@@ -114,11 +114,24 @@ A. Overstaying is a violation of Thai law. Penalties may include fines, departur
 
 ## Related Articles
 
-- [What Is DTV (Destination Thailand Visa)?](/en/dtv-visa)
+- [What Is DTV (Destination Thailand Visa)?](/en/blog/dtv-visa)
 - [DTV Entry into Thailand: What Gets Checked](/en/blog/dtv-entry-checks)
 - [DTV vs Thailand Privilege Visa](/en/blog/dtv-vs-thailand-privilege)
 - [DTV vs LTR Visa](/en/blog/dtv-vs-ltr)
 
 ---
 
-*Based on Thai immigration and embassy official guidance. Confirm details against the latest official information. Last updated: May 2026*
+## 2026-08-31 Note
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance at the application stage. These requirements affect initial applications; their role in extension or re-entry scenarios may depend on embassy guidance. Verify the latest requirements with your intended embassy or Thai Immigration Bureau. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official entry conditions and visa validity |
+| Thai Immigration Bureau | Tier A | Extension, 90-day report, and stay management procedures |
+
+*Based on Thai immigration and embassy official guidance. Confirm details against the latest official information.*
