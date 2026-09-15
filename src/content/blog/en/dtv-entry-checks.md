@@ -3,7 +3,7 @@ title: "DTV Entry into Thailand: What Gets Checked and What to Bring"
 slug: "dtv-entry-checks"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV Thailand entry checks"
 secondary_keywords:
   - "DTV immigration check"
@@ -19,7 +19,7 @@ primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/dtv-application"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-extension-and-reentry"
 schema_types:
   - "Article"
@@ -119,8 +119,22 @@ A. In principle, immigration officers retain the authority to deny entry regardl
 
 - [DTV Application Steps](/en/blog/dtv-application)
 - [DTV After 180 Days: Extension, Re-Entry, and Stay Management](/en/blog/dtv-extension-and-reentry)
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 
 ---
 
-*Thai immigration procedures may vary by officer and timing. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These are submitted at the application stage — not typically checked at entry. However, maintaining complete and accurate documentation throughout the process, including at entry, is advisable. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and entry conditions |
+| Thai Immigration Bureau | Tier A | Entry check procedures and documentation requirements |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Thai immigration procedures may vary by officer and timing. Verify current requirements before applying.*
