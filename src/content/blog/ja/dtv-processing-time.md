@@ -3,7 +3,7 @@ title: "DTV審査期間とpending：ステータス確認・追加提出・待�
 slug: "dtv-processing-time"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 審査期間 pending"
 secondary_keywords:
   - "DTV 審査 待ち時間"
@@ -21,7 +21,7 @@ secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-application"
   - "/ja/dtv-required-documents"
-  - "/ja/dtv-upload-documents"
+  - "/ja/blog/dtv-upload-documents"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -37,6 +37,9 @@ read_time_minutes: 12
 ---
 
 DTV（e-Visa）を申請してから結果が出るまでの期間や、途中で「pending」通知が来たときの対応は、多くの申請者が不安に感じるポイントです。
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 **この記事で分かること：** 審査期間の現実的な見方、ステータスの読み方、pendingとは何か、追加書類依頼が来たときの対応の考え方、ソフトパワー申請後の追加対応（メール確認・全スタンプページ・銀行明細・オンライン面談）、待機中にやっておくべき準備。
 
@@ -206,10 +209,16 @@ A. 公式に審査を早める方法は案内されていません。書類を�
 ## 関連記事
 
 - [DTV申請の流れと手順](/ja/dtv-application)
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
 - [DTV e-Visaの書類アップロードで詰まりやすい点](/ja/blog/dtv-upload-documents)
 - [DTV申請でよくある書類ミスと差し戻しポイント](/ja/blog/dtv-common-document-mistakes)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年6月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
