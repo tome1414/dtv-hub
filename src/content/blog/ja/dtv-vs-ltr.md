@@ -3,7 +3,7 @@ title: "DTV vs LTRビザ｜タイの2大長期滞在ビザを高属性層向け�
 slug: "dtv-vs-ltr"
 lang: "ja"
 published_at: "2026-04-29"
-updated_at: "2026-04-29"
+updated_at: "2026-09-16"
 primary_keyword: "DTV LTR 比較"
 secondary_keywords:
   - "タイ LTR ビザ"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "read-next"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/thailand-long-stay-visa-comparison"
+  - "/ja/blog/thailand-long-stay-visa-comparison"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -162,8 +162,15 @@ A. 一部のカテゴリでは50,000USD以上の補償の健康保険が求め�
 - [タイ長期滞在ビザを全種類で比較する](/ja/blog/thailand-long-stay-visa-comparison)
 - [DTV vs タイランドプリビレッジの比較](/ja/blog/dtv-vs-thailand-privilege)
 - [DTVビザ完全ガイド](/ja/blog/dtv-visa)
-- [Golf DTVに向いている人](/ja/blog/who-should-choose-golf-dtv)
+- [Golf DTVに向いている人](/ja/blog/golf-dtv-suitability)
 
 ---
 
-*本記事の制度情報はタイ公館案内・BOI公式情報をもとにしていますが、制度・要件は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| タイBOI（LTR公式案内） | Tier A（公式情報） | 2026年8月 |
+
+*本記事の制度情報はタイ公館案内・BOI公式情報をもとにしていますが、制度・要件は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年9月*
