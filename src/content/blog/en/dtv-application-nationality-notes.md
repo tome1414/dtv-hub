@@ -3,7 +3,7 @@ title: "DTV Application Notes by Nationality | Fee Exemptions, Visa-Free Stay Ch
 slug: "dtv-application-nationality-notes"
 lang: "en"
 published_at: "2026-05-30"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV application nationality notes"
 secondary_keywords:
   - "DTV application fee exemption nationality"
@@ -113,8 +113,23 @@ If you hold a passport from one of the following regions, it is strongly recomme
 
 Regardless of nationality, always confirm the latest requirements with your intended embassy before applying. Requirements can vary by location and change over time. For guidance on choosing where to apply, see [Where to Apply for the DTV](/en/blog/dtv-where-to-apply).
 
+> **2026-08-31 update:** As of 2026-08-31, Proof of Permanent Residence and Certificate of Criminal Record Clearance were added to the DTV's central supporting-document requirements. These requirements apply regardless of nationality, though specific accepted formats may vary by embassy. See [DTV Required Documents](/en/blog/dtv-required-documents) for full details.
+
 For Golf DTV consultation and support, visit the [Golf DTV page](/en/golf-dtv).
 
 ---
 
-*This article is based on official information from the Thai Ministry of Foreign Affairs and Thai embassy announcements. Requirements may change. Always verify with your applying embassy before submitting. Last updated: June 2026*
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and nationality-based fee rules |
+| Royal Thai Embassy Seoul — reciprocal fee exemption announcement | Tier A | Korean national fee exemption confirmation |
+| Royal Thai Embassy Kuala Lumpur — reciprocal fee exemption announcement | Tier A | Malaysian and Singaporean national fee exemption confirmation |
+| Thai embassy / consulate guidance (general) | Tier A | Third-country application rules vary by mission |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*This article is based on official information from the Thai Ministry of Foreign Affairs and Thai embassy announcements. Requirements may change. Always verify with your applying embassy before submitting. Last updated: 2026-09-16*
