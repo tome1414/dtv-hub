@@ -3,7 +3,7 @@ title: "Golf DTV FAQ: 10 Questions Answered for English-Speaking Applicants"
 slug: "golf-dtv-faq"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV FAQ"
 secondary_keywords:
   - "Golf DTV questions answered"
@@ -94,12 +94,12 @@ A note on pattern: Thai immigration authorities monitor re-entry patterns. Repea
 
 | Step | Typical Timeframe |
 |---|---|
-| Acceptance Letter procurement | 2–4 weeks |
+| Acceptance Letter procurement | Several weeks (varies by facility and season) |
 | Bank documents preparation | A few business days to 1 week |
-| Embassy processing | 1–3 weeks |
-| **Total from start to approval** | **6–8 weeks** |
+| Embassy processing | Varies by embassy and application volume |
+| **Total from start to approval** | **Allow several weeks; start early** |
 
-**Plan accordingly.** Don't start this process a few weeks before you need to travel. 8 weeks is a comfortable buffer; 6 weeks is workable; fewer than 4 weeks is risky.
+**Plan accordingly.** Don't start this process a few weeks before you need to travel. Starting 8 weeks out is a comfortable buffer; actual timelines vary by embassy and facility. Build in flexibility before booking non-refundable travel.
 
 ---
 
@@ -133,4 +133,19 @@ Visit the [Golf DTV page](/en/golf-dtv) for a free consultation, or work through
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Requirements and embassy practices are subject to change. Verify current requirements with the relevant embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These apply to Golf DTV (Soft Power route) applications. If you're planning to apply, confirm the current document list with your intended embassy. See [Golf DTV Documents](/en/blog/golf-dtv-documents) for the full checklist.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
+| Thai embassy / consulate guidance | Tier A | Mission-specific practices vary; requirements may differ by location |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Acceptance Letter procurement and application support |
+
+*Requirements and embassy practices are subject to change. Verify current requirements with the relevant embassy before applying.*
