@@ -3,7 +3,7 @@ title: "Golf DTV Documents: What You Need and How to Get the Acceptance Letter"
 slug: "golf-dtv-documents"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV documents required"
 secondary_keywords:
   - "Golf DTV Acceptance Letter"
@@ -96,7 +96,7 @@ Reach out to a course in English, explain you need an Acceptance Letter for a DT
 **Option 2: Use a Golf DTV support service**
 Specialist services work with facilities that have a track record of issuing DTV-compliant Acceptance Letters. This removes the coordination uncertainty. See [Golf DTV support options](/en/golf-dtv).
 
-> **Timing:** Allow 2–4 weeks from initiating the request to receiving a usable letter. This is the longest single step in the Golf DTV process — start it before preparing any other document.
+> **Timing:** Allow several weeks from initiating the request to receiving a usable letter (timing varies by facility and service). This is the longest single step in the Golf DTV process — start it before preparing any other document.
 
 ---
 
@@ -146,4 +146,24 @@ Foreign-currency bank certificates can be used, but the equivalent value in Thai
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Document requirements and embassy procedures are subject to change and may vary by location. Verify current requirements with your intended embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting document requirements now include two additional items applicable to all routes, including Golf DTV:
+
+- **Proof of Permanent Residence** — confirming your legal residence status in your application country
+- **Certificate of Criminal Record Clearance** — for overseas entry/stay purposes
+
+Add these to your document checklist alongside the standard items above. See [DTV Required Documents](/en/blog/dtv-required-documents) for the full updated list.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official Soft Power route definition and document requirements |
+| Thai embassy / consulate guidance | Tier A | Document standards and submission procedures may vary by mission |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Acceptance Letter procurement and Golf DTV support |
+
+*Document requirements and embassy procedures are subject to change and may vary by location. Verify current requirements with your intended embassy before applying.*
