@@ -3,7 +3,7 @@ title: "DTV Interview: Common Questions to Prepare For"
 slug: "dtv-interview-questions"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV interview questions"
 secondary_keywords:
   - "DTV embassy interview content"
@@ -20,8 +20,8 @@ secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/blog/dtv-interview-format"
   - "/en/dtv-application"
-  - "/en/dtv-required-documents"
-  - "/en/dtv-acceptance-letter"
+  - "/en/blog/dtv-required-documents"
+  - "/en/blog/dtv-acceptance-letter"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -165,4 +165,18 @@ A. Whether you are traveling with companions may come up. For details about fami
 
 ---
 
-*Based on applicant accounts and Thai embassy official guidance. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. If an interview occurs, being able to confirm these documents were submitted and explain their purpose — if asked — is part of maintaining document consistency. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, routes, and conditions |
+| Thai embassy / consulate guidance | Tier A | Interview topics and format vary by embassy and individual case |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Interview practices vary by embassy and individual case. Verify current requirements with your intended embassy before applying.*
