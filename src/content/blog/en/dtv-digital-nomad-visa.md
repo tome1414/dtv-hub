@@ -3,7 +3,7 @@ title: "Is the Thailand DTV a Digital Nomad Visa? What Remote Workers Should Kno
 slug: "dtv-digital-nomad-visa"
 lang: "en"
 published_at: "2026-04-29"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "Thailand digital nomad visa"
 secondary_keywords:
   - "Thailand DTV remote work"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Read Next"
 secondary_cta: "Read the DTV Complete Guide"
 must_link_pages:
-  - "/en/dtv-visa"
+  - "/en/blog/dtv-visa"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -95,7 +95,7 @@ How does the DTV compare to explicit digital nomad visas offered by countries li
 | Factor | DTV (Thailand) | Typical Digital Nomad Visa |
 |---|---|---|
 | Validity | 5 years | 1–2 years |
-| Application fee | 10,000 THB (~USD 280) | Varies by country |
+| Application fee | 10,000 THB | Varies by country |
 | Income requirement | None | Often USD 500–3,500/month |
 | Financial proof | 500,000 THB bank balance | Income proof |
 | Work authorization | Overseas work only | Varies |
@@ -161,4 +161,17 @@ The full picture of the DTV — routes, requirements, application process — is
 
 ---
 
-*Based on Thai embassy guidance. Regulations may change — verify with official sources before applying. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category, Workcation and Soft Power routes |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy guidance. Regulations may change — verify with official sources before applying. Last updated: 2026-09-16*
