@@ -3,7 +3,7 @@ title: "DTV Family Applications: Required Documents and Key Considerations"
 slug: "dtv-family-documents"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV family application"
 secondary_keywords:
   - "DTV spouse accompanying"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/dtv-application"
   - "/en/blog/dtv-bank-balance"
 schema_types:
@@ -181,10 +181,30 @@ A. There is no formal rule requiring simultaneous submission, but coordinating t
 
 ## Related Articles
 
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 - [DTV Application Steps](/en/blog/dtv-application)
 - [DTV Bank Balance Guide](/en/blog/dtv-bank-balance)
 
 ---
 
-*For family application details, confirm directly with the Thai embassy or consulate where you will apply. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. For family applications:
+
+- Each family member applying will generally need their own documentation
+- The Proof of Permanent Residence requirement may have different implications for spouses or children depending on their residency status — confirm with your intended embassy
+- Children who cannot obtain a Certificate of Criminal Record Clearance — format requirements and alternatives may be embassy-specific
+
+For the full updated document list, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official family accompaniment policy |
+| Thai embassy / consulate guidance | Tier A | Family application requirements, document certification standards vary by mission |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*For family application details, confirm directly with the Thai embassy or consulate where you will apply.*
