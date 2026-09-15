@@ -3,7 +3,7 @@ title: "DTVソフトパワービザとは｜対象活動・受入レター・申
 slug: "dtv-soft-power"
 lang: "ja"
 published_at: "2026-04-28"
-updated_at: "2026-04-28"
+updated_at: "2026-09-16"
 primary_keyword: "DTV ソフトパワー"
 secondary_keywords:
   - "DTV ソフトパワービザ"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Golf DTV詳細を見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-acceptance-letter"
+  - "/ja/blog/dtv-acceptance-letter"
   - "/ja/who-should-choose-golf-dtv"
   - "/ja/golf-dtv"
 schema_types:
@@ -36,6 +36,9 @@ read_time_minutes: 8
 ---
 
 DTV（Destination Thailand Visa）には「ソフトパワールート」と呼ばれる申請カテゴリがあります。タイ政府が推進するソフトパワー活動への参加を根拠にDTVを申請するルートで、リモートワークの雇用契約や業務委託書類が不要な点が特徴です。
+
+> **【2026年8月31日更新】**
+> DTV Supporting Documents（補強書類）に**Proof of Permanent Residence（居住証明書）**と**Certificate of Criminal Record Clearance（犯罪経歴証明書）**が追加されました。必要な書類の形式・内容は申請先公館によって異なります。詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)および申請先公館の最新案内をご確認ください。
 
 **この記事で分かること：** DTVソフトパワールートの対象活動、申請に必要な受入レターとは何か、ゴルフを活動テーマとした申請の現実的な流れ。
 
@@ -150,7 +153,7 @@ Golf DTVの詳細フロー・費用感・よくある質問は[Golf DTV専用ペ
 
 ## 自分にGolf DTVが向いているか確認する
 
-ソフトパワールートへの関心はあるが、「自分に本当に合っているのか」が不明な場合は、[Golf DTVに向いている人の記事](/ja/blog/who-should-choose-golf-dtv)でタイプ別の整理を確認してください。
+ソフトパワールートへの関心はあるが、「自分に本当に合っているのか」が不明な場合は、[Golf DTVに向いている人の記事](/ja/blog/golf-dtv-suitability)でタイプ別の整理を確認してください。
 
 **Golf DTVが向いている人の特徴（代表例）：**
 - タイでゴルフを楽しみたいが、リモートワーク書類の準備が難しい
@@ -181,11 +184,18 @@ A. 申請の根拠書類が異なります。ソフトパワーは受入レタ�
 
 ## 次のステップ
 
-- **自分に向いているか確認する：** [Golf DTVに向いている人](/ja/blog/who-should-choose-golf-dtv)
+- **自分に向いているか確認する：** [Golf DTVに向いている人](/ja/blog/golf-dtv-suitability)
 - **書類の全体像を把握する：** [DTV必要書類一覧](/ja/blog/dtv-required-documents)
 - **受入レターの詳細を知る：** [DTV受入レター解説](/ja/blog/dtv-acceptance-letter)
 - **Golf DTV詳細・相談：** [Golf DTV専用ページ](/ja/golf-dtv#inquiry)
 
 ---
 
-*本記事の制度情報はタイ公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| GolfDTV（サービス・プログラム情報） | Tier C（GolfDTVサービス現行情報） | 2026年9月 |
+
+*本記事の制度情報はタイ公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年9月*
