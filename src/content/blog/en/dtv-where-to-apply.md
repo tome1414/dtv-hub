@@ -3,7 +3,7 @@ title: "Where to Apply for DTV: Understanding the Home Country Rule and Embassy 
 slug: "dtv-where-to-apply"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV where to apply embassy"
 secondary_keywords:
   - "DTV application country"
@@ -20,7 +20,7 @@ secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/dtv-application"
   - "/en/blog/dtv-interview-format"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -66,7 +66,9 @@ Even within the same Thai embassy network, differences in practice may exist dep
 
 ---
 
-## Applying Within Japan
+## Example: Applying Within Japan (Japan-Based Applicants)
+
+The following is provided as an example for applicants currently residing in Japan. If you are based in another country, apply at the Thai embassy or consulate in your country of residence — check your local Thai mission's official website for jurisdiction details and current procedures.
 
 For Japan-based applicants, multiple Thai missions are available. Each has a designated jurisdiction, so checking which mission covers your area of residence in advance is advisable.
 
@@ -123,4 +125,18 @@ A. Online application through Thailand's e-Visa system is the standard method. H
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. Since embassy-specific practices may vary, confirming whether your intended mission has any additional guidance on these new documents is advisable. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official e-Visa system and application country rules |
+| Thai embassy / consulate guidance | Tier A | Jurisdiction, submission method, and document requirements vary by mission |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Embassy practices may vary by mission, officer, and timing. Confirm requirements directly with your intended embassy before applying.*
