@@ -3,7 +3,7 @@ title: "Golf DTV vs. Other Thailand Long-Stay Options: Which Fits Your Situation
 slug: "golf-dtv-comparison"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV vs other Thailand visa options"
 secondary_keywords:
   - "Golf DTV vs Retirement Visa"
@@ -66,7 +66,7 @@ read_time_minutes: 10
 | Application fee | THB 10,000* | THB 10,000* | Varies by country | High (by plan) |
 | Renewal frequency | Once every 5 years | Once every 5 years | Every year | Not needed during plan |
 
-*Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from the DTV fee. See [DTV Application Fee by Nationality](/en/blog/dtv-fee-by-nationality).
+*Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from the DTV fee. See [DTV Application Nationality Notes](/en/blog/dtv-application-nationality-notes).
 
 ---
 
@@ -143,4 +143,20 @@ Whether it's the right option depends on your documentation, age, financial situ
 
 ---
 
-*This article is based on general information about Thailand's DTV and related visa programs. Requirements and program terms are subject to change. Verify current requirements with relevant authorities before making decisions. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. This affects both the Golf DTV and DTV Workcation routes. Specific format requirements vary by embassy — verify with your intended application embassy. For a full document comparison, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
+| Thailand Privilege program | Tier A | Official program terms and conditions |
+| Thai Retirement Visa (Non-OA) guidelines | Tier A | Official age, financial, and renewal requirements |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Golf DTV application support |
+
+*Requirements and program terms are subject to change. Verify current requirements with relevant authorities before making decisions.*
