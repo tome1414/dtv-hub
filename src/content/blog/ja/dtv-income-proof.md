@@ -3,7 +3,7 @@ title: "DTVの収入証明は必要？雇用契約・在職証明・請求書の
 slug: "dtv-income-proof"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 収入証明"
 secondary_keywords:
   - "DTV 在職証明"
@@ -18,9 +18,9 @@ update_priority: "medium"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-freelance-proof"
-  - "/ja/dtv-bank-balance"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-freelance-proof"
+  - "/ja/blog/dtv-bank-balance"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -110,11 +110,17 @@ A. 英語での書類が基本です。日本語の書類には英語の概要�
 
 ## 関連記事
 
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
-- [DTVフリーランス申請の仕事証明](/ja/dtv-freelance-proof)
-- [DTV残高証明の考え方](/ja/dtv-bank-balance)
-- [DTV申請で用意すると安心な補強資料](/ja/dtv-portfolio-supporting-documents)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
+- [DTVフリーランス申請の仕事証明](/ja/blog/dtv-freelance-proof)
+- [DTV残高証明の考え方](/ja/blog/dtv-bank-balance)
+- [DTV申請で用意すると安心な補強資料](/ja/blog/dtv-portfolio-supporting-documents)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
