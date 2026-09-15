@@ -3,7 +3,7 @@ title: "DTV e-Visa Form: Fields That Commonly Cause Confusion"
 slug: "dtv-evisa-form-guide"
 lang: "en"
 published_at: "2026-06-03"
-updated_at: "2026-06-03"
+updated_at: "2026-09-16"
 primary_keyword: "DTV e-Visa form guide"
 secondary_keywords:
   - "Thai e-Visa form help"
@@ -134,4 +134,19 @@ The full DTV application process is covered in the [DTV application guide](/en/b
 
 ---
 
-*This article covers general guidance on DTV e-Visa form fields. Form interfaces may change. Always check the latest guidance from your intended embassy before submitting. Last updated: June 2026*
+ > **2026-08-31 update:** As of 2026-08-31, Proof of Permanent Residence and Certificate of Criminal Record Clearance were added to the DTV's central supporting-document requirements. Ensure these are prepared before beginning the upload stage. See [DTV Required Documents](/en/blog/dtv-required-documents) for the current checklist.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — e-Visa portal | Tier A | Official online application form structure |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific field requirements may vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*This article covers general guidance on DTV e-Visa form fields. Form interfaces may change. Always check the latest guidance from your intended embassy before submitting. Last updated: 2026-09-16*
