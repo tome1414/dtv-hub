@@ -3,7 +3,7 @@ title: "DTVの180日後はどうする？延長・再入国・滞在継続の基
 slug: "dtv-extension-and-reentry"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 180日 延長 再入国"
 secondary_keywords:
   - "DTV 滞在延長"
@@ -18,9 +18,9 @@ update_priority: "high"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-visa"
+  - "/ja/blog/dtv-visa"
   - "/ja/dtv-application"
-  - "/ja/dtv-entry-checks"
+  - "/ja/blog/dtv-entry-checks"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -36,6 +36,9 @@ read_time_minutes: 8
 ---
 
 DTVは1回の入国で最大180日（約6ヶ月）の滞在が認められています。180日を超えてタイに滞在し続けることを考えている場合、どのような選択肢があるかを理解しておくことが重要です。
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 **この記事で分かること：** DTVの滞在条件の基本、180日後の選択肢の整理、延長・再入国の考え方。
 
@@ -115,11 +118,17 @@ A. オーバーステイはタイの法律違反です。罰金・出国制限�
 
 ## 関連記事
 
-- [DTV（Destination Thailand Visa）とは](/ja/dtv-visa)
-- [DTV入国時に確認されることはある？](/ja/dtv-entry-checks)
-- [DTVとタイランド・プリビレッジの比較](/ja/dtv-vs-thailand-privilege)
-- [DTVとLTRビザの比較](/ja/dtv-vs-ltr)
+- [DTV（Destination Thailand Visa）とは](/ja/blog/dtv-visa)
+- [DTV入国時に確認されることはある？](/ja/blog/dtv-entry-checks)
+- [DTVとタイランド・プリビレッジの比較](/ja/blog/dtv-vs-thailand-privilege)
+- [DTVとLTRビザの比較](/ja/blog/dtv-vs-ltr)
 
 ---
 
-*タイ移民局・大使館公式案内をもとに作成。制度の詳細は最新の公式情報を確認してください。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ移民局・大使館公式案内をもとに作成。制度の詳細は最新の公式情報を確認してください。最終更新：2026年9月*
