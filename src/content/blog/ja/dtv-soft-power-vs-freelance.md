@@ -3,7 +3,7 @@ title: "DTVソフトパワー vs フリーランス（Workcation）｜どちら�
 slug: "dtv-soft-power-vs-freelance"
 lang: "ja"
 published_at: "2026-04-28"
-updated_at: "2026-04-28"
+updated_at: "2026-09-16"
 primary_keyword: "DTV ソフトパワー フリーランス 違い"
 secondary_keywords:
   - "DTV Workcation"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Golf DTV詳細を見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-soft-power"
+  - "/ja/blog/dtv-soft-power"
   - "/ja/who-should-choose-golf-dtv"
   - "/ja/dtv-required-documents"
 schema_types:
@@ -36,6 +36,9 @@ read_time_minutes: 9
 ---
 
 DTVを取得しようと調べていくと、「ソフトパワールート」と「Workcation（フリーランス）ルート」という2つの申請ルートがあることに気づきます。制度の窓口は同じDTVですが、必要な書類・証明できる活動・申請のしやすさが大きく異なります。
+
+> **【2026年8月31日更新】**
+> DTV Supporting Documents（補強書類）に**Proof of Permanent Residence（居住証明書）**と**Certificate of Criminal Record Clearance（犯罪経歴証明書）**が追加されました。必要な書類の形式・内容は申請先公館によって異なります。詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)および申請先公館の最新案内をご確認ください。
 
 **この記事で分かること：** ソフトパワールートとWorkcationルートの違い、それぞれに必要な書類、どちらが自分に現実的かの判断軸。
 
@@ -143,7 +146,7 @@ Workcationルートでは「タイ国外の雇用・契約先があること」�
 
 ### 迷ったら
 
-どちらのルートが自分の状況に合っているかが判断しにくい場合は、[Golf DTVに向いている人の記事](/ja/blog/who-should-choose-golf-dtv)で自分の状況と照らし合わせてみてください。
+どちらのルートが自分の状況に合っているかが判断しにくい場合は、[Golf DTVに向いている人の記事](/ja/blog/golf-dtv-suitability)で自分の状況と照らし合わせてみてください。
 
 ---
 
@@ -193,7 +196,7 @@ A. フリーランスの場合、業務委託契約書・発注書・振込明�
 | 契約書類の準備が難しい | → ソフトパワールートを検討 |
 | ゴルフ・料理などに興味がある | → ソフトパワールートが自然 |
 | 書類のシンプルさを重視する | → ソフトパワールート（受入レター中心） |
-| どちらか迷っている | → [Golf DTVに向いている人を確認](/ja/blog/who-should-choose-golf-dtv) |
+| どちらか迷っている | → [Golf DTVに向いている人を確認](/ja/blog/golf-dtv-suitability) |
 
 DTVのルート選択は「どちらが優れているか」ではなく、「自分の状況でどちらの書類が揃えやすいか」で決まります。書類準備で不明な点がある場合は専門家への相談も選択肢の一つです。
 
@@ -203,4 +206,11 @@ DTVのルート選択は「どちらが優れているか」ではなく、「�
 
 ---
 
-*本記事の制度情報はタイ公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| GolfDTV（サービス・プログラム情報） | Tier C（GolfDTVサービス現行情報） | 2026年9月 |
+
+*本記事の制度情報はタイ公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報（公館・公式サイト）をご確認ください。最終更新：2026年9月*
