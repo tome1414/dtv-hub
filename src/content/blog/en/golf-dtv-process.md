@@ -3,7 +3,7 @@ title: "How to Apply for Golf DTV: A Step-by-Step Timeline"
 slug: "golf-dtv-process"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV application process"
 secondary_keywords:
   - "Golf DTV how to apply"
@@ -60,7 +60,7 @@ This article covers the four stages of Golf DTV from initial research through po
 
 Before anything else, confirm three things:
 
-**Your bank balance.** You'll need at least THB 500,000 (approximately USD 14,000–15,000) in an account, documented with an English-language bank balance certificate. This is a requirement, not a cost — the money stays yours.
+**Your bank balance.** You'll need at least THB 500,000 in an account, documented with an English-language bank balance certificate. This is a requirement, not a cost — the money stays yours.
 
 **Your fit with Golf DTV.** If you haven't already, [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability) covers the key indicators.
 
@@ -81,7 +81,7 @@ The Acceptance Letter is your most time-sensitive document. It's issued by a Tha
 
 > **What the letter must contain:** Your full name as it appears in your passport, the facility name and contact details, the purpose and duration of the visit, and an authorized signature. A letter that's missing any of these elements may cause issues at the embassy. See [Golf DTV Documents](/en/blog/golf-dtv-documents) for the full checklist.
 
-Allow 2–4 weeks from initiating contact to receiving a usable letter. Start this process before anything else.
+Allow several weeks from initiating contact to receiving a usable letter — timing varies by facility and season. Start this process before anything else.
 
 ### Other Documents to Prepare
 
@@ -113,11 +113,11 @@ Check the specific embassy you plan to use for current submission methods before
 
 ### Application Fee
 
-THB 10,000, payable at the time of application. Some nationalities are exempt — see [DTV Application Fee by Nationality](/en/blog/dtv-fee-by-nationality).
+THB 10,000, payable at the time of application. Some nationalities are exempt — see [DTV Application Nationality Notes](/en/blog/dtv-application-nationality-notes).
 
 ### Processing Time
 
-Embassy processing typically takes **1–3 weeks** after all documents are submitted. This varies by embassy, time of year, and application volume. Plan your travel dates around receiving the approval — don't book flights until you have confirmation.
+Embassy processing time varies by embassy, time of year, and application volume — allow adequate lead time and do not book non-refundable travel before receiving approval. Plan your travel dates around receiving the approval — don't book flights until you have confirmation.
 
 > **Approval notification:** When approved, you'll receive a DTV approval PDF by email. Once you have it, you can enter Thailand at any point within the 5-year validity window.
 
@@ -157,7 +157,7 @@ Visit the golf facility that issued your Acceptance Letter, and explore courses 
 ## FAQ
 
 **How long does Golf DTV take to get?**
-Plan for 6–8 weeks from starting document preparation to visa approval. The Acceptance Letter is the longest single step (2–4 weeks). Embassy processing adds 1–3 weeks.
+Allow adequate lead time — typically several weeks minimum from starting document preparation to visa approval. The Acceptance Letter is the longest single step and timing varies by facility. Embassy processing time varies by location and season. See the schedule table above for general planning guidance.
 
 **Can I book my flights before my visa is approved?**
 We recommend against it. Book after you receive the approval PDF to avoid rebooking fees if processing takes longer than expected.
@@ -170,4 +170,24 @@ DTV can technically be applied for at any Thai embassy outside Thailand, but som
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Processing times, document requirements, and embassy procedures are subject to change. Verify current requirements with your intended embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, two documents have been added to DTV central supporting document requirements:
+
+- **Proof of Permanent Residence** — confirming your legal residence status in your application country
+- **Certificate of Criminal Record Clearance** — for overseas entry/stay purposes
+
+These affect Stage ② Document Preparation. Specific format requirements (language, certification, validity period) vary by embassy. Verify with your intended embassy before submitting. For the full document checklist, see [Golf DTV Documents](/en/blog/golf-dtv-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
+| Thai embassy / consulate guidance | Tier A | Mission-specific processing times, submission methods, and document requirements vary |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Acceptance Letter procurement and application support |
+
+*Processing times, document requirements, and embassy procedures are subject to change. Verify current requirements with your intended embassy before applying.*
