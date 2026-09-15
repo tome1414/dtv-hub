@@ -3,7 +3,7 @@ title: "Is Golf DTV Right for You? A Practical Fit Assessment"
 slug: "golf-dtv-suitability"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Is Golf DTV right for me"
 secondary_keywords:
   - "Golf DTV who qualifies"
@@ -48,7 +48,7 @@ For a foundational explanation of what Golf DTV is, see [Golf DTV Explained](/en
 ## The Core Requirement to Start With
 
 Golf DTV requires:
-- **A bank balance of THB 500,000+** (approximately USD 14,000–15,000), documented in English
+- **A bank balance of THB 500,000+**, documented in English
 - **An Acceptance Letter** from a Thai golf facility
 - A valid passport with sufficient remaining validity (1 year minimum; 2+ years recommended)
 
@@ -88,7 +88,7 @@ Obtaining the Acceptance Letter requires coordinating with a Thai golf facility 
 
 Golf DTV involves several financial commitments before any travel occurs:
 
-- Visa application fee: THB 10,000 (waived for some nationalities — see [DTV Application Fee by Nationality](/en/blog/dtv-fee-by-nationality))
+- Visa application fee: THB 10,000 (waived for some nationalities — see [DTV Application Nationality Notes](/en/blog/dtv-application-nationality-notes))
 - Support service fee for Acceptance Letter procurement (if using a service)
 - The financial requirement: THB 500,000 in your bank account at time of application
 
@@ -104,7 +104,7 @@ DTV does not authorize work within Thailand. Providing services to Thai clients 
 
 ### 4. Those with a very short timeline before travel
 
-Obtaining the Acceptance Letter typically takes 2–4 weeks from initial request to receipt. Embassy processing adds another 1–3 weeks. If you need to travel within the next few weeks, the timeline may not work. See [How the Golf DTV Application Works](/en/blog/golf-dtv-process) for realistic scheduling.
+Obtaining the Acceptance Letter typically takes several weeks from initial request to receipt (timing varies by facility and season). Embassy processing adds additional time that varies by location and current workload. If you need to travel within the next few weeks, the timeline may not work. See [How the Golf DTV Application Works](/en/blog/golf-dtv-process) for realistic scheduling.
 
 ---
 
@@ -127,7 +127,7 @@ Before starting the Golf DTV process, ask yourself:
 1. Do I have THB 500,000 in a bank account, documentable in English?
 2. Do I have at least 1–2 years ahead where multiple Thailand stays would be genuinely useful?
 3. Can I reasonably say I intend to participate in golf activities in Thailand?
-4. Am I comfortable with a 6–8 week preparation timeline before travel?
+4. Am I comfortable with a preparation lead time of several weeks before travel (varies by facility and embassy)?
 
 If you answered yes to all four, Golf DTV is worth exploring further. Start with [How the Golf DTV Application Works](/en/blog/golf-dtv-process).
 
@@ -150,4 +150,40 @@ Golf DTV tends not to suit:
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Requirements are subject to change and may vary by embassy. Verify current requirements with the relevant embassy before applying. Last updated: June 2026*
+## FAQ
+
+**Q. Can salaried employees apply for Golf DTV?**
+A. Yes. Golf DTV is open to employees and freelancers alike. Your employment type doesn't determine eligibility — the Acceptance Letter from a Thai golf facility is what matters as the qualifying document.
+
+**Q. Can my family apply together?**
+A. Spouses and children under 20 can accompany a DTV holder, but each person must apply individually with their own complete set of documents. Note that as of 2026-08-31, DTV supporting documents include Proof of Permanent Residence and Certificate of Criminal Record Clearance — family members should verify which documents apply to their individual circumstances.
+
+**Q. If I get a Golf DTV, do I have to golf on every trip?**
+A. The DTV is valid for 5 years and you can enter and exit multiple times. Not golfing on a particular trip doesn't automatically invalidate your visa — but your overall purpose in holding the visa should align with your stated activity basis.
+
+**Q. Does golf experience matter?**
+A. No golf skill level is required. The basis for the application is the *intent* to participate in golf activities at a Thai facility. Handicap certificates and scores are not part of the application process.
+
+---
+
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, two documents have been added to DTV central supporting document requirements:
+
+- **Proof of Permanent Residence** — confirming your legal residence status in your application country
+- **Certificate of Criminal Record Clearance** — issued for overseas entry/stay purposes
+
+These requirements apply to Golf DTV applicants using the Soft Power route. Specific format requirements (language, certification, validity period) may vary by embassy. Verify with your intended application embassy before submitting. For the full document checklist, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
+| Thai embassy / consulate guidance | Tier A | Mission-specific requirements vary; verify with your intended embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Acceptance Letter procurement and application support |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
