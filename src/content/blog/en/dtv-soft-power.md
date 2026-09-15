@@ -3,7 +3,7 @@ title: "Thailand DTV Soft Power Visa | Activities, Acceptance Letter & How to Ap
 slug: "dtv-soft-power"
 lang: "en"
 published_at: "2026-04-28"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV soft power visa Thailand"
 secondary_keywords:
   - "Thailand soft power visa"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "See Golf DTV Details"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-acceptance-letter"
+  - "/en/blog/dtv-acceptance-letter"
   - "/en/who-should-choose-golf-dtv"
   - "/en/golf-dtv"
 schema_types:
@@ -184,4 +184,19 @@ A. The core document differs. Soft Power requires an acceptance letter; Workcati
 
 ---
 
-*Based on Thai embassy guidance. Requirements may change — always verify with official sources before applying. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These apply to Soft Power route applications (including Golf DTV). For the complete updated document list, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official Soft Power route conditions |
+| Thai embassy / consulate guidance | Tier A | Mission-specific acceptance letter requirements and document review vary |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Golf acceptance letter procurement and support |
+
+*Requirements may change — always verify with official sources and your intended embassy before applying.*
