@@ -3,7 +3,7 @@ title: "DTV申請後に仕事が変わったらどう考える？"
 slug: "dtv-job-change-after-application"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 申請後 仕事 変わった"
 secondary_keywords:
   - "DTV 転職 申請"
@@ -18,15 +18,16 @@ update_priority: "low"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-freelance-proof"
+  - "/ja/blog/dtv-freelance-proof"
   - "/ja/dtv-application"
-  - "/ja/dtv-work-limitations"
+  - "/ja/blog/dtv-work-limitations"
 schema_types:
   - "Article"
   - "FAQPage"
   - "BreadcrumbList"
 image_style: "process"
-translation_targets: []
+translation_targets:
+  - "en"
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
@@ -91,10 +92,16 @@ A. 次のDTV申請時にソフトパワールートで申請し直すことは�
 
 ## 関連記事
 
-- [DTVフリーランス申請の仕事証明](/ja/dtv-freelance-proof)
-- [DTVでできる仕事・注意したい線引き](/ja/dtv-work-limitations)
+- [DTVフリーランス申請の仕事証明](/ja/blog/dtv-freelance-proof)
+- [DTVでできる仕事・注意したい線引き](/ja/blog/dtv-work-limitations)
 - [DTV申請の流れと手順](/ja/dtv-application)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
