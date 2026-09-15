@@ -3,7 +3,7 @@ title: "How to Apply for the Thailand DTV Visa | Embassy & e-Visa Step by Step"
 slug: "dtv-application"
 lang: "en"
 published_at: "2026-04-28"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "how to apply for DTV visa Thailand"
 secondary_keywords:
   - "DTV visa application process"
@@ -18,8 +18,8 @@ update_priority: "high"
 primary_cta: "Check Required Documents"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-required-documents"
-  - "/en/dtv-bank-balance"
+  - "/en/blog/dtv-required-documents"
+  - "/en/blog/dtv-bank-balance"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -147,10 +147,10 @@ Many Thai embassies use an appointment system for visa applications. Check your 
 
 | Method | Estimated Time |
 |---|---|
-| In-person embassy | 1–3 weeks |
-| e-Visa | 1–3 weeks (varies by embassy) |
+| In-person embassy | Varies by embassy and workload |
+| e-Visa | Varies by embassy and workload |
 
-Processing times can vary based on embassy workload and document completeness. Apply with enough lead time — plan for up to 3 weeks before you plan to travel.
+Processing times vary based on embassy workload, application volume, and document completeness. Apply with enough lead time and allow several weeks. Do not book non-refundable travel before receiving approval.
 
 **After approval:** Once you receive the DTV approval PDF by email, you can enter Thailand **at any time** within the 5-year visa validity. There is no fixed entry date requirement. Confirm your flights and accommodation after receiving the PDF.
 
@@ -210,7 +210,7 @@ The DTV is valid for 5 years, but **each entry grants a stay permit of up to 180
 ## FAQ
 
 **Q. How long does the whole process take from start to finish?**
-A. Plan for 3–4 weeks from when you start gathering documents. Embassy review typically takes 1–3 weeks once documents are submitted. For the Soft Power route, the acceptance letter is usually issued within a few days to about 1 week after school fee payment — contact the facility first. Once you receive the approval PDF, you can enter Thailand anytime within the 5-year validity.
+A. Plan for several weeks from when you start gathering documents — embassy review times vary by location and workload. For the Soft Power route, the acceptance letter is usually issued within a few days to about 1 week after school fee payment — contact the facility first. Once you receive the approval PDF, you can enter Thailand anytime within the 5-year validity.
 
 **Q. Do I need to go to the embassy in person?**
 A. Not necessarily — where e-Visa is available, you can apply entirely online. Check whether the Thai embassy in your country offers this option.
@@ -235,4 +235,23 @@ A. Spouses and children under 20 can accompany you under the DTV, but each perso
 
 ---
 
-*Based on Thai embassy guidance. Procedures may change — always verify with official sources before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting document requirements now include:
+
+- **Proof of Permanent Residence** — confirming your legal residence status in your application country
+- **Certificate of Criminal Record Clearance** — for overseas entry/stay purposes
+
+These documents affect Step 2 (Gather All Documents) and the Final Pre-Application Checklist above. Specific format requirements (language, certification, validity period) vary by embassy — verify with your intended embassy before submitting. See [DTV Required Documents](/en/blog/dtv-required-documents) for the full updated checklist.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, application process, and validity |
+| Thai embassy / consulate guidance | Tier A | Mission-specific procedures, appointment systems, and document requirements vary |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Procedures may change — always verify with official sources and your intended embassy before applying.*
