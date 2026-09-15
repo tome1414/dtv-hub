@@ -3,7 +3,7 @@ title: "DTVとリタイアメントビザの違い｜年齢条件・資金条件
 slug: "dtv-vs-retirement-visa"
 lang: "ja"
 published_at: "2026-04-27"
-updated_at: "2026-04-27"
+updated_at: "2026-09-16"
 primary_keyword: "DTV リタイアメントビザ 違い"
 secondary_keywords:
   - "タイ リタイアメントビザ"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "無料相談"
 secondary_cta: "適性確認"
 must_link_pages:
-  - "/ja/dtv-visa"
+  - "/ja/blog/dtv-visa"
   - "/ja/who-should-choose-golf-dtv"
   - "/ja/dtv-soft-power-vs-freelance"
 schema_types:
@@ -124,7 +124,7 @@ read_time_minutes: 7
 
 DTVは日本の銀行口座の残高証明（英文）で申請でき、タイ国内口座は不要です。タイ滞在中の支払いについては、**True Money Wallet**（タイ国内で広く使われるQRコード決済対応の電子マネー）を活用するDTV取得者が多く、口座なしでも実用的な生活が可能です。
 
-DTVのソフトパワールートが自分に向いているかは、[Golf DTVの適性記事](/ja/blog/who-should-choose-golf-dtv)でより詳しく確認できます。どちらのルートで申請すべきか迷っている場合は[ソフトパワー vs フリーランス比較記事](/ja/blog/dtv-soft-power-vs-freelance)も参考にしてください。
+DTVのソフトパワールートが自分に向いているかは、[Golf DTVの適性記事](/ja/blog/golf-dtv-suitability)でより詳しく確認できます。どちらのルートで申請すべきか迷っている場合は[ソフトパワー vs フリーランス比較記事](/ja/blog/dtv-soft-power-vs-freelance)も参考にしてください。
 
 ---
 
@@ -156,4 +156,10 @@ DTV vs リタイアメントの選択は、**「タイで何をしたいか」�
 
 ---
 
-*本記事の制度情報は公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年4月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*本記事の制度情報は公館案内をもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年9月*
