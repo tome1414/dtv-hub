@@ -3,7 +3,7 @@ title: "DTVフリーランス申請の仕事証明：契約書・請求書・ポ
 slug: "dtv-freelance-proof"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV フリーランス 仕事証明"
 secondary_keywords:
   - "DTV フリーランス 契約書"
@@ -20,7 +20,7 @@ secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-required-documents"
   - "/ja/dtv-soft-power-vs-freelance"
-  - "/ja/dtv-portfolio-supporting-documents"
+  - "/ja/blog/dtv-portfolio-supporting-documents"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -36,6 +36,9 @@ read_time_minutes: 10
 ---
 
 DTVのWorkcation（フリーランス）ルートは、タイ国外のクライアントや雇用主のためにリモートで働くことを根拠に申請するルートです。このルートで最も準備に時間がかかるのが、**仕事の実態をどう証明するか**という点です。
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 **この記事で分かること：** フリーランスが使える書類の種類と役割、働き方別の主資料と補助資料の整理、提出時の注意点。
 
@@ -142,11 +145,17 @@ A. 収入の実態を裏付ける補助資料として有効です。ただし�
 
 ## 関連記事
 
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
 - [DTVソフトパワー vs フリーランス：どちらで申請するか](/ja/dtv-soft-power-vs-freelance)
-- [DTV申請で用意すると安心な補強資料](/ja/dtv-portfolio-supporting-documents)
-- [DTV残高証明の考え方](/ja/dtv-bank-balance)
+- [DTV申請で用意すると安心な補強資料](/ja/blog/dtv-portfolio-supporting-documents)
+- [DTV残高証明の考え方](/ja/blog/dtv-bank-balance)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
