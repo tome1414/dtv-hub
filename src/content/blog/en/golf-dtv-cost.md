@@ -3,7 +3,7 @@ title: "Golf DTV Costs: What to Budget Before, During, and After Applying"
 slug: "golf-dtv-cost"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV cost"
 secondary_keywords:
   - "Golf DTV how much"
@@ -58,22 +58,17 @@ Getting this distinction clear helps you budget accurately. Here's how Golf DTV 
 
 ## ① Visa Application Fee
 
-**THB 10,000** — this is the standard DTV application fee as of mid-2026. At current exchange rates, this is roughly USD 280–300, though the exact amount in your home currency depends on the rate at the time you apply.
+**THB 10,000** — this is the standard DTV application fee as of mid-2026. The equivalent in your home currency depends on the exchange rate at the time you apply.
 
 This fee is paid per application. If your Golf DTV expires after five years and you want to continue, a new application (and new fee) is required.
 
-> **Fee waivers:** Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand. See [DTV Application Fee by Nationality](/en/blog/dtv-fee-by-nationality) for details. All other nationalities should budget for the full THB 10,000.
+> **Fee waivers:** Nationals of South Korea, Malaysia, Singapore, and Tunisia are exempt from this fee under bilateral agreements with Thailand. See [DTV Application Nationality Notes](/en/blog/dtv-application-nationality-notes) for details. All other nationalities should budget for the full THB 10,000.
 
 ---
 
 ## ② Bank Balance Requirement
 
 **THB 500,000+** must be present in your bank account and documented with an English-language bank balance certificate at time of application.
-
-Approximate equivalents (check current rates):
-- USD: approximately USD 14,000–15,000
-- EUR: approximately EUR 13,000–14,000
-- GBP: approximately GBP 11,000–12,000
 
 **This is not a payment.** The money stays in your account. However, you need to be able to document it clearly. A few practical notes:
 
@@ -143,4 +138,19 @@ For questions about your specific situation, visit the [Golf DTV page](/en/golf-
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Costs and requirements are subject to change. Exchange rates fluctuate — verify current rates before budgeting. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These are not additional fees — they are documentary requirements that affect the document preparation phase of your application. For a full document checklist, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, application fee, and conditions |
+| Thai embassy / consulate guidance | Tier A | Mission-specific requirements and document verification |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Support service fee details and Acceptance Letter procurement |
+
+*Requirements and costs are subject to change. Exchange rates fluctuate — verify current figures before budgeting. Verify document requirements with your intended embassy before applying.*
