@@ -3,7 +3,7 @@ title: "DTV Freelance Application: Proving Your Work with Contracts, Invoices & 
 slug: "dtv-freelance-proof"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV freelance work proof"
 secondary_keywords:
   - "DTV freelance contract"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/dtv-soft-power-vs-freelance"
   - "/en/blog/dtv-portfolio-supporting-documents"
 schema_types:
@@ -148,4 +148,18 @@ A. It's a useful supporting document for substantiating income. However, it is n
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance, in addition to the Workcation route-specific documents covered in this article. These apply across both routes. For the full updated document list, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official Workcation route document requirements |
+| Thai embassy / consulate guidance | Tier A | Freelance document review criteria may vary by embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Based on Thai embassy official guidance. Requirements may change — verify with your intended embassy before applying.*
