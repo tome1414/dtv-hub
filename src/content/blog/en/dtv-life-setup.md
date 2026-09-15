@@ -3,7 +3,7 @@ title: "Setting Up Life in Thailand After DTV: Housing, Banking, and Connectivit
 slug: "dtv-life-setup"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV Thailand life setup"
 secondary_keywords:
   - "Thailand long-term stay setup"
@@ -18,7 +18,7 @@ update_priority: "low"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-visa"
+  - "/en/blog/dtv-visa"
   - "/en/blog/dtv-bank-account"
   - "/en/blog/dtv-extension-and-reentry"
 schema_types:
@@ -181,10 +181,23 @@ A. In tourist and international residential areas of Bangkok and Chiang Mai, Eng
 
 ## Related Articles
 
-- [What Is DTV (Destination Thailand Visa)?](/en/dtv-visa)
+- [What Is DTV (Destination Thailand Visa)?](/en/blog/dtv-visa)
 - [Can DTV Holders Open a Thai Bank Account?](/en/blog/dtv-bank-account)
 - [DTV After 180 Days: Extension and Re-Entry](/en/blog/dtv-extension-and-reentry)
 
 ---
 
-*Information reflects conditions as of June 2026. Local situations may change. Last updated: June 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa conditions and entry requirements |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Information reflects conditions as of 2026-09-16. Local situations may change. Last updated: 2026-09-16*
