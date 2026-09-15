@@ -3,7 +3,7 @@ title: "Can DTV Holders Open a Thai Bank Account? A Practical Guide"
 slug: "dtv-bank-account"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV Thailand bank account"
 secondary_keywords:
   - "Thailand bank account opening DTV"
@@ -18,7 +18,7 @@ update_priority: "low"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-visa"
+  - "/en/blog/dtv-visa"
   - "/en/blog/dtv-life-setup"
   - "/en/blog/dtv-work-limitations"
 schema_types:
@@ -104,9 +104,22 @@ A. The visa type may affect how banks respond. Visas that more explicitly author
 ## Related Articles
 
 - [Setting Up Life in Thailand After DTV](/en/blog/dtv-life-setup)
-- [What Is DTV (Destination Thailand Visa)?](/en/dtv-visa)
+- [What Is DTV (Destination Thailand Visa)?](/en/blog/dtv-visa)
 - [DTV vs LTR Visa](/en/blog/dtv-vs-ltr)
 
 ---
 
-*Thai bank account opening conditions are subject to change. Always confirm the latest requirements directly with the relevant bank or branch. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category and entry conditions |
+| Thai commercial bank guidance (general) | Tier A | Bank-specific requirements vary by branch and staff |
+
+*Requirements are subject to change. Always confirm the latest requirements directly with the relevant bank or branch.*
+
+---
+
+*Thai bank account opening conditions are subject to change. Always confirm the latest requirements directly with the relevant bank or branch. Last updated: 2026-09-16*
