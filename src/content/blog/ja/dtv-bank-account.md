@@ -3,7 +3,7 @@ title: "DTVでタイ銀行口座は開ける？実務上の確認ポイント"
 slug: "dtv-bank-account"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV タイ 銀行口座"
 secondary_keywords:
   - "タイ 銀行口座 開設 DTV"
@@ -18,9 +18,9 @@ update_priority: "low"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-visa"
-  - "/ja/dtv-life-setup"
-  - "/ja/dtv-work-limitations"
+  - "/ja/blog/dtv-visa"
+  - "/ja/blog/dtv-life-setup"
+  - "/ja/blog/dtv-work-limitations"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -103,10 +103,16 @@ A. ビザの種類によって銀行側の対応が変わる可能性があり�
 
 ## 関連記事
 
-- [DTV取得後のタイ生活準備ガイド](/ja/dtv-life-setup)
-- [DTV（Destination Thailand Visa）とは](/ja/dtv-visa)
-- [DTVとLTRビザの比較](/ja/dtv-vs-ltr)
+- [DTV取得後のタイ生活準備ガイド](/ja/blog/dtv-life-setup)
+- [DTV（Destination Thailand Visa）とは](/ja/blog/dtv-visa)
+- [DTVとLTRビザの比較](/ja/blog/dtv-vs-ltr)
 
 ---
 
-*タイ銀行の口座開設条件は変更される場合があります。最新情報は各銀行・支店に直接確認してください。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ銀行の口座開設条件は変更される場合があります。最新情報は各銀行・支店に直接確認してください。最終更新：2026年9月*
