@@ -3,7 +3,7 @@ title: "タイ長期滞在ビザ比較｜DTV・LTR・タイランドプリビレ
 slug: "thailand-long-stay-visa-comparison"
 lang: "ja"
 published_at: "2026-04-26"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "タイ 長期滞在 ビザ 比較"
 secondary_keywords:
   - "DTV ビザ"
@@ -20,7 +20,7 @@ update_priority: "high"
 primary_cta: "DTV完全ガイドへ"
 secondary_cta: "適性確認"
 must_link_pages:
-  - "/ja/dtv-visa"
+  - "/ja/blog/dtv-visa"
   - "/ja/dtv-soft-power-vs-freelance"
   - "/ja/who-should-choose-golf-dtv"
 schema_types:
@@ -142,7 +142,7 @@ DTVは2024年に導入されたタイの長期滞在ビザで、Workcation（リ
 
 **向いている人：** リモートワーカー、フリーランス、ゴルフなどソフトパワー活動に参加する人、50歳未満でタイに長期滞在したい人。
 
-DTVの詳細は[タイDTVビザ完全ガイド](/ja/blog/dtv-visa)を参照してください。自分に向いているかを確認したい方は[Golf DTVに向いている人](/ja/blog/who-should-choose-golf-dtv)も参考にしてください。
+DTVの詳細は[タイDTVビザ完全ガイド](/ja/blog/dtv-visa)を参照してください。自分に向いているかを確認したい方は[Golf DTVに向いている人](/ja/blog/golf-dtv-suitability)も参考にしてください。
 
 ### LTR（Long-Term Resident Visa）
 
@@ -251,4 +251,11 @@ DTVを詳しく検討したい方は、[DTV完全ガイド](/ja/blog/dtv-visa)�
 
 ---
 
-*本記事の制度情報は公館案内・BOI・公式サイトをもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年6月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| タイBOI（LTR公式案内） | Tier A（公式情報） | 2026年8月 |
+
+*本記事の制度情報は公館案内・BOI・公式サイトをもとにしていますが、制度は変更される場合があります。申請前に必ず最新の一次情報をご確認ください。最終更新：2026年9月*
