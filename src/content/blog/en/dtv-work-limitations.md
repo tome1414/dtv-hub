@@ -3,7 +3,7 @@ title: "DTV Work Limitations: What You Can and Cannot Do in Thailand"
 slug: "dtv-work-limitations"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV work limitations"
 secondary_keywords:
   - "DTV what work is allowed"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/dtv-visa"
+  - "/en/blog/dtv-visa"
   - "/en/blog/dtv-freelance-proof"
   - "/en/blog/dtv-soft-power-vs-freelance"
 schema_types:
@@ -104,10 +104,24 @@ A. Conducting work entirely online is not sufficient on its own to determine com
 
 ## Related Articles
 
-- [What Is DTV (Destination Thailand Visa)?](/en/dtv-visa)
+- [What Is DTV (Destination Thailand Visa)?](/en/blog/dtv-visa)
 - [DTV Freelance Work Proof: Contracts, Invoices & Portfolio](/en/blog/dtv-freelance-proof)
 - [DTV Soft Power vs. Workcation: Which Route Should You Choose?](/en/blog/dtv-soft-power-vs-freelance)
 
 ---
 
-*This article is for general informational purposes only and does not constitute legal advice. For your specific circumstances, consult a qualified professional. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance at the application stage. These additions apply across both the Workcation and Soft Power routes. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, Workcation route definition, and work authorization basis |
+| Thai Revenue Department / Thai Labor Law | Tier A | Work permit requirements and local employment definitions |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*This article is for general informational purposes only and does not constitute legal advice. Requirements may change — consult a qualified professional and verify with your intended embassy before applying.*
