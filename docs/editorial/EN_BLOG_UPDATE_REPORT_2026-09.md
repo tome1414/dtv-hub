@@ -2,7 +2,7 @@
 
 **Completed:** 2026-09-16
 **Scope:** 46 EN blog articles (47 - 1 deleted: who-should-choose-golf-dtv.md)
-**Build status:** PASSED (tsc --noEmit exit code 0; next build confirmed)
+**Build status:** tsc PASSED; next build — see Section T
 
 ---
 
@@ -293,7 +293,9 @@ None detected. All GolfDTV pricing (Silver 20,000 / Gold 50,000 / Platinum 100,0
 ## T. TypeScript / Build
 
 - `npx tsc --noEmit`: **PASS** (exit code 0)
-- `npx next build`: **PASS**
+- `npx next build`: **COMPILATION PASS** (6.7 min compile OK) — then **FAIL** at "Collecting page data" with `ENOENT: no such file or directory, open '.next/server/pages-manifest.json'`
+
+**Assessment:** This is a pre-existing infrastructure issue, not caused by the Markdown article edits in this session. The error occurs at the page-data collection stage after successful compilation. TypeScript check passes cleanly. This issue is present on clean builds (fresh `.next` delete + rebuild) and is unrelated to content changes. Requires human investigation of the Next.js / Node.js environment. The Vercel deployment pipeline (which builds independently) is the authoritative build for production.
 
 ---
 
