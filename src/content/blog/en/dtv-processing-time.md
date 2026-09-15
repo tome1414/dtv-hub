@@ -3,7 +3,7 @@ title: "DTV Processing Time and Pending Status: What to Do When Asked for More D
 slug: "dtv-processing-time"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV processing time pending"
 secondary_keywords:
   - "DTV application wait time"
@@ -19,7 +19,7 @@ primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/dtv-application"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-upload-documents"
 schema_types:
   - "Article"
@@ -185,4 +185,18 @@ A. Treat it as a straightforward confirmation of your plans. Be ready to clearly
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. If your application was submitted before this date, or if you receive a request for additional documents, these items may be among those requested. For the full updated document list, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and processing information |
+| Thai embassy / consulate guidance | Tier A | Processing times, interview practices, and document request procedures vary by embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Based on Thai embassy official guidance. Requirements may change — verify with your intended embassy before applying.*
