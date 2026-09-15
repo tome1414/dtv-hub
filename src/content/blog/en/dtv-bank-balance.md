@@ -3,7 +3,7 @@ title: "DTV Visa Bank Balance Requirement | The 500,000 THB Proof Explained"
 slug: "dtv-bank-balance"
 lang: "en"
 published_at: "2026-04-29"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV visa bank balance requirement"
 secondary_keywords:
   - "DTV 500000 baht bank balance"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Free Consultation"
 secondary_cta: "See Required Documents"
 must_link_pages:
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/dtv-application"
 schema_types:
   - "Article"
@@ -29,11 +29,11 @@ translation_targets: []
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
-excerpt: "Everything you need to know about the DTV's 500,000 THB bank balance requirement — what it means, how to get a bank balance certificate in English, whether multiple accounts can be combined, and when to get it issued."
+excerpt: "Everything you need to know about the DTV's 500,000 THB bank balance requirement — what it means, how to get a bank balance certificate in English, whether multiple accounts can be combined, and when to get it issued. Requirements updated 2026-08-31."
 read_time_minutes: 7
 ---
 
-The 500,000 THB bank balance requirement is often the first thing that catches people's attention when researching the DTV. "Do I really need the equivalent of USD 14,000?" The good news: once you understand what this requirement actually means, the practical bar is lower than it looks.
+The 500,000 THB bank balance requirement is often the first thing that catches people's attention when researching the DTV. "Do I really need 500,000 THB in my account?" The good news: once you understand what this requirement actually means, the practical bar is lower than it looks.
 
 **What you'll learn:** What 500,000 THB means in context, how to get an English bank balance certificate, multi-account combining, and timing your issuance correctly.
 
@@ -43,15 +43,7 @@ The 500,000 THB bank balance requirement is often the first thing that catches p
 
 The DTV requires proof that you hold **500,000 THB or more in your bank account** at the time of application.
 
-**Approximate equivalent in USD:**
-
-| THB/USD Rate | Equivalent |
-|---|---|
-| 1 USD = 35 THB | ~USD 14,300 |
-| 1 USD = 33 THB | ~USD 15,150 |
-| 1 USD = 37 THB | ~USD 13,500 |
-
-Exchange rates fluctuate. To be safe, aim for USD 15,000+ to comfortably exceed the threshold regardless of rate movement.
+The requirement is set in Thai baht. If your account is in a foreign currency (USD, EUR, GBP, etc.), the embassy will verify that the equivalent amount meets the 500,000 THB threshold based on the exchange rate at the time of application. Aim to hold a comfortable margin above the minimum to absorb normal exchange rate fluctuation between when you obtain the certificate and when you submit your application.
 
 ---
 
@@ -172,8 +164,19 @@ A. Bank balance certificates are the standard. Some embassies may accept supplem
 
 ## The Bank Balance in the Broader Document Context
 
-The bank balance certificate is one component of the DTV application. See the complete document requirements in the [DTV required documents guide](/en/blog/dtv-required-documents), and the full application process in [how to apply for the DTV](/en/blog/dtv-application).
+The bank balance certificate is one component of the DTV application. Note that as of 2026-08-31, Proof of Permanent Residence and Certificate of Criminal Record Clearance were added to the DTV's central supporting-document requirements. See the complete document requirements in the [DTV required documents guide](/en/blog/dtv-required-documents), and the full application process in [how to apply for the DTV](/en/blog/dtv-application).
 
 ---
 
-*Based on Thai embassy guidance. Requirements may change — always verify with official sources before applying. Last updated: May 2026*
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and financial evidence requirements |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy guidance. Requirements may change — always verify with official sources before applying. Last updated: 2026-09-16*
