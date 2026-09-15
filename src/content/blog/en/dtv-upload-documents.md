@@ -3,7 +3,7 @@ title: "DTV e-Visa Document Upload: Common Issues and How to Avoid Them"
 slug: "dtv-upload-documents"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV e-Visa document upload"
 secondary_keywords:
   - "DTV e-Visa PDF"
@@ -19,7 +19,7 @@ primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/dtv-application"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -117,9 +117,24 @@ A. This depends on the e-Visa system's specifications. In many cases, you can co
 ## Related Articles
 
 - [DTV Application Steps](/en/blog/dtv-application)
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 - [Common DTV Document Mistakes](/en/blog/dtv-common-document-mistakes)
 
 ---
 
-*e-Visa system specifications are subject to change. Always defer to the official site's guidance at the time of application. Last updated: May 2026*
+ > **2026-08-31 update:** As of 2026-08-31, Proof of Permanent Residence and Certificate of Criminal Record Clearance were added to the DTV's central supporting-document requirements. Ensure these documents are prepared and included in your upload checklist. See [DTV Required Documents](/en/blog/dtv-required-documents) for details.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — e-Visa portal | Tier A | Official document upload interface and requirements |
+| Thai embassy / consulate guidance (general) | Tier A | Supplementary document requests may vary by mission |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*e-Visa system specifications are subject to change. Always defer to the official site's guidance at the time of application. Last updated: 2026-09-16*
