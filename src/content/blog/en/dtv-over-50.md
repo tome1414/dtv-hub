@@ -3,7 +3,7 @@ title: "DTV for Applicants Over 50: Clearing Up the Retirement Visa Confusion"
 slug: "dtv-over-50"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV over 50"
 secondary_keywords:
   - "DTV retirement visa comparison"
@@ -19,7 +19,7 @@ primary_cta: "See Golf DTV Details"
 secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/blog/dtv-vs-retirement-visa"
-  - "/en/dtv-soft-power"
+  - "/en/blog/dtv-soft-power"
   - "/en/blog/golf-dtv-suitability"
 schema_types:
   - "Article"
@@ -115,9 +115,25 @@ A. Technical skill is not an application requirement. Having the intention to pa
 ## Related Articles
 
 - [DTV vs Retirement Visa: Which Is Right for You?](/en/blog/dtv-vs-retirement-visa)
-- [What Is the DTV Soft Power Visa?](/en/dtv-soft-power)
+- [What Is the DTV Soft Power Visa?](/en/blog/dtv-soft-power)
 - [Is Golf DTV Right for You?](/en/blog/golf-dtv-suitability)
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+ > **2026-08-31 update:** As of 2026-08-31, Proof of Permanent Residence and Certificate of Criminal Record Clearance were added to the DTV's central supporting-document requirements. This applies to all DTV applicants regardless of age. See [DTV Required Documents](/en/blog/dtv-required-documents) for the current full checklist.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category, age eligibility |
+| Thai Immigration Bureau — Retirement Visa (Non-Immigrant O) | Tier A | Official retirement visa age requirements and conditions |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy official guidance. Last updated: 2026-09-16*
