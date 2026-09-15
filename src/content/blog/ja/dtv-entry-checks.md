@@ -3,7 +3,7 @@ title: "DTV入国時に確認されることはある？持っておきたい書
 slug: "dtv-entry-checks"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 入国 確認"
 secondary_keywords:
   - "DTV 入国審査"
@@ -19,8 +19,8 @@ primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-application"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-extension-and-reentry"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-extension-and-reentry"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -36,6 +36,9 @@ read_time_minutes: 7
 ---
 
 DTVビザ（e-Visa）を取得してタイに入国する際、空港の入国審査でどのような確認が行われるのかを不安に感じる方は少なくありません。
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 **この記事で分かること：** DTV入国時に確認されやすい基本事項、持参しておくと安心な書類の種類、入国審査への心構え。
 
@@ -119,9 +122,15 @@ A. ビザを取得していても、入国審査での判断によって入国�
 ## 関連記事
 
 - [DTV申請の流れと手順](/ja/dtv-application)
-- [DTVの180日後はどうする？延長・再入国の基本整理](/ja/dtv-extension-and-reentry)
-- [DTV必要書類チェックリスト](/ja/dtv-required-documents)
+- [DTVの180日後はどうする？延長・再入国の基本整理](/ja/blog/dtv-extension-and-reentry)
+- [DTV必要書類チェックリスト](/ja/blog/dtv-required-documents)
 
 ---
 
-*タイ入国審査の運用は担当官・時期によって異なる場合があります。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+
+*タイ入国審査の運用は担当官・時期によって異なる場合があります。最終更新：2026年9月*
