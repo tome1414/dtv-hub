@@ -3,7 +3,7 @@ title: "DTV vs Thailand Privilege | Cost, Process & Which One to Choose"
 slug: "dtv-vs-thailand-privilege"
 lang: "en"
 published_at: "2026-04-28"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV vs Thailand Privilege"
 secondary_keywords:
   - "Thailand Privilege vs DTV"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Read Next"
 secondary_cta: "Free Consultation"
 must_link_pages:
-  - "/en/thailand-long-stay-visa-comparison"
+  - "/en/blog/thailand-long-stay-visa-comparison"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -72,7 +72,7 @@ The most significant difference is the cost structure.
 
 | Factor | DTV | Thailand Privilege |
 |---|---|---|
-| **Upfront cost** | 10,000 THB (~USD 280) | ~650,000 THB (~USD 18,000) and up |
+| **Upfront cost** | 10,000 THB | ~650,000 THB and up |
 | **Ongoing costs** | Health insurance, bank balance prep | Minimal (renewal is handled for you) |
 | **5-year total estimate** | 100,000–200,000 THB (incl. insurance) | 650,000–2,500,000 THB+ |
 | **How costs appear** | Low headline, but prep costs add up | High headline, but "paperwork-free" |
@@ -170,4 +170,18 @@ A. If bank balance documentation is the barrier, Thailand Privilege removes that
 
 ---
 
-*Based on official program information. Fees and terms may change — verify with official sources before applying. Last updated: May 2026*
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official DTV visa category and conditions |
+| Thailand Privilege Card Co., Ltd. — Thailand Privilege program | Tier A | Official membership program, fee and stay conditions |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements and fees are subject to change. Verify current requirements with your intended embassy and the official Thailand Privilege program before applying.*
+
+---
+
+*Based on official program information. Fees and terms may change — verify with official sources before applying. Last updated: 2026-09-16*
