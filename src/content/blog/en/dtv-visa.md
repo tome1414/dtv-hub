@@ -3,7 +3,7 @@ title: "Thailand DTV Visa Complete Guide | What It Is, Who Qualifies & How to Ap
 slug: "dtv-visa"
 lang: "en"
 published_at: "2026-04-26"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "Thailand DTV visa"
 secondary_keywords:
   - "Destination Thailand Visa"
@@ -19,9 +19,9 @@ update_priority: "high"
 primary_cta: "Check Required Documents"
 secondary_cta: "Check Your Eligibility"
 must_link_pages:
-  - "/en/thailand-long-stay-visa-comparison"
+  - "/en/blog/thailand-long-stay-visa-comparison"
   - "/en/dtv-soft-power-vs-freelance"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -84,8 +84,8 @@ Requirements may vary slightly by embassy or consulate. The following reflects g
 
 | Requirement | Details |
 |---|---|
-| Bank balance proof | 500,000 THB or equivalent (approx. USD 14,000) |
-| Health insurance | Coverage of at least USD 40,000 |
+| Bank balance proof | 500,000 THB, documented in English |
+| Health insurance | Some embassies may request insurance documentation — verify with your intended embassy |
 | Activity proof | Employment/freelance contract OR acceptance letter |
 | Passport validity | At least 1 year remaining (recommended) |
 
@@ -157,4 +157,18 @@ Once you understand the DTV framework, here's where to go:
 
 ---
 
-*The information in this article is based on Thai embassy guidance but regulations change. Always verify with official sources before applying. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting documents now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These affect the Key Application Requirements above. For the full updated checklist, see [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
+| Thai embassy / consulate guidance | Tier A | Mission-specific requirements vary; verify before applying |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Regulations change. Always verify with official sources and your intended embassy before applying.*
