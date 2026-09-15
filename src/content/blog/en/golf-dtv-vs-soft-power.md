@@ -3,7 +3,7 @@ title: "Golf DTV vs. Other Soft Power DTV Routes: Same Visa, Different Activity"
 slug: "golf-dtv-vs-soft-power"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV vs Soft Power DTV"
 secondary_keywords:
   - "Golf DTV vs Thai cooking school DTV"
@@ -145,4 +145,19 @@ For more on the Soft Power route in general, see [DTV Soft Power Explained](/en/
 
 ---
 
-*This article is based on general information about Thailand's DTV Soft Power program. Requirements are subject to change and may vary by embassy. Verify current requirements with the relevant embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These apply to all Soft Power routes — golf, cooking, Muay Thai, and others alike. See [DTV Required Documents](/en/blog/dtv-required-documents) for the complete updated checklist.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official Soft Power route definitions and activity categories |
+| Thai embassy / consulate guidance | Tier A | Acceptance Letter review criteria and document standards vary by mission |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Golf Acceptance Letter support and specialist services |
+
+*Requirements are subject to change and may vary by embassy. Verify current requirements with the relevant embassy before applying.*
