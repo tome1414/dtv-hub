@@ -3,7 +3,7 @@ title: "DTV Visa Required Documents | Bank Balance, Acceptance Letter & Applicat
 slug: "dtv-required-documents"
 lang: "en"
 published_at: "2026-04-28"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV visa required documents"
 secondary_keywords:
   - "DTV application documents"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "Free Consultation"
 secondary_cta: "See Application Steps"
 must_link_pages:
-  - "/en/dtv-bank-balance"
+  - "/en/blog/dtv-bank-balance"
   - "/en/dtv-application"
 schema_types:
   - "Article"
@@ -45,12 +45,16 @@ DTV documents fall into two categories: **documents required for all applicants*
 
 ### Common Documents (All Routes)
 
+> **2026-08-31 Update:** As of 2026-08-31, two documents have been added to DTV central supporting document requirements: **Proof of Permanent Residence** and **Certificate of Criminal Record Clearance** (for overseas entry/stay purposes). These apply across routes. Specific format, certification, and validity requirements vary by embassy — verify with your intended embassy before applying.
+
 | Document | Details | Key Notes |
 |---|---|---|
 | **Passport (original)** | 1+ year validity remaining | Include copy of photo page |
 | **Passport photos** | Per embassy specifications | Recent (within 6 months) |
 | **Bank balance certificate** | 500,000 THB+ (in English) | Bank-issued original; typically valid for 3 months from issue |
 | **Bank transaction statements** | 3 months of transaction history (in English) | Increasingly requested by embassies. Prepare from the same account as the balance certificate. |
+| **Proof of Permanent Residence** | Legal residence status in your application country | Added 2026-08-31. Format requirements vary by embassy and nationality. |
+| **Certificate of Criminal Record Clearance** | Issued for overseas entry/stay purposes | Added 2026-08-31. Language, certification, and validity requirements vary by embassy. |
 | **Document indicating current location** | Proof of lawful stay in the consulate's jurisdiction at time of application | Differs by situation — see section below. Requirements vary by embassy; confirm in advance. |
 | **Application form** | Embassy format | Download from embassy website |
 | **Application fee** | 10,000 THB | Payment methods vary by embassy |
@@ -80,7 +84,7 @@ Submit the original plus a copy of the photo page (A4 size). Requirements vary b
 
 This is typically the most time-consuming document to prepare.
 
-**Requirement:** 500,000 THB or equivalent (approximately USD 14,000), certified by your bank in English.
+**Requirement:** 500,000 THB, certified by your bank in English.
 
 **How to get it:**
 1. Contact your bank and request an "English bank balance certificate" or "balance confirmation letter"
@@ -213,4 +217,12 @@ A. Some embassies allow supplementary submissions; others may reject and require
 
 ---
 
-*Based on Thai embassy guidance. Requirements may change — always verify with official sources before applying. Last updated: May 2026*
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, document requirements, and conditions |
+| Thai embassy / consulate guidance | Tier A | Mission-specific requirements; verify with your intended embassy |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Requirements may change — always verify with official sources and your intended embassy before applying.*
