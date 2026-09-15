@@ -3,7 +3,7 @@ title: "DTV Interview Format: In-Person, Online, and Language Differences"
 slug: "dtv-interview-format"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV interview format"
 secondary_keywords:
   - "DTV interview online"
@@ -20,7 +20,7 @@ secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/dtv-application"
   - "/en/blog/dtv-interview-questions"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-where-to-apply"
 schema_types:
   - "Article"
@@ -128,8 +128,22 @@ A. The most practical preparation is organizing your application content — pur
 - [DTV Application Steps](/en/blog/dtv-application)
 - [DTV Interview: Common Questions to Prepare For](/en/blog/dtv-interview-questions)
 - [Where to Apply for DTV](/en/blog/dtv-where-to-apply)
-- [DTV Required Documents Checklist](/en/dtv-required-documents)
+- [DTV Required Documents Checklist](/en/blog/dtv-required-documents)
 
 ---
 
-*Based on applicant accounts and Thai embassy official guidance. Last updated: May 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These are submitted at the application stage. If an interview occurs, ensuring your verbal explanations remain consistent with all submitted documents — including these additions — continues to be the core preparation principle. See [DTV Required Documents](/en/blog/dtv-required-documents).
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and application process |
+| Thai embassy / consulate guidance | Tier A | Interview format and language may vary by embassy and case |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+
+*Interview practices vary by embassy and individual case. Verify current requirements with your intended embassy before applying.*
