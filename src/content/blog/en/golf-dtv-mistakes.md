@@ -3,7 +3,7 @@ title: "Golf DTV Application Mistakes That Cause Delays — and How to Avoid The
 slug: "golf-dtv-mistakes"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "Golf DTV mistakes to avoid"
 secondary_keywords:
   - "Golf DTV application problems"
@@ -111,14 +111,14 @@ These are cases where the timeline was too compressed to complete the process pr
 
 ### □ Start the Acceptance Letter process first — before anything else
 
-The Acceptance Letter takes 2–4 weeks from initial contact to receipt. It's the longest single step. Everything else — bank documents, photo, application form — can be prepared in less time. The Acceptance Letter is your critical path item.
+The Acceptance Letter process typically takes several weeks from initial contact to receipt. It's the longest single step. Everything else — bank documents, photo, application form — can be prepared in less time. The Acceptance Letter is your critical path item.
 
 ### □ Build in at least 8 weeks from start to intended travel date
 
 A realistic minimum timeline:
-- 2–4 weeks for Acceptance Letter
+- Several weeks for Acceptance Letter (varies by facility and service)
 - 1 week for bank documents
-- 1–3 weeks for embassy processing
+- Embassy processing time (varies by mission and period)
 
 That's a minimum of 4–8 weeks after your Acceptance Letter process begins. Starting 8 weeks before travel gives you a comfortable buffer; 6 weeks is workable; fewer than 4 weeks is genuinely risky.
 
@@ -157,4 +157,19 @@ Not necessarily. Embassy requirements can change, and what worked previously may
 
 ---
 
-*This article is based on general information about Thailand's DTV program. Requirements and embassy practices are subject to change. Verify current requirements with the relevant embassy before applying. Last updated: June 2026*
+## 2026-08-31 Supporting Document Update
+
+As of 2026-08-31, DTV central supporting document requirements now include Proof of Permanent Residence and Certificate of Criminal Record Clearance. These apply regardless of which route you use. Add these to your pre-submission checklist. See [DTV Required Documents](/en/blog/dtv-required-documents) for the full updated list.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and application requirements |
+| Thai embassy / consulate guidance | Tier A | Submission methods and document standards may vary by mission |
+| 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| GolfDTV service information | Tier C | Acceptance Letter procurement and application support |
+
+*Requirements and embassy practices are subject to change. Verify current requirements with the relevant embassy before applying.*
