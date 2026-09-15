@@ -3,7 +3,7 @@ title: "GolfDTVと通常のSoft Power DTVの違い｜準備の軸と見せ方を
 slug: "golf-dtv-vs-soft-power"
 lang: "ja"
 published_at: "2026-05-16"
-updated_at: "2026-05-16"
+updated_at: "2026-09-16"
 primary_keyword: "GolfDTV Soft Power 違い"
 secondary_keywords:
   - "Golf DTV ソフトパワー 比較"
@@ -25,7 +25,8 @@ schema_types:
   - "Article"
   - "BreadcrumbList"
 image_style: "comparison"
-translation_targets: []
+translation_targets:
+  - "en"
 avoid_topics:
   - "massage-dtv"
   - "discord-main-cta"
@@ -34,6 +35,9 @@ read_time_minutes: 8
 ---
 
 「Golf DTVとSoft Power DTVって何が違うの？」という疑問は、DTV検討者がよく持つ素朴な問いです。結論から言えば、**取得するビザの中身は同じ**です。この記事では、準備の進め方や活動根拠の見せ方の違いを中心に整理します。
+
+> **【2026年8月31日更新】**
+> DTV Supporting Documents（補強書類）に**Proof of Permanent Residence（居住証明書）**と**Certificate of Criminal Record Clearance（犯罪経歴証明書）**が追加されました。必要な書類の形式・内容は申請先公館によって異なります。詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)および申請先公館の最新案内をご確認ください。
 
 ---
 
@@ -111,7 +115,7 @@ Golf DTVと他のSoft Power DTVで実質的な差が出るのは、**準備プ�
 
 - ゴルフに馴染みがある・タイのゴルフ場に通う予定がある → Golf DTVルートが自然
 - タイ料理に関心があり、料理学校への入学プランがある → 料理学校ルートが自然
-- 書類準備の確実性を優先したい → サポートサービスが整っているGolf DTVが選ばれやすい
+- 書類準備の信頼性を優先したい → サポートサービスが整っているGolf DTVが選ばれやすい
 
 Golf DTVの具体的な準備については[Golf DTVページ](/ja/golf-dtv)をご確認ください。
 
@@ -127,9 +131,16 @@ Soft Powerルートの制度的な位置づけやWorkcationルートとの比較
 
 - GolfDTVも通常のSoft Power DTVも、取得するビザの内容（有効期限・滞在期間・エントリー数）は同じ
 - 違いは「活動根拠として使う施設の種類」と「受入レターの発行元」のみ
-- Golf DTVは専門サポートが充実しており、書類準備の確実性を求める人に選ばれやすい
+- Golf DTVは専門サポートが充実しており、書類準備の信頼性を求める人に選ばれやすい
 - どちらのルートが有利かは状況次第で、制度上の優劣はない
 
 ---
 
-*本記事はタイのDTV制度の一般的な情報をもとに作成しています。要件は変更される場合があります。申請前に公館の最新案内をご確認ください。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| GolfDTV（サービス・プログラム情報） | Tier C（GolfDTVサービス現行情報） | 2026年9月 |
+
+*本記事はタイのDTV制度の一般的な情報をもとに作成しています。要件は変更される場合があります。申請前に公館の最新案内をご確認ください。最終更新：2026年9月*
