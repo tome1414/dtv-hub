@@ -3,7 +3,7 @@ title: "Supporting Documents for Your DTV Application: Employment Certificates, 
 slug: "dtv-portfolio-supporting-documents"
 lang: "en"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV supporting documents employment certificate"
 secondary_keywords:
   - "DTV CV submission"
@@ -19,7 +19,7 @@ primary_cta: "Check Suitability"
 secondary_cta: "Free Consultation"
 must_link_pages:
   - "/en/blog/dtv-freelance-proof"
-  - "/en/dtv-required-documents"
+  - "/en/blog/dtv-required-documents"
   - "/en/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -127,4 +127,19 @@ A. Whether certified translation is required depends on the embassy. At minimum,
 
 ---
 
-*Based on Thai embassy official guidance. Last updated: May 2026*
+ > **2026-08-31 update:** As of 2026-08-31, Proof of Permanent Residence and Certificate of Criminal Record Clearance became central DTV supporting-document requirements. These are separate from the supporting documents covered in this article (employment certificates, CVs, payment records). Review the [DTV Required Documents checklist](/en/blog/dtv-required-documents) to ensure your full document set is complete.
+
+---
+
+## Source Note
+
+| Source | Tier | Notes |
+|---|---|---|
+| Thai Ministry of Foreign Affairs — DTV program | Tier A | Official supporting-document context for DTV applications |
+| Thai embassy / consulate guidance (general) | Tier A | Mission-specific requirements vary |
+
+*Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
+
+---
+
+*Based on Thai embassy official guidance. Last updated: 2026-09-16*
