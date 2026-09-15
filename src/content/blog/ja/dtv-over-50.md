@@ -3,7 +3,7 @@ title: "50歳以上でもDTVを検討できる？リタイアメントとの見�
 slug: "dtv-over-50"
 lang: "ja"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 50歳以上"
 secondary_keywords:
   - "DTV リタイアメントビザ 比較"
@@ -18,8 +18,8 @@ update_priority: "medium"
 primary_cta: "Golf DTV詳細を見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-vs-retirement-visa"
-  - "/ja/dtv-soft-power"
+  - "/ja/blog/dtv-vs-retirement-visa"
+  - "/ja/blog/dtv-soft-power"
   - "/ja/who-should-choose-golf-dtv"
 schema_types:
   - "Article"
@@ -35,6 +35,9 @@ read_time_minutes: 8
 ---
 
 「50歳以上ならリタイアメントビザの方がいい」「DTVは若者向け」という声を耳にすることがあります。しかし実際には、50歳以上の方でもDTVが適しているケースは多くあります。
+
+> **【2026年8月31日更新】**
+> DTV申請要件（Supporting Documents）が2026年8月31日に変更されました。申請を検討中の場合は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で最新の書類要件をご確認ください。
 
 **この記事で分かること：** DTVに年齢制限があるかどうか、50歳以上がDTVを選ぶ理由、リタイアメントビザとの実際の違い。
 
@@ -72,7 +75,7 @@ read_time_minutes: 8
 | 申請根拠 | ソフトパワー活動 or リモートワーク | なし（年齢と残高のみ） |
 | 医療保険 | 必要（40,000 USD以上） | 年によって要件変化 |
 
-詳細な比較は[DTV vs リタイアメントビザ](/ja/dtv-vs-retirement-visa)を参照してください。
+詳細な比較は[DTV vs リタイアメントビザ](/ja/blog/dtv-vs-retirement-visa)を参照してください。
 
 ---
 
@@ -114,10 +117,17 @@ A. ゴルフ技術の水準は申請要件ではありません。活動への�
 
 ## 関連記事
 
-- [DTV vs リタイアメントビザ：どちらがあなたに合うか](/ja/dtv-vs-retirement-visa)
-- [DTVソフトパワービザとは](/ja/dtv-soft-power)
+- [DTV vs リタイアメントビザ：どちらがあなたに合うか](/ja/blog/dtv-vs-retirement-visa)
+- [DTVソフトパワービザとは](/ja/blog/dtv-soft-power)
 - [ゴルフDTVが向いているのはこんな人](/ja/who-should-choose-golf-dtv)
 
 ---
 
-*タイ大使館公式案内をもとに作成。最終更新：2026年5月*
+## 情報ソース・確認先
+
+| 情報源 | 分類 | 確認時期 |
+|---|---|---|
+| タイ外務省領事局（DTV公式案内・Supporting Documents） | Tier A（公式情報） | 2026年8月 |
+| GolfDTV（サービス・プログラム情報） | Tier C（GolfDTVサービス現行情報） | 2026年9月 |
+
+*タイ大使館公式案内をもとに作成。最終更新：2026年9月*
