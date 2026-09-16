@@ -3,7 +3,7 @@ title: "DTV 가족 신청, 무엇이 필요할까? | 배우자·자녀 서류와
 slug: "dtv-family-documents"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 가족 신청"
 secondary_keywords:
   - "DTV 배우자 동반"
@@ -19,9 +19,9 @@ update_priority: "high"
 primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/dtv-application"
-  - "/ko/dtv-bank-balance"
+  - "/ko/blog/dtv-bank-balance"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -40,6 +40,9 @@ read_time_minutes: 14
 > **가족 신청 상세는 공관에 따라 안내가 다를 수 있습니다.** 체험담 기반 정보는 당시의 공관·시기에 따른 것으로, 현재 제도와 다를 수 있습니다. 신청 예정 공관의 최신 안내를 우선하세요.
 
 이 글에서는 가족 신청의 기본 구조, 필요 서류 체크리스트, 준비 흐름 전체를 정리합니다.
+
+> **[2026-08-31 업데이트]**
+> DTV 필요 서류에 **영주권 증명서**와 **범죄 경력 증명서**가 2026-08-31부로 추가·강조되었습니다. 가족 구성원 각자에게 적용되는 범위는 공관마다 다를 수 있습니다. 상세는 [DTV 필요 서류](/ko/blog/dtv-required-documents)를 참조하세요.
 
 ---
 
@@ -106,6 +109,8 @@ DTV(Destination Thailand Visa)는 개인을 단위로 신청하는 비자입니�
 - 가족 전체로 일괄 증명하는 방법이 인정되는 경우
 
 이 부분은 신청처 공관에 직접 확인하는 것을 권장합니다.
+
+> **주한 태국 왕국 대사관(서울) 직접 확인 정보 (Tier B):** 성인 부양가족은 각자 자신의 범죄 경력 증명서가 필요하다는 안내가 확인되었습니다. 미성년 자녀가 범죄 경력 증명서를 발급받을 수 없는 경우, 양 부모의 영문 범죄 경력 증명서 제출을 요청받을 수 있습니다. 이는 서울 공관에서 직접 확인된 정보이며, 다른 공관에 그대로 적용되지 않을 수 있습니다.
 
 ---
 
@@ -193,10 +198,18 @@ DTV는 가족도 각자 신청하므로 배우자의 활동 근거에 관해서�
 
 ## 관련 기사
 
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV 신청 절차와 순서](/ko/dtv-application)
-- [DTV 잔액 증명서 사고방식](/ko/dtv-bank-balance)
+- [DTV 잔액 증명서 사고방식](/ko/blog/dtv-bank-balance)
 
 ---
 
-*가족 신청 상세는 신청처 태국 대사관·영사관에 직접 확인하세요. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+| 주한 태국 왕국 대사관 — 직접 확인 안내 | B등급 | 한국 신청자 대상 서울 공관 특정 정보 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
