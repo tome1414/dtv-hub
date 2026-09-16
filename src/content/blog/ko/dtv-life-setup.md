@@ -3,7 +3,7 @@ title: "DTV 승인 후 무엇을 준비할까? | 출발 전 체크리스트~입�
 slug: "dtv-life-setup"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 태국 생활 준비"
 secondary_keywords:
   - "DTV 승인 후 출발 준비"
@@ -24,9 +24,9 @@ article_goal: "독자가 출발 전 준비(비자 확인·항공권·보험·결
 primary_cta: "내 상황에 맞는지 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-visa"
-  - "/ko/dtv-bank-account"
-  - "/ko/dtv-extension-and-reentry"
+  - "/ko/blog/dtv-visa"
+  - "/ko/blog/dtv-bank-account"
+  - "/ko/blog/dtv-extension-and-reentry"
 schema_types:
   - "Article"
   - "BreadcrumbList"
@@ -257,7 +257,7 @@ DTV로 태국에 입국한 직후는 할 일이 많아 우선순위에 헷갈리
 
 ### 6. 은행·송금 수단 확인
 
-DTV에서의 태국 국내 은행 계좌 개설에 관해서는 DTV 소지자가 개설할 수 있는지, 개설 조건이 어느 은행인지에 따라 다릅니다. 자세한 내용은 [DTV로 태국 은행 계좌를 개설할 수 있나?](/ko/dtv-bank-account)를 참조하세요.
+DTV에서의 태국 국내 은행 계좌 개설에 관해서는 DTV 소지자가 개설할 수 있는지, 개설 조건이 어느 은행인지에 따라 다릅니다. 자세한 내용은 [DTV로 태국 은행 계좌를 개설할 수 있나?](/ko/blog/dtv-bank-account)를 참조하세요.
 
 **현실적인 선택지:**
 - 본국 은행 카드로의 ATM 인출 (해외 ATM 대응 직불카드)
@@ -294,11 +294,17 @@ DTV에서의 태국 국내 은행 계좌 개설에 관해서는 DTV 소지자가
 
 ## 관련 기사
 
-- [DTV(Destination Thailand Visa)란](/ko/dtv-visa)
-- [DTV로 태국 은행 계좌를 개설할 수 있나?](/ko/dtv-bank-account)
-- [DTV의 180일 후는?](/ko/dtv-extension-and-reentry)
+- [DTV(Destination Thailand Visa)란](/ko/blog/dtv-visa)
+- [DTV로 태국 은행 계좌를 개설할 수 있나?](/ko/blog/dtv-bank-account)
+- [DTV의 180일 후는?](/ko/blog/dtv-extension-and-reentry)
 - [태국 입국 시 체크포인트](/ko/blog/dtv-entry-checks)
 
 ---
 
-*정보는 2026년 6월 시점의 것입니다. 현지 상황은 변할 수 있습니다. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 현지 상황·제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
