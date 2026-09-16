@@ -3,7 +3,7 @@ title: "DTV 신청 후 이직하거나 일이 바뀌면 어떻게 될까?"
 slug: "dtv-job-change-after-application"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 신청 후 이직"
 secondary_keywords:
   - "DTV 이직 신청"
@@ -22,9 +22,9 @@ article_goal: "독자가 일 변화 패턴별 영향의 사고방식을 이해�
 primary_cta: "내 상황에 맞는지 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-freelance-proof"
+  - "/ko/blog/dtv-freelance-proof"
   - "/ko/dtv-application"
-  - "/ko/dtv-work-limitations"
+  - "/ko/blog/dtv-work-limitations"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -98,10 +98,16 @@ DTV(e-Visa)는 신청 시에 제출한 서류를 바탕으로 심사·발행됩�
 
 ## 관련 기사
 
-- [DTV 프리랜서 신청의 일 증명](/ko/dtv-freelance-proof)
-- [DTV에서 할 수 있는 일·주의할 선 긋기](/ko/dtv-work-limitations)
+- [DTV 프리랜서 신청의 일 증명](/ko/blog/dtv-freelance-proof)
+- [DTV에서 할 수 있는 일·주의할 선 긋기](/ko/blog/dtv-work-limitations)
 - [DTV 신청 절차와 순서](/ko/dtv-application)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
