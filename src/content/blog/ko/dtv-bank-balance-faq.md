@@ -3,7 +3,7 @@ title: "DTV 잔액 증명서, 언제 어떻게 준비해야 할까? | 조건·�
 slug: "dtv-bank-balance-faq"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 잔액 증명서 조건"
 secondary_keywords:
   - "DTV 50만 바트 증명"
@@ -24,8 +24,8 @@ article_goal: "독자가 잔액 증명서의 발행 타이밍·명의·언어·�
 primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-bank-balance"
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-bank-balance"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -113,10 +113,16 @@ DTV 신청 심사 기간 중(1~3주 정도)에 잔액 증명서 날짜가 오래
 
 ## 관련 기사
 
-- [DTV 잔액 증명서 사고방식](/ko/dtv-bank-balance)
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 잔액 증명서 사고방식](/ko/blog/dtv-bank-balance)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV 신청에서 자주 있는 서류 실수](/ko/blog/dtv-common-document-mistakes)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성했습니다. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
