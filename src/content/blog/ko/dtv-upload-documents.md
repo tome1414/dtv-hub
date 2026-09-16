@@ -3,7 +3,7 @@ title: "DTV e-Visa 서류 업로드가 안 될 때 | 원인별 해결법과 체�
 slug: "dtv-upload-documents"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV e-Visa 서류 업로드"
 secondary_keywords:
   - "DTV 서류 업로드 오류"
@@ -25,7 +25,7 @@ primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
   - "/ko/dtv-application"
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -119,10 +119,17 @@ e-Visa 시스템이 받아들이는 파일 형식은 일반적으로 PDF·JPEG·
 ## 관련 기사
 
 - [DTV 신청 절차와 순서](/ko/dtv-application)
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV 신청에서 자주 있는 서류 실수](/ko/blog/dtv-common-document-mistakes)
 - [DTV 거절 이유와 재신청 전 확인사항](/ko/blog/dtv-rejection-reasons)
 
 ---
 
-*e-Visa 시스템의 사양은 변경될 수 있습니다. 신청 시에는 공식 사이트의 안내를 우선하세요. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
