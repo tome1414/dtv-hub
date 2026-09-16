@@ -3,7 +3,7 @@ title: "DTV로 태국에서 일해도 될까? | 원격 근무·현지 취로·�
 slug: "dtv-work-limitations"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 원격 근무 취로 제한"
 secondary_keywords:
   - "DTV 일할 수 있는 것"
@@ -22,8 +22,8 @@ article_goal: "독자가 원격 근무와 현지 취로의 차이를 이해하�
 primary_cta: "내 상황에 맞는지 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-visa"
-  - "/ko/dtv-freelance-proof"
+  - "/ko/blog/dtv-visa"
+  - "/ko/blog/dtv-freelance-proof"
   - "/ko/dtv-soft-power-vs-freelance"
 schema_types:
   - "Article"
@@ -110,10 +110,16 @@ DTV의 Workcation 루트에서 신청 근거로 기능하는 일의 실태는 '*
 
 ## 관련 기사
 
-- [DTV(Destination Thailand Visa)란](/ko/dtv-visa)
-- [DTV 프리랜서 신청의 일 증명](/ko/dtv-freelance-proof)
+- [DTV(Destination Thailand Visa)란](/ko/blog/dtv-visa)
+- [DTV 프리랜서 신청의 일 증명](/ko/blog/dtv-freelance-proof)
 - [DTV 소프트파워 vs 프리랜서: 어느 쪽으로 신청하는가](/ko/dtv-soft-power-vs-freelance)
 
 ---
 
-*이 글은 일반적인 정보 제공을 목적으로 하며 법적 조언이 아닙니다. 개별 상황에 관해서는 전문가에게 상담하세요. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 개별 상황에 관해서는 전문가에게 상담하고, 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
