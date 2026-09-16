@@ -470,19 +470,74 @@ Priority order:
 
 ### Decision 1: who-should-choose-golf-dtv.md (KO)
 
-**Same decision required as JA (resolved) and EN (pending).**
+**APPROVED 2026-09-16 — Execute during KO SAFE_AUTO_FIX phase.**
 
 | Item | Detail |
 |---|---|
 | Article | `who-should-choose-golf-dtv.md` |
-| Cannibalization | `golf-dtv-suitability.md` covers the same search intent ("골프 DTV 맞는 사람" vs "골프 DTV 신청 대상") |
-| JA precedent | JA version deleted and redirected → `/ja/blog/golf-dtv-suitability` |
-| EN status | EN version pending HUMAN_REVIEW (same decision) |
-| Recommended Option A | Delete KO `who-should-choose-golf-dtv.md` and set redirect `/ko/blog/who-should-choose-golf-dtv` → `/ko/blog/golf-dtv-suitability`. Update: dtv-soft-power-comparison.md (must_link), dtv-over-50.md (must_link). |
-| Recommended Option B | Differentiate: rewrite `who-should-choose-golf-dtv.md` (KO) as a transactional/decision-making page distinct from `golf-dtv-suitability.md`. Requires substantial rewrite. |
-| Auto-fix cannot proceed | Slug change and deletion require human approval per HUMAN_APPROVAL_REQUIRED §18–21 |
-| Additional issues in this article | must_link `/ko/dtv-soft-power` and `/ko/dtv-vs-retirement-visa` both missing `/blog/`; USD conversion "약 USD 14,000"; no Source Note — these fixes are SAFE_AUTO_FIX but should be done after the deletion/keep decision is made |
+| Decision | **Option A approved** — Delete KO article + set 301 redirect to `/ko/blog/golf-dtv-suitability` |
+| Execution order | 1) Compare both articles; 2) Extract unique content with Tier A/B/C backing only; 3) Integrate minimal verified content into suitability.md; 4) Do NOT migrate unverified prices, times, or percentages; 5) Delete article; 6) Add redirect in next.config.ts; 7) Update internal links in dtv-soft-power-comparison.md and dtv-over-50.md |
+| App LP | `/ko/who-should-choose-golf-dtv` (app page) — do NOT touch; separate from blog article |
+| Status | **Pending execution** — holds until KO SAFE_AUTO_FIX phase begins |
 
 ---
 
-*Audit completed: 2026-09-16 by Claude Code (Sonnet 4.6). All 47 KO articles reviewed. Do not edit KO article files until human approval decisions are recorded. This report is for reference only — no article changes were made during this audit.*
+## M. Confirmed Policy Decisions (2026-09-16)
+
+### M-1: KO Currency Policy
+
+| Currency | Policy |
+|---|---|
+| **THB** | Primary / Source of Truth for all government requirements (Financial Evidence, Government Visa Fee, GolfDTV pricing) |
+| **USD** | Remove from KO articles unless article's primary search intent is currency conversion (if so → HUMAN_REVIEW, do not auto-delete) |
+| **KRW** | Do NOT auto-generate new KRW conversions. Existing KRW conversions: do not change to new values without confirmed rate basis — send to HUMAN_REVIEW if update is needed. New KRW display only where price-comparison or fee-search intent is clearly served, and only after explicit approval. |
+
+Rationale: Static KRW conversions can mislead readers into treating converted amounts as government-mandated KRW requirements. THB is the legally defined basis.
+
+LTR exception: USD thresholds in dtv-vs-ltr.md / thailand-long-stay-visa-comparison.md are BOI official USD-denominated figures — retain as-is.
+
+### M-2: Korean Government Visa Fee (Seoul Tier B)
+
+Korean nationals are exempt from the DTV government visa fee, based on direct confirmation from the Royal Thai Embassy Seoul (Tier B). This fact may be used in relevant KO articles.
+
+Natural Korean phrasing example:
+> "한국 국적자는 현재 주한 태국대사관의 DTV 비자 수수료가 면제됩니다."
+
+Constraints:
+- Label as Seoul Tier B (주한 태국 왕국 대사관 직접 확인)
+- Do NOT generalize to other nationalities
+- Do NOT imply worldwide rule
+
+### M-3: Seoul Tier B Usage Criteria
+
+Add Seoul Tier B facts ONLY where the article's search intent is directly affected by Seoul-specific application procedures.
+
+**Add Seoul Tier B to:**
+- dtv-required-documents.md — Entry/Exit Facts, 3-month criminal record validity, 2-day issuance window
+- dtv-where-to-apply.md — Applicant in Korea on submission date; stay-in-Korea recommendation; not entering Thailand while pending
+- dtv-application.md — Stay-in-Korea during review; not entering Thailand while pending
+- dtv-evisa-form-guide.md — Applicant in Korea on submission date
+- dtv-family-documents.md — Adult dependent criminal record; minor situation
+- dtv-rejection-reasons.md — Korean-specific rejection triggers (Entry/Exit Facts missing, criminal record expired)
+- dtv-extension-and-reentry.md — Not entering Thailand while application pending
+- dtv-processing-time.md — Stay-in-Korea recommendation; third-country travel risk
+- dtv-interview-format.md — Seoul-specific interview patterns
+- dtv-application-nationality-notes.md — Fee exemption formal Seoul Tier B attribution
+
+**Do NOT add Seoul Tier B to:**
+- After-approval articles (golf-dtv-after-approval, dtv-life-setup, dtv-job-change-after-application)
+- Life setup / banking articles
+- Visa comparison articles (dtv-vs-ltr, dtv-vs-retirement-visa, dtv-vs-thailand-privilege)
+- Articles where Seoul application procedure does not affect the answer
+
+Do NOT label Seoul embassy as endorsing or recommending GolfDTV.
+
+### M-4: KO SAFE_AUTO_FIX Start Condition
+
+KO SAFE_AUTO_FIX phase is **on hold** pending EN_BLOG_UPDATE_REPORT_2026-09.md review completion. No KO article body edits to be made until explicitly authorized.
+
+---
+
+*Audit completed: 2026-09-16 by Claude Code (Sonnet 4.6). All 47 KO articles reviewed.*
+*Policy decisions recorded: 2026-09-16.*
+*KO article edits: HOLD — awaiting SAFE_AUTO_FIX authorization.*
