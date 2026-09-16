@@ -3,7 +3,7 @@ title: "DTV 수입 증명, 잔액 증명서와 어떻게 다를까? | 서류별 
 slug: "dtv-income-proof"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 수입 증명"
 secondary_keywords:
   - "DTV 고용 계약서 역할"
@@ -24,9 +24,9 @@ article_goal: "독자가 수입 증명과 잔액 증명의 역할 차이를 이�
 primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/blog/dtv-freelance-proof"
-  - "/ko/dtv-bank-balance"
+  - "/ko/blog/dtv-bank-balance"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -73,7 +73,7 @@ read_time_minutes: 8
 
 ### 잔액 증명서
 
-은행 계좌 잔액을 증명하는 서류. DTV 신청에서는 50만 THB(약 200만원) 이상의 잔액 증명이 필요합니다. 이것은 '수입 증명'이 아니라 **'자금 증명'**의 역할을 합니다. [잔액 증명서에 관한 자세한 내용은 DTV 잔액 증명서 FAQ](/ko/blog/dtv-bank-balance-faq)에서 확인하세요.
+은행 계좌 잔액을 증명하는 서류. DTV 신청에서는 50만 THB(약 1,900만원) 이상의 잔액 증명이 필요합니다. 이것은 '수입 증명'이 아니라 **'자금 증명'**의 역할을 합니다. [잔액 증명서에 관한 자세한 내용은 DTV 잔액 증명서 FAQ](/ko/blog/dtv-bank-balance-faq)에서 확인하세요.
 
 ### 은행 계좌 명세서 (거래 이력)
 
@@ -109,11 +109,17 @@ read_time_minutes: 8
 
 ## 관련 기사
 
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV 프리랜서 업무 증명 방법](/ko/blog/dtv-freelance-proof)
 - [DTV 잔액 증명서 FAQ](/ko/blog/dtv-bank-balance-faq)
 - [DTV 신청 보강 서류 가이드](/ko/blog/dtv-portfolio-supporting-documents)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성했습니다. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
