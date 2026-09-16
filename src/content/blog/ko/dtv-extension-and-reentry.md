@@ -3,7 +3,7 @@ title: "DTV 180일이 지나면? | 재입국·연장·비자 전환의 선택지
 slug: "dtv-extension-and-reentry"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 180일 이후"
 secondary_keywords:
   - "DTV 재입국 방법"
@@ -22,9 +22,9 @@ article_goal: "독자가 180일 후의 선택지(재입국·연장·비자 전�
 primary_cta: "내 상황에 맞는지 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-visa"
+  - "/ko/blog/dtv-visa"
   - "/ko/dtv-application"
-  - "/ko/dtv-entry-checks"
+  - "/ko/blog/dtv-entry-checks"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -88,6 +88,8 @@ DTV의 기본적인 조건은 다음과 같습니다.
 - 입국 시에 허가된 체류 기간을 파악한다
 - 여유를 가지고 출국 계획을 세운다
 
+> **주한 태국 왕국 대사관(서울) 직접 확인 정보 (Tier B):** 한국에서 신청한 경우, 심사 대기 중 태국에 입국하는 것은 출입국 절차상 문제가 될 수 있어 권장되지 않습니다. 이는 서울 공관에서 직접 확인된 정보이며, 다른 공관에 그대로 적용되지 않을 수 있습니다.
+
 ---
 
 ## 자주 있는 불안
@@ -120,11 +122,19 @@ DTV의 기본적인 조건은 다음과 같습니다.
 
 ## 관련 기사
 
-- [DTV(Destination Thailand Visa)란](/ko/dtv-visa)
-- [DTV 입국 시 확인되는 사항은?](/ko/dtv-entry-checks)
-- [DTV와 태국 특권 비자 비교](/ko/dtv-vs-thailand-privilege)
-- [DTV와 LTR 비자 비교](/ko/dtv-vs-ltr)
+- [DTV(Destination Thailand Visa)란](/ko/blog/dtv-visa)
+- [DTV 입국 시 확인되는 사항은?](/ko/blog/dtv-entry-checks)
+- [DTV와 태국 특권 비자 비교](/ko/blog/dtv-vs-thailand-privilege)
+- [DTV와 LTR 비자 비교](/ko/blog/dtv-vs-ltr)
 
 ---
 
-*태국 출입국관리국·대사관 공식 안내를 바탕으로 작성. 제도 상세는 최신 공식 정보를 확인하세요. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+| 주한 태국 왕국 대사관 — 직접 확인 안내 | B등급 | 한국 신청자 대상 서울 공관 특정 정보 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
