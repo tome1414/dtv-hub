@@ -3,7 +3,7 @@ title: "DTV vs 태국 프리빌리지 카드 | 장기 체류 두 옵션을 비�
 slug: "dtv-vs-thailand-privilege"
 lang: "ko"
 published_at: "2026-04-29"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 태국 프리빌리지 비교"
 secondary_keywords:
   - "태국 프리빌리지 카드"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "다음 글 읽기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/thailand-long-stay-visa-comparison"
+  - "/ko/blog/thailand-long-stay-visa-comparison"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -44,7 +44,7 @@ read_time_minutes: 7
 |---|---|---|
 | **유효기간** | 5년 | 5~20년 (플랜에 따라 다름) |
 | **1회 체류** | 최대 180일 | 연속 체류 가능 |
-| **비용** | 10,000 THB (약 USD 280) | 600,000~2,500,000 THB (플랜에 따라 다름) |
+| **비용** | 10,000 THB | 600,000~2,500,000 THB (플랜에 따라 다름) |
 | **나이 제한** | 없음 | 없음 |
 | **소득 요건** | 없음 (잔액 증명만) | 없음 |
 | **취업** | 해외 원격 근무 가능 | 원격 근무 가능 (취업 허가는 별도) |
@@ -131,4 +131,11 @@ A. VIP 공항 서비스(전용 레인, 의전 등), 골프 코스 특별 요금,
 
 ---
 
-*태국 관련 기관 공식 정보를 바탕으로 작성. 요건은 변경될 수 있으므로 신청 전에 반드시 공식 정보를 확인하세요. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 관광청(TAT) — Thailand Privilege 프로그램 | A등급 | 멤버십 공식 요건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관 또는 공식 웹사이트의 최신 안내를 확인하세요.*
