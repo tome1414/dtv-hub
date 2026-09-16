@@ -3,7 +3,7 @@ title: "태국 장기 체류 비자 비교 | DTV·은퇴 비자·태국 프리�
 slug: "thailand-long-stay-visa-comparison"
 lang: "ko"
 published_at: "2026-04-29"
-updated_at: "2026-06-02"
+updated_at: "2026-09-16"
 primary_keyword: "태국 장기 체류 비자 비교"
 secondary_keywords:
   - "태국 비자 종류"
@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "다음 글 읽기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-visa"
+  - "/ko/blog/dtv-visa"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -170,4 +170,13 @@ A. 일반적으로 한 종류의 체류 자격을 선택합니다. 상황에 따
 
 ---
 
-*태국 대사관 및 관련 기관 공식 정보를 바탕으로 작성. 요건은 변경될 수 있으므로 신청 전에 반드시 공식 정보를 확인하세요. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 이민국 — 은퇴 비자(Non-Immigrant O-A) | A등급 | 은퇴 비자 공식 요건 |
+| 태국 투자청(BOI) — LTR 프로그램 | A등급 | LTR 비자 공식 요건 |
+| 태국 관광청(TAT) — Thailand Privilege 프로그램 | A등급 | 멤버십 공식 요건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 관련 기관의 최신 안내를 확인하세요.*
