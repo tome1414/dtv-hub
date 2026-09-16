@@ -3,7 +3,7 @@ title: "50세 이상도 DTV를 신청할 수 있을까? | 리타이어먼트 비
 slug: "dtv-over-50"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 50세 이상"
 secondary_keywords:
   - "DTV 리타이어먼트 비자 비교"
@@ -22,8 +22,8 @@ article_goal: "독자가 DTV에 나이 제한이 없다는 것을 이해하고, 
 primary_cta: "골프 DTV 상세 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-vs-retirement-visa"
-  - "/ko/dtv-soft-power"
+  - "/ko/blog/dtv-vs-retirement-visa"
+  - "/ko/blog/dtv-soft-power"
   - "/ko/who-should-choose-golf-dtv"
 schema_types:
   - "Article"
@@ -78,7 +78,7 @@ read_time_minutes: 8
 
 ※ DTV의 건강 보험 요건은 공관과 시기에 따라 안내가 다를 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.
 
-상세한 비교는 [DTV vs 리타이어먼트 비자](/ko/dtv-vs-retirement-visa)를 참조하세요.
+상세한 비교는 [DTV vs 리타이어먼트 비자](/ko/blog/dtv-vs-retirement-visa)를 참조하세요.
 
 ---
 
@@ -120,10 +120,16 @@ DTV 신청을 원하는 경우, 신청 요건을 충족하고 있는지 확인�
 
 ## 관련 기사
 
-- [DTV vs 리타이어먼트 비자: 어느 쪽이 당신에게 맞는가](/ko/dtv-vs-retirement-visa)
-- [DTV 소프트파워 비자란](/ko/dtv-soft-power)
+- [DTV vs 리타이어먼트 비자: 어느 쪽이 당신에게 맞는가](/ko/blog/dtv-vs-retirement-visa)
+- [DTV 소프트파워 비자란](/ko/blog/dtv-soft-power)
 - [골프 DTV가 적합한 사람](/ko/who-should-choose-golf-dtv)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
