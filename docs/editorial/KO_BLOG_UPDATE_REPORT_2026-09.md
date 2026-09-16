@@ -1,7 +1,7 @@
 # KO Blog Update Report — 2026-09
 
-Date: 2026-09-16
-Scope: `src/content/blog/ko/` SAFE_AUTO_FIX execution, following `KO_BLOG_AUDIT_2026-09.md` classification and the confirmed HUMAN_REVIEW decisions.
+Date: 2026-09-16 (SAFE_AUTO_FIX execution + same-day Fact QA correction pass)
+Scope: `src/content/blog/ko/` SAFE_AUTO_FIX execution, following `KO_BLOG_AUDIT_2026-09.md` classification and the confirmed HUMAN_REVIEW decisions. A follow-up Fact QA pass (same day) audited the KRW-conversion and health-insurance changes for policy/factual correctness before final approval; findings are integrated into Sections K and P below.
 Executor: Claude Code (Sonnet 5)
 
 ---
@@ -138,11 +138,17 @@ Two other instances found during execution (dtv-acceptance-letter-checkpoints.md
 
 Removed standalone/parenthetical USD conversions from: dtv-required-documents, dtv-application, dtv-visa, dtv-bank-balance, dtv-digital-nomad-visa (DTV fee only — comparison-table USD figures for *other countries'* nomad visas were kept as legitimate comparison data), dtv-vs-thailand-privilege. Total: 6 articles, ~8 instances.
 
-## K. KRW Retained / Corrected
+## K. KRW — Removed for 500,000 THB Financial Evidence (corrected 2026-09-16, post-QA)
 
-- Existing KRW conversions retained as-is (no new KRW auto-generated) in dtv-required-documents, dtv-application, dtv-bank-balance.
-- **Correction (not a policy update, a factual-error fix):** dtv-income-proof.md stated "50만 THB(약 200만원)" — arithmetically inconsistent with the site's established ~19,000,000 KRW reference used elsewhere for the same 500,000 THB figure. Corrected to "약 1,900만원" to match the existing site-wide reference, not a new rate.
-- LTR BOI-official USD thresholds retained unchanged in dtv-vs-ltr.md and thailand-long-stay-visa-comparison.md, per the confirmed exception.
+An initial pass of this update (same-day) corrected an arithmetic error in dtv-income-proof.md's KRW figure for 500,000 THB instead of removing it, which on review conflicts with the confirmed KO currency policy (THB is Source of Truth for government requirements; no static KRW conversion should be added or retained for Financial Evidence). This was corrected in a follow-up Fact QA pass:
+
+- **dtv-income-proof.md**: "50만 THB(약 1,900만원)" → "50만 THB" (KRW removed).
+- **dtv-required-documents.md**: "500,000 THB 이상 (약 KRW 19,000,000)" → "500,000 THB 이상" (KRW removed).
+- **dtv-bank-balance.md**: removed the "참고 환산" (reference conversion) table row and removed the FAQ entry "Q. 500,000 THB는 얼마인가요?" that existed solely to state the KRW conversion.
+- A repo-wide search for other static KRW conversions tied to the 500,000 THB Financial Evidence figure found no further instances.
+- **Not touched (out of this QA's scope, flagged for a decision):** dtv-application.md still contains "10,000 THB (약 KRW 380,000)" for the government visa fee (not the 500,000 THB Financial Evidence figure). The same THB-source-of-truth logic arguably applies to this figure too, but it was not named in the Fact QA request, so it was left as-is pending an explicit decision.
+- LTR BOI-official USD thresholds retained unchanged in dtv-vs-ltr.md and thailand-long-stay-visa-comparison.md, per the confirmed exception (these are the LTR program's own officially USD-denominated figures, not a THB conversion).
+- Fix commit: `59d9396`.
 
 ## L. Source Notes Added
 
@@ -166,13 +172,15 @@ None found or introduced. GolfDTV pricing, 96% approval rate, 7-day fastest appr
 ## P. Localization Improvements (Notable)
 
 - dtv-soft-power.md: "일본(또는 한국)" → "한국(또는 일본)" — Korea-first framing corrected in an FAQ that had inherited Japan-first phrasing from the JA source structure.
-- Health-insurance requirement language corrected in 4 articles (dtv-application, dtv-visa, dtv-soft-power, dtv-soft-power-vs-freelance, dtv-vs-ltr) from a stated-as-mandatory "USD 40,000 coverage" figure to "requirement and amount vary by mission — confirm with your embassy," aligning with the project's health-insurance editorial rule (insurance must not be presented as a primary confirmed required document).
+- Health-insurance requirement language corrected in **5 articles** (dtv-application, dtv-visa, dtv-soft-power, dtv-soft-power-vs-freelance, dtv-vs-ltr — corrected from an earlier miscount of "4" in this report's original version) from a stated-as-mandatory "USD 40,000 coverage" figure to "requirement and amount vary by mission — confirm with your embassy," aligning with the project's health-insurance editorial rule (CLAUDE.md §1: insurance must not be presented as a primary confirmed required document, and specific dollar figures must not be asserted as mandatory). All 5 diffs were re-verified via `git show` in a follow-up Fact QA pass: every change targets **DTV's own** insurance claim only. In dtv-vs-ltr.md specifically, the LTR program's own distinct figure ("USD 50,000+") in the same article was verified untouched — no cross-visa confusion occurred. No Tier A source in this project's confirmed-facts files (`GOLFDTV_CONFIRMED_FACTS.md`, `DTV_2026_RULES.md`) supports "USD 40,000" as a current official DTV requirement; it was inherited, unattributed legacy text. Full per-file verification: see the response accompanying this report.
 - Noted but not addressed in this pass (flagged for a future, larger localization pass, not SAFE_AUTO_FIX scope): the golf-dtv-* article series (golf-dtv-overview, golf-dtv-suitability, golf-dtv-comparison, golf-dtv-cost, golf-dtv-process, golf-dtv-mistakes, golf-dtv-faq, golf-dtv-after-approval, golf-dtv-vs-soft-power) reads as a mechanical translation from Japanese sentence structure rather than natural Korean (e.g. Japanese-loanword phrasing, JA-style term order). This was already noted in the audit's Section E and is a deeper rewrite than SAFE_AUTO_FIX covers.
 
 ## Q. Typecheck / Build Results
 
+Re-run after the Fact QA correction pass:
+
 - `npx tsc --noEmit`: **PASS** (no output, no errors)
-- `npm run build`: **PASS** — "✓ Compiled successfully in 2.9s", all `/[lang]/blog/[slug]` static pages generated including the updated KO set, no broken-route errors.
+- `npm run build`: **PASS** — "✓ Compiled successfully in 2.5s", all `/[lang]/blog/[slug]` static pages generated including the updated KO set, no broken-route errors.
 
 ## R. Full Commit SHA List (chronological)
 
@@ -224,8 +232,10 @@ cc05674 dtv-over-50
 f2db569 dtv-vs-retirement-visa
 4f6177f dtv-vs-thailand-privilege
 9817be1 thailand-long-stay-visa-comparison
+dcded07 docs: add this report (initial version)
+59d9396 fix: remove static KRW conversion for 500,000 THB financial evidence (Fact QA correction)
 ```
 
 ---
 
-*KO SAFE_AUTO_FIX phase complete. JA / EN / KO all 3 languages now fully processed.*
+*KO SAFE_AUTO_FIX phase complete, including post-completion Fact QA correction. JA / EN / KO all 3 languages now fully processed.*
