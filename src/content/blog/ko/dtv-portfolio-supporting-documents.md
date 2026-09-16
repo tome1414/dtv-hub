@@ -3,7 +3,7 @@ title: "DTV 신청, 보강 서류로 무엇을 준비해야 할까? | CV·입금
 slug: "dtv-portfolio-supporting-documents"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 보강 서류"
 secondary_keywords:
   - "DTV CV 제출"
@@ -25,7 +25,7 @@ primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
   - "/ko/blog/dtv-freelance-proof"
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -116,9 +116,15 @@ e-Visa 시스템의 사양이나 업로드할 수 있는 파일 수·용량에�
 ## 관련 기사
 
 - [DTV 프리랜서 업무 증명 방법](/ko/blog/dtv-freelance-proof)
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV 신청에서 자주 있는 서류 실수](/ko/blog/dtv-common-document-mistakes)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성했습니다. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
