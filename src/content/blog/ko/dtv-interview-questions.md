@@ -3,7 +3,7 @@ title: "DTV 면접에서 무엇을 물어볼까? | 질문 유형별 준비 포�
 slug: "dtv-interview-questions"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 면접 질문"
 secondary_keywords:
   - "DTV 대사관 면접 내용"
@@ -22,10 +22,10 @@ article_goal: "독자가 신청 목적·활동 내용·수입·체류 계획을 
 primary_cta: "내 상황에 맞는지 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-interview-format"
+  - "/ko/blog/dtv-interview-format"
   - "/ko/dtv-application"
-  - "/ko/dtv-required-documents"
-  - "/ko/dtv-acceptance-letter"
+  - "/ko/blog/dtv-required-documents"
+  - "/ko/blog/dtv-acceptance-letter"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -162,11 +162,18 @@ read_time_minutes: 9
 
 ## 관련 기사
 
-- [DTV 면접·면담의 실태: 대면·온라인·언어 차이를 어떻게 생각하는가](/ko/dtv-interview-format)
+- [DTV 면접·면담의 실태: 대면·온라인·언어 차이를 어떻게 생각하는가](/ko/blog/dtv-interview-format)
 - [DTV 신청 절차와 순서](/ko/dtv-application)
-- [DTV 프리랜서 신청의 일 증명](/ko/dtv-freelance-proof)
-- [DTV 입학 허가서 확인 포인트](/ko/dtv-acceptance-letter-checkpoints)
+- [DTV 프리랜서 신청의 일 증명](/ko/blog/dtv-freelance-proof)
+- [DTV 입학 허가서 확인 포인트](/ko/blog/dtv-acceptance-letter-checkpoints)
 
 ---
 
-*신청자 체험담 및 대사관 공식 안내를 바탕으로 작성. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
