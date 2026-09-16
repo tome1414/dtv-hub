@@ -3,7 +3,7 @@ title: "DTV 입학 허가서(Acceptance Letter) 완전 가이드 | 취득 방법
 slug: "dtv-acceptance-letter"
 lang: "ko"
 published_at: "2026-04-29"
-updated_at: "2026-05-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 입학 허가서"
 secondary_keywords:
   - "DTV 소프트파워 입학 허가서"
@@ -18,8 +18,8 @@ update_priority: "high"
 primary_cta: "골프 DTV 상세 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-soft-power"
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-soft-power"
+  - "/ko/blog/dtv-required-documents"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -36,6 +36,9 @@ read_time_minutes: 7
 소프트파워 경로로 DTV를 신청하는 경우, 입학 허가서(Acceptance Letter)가 가장 중요한 서류입니다. 워케이션 경로에서 고용 계약서가 하는 역할을 이 서류가 대신합니다.
 
 **이 글에서 알 수 있는 것:** 입학 허가서란 무엇인지, 포함해야 할 내용, 발급할 수 있는 기관, 두 가지 취득 방법.
+
+> **[2026-08-31 업데이트]**
+> DTV 필요 서류에 **영주권 증명서**와 **범죄 경력 증명서**가 2026-08-31부로 추가·강조되었습니다. 입학 허가서 요건 자체에는 변경이 없지만, 함께 준비하는 서류 목록은 [DTV 필요 서류](/ko/blog/dtv-required-documents)에서 최신 정보를 확인하세요.
 
 ---
 
@@ -108,7 +111,7 @@ read_time_minutes: 7
 
 **장점:**
 - 한국어·영어로 소통 가능
-- 대사관 규격에 맞는 서류 보장
+- 대사관 규격에 맞는 서류 취득을 지원
 - 서류 전체에 걸친 지원
 - 신청 프로세스 전체 지원
 
@@ -149,4 +152,11 @@ A. 입학 허가서는 비자의 활동 기반을 확립하는 문서입니다. 
 
 ---
 
-*태국 대사관 공식 정보를 바탕으로 작성. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
