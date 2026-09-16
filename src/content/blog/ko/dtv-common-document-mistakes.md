@@ -3,7 +3,7 @@ title: "DTV 신청 서류 실수 TOP | 반려되기 전에 확인해야 할 체�
 slug: "dtv-common-document-mistakes"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 신청 서류 실수"
 secondary_keywords:
   - "DTV 서류 반려 이유"
@@ -24,7 +24,7 @@ article_goal: "독자가 카테고리별 주요 실수를 이해하고 제출 �
 primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/blog/dtv-upload-documents"
   - "/ko/blog/dtv-rejection-reasons"
 schema_types:
@@ -43,6 +43,9 @@ read_time_minutes: 8
 **DTV 신청에서 서류 내용이 맞아도 형식이나 정합성 문제로 추가 확인·반려가 발생하는 경우가 있습니다.** 가장 자주 발생하는 실수는 여권 이름 불일치, 잔액 증명서 오류, 입학 허가서 내용 부족, 파일 품질 불량의 4가지입니다.
 
 이 글에서는 카테고리별 주요 실수와 대책, 그리고 제출 전 셀프 체크리스트를 정리합니다.
+
+> **[2026-08-31 업데이트]**
+> DTV 필요 서류에 **영주권 증명서**와 **범죄 경력 증명서**가 2026-08-31부로 추가·강조되었습니다. 새 서류에서도 성명 불일치·유효 기간 불비 등 아래와 같은 실수가 발생하기 쉬우므로 함께 확인하세요. 상세는 [DTV 필요 서류](/ko/blog/dtv-required-documents)를 참조하세요.
 
 ---
 
@@ -132,11 +135,18 @@ read_time_minutes: 8
 
 ## 관련 기사
 
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV e-Visa 서류 업로드에서 막히기 쉬운 점](/ko/blog/dtv-upload-documents)
 - [DTV 거절 이유와 재신청 전 확인사항](/ko/blog/dtv-rejection-reasons)
 - [DTV 입학 허가서 확인 포인트](/ko/blog/dtv-acceptance-letter-checkpoints)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성했습니다. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
