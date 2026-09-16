@@ -3,7 +3,7 @@ title: "DTV 입학 허가서, 어떤 내용이 있어야 할까? | 제출 전 �
 slug: "dtv-acceptance-letter-checkpoints"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 입학 허가서 확인"
 secondary_keywords:
   - "DTV 입학 허가서 기재 사항"
@@ -24,8 +24,8 @@ article_goal: "독자가 입학 허가서에 반드시 포함되어야 할 항�
 primary_cta: "골프 DTV 상세 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-acceptance-letter"
-  - "/ko/dtv-soft-power"
+  - "/ko/blog/dtv-acceptance-letter"
+  - "/ko/blog/dtv-soft-power"
   - "/ko/blog/dtv-common-document-mistakes"
 schema_types:
   - "Article"
@@ -43,6 +43,9 @@ read_time_minutes: 7
 **입학 허가서(Acceptance Letter)에는 시설명·신청자 성명·활동 내용·기간·서명이 모두 명확하게 기재되어 있어야 합니다.** 하나라도 빠지거나 모호하면 심사 근거가 약해져 추가 확인이나 반려로 이어질 수 있습니다.
 
 이 글에서는 반드시 포함되어야 할 기재 사항, 항목별 확인 포인트, 그리고 자주 발생하는 문제와 대처법을 정리합니다.
+
+> **[2026-08-31 업데이트]**
+> DTV 필요 서류에 **영주권 증명서**와 **범죄 경력 증명서**가 2026-08-31부로 추가·강조되었습니다. 입학 허가서 자체의 기재 요건에는 변경이 없지만, 함께 준비하는 서류 목록은 [DTV 필요 서류](/ko/blog/dtv-required-documents)에서 최신 정보를 확인하세요.
 
 ---
 
@@ -105,7 +108,7 @@ read_time_minutes: 7
 수정을 요청하세요. 여권 표기와 다른 채로 제출하면 심사에서 문제가 될 수 있습니다. 제출 전에 반드시 문자 단위로 대조 확인하세요.
 
 **입학 허가서만 있으면 신청할 수 있나요?**
-입학 허가서는 소프트파워 루트의 핵심 서류이지만, 여권·잔액 증명서 등 공통 서류도 함께 필요합니다. 전체 서류 요건은 [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)에서 확인하세요.
+입학 허가서는 소프트파워 루트의 핵심 서류이지만, 여권·잔액 증명서 등 공통 서류도 함께 필요합니다. 전체 서류 요건은 [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)에서 확인하세요.
 
 **발행일로부터 얼마나 지나면 유효 기간이 문제가 되나요?**
 명확한 기준은 공관에 따라 다릅니다. 발행 후 가능한 빨리 신청하는 것을 권장합니다. 기간에 대해 불확실한 경우 신청 예정 공관에 사전 확인하세요.
@@ -114,10 +117,17 @@ read_time_minutes: 7
 
 ## 관련 기사
 
-- [DTV 입학 허가서(Acceptance Letter) 완전 가이드](/ko/dtv-acceptance-letter)
-- [DTV 소프트파워 비자란](/ko/dtv-soft-power)
+- [DTV 입학 허가서(Acceptance Letter) 완전 가이드](/ko/blog/dtv-acceptance-letter)
+- [DTV 소프트파워 비자란](/ko/blog/dtv-soft-power)
 - [DTV 신청에서 자주 있는 서류 실수](/ko/blog/dtv-common-document-mistakes)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성했습니다. 입학 허가서의 요건은 공관·시기에 따라 달라질 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
