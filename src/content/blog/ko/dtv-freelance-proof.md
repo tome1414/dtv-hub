@@ -3,7 +3,7 @@ title: "DTV 프리랜서 신청, 업무를 어떻게 증명할까? | 근무 형�
 slug: "dtv-freelance-proof"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 프리랜서 업무 증명"
 secondary_keywords:
   - "DTV 프리랜서 계약서"
@@ -24,7 +24,7 @@ article_goal: "독자가 근무 형태별로 주자료와 보조 자료를 이�
 primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-required-documents"
+  - "/ko/blog/dtv-required-documents"
   - "/ko/blog/dtv-portfolio-supporting-documents"
   - "/ko/blog/dtv-income-proof"
 schema_types:
@@ -43,6 +43,9 @@ read_time_minutes: 10
 **프리랜서·자영업자가 DTV를 신청할 때 심사에서 확인되는 것은 '태국 국외의 클라이언트나 고용주를 위해 원격으로 일하는 실태'입니다.** 이를 증명하는 서류는 근무 형태에 따라 다릅니다. 계약서나 청구서가 없는 경우도 보조 자료로 보강하는 방법이 있습니다.
 
 이 글에서는 근무 형태별 주자료·보조 자료와 준비 시 주의 사항을 정리합니다.
+
+> **[2026-08-31 업데이트]**
+> 근무 형태와 무관하게 DTV 필요 서류에 **영주권 증명서**와 **범죄 경력 증명서**가 2026-08-31부로 추가·강조되었습니다. 요건은 공관마다 다를 수 있습니다. 상세는 [DTV 필요 서류](/ko/blog/dtv-required-documents)를 참조하세요.
 
 > **무엇이 충분한지는 개별 심사에 따라 다릅니다.** 어떤 서류 조합이 적절한지는 신청처 공관·시기·담당자에 따라 달라질 수 있습니다. 이 글은 일반적인 사고방식을 정리한 것이며, 결과를 보장하는 것이 아닙니다.
 
@@ -122,11 +125,18 @@ read_time_minutes: 10
 
 ## 관련 기사
 
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 - [DTV 수입 증명이란?](/ko/blog/dtv-income-proof)
 - [DTV 신청 보강 서류 가이드](/ko/blog/dtv-portfolio-supporting-documents)
 - [DTV 잔액 증명서 FAQ](/ko/blog/dtv-bank-balance-faq)
 
 ---
 
-*태국 대사관 공식 안내를 바탕으로 작성했습니다. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
