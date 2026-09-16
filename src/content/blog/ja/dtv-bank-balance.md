@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "無料相談はこちら"
 secondary_cta: "必要書類を確認する"
 must_link_pages:
-  - "/ja/dtv-required-documents"
+  - "/ja/blog/dtv-required-documents"
   - "/ja/dtv-application"
 schema_types:
   - "Article"

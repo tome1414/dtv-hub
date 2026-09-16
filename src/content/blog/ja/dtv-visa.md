@@ -23,8 +23,8 @@ secondary_cta: "適性確認"
 must_link_pages:
   - "/ja/thailand-long-stay-visa-comparison"
   - "/ja/dtv-soft-power-vs-freelance"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-where-to-apply"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-where-to-apply"
 schema_types:
   - "Article"
   - "FAQPage"

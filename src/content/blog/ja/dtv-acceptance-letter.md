@@ -19,7 +19,7 @@ primary_cta: "Golf DTV詳細を見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/blog/dtv-soft-power"
-  - "/ja/dtv-required-documents"
+  - "/ja/blog/dtv-required-documents"
 schema_types:
   - "Article"
   - "FAQPage"

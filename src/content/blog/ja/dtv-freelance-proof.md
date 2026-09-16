@@ -18,7 +18,7 @@ update_priority: "high"
 primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
-  - "/ja/dtv-required-documents"
+  - "/ja/blog/dtv-required-documents"
   - "/ja/dtv-soft-power-vs-freelance"
   - "/ja/blog/dtv-portfolio-supporting-documents"
 schema_types:

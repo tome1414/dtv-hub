@@ -19,9 +19,9 @@ update_priority: "high"
 primary_cta: "無料相談はこちら"
 secondary_cta: "申請方法を確認する"
 must_link_pages:
-  - "/ja/dtv-bank-balance"
+  - "/ja/blog/dtv-bank-balance"
   - "/ja/dtv-application"
-  - "/ja/dtv-where-to-apply"
+  - "/ja/blog/dtv-where-to-apply"
 schema_types:
   - "Article"
   - "FAQPage"

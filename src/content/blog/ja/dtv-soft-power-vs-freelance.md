@@ -20,7 +20,7 @@ secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/blog/dtv-soft-power"
   - "/ja/who-should-choose-golf-dtv"
-  - "/ja/dtv-required-documents"
+  - "/ja/blog/dtv-required-documents"
 schema_types:
   - "Article"
   - "FAQPage"

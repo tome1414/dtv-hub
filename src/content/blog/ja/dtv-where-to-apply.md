@@ -21,8 +21,8 @@ primary_cta: "適性確認ページを見る"
 secondary_cta: "無料相談はこちら"
 must_link_pages:
   - "/ja/dtv-application"
-  - "/ja/dtv-required-documents"
-  - "/ja/dtv-interview-format"
+  - "/ja/blog/dtv-required-documents"
+  - "/ja/blog/dtv-interview-format"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -57,7 +57,7 @@ DTVはタイ国外のタイ大使館・総領事館を通じて申請します�
 | 犯罪経歴証明 | 中央Supporting Documentsとしての記載なし | Certificate of Criminal Record Clearanceが追加 |
 | 申請前確認 | 公館ごとの要件確認 | 居住資格・犯罪経歴証明を含め、公館ごとの最新要件確認がより重要 |
 
-**重要：** Proof of Permanent Residenceとして何を受理するかは各公館の案内によります。申請前に申請先公館へ確認してください。書類の詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/dtv-required-documents)を参照してください。
+**重要：** Proof of Permanent Residenceとして何を受理するかは各公館の案内によります。申請前に申請先公館へ確認してください。書類の詳細は[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)を参照してください。
 
 ---
 
@@ -126,7 +126,7 @@ GolfDTVが2026年9月に在福岡タイ王国総領事館へ直接確認した�
 | 書類提出の方式 | e-Visaオンラインのみ、メール併用など、館によって異なる場合がある |
 | 問い合わせへの対応速度 | 館によって返答のスピードや対応言語に差がある |
 
-面接の形式については[DTV面接・面談の実態](/ja/dtv-interview-format)も参照してください。
+面接の形式については[DTV面接・面談の実態](/ja/blog/dtv-interview-format)も参照してください。
 
 ### 公館別要件の違い：在韓タイ王国大使館の例
 
@@ -157,7 +157,7 @@ GolfDTVが2026年9月に在韓タイ王国大使館へ直接確認した情報�
 
 **4. 申請ルートによって必要書類が異なる**
 
-[DTV申請の流れと手順](/ja/dtv-application)で申請ルートを確認し、[DTV必要書類一覧（2026年8月31日更新）](/ja/dtv-required-documents)で自分のルートに対応した書類を把握してください。
+[DTV申請の流れと手順](/ja/dtv-application)で申請ルートを確認し、[DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents)で自分のルートに対応した書類を把握してください。
 
 ---
 
@@ -182,9 +182,9 @@ Supporting Documentsが変更され、Proof of Permanent Residence（居住証�
 
 ## 次のステップ
 
-- [DTV必要書類一覧（2026年8月31日更新）](/ja/dtv-required-documents) — 申請書類の全体像を確認
+- [DTV必要書類一覧（2026年8月31日更新）](/ja/blog/dtv-required-documents) — 申請書類の全体像を確認
 - [DTV申請の流れと手順](/ja/dtv-application) — 申請ステップを把握
-- [DTV面接・面談の実態](/ja/dtv-interview-format) — 面接への備え方
+- [DTV面接・面談の実態](/ja/blog/dtv-interview-format) — 面接への備え方
 - 申請ルートが複雑な場合は[GolfDTV無料相談](/ja/golf-dtv)をご利用ください
 
 ---
