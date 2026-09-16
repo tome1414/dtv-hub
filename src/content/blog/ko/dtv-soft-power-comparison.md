@@ -3,7 +3,7 @@ title: "DTV 소프트파워, 어떤 활동으로 신청할 수 있을까? | 골�
 slug: "dtv-soft-power-comparison"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 소프트파워 활동 비교"
 secondary_keywords:
   - "DTV 소프트파워 골프"
@@ -22,8 +22,8 @@ article_goal: "독자가 소프트파워 루트의 대상 활동을 이해하고
 primary_cta: "골프 DTV 상세 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-soft-power"
-  - "/ko/dtv-acceptance-letter"
+  - "/ko/blog/dtv-soft-power"
+  - "/ko/blog/dtv-acceptance-letter"
   - "/ko/who-should-choose-golf-dtv"
 schema_types:
   - "Article"
@@ -110,7 +110,9 @@ DTV 소프트파워 루트의 신청에서 핵심이 되는 것은 **입학 허�
 
 소프트파워 루트로 신청하는 경우, 어떤 활동을 선택하는지보다 **그 활동에 대응한 적절한 입학 허가서를 취득할 수 있는가**가 실무상 더 중요합니다.
 
-입학 허가서에 포함되어야 할 정보의 상세는 [DTV 입학 허가서 취득과 확인 포인트](/ko/dtv-acceptance-letter)를 참조하세요.
+입학 허가서에 포함되어야 할 정보의 상세는 [DTV 입학 허가서 취득과 확인 포인트](/ko/blog/dtv-acceptance-letter)를 참조하세요.
+
+> **참고 (2026-08-31 업데이트):** 활동 카테고리와 무관하게 DTV 필요 서류에 **영주권 증명서**·**범죄 경력 증명서**가 추가·강조되었습니다. 상세는 [DTV 필요 서류](/ko/blog/dtv-required-documents)를 참조하세요.
 
 ---
 
@@ -132,11 +134,18 @@ DTV 소프트파워 루트의 신청에서 핵심이 되는 것은 **입학 허�
 
 ## 관련 기사
 
-- [DTV 소프트파워 비자란](/ko/dtv-soft-power)
-- [DTV 입학 허가서 취득과 확인 포인트](/ko/dtv-acceptance-letter)
+- [DTV 소프트파워 비자란](/ko/blog/dtv-soft-power)
+- [DTV 입학 허가서 취득과 확인 포인트](/ko/blog/dtv-acceptance-letter)
 - [골프 DTV가 적합한 사람](/ko/who-should-choose-golf-dtv)
 - [DTV 소프트파워 vs 프리랜서: 어느 쪽으로 신청하는가](/ko/dtv-soft-power-vs-freelance)
 
 ---
 
-*태국 정부 소프트파워 정책 및 대사관 공식 안내를 바탕으로 작성. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
