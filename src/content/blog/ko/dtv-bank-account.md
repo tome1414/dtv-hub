@@ -3,7 +3,7 @@ title: "DTV로 태국 은행 계좌를 개설할 수 있나요? 자금 관리의
 slug: "dtv-bank-account"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-06-04"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 태국 은행 계좌"
 secondary_keywords:
   - "태국 은행 계좌 개설 외국인"
@@ -24,7 +24,7 @@ article_goal: "독자가 DTV로의 은행 계좌 개설이 은행·지점·시�
 primary_cta: "적성 확인 페이지 보기"
 secondary_cta: "무료 상담"
 must_link_pages:
-  - "/ko/dtv-visa"
+  - "/ko/blog/dtv-visa"
   - "/ko/blog/dtv-life-setup"
   - "/ko/blog/dtv-work-limitations"
 schema_types:
@@ -113,9 +113,15 @@ read_time_minutes: 7
 ## 관련 기사
 
 - [DTV 취득 후 태국 생활 준비 가이드](/ko/blog/dtv-life-setup)
-- [DTV(Destination Thailand Visa)란](/ko/dtv-visa)
+- [DTV(Destination Thailand Visa)란](/ko/blog/dtv-visa)
 - [DTV에서 할 수 있는 일·주의할 선 긋기](/ko/blog/dtv-work-limitations)
 
 ---
 
-*태국 은행의 계좌 개설 조건은 변경될 수 있습니다. 최신 정보는 각 은행·지점에 직접 확인하세요. 최종 업데이트: 2026년 6월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 은행 계좌 개설 조건은 은행·지점·시기에 따라 변경될 수 있습니다. 최신 정보는 각 은행·지점에 직접 확인하세요.*
