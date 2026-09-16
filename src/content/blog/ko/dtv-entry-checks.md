@@ -3,7 +3,7 @@ title: "DTV로 태국 입국 시 무엇이 확인될까? | 지참 서류와 입�
 slug: "dtv-entry-checks"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 입국 심사"
 secondary_keywords:
   - "DTV 입국 확인"
@@ -23,8 +23,8 @@ primary_cta: "필요 서류 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
   - "/ko/dtv-application"
-  - "/ko/dtv-required-documents"
-  - "/ko/dtv-extension-and-reentry"
+  - "/ko/blog/dtv-required-documents"
+  - "/ko/blog/dtv-extension-and-reentry"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -43,6 +43,8 @@ read_time_minutes: 7
 > **입국 시 운용은 담당관·시기에 따라 다를 수 있습니다.** 이 글은 신청자 체험담과 일반적인 정보를 바탕으로 정리한 것입니다. 공식 안내는 반드시 태국 대사관·출입국관리국의 최신 정보를 확인하세요.
 
 이 글에서는 확인되기 쉬운 내용, 지참해 두면 안심할 수 있는 서류, 입국 심사에서의 마음가짐을 정리합니다.
+
+> **참고 (2026-08-31 업데이트):** DTV 필요 서류에 **영주권 증명서**·**범죄 경력 증명서**가 추가·강조되었습니다. 신청 시 제출한 서류의 사본을 입국 시에도 지참해 두면 안심입니다. 상세는 [DTV 필요 서류](/ko/blog/dtv-required-documents)를 참조하세요.
 
 ---
 
@@ -124,9 +126,16 @@ DTV이기 때문에 특별히 엄격하다는 정보는 확인되지 않습니�
 ## 관련 기사
 
 - [DTV 신청 절차와 순서](/ko/dtv-application)
-- [DTV의 180일 후는? 연장·재입국 기본 정리](/ko/dtv-extension-and-reentry)
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV의 180일 후는? 연장·재입국 기본 정리](/ko/blog/dtv-extension-and-reentry)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 
 ---
 
-*태국 입국 심사의 운용은 담당관·시기에 따라 다를 수 있습니다. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
