@@ -3,7 +3,7 @@ title: "DTV 면접이 있으면 어떻게 준비할까? | 형식·언어 차이�
 slug: "dtv-interview-format"
 lang: "ko"
 published_at: "2026-05-05"
-updated_at: "2026-05-05"
+updated_at: "2026-09-16"
 primary_keyword: "DTV 면접 준비"
 secondary_keywords:
   - "DTV 면접 온라인"
@@ -23,9 +23,9 @@ primary_cta: "내 상황에 맞는지 확인"
 secondary_cta: "무료 상담"
 must_link_pages:
   - "/ko/dtv-application"
-  - "/ko/dtv-interview-questions"
-  - "/ko/dtv-required-documents"
-  - "/ko/dtv-where-to-apply"
+  - "/ko/blog/dtv-interview-questions"
+  - "/ko/blog/dtv-required-documents"
+  - "/ko/blog/dtv-where-to-apply"
 schema_types:
   - "Article"
   - "FAQPage"
@@ -106,6 +106,8 @@ DTV 신청에서 면접 (내관 면담·온라인 면담)이 일률적으로 의
 - 면접 일시 기록 (취소·변경 수속을 위해)
 - 함께 신청한 가족이 있는 경우 동석이 필요한지
 
+> **주한 태국 왕국 대사관(서울) 직접 확인 정보 (Tier B):** 서울 공관에서는 2025년 7월 이후 영사 확인이 일반적으로 요구되지 않게 되었다는 안내가 확인되었으나, 케이스에 따라 추가 확인이 요구될 수 있습니다. 이는 서울 공관에서 직접 확인된 정보이며, 다른 공관에 그대로 적용되지 않을 수 있습니다.
+
 ---
 
 ## FAQ
@@ -130,10 +132,18 @@ DTV 신청에서 면접 (내관 면담·온라인 면담)이 일률적으로 의
 ## 관련 기사
 
 - [DTV 신청 절차와 순서](/ko/dtv-application)
-- [DTV 면접·추가 확인에서 자주 물어보는 것](/ko/dtv-interview-questions)
-- [DTV 신청처 선택 방법](/ko/dtv-where-to-apply)
-- [DTV 필요 서류 체크리스트](/ko/dtv-required-documents)
+- [DTV 면접·추가 확인에서 자주 물어보는 것](/ko/blog/dtv-interview-questions)
+- [DTV 신청처 선택 방법](/ko/blog/dtv-where-to-apply)
+- [DTV 필요 서류 체크리스트](/ko/blog/dtv-required-documents)
 
 ---
 
-*신청자 체험담 및 대사관 공식 안내를 바탕으로 작성. 최종 업데이트: 2026년 5월*
+## 출처 안내
+
+| 출처 | 등급 | 비고 |
+|---|---|---|
+| 태국 외무부 — DTV 프로그램 | A등급 | 비자 공식 종류 및 조건 |
+| 태국 정부 Thai e-Visa 포털 | A등급 | 신청 시스템 공식 안내 |
+| 주한 태국 왕국 대사관 — 직접 확인 안내 | B등급 | 한국 신청자 대상 서울 공관 특정 정보 |
+
+*이 정보는 공식 안내를 바탕으로 작성했습니다. 제도·운용은 변경될 수 있습니다. 신청 전에 신청 예정 공관의 최신 안내를 확인하세요.*
