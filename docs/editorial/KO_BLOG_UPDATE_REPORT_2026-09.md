@@ -146,7 +146,7 @@ An initial pass of this update (same-day) corrected an arithmetic error in dtv-i
 - **dtv-required-documents.md**: "500,000 THB 이상 (약 KRW 19,000,000)" → "500,000 THB 이상" (KRW removed).
 - **dtv-bank-balance.md**: removed the "참고 환산" (reference conversion) table row and removed the FAQ entry "Q. 500,000 THB는 얼마인가요?" that existed solely to state the KRW conversion.
 - A repo-wide search for other static KRW conversions tied to the 500,000 THB Financial Evidence figure found no further instances.
-- **Not touched (out of this QA's scope, flagged for a decision):** dtv-application.md still contains "10,000 THB (약 KRW 380,000)" for the government visa fee (not the 500,000 THB Financial Evidence figure). The same THB-source-of-truth logic arguably applies to this figure too, but it was not named in the Fact QA request, so it was left as-is pending an explicit decision.
+- **Resolved (final Fact QA pass, 2026-09-16):** dtv-application.md's government visa fee line "10,000 THB (약 KRW 380,000)" had its KRW conversion removed. In the same edit, added a Seoul Tier B note (Royal Thai Embassy Seoul direct confirmation) that Korean nationals applying via the Seoul embassy are currently fee-exempt — scoped explicitly to Korean nationals / Seoul embassy, not generalized to other nationalities or missions. Fix commit: `93da009`.
 - LTR BOI-official USD thresholds retained unchanged in dtv-vs-ltr.md and thailand-long-stay-visa-comparison.md, per the confirmed exception (these are the LTR program's own officially USD-denominated figures, not a THB conversion).
 - Fix commit: `59d9396`.
 
@@ -177,10 +177,10 @@ None found or introduced. GolfDTV pricing, 96% approval rate, 7-day fastest appr
 
 ## Q. Typecheck / Build Results
 
-Re-run after the Fact QA correction pass:
+Re-run after each Fact QA correction pass; final run after the government-fee KRW/Seoul-Tier-B fix:
 
 - `npx tsc --noEmit`: **PASS** (no output, no errors)
-- `npm run build`: **PASS** — "✓ Compiled successfully in 2.5s", all `/[lang]/blog/[slug]` static pages generated including the updated KO set, no broken-route errors.
+- `npm run build`: **PASS** — "✓ Compiled successfully in 2.6s", all `/[lang]/blog/[slug]` static pages generated including the updated KO set, no broken-route errors.
 
 ## R. Full Commit SHA List (chronological)
 
@@ -234,8 +234,12 @@ f2db569 dtv-vs-retirement-visa
 9817be1 thailand-long-stay-visa-comparison
 dcded07 docs: add this report (initial version)
 59d9396 fix: remove static KRW conversion for 500,000 THB financial evidence (Fact QA correction)
+cb28eb2 docs: update report with Fact QA findings
+93da009 fix: dtv-application - remove gov fee KRW conversion, add Seoul Tier B fee-exemption note (final Fact QA)
 ```
 
 ---
 
-*KO SAFE_AUTO_FIX phase complete, including post-completion Fact QA correction. JA / EN / KO all 3 languages now fully processed.*
+**KO Fact Base status: COMPLETE.** All SAFE_AUTO_FIX work and all three Fact QA correction passes (500,000 THB KRW removal, health-insurance re-audit, government-fee KRW + Seoul Tier B fee-exemption note) are closed out. No open HUMAN_REVIEW items remain.
+
+*KO SAFE_AUTO_FIX phase complete, including post-completion Fact QA corrections. JA / EN / KO all 3 languages now fully processed.*
