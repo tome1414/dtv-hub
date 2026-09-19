@@ -3,7 +3,7 @@ title: "Golf DTV FAQ（2026年9月版）｜申請前のよくある質問15選"
 slug: "golf-dtv-faq"
 lang: "ja"
 published_at: "2026-05-16"
-updated_at: "2026-09-15"
+updated_at: "2026-09-19"
 primary_keyword: "Golf DTV FAQ"
 secondary_keywords:
   - "GolfDTV よくある質問"
@@ -73,7 +73,7 @@ GolfDTVは、タイのDTV（Destination Thailand Visa）のSoft Power Activities
 
 **Q5. 自分で準備する書類は何ですか？**
 
-申請者本人が準備する主な書類は、パスポート・証明写真・Proof of Permanent Residence（居住証明）・Certificate of Criminal Record Clearance（犯罪経歴証明書）・残高証明書・銀行取引明細書です。2026年8月31日以降は居住証明と犯罪経歴証明の確認がより重要になっています。何の書類が受理されるかは申請先公館によって異なります。
+申請者本人が準備する主な書類は、パスポート・証明写真・Proof of Permanent Residence（居住証明）・Certificate of Criminal Record Clearance（犯罪経歴証明書）・残高証明書・銀行取引明細書です。2026年8月31日以降は居住証明と犯罪経歴証明の確認がより重要になっています。何の書類が受理されるかは申請先公館によって異なります。犯罪経歴証明書の日本国内での取得方法は[DTV必要書類一覧](/ja/blog/dtv-required-documents)で解説しています。
 
 ---
 
