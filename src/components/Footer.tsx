@@ -13,8 +13,8 @@ const footerSections = [
     titleEn: 'Visa Info',
     titleKo: '비자 정보',
     links: [
-      { labelJa: 'DTVビザとは', labelEn: 'What is DTV?', labelKo: 'DTV 비자란?', href: '/guide/about' },
-      { labelJa: '申請ガイド', labelEn: 'Application Guide', labelKo: '신청 가이드', href: '/guide/embassy' },
+      { labelJa: 'DTVビザとは', labelEn: 'What is DTV?', labelKo: 'DTV 비자란?', href: '/blog/dtv-visa' },
+      { labelJa: '申請ガイド', labelEn: 'Application Guide', labelKo: '신청 가이드', href: '/embassy-map' },
       { labelJa: '必要書類', labelEn: 'Required Documents', labelKo: '필요 서류', href: '/requirements' },
       { labelJa: '申請の流れ', labelEn: 'Application Process', labelKo: '신청 절차', href: '/dtv-application' },
     ],
@@ -140,7 +140,7 @@ export default function Footer({ locale, footer }: FooterProps) {
             {footer.links.map((link) => (
               <Link
                 key={link.href}
-                href={`/${locale}${link.href}`}
+                href={link.href.startsWith('/sitemap.xml') ? link.href : `/${locale}${link.href}`}
                 className="footer-link"
                 style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', textDecoration: 'none' }}
               >
