@@ -3,7 +3,7 @@ title: "DTV Application Notes by Nationality | Fee Exemptions, Visa-Free Stay Ch
 slug: "dtv-application-nationality-notes"
 lang: "en"
 published_at: "2026-05-30"
-updated_at: "2026-09-16"
+updated_at: "2026-09-19"
 primary_keyword: "DTV application nationality notes"
 secondary_keywords:
   - "DTV application fee exemption nationality"
@@ -73,21 +73,21 @@ Most nationalities — including Japanese, US, UK, EU, and Australian nationals 
 
 ---
 
-## Thailand's Visa-Free Stay: Current Status (as of May 2026)
+## Thailand's Visa-Free Stay: Current Status (as of 15 September 2026)
 
 Many nationalities can enter Thailand without a visa. However, the number of visa-free days and the specific rules depend on your nationality.
 
 | Visa-free entry type | Applicable nationalities | Stay limit |
 |---|---|---|
-| General visa exemption | Japan, US, UK, EU, Australia, and many others | 30 days (as of May 2026) |
-| Bilateral agreement — special exemption | South Korea, Brazil, Peru, Argentina, Chile | 90 days (maintained) |
+| General visa exemption | 60 eligible countries/territories, including Japan, the US, UK, EU member states, and Australia | 30 days (effective 15 September 2026) |
+| Bilateral agreement — special exemption | South Korea, Brazil, Peru, Argentina, Chile | 90 days (unaffected by this change) |
 | Other bilateral agreements | China, Russia, and others | Per agreement (e.g. 30 days) |
 
-**May 2026 change:** Thailand's Cabinet officially approved the end of the 60-day visa-free scheme (introduced in 2024). For most nationalities under general visa exemption (including Japan, US, and EU), the limit returns to **30 days** (effective 15 days after publication in the Royal Gazette). Nationals covered by bilateral agreements — such as South Korea and the five South American countries listed above — are unaffected and retain their full agreement terms.
+**2026-09-15 change:** Thailand's Ministry of Interior published four notices in the Royal Gazette on 31 August 2026, ending the 60-day visa exemption scheme that had been in effect since July 2024. For nationals of the 60 eligible countries/territories under general visa exemption — including Japan, the US, UK, and EU member states — the stay limit reverted to **30 days**, effective 15 September 2026. Travelers who entered Thailand before that date under the previous 60-day scheme may remain for the full period originally granted upon entry. Nationals covered by separate bilateral agreements — including South Korea and the other countries listed above — are not affected by this change and retain their existing terms in full.
 
-**For Korean nationals specifically:** South Korea holds two advantages at once — the application fee is fully waived, and the bilateral agreement means 90 days of visa-free stay is available without a DTV at all. As a result, the DTV becomes most valuable for Korean nationals planning stays beyond 90 days or wanting to enter and re-enter Thailand freely over a 5-year period.
+**For Korean nationals specifically:** South Korea holds two advantages at once — the application fee is fully waived, and the separate bilateral agreement (unaffected by the September 2026 change) means 90 days of visa-free stay is available without a DTV at all. As a result, the DTV becomes most valuable for Korean nationals planning stays beyond 90 days or wanting to enter and re-enter Thailand freely over a 5-year period.
 
-As the 30-day limit returns for most nationalities, the DTV's **180-day per entry, 5-year validity** becomes increasingly valuable for anyone planning longer stays.
+For eligible nationalities under Thailand's current 30-day visa-exemption scheme, the DTV's **180-day per entry, 5-year validity** becomes increasingly valuable for anyone planning longer stays. The DTV's own terms are unaffected by this visa-exemption change.
 
 ---
 
@@ -124,6 +124,7 @@ For Golf DTV consultation and support, visit the [Golf DTV page](/en/golf-dtv).
 | Source | Tier | Notes |
 |---|---|---|
 | Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category and nationality-based fee rules |
+| Thai Ministry of Interior — Royal Gazette notices (visa exemption revision) | Tier A | Published 31 August 2026, effective 15 September 2026 |
 | Royal Thai Embassy Seoul — reciprocal fee exemption announcement | Tier A | Korean national fee exemption confirmation |
 | Royal Thai Embassy Kuala Lumpur — reciprocal fee exemption announcement | Tier A | Malaysian and Singaporean national fee exemption confirmation |
 | Thai embassy / consulate guidance (general) | Tier A | Third-country application rules vary by mission |
@@ -132,4 +133,4 @@ For Golf DTV consultation and support, visit the [Golf DTV page](/en/golf-dtv).
 
 ---
 
-*This article is based on official information from the Thai Ministry of Foreign Affairs and Thai embassy announcements. Requirements may change. Always verify with your applying embassy before submitting. Last updated: 2026-09-16*
+*This article is based on official information from the Thai Ministry of Foreign Affairs and Thai embassy announcements. Requirements may change. Always verify with your applying embassy before submitting. Last updated: 2026-09-19*
