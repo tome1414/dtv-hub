@@ -3,7 +3,7 @@ title: "GolfDTV申請の流れ（2026年9月版）｜ステップ別の手順と
 slug: "golf-dtv-process"
 lang: "ja"
 published_at: "2026-05-16"
-updated_at: "2026-09-14"
+updated_at: "2026-09-19"
 primary_keyword: "Golf DTV 申請 流れ"
 secondary_keywords:
   - "GolfDTV 申請方法"
@@ -214,7 +214,7 @@ Thai e-Visa提出後、または公館申請後、大使館・総領事館から
 A. まず申請先公館の最新要件を確認することから始めることを推奨します。2026年8月31日以降はProof of Permanent ResidenceやCertificate of Criminal Record Clearanceの要件が変更されており、公館ごとに異なります。その後、GolfDTVへの相談・申込みに進みます。
 
 **Q. 自分で準備する書類は何ですか？**
-A. パスポート・証明写真・Proof of Permanent Residence（居住証明）・Certificate of Criminal Record Clearance（犯罪経歴証明書）・残高証明書・銀行取引明細書などを申請者本人が準備します。2026年8月31日以降は居住証明と犯罪経歴証明の確認がより重要になっています。詳細は[GolfDTV必要書類](/ja/blog/golf-dtv-documents)をご参照ください。
+A. パスポート・証明写真・Proof of Permanent Residence（居住証明）・Certificate of Criminal Record Clearance（犯罪経歴証明書）・残高証明書・銀行取引明細書などを申請者本人が準備します。2026年8月31日以降は居住証明と犯罪経歴証明の確認がより重要になっています。詳細は[GolfDTV必要書類](/ja/blog/golf-dtv-documents)をご参照ください。犯罪経歴証明書の日本国内での取得方法は[DTV必要書類一覧](/ja/blog/dtv-required-documents)で解説しています。
 
 **Q. GolfDTVはどの書類を準備しますか？**
 A. GolfDTVはゴルフトレーニングプログラムへの参加受入、受入レター、学校・プログラム関連書類を準備します。パスポートや個人の書類（残高証明・居住証明等）は申請者本人が準備します。
