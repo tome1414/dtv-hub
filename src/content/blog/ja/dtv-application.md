@@ -3,7 +3,7 @@ title: "DTV申請方法・手順（2026年9月版）｜申請公館確認から�
 slug: "dtv-application"
 lang: "ja"
 published_at: "2026-04-28"
-updated_at: "2026-09-13"
+updated_at: "2026-09-19"
 primary_keyword: "DTV 申請方法"
 secondary_keywords:
   - "DTV 申請 手順"
@@ -307,7 +307,7 @@ DTVは「5年有効のビザ」ですが、タイ入国時に与えられる「�
 | 申請先公館の最新要件を確認している | ✓ |
 | 必要書類がすべて揃っている | ✓ |
 | 居住証明（Proof of Permanent Residence）の準備ができている | ✓ |
-| 犯罪経歴証明（Certificate of Criminal Record Clearance）の準備ができている | ✓ |
+| 犯罪経歴証明（Certificate of Criminal Record Clearance）の準備ができている（[取得方法](/ja/blog/dtv-required-documents)） | ✓ |
 | 残高証明書が最新（発行基準は申請公館の案内に従う） | ✓ |
 | 健康保険証書に英文記載がある | ✓ |
 | 申請費用の準備ができている（金額・免除は国籍・申請地等で異なる） | ✓ |
