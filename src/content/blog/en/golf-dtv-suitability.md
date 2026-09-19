@@ -3,7 +3,7 @@ title: "Is Golf DTV Right for You? A Practical Fit Assessment"
 slug: "golf-dtv-suitability"
 lang: "en"
 published_at: "2026-05-16"
-updated_at: "2026-09-16"
+updated_at: "2026-09-19"
 primary_keyword: "Is Golf DTV right for me"
 secondary_keywords:
   - "Golf DTV who qualifies"
@@ -68,7 +68,7 @@ If you're between jobs, self-employed without formal overseas contracts, on a sa
 
 The DTV is designed for long-term, multi-trip use: 5-year validity, up to 180 days per entry, unlimited re-entries. If you want to spend several months in Thailand each year — or rotate regularly between Thailand and your home country — this structure suits that pattern.
 
-Visa-on-arrival (typically 30 days for eligible nationalities) involves a different level of commitment and doesn't suit this lifestyle.
+Short-term visa-free entry (visa exemption for eligible nationalities, typically 30 days as of the September 2026 revision, or visa-on-arrival for a smaller number of other nationalities) involves a different level of commitment and doesn't suit this lifestyle.
 
 ### 3. Golf-inclined people over 50 looking for a Thailand base
 
@@ -184,6 +184,7 @@ These requirements apply to Golf DTV applicants using the Soft Power route. Spec
 | Thai Ministry of Foreign Affairs — DTV program | Tier A | Official visa category, entry conditions, and validity |
 | Thai embassy / consulate guidance | Tier A | Mission-specific requirements vary; verify with your intended embassy |
 | 2026-08-31 DTV supporting-document update | Tier A | Proof of Permanent Residence and Certificate of Criminal Record Clearance added |
+| Thai Ministry of Interior — Royal Gazette notices (visa exemption revision) | Tier A | Published 31 August 2026, effective 15 September 2026 |
 | GolfDTV service information | Tier C | Acceptance Letter procurement and application support |
 
 *Requirements are subject to change. Verify current requirements with your intended embassy before applying.*
