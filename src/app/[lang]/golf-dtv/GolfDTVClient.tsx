@@ -614,7 +614,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             <div style={{display:'flex',flexDirection:'column',gap:12}}>
               {locale === 'ja' ? (
                 <>
-              <LegalBox id="academy" title="ゴルフアカデミー概要（提携スクール）">
+              <LegalBox id="academy" title="ゴルフアカデミー概要">
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
                     {[
@@ -662,6 +662,8 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
                     {[
+                      ['販売業者', 'PREMIER GOLF TOUR Co.,Ltd'],
+                      ['所在地', '9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110'],
                       ['お問い合わせ', 'お問い合わせフォームよりご連絡ください'],
                       ['販売価格', 'Silverプラン: 20,000 THB／年\nGoldプラン: 50,000 THB／年\nPlatinumプラン: 100,000 THB／年\nDTV申請代行サービス: +10,000 THB\n※別途タイVAT（7%）が加算されます。\n※日本円換算は申込時の為替レートにより異なります。詳細はお問い合わせください。'],
                       ['支払方法', '銀行振込またはクレジットカード決済\n（詳細はお申し込み後に別途ご案内いたします）'],
@@ -729,10 +731,10 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               ) : (
                 <>
               <LegalBox id="academy" title={
-                locale === 'zh' ? '高尔夫学院概要（合作学校）' :
-                locale === 'ko' ? '골프 아카데미 개요（제휴 스쿨）' :
-                locale === 'ru' ? 'О гольф-академии（партнёрская школа）' :
-                'Golf Academy（Partner School）'
+                locale === 'zh' ? '高尔夫学院概要' :
+                locale === 'ko' ? '골프 아카데미 개요' :
+                locale === 'ru' ? 'О гольф-академии' :
+                'Golf Academy'
               }>
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
