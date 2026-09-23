@@ -662,8 +662,6 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
                     {[
-                      ['販売業者', 'Toy World Company'],
-                      ['所在地', 'Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960'],
                       ['お問い合わせ', 'お問い合わせフォームよりご連絡ください'],
                       ['販売価格', 'Silverプラン: 20,000 THB／年\nGoldプラン: 50,000 THB／年\nPlatinumプラン: 100,000 THB／年\nDTV申請代行サービス: +10,000 THB\n※別途タイVAT（7%）が加算されます。\n※日本円換算は申込時の為替レートにより異なります。詳細はお問い合わせください。'],
                       ['支払方法', '銀行振込またはクレジットカード決済\n（詳細はお申し込み後に別途ご案内いたします）'],
@@ -708,7 +706,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
 
               <LegalBox id="privacy" title="プライバシーポリシー">
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
-                  <p>Toy World Company（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下のプライバシーポリシーを定めます。</p>
+                  <p>当社は、お客様の個人情報の保護を重要な責務と認識し、以下のプライバシーポリシーを定めます。</p>
                   {[
                     ['1. 収集する個人情報', 'お問い合わせフォームを通じて、お名前、メールアドレス、ご希望プラン、ご紹介コード、お問い合わせ内容等の情報をお預かりします。'],
                     ['2. 利用目的', 'お問い合わせへの回答およびサービスのご案内\nDTVビザ申請サポートサービスの提供\nサービス改善および新サービスのご案内\n法令に基づく対応'],
@@ -889,7 +887,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
 
               <LegalBox id="privacy" title="Privacy Policy">
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
-                  <p>Toy World Company (hereinafter &quot;the Company&quot;) recognizes the protection of customer personal information as an important responsibility and establishes this privacy policy.</p>
+                  <p>The Company recognizes the protection of customer personal information as an important responsibility and establishes this privacy policy.</p>
                   {[
                     ['1. Information We Collect', 'We collect your name, email address, preferred plan, referral code, and inquiry message through the contact form on this website.'],
                     ['2. Use of Information', 'To respond to inquiries and provide service information • To provide DTV visa application support services • To improve services and inform about new offerings • To comply with applicable laws'],
