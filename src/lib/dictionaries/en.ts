@@ -376,7 +376,7 @@ const en: Dictionary = {
           questions: [
             {
               q: 'Can my spouse or children apply with me?',
-              a: 'Yes, they can. The legal spouse of the main DTV applicant, as well as children under the age of 20, can apply together under the DTV dependent category.\n\nOur dependent visa support fees are as follows.\n・First dependent (spouse or unmarried child under 20): +10,000 THB\n・Second and each additional dependent: +5,000 THB per person\n\nPlease note that the government visa application fee also applies separately for each dependent, just as it does for the main applicant. The standard government visa application fee is generally equivalent to THB 10,000, but fees and exemptions vary by nationality and application location. If you are interested, please select the dependent visa option on the inquiry form.',
+              a: 'Yes, they can. The legal spouse of the main DTV applicant, as well as children under the age of 20, can apply together under the DTV dependent category.\n\nDependent Application Support fees are as follows.\n・First dependent (spouse or unmarried child under 20): +20,000 THB\n・Second and subsequent dependents: +10,000 THB per person\n\nPlease note that the government visa application fee also applies separately for each dependent, just as it does for the main applicant. The standard government visa application fee is generally equivalent to THB 10,000, but fees and exemptions vary by nationality and application location. If you are interested, please select the dependent visa option on the inquiry form.',
             },
             {
               q: 'Do my family members also need to enroll in the golf school?',

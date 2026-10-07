@@ -76,7 +76,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
         .accordion-item { border-bottom:1px solid #e5e0d5; }
         .accordion-btn { width:100%;text-align:left;padding:18px 0;font-weight:600;font-size:.92rem;color:#1a1a1a;display:flex;justify-content:space-between;align-items:center;cursor:pointer;background:none;border:none;font-family:inherit; }
         .accordion-content { max-height:0;overflow:hidden;transition:max-height .35s ease; }
-        .accordion-content.open { max-height:600px; }
+        .accordion-content.open { max-height:1600px; }
         .accordion-icon { width:24px;height:24px;border-radius:50%;background:#0d4f3c;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s;font-size:1.1rem;line-height:1; }
         .accordion-icon.open { transform:rotate(45deg); }
         .form-input { width:100%;padding:12px 16px;border:1px solid #d5d0c5;border-radius:10px;font-size:.9rem;font-family:'Noto Sans JP',sans-serif;outline:none;transition:border .2s;background:#fff;box-sizing:border-box; }
