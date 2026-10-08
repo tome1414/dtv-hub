@@ -1,4 +1,5 @@
 import type { Dictionary } from '@/types'
+import { APPLICATION_SUPPORT_PRICE_THB } from '@/lib/golf-dtv-pricing'
 
 const ko: Dictionary = {
   meta: {
@@ -223,7 +224,7 @@ const ko: Dictionary = {
       label: '선택 추가 서비스',
       title: 'DTV 비자 신청 대행 서비스',
       description: '서류 준비부터 대사관 제출까지 전체 비자 신청 지원. 거부 시 100% 학비 환불.',
-      price: 20000,
+      price: APPLICATION_SUPPORT_PRICE_THB,
       features: [
         '완전한 서류 준비 및 검토',
         '대사관 신청 및 면접 지원',

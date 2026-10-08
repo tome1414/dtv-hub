@@ -1,4 +1,5 @@
 import type { Dictionary } from '@/types'
+import { APPLICATION_SUPPORT_PRICE_THB } from '@/lib/golf-dtv-pricing'
 
 const zh: Dictionary = {
   meta: {
@@ -219,7 +220,7 @@ const zh: Dictionary = {
       label: '可选附加项',
       title: 'DTV签证申请代理服务',
       description: '从文件准备到使馆提交的全套签证申请支持。签证被拒时，100%退还学费。',
-      price: 20000,
+      price: APPLICATION_SUPPORT_PRICE_THB,
       features: [
         '完整文件准备和审核',
         '使馆申请和面试支持',

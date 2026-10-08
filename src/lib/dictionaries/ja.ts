@@ -1,4 +1,5 @@
 import type { Dictionary } from '@/types'
+import { APPLICATION_SUPPORT_PRICE_THB } from '@/lib/golf-dtv-pricing'
 
 const ja: Dictionary = {
   meta: {
@@ -216,7 +217,7 @@ const ja: Dictionary = {
       label: 'オプション追加',
       title: 'DTV申請代行サービス',
       description: 'ビザ申請完全代行で、書類作成から大使館申請まで全てサポート。申請却下時はスクール代金を全額返金。',
-      price: 20000,
+      price: APPLICATION_SUPPORT_PRICE_THB,
       features: [
         '書類作成・チェック完全代行',
         '大使館申請・受付・受け取り代行',

@@ -1,4 +1,5 @@
 import type { Dictionary } from '@/types'
+import { APPLICATION_SUPPORT_PRICE_THB } from '@/lib/golf-dtv-pricing'
 
 const en: Dictionary = {
   meta: {
@@ -224,7 +225,7 @@ const en: Dictionary = {
       label: 'Optional Add-on',
       title: 'DTV Application Agency Plan',
       description: 'Full visa application support from document preparation to embassy submission. 100% school fee refund if rejected.',
-      price: 20000,
+      price: APPLICATION_SUPPORT_PRICE_THB,
       features: [
         'Complete document preparation & review',
         'Embassy application & interview support',

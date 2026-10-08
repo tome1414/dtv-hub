@@ -1,4 +1,5 @@
 import type { Dictionary } from '@/types'
+import { APPLICATION_SUPPORT_PRICE_THB } from '@/lib/golf-dtv-pricing'
 
 const ru: Dictionary = {
   meta: {
@@ -222,7 +223,7 @@ const ru: Dictionary = {
       label: 'Дополнительная услуга',
       title: 'Услуга агентства по оформлению DTV',
       description: 'Полная поддержка по оформлению документов и подаче в посольство. 100% возврат средств при отказе.',
-      price: 20000,
+      price: APPLICATION_SUPPORT_PRICE_THB,
       features: [
         'Полная подготовка и проверка документов',
         'Подача в посольство и поддержка при собеседовании',

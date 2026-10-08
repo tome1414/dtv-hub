@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { sendCapiLead } from '@/lib/meta-capi'
+import { agencyServiceEmailLabel } from '@/lib/golf-dtv-pricing'
 
 function generateReceiptNumber(): string {
   const now = new Date()
@@ -61,7 +62,7 @@ export async function POST(req: NextRequest) {
         <td style="padding:10px 0;font-weight:700;color:#0a2e1f;">申請代行</td>
         <td style="padding:10px 0;">
           <span style="background:${agencyService ? '#0d4f3c' : '#999'};color:#fff;padding:3px 10px;border-radius:999px;font-size:.8rem;font-weight:600;">
-            ${agencyService ? '希望する (+10,000 THB)' : '希望しない'}
+            ${agencyServiceEmailLabel(!!agencyService)}
           </span>
         </td>
       </tr>
