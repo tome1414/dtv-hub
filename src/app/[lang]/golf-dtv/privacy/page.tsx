@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { PRIVACY_POLICY_JA, PRIVACY_POLICY_EN } from '@/lib/golf-dtv-privacy-policy'
+import { getPrivacyPolicy } from '@/lib/golf-dtv-privacy-policy'
 
 const LOCALES = ['ja', 'en', 'zh', 'ko', 'ru']
 const BASE = 'https://dtvclub.com'
@@ -13,8 +13,8 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }))
 }
 
-const policyFor = (lang: string) => (lang === 'ja' ? PRIVACY_POLICY_JA : PRIVACY_POLICY_EN)
-const titleFor = (lang: string) => (lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy')
+const policyFor = getPrivacyPolicy
+const titleFor = (lang: string) => getPrivacyPolicy(lang).title
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params
@@ -63,7 +63,9 @@ export default async function GolfDTVPrivacyPage({ params }: PageProps) {
                 <p style={{ margin: 0, whiteSpace: 'pre-line' }}>{body}</p>
               </section>
             ))}
-            <p style={{ margin: '8px 0 0', fontSize: '.8rem', color: '#999' }}>{policy.date}</p>
+            {policy.dates.map((dt) => (
+              <p key={dt} style={{ margin: '8px 0 0', fontSize: '.8rem', color: '#999' }}>{dt}</p>
+            ))}
           </div>
         </article>
       </main>

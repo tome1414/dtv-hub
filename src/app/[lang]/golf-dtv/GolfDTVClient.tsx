@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { PRIVACY_POLICY_JA, PRIVACY_POLICY_EN } from '@/lib/golf-dtv-privacy-policy'
+import { getPrivacyPolicy } from '@/lib/golf-dtv-privacy-policy'
 import type { Locale } from '@/middleware'
 import {
   analytics,
@@ -707,16 +707,16 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </div>
               </LegalBox>
 
-              <LegalBox id="privacy-policy" legacyId="privacy" title="プライバシーポリシー">
+              <LegalBox id="privacy-policy" legacyId="privacy" title={getPrivacyPolicy('ja').title}>
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
-                  <p>{PRIVACY_POLICY_JA.intro}</p>
-                  {PRIVACY_POLICY_JA.sections.map(([heading, body])=>(
+                  <p>{getPrivacyPolicy('ja').intro}</p>
+                  {getPrivacyPolicy('ja').sections.map(([heading, body])=>(
                     <div key={heading}>
                       <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
                       <p style={{whiteSpace:'pre-line'}}>{body}</p>
                     </div>
                   ))}
-                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>{PRIVACY_POLICY_JA.date}</p>
+                  {getPrivacyPolicy('ja').dates.map((dt)=>(<p key={dt} style={{fontSize:'.8rem',color:'#999',marginTop:8}}>{dt}</p>))}
                 </div>
               </LegalBox>
                 </>
@@ -879,16 +879,16 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </div>
               </LegalBox>
 
-              <LegalBox id="privacy-policy" legacyId="privacy" title="Privacy Policy">
+              <LegalBox id="privacy-policy" legacyId="privacy" title={getPrivacyPolicy(locale).title}>
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
-                  <p>{PRIVACY_POLICY_EN.intro}</p>
-                  {PRIVACY_POLICY_EN.sections.map(([heading, body])=>(
+                  <p>{getPrivacyPolicy(locale).intro}</p>
+                  {getPrivacyPolicy(locale).sections.map(([heading, body])=>(
                     <div key={heading}>
                       <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
                       <p style={{whiteSpace:'pre-line'}}>{body}</p>
                     </div>
                   ))}
-                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>{PRIVACY_POLICY_EN.date}</p>
+                  {getPrivacyPolicy(locale).dates.map((dt)=>(<p key={dt} style={{fontSize:'.8rem',color:'#999',marginTop:8}}>{dt}</p>))}
                 </div>
               </LegalBox>
                 </>
@@ -1056,7 +1056,7 @@ function LegalBox({ id, legacyId, title, children }: { id: string; legacyId?: st
         <span style={{fontWeight:700,fontSize:'.95rem',color:open?'#e2c46e':'#0a2e1f'}}>{title}</span>
         <span style={{width:24,height:24,borderRadius:'50%',background:open?'rgba(255,255,255,.15)':'#0d4f3c',color:open?'#e2c46e':'#fff',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.1rem',lineHeight:1,transition:'transform .3s',transform:open?'rotate(45deg)':'none',flexShrink:0}}>+</span>
       </button>
-      <div style={{maxHeight:open?2000:0,overflow:'hidden',transition:'max-height .4s ease',background:'#fff'}}>
+      <div style={{maxHeight:open?12000:0,overflow:'hidden',transition:'max-height .4s ease',background:'#fff'}}>
         <div style={{padding:'24px'}}>
           {children}
         </div>

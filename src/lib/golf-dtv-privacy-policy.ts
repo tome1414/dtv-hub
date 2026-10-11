@@ -1,35 +1,161 @@
 // GolfDTV プライバシーポリシー本文（LP内アコーディオンと専用ページで共用）。
-// 本文の変更は法務承認後に行うこと。
+// 内部向けマーカー（要確認の印）を本文に残さないこと。公開前チェック: npx tsx scripts/check-privacy-policy.ts
+// 経緯・調査結果は docs/golfdtv-privacy-phase2-final-adjustment.md を参照。
 
-export type PrivacyPolicy = { intro: string; sections: string[][]; date: string }
+// 事業者が確定した情報（5言語共通）。変更時はここだけを直す。
+const OFFICER = 'Ken Sugiyama'
+const OFFICER_TITLE = 'HEAD PRO'
+// 個人情報に関する問い合わせ窓口（事業者確定）。フォームの送信先（GOLF_DTV_TO / GMAIL_TO）とは別物で、連動させない。
+const CONTACT_EMAIL = 'dtv.club.thailand@gmail.com'
 
-export const PRIVACY_POLICY_JA: PrivacyPolicy = {
-  intro: '当社は、お客様の個人情報の保護を重要な責務と認識し、以下のプライバシーポリシーを定めます。',
-  sections: [
-    ['1. 収集する個人情報', 'お問い合わせフォームを通じて、お名前、メールアドレス、ご希望プラン、ご紹介コード、お問い合わせ内容等の情報をお預かりします。'],
-    ['2. 利用目的', 'お問い合わせへの回答およびサービスのご案内\nDTVビザ申請サポートサービスの提供\nサービス改善および新サービスのご案内\n法令に基づく対応'],
-    ['3. 第三者への提供', '当社は、以下の場合を除き、お客様の個人情報を第三者に提供いたしません。\n・お客様の同意がある場合\n・法令に基づく場合\n・サービス提供に必要な業務委託先（厳格な守秘義務を課します）'],
-    ['4. 個人情報の管理', '当社は、個人情報の漏洩・紛失・不正アクセスを防止するため、適切なセキュリティ措置を講じます。'],
-    ['5. 開示・訂正・削除', 'お客様は、当社が保有するご自身の個人情報の開示、訂正、削除を要求する権利を有します。ご要望はお問い合わせフォームよりご連絡ください。'],
-    ['6. Cookieの使用', '当社ウェブサイトでは、サービス向上のためCookieを使用することがあります。ブラウザの設定によりCookieを無効化することができますが、一部機能が制限される場合があります。'],
-    ['7. プライバシーポリシーの変更', '本ポリシーは、必要に応じて改定することがあります。重要な変更がある場合は、ウェブサイト上でお知らせします。'],
-    ['8. お問い合わせ', '個人情報に関するお問い合わせはお問い合わせフォームよりご連絡ください。'],
-  ],
-  date: '制定日：2024年1月1日',
+export type PrivacyPolicy = {
+  title: string
+  intro: string
+  sections: string[][]
+  dates: string[]
 }
 
-export const PRIVACY_POLICY_EN: PrivacyPolicy = {
-  intro: 'The Company recognizes the protection of customer personal information as an important responsibility and establishes this privacy policy.',
+const JA: PrivacyPolicy = {
+  title: 'プライバシーポリシー',
+  intro:
+    'PREMIER GOLF TOUR Co.,Ltd（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、GolfDTVサービスに関して、以下のプライバシーポリシーを定めます。',
   sections: [
-    ['1. Information We Collect', 'We collect your name, email address, preferred plan, referral code, and inquiry message through the contact form on this website.'],
-    ['2. Use of Information', 'To respond to inquiries and provide service information • To provide DTV visa application support services • To improve services and inform about new offerings • To comply with applicable laws'],
-    ['3. Third Party Disclosure', 'We do not disclose customer personal information to third parties except in the following cases: With your consent • When required by law • To business partners necessary for service provision (under strict confidentiality obligations)'],
-    ['4. Information Security', 'We implement appropriate security measures to prevent unauthorized access, loss, or leakage of personal information.'],
-    ['5. Access, Correction, Deletion', 'You have the right to request disclosure, correction, or deletion of your personal information held by us. Please submit requests through the contact form.'],
-    ['6. Cookies', 'Our website may use cookies to improve service. You can disable cookies in your browser settings, though some features may be limited.'],
-    ['7. Privacy Policy Changes', 'We may revise this policy as necessary. Significant changes will be announced on our website.'],
-    ['8. Contact', 'For inquiries regarding personal information, please contact us through the contact form.'],
+    ['1. 事業者情報', `GolfDTVサービスにおける個人情報は、次の事業者が取り扱います。\n・事業者名：PREMIER GOLF TOUR Co.,Ltd\n・所在地：9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110（タイ）\n・個人情報保護責任者：${OFFICER}（${OFFICER_TITLE}）\n・個人情報に関するお問い合わせ窓口：${CONTACT_EMAIL}（本サイトのお問い合わせフォームでも受け付けます）`],
+    ['2. 取得する個人情報と取得経路', '(1) お問い合わせフォーム（GolfDTVページ）\nお名前、メールアドレス、国籍、ご希望プラン、申請代行サービス・5年プラン・年次更新のご希望、帯同家族のビザに関するご希望、当社を知ったきっかけ、ご紹介コード、お問い合わせ内容。送信時に受付番号を発行します。\n\n(2) パートナープログラムのお問い合わせフォーム\nお名前、メールアドレス、紹介媒体、メッセージ内容。\n\n(3) サイト内チャット相談のお問い合わせフォーム\nお名前、メールアドレス、国籍、お問い合わせ区分、メッセージ内容、閲覧中のページ、チャット上で選択した内容。\n\n(4) Facebook Messenger\nMeta広告から開始するMessengerの自動チャット、または本サイトのMessengerリンクからのご連絡により、次の内容を取得します。\n・現在の居住国（タイ／韓国／その他の国）\n・知りたい情報（申請条件／料金／申請手続き）\n・DTVビザの申請希望時期（1か月以内／1〜3か月以内／未定）\n・Messengerで送信いただいたメッセージの内容\n・Meta（Facebook）が当社のFacebookページに提供するMessengerのユーザー識別子。表示名等のプロフィール情報が当社に表示されるかどうかは、Metaの仕様およびお客様のMeta上の設定によります。\n\n(5) 自動的に取得される情報\nIPアドレス、ブラウザ・端末の情報、閲覧ページ、Cookie等の識別子（5.参照）。'],
+    ['3. 利用目的', '・お問い合わせ・ご相談への回答、およびサービスのご案内\n・DTVビザ申請サポートサービスの提供（お見積り・お手続きを含む）\n・Messengerでのご相談対応（居住国・ご関心・申請時期に応じたご案内）\n・サービスの改善、および新サービス・関連情報のご案内\n・広告の効果測定および改善（4.・5.参照）\n・法令に基づく対応、および当社の権利の保護\n\n個人情報は、業務上必要な範囲でのみ利用します。'],
+    ['4. MessengerおよびMeta広告に関するデータ処理', '・Messenger上のやり取りは、Meta Platforms, Inc.等が提供するサービス上で行われ、Metaの規約およびデータポリシーが適用されます。Metaは、お客様の情報を自らの目的で処理する場合があります。\n・当社は、Messengerで取得した回答・メッセージを、ご相談対応およびサービスのご案内のために利用します。\n・当社サイトでは、広告の効果測定のためMeta Pixelを利用しています。Meta Pixelは、閲覧ページやイベントの情報、Cookie識別子をMetaに送信します。\n・また、お問い合わせフォームの送信時に、サーバーからMetaへ情報を送信する仕組み（Meta Conversions API）を使用する場合があります。送信される情報は、ハッシュ化（SHA-256）したメールアドレス、IPアドレス、ブラウザ情報、Cookie識別子（fbp／fbc）、送信イベントの情報です。お名前・お問い合わせ内容は送信しません。\n・Metaでの広告表示に関する設定（パーソナライズ等）は、お客様ご自身のMeta上の広告設定から管理できます。'],
+    ['5. アクセス解析・Cookie等の利用', '当社サイトでは、Googleタグマネージャーを通じて、次のツールを使用しています。\n・Googleアナリティクス4（アクセス解析）\n・Meta Pixel（広告の効果測定）\n・Microsoft Clarity（画面操作の記録、ヒートマップ等による利用状況の分析）\nこれらはCookie等の識別子を用い、閲覧ページ、クリック、スクロール、画面操作、フォーム送信イベントなどを収集します。当社がGoogleタグマネージャーに送信するイベント情報（選択したプラン等）には、お名前・メールアドレスは含まれません。利用するツールを追加・変更する場合は、本ポリシーを更新します。\n\nブラウザの設定によりCookieを無効化できますが、一部機能が制限される場合があります。'],
+    ['6. 個人情報の閲覧・提供・共有の区分', '(1) 社内スタッフによる閲覧\nお客様の個人情報を閲覧するのは、業務上必要な当社の社内スタッフのみです。\n\n(2) 外部サービス事業者によるデータ処理\nGoogle、Meta、Microsoft、Vercel等の外部サービス事業者が、当社のサービス運営のためにデータを処理します（7.参照）。\n\n(3) 大使館・領事館・行政機関等への情報提供\nビザ申請サポートの一環として、お客様に代わり、大使館・領事館・行政機関等の関係する公的機関へ、申請書類および必要な情報を提出する場合があります。提供の目的は、ビザの申請・審査・関連手続きです。提供する情報は申請手続きに必要な範囲に限り、実際の申請内容や提出先によって異なる場合があります。\n\n(4) 外部の民間ビザ申請代行業者等への共有\n現時点では、外部の民間のビザ申請代行業者や外部の担当者に、お客様の個人情報を共有する予定はありません。必要が生じた場合は、本ポリシーを改訂して明示します。\n\n(5) その他の第三者提供\n上記のほか、お客様の同意がある場合または法令に基づく場合を除き、お客様の個人情報を第三者に提供しません。'],
+    ['7. 外部サービス事業者によるデータ処理', '当社は、お問い合わせの受付・管理、アクセス解析、広告の効果測定、サイトの運営のために、次の外部サービスを利用しています。これらの事業者は、それぞれの規約およびプライバシーポリシーに従って情報を処理します。\n\n・Google（Gmail、Googleスプレッドシート、Googleタグマネージャー、Googleアナリティクス4）\n　目的：お問い合わせの受信・管理、アクセス解析\n　対象：お問い合わせの内容、閲覧・操作の情報、Cookie識別子\n　（Googleスプレッドシートは、お問い合わせ内容の管理に使用する場合があります）\n・Meta（Facebook Messenger、Meta Pixel、Meta Conversions API）\n　目的：Messengerでのご相談対応、広告の効果測定\n　対象：Messengerの回答・メッセージ、ユーザー識別子、閲覧・イベントの情報、ハッシュ化したメールアドレス等\n・Microsoft（Microsoft Clarity）\n　目的：サイトの利用状況の分析\n　対象：閲覧・画面操作の情報、Cookie識別子\n・Vercel（ウェブサイトのホスティング）\n　目的：サイトの配信およびフォーム送信の処理\n　対象：アクセス情報、フォームの送信内容（処理の過程で通過）\n\n各事業者が保存する情報の保存期間は、それぞれの事業者の規定に従います。'],
+    ['8. 国外でのデータ処理', '当社はタイ王国の事業者です。7.の外部サービス事業者は、複数の国・地域のデータセンターでデータを処理する場合があり、事業者の所在地と実際のデータ処理地域は同一とは限りません。そのため、お客様の個人情報が、お客様の居住国およびタイ以外の国（米国等を含む可能性があります）で処理・保管される場合があります。当社は、具体的な処理地域を確認できていない場合があります。'],
+    ['9. 保存期間と削除', '・ご契約前のお客様（未契約者）：最終対応日から1年間保存し、保存期間の経過後、定期的に削除します。\n・ご契約のお客様：契約終了後、適用法令で保存が必要な期間は保持し、法定の保存義務が終了した後、保存の必要がなければ削除します。\n・ご本人から削除のご依頼があった場合は、原則として30日以内に対応します。法令により30日より短い期限が定められている場合は、その法令に従います。法令上の保存義務その他の正当な理由により削除できない場合は、その理由をお伝えし、必要な期間の終了後に削除します。\n・Messenger上の会話内容など、外部サービス事業者側に保存される情報は、7.のとおり各事業者の規定に従います。'],
+    ['10. 開示・訂正・削除等の請求', `お客様は、当社が保有するご自身の個人情報の開示、訂正、削除、利用停止等を請求することができます。${CONTACT_EMAIL} または本サイトのお問い合わせフォーム（受付番号をお知らせください）よりご連絡ください。ご本人確認をお願いする場合があります。`],
+    ['11. 情報セキュリティ', '当社は、個人情報の不正アクセス、紛失、漏洩を防止するため、適切なセキュリティ措置を講じます。本サイトとの通信はHTTPSにより暗号化されます。'],
+    ['12. ポリシーの変更', '本ポリシーは、必要に応じて改定することがあります。重要な変更がある場合は、ウェブサイト上でお知らせします。'],
   ],
-  date: 'Established: January 1, 2024',
+  dates: [],
 }
 
+const KO: PrivacyPolicy = {
+  title: '개인정보처리방침',
+  intro:
+    'PREMIER GOLF TOUR Co.,Ltd(이하 “당사”)는 이용자의 개인정보 보호를 중요한 책임으로 인식하며, GolfDTV 서비스와 관련하여 다음과 같이 개인정보처리방침을 정합니다.',
+  sections: [
+    ['1. 개인정보 처리자 정보', `GolfDTV 서비스의 개인정보는 다음 사업자가 처리합니다.\n・사업자명: PREMIER GOLF TOUR Co.,Ltd\n・소재지: 9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110 (태국)\n・개인정보 보호책임자: ${OFFICER} (${OFFICER_TITLE})\n・개인정보 관련 문의처: ${CONTACT_EMAIL} (본 사이트의 문의 양식으로도 접수합니다)`],
+    ['2. 수집하는 개인정보 항목 및 수집 경로', '(1) 문의 양식 (GolfDTV 페이지)\n성명, 이메일 주소, 국적, 희망 플랜, 신청 대행 서비스·5년 플랜·연간 갱신 희망 여부, 동반 가족 비자 관련 희망 사항, 당사를 알게 된 경로, 추천 코드, 문의 내용. 제출 시 접수 번호가 발급됩니다.\n\n(2) 파트너 프로그램 문의 양식\n성명, 이메일 주소, 소개 매체, 메시지 내용.\n\n(3) 사이트 내 채팅 상담 문의 양식\n성명, 이메일 주소, 국적, 문의 구분, 메시지 내용, 열람 중이던 페이지, 채팅에서 선택한 내용.\n\n(4) Facebook Messenger\nMeta 광고에서 시작되는 Messenger 자동 채팅 또는 본 사이트의 Messenger 링크를 통한 연락 시 다음 내용을 수집합니다.\n・현재 거주 국가 (태국 / 한국 / 기타 국가)\n・알고 싶은 정보 (신청 조건 / 비용 / 신청 절차)\n・DTV 비자 신청 희망 시기 (1개월 이내 / 1~3개월 이내 / 아직 미정입니다)\n・Messenger로 보내 주신 메시지 내용\n・Meta(Facebook)가 당사 Facebook 페이지에 제공하는 Messenger 사용자 식별자. 표시 이름 등 프로필 정보가 당사에 표시되는지 여부는 Meta의 사양 및 이용자의 Meta 설정에 따릅니다.\n\n(5) 자동으로 수집되는 정보\nIP 주소, 브라우저·기기 정보, 열람한 페이지, 쿠키 등의 식별자 (5항 참조).'],
+    ['3. 개인정보의 이용 목적', '・문의 및 상담에 대한 답변과 서비스 안내\n・DTV 비자 신청 지원 서비스 제공 (견적 및 절차 안내 포함)\n・Messenger 상담 대응 (거주 국가·관심 사항·신청 시기에 따른 안내)\n・서비스 개선 및 신규 서비스·관련 정보 안내\n・광고 효과 측정 및 개선 (4항·5항 참조)\n・법령에 따른 대응 및 당사의 권리 보호\n\n개인정보는 업무상 필요한 범위에서만 이용합니다.'],
+    ['4. Messenger 및 Meta 광고 관련 데이터 처리', '・Messenger에서의 대화는 Meta Platforms, Inc. 등이 제공하는 서비스에서 이루어지며 Meta의 약관 및 데이터 정책이 적용됩니다. Meta는 이용자의 정보를 자체 목적으로 처리할 수 있습니다.\n・당사는 Messenger에서 수집한 응답과 메시지를 상담 대응 및 서비스 안내를 위해 이용합니다.\n・당사 사이트는 광고 효과 측정을 위해 Meta Pixel을 사용하고 있습니다. Meta Pixel은 열람한 페이지와 이벤트 정보, 쿠키 식별자를 Meta에 전송합니다.\n・또한 문의 양식 제출 시 서버에서 Meta로 정보를 전송하는 방식(Meta Conversions API)을 사용할 수 있습니다. 전송되는 정보는 해시 처리(SHA-256)된 이메일 주소, IP 주소, 브라우저 정보, 쿠키 식별자(fbp/fbc), 제출 이벤트 정보입니다. 성명과 문의 내용은 전송하지 않습니다.\n・Meta에서의 광고 표시 설정(맞춤 설정 등)은 이용자 본인의 Meta 광고 설정에서 관리할 수 있습니다.'],
+    ['5. 접속 분석 및 쿠키 등의 이용', '당사 사이트는 Google 태그 관리자를 통해 다음 도구를 사용합니다.\n・Google 애널리틱스 4 (접속 분석)\n・Meta Pixel (광고 효과 측정)\n・Microsoft Clarity (화면 조작 기록, 히트맵 등을 통한 이용 현황 분석)\n이들은 쿠키 등의 식별자를 이용하여 열람 페이지, 클릭, 스크롤, 화면 조작, 양식 제출 이벤트 등을 수집합니다. 당사가 Google 태그 관리자로 전송하는 이벤트 정보(선택한 플랜 등)에는 성명과 이메일 주소가 포함되지 않습니다. 사용하는 도구를 추가·변경하는 경우 본 방침을 갱신합니다.\n\n브라우저 설정에서 쿠키를 비활성화할 수 있으나 일부 기능이 제한될 수 있습니다.'],
+    ['6. 개인정보의 열람·제공·공유 구분', '(1) 내부 직원의 열람\n이용자의 개인정보를 열람하는 사람은 업무상 필요한 당사 내부 직원에 한합니다.\n\n(2) 외부 서비스 사업자에 의한 데이터 처리\nGoogle, Meta, Microsoft, Vercel 등 외부 서비스 사업자가 당사의 서비스 운영을 위해 데이터를 처리합니다(7항 참조).\n\n(3) 대사관·영사관·행정기관 등에 대한 정보 제공\n비자 신청 지원의 일환으로 이용자를 대신하여 대사관·영사관·행정기관 등 관련 공공기관에 신청 서류와 필요한 정보를 제출하는 경우가 있습니다. 제공 목적은 비자 신청·심사 및 관련 절차이며, 제공하는 정보는 신청 절차에 필요한 범위로 한정합니다. 실제 신청 내용이나 제출처에 따라 제공하는 정보가 다를 수 있습니다.\n\n(4) 외부 민간 비자 신청 대행 업체 등에 대한 공유\n현재로서는 외부의 민간 비자 신청 대행 업체나 외부 담당자에게 이용자의 개인정보를 공유할 계획이 없습니다. 필요가 생기는 경우 본 방침을 개정하여 명시합니다.\n\n(5) 그 밖의 제3자 제공\n위 사항 외에는 이용자의 동의가 있는 경우 또는 법령에 근거한 경우를 제외하고 이용자의 개인정보를 제3자에게 제공하지 않습니다.'],
+    ['7. 외부 서비스 사업자에 의한 데이터 처리', '당사는 문의 접수·관리, 접속 분석, 광고 효과 측정, 사이트 운영을 위해 다음 외부 서비스를 이용합니다. 이들 사업자는 각자의 약관 및 개인정보 처리방침에 따라 정보를 처리합니다.\n\n・Google (Gmail, Google 스프레드시트, Google 태그 관리자, Google 애널리틱스 4)\n　목적: 문의 수신·관리, 접속 분석\n　대상: 문의 내용, 열람·조작 정보, 쿠키 식별자\n　(Google 스프레드시트는 문의 내용 관리에 사용할 수 있습니다)\n・Meta (Facebook Messenger, Meta Pixel, Meta Conversions API)\n　목적: Messenger 상담 대응, 광고 효과 측정\n　대상: Messenger 응답·메시지, 사용자 식별자, 열람·이벤트 정보, 해시 처리된 이메일 주소 등\n・Microsoft (Microsoft Clarity)\n　목적: 사이트 이용 현황 분석\n　대상: 열람·화면 조작 정보, 쿠키 식별자\n・Vercel (웹사이트 호스팅)\n　목적: 사이트 제공 및 양식 제출 처리\n　대상: 접속 정보, 양식 제출 내용 (처리 과정에서 경유)\n\n각 사업자가 보관하는 정보의 보유 기간은 해당 사업자의 규정에 따릅니다.'],
+    ['8. 개인정보의 국외 처리', '당사는 태국 왕국의 사업자입니다. 7항의 외부 서비스 사업자는 여러 국가·지역의 데이터센터에서 데이터를 처리할 수 있으며, 사업자의 소재지와 실제 데이터 처리 지역이 동일하다고는 할 수 없습니다. 이에 따라 이용자의 개인정보가 이용자의 거주 국가 및 태국 이외의 국가(미국 등이 포함될 수 있습니다)에서 처리·보관될 수 있습니다. 당사는 구체적인 처리 지역을 확인하지 못한 경우가 있습니다.'],
+    ['9. 보유 기간 및 삭제', '・계약 전 이용자(미계약자): 마지막 응대일로부터 1년간 보관하며, 보유 기간이 지나면 정기적으로 삭제합니다.\n・계약 이용자: 계약 종료 후 관련 법령에서 보존이 필요한 기간 동안 보관하고, 법정 보존 의무가 끝난 뒤 보관할 필요가 없으면 삭제합니다.\n・본인이 삭제를 요청하신 경우 원칙적으로 30일 이내에 처리합니다. 법령에서 30일보다 짧은 기한을 정한 경우에는 해당 법령에 따릅니다. 법령상 보존 의무 등 정당한 사유로 삭제할 수 없는 경우에는 그 사유를 알려 드리고, 필요한 기간이 끝난 후 삭제합니다.\n・Messenger 대화 내용 등 외부 서비스 사업자 측에 보관되는 정보는 7항과 같이 각 사업자의 규정에 따릅니다.'],
+    ['10. 열람·정정·삭제 등의 요청', `이용자는 당사가 보유한 본인의 개인정보에 대해 열람, 정정, 삭제, 처리 정지 등을 요청할 수 있습니다. ${CONTACT_EMAIL} 또는 본 사이트의 문의 양식(접수 번호를 알려 주십시오)으로 연락해 주십시오. 본인 확인을 요청드릴 수 있습니다.`],
+    ['11. 정보 보안', '당사는 개인정보의 무단 접근, 분실, 유출을 방지하기 위해 적절한 보안 조치를 시행합니다. 본 사이트와의 통신은 HTTPS로 암호화됩니다.'],
+    ['12. 방침의 변경', '당사는 필요에 따라 본 방침을 개정할 수 있습니다. 중요한 변경 사항이 있는 경우 웹사이트를 통해 공지합니다.'],
+  ],
+  dates: [],
+}
+
+const EN: PrivacyPolicy = {
+  title: 'Privacy Policy',
+  intro:
+    'PREMIER GOLF TOUR Co.,Ltd ("we", "us") recognizes the protection of personal information as an important responsibility and establishes this privacy policy for the GolfDTV service.',
+  sections: [
+    ['1. Who We Are', `Personal information in the GolfDTV service is handled by:\n• Company: PREMIER GOLF TOUR Co.,Ltd\n• Address: 9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110, Thailand\n• Person responsible for personal information protection: ${OFFICER} (${OFFICER_TITLE})\n• Contact for privacy matters: ${CONTACT_EMAIL} (we also accept requests through the contact form on this website)`],
+    ['2. Information We Collect and How', '(1) Contact form (GolfDTV page)\nName, email address, nationality, preferred plan, whether you want Application Support, the 5-year plan or annual renewal, preferences about dependent visas, how you found us, referral code, and your inquiry message. A reference number is issued on submission.\n\n(2) Partner program contact form\nName, email address, referral channel, and message.\n\n(3) On-site chat inquiry form\nName, email address, nationality, inquiry category, message, the page you were viewing, and the option you chose in the chat.\n\n(4) Facebook Messenger\nWhen you start an automated chat from a Meta ad, or contact us through the Messenger link on this website, we collect:\n• Your current country of residence (Thailand / Korea / Other country)\n• The information you want to know (application requirements / costs / application procedure)\n• When you wish to apply for the DTV visa (within 1 month / within 1–3 months / undecided)\n• The content of messages you send in Messenger\n• Your Messenger user identifier, which Meta (Facebook) provides to our Facebook Page. Whether profile details such as your display name are visible to us depends on Meta\'s specifications and your settings on Meta.\n\n(5) Information collected automatically\nIP address, browser and device information, pages viewed, and identifiers such as cookies (see Section 5).'],
+    ['3. How We Use Information', '• To respond to inquiries and consultations and provide service information\n• To provide DTV visa application support services (including quotes and procedures)\n• To handle consultations in Messenger (guidance based on your residence, interests, and timing)\n• To improve our services and inform you about new offerings and related information\n• To measure and improve advertising (see Sections 4 and 5)\n• To comply with applicable laws and protect our rights\n\nWe use personal information only to the extent necessary for our business.'],
+    ['4. Messenger and Meta Advertising', '• Conversations in Messenger take place on services provided by Meta Platforms, Inc. and others, and are subject to Meta\'s terms and data policy. Meta may process your information for its own purposes.\n• We use the answers and messages collected in Messenger to handle your consultation and provide service information.\n• Our website uses the Meta Pixel to measure advertising. The Meta Pixel sends information about pages viewed and events, and cookie identifiers, to Meta.\n• When you submit the contact form, we may also use a server-side method to send information to Meta (Meta Conversions API). The information sent is a hashed (SHA-256) email address, IP address, browser information, cookie identifiers (fbp/fbc), and event details. Your name and inquiry message are not sent.\n• You can manage ad personalization on Meta through your own ad settings on Meta.'],
+    ['5. Analytics and Cookies', 'Our website uses the following tools through Google Tag Manager:\n• Google Analytics 4 (access analytics)\n• Meta Pixel (advertising measurement)\n• Microsoft Clarity (analysis of site usage through recording of on-screen interactions, heatmaps, etc.)\nThese use cookies and similar identifiers to collect pages viewed, clicks, scrolling, on-screen interactions, and form submission events. The event information we send to Google Tag Manager (such as the selected plan) does not include your name or email address. If we add or change the tools we use, we will update this policy.\n\nYou can disable cookies in your browser settings, though some features may be limited.'],
+    ['6. Viewing, Disclosure and Sharing of Personal Information', '(1) Viewing by internal staff\nOnly our internal staff who need it for their work can view your personal information.\n\n(2) Processing by external service providers\nExternal service providers such as Google, Meta, Microsoft, and Vercel process data to operate our services (see Section 7).\n\n(3) Provision to embassies, consulates, and government authorities\nAs part of visa application support, we may submit application documents and necessary information on your behalf to the public authorities concerned, such as embassies, consulates, and government agencies. The purpose is the visa application, its review, and related procedures. The information provided is limited to what is necessary for the application procedure, and may differ depending on the actual application and the authority to which it is submitted.\n\n(4) Sharing with external private visa application agents\nAt present, we do not plan to share your personal information with external private visa application agents or outside personnel. If this becomes necessary, we will revise this policy to say so.\n\n(5) Other disclosure to third parties\nExcept as described above, we do not disclose your personal information to third parties unless you have given consent or the law requires it.'],
+    ['7. Processing by External Service Providers', 'We use the following external services to receive and manage inquiries, analyze access, measure advertising, and operate the site. These providers process information under their own terms and privacy policies.\n\n• Google (Gmail, Google Sheets, Google Tag Manager, Google Analytics 4)\n  Purpose: receiving and managing inquiries, access analytics\n  Data: inquiry content, browsing and interaction information, cookie identifiers\n  (Google Sheets may be used to manage inquiry content)\n• Meta (Facebook Messenger, Meta Pixel, Meta Conversions API)\n  Purpose: handling Messenger consultations, advertising measurement\n  Data: Messenger answers and messages, user identifier, browsing and event information, hashed email address, etc.\n• Microsoft (Microsoft Clarity)\n  Purpose: analysis of site usage\n  Data: browsing and on-screen interaction information, cookie identifiers\n• Vercel (website hosting)\n  Purpose: delivering the site and processing form submissions\n  Data: access information and submitted form content (passing through in the course of processing)\n\nThe retention period of information held by each provider follows that provider\'s own rules.'],
+    ['8. Processing Outside Your Country', 'We operate in the Kingdom of Thailand. The external service providers in Section 7 may process data in data centers in multiple countries and regions, and a provider\'s location is not necessarily the same as where data is actually processed. As a result, your personal information may be processed or stored in countries other than your country of residence and Thailand (which may include the United States). We may not have confirmed the specific regions of processing.'],
+    ['9. Retention and Deletion', '• Customers who have not yet contracted with us: we keep information for 1 year from the date of last contact, and delete it periodically after that period has passed.\n• Customers who have contracted with us: after the contract ends, we keep information for the period required by applicable laws, and delete it once the statutory retention obligation has ended if there is no further need to keep it.\n• If you ask us to delete your information, we will in principle respond within 30 days. If a law sets a shorter deadline, we follow that law. If we cannot delete information because of a legal retention obligation or another legitimate reason, we will tell you the reason and delete it after the necessary period ends.\n• Information stored by external service providers, such as Messenger conversations, follows each provider\'s own rules as described in Section 7.'],
+    ['10. Access, Correction, Deletion Requests', `You may request disclosure, correction, deletion, or suspension of use of your personal information held by us. Please contact us at ${CONTACT_EMAIL} or through the contact form on this website (please include your reference number). We may ask you to verify your identity.`],
+    ['11. Information Security', 'We implement appropriate security measures to prevent unauthorized access, loss, or leakage of personal information. Communication with this website is encrypted with HTTPS.'],
+    ['12. Policy Changes', 'We may revise this policy as necessary. Significant changes will be announced on our website.'],
+  ],
+  dates: [],
+}
+
+const ZH: PrivacyPolicy = {
+  title: '隐私政策',
+  intro:
+    'PREMIER GOLF TOUR Co.,Ltd（以下简称“本公司”）将保护个人信息视为重要责任，并就 GolfDTV 服务制定本隐私政策。',
+  sections: [
+    ['1. 运营主体信息', `GolfDTV 服务中的个人信息由以下主体处理：\n・公司名称：PREMIER GOLF TOUR Co.,Ltd\n・地址：9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110（泰国）\n・个人信息保护负责人：${OFFICER}（${OFFICER_TITLE}）\n・个人信息相关咨询窗口：${CONTACT_EMAIL}（也可通过本网站的咨询表单提出）`],
+    ['2. 收集的个人信息及收集途径', '(1) 咨询表单（GolfDTV 页面）\n姓名、电子邮箱地址、国籍、意向套餐、是否需要申请代办服务、5年套餐及年度续签的意向、随行家属签证的相关意向、了解本公司的渠道、推荐码及咨询内容。提交时会生成受理编号。\n\n(2) 合作伙伴计划咨询表单\n姓名、电子邮箱地址、推广渠道及留言内容。\n\n(3) 网站内聊天咨询表单\n姓名、电子邮箱地址、国籍、咨询类别、留言内容、浏览中的页面以及在聊天中选择的内容。\n\n(4) Facebook Messenger\n当您通过 Meta 广告开始 Messenger 自动聊天，或通过本网站的 Messenger 链接联系我们时，我们会收集以下内容：\n・当前居住国家（泰国／韩国／其他国家）\n・想了解的信息（申请条件／费用／申请流程）\n・申请 DTV 签证的意向时间（1个月内／1至3个月内／尚未确定）\n・您在 Messenger 中发送的消息内容\n・Meta（Facebook）向本公司 Facebook 主页提供的 Messenger 用户标识符。显示名称等个人资料信息能否向本公司显示，取决于 Meta 的规格及您在 Meta 上的设置。\n\n(5) 自动收集的信息\nIP 地址、浏览器及设备信息、浏览的页面，以及 Cookie 等标识符（见第5条）。'],
+    ['3. 使用目的', '・回复咨询并提供服务信息\n・提供 DTV 签证申请支持服务（包括报价及办理流程）\n・处理 Messenger 咨询（根据居住国家、关注事项及申请时间提供指引）\n・改进服务，并告知新服务及相关信息\n・衡量并改进广告效果（见第4条、第5条）\n・遵守法律法规并保护本公司权利\n\n个人信息仅在业务所需的范围内使用。'],
+    ['4. Messenger 及 Meta 广告相关的数据处理', '・Messenger 上的交流在 Meta Platforms, Inc. 等提供的服务上进行，适用 Meta 的条款及数据政策。Meta 可能为其自身目的处理您的信息。\n・本公司将在 Messenger 中收集的回答和消息用于处理咨询及提供服务信息。\n・本网站为衡量广告效果使用 Meta Pixel。Meta Pixel 会将浏览页面、事件信息及 Cookie 标识符发送至 Meta。\n・此外，提交咨询表单时，我们可能使用由服务器向 Meta 发送信息的方式（Meta Conversions API）。发送的信息为经哈希处理（SHA-256）的电子邮箱地址、IP 地址、浏览器信息、Cookie 标识符（fbp/fbc）及提交事件信息。不会发送您的姓名和咨询内容。\n・您可通过自己在 Meta 上的广告设置管理广告个性化展示。'],
+    ['5. 访问分析与 Cookie 等的使用', '本网站通过 Google 跟踪代码管理器（Google Tag Manager）使用以下工具：\n・Google Analytics 4（访问分析）\n・Meta Pixel（广告效果衡量）\n・Microsoft Clarity（通过记录屏幕操作、热图等分析网站使用情况）\n这些工具使用 Cookie 等标识符，收集浏览页面、点击、滚动、屏幕操作及表单提交事件等。本公司发送至 Google 跟踪代码管理器的事件信息（如所选套餐）不包含姓名和电子邮箱地址。如增加或变更所使用的工具，我们将更新本政策。\n\n您可以在浏览器设置中禁用 Cookie，但部分功能可能受限。'],
+    ['6. 个人信息的查看、提供与分享的区分', '(1) 内部员工的查看\n仅有业务上需要的本公司内部员工可以查看您的个人信息。\n\n(2) 外部服务提供商的数据处理\nGoogle、Meta、Microsoft、Vercel 等外部服务提供商为本公司的服务运营处理数据（见第7条）。\n\n(3) 向大使馆、领事馆及行政机关等提供信息\n作为签证申请支持的一部分，本公司可能代您向大使馆、领事馆、行政机关等相关公共机构提交申请材料及必要信息。提供目的为签证申请、审查及相关手续。所提供的信息仅限于申请手续所必需的范围，并可能因实际申请内容和提交对象而异。\n\n(4) 向外部民间签证申请代办机构等分享\n目前，本公司不打算将您的个人信息分享给外部的民间签证申请代办机构或外部人员。如有必要，我们将修订本政策予以明示。\n\n(5) 其他向第三方提供\n除上述情形外，除非经您同意或依据法律法规，否则不会向第三方提供您的个人信息。'],
+    ['7. 外部服务提供商的数据处理', '为受理和管理咨询、访问分析、衡量广告效果及运营网站，本公司使用以下外部服务。这些服务商按照各自的条款和隐私政策处理信息。\n\n・Google（Gmail、Google 表格、Google 跟踪代码管理器、Google Analytics 4）\n　目的：接收和管理咨询、访问分析\n　对象：咨询内容、浏览及操作信息、Cookie 标识符\n　（Google 表格可能用于管理咨询内容）\n・Meta（Facebook Messenger、Meta Pixel、Meta Conversions API）\n　目的：处理 Messenger 咨询、衡量广告效果\n　对象：Messenger 回答和消息、用户标识符、浏览及事件信息、经哈希处理的电子邮箱地址等\n・Microsoft（Microsoft Clarity）\n　目的：分析网站使用情况\n　对象：浏览及屏幕操作信息、Cookie 标识符\n・Vercel（网站托管）\n　目的：提供网站及处理表单提交\n　对象：访问信息、表单提交内容（处理过程中经过）\n\n各服务商所保存信息的保存期限，按其各自的规定执行。'],
+    ['8. 境外数据处理', '本公司是泰王国的经营主体。第7条所述的外部服务商可能在多个国家和地区的数据中心处理数据，服务商的所在地与实际数据处理地区不一定相同。因此，您的个人信息可能在您居住国家及泰国以外的国家（可能包括美国）处理或存储。本公司可能尚未确认具体的处理地区。'],
+    ['9. 保存期限与删除', '・尚未签约的客户（未签约者）：自最后一次联系之日起保存1年，保存期限届满后定期删除。\n・已签约的客户：合同终止后，在适用法律要求保存的期间内予以保留，法定保存义务结束后，如无继续保存的必要则予以删除。\n・如您提出删除请求，原则上将在30日内处理。如法律规定了短于30日的期限，则依照该法律。因法定保存义务或其他正当理由无法删除时，我们将告知理由，并在必要期间结束后删除。\n・Messenger 对话内容等保存在外部服务商一方的信息，按第7条所述遵循各服务商的规定。'],
+    ['10. 查阅、更正、删除等请求', `您可以要求查阅、更正、删除或停止使用本公司所持有的您的个人信息。请通过 ${CONTACT_EMAIL} 或本网站的咨询表单（请告知受理编号）与我们联系。我们可能会要求核实您的身份。`],
+    ['11. 信息安全', '本公司将采取适当的安全措施，防止个人信息被未经授权访问、丢失或泄露。与本网站的通信通过 HTTPS 加密。'],
+    ['12. 政策的变更', '本公司可能根据需要修订本政策。如有重大变更，将在网站上公告。'],
+  ],
+  dates: [],
+}
+
+const RU: PrivacyPolicy = {
+  title: 'Политика конфиденциальности',
+  intro:
+    'PREMIER GOLF TOUR Co.,Ltd (далее — «мы», «Компания») рассматривает защиту персональной информации как важную обязанность и устанавливает настоящую политику конфиденциальности в отношении сервиса GolfDTV.',
+  sections: [
+    ['1. Сведения об операторе', `Персональную информацию в сервисе GolfDTV обрабатывает:\n• Компания: PREMIER GOLF TOUR Co.,Ltd\n• Адрес: 9 Thong Lo, Khlongton-nua, Watthana, Bangkok 10110, Таиланд\n• Ответственное лицо за защиту персональной информации: ${OFFICER} (${OFFICER_TITLE})\n• Контакт по вопросам персональной информации: ${CONTACT_EMAIL} (обращения также принимаются через контактную форму на сайте)`],
+    ['2. Какую информацию мы собираем и как', '(1) Контактная форма (страница GolfDTV)\nИмя, адрес электронной почты, гражданство, желаемый тарифный план, желание воспользоваться услугой Application Support, 5-летним планом или ежегодным продлением, пожелания по визам для членов семьи, откуда вы о нас узнали, реферальный код и текст обращения. При отправке присваивается номер обращения.\n\n(2) Контактная форма партнёрской программы\nИмя, адрес электронной почты, канал рекомендации и сообщение.\n\n(3) Форма обращения через чат на сайте\nИмя, адрес электронной почты, гражданство, категория обращения, сообщение, просматриваемая страница и вариант, выбранный в чате.\n\n(4) Facebook Messenger\nКогда вы начинаете автоматический чат из рекламы Meta или обращаетесь к нам по ссылке Messenger на сайте, мы получаем:\n• Страну вашего текущего проживания (Таиланд / Корея / Другая страна)\n• Интересующую информацию (условия подачи / стоимость / порядок подачи)\n• Желаемые сроки подачи на визу DTV (в течение 1 месяца / в течение 1–3 месяцев / пока не определено)\n• Содержание сообщений, отправленных в Messenger\n• Идентификатор пользователя Messenger, который Meta (Facebook) передаёт нашей странице Facebook. Видны ли нам данные профиля, например отображаемое имя, зависит от спецификаций Meta и ваших настроек в Meta.\n\n(5) Автоматически собираемая информация\nIP-адрес, данные браузера и устройства, просмотренные страницы и идентификаторы, такие как cookie (см. раздел 5).'],
+    ['3. Цели использования', '• Ответы на обращения и консультации, предоставление информации об услугах\n• Оказание услуг по поддержке оформления визы DTV (включая расчёт стоимости и порядок действий)\n• Консультации в Messenger (рекомендации с учётом страны проживания, интересов и сроков)\n• Улучшение услуг и информирование о новых предложениях и связанной информации\n• Измерение и улучшение эффективности рекламы (см. разделы 4 и 5)\n• Соблюдение применимого законодательства и защита наших прав\n\nПерсональная информация используется только в объёме, необходимом для работы.'],
+    ['4. Messenger и реклама Meta', '• Переписка в Messenger происходит в сервисах Meta Platforms, Inc. и других компаний и регулируется условиями и политикой данных Meta. Meta может обрабатывать вашу информацию в собственных целях.\n• Ответы и сообщения, полученные в Messenger, мы используем для консультации и предоставления информации об услугах.\n• Наш сайт использует Meta Pixel для измерения эффективности рекламы. Meta Pixel передаёт в Meta сведения о просмотренных страницах и событиях, а также идентификаторы cookie.\n• При отправке контактной формы мы также можем использовать серверный способ передачи информации в Meta (Meta Conversions API). Передаются хешированный (SHA-256) адрес электронной почты, IP-адрес, данные браузера, идентификаторы cookie (fbp/fbc) и сведения о событии. Ваше имя и текст обращения не передаются.\n• Персонализацией рекламы в Meta вы можете управлять в собственных настройках рекламы в Meta.'],
+    ['5. Аналитика и файлы cookie', 'Наш сайт через Google Tag Manager использует следующие инструменты:\n• Google Analytics 4 (аналитика посещаемости)\n• Meta Pixel (измерение эффективности рекламы)\n• Microsoft Clarity (анализ использования сайта по записи действий на экране, тепловым картам и т. п.)\nОни используют cookie и аналогичные идентификаторы для сбора данных о просмотренных страницах, кликах, прокрутке, действиях на экране и событиях отправки форм. Информация о событиях, которую мы передаём в Google Tag Manager (например, выбранный план), не содержит ваше имя и адрес электронной почты. Если мы добавим или изменим используемые инструменты, мы обновим настоящую политику.\n\nВы можете отключить cookie в настройках браузера, однако некоторые функции могут быть ограничены.'],
+    ['6. Просмотр, передача и раскрытие персональной информации', '(1) Просмотр внутренними сотрудниками\nПросматривать вашу персональную информацию могут только внутренние сотрудники Компании, которым это необходимо по работе.\n\n(2) Обработка данных внешними поставщиками услуг\nВнешние поставщики услуг, такие как Google, Meta, Microsoft и Vercel, обрабатывают данные для работы наших сервисов (см. раздел 7).\n\n(3) Передача информации посольствам, консульствам и государственным органам\nВ рамках поддержки оформления визы мы можем от вашего имени подавать заявочные документы и необходимую информацию в соответствующие государственные органы, такие как посольства, консульства и государственные учреждения. Цель передачи — подача заявления на визу, его рассмотрение и связанные процедуры. Передаваемая информация ограничивается необходимой для процедуры оформления и может отличаться в зависимости от конкретного заявления и органа, в который оно подаётся.\n\n(4) Передача внешним частным агентам по оформлению виз\nВ настоящее время мы не планируем передавать вашу персональную информацию внешним частным агентам по оформлению виз или сторонним специалистам. При возникновении такой необходимости мы изменим настоящую политику и укажем это.\n\n(5) Прочие случаи раскрытия третьим лицам\nЗа исключением описанного выше, мы не раскрываем вашу персональную информацию третьим лицам, если только вы не дали согласие или этого не требует закон.'],
+    ['7. Обработка данных внешними поставщиками услуг', 'Для приёма и ведения обращений, анализа посещаемости, измерения рекламы и работы сайта мы используем следующие внешние сервисы. Эти поставщики обрабатывают информацию в соответствии со своими условиями и политиками конфиденциальности.\n\n• Google (Gmail, Google Таблицы, Google Tag Manager, Google Analytics 4)\n  Цель: приём и ведение обращений, аналитика посещаемости\n  Данные: содержание обращений, сведения о просмотре и действиях, идентификаторы cookie\n  (Google Таблицы могут использоваться для ведения обращений)\n• Meta (Facebook Messenger, Meta Pixel, Meta Conversions API)\n  Цель: консультации в Messenger, измерение эффективности рекламы\n  Данные: ответы и сообщения в Messenger, идентификатор пользователя, сведения о просмотре и событиях, хешированный адрес электронной почты и др.\n• Microsoft (Microsoft Clarity)\n  Цель: анализ использования сайта\n  Данные: сведения о просмотре и действиях на экране, идентификаторы cookie\n• Vercel (хостинг сайта)\n  Цель: доставка сайта и обработка отправки форм\n  Данные: сведения о доступе и содержание отправленных форм (проходят через сервис в процессе обработки)\n\nСроки хранения информации у каждого поставщика определяются его собственными правилами.'],
+    ['8. Обработка данных за пределами вашей страны', 'Мы работаем в Королевстве Таиланд. Поставщики услуг из раздела 7 могут обрабатывать данные в центрах обработки данных в нескольких странах и регионах, при этом место нахождения поставщика не обязательно совпадает с местом фактической обработки данных. Поэтому ваша персональная информация может обрабатываться или храниться в странах, отличных от страны вашего проживания и Таиланда (в том числе, возможно, в США). Мы можем не располагать подтверждёнными сведениями о конкретных регионах обработки.'],
+    ['9. Сроки хранения и удаление', '• Клиенты, не заключившие договор: информация хранится 1 год с даты последнего обращения, по истечении этого срока периодически удаляется.\n• Клиенты, заключившие договор: после окончания договора информация хранится в течение срока, требуемого применимым законодательством, и удаляется после окончания установленной законом обязанности хранения, если необходимость в хранении отсутствует.\n• Если вы просите удалить вашу информацию, мы, как правило, отвечаем в течение 30 дней. Если закон устанавливает более короткий срок, мы следуем закону. Если удаление невозможно из-за установленной законом обязанности хранения или по иной законной причине, мы сообщим причину и удалим информацию по окончании необходимого срока.\n• Информация, хранящаяся у внешних поставщиков услуг, например переписка в Messenger, подчиняется правилам каждого поставщика, как описано в разделе 7.'],
+    ['10. Запросы на доступ, исправление и удаление', `Вы вправе запросить раскрытие, исправление, удаление или прекращение использования ваших персональных данных, которыми мы располагаем. Свяжитесь с нами по адресу ${CONTACT_EMAIL} или через контактную форму на сайте (укажите номер обращения). Мы можем попросить вас подтвердить личность.`],
+    ['11. Безопасность информации', 'Мы принимаем надлежащие меры безопасности для предотвращения несанкционированного доступа, утраты или утечки персональной информации. Связь с сайтом шифруется по протоколу HTTPS.'],
+    ['12. Изменения политики', 'Мы можем пересматривать настоящую политику по мере необходимости. О существенных изменениях будет объявлено на нашем сайте.'],
+  ],
+  dates: [],
+}
+
+const POLICIES: Record<string, PrivacyPolicy> = { ja: JA, ko: KO, en: EN, zh: ZH, ru: RU }
+
+// ── 日付表示 ───────────────────────────────────────────────────
+// 本番公開時にここ（2つの定数）だけを 'YYYY-MM-DD' で設定する。null の間は日付行を一切表示しない。
+// 制定日: 実際に最初に本番公開された日が確定してから設定する（根拠のない過去日付を入れない）。省略も可。
+// 最終改訂日: 今回の改訂版を本番公開した日。作業日・依頼日は使わない。
+export const PRIVACY_ESTABLISHED_ON: string | null = null
+export const PRIVACY_LAST_REVISED_ON: string | null = '2026-10-12'
+
+const DATE_LABELS: Record<string, [string, string]> = {
+  ja: ['制定日：', '最終改訂日：'],
+  ko: ['제정일: ', '최종 개정일: '],
+  en: ['Established: ', 'Last revised: '],
+  zh: ['制定日期：', '最后修订日期：'],
+  ru: ['Дата утверждения: ', 'Последняя редакция: '],
+}
+const EN_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const RU_MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+
+export function formatPolicyDate(lang: string, iso: string): string {
+  const [y, m, d] = iso.split('-').map(Number)
+  if (lang === 'ko') return `${y}년 ${m}월 ${d}일`
+  if (lang === 'en') return `${EN_MONTHS[m - 1]} ${d}, ${y}`
+  if (lang === 'ru') return `${d} ${RU_MONTHS[m - 1]} ${y} г.`
+  return `${y}年${m}月${d}日`
+}
+
+function datesFor(lang: string): string[] {
+  const [est, rev] = DATE_LABELS[lang] ?? DATE_LABELS.en
+  const out: string[] = []
+  if (PRIVACY_ESTABLISHED_ON) out.push(est + formatPolicyDate(lang, PRIVACY_ESTABLISHED_ON))
+  if (PRIVACY_LAST_REVISED_ON) out.push(rev + formatPolicyDate(lang, PRIVACY_LAST_REVISED_ON))
+  return out
+}
+
+export function getPrivacyPolicy(lang: string): PrivacyPolicy {
+  const key = POLICIES[lang] ? lang : 'en'
+  return { ...POLICIES[key], dates: datesFor(key) }
+}
