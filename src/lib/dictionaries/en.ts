@@ -565,7 +565,7 @@ const en: Dictionary = {
       services: 'Services',
       support: 'Support',
       serviceLinks: [['Plans', '#plans'], ['FAQ', '#faq'], ['Contact', '#inquiry']],
-      supportLinks: [['Privacy Policy', '#privacy'], ['Legal Notice', '#sct'], ['About Us', '#company']],
+      supportLinks: [['Privacy Policy', '/en/golf-dtv/privacy'], ['Legal Notice', '#legal-notice'], ['About Us', '#company-info']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: 'This service provides visa application support and does not guarantee visa approval.',
     },

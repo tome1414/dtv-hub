@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     '',
     '/golf-dtv',
+    '/golf-dtv/privacy',
     '/blog',
     '/embassy-map',
     '/requirements',
@@ -25,8 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       urls.push({
         url: `${baseUrl}/${locale}${page}`,
         lastModified: new Date(),
-        changeFrequency: page === '/golf-dtv' ? 'daily' : 'weekly',
-        priority: page === '' || page === '/golf-dtv' ? 1.0 : 0.8,
+        changeFrequency: page === '/golf-dtv' ? 'daily' : page === '/golf-dtv/privacy' ? 'yearly' : 'weekly',
+        priority: page === '' || page === '/golf-dtv' ? 1.0 : page === '/golf-dtv/privacy' ? 0.3 : 0.8,
       })
     }
 

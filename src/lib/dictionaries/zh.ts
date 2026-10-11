@@ -560,7 +560,7 @@ const zh: Dictionary = {
       services: '服务',
       support: '支持',
       serviceLinks: [['签证办理流程', '#flow'], ['方案', '#plans'], ['常见问题', '#faq'], ['联系我们', '#inquiry']],
-      supportLinks: [['隐私政策', '#privacy'], ['法律声明', '#sct'], ['关于我们', '#company']],
+      supportLinks: [['隐私政策', '/zh/golf-dtv/privacy'], ['法律声明', '#legal-notice'], ['关于我们', '#company-info']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: '本服务提供签证申请支持，不保证签证获批。',
     },

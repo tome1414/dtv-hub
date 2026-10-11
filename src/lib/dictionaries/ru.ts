@@ -563,7 +563,7 @@ const ru: Dictionary = {
       services: 'Услуги',
       support: 'Поддержка',
       serviceLinks: [['Как это работает', '#flow'], ['Планы', '#plans'], ['FAQ', '#faq'], ['Контакт', '#inquiry']],
-      supportLinks: [['Политика конфиденциальности', '#privacy'], ['Юридическая информация', '#sct'], ['О нас', '#company']],
+      supportLinks: [['Политика конфиденциальности', '/ru/golf-dtv/privacy'], ['Юридическая информация', '#legal-notice'], ['О нас', '#company-info']],
       copyright: '© 2024 GolfDTV. All rights reserved.',
       disclaimer: 'Данный сервис предоставляет поддержку при подаче на визу и не гарантирует её получение.',
     },

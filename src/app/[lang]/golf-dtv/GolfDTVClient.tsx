@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { PRIVACY_POLICY_JA, PRIVACY_POLICY_EN } from '@/lib/golf-dtv-privacy-policy'
 import type { Locale } from '@/middleware'
 import {
   analytics,
@@ -614,7 +615,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
             <div style={{display:'flex',flexDirection:'column',gap:12}}>
               {locale === 'ja' ? (
                 <>
-              <LegalBox id="academy" title="ゴルフアカデミー概要">
+              <LegalBox id="company-info" legacyId="academy" title="ゴルフアカデミー概要">
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
                     {[
@@ -658,7 +659,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </div>
               </LegalBox>
 
-              <LegalBox id="sct" title="特定商取引法に基づく表記">
+              <LegalBox id="legal-notice" legacyId="sct" title="特定商取引法に基づく表記">
                 <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.88rem',lineHeight:1.8}}>
                   <tbody>
                     {[
@@ -706,31 +707,22 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </div>
               </LegalBox>
 
-              <LegalBox id="privacy" title="プライバシーポリシー">
+              <LegalBox id="privacy-policy" legacyId="privacy" title="プライバシーポリシー">
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
-                  <p>当社は、お客様の個人情報の保護を重要な責務と認識し、以下のプライバシーポリシーを定めます。</p>
-                  {[
-                    ['1. 収集する個人情報', 'お問い合わせフォームを通じて、お名前、メールアドレス、ご希望プラン、ご紹介コード、お問い合わせ内容等の情報をお預かりします。'],
-                    ['2. 利用目的', 'お問い合わせへの回答およびサービスのご案内\nDTVビザ申請サポートサービスの提供\nサービス改善および新サービスのご案内\n法令に基づく対応'],
-                    ['3. 第三者への提供', '当社は、以下の場合を除き、お客様の個人情報を第三者に提供いたしません。\n・お客様の同意がある場合\n・法令に基づく場合\n・サービス提供に必要な業務委託先（厳格な守秘義務を課します）'],
-                    ['4. 個人情報の管理', '当社は、個人情報の漏洩・紛失・不正アクセスを防止するため、適切なセキュリティ措置を講じます。'],
-                    ['5. 開示・訂正・削除', 'お客様は、当社が保有するご自身の個人情報の開示、訂正、削除を要求する権利を有します。ご要望はお問い合わせフォームよりご連絡ください。'],
-                    ['6. Cookieの使用', '当社ウェブサイトでは、サービス向上のためCookieを使用することがあります。ブラウザの設定によりCookieを無効化することができますが、一部機能が制限される場合があります。'],
-                    ['7. プライバシーポリシーの変更', '本ポリシーは、必要に応じて改定することがあります。重要な変更がある場合は、ウェブサイト上でお知らせします。'],
-                    ['8. お問い合わせ', '個人情報に関するお問い合わせはお問い合わせフォームよりご連絡ください。'],
-                  ].map(([heading, body])=>(
+                  <p>{PRIVACY_POLICY_JA.intro}</p>
+                  {PRIVACY_POLICY_JA.sections.map(([heading, body])=>(
                     <div key={heading}>
                       <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
                       <p style={{whiteSpace:'pre-line'}}>{body}</p>
                     </div>
                   ))}
-                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>制定日：2024年1月1日</p>
+                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>{PRIVACY_POLICY_JA.date}</p>
                 </div>
               </LegalBox>
                 </>
               ) : (
                 <>
-              <LegalBox id="academy" title={
+              <LegalBox id="company-info" legacyId="academy" title={
                 locale === 'zh' ? '高尔夫学院概要' :
                 locale === 'ko' ? '골프 아카데미 개요' :
                 locale === 'ru' ? 'О гольф-академии' :
@@ -887,25 +879,16 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
                 </div>
               </LegalBox>
 
-              <LegalBox id="privacy" title="Privacy Policy">
+              <LegalBox id="privacy-policy" legacyId="privacy" title="Privacy Policy">
                 <div style={{fontSize:'.88rem',color:'#444',lineHeight:2,display:'flex',flexDirection:'column',gap:16}}>
-                  <p>The Company recognizes the protection of customer personal information as an important responsibility and establishes this privacy policy.</p>
-                  {[
-                    ['1. Information We Collect', 'We collect your name, email address, preferred plan, referral code, and inquiry message through the contact form on this website.'],
-                    ['2. Use of Information', 'To respond to inquiries and provide service information • To provide DTV visa application support services • To improve services and inform about new offerings • To comply with applicable laws'],
-                    ['3. Third Party Disclosure', 'We do not disclose customer personal information to third parties except in the following cases: With your consent • When required by law • To business partners necessary for service provision (under strict confidentiality obligations)'],
-                    ['4. Information Security', 'We implement appropriate security measures to prevent unauthorized access, loss, or leakage of personal information.'],
-                    ['5. Access, Correction, Deletion', 'You have the right to request disclosure, correction, or deletion of your personal information held by us. Please submit requests through the contact form.'],
-                    ['6. Cookies', 'Our website may use cookies to improve service. You can disable cookies in your browser settings, though some features may be limited.'],
-                    ['7. Privacy Policy Changes', 'We may revise this policy as necessary. Significant changes will be announced on our website.'],
-                    ['8. Contact', 'For inquiries regarding personal information, please contact us through the contact form.'],
-                  ].map(([heading, body])=>(
+                  <p>{PRIVACY_POLICY_EN.intro}</p>
+                  {PRIVACY_POLICY_EN.sections.map(([heading, body])=>(
                     <div key={heading}>
                       <p style={{fontWeight:700,color:'#0a2e1f',marginBottom:4}}>{heading}</p>
                       <p style={{whiteSpace:'pre-line'}}>{body}</p>
                     </div>
                   ))}
-                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>Established: January 1, 2024</p>
+                  <p style={{fontSize:'.8rem',color:'#999',marginTop:8}}>{PRIVACY_POLICY_EN.date}</p>
                 </div>
               </LegalBox>
                 </>
@@ -935,7 +918,7 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
               <div>
                 <h4 style={{color:'#fff',fontWeight:700,fontSize:'.88rem',marginBottom:16}}>{d.footerNav.support}</h4>
                 <ul style={{listStyle:'none',padding:0,margin:0,display:'flex',flexDirection:'column',gap:10}}>
-                  {d.footerNav.supportLinks.map(([l,h]: string[],i: number)=>(
+                  {d.footerNav.supportLinks.filter(([, h]: string[]) => locale === 'ja' || h !== '#legal-notice').map(([l,h]: string[],i: number)=>(
                     <li key={i}><a href={h} style={{color:'rgba(255,255,255,.65)',fontSize:'.83rem',textDecoration:'none'}}>{l}</a></li>
                   ))}
                 </ul>
@@ -1041,10 +1024,31 @@ export default function GolfDTVClient({ dict, locale }: GolfDTVClientProps) {
   )
 }
 
-function LegalBox({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+function LegalBox({ id, legacyId, title, children }: { id: string; legacyId?: string; title: string; children: React.ReactNode }) {
   const [open, setOpen] = React.useState(false)
+  // #hash でのアクセス・同一ハッシュのリンク再クリック時に自動展開してスクロール
+  useEffect(() => {
+    const reveal = () => {
+      if (window.location.hash !== `#${id}` && window.location.hash !== `#${legacyId}`) return
+      setOpen(true)
+      requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+    }
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.('a[href]')
+      const h = a?.getAttribute('href')
+      if (h === `#${id}` || (legacyId && h === `#${legacyId}`)) setTimeout(reveal, 0)
+    }
+    reveal()
+    window.addEventListener('hashchange', reveal)
+    document.addEventListener('click', onClick)
+    return () => {
+      window.removeEventListener('hashchange', reveal)
+      document.removeEventListener('click', onClick)
+    }
+  }, [id])
   return (
-    <div id={id} style={{border:'1px solid #e5e0d5',borderRadius:14,overflow:'hidden'}}>
+    <div id={id} style={{border:'1px solid #e5e0d5',borderRadius:14,overflow:'hidden',scrollMarginTop:80}}>
+      {legacyId && <span id={legacyId} style={{position:'absolute',scrollMarginTop:80}} />}
       <button
         onClick={()=>setOpen(!open)}
         style={{width:'100%',background:open?'#0a2e1f':'#f5f0e6',padding:'16px 24px',display:'flex',justifyContent:'space-between',alignItems:'center',border:'none',cursor:'pointer',fontFamily:'inherit',transition:'background .2s'}}
